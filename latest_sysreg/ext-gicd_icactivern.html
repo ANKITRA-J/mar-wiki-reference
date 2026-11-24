@@ -4,16 +4,16 @@
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">GICD_ICACTIVER&lt;n&gt;, n = 0 - 31</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Clear-Active Registers</p><div data-pagefind-body="1">
         <p>Deactivates the corresponding interrupt. These registers are used when saving and restoring GIC state.</p>
       </div><h3>Configuration</h3>
-        <p>These registers are available in all GIC configurations. If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, these registers are Common.</p>
+        <p>These registers are available in all GIC configurations. If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, these registers are Common.</p>
 
       
-        <p>The number of implemented GICD_ICACTIVER&lt;n&gt; registers is (<a href="ext-gicd_typer.html">GICD_TYPER</a>.ITLinesNumber+1). Registers are numbered from 0.</p>
+        <p>The number of implemented GICD_ICACTIVER&lt;n&gt; registers is (<a href="/latest_sysreg/ext-gicd_typer.html">GICD_TYPER</a>.ITLinesNumber+1). Registers are numbered from 0.</p>
 
       
-        <p>GICD_ICACTIVER0 is Banked for each connected PE with <a href="ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &lt; 8.</p>
+        <p>GICD_ICACTIVER0 is Banked for each connected PE with <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &lt; 8.</p>
 
       
-        <p>Accessing GICD_ICACTIVER0 from a PE with <a href="ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &gt; 7 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
+        <p>Accessing GICD_ICACTIVER0 from a PE with <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &gt; 7 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
 
       
         <ul>
@@ -35,13 +35,13 @@
 </li><li>The offset of the required GICD_ICACTIVER is (<span class="hexnumber">0x380</span> + (4*n)).
 </li><li>The bit number of the required group modifier bit in this register is m MOD 32.
 </li></ul></div><h2>Accessing GICD_ICACTIVER&lt;n&gt;</h2>
-        <p>When affinity routing is enabled for the Security state of an interrupt, the bits corresponding to SGIs and PPIs in that Security state are RAZ/WI, and equivalent functionality for SGIs and PPIs is provided by <a href="ext-gicr_icactiver0.html">GICR_ICACTIVER0</a>.</p>
+        <p>When affinity routing is enabled for the Security state of an interrupt, the bits corresponding to SGIs and PPIs in that Security state are RAZ/WI, and equivalent functionality for SGIs and PPIs is provided by <a href="/latest_sysreg/ext-gicr_icactiver0.html">GICR_ICACTIVER0</a>.</p>
 
       
         <p>Bits corresponding to unimplemented interrupts are RAZ/WI.</p>
 
       
-        <p>If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, unless the <a href="ext-gicd_nsacrn.html">GICD_NSACR&lt;n&gt;</a> registers permit Non-secure software to control Group 0 and Secure Group 1 interrupts, any bits that correspond to Group 0 or Secure Group 1 interrupts are accessible only by Secure accesses and are RAZ/WI to Non-secure accesses.</p>
+        <p>If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, unless the <a href="/latest_sysreg/ext-gicd_nsacrn.html">GICD_NSACR&lt;n&gt;</a> registers permit Non-secure software to control Group 0 and Secure Group 1 interrupts, any bits that correspond to Group 0 or Secure Group 1 interrupts are accessible only by Secure accesses and are RAZ/WI to Non-secure accesses.</p>
 
       
         <p>The effect of a write must be visible in finite time.</p>

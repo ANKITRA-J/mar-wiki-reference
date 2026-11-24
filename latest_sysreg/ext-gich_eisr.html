@@ -14,14 +14,14 @@
       </h4><div class="field">
       <p>EOI maintenance interrupt status for List register &lt;n&gt;:</p>
     <table class="valuetable"><tr><th>Status&lt;n&gt;</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> does not have an EOI maintenance interrupt.</p>
+          <p><a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> does not have an EOI maintenance interrupt.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> has an EOI maintenance interrupt that has not been handled.</p>
-        </td></tr></table><p>For any <a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> register, the corresponding status bit is set to 1 if all of the following are true:</p>
+          <p><a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> has an EOI maintenance interrupt that has not been handled.</p>
+        </td></tr></table><p>For any <a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> register, the corresponding status bit is set to 1 if all of the following are true:</p>
 <ul>
-<li><a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.State is <span class="binarynumber">0b00</span>.
-</li><li><a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.HW == 0.
-</li><li><a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.EOI == 1.
+<li><a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.State is <span class="binarynumber">0b00</span>.
+</li><li><a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.HW == 0.
+</li><li><a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.EOI == 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing GICH_EISR</h2>
@@ -29,8 +29,8 @@
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-ich_eisr.html">ICH_EISR</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-ich_eisr_el2.html">ICH_EISR_EL2</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-ich_eisr.html">ICH_EISR</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-ich_eisr_el2.html">ICH_EISR_EL2</a> provides equivalent functionality.
 </li></ul>
 
       

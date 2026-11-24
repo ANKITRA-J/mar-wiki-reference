@@ -10,8 +10,8 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_0">MINLAT, bits [15:0]:
       </h4><div class="field"><p>Minimum latency.</p>
-<p>When <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FL is 1, defines the value used for filtering by latency. Samples with a Total latency less than PMSLATFR_EL1.MINLAT are not recorded.</p><p>If <a href="AArch64-pmsidr_el1.html">PMSIDR_EL1</a>.CountSize is <span class="binarynumber">0b0010</span>, PMSLATFR_EL1.MINLAT[15:12] is <span class="arm-defined-word">RES0</span>.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FL is 0.</p>
+<p>When <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FL is 1, defines the value used for filtering by latency. Samples with a Total latency less than PMSLATFR_EL1.MINLAT are not recorded.</p><p>If <a href="/latest_sysreg/AArch64-pmsidr_el1.html">PMSIDR_EL1</a>.CountSize is <span class="binarynumber">0b0010</span>, PMSLATFR_EL1.MINLAT[15:12] is <span class="arm-defined-word">RES0</span>.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FL is 0.</p>
 <p>For more information, see <span class="xref">Filtering by latency</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, PMSLATFR_EL1</p></div></div><p style="text-align: right">

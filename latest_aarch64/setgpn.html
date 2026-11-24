@@ -136,10 +136,10 @@ algorithm is used is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span
             </h4><a id="SETGMN_SET_memcms"></a><span class="bitdiff"> (op2 == 0110)</span></div><p class="asm-code">SETGMN  [<a href="#XdOrXZR__5" title='For the "Epilogue" and "Main" variants: is the 64-bit name of the general-purpose register that holds an encoding of the destination address (an integer multiple of 16) and for option B is updated by the instruction, encoded in the "Rd" field.'>&lt;Xd&gt;</a>]!, <a href="#XnOrXZR__9" title='For the "Main" variant: is the 64-bit name of the general-purpose register that holds an encoding of the number of bytes to be set (an integer multiple of 16) and is updated by the instruction, encoded in the "Rn" field.'>&lt;Xn&gt;</a>!, <a href="#XsOrXZR__8" title='For the "Main" and "Prologue" variants: is the 64-bit name of the general-purpose register that holds the source data in bits&lt;7:0&gt;, encoded in the "Rs" field.'>&lt;Xs&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Epilogue encoding
             </h4><a id="SETGEN_SET_memcms"></a><span class="bitdiff"> (op2 == 1010)</span></div><p class="asm-code">SETGEN  [<a href="#XdOrXZR__5" title='For the "Epilogue" and "Main" variants: is the 64-bit name of the general-purpose register that holds an encoding of the destination address (an integer multiple of 16) and for option B is updated by the instruction, encoded in the "Rd" field.'>&lt;Xd&gt;</a>]!, <a href="#XnOrXZR__10" title='For the "Epilogue" variant: is the 64-bit name of the general-purpose register that holds an encoding of the number of bytes to be set (an integer multiple of 16) and is set to zero on completion of the instruction, encoded in the "Rn" field.'>&lt;Xn&gt;</a>!, <a href="#XsOrXZR__7" title='For the "Epilogue" variant: is the 64-bit name of the general-purpose register that holds the source data, encoded in the "Rs" field.'>&lt;Xs&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if (!IsFeatureImplemented(FEAT_MOPS) ||
       !IsFeatureImplemented(FEAT_MTE) || sz != '00') then
-    <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+    <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
 end;
 
-var memset : <a href="shared_pseudocode.html#type_SETParams" title="">SETParams</a>;
+var memset : <a href="/latest_aarch64/shared_pseudocode.html#type_SETParams" title="">SETParams</a>;
 memset.d = UInt(Rd);
 memset.s = UInt(Rs);
 memset.n = UInt(Rn);
@@ -147,10 +147,10 @@ let options : bits(2) = op2[1:0];
 let nontemporal : boolean = options[1] == '1';
 
 case op2[3:2] of
-    when '00' =&gt; memset.stage = <a href="shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a>;
-    when '01' =&gt; memset.stage = <a href="shared_pseudocode.html#enum_MOPSStage_Main" title="">MOPSStage_Main</a>;
-    when '10' =&gt; memset.stage = <a href="shared_pseudocode.html#enum_MOPSStage_Epilogue" title="">MOPSStage_Epilogue</a>;
-    otherwise =&gt; <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+    when '00' =&gt; memset.stage = <a href="/latest_aarch64/shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a>;
+    when '01' =&gt; memset.stage = <a href="/latest_aarch64/shared_pseudocode.html#enum_MOPSStage_Main" title="">MOPSStage_Main</a>;
+    when '10' =&gt; memset.stage = <a href="/latest_aarch64/shared_pseudocode.html#enum_MOPSStage_Epilogue" title="">MOPSStage_Epilogue</a>;
+    otherwise =&gt; <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
 end;</p>
   <div class="encoding-notes">
       <p class="aml" data-pagefind-body="1">For information about the <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> behavior of this instruction, see <a class="armarm-xref" title="Reference to Armv8 ARM section" data-linkend="CJAEGDJC">Architectural Constraints on UNPREDICTABLE behaviors</a>, and particularly <a class="armarm-xref" title="Reference to Armv8 ARM section" data-linkend="CEGDGDDAG2">Memory Copy and Memory Set SET*</a> and <a class="armarm-xref" title="Reference to Armv8 ARM section" data-linkend="ARMARM_CEGCCGAE">Crossing a page boundary with different memory types or Shareability attributes</a>.</p>
@@ -184,38 +184,38 @@ end;</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode"><a href="shared_pseudocode.html#func_CheckMOPSEnabled_0" title="">CheckMOPSEnabled</a>();
+      <p class="pseudocode"><a href="/latest_aarch64/shared_pseudocode.html#func_CheckMOPSEnabled_0" title="">CheckMOPSEnabled</a>();
 
 memset.is_setg  = TRUE;
 
-<a href="shared_pseudocode.html#func_CheckSETConstrainedUnpredictable_1" title="">CheckSETConstrainedUnpredictable</a>(memset);
+<a href="/latest_aarch64/shared_pseudocode.html#func_CheckSETConstrainedUnpredictable_1" title="">CheckSETConstrainedUnpredictable</a>(memset);
 
-let data : bits(8) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{8}(memset.s);
-var B : <a href="shared_pseudocode.html#type_MOPSBlockSize" title="">MOPSBlockSize</a> = 0;
+let data : bits(8) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{8}(memset.s);
+var B : <a href="/latest_aarch64/shared_pseudocode.html#type_MOPSBlockSize" title="">MOPSBlockSize</a> = 0;
 
-memset.nzcv = <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.[N,Z,C,V];
-memset.toaddress = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(memset.d);
-if memset.stage == <a href="shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a> then
-    memset.setsize = UInt(<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(memset.n));
+memset.nzcv = <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.[N,Z,C,V];
+memset.toaddress = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(memset.d);
+if memset.stage == <a href="/latest_aarch64/shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a> then
+    memset.setsize = UInt(<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(memset.n));
 else
-    memset.setsize = SInt(<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(memset.n));
+    memset.setsize = SInt(<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(memset.n));
 end;
-memset.implements_option_a = <a href="shared_pseudocode.html#func_SETGOptionA_0" title="">SETGOptionA</a>();
+memset.implements_option_a = <a href="/latest_aarch64/shared_pseudocode.html#func_SETGOptionA_0" title="">SETGOptionA</a>();
 
-let privileged : boolean = (if options[0] == '1' then <a href="shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>()
-                                                 else <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="shared_pseudocode.html#global_EL0" title="">EL0</a>);
+let privileged : boolean = (if options[0] == '1' then <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>()
+                                                 else <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="/latest_aarch64/shared_pseudocode.html#global_EL0" title="">EL0</a>);
 
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescSTGMOPS_2" title="">CreateAccDescSTGMOPS</a>(privileged, nontemporal);
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescSTGMOPS_2" title="">CreateAccDescSTGMOPS</a>(privileged, nontemporal);
 
-if memset.stage == <a href="shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a> then
-    if memset.setsize &gt; <a href="shared_pseudocode.html#global_ArchMaxMOPSSETGSize" title="">ArchMaxMOPSSETGSize</a> then
-        memset.setsize = <a href="shared_pseudocode.html#global_ArchMaxMOPSSETGSize" title="">ArchMaxMOPSSETGSize</a>;
+if memset.stage == <a href="/latest_aarch64/shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a> then
+    if memset.setsize &gt; <a href="/latest_aarch64/shared_pseudocode.html#global_ArchMaxMOPSSETGSize" title="">ArchMaxMOPSSETGSize</a> then
+        memset.setsize = <a href="/latest_aarch64/shared_pseudocode.html#global_ArchMaxMOPSSETGSize" title="">ArchMaxMOPSSETGSize</a>;
     end;
 
-    if ((memset.setsize != 0 &amp;&amp; !IsAlignedSize(memset.toaddress, <a href="shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>)) ||
-            !IsAlignedSize(memset.setsize[63:0], <a href="shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>)) then
-        let fault : <a href="shared_pseudocode.html#type_FaultRecord" title="">FaultRecord</a> = <a href="shared_pseudocode.html#func_AlignmentFault_2" title="">AlignmentFault</a>(accdesc, memset.toaddress);
-        <a href="shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(fault);
+    if ((memset.setsize != 0 &amp;&amp; !IsAlignedSize(memset.toaddress, <a href="/latest_aarch64/shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>)) ||
+            !IsAlignedSize(memset.setsize[63:0], <a href="/latest_aarch64/shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>)) then
+        let fault : <a href="/latest_aarch64/shared_pseudocode.html#type_FaultRecord" title="">FaultRecord</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_AlignmentFault_2" title="">AlignmentFault</a>(accdesc, memset.toaddress);
+        <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(fault);
     end;
 
     if memset.implements_option_a then
@@ -227,10 +227,10 @@ if memset.stage == <a href="shared_pseudocode.html#enum_MOPSStage_Prologue" titl
     end;
 end;
 
-memset.stagesetsize = <a href="shared_pseudocode.html#func_MemSetStageSize_1" title="">MemSetStageSize</a>(memset);
+memset.stagesetsize = <a href="/latest_aarch64/shared_pseudocode.html#func_MemSetStageSize_1" title="">MemSetStageSize</a>(memset);
 
-if memset.stage != <a href="shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a> then
-    <a href="shared_pseudocode.html#func_CheckMemSetParams_2" title="">CheckMemSetParams</a>(memset, options);
+if memset.stage != <a href="/latest_aarch64/shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a> then
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckMemSetParams_2" title="">CheckMemSetParams</a>(memset, options);
 
     var fault_address : bits(64);
     if memset.implements_option_a then
@@ -239,37 +239,37 @@ if memset.stage != <a href="shared_pseudocode.html#enum_MOPSStage_Prologue" titl
         fault_address = memset.toaddress;
     end;
 
-    if (memset.setsize != 0 &amp;&amp; (memset.stagesetsize != 0 || <a href="shared_pseudocode.html#func_MemStageSetZeroSizeCheck_0" title="">MemStageSetZeroSizeCheck</a>()) &amp;&amp;
-          !IsAlignedSize(memset.toaddress, <a href="shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>)) then
-        let fault : <a href="shared_pseudocode.html#type_FaultRecord" title="">FaultRecord</a> = <a href="shared_pseudocode.html#func_AlignmentFault_2" title="">AlignmentFault</a>(accdesc, fault_address);
-        <a href="shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(fault);
+    if (memset.setsize != 0 &amp;&amp; (memset.stagesetsize != 0 || <a href="/latest_aarch64/shared_pseudocode.html#func_MemStageSetZeroSizeCheck_0" title="">MemStageSetZeroSizeCheck</a>()) &amp;&amp;
+          !IsAlignedSize(memset.toaddress, <a href="/latest_aarch64/shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>)) then
+        let fault : <a href="/latest_aarch64/shared_pseudocode.html#type_FaultRecord" title="">FaultRecord</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_AlignmentFault_2" title="">AlignmentFault</a>(accdesc, fault_address);
+        <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(fault);
     end;
-    if ((memset.stagesetsize != 0 || <a href="shared_pseudocode.html#func_MemStageSetZeroSizeCheck_0" title="">MemStageSetZeroSizeCheck</a>()) &amp;&amp;
-           !IsAlignedSize(memset.setsize[63:0], <a href="shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>)) then
-        let fault : <a href="shared_pseudocode.html#type_FaultRecord" title="">FaultRecord</a> = <a href="shared_pseudocode.html#func_AlignmentFault_2" title="">AlignmentFault</a>(accdesc, fault_address);
-        <a href="shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(fault);
+    if ((memset.stagesetsize != 0 || <a href="/latest_aarch64/shared_pseudocode.html#func_MemStageSetZeroSizeCheck_0" title="">MemStageSetZeroSizeCheck</a>()) &amp;&amp;
+           !IsAlignedSize(memset.setsize[63:0], <a href="/latest_aarch64/shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>)) then
+        let fault : <a href="/latest_aarch64/shared_pseudocode.html#type_FaultRecord" title="">FaultRecord</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_AlignmentFault_2" title="">AlignmentFault</a>(accdesc, fault_address);
+        <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(fault);
     end;
 end;
 
 var tags_set : integer;
-var memaddrdesc : <a href="shared_pseudocode.html#type_AddressDescriptor" title="">AddressDescriptor</a>;
-var memstatus : <a href="shared_pseudocode.html#type_PhysMemRetStatus" title="">PhysMemRetStatus</a>;
-var tagmemaddrdesc : <a href="shared_pseudocode.html#type_AddressDescriptor" title="">AddressDescriptor</a>;
-var tagmemstatus : <a href="shared_pseudocode.html#type_PhysMemRetStatus" title="">PhysMemRetStatus</a>;
+var memaddrdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AddressDescriptor" title="">AddressDescriptor</a>;
+var memstatus : <a href="/latest_aarch64/shared_pseudocode.html#type_PhysMemRetStatus" title="">PhysMemRetStatus</a>;
+var tagmemaddrdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AddressDescriptor" title="">AddressDescriptor</a>;
+var tagmemstatus : <a href="/latest_aarch64/shared_pseudocode.html#type_PhysMemRetStatus" title="">PhysMemRetStatus</a>;
 var fault : boolean    = FALSE;
 var tagfault : boolean = FALSE;
 
 if memset.implements_option_a then
-    while memset.stagesetsize &lt; 0 &amp;&amp; !fault &amp;&amp; !tagfault looplimit <a href="shared_pseudocode.html#global_ArchMaxMOPSSETGSize" title="">ArchMaxMOPSSETGSize</a> do
+    while memset.stagesetsize &lt; 0 &amp;&amp; !fault &amp;&amp; !tagfault looplimit <a href="/latest_aarch64/shared_pseudocode.html#global_ArchMaxMOPSSETGSize" title="">ArchMaxMOPSSETGSize</a> do
         // IMP DEF selection of the block size that is worked on. While many
         // implementations might make this constant, that is not assumed.
-        B = <a href="shared_pseudocode.html#func_SETSizeChoice_2" title="">SETSizeChoice</a>(memset, <a href="shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>);
+        B = <a href="/latest_aarch64/shared_pseudocode.html#func_SETSizeChoice_2" title="">SETSizeChoice</a>(memset, <a href="/latest_aarch64/shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>);
         assert B &lt;= -1 * memset.stagesetsize &amp;&amp; B[3:0] == '0000';
 
-        (-, memaddrdesc, memstatus) = <a href="shared_pseudocode.html#func_MemSetBytes_4" title="">MemSetBytes</a>(memset.toaddress + memset.setsize,
+        (-, memaddrdesc, memstatus) = <a href="/latest_aarch64/shared_pseudocode.html#func_MemSetBytes_4" title="">MemSetBytes</a>(memset.toaddress + memset.setsize,
                                                   data, B, accdesc);
-        let tag : bits(4) = <a href="shared_pseudocode.html#func_AArch64_AllocationTagFromAddress_1" title="">AArch64_AllocationTagFromAddress</a>(memset.toaddress + memset.setsize);
-        (tags_set, tagmemaddrdesc, tagmemstatus) = <a href="shared_pseudocode.html#func_MemSetTags_4" title="">MemSetTags</a>(memset.toaddress + memset.setsize,
+        let tag : bits(4) = <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_AllocationTagFromAddress_1" title="">AArch64_AllocationTagFromAddress</a>(memset.toaddress + memset.setsize);
+        (tags_set, tagmemaddrdesc, tagmemstatus) = <a href="/latest_aarch64/shared_pseudocode.html#func_MemSetTags_4" title="">MemSetTags</a>(memset.toaddress + memset.setsize,
                                                               tag, B, accdesc);
         fault    = IsFault(memaddrdesc)    || IsFault(memstatus);
         tagfault = IsFault(tagmemaddrdesc) || IsFault(tagmemstatus);
@@ -281,15 +281,15 @@ if memset.implements_option_a then
     end;
 
 else
-    while memset.stagesetsize &gt; 0 &amp;&amp; !fault &amp;&amp; !tagfault looplimit <a href="shared_pseudocode.html#global_ArchMaxMOPSSETGSize" title="">ArchMaxMOPSSETGSize</a> do
+    while memset.stagesetsize &gt; 0 &amp;&amp; !fault &amp;&amp; !tagfault looplimit <a href="/latest_aarch64/shared_pseudocode.html#global_ArchMaxMOPSSETGSize" title="">ArchMaxMOPSSETGSize</a> do
         // IMP DEF selection of the block size that is worked on. While many
         // implementations might make this constant, that is not assumed.
-        B = <a href="shared_pseudocode.html#func_SETSizeChoice_2" title="">SETSizeChoice</a>(memset, <a href="shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>);
+        B = <a href="/latest_aarch64/shared_pseudocode.html#func_SETSizeChoice_2" title="">SETSizeChoice</a>(memset, <a href="/latest_aarch64/shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>);
         assert B &lt;= memset.stagesetsize &amp;&amp; B[3:0] == '0000';
 
-        (-, memaddrdesc, memstatus) = <a href="shared_pseudocode.html#func_MemSetBytes_4" title="">MemSetBytes</a>(memset.toaddress, data, B, accdesc);
-        let tag : bits(4) = <a href="shared_pseudocode.html#func_AArch64_AllocationTagFromAddress_1" title="">AArch64_AllocationTagFromAddress</a>(memset.toaddress);
-        (tags_set, tagmemaddrdesc, tagmemstatus) = <a href="shared_pseudocode.html#func_MemSetTags_4" title="">MemSetTags</a>(memset.toaddress, tag,
+        (-, memaddrdesc, memstatus) = <a href="/latest_aarch64/shared_pseudocode.html#func_MemSetBytes_4" title="">MemSetBytes</a>(memset.toaddress, data, B, accdesc);
+        let tag : bits(4) = <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_AllocationTagFromAddress_1" title="">AArch64_AllocationTagFromAddress</a>(memset.toaddress);
+        (tags_set, tagmemaddrdesc, tagmemstatus) = <a href="/latest_aarch64/shared_pseudocode.html#func_MemSetTags_4" title="">MemSetTags</a>(memset.toaddress, tag,
                                                               B, accdesc);
 
         fault    = IsFault(memaddrdesc)    || IsFault(memstatus);
@@ -303,25 +303,25 @@ else
     end;
 end;
 
-<a href="shared_pseudocode.html#func_UpdateSetRegisters_3" title="">UpdateSetRegisters</a>(memset, fault || tagfault, tags_set * <a href="shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>);
+<a href="/latest_aarch64/shared_pseudocode.html#func_UpdateSetRegisters_3" title="">UpdateSetRegisters</a>(memset, fault || tagfault, tags_set * <a href="/latest_aarch64/shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>);
 
 if fault then
     if IsFault(memaddrdesc) then
-        <a href="shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(memaddrdesc.fault);
+        <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(memaddrdesc.fault);
     else
         let iswrite : boolean = TRUE;
-        <a href="shared_pseudocode.html#func_HandleExternalAbort_5" title="">HandleExternalAbort</a>(memstatus, iswrite, memaddrdesc, B, accdesc);
+        <a href="/latest_aarch64/shared_pseudocode.html#func_HandleExternalAbort_5" title="">HandleExternalAbort</a>(memstatus, iswrite, memaddrdesc, B, accdesc);
     end;
 elsif tagfault then
     if IsFault(tagmemaddrdesc) then
-        <a href="shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(tagmemaddrdesc.fault);
+        <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(tagmemaddrdesc.fault);
     else
         let iswrite : boolean = TRUE;
-        <a href="shared_pseudocode.html#func_HandleExternalAbort_5" title="">HandleExternalAbort</a>(tagmemstatus, iswrite, tagmemaddrdesc, 1, accdesc);
+        <a href="/latest_aarch64/shared_pseudocode.html#func_HandleExternalAbort_5" title="">HandleExternalAbort</a>(tagmemstatus, iswrite, tagmemaddrdesc, 1, accdesc);
     end;
 end;
 
-if memset.stage == <a href="shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a> then
+if memset.stage == <a href="/latest_aarch64/shared_pseudocode.html#enum_MOPSStage_Prologue" title="">MOPSStage_Prologue</a> then
     PSTATE.[N,Z,C,V] = memset.nzcv;
 end;</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

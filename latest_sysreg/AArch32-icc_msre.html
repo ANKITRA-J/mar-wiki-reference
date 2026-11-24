@@ -10,12 +10,12 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-3_3">Enable, bit [3]:
       </h4><div class="field">
-      <p>Enable. Enables lower Exception level access to <a href="AArch32-icc_sre.html">ICC_SRE</a> and <a href="AArch32-icc_hsre.html">ICC_HSRE</a>.</p>
-    <table class="valuetable"><tr><th>Enable</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Secure EL1 accesses to Secure <a href="AArch32-icc_sre.html">ICC_SRE</a> trap to EL3.</p>
-<p>EL2 accesses to Non-secure <a href="AArch32-icc_sre.html">ICC_SRE</a> and <a href="AArch32-icc_hsre.html">ICC_HSRE</a> trap to EL3.</p>
-<p>Non-secure EL1 accesses to <a href="AArch32-icc_sre.html">ICC_SRE</a> trap to EL3, unless these accesses are trapped to EL2 as a result of ICC_HSRE.Enable == 0.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>Secure EL1 accesses to Secure <a href="AArch32-icc_sre.html">ICC_SRE</a> do not trap to EL3.</p>
-<p>EL2 accesses to Non-secure <a href="AArch32-icc_sre.html">ICC_SRE</a> and ICC_HSRE do not trap to EL3.</p>
-<p>Non-secure EL1 accesses to <a href="AArch32-icc_sre.html">ICC_SRE</a> do not trap to EL3.</p></td></tr></table><p>If ICC_MSRE.SRE is RAO/WI, an implementation is permitted to make the Enable bit RAO/WI.</p>
+      <p>Enable. Enables lower Exception level access to <a href="/latest_sysreg/AArch32-icc_sre.html">ICC_SRE</a> and <a href="/latest_sysreg/AArch32-icc_hsre.html">ICC_HSRE</a>.</p>
+    <table class="valuetable"><tr><th>Enable</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Secure EL1 accesses to Secure <a href="/latest_sysreg/AArch32-icc_sre.html">ICC_SRE</a> trap to EL3.</p>
+<p>EL2 accesses to Non-secure <a href="/latest_sysreg/AArch32-icc_sre.html">ICC_SRE</a> and <a href="/latest_sysreg/AArch32-icc_hsre.html">ICC_HSRE</a> trap to EL3.</p>
+<p>Non-secure EL1 accesses to <a href="/latest_sysreg/AArch32-icc_sre.html">ICC_SRE</a> trap to EL3, unless these accesses are trapped to EL2 as a result of ICC_HSRE.Enable == 0.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>Secure EL1 accesses to Secure <a href="/latest_sysreg/AArch32-icc_sre.html">ICC_SRE</a> do not trap to EL3.</p>
+<p>EL2 accesses to Non-secure <a href="/latest_sysreg/AArch32-icc_sre.html">ICC_SRE</a> and ICC_HSRE do not trap to EL3.</p>
+<p>Non-secure EL1 accesses to <a href="/latest_sysreg/AArch32-icc_sre.html">ICC_SRE</a> do not trap to EL3.</p></td></tr></table><p>If ICC_MSRE.SRE is RAO/WI, an implementation is permitted to make the Enable bit RAO/WI.</p>
 <p>If ICC_MSRE.SRE is 0, the Enable bit behaves as 1 for all purposes other than reading the value of the bit.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_2">DIB, bit [2]:
@@ -46,7 +46,7 @@
       </h4><div class="field">
       <p>System Register Enable.</p>
     <table class="valuetable"><tr><th>SRE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The memory-mapped interface must be used. Accesses at EL3 or below to any ICH_* System register, or any EL1, EL2, or EL3 ICC_* register other than <a href="AArch32-icc_sre.html">ICC_SRE</a>, <a href="AArch32-icc_hsre.html">ICC_HSRE</a>, or ICC_MSRE, are <span class="arm-defined-word">UNDEFINED</span>.</p>
+          <p>The memory-mapped interface must be used. Accesses at EL3 or below to any ICH_* System register, or any EL1, EL2, or EL3 ICC_* register other than <a href="/latest_sysreg/AArch32-icc_sre.html">ICC_SRE</a>, <a href="/latest_sysreg/AArch32-icc_hsre.html">ICC_HSRE</a>, or ICC_MSRE, are <span class="arm-defined-word">UNDEFINED</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The System register interface to the ICH_* registers and the EL1, EL2, and EL3 ICC_* registers is enabled for EL3.</p>
         </td></tr></table><p>If software changes this bit from 1 to 0, the results are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>

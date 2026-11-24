@@ -38,21 +38,21 @@ let tagchecked : boolean = n != 31;</p>
       <p class="pseudocode">var address : bits(64);
 var data : bits(8);
 
-let privileged : boolean = <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="shared_pseudocode.html#global_EL0" title="">EL0</a>;
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescExLDST_5" title="">CreateAccDescExLDST</a>(<a href="shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, acqrel, tagchecked,
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="/latest_aarch64/shared_pseudocode.html#global_EL0" title="">EL0</a>;
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescExLDST_5" title="">CreateAccDescExLDST</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, acqrel, tagchecked,
                                                      privileged, t);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
-<a href="shared_pseudocode.html#func_AArch64_SetExclusiveMonitors_3" title="">AArch64_SetExclusiveMonitors</a>(address, 1, accdesc);
+<a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_SetExclusiveMonitors_3" title="">AArch64_SetExclusiveMonitors</a>(address, 1, accdesc);
 
-data = <a href="shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{8}(address, accdesc);
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(t) = ZeroExtend{32}(data);</p></div>
+data = <a href="/latest_aarch64/shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{8}(address, accdesc);
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(t) = ZeroExtend{32}(data);</p></div>
   <h2>Operational information</h2>
     
       

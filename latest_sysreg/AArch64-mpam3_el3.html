@@ -3,7 +3,7 @@
 <title>MPAM3_EL3 | Jon's Arm Reference</title><meta name="description" content="Holds information to generate MPAM labels for memory requests when executing at EL3."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">MPAM3_EL3</h1><p class="insn_subtitle" data-pagefind-body="1">MPAM3 Register (EL3)</p><div data-pagefind-body="1">
         <p>Holds information to generate MPAM labels for memory requests when executing at EL3.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register MPAM3_EL3 bit [63] is architecturally mapped to AArch64 System register <a href="AArch64-mpam2_el2.html">MPAM2_EL2[63]</a> when (FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p0 is implemented), EL3 is implemented, and EL2 is implemented.</p><p>AArch64 System register MPAM3_EL3 bit [63] is architecturally mapped to AArch64 System register <a href="AArch64-mpam1_el1.html">MPAM1_EL1[63]</a> when (FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p0 is implemented), EL3 is implemented, and EL1 is implemented.</p><p>This register is present only when FEAT_MPAM is implemented. Otherwise, direct accesses to MPAM3_EL3 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch64 System register MPAM3_EL3 bit [63] is architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2[63]</a> when (FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p0 is implemented), EL3 is implemented, and EL2 is implemented.</p><p>AArch64 System register MPAM3_EL3 bit [63] is architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1[63]</a> when (FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p0 is implemented), EL3 is implemented, and EL1 is implemented.</p><p>This register is present only when FEAT_MPAM is implemented. Otherwise, direct accesses to MPAM3_EL3 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>MPAM3_EL3 is a 64-bit register.</p>
       <h2>Field descriptions</h2><h3>When FEAT_MPAMv2 is implemented:</h3><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_0-63_48-1">altPMG</a></td><td class="lr" colspan="16"><a href="#fieldset_0-47_32">PMG</a></td></tr><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_0-31_16-1">altPARTID</a></td><td class="lr" colspan="16"><a href="#fieldset_0-15_0">PARTID</a></td></tr></tbody></table><h4 id="fieldset_0-63_48-1">altPMG, bits [63:48] <span class="condition">when MPAMIDR_EL1.HAS_ALT_ID == '1'</span>:
       </h4><div class="field">
@@ -85,11 +85,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-57_57-1">ALTSP_HEN, bit [57] <span class="condition">when FEAT_RME is implemented and MPAMIDR_EL1.HAS_ALTSP == '1'</span>:
       </h4><div class="field">
-      <p>Hierarchical enable for alternative PARTID space controls. Alternative PARTID space controls in <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a> have no effect when this field is zero.</p>
+      <p>Hierarchical enable for alternative PARTID space controls. Alternative PARTID space controls in <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a> have no effect when this field is zero.</p>
     <table class="valuetable"><tr><th>ALTSP_HEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Disable alternative PARTID space controls in <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>. The PARTID space for PARTIDs in <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>, <a href="AArch64-mpam1_el1.html">MPAM1_EL1</a>, and <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a> is selected by MPAM3_EL3.ALTSP_HFC.</p>
+          <p>Disable alternative PARTID space controls in <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>. The PARTID space for PARTIDs in <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>, <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1</a>, and <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a> is selected by MPAM3_EL3.ALTSP_HFC.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Enable alternative PARTID space controls in <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a> to control the PARTID space used for PARTIDs in <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>, <a href="AArch64-mpam1_el1.html">MPAM1_EL1</a>, and <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a>.</p>
+          <p>Enable alternative PARTID space controls in <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a> to control the PARTID space used for PARTIDs in <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>, <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1</a>, and <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a>.</p>
         </td></tr></table>
       <p>For more information, see <span class="xref">'In a PE with FEAT_RME, selection of primary or alternative PARTID space'</span>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -99,11 +99,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-56_56-1">ALTSP_HFC, bit [56] <span class="condition">when FEAT_RME is implemented and MPAMIDR_EL1.HAS_ALTSP == '1'</span>:
       </h4><div class="field">
-      <p>Hierarchical force of alternative PARTID space controls. When MPAM3_EL3.ALTSP_HEN is 0, the PARTID space for PARTIDs in <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>, <a href="AArch64-mpam1_el1.html">MPAM1_EL1</a>, and <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a> is selected by the value of this bit.</p>
+      <p>Hierarchical force of alternative PARTID space controls. When MPAM3_EL3.ALTSP_HEN is 0, the PARTID space for PARTIDs in <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>, <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1</a>, and <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a> is selected by the value of this bit.</p>
     <table class="valuetable"><tr><th>ALTSP_HFC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>When MPAM3_EL3.ALTSP_HEN is 0, the PARTID space of <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>.PARTID, <a href="AArch64-mpam1_el1.html">MPAM1_EL1</a>.PARTID and <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a>.PARTID are the primary PARTID space for the security state.</p>
+          <p>When MPAM3_EL3.ALTSP_HEN is 0, the PARTID space of <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>.PARTID, <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1</a>.PARTID and <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a>.PARTID are the primary PARTID space for the security state.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>When MPAM3_EL3.ALTSP_HEN is 0, the PARTID space of <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>.PARTID and <a href="AArch64-mpam1_el1.html">MPAM1_EL1</a>.PARTID and <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a>.PARTID are the alternative PARTID space for the security state.</p>
+          <p>When MPAM3_EL3.ALTSP_HEN is 0, the PARTID space of <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>.PARTID and <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1</a>.PARTID and <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a>.PARTID are the alternative PARTID space for the security state.</p>
         </td></tr></table>
       <p>For more information, see <span class="xref">'In a PE with FEAT_RME, selection of primary or alternative PARTID space'</span>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -115,9 +115,9 @@
       </h4><div class="field">
       <p>Select alternative PARTID space for PARTIDs in MPAM3_EL3.</p>
     <table class="valuetable"><tr><th>ALTSP_EL3</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Selects the primary PARTID space of <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.PARTID_I and MPAM3_EL3.PARTID_D.</p>
+          <p>Selects the primary PARTID space of <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.PARTID_I and MPAM3_EL3.PARTID_D.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Selects the alternative PARTID space of <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.PARTID_I and MPAM3_EL3.PARTID_D.</p>
+          <p>Selects the alternative PARTID space of <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.PARTID_I and MPAM3_EL3.PARTID_D.</p>
         </td></tr></table>
       <p>For more information, see <span class="xref">'In a PE with FEAT_RME, selection of primary or alternative PARTID space'</span>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -130,7 +130,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-52_52-1">RT_ALTSP_NS, bit [52] <span class="condition">when FEAT_RME is implemented and MPAMIDR_EL1.HAS_ALTSP == '1'</span>:
       </h4><div class="field">
-      <p>Selects whether the alternative PARTID space for the Root security state is the Secure PARTID space or the Non-secure PARTID space. <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.RT_ALTSP_NS selects the alternative PARTID space for the Root Security state when <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.ALTSP_EL3 == 1.</p>
+      <p>Selects whether the alternative PARTID space for the Root security state is the Secure PARTID space or the Non-secure PARTID space. <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.RT_ALTSP_NS selects the alternative PARTID space for the Root Security state when <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.ALTSP_EL3 == 1.</p>
     <table class="valuetable"><tr><th>RT_ALTSP_NS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>The alternative PARTID space in the Root security state is the Secure PARTID space.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>

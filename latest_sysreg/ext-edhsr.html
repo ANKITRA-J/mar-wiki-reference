@@ -5,7 +5,7 @@
         <p>Holds syndrome information for a debug event.</p>
       </div><h3>Configuration</h3><p>EDHSR is in the Core power domain.
     </p><p>This register is present only when FEAT_EDHSR is implemented. Otherwise, direct accesses to EDHSR are <span class="arm-defined-word">RES0</span>.</p>
-        <p>The value of this register is <span class="arm-defined-word">UNKNOWN</span> if the PE is in Non-debug state, or if <a href="ext-edscr.html">EDSCR</a>.STATUS is not <span class="binarynumber">0b101011</span>.</p>
+        <p>The value of this register is <span class="arm-defined-word">UNKNOWN</span> if the PE is in Non-debug state, or if <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.STATUS is not <span class="binarynumber">0b101011</span>.</p>
       <h3>Attributes</h3>
         <p>EDHSR is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="23"><a href="#fieldset_0-63_41">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-40_40-1">GCS</a></td><td class="lr" colspan="8"><a href="#fieldset_0-39_24">RES0</a></td></tr><tr class="firstrow"><td class="lr" colspan="8"><a href="#fieldset_0-39_24">RES0</a></td><td class="lr" colspan="6"><a href="#fieldset_0-23_18">WPT</a></td><td class="lr" colspan="1"><a href="#fieldset_0-17_17">WPTV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-16_16">WPF</a></td><td class="lr" colspan="1"><a href="#fieldset_0-15_15">FnP</a></td><td class="lr" colspan="1"><a href="#fieldset_0-14_14">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-13_13-1">VNCR</a></td><td class="lr" colspan="2"><a href="#fieldset_0-12_11">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-10_10">FnV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-9_9">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-8_8-1">CM</a></td><td class="lr" colspan="1"><a href="#fieldset_0-7_7">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-6_6-1">WnR</a></td><td class="lr" colspan="6"><a href="#fieldset_0-5_0">RES0</a></td></tr></tbody></table><h4 id="fieldset_0-63_41">Bits [63:41]:
@@ -60,11 +60,11 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-15_15">FnP, bit [15]:
       </h4><div class="field">
-      <p><a href="ext-edwar.html">EDWAR</a> not Precise.</p>
+      <p><a href="/latest_sysreg/ext-edwar.html">EDWAR</a> not Precise.</p>
     <table class="valuetable"><tr><th>FnP</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If the <a href="ext-edwar.html">EDWAR</a> is valid, it holds the virtual address of an access or sequence of contiguous accesses that triggered the Watchpoint debug event.</p>
+          <p>If the <a href="/latest_sysreg/ext-edwar.html">EDWAR</a> is valid, it holds the virtual address of an access or sequence of contiguous accesses that triggered the Watchpoint debug event.</p>
         </td><td></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If the <a href="ext-edwar.html">EDWAR</a> is valid, it holds any virtual address within the smallest implemented translation granule that contains the virtual address of an access or set of contiguous accesses that triggered the Watchpoint debug event.</p>
+          <p>If the <a href="/latest_sysreg/ext-edwar.html">EDWAR</a> is valid, it holds any virtual address within the smallest implemented translation granule that contains the virtual address of an access or set of contiguous accesses that triggered the Watchpoint debug event.</p>
         </td><td>When FEAT_SME is implemented or FEAT_SVE is implemented</td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-14_14">Bit [14]:
@@ -72,11 +72,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-13_13-1">VNCR, bit [13] <span class="condition">when FEAT_Debugv8p9 is implemented</span>:
       </h4><div class="field">
-      <p><a href="AArch64-vncr_el2.html">VNCR_EL2</a> access. Indicates that the Watchpoint debug event came from use of <a href="AArch64-vncr_el2.html">VNCR_EL2</a> register by EL1 code.</p>
+      <p><a href="/latest_sysreg/AArch64-vncr_el2.html">VNCR_EL2</a> access. Indicates that the Watchpoint debug event came from use of <a href="/latest_sysreg/AArch64-vncr_el2.html">VNCR_EL2</a> register by EL1 code.</p>
     <table class="valuetable"><tr><th>VNCR</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The Watchpoint debug event was not generated by the use of <a href="AArch64-vncr_el2.html">VNCR_EL2</a> by EL1 code.</p>
+          <p>The Watchpoint debug event was not generated by the use of <a href="/latest_sysreg/AArch64-vncr_el2.html">VNCR_EL2</a> by EL1 code.</p>
         </td><td></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The Watchpoint debug event was generated by the use of <a href="AArch64-vncr_el2.html">VNCR_EL2</a> by EL1 code.</p>
+          <p>The Watchpoint debug event was generated by the use of <a href="/latest_sysreg/AArch64-vncr_el2.html">VNCR_EL2</a> by EL1 code.</p>
         </td><td>When FEAT_NV2 is implemented</td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-13_13-2"> <span class="condition">Otherwise</span>:
@@ -87,11 +87,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-10_10">FnV, bit [10]:
       </h4><div class="field">
-      <p><a href="ext-edwar.html">EDWAR</a> not Valid.</p>
+      <p><a href="/latest_sysreg/ext-edwar.html">EDWAR</a> not Valid.</p>
     <table class="valuetable"><tr><th>FnV</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-edwar.html">EDWAR</a> is valid.</p>
+          <p><a href="/latest_sysreg/ext-edwar.html">EDWAR</a> is valid.</p>
         </td><td></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-edwar.html">EDWAR</a> is not valid, and holds an <span class="arm-defined-word">UNKNOWN</span> value.</p>
+          <p><a href="/latest_sysreg/ext-edwar.html">EDWAR</a> is not valid, and holds an <span class="arm-defined-word">UNKNOWN</span> value.</p>
         </td><td>When FEAT_SME is implemented or FEAT_SVE is implemented</td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-9_9">Bit [9]:
@@ -103,7 +103,7 @@
     <table class="valuetable"><tr><th>CM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>The Watchpoint debug event was not generated by the execution of one of the System instructions identified in the description of value 1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The Watchpoint debug event was generated by the execution of a cache maintenance instruction. The <a href="AArch64-dc-zva.html">DC ZVA</a>, <a href="AArch64-dc-gva.html">DC GVA</a>, and <a href="AArch64-dc-gzva.html">DC GZVA</a> instructions are not cache maintenance instructions, and therefore do not cause this field to be set to 1.</p>
+          <p>The Watchpoint debug event was generated by the execution of a cache maintenance instruction. The <a href="/latest_sysreg/AArch64-dc-zva.html">DC ZVA</a>, <a href="/latest_sysreg/AArch64-dc-gva.html">DC GVA</a>, and <a href="/latest_sysreg/AArch64-dc-gzva.html">DC GZVA</a> instructions are not cache maintenance instructions, and therefore do not cause this field to be set to 1.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-8_8-2"> <span class="condition">Otherwise</span>:

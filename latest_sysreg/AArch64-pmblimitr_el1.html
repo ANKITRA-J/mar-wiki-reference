@@ -23,7 +23,7 @@
 <li>Physical address in the owning security state if the owning translation regime has no stage 2 translation.
 </li><li>Intermediate physical addresses in the owning security state if the owning translation regime has stage 2 translations.
 </li></ul></td></tr></table>
-      <p>If the Effective value of <a href="AArch64-pmscr_el2.html">PMSCR_EL2</a>.EnVM is 0, then the PE ignores the value of this field, and the Profiling Buffer pointers are always virtual addresses.</p>
+      <p>If the Effective value of <a href="/latest_sysreg/AArch64-pmscr_el2.html">PMSCR_EL2</a>.EnVM is 0, then the PE ignores the value of this field, and the Profiling Buffer pointers are always virtual addresses.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Access to this field is <span class="access_level">RW</span>.</p></div><h4 id="fieldset_0-7_7-2"> <span class="condition">Otherwise</span>:
@@ -34,13 +34,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-5_5-1">PMFZ, bit [5] <span class="condition">when FEAT_SPEv1p2 is implemented</span>:
       </h4><div class="field">
-      <p>Freeze PMU on SPE event. Stop PMU event counters when <a href="AArch64-pmbsr_el1.html">PMBSR_EL1</a>.S == 1.</p>
+      <p>Freeze PMU on SPE event. Stop PMU event counters when <a href="/latest_sysreg/AArch64-pmbsr_el1.html">PMBSR_EL1</a>.S == 1.</p>
     <table class="valuetable"><tr><th>PMFZ</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Do not freeze PMU event counters on Statistical Profiling Buffer Management event.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Freeze PMU event counters on Statistical Profiling Buffer Management event.</p>
         </td></tr></table>
-      <p>The PMU event counters affected by this control is controlled by <a href="AArch64-pmcr_el0.html">PMCR_EL0</a>.FZS and, if EL2 is implemented, <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMFZS. See the descriptions of these control bits for more information.</p>
+      <p>The PMU event counters affected by this control is controlled by <a href="/latest_sysreg/AArch64-pmcr_el0.html">PMCR_EL0</a>.FZS and, if EL2 is implemented, <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMFZS. See the descriptions of these control bits for more information.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-5_5-2"> <span class="condition">Otherwise</span>:

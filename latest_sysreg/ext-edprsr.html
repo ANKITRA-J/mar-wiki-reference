@@ -13,7 +13,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-16_16-1">EPMADE, bit [16] <span class="condition">when FEAT_RME is implemented and FEAT_PMUv3_EXT is implemented</span>:
       </h4><div class="field">
-      <p>External Performance Monitors Access Disable Extended status. Together with EDPRSR.EPMAD, reports whether access to Performance Monitor registers by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{EPMAD, EPMADE} controls.</p>
+      <p>External Performance Monitors Access Disable Extended status. Together with EDPRSR.EPMAD, reports whether access to Performance Monitor registers by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{EPMAD, EPMADE} controls.</p>
     <p>For a description of the values derived by evaluating EDPRSR.EPMAD and EDPRSR.EPMADE together, see EDPRSR.EPMAD.</p>
 <p>This field is in the Core power domain.</p><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">UNKNOWN/WI</span> if any of the following are true:<ul><li>FEAT_DoPD is not implemented and !IsCorePowered().</li><li>EDPRSR.R == '1'.</li></ul></li><li>
                   Otherwise,
@@ -25,7 +25,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_15-1">ETADE, bit [15] <span class="condition">when FEAT_RME is implemented, FEAT_TRC_EXT is implemented, and FEAT_TRBE is implemented</span>:
       </h4><div class="field">
-      <p>External Trace Access Disable Extended status. Together with EDPRSR.ETAD, reports whether access to trace unit registers by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{ETAD, ETADE} controls.</p>
+      <p>External Trace Access Disable Extended status. Together with EDPRSR.ETAD, reports whether access to trace unit registers by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{ETAD, ETADE} controls.</p>
     <p>For a description of the values derived by evaluating EDPRSR.ETAD and EDPRSR.ETADE together, see EDPRSR.ETAD.</p>
 <p>This field is in the Core power domain.</p><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">UNKNOWN/WI</span> if any of the following are true:<ul><li>FEAT_DoPD is not implemented and !IsCorePowered().</li><li>EDPRSR.R == '1'.</li></ul></li><li>
                   Otherwise,
@@ -37,7 +37,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-14_14-1">EDADE, bit [14] <span class="condition">when FEAT_RME is implemented</span>:
       </h4><div class="field">
-      <p>External Debug Access Disable Extended status. Together with EDPRSR.EDAD, reports whether access to breakpoint registers, watchpoint registers, and <a href="ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{EDAD, EDADE} controls.</p>
+      <p>External Debug Access Disable Extended status. Together with EDPRSR.EDAD, reports whether access to breakpoint registers, watchpoint registers, and <a href="/latest_sysreg/ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{EDAD, EDADE} controls.</p>
     <p>For a description of the values derived by evaluating EDPRSR.EDAD and EDPRSR.EDADE together, see EDPRSR.EDAD.</p>
 <p>This field is in the Core power domain.</p><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">UNKNOWN/WI</span> if any of the following are true:<ul><li>FEAT_DoPD is not implemented and !IsCorePowered().</li><li>EDPRSR.R == '1'.</li></ul></li><li>
                   Otherwise,
@@ -68,7 +68,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-12_12-1">ETAD, bit [12] <span class="condition">when FEAT_RME is implemented, FEAT_TRC_EXT is implemented, and FEAT_TRBE is implemented</span>:
       </h4><div class="field">
-      <p>External Trace Access Disable status. Together with EDPRSR.ETADE, reports whether access to trace unit registers by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{ETAD, ETADE} controls.</p>
+      <p>External Trace Access Disable status. Together with EDPRSR.ETADE, reports whether access to trace unit registers by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{ETAD, ETADE} controls.</p>
     <table class="valuetable"><thead><tr><th>ETADE</th><th>ETAD</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>No accesses from an external debugger to trace unit registers are prohibited.</td></tr><tr><td><span class="binarynumber">0b0</span>
 </td><td><span class="binarynumber">0b1</span>
 </td><td>Realm and Non-secure accesses from an external debugger to trace unit registers are prohibited.
@@ -86,7 +86,7 @@ Other accesses from an external debugger to trace unit registers are not affecte
                   is <span class="access_level">RO</span>.
                 </li></ul></div><h4 id="fieldset_0-12_12-2"> <span class="condition">when FEAT_TRC_EXT is implemented and FEAT_TRBE is implemented</span>:
       </h4><div class="field">
-      <p>External Trace Access Disable status. Reports whether Non-secure access to trace unit registers by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.ETAD control.</p>
+      <p>External Trace Access Disable status. Reports whether Non-secure access to trace unit registers by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.ETAD control.</p>
     <table class="valuetable"><tr><th>ETAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>External Non-secure trace unit accesses not affected. <span class="function">AllowExternalTraceAccess()</span> == TRUE for a Non-secure access.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -178,8 +178,8 @@ Other accesses from an external debugger to trace unit registers are not affecte
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-9_9-1">EPMAD, bit [9] <span class="condition">when FEAT_RME is implemented and FEAT_PMUv3_EXT is implemented</span>:
-      </h4><div class="field"><p>External Performance Monitors Access Disable status. Together with EDPRSR.EPMADE, reports whether access to Performance Monitor registers by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{EPMAD, EPMADE} controls.</p>
-<p>See <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD for the list of affected external Performance Monitor registers.</p><table class="valuetable"><thead><tr><th>EPMADE</th><th>EPMAD</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>No accesses from an external debugger to affected Performance Monitor registers are prohibited.</td></tr><tr><td><span class="binarynumber">0b0</span>
+      </h4><div class="field"><p>External Performance Monitors Access Disable status. Together with EDPRSR.EPMADE, reports whether access to Performance Monitor registers by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{EPMAD, EPMADE} controls.</p>
+<p>See <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD for the list of affected external Performance Monitor registers.</p><table class="valuetable"><thead><tr><th>EPMADE</th><th>EPMAD</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>No accesses from an external debugger to affected Performance Monitor registers are prohibited.</td></tr><tr><td><span class="binarynumber">0b0</span>
 </td><td><span class="binarynumber">0b1</span>
 </td><td>Realm and Non-secure accesses from an external debugger to affected Performance Monitor registers are prohibited.
 Other accesses from an external debugger to affected Performance Monitor registers are not affected.</td></tr><tr><td><span class="binarynumber">0b1</span>
@@ -195,8 +195,8 @@ Other accesses from an external debugger to affected Performance Monitor registe
                   access to this field
                   is <span class="access_level">RO</span>.
                 </li></ul></div><h4 id="fieldset_0-9_9-2"> <span class="condition">when FEAT_Debugv8p4 is implemented and FEAT_PMUv3_EXT is implemented</span>:
-      </h4><div class="field"><p>External Performance Monitors Access Disable status. Reports whether Non-secure access to Performance Monitor registers by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD control.</p>
-<p>See <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD for the list of affected external Performance Monitor registers.</p><table class="valuetable"><tr><th>EPMAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+      </h4><div class="field"><p>External Performance Monitors Access Disable status. Reports whether Non-secure access to Performance Monitor registers by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD control.</p>
+<p>See <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD for the list of affected external Performance Monitor registers.</p><table class="valuetable"><tr><th>EPMAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>External Non-secure access to Performance Monitor registers not affected. <span class="function">AllowExternalPMUAccess()</span> == TRUE for a Non-secure access.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>External Non-secure access to affected Performance Monitor registers is prohibited. <span class="function">AllowExternalPMUAccess()</span> == FALSE for a Non-secure access.</p>
@@ -210,8 +210,8 @@ Other accesses from an external debugger to affected Performance Monitor registe
                   access to this field
                   is <span class="access_level">RO</span>.
                 </li></ul></div><h4 id="fieldset_0-9_9-3"> <span class="condition">when FEAT_PMUv3_EXT is implemented</span>:
-      </h4><div class="field"><p>External Performance Monitors Access Disable status. Reports whether access to Performance Monitor registers by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD control.</p>
-<p>See <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD for the list of affected external Performance Monitor registers.</p><table class="valuetable"><tr><th>EPMAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+      </h4><div class="field"><p>External Performance Monitors Access Disable status. Reports whether access to Performance Monitor registers by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD control.</p>
+<p>See <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EPMAD for the list of affected external Performance Monitor registers.</p><table class="valuetable"><tr><th>EPMAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>External access to Performance Monitor registers not affected. <span class="function">AllowExternalPMUAccess()</span> == TRUE.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>External access to affected Performance Monitor registers is prohibited. <span class="function">AllowExternalPMUAccess()</span> == FALSE.</p>
@@ -277,8 +277,8 @@ Other accesses from an external debugger to affected Performance Monitor registe
                   access to this field
                   is <span class="access_level">RO</span>.
                 </li></ul></div><h4 id="fieldset_0-7_7-1">EDAD, bit [7] <span class="condition">when FEAT_RME is implemented</span>:
-      </h4><div class="field"><p>External Debug Access Disable status. Together with EDPRSR.EDADE, reports whether access to breakpoint registers, watchpoint registers, and <a href="ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{EDAD, EDADE} controls.</p>
-<p>See <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD for the list of affected external debug registers.</p><table class="valuetable"><thead><tr><th>EDADE</th><th>EDAD</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>No accesses from an external debugger to affected debug registers are prohibited.</td></tr><tr><td><span class="binarynumber">0b0</span>
+      </h4><div class="field"><p>External Debug Access Disable status. Together with EDPRSR.EDADE, reports whether access to breakpoint registers, watchpoint registers, and <a href="/latest_sysreg/ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{EDAD, EDADE} controls.</p>
+<p>See <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD for the list of affected external debug registers.</p><table class="valuetable"><thead><tr><th>EDADE</th><th>EDAD</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>No accesses from an external debugger to affected debug registers are prohibited.</td></tr><tr><td><span class="binarynumber">0b0</span>
 </td><td><span class="binarynumber">0b1</span>
 </td><td>Realm and Non-secure accesses from an external debugger to affected debug registers are prohibited.
 Other accesses from an external debugger to affected debug registers are not affected.</td></tr><tr><td><span class="binarynumber">0b1</span>
@@ -294,8 +294,8 @@ Other accesses from an external debugger to affected debug registers are not aff
                   access to this field
                   is <span class="access_level">RO</span>.
                 </li></ul></div><h4 id="fieldset_0-7_7-2"> <span class="condition">when FEAT_Debugv8p4 is implemented</span>:
-      </h4><div class="field"><p>External Debug Access Disable status. Reports whether Non-secure access to breakpoint registers, watchpoint registers, and <a href="ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD control.</p>
-<p>See <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD for the list of affected external debug registers.</p><table class="valuetable"><tr><th>EDAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+      </h4><div class="field"><p>External Debug Access Disable status. Reports whether Non-secure access to breakpoint registers, watchpoint registers, and <a href="/latest_sysreg/ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD control.</p>
+<p>See <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD for the list of affected external debug registers.</p><table class="valuetable"><tr><th>EDAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>External Non-secure access to debug registers not affected. <span class="function">AllowExternalDebugAccess()</span> == TRUE for a Non-secure access.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>External Non-secure access to affected debug registers is prohibited. <span class="function">AllowExternalDebugAccess()</span> == FALSE for a Non-secure access.</p>
@@ -309,8 +309,8 @@ Other accesses from an external debugger to affected debug registers are not aff
                   access to this field
                   is <span class="access_level">RO</span>.
                 </li></ul></div><h4 id="fieldset_0-7_7-3"> <span class="condition">when FEAT_Debugv8p2 is implemented</span>:
-      </h4><div class="field"><p>External Debug Access Disable status. Reports whether access to breakpoint registers, watchpoint registers, and <a href="ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD control.</p>
-<p>See <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD for the list of affected external debug registers.</p><table class="valuetable"><tr><th>EDAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+      </h4><div class="field"><p>External Debug Access Disable status. Reports whether access to breakpoint registers, watchpoint registers, and <a href="/latest_sysreg/ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD control.</p>
+<p>See <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD for the list of affected external debug registers.</p><table class="valuetable"><tr><th>EDAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>External access to debug registers not affected. <span class="function">AllowExternalDebugAccess()</span> == TRUE.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>External access to affected debug registers is prohibited. <span class="function">AllowExternalDebugAccess()</span> == FALSE.</p>
@@ -324,8 +324,8 @@ Other accesses from an external debugger to affected debug registers are not aff
                   access to this field
                   is <span class="access_level">RO</span>.
                 </li></ul></div><h4 id="fieldset_0-7_7-4"> <span class="condition">Otherwise</span>:
-      </h4><div class="field"><p>External Debug Access Disable status. Reports whether access to breakpoint registers, watchpoint registers, and optionally <a href="ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD control.</p>
-<p>See <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD for the list of affected external debug registers.</p><table class="valuetable"><tr><th>EDAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+      </h4><div class="field"><p>External Debug Access Disable status. Reports whether access to breakpoint registers, watchpoint registers, and optionally <a href="/latest_sysreg/ext-oslar_el1.html">OSLAR_EL1</a> by an external debugger is prohibited by the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD control.</p>
+<p>See <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EDAD for the list of affected external debug registers.</p><table class="valuetable"><tr><th>EDAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>External access to debug registers not affected. <span class="function">AllowExternalDebugAccess()</span> == TRUE.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>External access to affected debug registers is prohibited. <span class="function">AllowExternalDebugAccess()</span> == FALSE.</p>
@@ -375,7 +375,7 @@ Other accesses from an external debugger to affected debug registers are not aff
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-5_5">OSLK, bit [5]:
       </h4><div class="field"><p>OS Lock status bit.</p>
-<p>A read of this bit returns the value of <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK.</p>
+<p>A read of this bit returns the value of <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK.</p>
 <p>This field is in the Core power domain.</p><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">UNKNOWN/WI</span> if any of the following are true:<ul><li>FEAT_DoPD is not implemented and !IsCorePowered().</li><li>EDPRSR.R == '1'.</li></ul></li><li>When DoubleLockStatus(), access to this field
                             is <span class="access_level">UNKNOWN/WI</span>.
                         </li><li>

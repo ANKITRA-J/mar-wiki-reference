@@ -11,7 +11,7 @@
     </div><h4 id="fieldset_0-31_28">NCG, bits [31:28]:
       </h4><div class="field"><p>Counter Groups.</p>
 <p>Defines the number of counter groups implemented by System PMU &lt;s&gt;, minus one.</p>
-<p>If this field is zero, then one counter group is implemented and <a href="AArch64-spmcgcrn_el1.html">SPMCGCR&lt;n&gt;_EL1</a> read-as-zero.</p>
+<p>If this field is zero, then one counter group is implemented and <a href="/latest_sysreg/AArch64-spmcgcrn_el1.html">SPMCGCR&lt;n&gt;_EL1</a> read-as-zero.</p>
 <p>Otherwise, for each counter group &lt;m&gt;, SPMCGCR&lt;m DIV 8&gt;_EL1.N&lt;m MOD 8&gt; defines the number of counters in the group.</p>
 <p>Locating the first counter in each group depends on the number of implemented groups. Each counter group starts with counter:</p>
 <ul>
@@ -108,7 +108,7 @@
         </td></tr></table>
       <p>All other values are reserved.</p>
     </div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>To access SPMCFGR_EL1 for System PMU &lt;s&gt;, set <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL to s.</p>
+        <p>To access SPMCFGR_EL1 for System PMU &lt;s&gt;, set <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL to s.</p>
 
       
         <p>SPMCFGR_EL1 reads-as-zero if System PMU &lt;s&gt; is not implemented.</p>

@@ -97,7 +97,7 @@ software condition such that the result of the compare does not prevent the subs
             </h4><a id="CASB_C32_comswap"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 0)</span></div><p class="asm-code">CASB  <a href="#WsOrWZR__3" title='Is the 32-bit name of the general-purpose register to be compared and loaded, encoded in the "Rs" field.'>&lt;Ws&gt;</a>, <a href="#WtOrWZR__3" title='Is the 32-bit name of the general-purpose register to be conditionally stored, encoded in the "Rt" field.'>&lt;Wt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">CASAB encoding
             </h4><a id="CASAB_C32_comswap"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 0)</span></div><p class="asm-code">CASAB  <a href="#WsOrWZR__3" title='Is the 32-bit name of the general-purpose register to be compared and loaded, encoded in the "Rs" field.'>&lt;Ws&gt;</a>, <a href="#WtOrWZR__3" title='Is the 32-bit name of the general-purpose register to be conditionally stored, encoded in the "Rt" field.'>&lt;Wt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">CASALB encoding
             </h4><a id="CASALB_C32_comswap"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 1)</span></div><p class="asm-code">CASALB  <a href="#WsOrWZR__3" title='Is the 32-bit name of the general-purpose register to be compared and loaded, encoded in the "Rs" field.'>&lt;Ws&gt;</a>, <a href="#WtOrWZR__3" title='Is the 32-bit name of the general-purpose register to be conditionally stored, encoded in the "Rt" field.'>&lt;Wt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">CASLB encoding
-            </h4><a id="CASLB_C32_comswap"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">CASLB  <a href="#WsOrWZR__3" title='Is the 32-bit name of the general-purpose register to be compared and loaded, encoded in the "Rs" field.'>&lt;Ws&gt;</a>, <a href="#WtOrWZR__3" title='Is the 32-bit name of the general-purpose register to be conditionally stored, encoded in the "Rt" field.'>&lt;Wt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSE) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="CASLB_C32_comswap"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">CASLB  <a href="#WsOrWZR__3" title='Is the 32-bit name of the general-purpose register to be compared and loaded, encoded in the "Rs" field.'>&lt;Ws&gt;</a>, <a href="#WtOrWZR__3" title='Is the 32-bit name of the general-purpose register to be conditionally stored, encoded in the "Rt" field.'>&lt;Wt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSE) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let s : integer{} = UInt(Rs);
 let t : integer{} = UInt(Rt);
 let n : integer{} = UInt(Rn);
@@ -122,21 +122,21 @@ let tagchecked : boolean = n != 31;</p>
 var comparevalue : bits(8);
 var newvalue : bits(8);
 
-let privileged : boolean = <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="shared_pseudocode.html#global_EL0" title="">EL0</a>;
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="/latest_aarch64/shared_pseudocode.html#global_EL0" title="">EL0</a>;
 
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescAtomicOp_7" title="">CreateAccDescAtomicOp</a>(<a href="shared_pseudocode.html#enum_MemAtomicOp_CAS" title="">MemAtomicOp_CAS</a>, acquire, release,
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescAtomicOp_7" title="">CreateAccDescAtomicOp</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemAtomicOp_CAS" title="">MemAtomicOp_CAS</a>, acquire, release,
                                                        tagchecked, privileged, t, s);
 
-comparevalue = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{8}(s);
-newvalue = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{8}(t);
+comparevalue = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{8}(s);
+newvalue = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{8}(t);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
 let data : bits(8) = MemAtomic{}(address, comparevalue, newvalue, accdesc);
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(s) = ZeroExtend{32}(data);</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(s) = ZeroExtend{32}(data);</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

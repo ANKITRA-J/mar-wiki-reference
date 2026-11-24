@@ -3,7 +3,7 @@
 <title>HCR | Jon's Arm Reference</title><meta name="description" content="Provides configuration controls for virtualization, including defining whether various Non-secure operations are trapped to Hyp mode."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">HCR</h1><p class="insn_subtitle" data-pagefind-body="1">Hyp Configuration Register</p><div data-pagefind-body="1">
         <p>Provides configuration controls for virtualization, including defining whether various Non-secure operations are trapped to Hyp mode.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register HCR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-hcr_el2.html">HCR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to HCR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register HCR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to HCR are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>HCR is a 32-bit register.</p>
@@ -13,7 +13,7 @@
     </div><h4 id="fieldset_0-30_30">TRVM, bit [30]:
       </h4><div class="field"><p>Trap Reads of Virtual Memory controls. Traps Non-secure EL1 reads of the virtual memory control registers to EL2, when EL2 is enabled in the current Security state.</p>
 <p>MRC reads of the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x03</span> and MRRC reads are trapped and reported using EC syndrome value <span class="hexnumber">0x04</span>:</p>
-<p><a href="AArch32-sctlr.html">SCTLR</a>, <a href="AArch32-ttbr0.html">TTBR0</a>, <a href="AArch32-ttbr1.html">TTBR1</a>, <a href="AArch32-ttbcr.html">TTBCR</a>, <a href="AArch32-ttbcr2.html">TTBCR2</a>, <a href="AArch32-dacr.html">DACR</a>, <a href="AArch32-dfsr.html">DFSR</a>, <a href="AArch32-ifsr.html">IFSR</a>, <a href="AArch32-dfar.html">DFAR</a>, <a href="AArch32-ifar.html">IFAR</a>, <a href="AArch32-adfsr.html">ADFSR</a>, <a href="AArch32-aifsr.html">AIFSR</a>, <a href="AArch32-prrr.html">PRRR</a>, <a href="AArch32-nmrr.html">NMRR</a>, <a href="AArch32-mair0.html">MAIR0</a>, <a href="AArch32-mair1.html">MAIR1</a>, <a href="AArch32-amair0.html">AMAIR0</a>, <a href="AArch32-amair1.html">AMAIR1</a>, <a href="AArch32-contextidr.html">CONTEXTIDR</a>.</p><table class="valuetable"><tr><th>TRVM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p><a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>, <a href="/latest_sysreg/AArch32-ttbr0.html">TTBR0</a>, <a href="/latest_sysreg/AArch32-ttbr1.html">TTBR1</a>, <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>, <a href="/latest_sysreg/AArch32-ttbcr2.html">TTBCR2</a>, <a href="/latest_sysreg/AArch32-dacr.html">DACR</a>, <a href="/latest_sysreg/AArch32-dfsr.html">DFSR</a>, <a href="/latest_sysreg/AArch32-ifsr.html">IFSR</a>, <a href="/latest_sysreg/AArch32-dfar.html">DFAR</a>, <a href="/latest_sysreg/AArch32-ifar.html">IFAR</a>, <a href="/latest_sysreg/AArch32-adfsr.html">ADFSR</a>, <a href="/latest_sysreg/AArch32-aifsr.html">AIFSR</a>, <a href="/latest_sysreg/AArch32-prrr.html">PRRR</a>, <a href="/latest_sysreg/AArch32-nmrr.html">NMRR</a>, <a href="/latest_sysreg/AArch32-mair0.html">MAIR0</a>, <a href="/latest_sysreg/AArch32-mair1.html">MAIR1</a>, <a href="/latest_sysreg/AArch32-amair0.html">AMAIR0</a>, <a href="/latest_sysreg/AArch32-amair1.html">AMAIR1</a>, <a href="/latest_sysreg/AArch32-contextidr.html">CONTEXTIDR</a>.</p><table class="valuetable"><tr><th>TRVM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Non-secure EL1 read accesses to the specified Virtual Memory controls are trapped to EL2.</p>
@@ -59,7 +59,7 @@
 <p>When EL2 is enabled in the current Security state, then:</p>
 <ul>
 <li>All exceptions that would be routed to EL1 are routed to EL2.
-</li><li>The <a href="AArch32-sctlr.html">SCTLR</a>.M bit is treated as being 0 for all purposes other than returning the result of a direct read of <a href="AArch32-sctlr.html">SCTLR</a>.
+</li><li>The <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.M bit is treated as being 0 for all purposes other than returning the result of a direct read of <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.
 </li><li>The HCR.{FMO, IMO, AMO} bits are treated as being 1 for all purposes other than returning the result of a direct read of HCR.
 </li><li>All virtual interrupts are disabled.
 </li><li>Any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> mechanisms for signaling virtual interrupts are disabled.
@@ -67,8 +67,8 @@
 </li><li>Monitor mode execution of an MSR or CPS instruction that changes PSTATE.M to a Non-secure EL1 mode is an illegal change to PSTATE.M. For more information see <span class="xref">'Illegal changes to PSTATE.M'</span>.
 </li></ul></td></tr></table><p>Also, when HCR.TGE is 1:</p>
 <ul>
-<li>If EL3 is using AArch32, an attempt to change from a Secure PL1 mode to a Non-secure EL1 mode by changing <a href="AArch32-scr.html">SCR</a>.NS from 0 to 1 results in <a href="AArch32-scr.html">SCR</a>.NS remaining as 0.
-</li><li>The <a href="AArch32-hdcr.html">HDCR</a>.{TDRA, TDOSA, TDA, TDE} bits are ignored and treated as being 1 other than for the purpose of a direct read of <a href="AArch32-hdcr.html">HDCR</a>.
+<li>If EL3 is using AArch32, an attempt to change from a Secure PL1 mode to a Non-secure EL1 mode by changing <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS from 0 to 1 results in <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS remaining as 0.
+</li><li>The <a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.{TDRA, TDOSA, TDA, TDE} bits are ignored and treated as being 1 other than for the purpose of a direct read of <a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL3 or the highest implemented Exception level is EL2,
             this field resets to
@@ -81,7 +81,7 @@
           </ul></li></ul></div><h4 id="fieldset_0-26_26">TVM, bit [26]:
       </h4><div class="field"><p>Trap Virtual Memory controls. Traps Non-secure EL1 writes to the virtual memory control registers to EL2, when EL2 is enabled in the current Security state.</p>
 <p>MCR writes of the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x03</span> and MCRR writes are trapped and reported using EC syndrome value <span class="hexnumber">0x04</span>:</p>
-<p><a href="AArch32-sctlr.html">SCTLR</a>, <a href="AArch32-ttbr0.html">TTBR0</a>, <a href="AArch32-ttbr1.html">TTBR1</a>, <a href="AArch32-ttbcr.html">TTBCR</a>, <a href="AArch32-ttbcr2.html">TTBCR2</a>, <a href="AArch32-dacr.html">DACR</a>, <a href="AArch32-dfsr.html">DFSR</a>, <a href="AArch32-ifsr.html">IFSR</a>, <a href="AArch32-dfar.html">DFAR</a>, <a href="AArch32-ifar.html">IFAR</a>, <a href="AArch32-adfsr.html">ADFSR</a>, <a href="AArch32-aifsr.html">AIFSR</a>, <a href="AArch32-prrr.html">PRRR</a>, <a href="AArch32-nmrr.html">NMRR</a>, <a href="AArch32-mair0.html">MAIR0</a>, <a href="AArch32-mair1.html">MAIR1</a>, <a href="AArch32-amair0.html">AMAIR0</a>, <a href="AArch32-amair1.html">AMAIR1</a>, <a href="AArch32-contextidr.html">CONTEXTIDR</a>.</p><table class="valuetable"><tr><th>TVM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p><a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>, <a href="/latest_sysreg/AArch32-ttbr0.html">TTBR0</a>, <a href="/latest_sysreg/AArch32-ttbr1.html">TTBR1</a>, <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>, <a href="/latest_sysreg/AArch32-ttbcr2.html">TTBCR2</a>, <a href="/latest_sysreg/AArch32-dacr.html">DACR</a>, <a href="/latest_sysreg/AArch32-dfsr.html">DFSR</a>, <a href="/latest_sysreg/AArch32-ifsr.html">IFSR</a>, <a href="/latest_sysreg/AArch32-dfar.html">DFAR</a>, <a href="/latest_sysreg/AArch32-ifar.html">IFAR</a>, <a href="/latest_sysreg/AArch32-adfsr.html">ADFSR</a>, <a href="/latest_sysreg/AArch32-aifsr.html">AIFSR</a>, <a href="/latest_sysreg/AArch32-prrr.html">PRRR</a>, <a href="/latest_sysreg/AArch32-nmrr.html">NMRR</a>, <a href="/latest_sysreg/AArch32-mair0.html">MAIR0</a>, <a href="/latest_sysreg/AArch32-mair1.html">MAIR1</a>, <a href="/latest_sysreg/AArch32-amair0.html">AMAIR0</a>, <a href="/latest_sysreg/AArch32-amair1.html">AMAIR1</a>, <a href="/latest_sysreg/AArch32-contextidr.html">CONTEXTIDR</a>.</p><table class="valuetable"><tr><th>TVM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Non-secure EL1 write accesses to the specified virtual memory control registers are trapped to EL2.</p>
@@ -97,7 +97,7 @@
           </ul></li></ul></div><h4 id="fieldset_0-25_25">TTLB, bit [25]:
       </h4><div class="field"><p>Trap TLB maintenance instructions. Traps Non-secure EL1 execution of a TLBI instruction to EL2, when EL2 is enabled in the current Security state.</p>
 <p>MCR and MRC accesses to the following system instructions are trapped and reported using EC syndrome value <span class="hexnumber">0x03</span>:</p>
-<p><a href="AArch32-tlbiallis.html">TLBIALLIS</a>, <a href="AArch32-tlbimvais.html">TLBIMVAIS</a>, <a href="AArch32-tlbiasidis.html">TLBIASIDIS</a>, <a href="AArch32-tlbimvaais.html">TLBIMVAAIS</a>, <a href="AArch32-tlbimvalis.html">TLBIMVALIS</a>, <a href="AArch32-tlbimvaalis.html">TLBIMVAALIS</a>, <a href="AArch32-itlbiall.html">ITLBIALL</a>, <a href="AArch32-itlbimva.html">ITLBIMVA</a>, <a href="AArch32-itlbiasid.html">ITLBIASID</a>, <a href="AArch32-dtlbiall.html">DTLBIALL</a>, <a href="AArch32-dtlbimva.html">DTLBIMVA</a>, <a href="AArch32-dtlbiasid.html">DTLBIASID</a>, <a href="AArch32-tlbiall.html">TLBIALL</a>, <a href="AArch32-tlbimva.html">TLBIMVA</a>, <a href="AArch32-tlbiasid.html">TLBIASID</a>, <a href="AArch32-tlbimvaa.html">TLBIMVAA</a>, <a href="AArch32-tlbimval.html">TLBIMVAL</a>, <a href="AArch32-tlbimvaal.html">TLBIMVAAL</a></p><table class="valuetable"><tr><th>TTLB</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p><a href="/latest_sysreg/AArch32-tlbiallis.html">TLBIALLIS</a>, <a href="/latest_sysreg/AArch32-tlbimvais.html">TLBIMVAIS</a>, <a href="/latest_sysreg/AArch32-tlbiasidis.html">TLBIASIDIS</a>, <a href="/latest_sysreg/AArch32-tlbimvaais.html">TLBIMVAAIS</a>, <a href="/latest_sysreg/AArch32-tlbimvalis.html">TLBIMVALIS</a>, <a href="/latest_sysreg/AArch32-tlbimvaalis.html">TLBIMVAALIS</a>, <a href="/latest_sysreg/AArch32-itlbiall.html">ITLBIALL</a>, <a href="/latest_sysreg/AArch32-itlbimva.html">ITLBIMVA</a>, <a href="/latest_sysreg/AArch32-itlbiasid.html">ITLBIASID</a>, <a href="/latest_sysreg/AArch32-dtlbiall.html">DTLBIALL</a>, <a href="/latest_sysreg/AArch32-dtlbimva.html">DTLBIMVA</a>, <a href="/latest_sysreg/AArch32-dtlbiasid.html">DTLBIASID</a>, <a href="/latest_sysreg/AArch32-tlbiall.html">TLBIALL</a>, <a href="/latest_sysreg/AArch32-tlbimva.html">TLBIMVA</a>, <a href="/latest_sysreg/AArch32-tlbiasid.html">TLBIASID</a>, <a href="/latest_sysreg/AArch32-tlbimvaa.html">TLBIMVAA</a>, <a href="/latest_sysreg/AArch32-tlbimval.html">TLBIMVAL</a>, <a href="/latest_sysreg/AArch32-tlbimvaal.html">TLBIMVAAL</a></p><table class="valuetable"><tr><th>TTLB</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Non-secure EL1 accesses to the specified TLB maintenance instructions are trapped to EL2.</p>
@@ -114,7 +114,7 @@
       </h4><div class="field"><p>Trap cache maintenance instructions that operate to the Point of Unification. Traps Non-secure EL1 execution of those cache maintenance instructions to EL2, when EL2 is enabled in the current Security state.</p>
 <p>MRC and MCR accesses of the following system instructions are trapped and reported using EC syndrome value <span class="hexnumber">0x03</span>:</p>
 <ul>
-<li><a href="AArch32-icimvau.html">ICIMVAU</a>, <a href="AArch32-iciallu.html">ICIALLU</a>, <a href="AArch32-icialluis.html">ICIALLUIS</a>, <a href="AArch32-dccmvau.html">DCCMVAU</a>.
+<li><a href="/latest_sysreg/AArch32-icimvau.html">ICIMVAU</a>, <a href="/latest_sysreg/AArch32-iciallu.html">ICIALLU</a>, <a href="/latest_sysreg/AArch32-icialluis.html">ICIALLUIS</a>, <a href="/latest_sysreg/AArch32-dccmvau.html">DCCMVAU</a>.
 </li></ul>
 <div class="note"><p>An Undefined Instruction exception generated at EL0 is higher priority than this trap to EL2, and these instructions are always <span class="arm-defined-word">UNDEFINED</span> at EL0.</p></div><table class="valuetable"><tr><th>TPU</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
@@ -134,7 +134,7 @@
       </h4><div class="field"><p>Trap data or unified cache maintenance instructions that operate to the Point of Coherency. Traps Non-secure EL1 execution of those cache maintenance instructions to EL2, when EL2 is enabled in the current Security state.</p>
 <p>MRC and MCR accesses of the following system instructions are trapped and reported using EC syndrome value <span class="hexnumber">0x03</span>:</p>
 <ul>
-<li><a href="AArch32-dcimvac.html">DCIMVAC</a>, <a href="AArch32-dccimvac.html">DCCIMVAC</a>, <a href="AArch32-dccmvac.html">DCCMVAC</a>.
+<li><a href="/latest_sysreg/AArch32-dcimvac.html">DCIMVAC</a>, <a href="/latest_sysreg/AArch32-dccimvac.html">DCCIMVAC</a>, <a href="/latest_sysreg/AArch32-dccmvac.html">DCCMVAC</a>.
 </li></ul>
 <div class="note"><p>An Undefined Instruction exception generated at EL0 is higher priority than this trap to EL2, and these instructions are always <span class="arm-defined-word">UNDEFINED</span> at EL0.</p></div><table class="valuetable"><tr><th>TPC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
@@ -155,7 +155,7 @@
       </h4><div class="field"><p>Trap data or unified cache maintenance instructions that operate by Set/Way. Traps Non-secure EL1 execution of those cache maintenance instructions by set/way to EL2, when EL2 is enabled in the current Security state.</p>
 <p>MRC and MCR accesses of the following system instructions are trapped and reported using EC syndrome value <span class="hexnumber">0x03</span>:</p>
 <ul>
-<li><a href="AArch32-dcisw.html">DCISW</a>, <a href="AArch32-dccsw.html">DCCSW</a>, <a href="AArch32-dccisw.html">DCCISW</a>.
+<li><a href="/latest_sysreg/AArch32-dcisw.html">DCISW</a>, <a href="/latest_sysreg/AArch32-dccsw.html">DCCSW</a>, <a href="/latest_sysreg/AArch32-dccisw.html">DCCISW</a>.
 </li></ul>
 <div class="note"><p>An Undefined Instruction exception generated at EL0 is higher priority than this trap to EL2, and these instructions are always <span class="arm-defined-word">UNDEFINED</span> at EL0.</p></div><table class="valuetable"><tr><th>TSW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
@@ -173,7 +173,7 @@
           </ul></li></ul></div><h4 id="fieldset_0-21_21">TAC, bit [21]:
       </h4><div class="field"><p>Trap Auxiliary Control Registers. Traps Non-secure EL1 accesses to the Auxiliary Control Registers to EL2, when EL2 is enabled in the current Security state, from both Execution states.</p>
 <p>MRC and MCR accesses of the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x03</span>:</p>
-<p><a href="AArch32-actlr.html">ACTLR</a> and, if implemented, <a href="AArch32-actlr2.html">ACTLR2</a>.</p><table class="valuetable"><tr><th>TAC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p><a href="/latest_sysreg/AArch32-actlr.html">ACTLR</a> and, if implemented, <a href="/latest_sysreg/AArch32-actlr2.html">ACTLR2</a>.</p><table class="valuetable"><tr><th>TAC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Non-secure EL1 accesses to the specified registers are trapped to EL2.</p>
@@ -214,7 +214,7 @@
     <table class="valuetable"><tr><th>TSC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Any attempt to execute an SMC instruction at Non-secure EL1 is trapped to Hyp mode, regardless of the value of <a href="AArch32-scr.html">SCR</a>.SCD.</p>
+          <p>Any attempt to execute an SMC instruction at Non-secure EL1 is trapped to Hyp mode, regardless of the value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.SCD.</p>
         </td></tr></table><p>The Armv8-A architecture permits, but does not require, this trap to apply to conditional SMC instructions that fail their condition code check, in the same way as with traps on other conditional instructions.</p>
 <div class="note"><ul><li>This trap is implemented only if the implementation includes EL3.</li><li>SMC instructions are always <span class="arm-defined-word">UNDEFINED</span> at PL0.</li><li>This bit traps execution of the SMC instruction, reported using EC syndrome value <span class="hexnumber">0x13</span>. It is not a routing control for the SMC exception. Hyp Trap exceptions and SMC exceptions have different preferred return addresses.</li></ul></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL3 or the highest implemented Exception level is EL2,
@@ -229,25 +229,25 @@
       </h4><div class="field"><p>Trap ID group 3. Traps Non-secure EL1 reads of the following registers to EL2, when EL2 is enabled in the current Security state as follows:</p>
 <ul>
 <li>
-<p>VMRS access to <a href="AArch32-mvfr0.html">MVFR0</a>, <a href="AArch32-mvfr1.html">MVFR1</a>, and <a href="AArch32-mvfr2.html">MVFR2</a>, reported using EC syndrome value <span class="hexnumber">0x08</span>, unless access is also trapped by <a href="AArch32-hcptr.html">HCPTR</a> which takes priority.</p>
+<p>VMRS access to <a href="/latest_sysreg/AArch32-mvfr0.html">MVFR0</a>, <a href="/latest_sysreg/AArch32-mvfr1.html">MVFR1</a>, and <a href="/latest_sysreg/AArch32-mvfr2.html">MVFR2</a>, reported using EC syndrome value <span class="hexnumber">0x08</span>, unless access is also trapped by <a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a> which takes priority.</p>
 
 </li><li>
 <p>MRC access to the following registers are reported using EC syndrome value <span class="hexnumber">0x03</span>:</p>
 <ul>
 <li>
-<p><a href="AArch32-id_pfr0.html">ID_PFR0</a>, <a href="AArch32-id_pfr1.html">ID_PFR1</a>, <a href="AArch32-id_pfr2.html">ID_PFR2</a>, <a href="AArch32-id_dfr0.html">ID_DFR0</a>, <a href="AArch32-id_afr0.html">ID_AFR0</a>, <a href="AArch32-id_mmfr0.html">ID_MMFR0</a>, <a href="AArch32-id_mmfr1.html">ID_MMFR1</a>, <a href="AArch32-id_mmfr2.html">ID_MMFR2</a>, <a href="AArch32-id_mmfr3.html">ID_MMFR3</a>, <a href="AArch32-id_isar0.html">ID_ISAR0</a>, <a href="AArch32-id_isar1.html">ID_ISAR1</a>, <a href="AArch32-id_isar2.html">ID_ISAR2</a>, <a href="AArch32-id_isar3.html">ID_ISAR3</a>, <a href="AArch32-id_isar4.html">ID_ISAR4</a>, and <a href="AArch32-id_isar5.html">ID_ISAR5</a>.</p>
+<p><a href="/latest_sysreg/AArch32-id_pfr0.html">ID_PFR0</a>, <a href="/latest_sysreg/AArch32-id_pfr1.html">ID_PFR1</a>, <a href="/latest_sysreg/AArch32-id_pfr2.html">ID_PFR2</a>, <a href="/latest_sysreg/AArch32-id_dfr0.html">ID_DFR0</a>, <a href="/latest_sysreg/AArch32-id_afr0.html">ID_AFR0</a>, <a href="/latest_sysreg/AArch32-id_mmfr0.html">ID_MMFR0</a>, <a href="/latest_sysreg/AArch32-id_mmfr1.html">ID_MMFR1</a>, <a href="/latest_sysreg/AArch32-id_mmfr2.html">ID_MMFR2</a>, <a href="/latest_sysreg/AArch32-id_mmfr3.html">ID_MMFR3</a>, <a href="/latest_sysreg/AArch32-id_isar0.html">ID_ISAR0</a>, <a href="/latest_sysreg/AArch32-id_isar1.html">ID_ISAR1</a>, <a href="/latest_sysreg/AArch32-id_isar2.html">ID_ISAR2</a>, <a href="/latest_sysreg/AArch32-id_isar3.html">ID_ISAR3</a>, <a href="/latest_sysreg/AArch32-id_isar4.html">ID_ISAR4</a>, and <a href="/latest_sysreg/AArch32-id_isar5.html">ID_ISAR5</a>.</p>
 
 </li><li>
 <p>If <span class="xref">FEAT_FGT</span> is implemented:</p>
 <ul>
 <li>
-<p><a href="AArch32-id_mmfr4.html">ID_MMFR4</a> and <a href="AArch32-id_mmfr5.html">ID_MMFR5</a> are trapped to EL2.</p>
+<p><a href="/latest_sysreg/AArch32-id_mmfr4.html">ID_MMFR4</a> and <a href="/latest_sysreg/AArch32-id_mmfr5.html">ID_MMFR5</a> are trapped to EL2.</p>
 
 </li><li>
-<p><a href="AArch32-id_isar6.html">ID_ISAR6</a> is trapped to EL2.</p>
+<p><a href="/latest_sysreg/AArch32-id_isar6.html">ID_ISAR6</a> is trapped to EL2.</p>
 
 </li><li>
-<p><a href="AArch32-id_dfr1.html">ID_DFR1</a> is trapped to EL2.</p>
+<p><a href="/latest_sysreg/AArch32-id_dfr1.html">ID_DFR1</a> is trapped to EL2.</p>
 
 </li><li>
 <p>This field traps all MRC accesses to registers in the following range that are not already mentioned in this field description: coproc == p15, opc1 == 0, CRn == c0, CRm == {c2-c7}, opc2 == {0-7}.</p>
@@ -258,13 +258,13 @@
 <p>If <span class="xref">FEAT_FGT</span> is not implemented:</p>
 <ul>
 <li>
-<p><a href="AArch32-id_mmfr4.html">ID_MMFR4</a> and <a href="AArch32-id_mmfr5.html">ID_MMFR5</a> are trapped to EL2, unless implemented as RAZ, when it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether accesses to <a href="AArch32-id_mmfr4.html">ID_MMFR4</a> or <a href="AArch32-id_mmfr5.html">ID_MMFR5</a> are trapped.</p>
+<p><a href="/latest_sysreg/AArch32-id_mmfr4.html">ID_MMFR4</a> and <a href="/latest_sysreg/AArch32-id_mmfr5.html">ID_MMFR5</a> are trapped to EL2, unless implemented as RAZ, when it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether accesses to <a href="/latest_sysreg/AArch32-id_mmfr4.html">ID_MMFR4</a> or <a href="/latest_sysreg/AArch32-id_mmfr5.html">ID_MMFR5</a> are trapped.</p>
 
 </li><li>
-<p><a href="AArch32-id_isar6.html">ID_ISAR6</a> is trapped to EL2, unless implemented as RAZ, when it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether accesses to <a href="AArch32-id_isar6.html">ID_ISAR6</a> are trapped to EL2.</p>
+<p><a href="/latest_sysreg/AArch32-id_isar6.html">ID_ISAR6</a> is trapped to EL2, unless implemented as RAZ, when it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether accesses to <a href="/latest_sysreg/AArch32-id_isar6.html">ID_ISAR6</a> are trapped to EL2.</p>
 
 </li><li>
-<p><a href="AArch32-id_dfr1.html">ID_DFR1</a> is trapped to EL2, unless implemented as RAZ, when it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether accesses to <a href="AArch32-id_dfr1.html">ID_DFR1</a> are trapped to EL2.</p>
+<p><a href="/latest_sysreg/AArch32-id_dfr1.html">ID_DFR1</a> is trapped to EL2, unless implemented as RAZ, when it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether accesses to <a href="/latest_sysreg/AArch32-id_dfr1.html">ID_DFR1</a> are trapped to EL2.</p>
 
 </li><li>
 <p>Otherwise, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether this bit traps MRC accesses to registers not already mentioned, with coproc == p15, opc1 == 0, CRn == c0, CRm == {c2-c7}, opc2 == {0-7}.</p>
@@ -289,8 +289,8 @@
           </ul></li></ul></div><h4 id="fieldset_0-17_17">TID2, bit [17]:
       </h4><div class="field"><p>Trap ID group 2. Traps the following register MRC and MCR accesses to EL2, reported using EC syndrome value <span class="hexnumber">0x03</span>, when EL2 is enabled in the current Security state:</p>
 <ul>
-<li>Non-secure EL1 and EL0 reads of the <a href="AArch32-ctr.html">CTR</a>, <a href="AArch32-ccsidr.html">CCSIDR</a>, <a href="AArch32-ccsidr2.html">CCSIDR2</a>, <a href="AArch32-clidr.html">CLIDR</a>, and <a href="AArch32-csselr.html">CSSELR</a>.
-</li><li>Non-secure EL1 and EL0 writes to the <a href="AArch32-csselr.html">CSSELR</a>.
+<li>Non-secure EL1 and EL0 reads of the <a href="/latest_sysreg/AArch32-ctr.html">CTR</a>, <a href="/latest_sysreg/AArch32-ccsidr.html">CCSIDR</a>, <a href="/latest_sysreg/AArch32-ccsidr2.html">CCSIDR2</a>, <a href="/latest_sysreg/AArch32-clidr.html">CLIDR</a>, and <a href="/latest_sysreg/AArch32-csselr.html">CSSELR</a>.
+</li><li>Non-secure EL1 and EL0 writes to the <a href="/latest_sysreg/AArch32-csselr.html">CSSELR</a>.
 </li></ul><table class="valuetable"><tr><th>TID2</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -306,7 +306,7 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-16_16">TID1, bit [16]:
       </h4><div class="field"><p>Trap ID group 1. Traps Non-secure EL1 MRC reads of the following registers to EL2, reported using EC syndrome value <span class="hexnumber">0x03</span>, when EL2 is enabled in the current Security state:</p>
-<p><a href="AArch32-tcmtr.html">TCMTR</a>, <a href="AArch32-tlbtr.html">TLBTR</a>, <a href="AArch32-revidr.html">REVIDR</a>, <a href="AArch32-aidr.html">AIDR</a>.</p><table class="valuetable"><tr><th>TID1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p><a href="/latest_sysreg/AArch32-tcmtr.html">TCMTR</a>, <a href="/latest_sysreg/AArch32-tlbtr.html">TLBTR</a>, <a href="/latest_sysreg/AArch32-revidr.html">REVIDR</a>, <a href="/latest_sysreg/AArch32-aidr.html">AIDR</a>.</p><table class="valuetable"><tr><th>TID1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The specified Non-secure EL1 read accesses to ID group 1 registers are trapped to EL2.</p>
@@ -322,10 +322,10 @@
           </ul></li></ul></div><h4 id="fieldset_0-15_15">TID0, bit [15]:
       </h4><div class="field"><p>Trap ID group 0. Traps the following register accesses to EL2, when EL2 is enabled in the current Security state:</p>
 <ul>
-<li>Non-secure EL1 VMRS reads of <a href="AArch32-fpsid.html">FPSID</a> reported using EC syndrome value <span class="hexnumber">0x08</span>.
-</li><li>Non-secure EL0 and EL1 MCR and MRC accesses of <a href="AArch32-jidr.html">JIDR</a> reported using EC syndrome value <span class="hexnumber">0x05</span>.
+<li>Non-secure EL1 VMRS reads of <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a> reported using EC syndrome value <span class="hexnumber">0x08</span>.
+</li><li>Non-secure EL0 and EL1 MCR and MRC accesses of <a href="/latest_sysreg/AArch32-jidr.html">JIDR</a> reported using EC syndrome value <span class="hexnumber">0x05</span>.
 </li></ul>
-<div class="note"><ul><li>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether the <a href="AArch32-jidr.html">JIDR</a> is RAZ or <span class="arm-defined-word">UNDEFINED</span> at EL0. If it is <span class="arm-defined-word">UNDEFINED</span> at EL0 then the Undefined Instruction exception takes precedence over this trap.</li><li>The <a href="AArch32-fpsid.html">FPSID</a> is not accessible at EL0.</li><li>Writes to the <a href="AArch32-fpsid.html">FPSID</a> are ignored, and not trapped by this control.</li></ul></div><table class="valuetable"><tr><th>TID0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<div class="note"><ul><li>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether the <a href="/latest_sysreg/AArch32-jidr.html">JIDR</a> is RAZ or <span class="arm-defined-word">UNDEFINED</span> at EL0. If it is <span class="arm-defined-word">UNDEFINED</span> at EL0 then the Undefined Instruction exception takes precedence over this trap.</li><li>The <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a> is not accessible at EL0.</li><li>Writes to the <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a> are ignored, and not trapped by this control.</li></ul></div><table class="valuetable"><tr><th>TID0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The specified Non-secure EL1 read accesses to ID group 0 registers are trapped to EL2.</p>
@@ -344,7 +344,7 @@
     <table class="valuetable"><tr><th>TWE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Any attempt to execute a WFE instruction at Non-secure EL0 or EL1 is trapped to EL2, if the instruction would otherwise have caused the PE to enter a low-power state and it is not trapped by <a href="AArch32-sctlr.html">SCTLR</a>.nTWE.</p>
+          <p>Any attempt to execute a WFE instruction at Non-secure EL0 or EL1 is trapped to EL2, if the instruction would otherwise have caused the PE to enter a low-power state and it is not trapped by <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.nTWE.</p>
         </td></tr></table><p>The attempted execution of a conditional WFE instruction is only trapped if the instruction passes its condition code check.</p>
 <div class="note"><p>Since a WFE can complete at any time, even without a Wakeup event, the traps on WFE are not guaranteed to be taken, even if the WFE is executed when there is no Wakeup event. The only guarantee is that if the instruction does not complete in finite time in the absence of a Wakeup event, the trap will be taken.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL3 or the highest implemented Exception level is EL2,
@@ -361,7 +361,7 @@
     <table class="valuetable"><tr><th>TWI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Any attempt to execute a WFI instruction at Non-secure EL0 or EL1 is trapped to EL2, if the instruction would otherwise have caused the PE to enter a low-power state and it is not trapped by <a href="AArch32-sctlr.html">SCTLR</a>.nTWI.</p>
+          <p>Any attempt to execute a WFI instruction at Non-secure EL0 or EL1 is trapped to EL2, if the instruction would otherwise have caused the PE to enter a low-power state and it is not trapped by <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.nTWI.</p>
         </td></tr></table><p>The attempted execution of a conditional WFI instruction is only trapped if the instruction passes its condition code check.</p>
 <div class="note"><p>Since a WFI can complete at any time, even without a Wakeup event, the traps on WFI are not guaranteed to be taken, even if the WFI is executed when there is no Wakeup event. The only guarantee is that if the instruction does not complete in finite time in the absence of a Wakeup event, the trap will be taken.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL3 or the highest implemented Exception level is EL2,
@@ -379,7 +379,7 @@
           <p>This control has no effect on the Non-secure EL1&amp;0 translation regime.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td><p>In Non-secure state:</p>
 <ul>
-<li>The <a href="AArch32-sctlr.html">SCTLR</a>.M field behaves as 0 for all purposes other than a direct read of the value of the field.
+<li>The <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.M field behaves as 0 for all purposes other than a direct read of the value of the field.
 </li><li>The HCR.VM field behaves as 1 for all purposes other than a direct read of the value of the field.
 </li><li>The memory type produced by the first stage of the EL1&amp;0 translation regime is Normal Non-Shareable, Inner Write-Back Read-Allocate Write-Allocate, Outer Write-Back Read-Allocate Write-Allocate.
 </li></ul></td></tr></table><p>This field has no effect on the EL2 and EL3 translation regimes.</p>
@@ -416,7 +416,7 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-9_9">FB, bit [9]:
       </h4><div class="field"><p>Force broadcast. Causes the following instructions to be broadcast within the Inner Shareable domain when executed from Non-secure EL1:</p>
-<p><a href="AArch32-bpiall.html">BPIALL</a>, <a href="AArch32-tlbiall.html">TLBIALL</a>, <a href="AArch32-tlbimva.html">TLBIMVA</a>, <a href="AArch32-tlbiasid.html">TLBIASID</a>, <a href="AArch32-dtlbiall.html">DTLBIALL</a>, <a href="AArch32-dtlbimva.html">DTLBIMVA</a>, <a href="AArch32-dtlbiasid.html">DTLBIASID</a>, <a href="AArch32-itlbiall.html">ITLBIALL</a>, <a href="AArch32-itlbimva.html">ITLBIMVA</a>, <a href="AArch32-itlbiasid.html">ITLBIASID</a>, <a href="AArch32-tlbimvaa.html">TLBIMVAA</a>, <a href="AArch32-iciallu.html">ICIALLU</a>, <a href="AArch32-tlbimval.html">TLBIMVAL</a>, <a href="AArch32-tlbimvaal.html">TLBIMVAAL</a>.</p><table class="valuetable"><tr><th>FB</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p><a href="/latest_sysreg/AArch32-bpiall.html">BPIALL</a>, <a href="/latest_sysreg/AArch32-tlbiall.html">TLBIALL</a>, <a href="/latest_sysreg/AArch32-tlbimva.html">TLBIMVA</a>, <a href="/latest_sysreg/AArch32-tlbiasid.html">TLBIASID</a>, <a href="/latest_sysreg/AArch32-dtlbiall.html">DTLBIALL</a>, <a href="/latest_sysreg/AArch32-dtlbimva.html">DTLBIMVA</a>, <a href="/latest_sysreg/AArch32-dtlbiasid.html">DTLBIASID</a>, <a href="/latest_sysreg/AArch32-itlbiall.html">ITLBIALL</a>, <a href="/latest_sysreg/AArch32-itlbimva.html">ITLBIMVA</a>, <a href="/latest_sysreg/AArch32-itlbiasid.html">ITLBIASID</a>, <a href="/latest_sysreg/AArch32-tlbimvaa.html">TLBIMVAA</a>, <a href="/latest_sysreg/AArch32-iciallu.html">ICIALLU</a>, <a href="/latest_sysreg/AArch32-tlbimval.html">TLBIMVAL</a>, <a href="/latest_sysreg/AArch32-tlbimvaal.html">TLBIMVAAL</a>.</p><table class="valuetable"><tr><th>FB</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This field has no effect on the operation of the specified instructions.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>When one of the specified instruction is executed at Non-secure EL1, the instruction is broadcast within the Inner Shareable shareability domain.</p>
@@ -541,8 +541,8 @@
           <p>This control has no effect on the operation of data cache invalidate by set/way instructions.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Data cache invalidate by set/way instructions perform a data cache clean and invalidate by set/way.</p>
-        </td></tr></table><p>When this bit is set to 1, <a href="AArch32-dcisw.html">DCISW</a> performs the same invalidation as a <a href="AArch32-dccisw.html">DCCISW</a> instruction.</p>
-<p>As a result of changes to the behavior of <a href="AArch32-dcisw.html">DCISW</a>, this bit is redundant in Armv8. This bit can be implemented as <span class="arm-defined-word">RES1</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
+        </td></tr></table><p>When this bit is set to 1, <a href="/latest_sysreg/AArch32-dcisw.html">DCISW</a> performs the same invalidation as a <a href="/latest_sysreg/AArch32-dccisw.html">DCCISW</a> instruction.</p>
+<p>As a result of changes to the behavior of <a href="/latest_sysreg/AArch32-dcisw.html">DCISW</a>, this bit is redundant in Armv8. This bit can be implemented as <span class="arm-defined-word">RES1</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL3 or the highest implemented Exception level is EL2,
             this field resets to
             <span class="binarynumber">'0'</span>.

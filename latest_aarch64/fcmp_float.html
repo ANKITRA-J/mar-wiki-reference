@@ -32,9 +32,9 @@ is a signaling NaN.</p>
             <span style="font-size:smaller;"><br></br>(FEAT_FP)
             </span></h4><a id="FCMP_D_floatcmp"></a><span class="bitdiff"> (ftype == 01 &amp;&amp; opc == 00)</span></div><p class="asm-code">FCMP  <a href="#Dn__2" title='For the "Double-precision" variant: is the 64-bit name of the first SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Dn&gt;</a>, <a href="#Dm" title='Is the 64-bit name of the second SIMD&amp;FP source register, encoded in the "Rm" field.'>&lt;Dm&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Double-precision, zero encoding
             <span style="font-size:smaller;"><br></br>(FEAT_FP)
-            </span></h4><a id="FCMP_DZ_floatcmp"></a><span class="bitdiff"> (ftype == 01 &amp;&amp; Rm == (00000) &amp;&amp; opc == 01)</span></div><p class="asm-code">FCMP  <a href="#Dn" title='For the "Double-precision, zero" variant: is the 64-bit name of the SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Dn&gt;</a>, #0.0</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_FP) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if ftype == '10' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if ftype == '11' &amp;&amp; !IsFeatureImplemented(FEAT_FP16) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </span></h4><a id="FCMP_DZ_floatcmp"></a><span class="bitdiff"> (ftype == 01 &amp;&amp; Rm == (00000) &amp;&amp; opc == 01)</span></div><p class="asm-code">FCMP  <a href="#Dn" title='For the "Double-precision, zero" variant: is the 64-bit name of the SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Dn&gt;</a>, #0.0</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_FP) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if ftype == '10' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if ftype == '11' &amp;&amp; !IsFeatureImplemented(FEAT_FP16) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 
 let n : integer = UInt(Rn);
 let m : integer = UInt(Rm);   // ignored when opc&lt;0&gt; == '1'
@@ -80,12 +80,12 @@ let cmp_with_zero : boolean = (opc[0] == '1');</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode"><a href="shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
+      <p class="pseudocode"><a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
 
 let operand1 : bits(datasize) = V{}(n);
-let operand2 : bits(datasize) = if cmp_with_zero then <a href="shared_pseudocode.html#func_FPZero_2" title="">FPZero</a>{datasize}('0') else <a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{datasize}(m);
+let operand2 : bits(datasize) = if cmp_with_zero then <a href="/latest_aarch64/shared_pseudocode.html#func_FPZero_2" title="">FPZero</a>{datasize}('0') else <a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{datasize}(m);
 
-PSTATE.[N,Z,C,V] = <a href="shared_pseudocode.html#func_FPCompare_5" title="">FPCompare</a>{datasize}(operand1, operand2, signal_all_nans, FPCR());</p></div>
+PSTATE.[N,Z,C,V] = <a href="/latest_aarch64/shared_pseudocode.html#func_FPCompare_5" title="">FPCompare</a>{datasize}(operand1, operand2, signal_all_nans, FPCR());</p></div>
   <h2>Operational information</h2>
     
       

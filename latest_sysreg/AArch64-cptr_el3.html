@@ -5,7 +5,7 @@ SME, Streaming SVE,
 SVE, 
 and Advanced SIMD and floating-point functionality."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">CPTR_EL3</h1><p class="insn_subtitle" data-pagefind-body="1">Architectural Feature Trap Register (EL3)</p><div data-pagefind-body="1">
-        <p>Controls trapping to EL3 of accesses to <a href="AArch32-cpacr.html">CPACR</a>, <a href="AArch64-cpacr_el1.html">CPACR_EL1</a>, <a href="AArch32-hcptr.html">HCPTR</a>, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>, trace, Activity Monitor, 
+        <p>Controls trapping to EL3 of accesses to <a href="/latest_sysreg/AArch32-cpacr.html">CPACR</a>, <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>, <a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>, trace, Activity Monitor, 
 SME, Streaming SVE, 
 SVE, 
 and Advanced SIMD and floating-point functionality.</p>
@@ -17,13 +17,13 @@ and Advanced SIMD and floating-point functionality.</p>
     </div><h4 id="fieldset_0-31_31">TCPAC, bit [31]:
       </h4><div class="field"><p>Traps all of the following to EL3, from both Execution states and any Security state.</p>
 <ul>
-<li>EL2 accesses to <a href="AArch64-cptr_el2.html">CPTR_EL2</a>, reported using EC syndrome value <span class="hexnumber">0x18</span>, or <a href="AArch32-hcptr.html">HCPTR</a>, reported using EC syndrome value <span class="hexnumber">0x03</span>.
-</li><li>EL2 and EL1 accesses to <a href="AArch64-cpacr_el1.html">CPACR_EL1</a> reported using EC syndrome value <span class="hexnumber">0x18</span>, or <a href="AArch32-cpacr.html">CPACR</a> reported using EC syndrome value <span class="hexnumber">0x03</span>.
+<li>EL2 accesses to <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>, reported using EC syndrome value <span class="hexnumber">0x18</span>, or <a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>, reported using EC syndrome value <span class="hexnumber">0x03</span>.
+</li><li>EL2 and EL1 accesses to <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a> reported using EC syndrome value <span class="hexnumber">0x18</span>, or <a href="/latest_sysreg/AArch32-cpacr.html">CPACR</a> reported using EC syndrome value <span class="hexnumber">0x03</span>.
 </li></ul>
 <p>When CPTR_EL3.TCPAC is:</p><table class="valuetable"><tr><th>TCPAC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>EL2 accesses to the <a href="AArch64-cptr_el2.html">CPTR_EL2</a> or <a href="AArch32-hcptr.html">HCPTR</a>, and EL2 and EL1 accesses to the <a href="AArch64-cpacr_el1.html">CPACR_EL1</a> or <a href="AArch32-cpacr.html">CPACR</a>, are trapped to EL3, unless they are trapped by <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC.</p>
+          <p>EL2 accesses to the <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a> or <a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>, and EL2 and EL1 accesses to the <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a> or <a href="/latest_sysreg/AArch32-cpacr.html">CPACR</a>, are trapped to EL3, unless they are trapped by <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-30_30-1">TAM, bit [30] <span class="condition">when FEAT_AMUv1 is implemented</span>:
@@ -33,19 +33,19 @@ and Advanced SIMD and floating-point functionality.</p>
 <li>
 <p>In AArch64 state, the following registers are trapped to EL3 and reported using EC syndrome value <span class="hexnumber">0x18</span>:</p>
 <ul>
-<li><a href="AArch64-amuserenr_el0.html">AMUSERENR_EL0</a>, <a href="AArch64-amcfgr_el0.html">AMCFGR_EL0</a>, <a href="AArch64-amcgcr_el0.html">AMCGCR_EL0</a>, <a href="AArch64-amcntenclr0_el0.html">AMCNTENCLR0_EL0</a>, <a href="AArch64-amcntenclr1_el0.html">AMCNTENCLR1_EL0</a>, <a href="AArch64-amcntenset0_el0.html">AMCNTENSET0_EL0</a>, <a href="AArch64-amcntenset1_el0.html">AMCNTENSET1_EL0</a>, <a href="AArch64-amcr_el0.html">AMCR_EL0</a>, <a href="AArch64-amevcntr0n_el0.html">AMEVCNTR0&lt;n&gt;_EL0</a>, <a href="AArch64-amevcntr1n_el0.html">AMEVCNTR1&lt;n&gt;_EL0</a>, <a href="AArch64-amevtyper0n_el0.html">AMEVTYPER0&lt;n&gt;_EL0</a>, and <a href="AArch64-amevtyper1n_el0.html">AMEVTYPER1&lt;n&gt;_EL0</a>.
+<li><a href="/latest_sysreg/AArch64-amuserenr_el0.html">AMUSERENR_EL0</a>, <a href="/latest_sysreg/AArch64-amcfgr_el0.html">AMCFGR_EL0</a>, <a href="/latest_sysreg/AArch64-amcgcr_el0.html">AMCGCR_EL0</a>, <a href="/latest_sysreg/AArch64-amcntenclr0_el0.html">AMCNTENCLR0_EL0</a>, <a href="/latest_sysreg/AArch64-amcntenclr1_el0.html">AMCNTENCLR1_EL0</a>, <a href="/latest_sysreg/AArch64-amcntenset0_el0.html">AMCNTENSET0_EL0</a>, <a href="/latest_sysreg/AArch64-amcntenset1_el0.html">AMCNTENSET1_EL0</a>, <a href="/latest_sysreg/AArch64-amcr_el0.html">AMCR_EL0</a>, <a href="/latest_sysreg/AArch64-amevcntr0n_el0.html">AMEVCNTR0&lt;n&gt;_EL0</a>, <a href="/latest_sysreg/AArch64-amevcntr1n_el0.html">AMEVCNTR1&lt;n&gt;_EL0</a>, <a href="/latest_sysreg/AArch64-amevtyper0n_el0.html">AMEVTYPER0&lt;n&gt;_EL0</a>, and <a href="/latest_sysreg/AArch64-amevtyper1n_el0.html">AMEVTYPER1&lt;n&gt;_EL0</a>.
 </li></ul>
 
 </li><li>
 <p>In AArch32 state, accesses with MRC or MCR to the following registers reported using EC syndrome value <span class="hexnumber">0x03</span>:</p>
 <ul>
-<li><a href="AArch32-amuserenr.html">AMUSERENR</a>, <a href="AArch32-amcfgr.html">AMCFGR</a>, <a href="AArch32-amcgcr.html">AMCGCR</a>, <a href="AArch32-amcntenclr0.html">AMCNTENCLR0</a>, <a href="AArch32-amcntenclr1.html">AMCNTENCLR1</a>, <a href="AArch32-amcntenset0.html">AMCNTENSET0</a>, <a href="AArch32-amcntenset1.html">AMCNTENSET1</a>, <a href="AArch32-amcr.html">AMCR</a>, <a href="AArch32-amevtyper0n.html">AMEVTYPER0&lt;n&gt;</a>, and <a href="AArch32-amevtyper1n.html">AMEVTYPER1&lt;n&gt;</a>.
+<li><a href="/latest_sysreg/AArch32-amuserenr.html">AMUSERENR</a>, <a href="/latest_sysreg/AArch32-amcfgr.html">AMCFGR</a>, <a href="/latest_sysreg/AArch32-amcgcr.html">AMCGCR</a>, <a href="/latest_sysreg/AArch32-amcntenclr0.html">AMCNTENCLR0</a>, <a href="/latest_sysreg/AArch32-amcntenclr1.html">AMCNTENCLR1</a>, <a href="/latest_sysreg/AArch32-amcntenset0.html">AMCNTENSET0</a>, <a href="/latest_sysreg/AArch32-amcntenset1.html">AMCNTENSET1</a>, <a href="/latest_sysreg/AArch32-amcr.html">AMCR</a>, <a href="/latest_sysreg/AArch32-amevtyper0n.html">AMEVTYPER0&lt;n&gt;</a>, and <a href="/latest_sysreg/AArch32-amevtyper1n.html">AMEVTYPER1&lt;n&gt;</a>.
 </li></ul>
 
 </li><li>
 <p>In AArch32 state, accesses with MRRC or MCRR to the following registers, reported using EC syndrome value <span class="hexnumber">0x04</span>:</p>
 <ul>
-<li><a href="AArch32-amevcntr0n.html">AMEVCNTR0&lt;n&gt;</a>, <a href="AArch32-amevcntr1n.html">AMEVCNTR1&lt;n&gt;</a>.
+<li><a href="/latest_sysreg/AArch32-amevcntr0n.html">AMEVCNTR0&lt;n&gt;</a>, <a href="/latest_sysreg/AArch32-amevcntr1n.html">AMEVCNTR1&lt;n&gt;</a>.
 </li></ul>
 
 </li></ul><table class="valuetable"><tr><th>TAM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
@@ -72,7 +72,7 @@ and Advanced SIMD and floating-point functionality.</p>
 </li></ul><table class="valuetable"><tr><th>TTA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Any System register access to the trace System registers is trapped to EL3, unless it is trapped by <a href="AArch32-cpacr.html">CPACR</a>.TRCDIS, <a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.TTA, or <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TTA.</p>
+          <p>Any System register access to the trace System registers is trapped to EL3, unless it is trapped by <a href="/latest_sysreg/AArch32-cpacr.html">CPACR</a>.TRCDIS, <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.TTA, or <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TTA.</p>
         </td></tr></table>
       <div class="note">
         <p>The ETMv4 architecture and ETE do not permit EL0 to access the trace System registers. If the trace unit implements FEAT_ETMv4 or FEAT_ETE, EL0 accesses to the trace System registers are <span class="arm-defined-word">UNDEFINED</span>, and any resulting exception is higher priority than this trap exception.</p>
@@ -88,9 +88,9 @@ and Advanced SIMD and floating-point functionality.</p>
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-12_12-1">ESM, bit [12] <span class="condition">when FEAT_SME is implemented</span>:
-      </h4><div class="field"><p>Traps execution of SME instructions, SVE instructions when FEAT_SVE is not implemented or the PE is in Streaming SVE mode, and instructions that directly access the <a href="AArch64-smcr_el1.html">SMCR_EL1</a>, <a href="AArch64-smcr_el2.html">SMCR_EL2</a>, <a href="AArch64-smcr_el3.html">SMCR_EL3</a>, <a href="AArch64-smpri_el1.html">SMPRI_EL1</a>, <a href="AArch64-smprimap_el2.html">SMPRIMAP_EL2</a>, or <a href="AArch64-svcr.html">SVCR</a> System registers, from all Exception levels and any Security state, to EL3.</p>
-<p>When instructions that directly access the <a href="AArch64-svcr.html">SVCR</a> System register are trapped with reference to this control, the <span class="instruction">MSR SVCRSM</span>, <span class="instruction">MSR SVCRZA</span>, and <span class="instruction">MSR SVCRSMZA</span> instructions are also trapped.</p>
-<p>When direct accesses to <a href="AArch64-smpri_el1.html">SMPRI_EL1</a> and <a href="AArch64-smprimap_el2.html">SMPRIMAP_EL2</a> are trapped, the exception is reported using EC syndrome value <span class="hexnumber">0x18</span>. Otherwise, the exception is reported using EC syndrome value <span class="hexnumber">0x1D</span>, with an ISS code of <span class="hexnumber">0x0000000</span>.</p>
+      </h4><div class="field"><p>Traps execution of SME instructions, SVE instructions when FEAT_SVE is not implemented or the PE is in Streaming SVE mode, and instructions that directly access the <a href="/latest_sysreg/AArch64-smcr_el1.html">SMCR_EL1</a>, <a href="/latest_sysreg/AArch64-smcr_el2.html">SMCR_EL2</a>, <a href="/latest_sysreg/AArch64-smcr_el3.html">SMCR_EL3</a>, <a href="/latest_sysreg/AArch64-smpri_el1.html">SMPRI_EL1</a>, <a href="/latest_sysreg/AArch64-smprimap_el2.html">SMPRIMAP_EL2</a>, or <a href="/latest_sysreg/AArch64-svcr.html">SVCR</a> System registers, from all Exception levels and any Security state, to EL3.</p>
+<p>When instructions that directly access the <a href="/latest_sysreg/AArch64-svcr.html">SVCR</a> System register are trapped with reference to this control, the <span class="instruction">MSR SVCRSM</span>, <span class="instruction">MSR SVCRZA</span>, and <span class="instruction">MSR SVCRSMZA</span> instructions are also trapped.</p>
+<p>When direct accesses to <a href="/latest_sysreg/AArch64-smpri_el1.html">SMPRI_EL1</a> and <a href="/latest_sysreg/AArch64-smprimap_el2.html">SMPRIMAP_EL2</a> are trapped, the exception is reported using EC syndrome value <span class="hexnumber">0x18</span>. Otherwise, the exception is reported using EC syndrome value <span class="hexnumber">0x1D</span>, with an ISS code of <span class="hexnumber">0x0000000</span>.</p>
 <p>This field does not affect whether Streaming SVE or SME register values are valid.</p>
 <p>A trap taken as a result of CPTR_EL3.ESM has precedence over a trap taken as a result of CPTR_EL3.TFP.</p><table class="valuetable"><tr><th>ESM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control causes execution of these instructions at all Exception levels to be trapped.</p>
@@ -108,12 +108,12 @@ and Advanced SIMD and floating-point functionality.</p>
       </h4><div class="field"><p>Traps execution of instructions which access the Advanced SIMD and floating-point functionality, from all Exception levels, any Security state, and both Execution states, to EL3.</p>
 <p>This includes the following registers, all reported using EC syndrome value <span class="hexnumber">0x07</span>:</p>
 <ul>
-<li><a href="AArch64-fpcr.html">FPCR</a>, <a href="AArch64-fpsr.html">FPSR</a>, <a href="AArch64-fpexc32_el2.html">FPEXC32_EL2</a>, and any of the SIMD and floating-point registers V0-V31, including their views as D0-D31 registers or S0-S31 registers.
-</li><li>If <span class="xref">FEAT_FPMR</span> is implemented, <a href="AArch64-fpmr.html">FPMR</a>.
-</li><li><a href="AArch32-mvfr0.html">MVFR0</a>, <a href="AArch32-mvfr1.html">MVFR1</a>, <a href="AArch32-mvfr2.html">MVFR2</a>, <a href="AArch32-fpscr.html">FPSCR</a>, <a href="AArch32-fpexc.html">FPEXC</a>, and any of the SIMD and floating-point registers Q0-Q15, including their views as D0-D31 registers or S0-S31 registers.
-</li><li>VMSR accesses to <a href="AArch32-fpsid.html">FPSID</a>.
+<li><a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>, <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>, <a href="/latest_sysreg/AArch64-fpexc32_el2.html">FPEXC32_EL2</a>, and any of the SIMD and floating-point registers V0-V31, including their views as D0-D31 registers or S0-S31 registers.
+</li><li>If <span class="xref">FEAT_FPMR</span> is implemented, <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a>.
+</li><li><a href="/latest_sysreg/AArch32-mvfr0.html">MVFR0</a>, <a href="/latest_sysreg/AArch32-mvfr1.html">MVFR1</a>, <a href="/latest_sysreg/AArch32-mvfr2.html">MVFR2</a>, <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR</a>, <a href="/latest_sysreg/AArch32-fpexc.html">FPEXC</a>, and any of the SIMD and floating-point registers Q0-Q15, including their views as D0-D31 registers or S0-S31 registers.
+</li><li>VMSR accesses to <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a>.
 </li></ul>
-<p>Permitted VMSR accesses to <a href="AArch32-fpsid.html">FPSID</a> are ignored, but for the purposes of this trap the architecture defines a VMSR access to the <a href="AArch32-fpsid.html">FPSID</a> from EL1 or higher as an access to a SIMD and floating-point register.</p>
+<p>Permitted VMSR accesses to <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a> are ignored, but for the purposes of this trap the architecture defines a VMSR access to the <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a> from EL1 or higher as an access to a SIMD and floating-point register.</p>
 <p>Traps execution at all Exception levels of 
 SME and 
 SVE instructions
@@ -126,8 +126,8 @@ The exception is reported using EC syndrome value <span class="hexnumber">0x07</
           <p>This control causes execution of these instructions at  all Exception levels to be trapped.</p>
         </td></tr></table>
       <div class="note">
-        <p><a href="AArch64-fpexc32_el2.html">FPEXC32_EL2</a> is not accessible from EL0 using AArch64.</p>
-        <p><a href="AArch32-fpsid.html">FPSID</a>, <a href="AArch32-mvfr0.html">MVFR0</a>, <a href="AArch32-mvfr1.html">MVFR1</a>, and <a href="AArch32-fpexc.html">FPEXC</a> are not accessible from EL0 using AArch32.</p>
+        <p><a href="/latest_sysreg/AArch64-fpexc32_el2.html">FPEXC32_EL2</a> is not accessible from EL0 using AArch64.</p>
+        <p><a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a>, <a href="/latest_sysreg/AArch32-mvfr0.html">MVFR0</a>, <a href="/latest_sysreg/AArch32-mvfr1.html">MVFR1</a>, and <a href="/latest_sysreg/AArch32-fpexc.html">FPEXC</a> are not accessible from EL0 using AArch32.</p>
       </div>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -135,7 +135,7 @@ The exception is reported using EC syndrome value <span class="hexnumber">0x07</
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-8_8-1">EZ, bit [8] <span class="condition">when FEAT_SVE is implemented</span>:
-      </h4><div class="field"><p>Traps execution of SVE instructions when the PE is not in Streaming SVE mode, and instructions that directly access the <a href="AArch64-zcr_el3.html">ZCR_EL3</a>, <a href="AArch64-zcr_el2.html">ZCR_EL2</a>, or <a href="AArch64-zcr_el1.html">ZCR_EL1</a> System registers, from all Exception levels and any Security state, to EL3.</p>
+      </h4><div class="field"><p>Traps execution of SVE instructions when the PE is not in Streaming SVE mode, and instructions that directly access the <a href="/latest_sysreg/AArch64-zcr_el3.html">ZCR_EL3</a>, <a href="/latest_sysreg/AArch64-zcr_el2.html">ZCR_EL2</a>, or <a href="/latest_sysreg/AArch64-zcr_el1.html">ZCR_EL1</a> System registers, from all Exception levels and any Security state, to EL3.</p>
 <p>The exception is reported using EC syndrome value <span class="hexnumber">0x19</span>.</p>
 <p>A trap taken as a result of CPTR_EL3.EZ has precedence over a trap taken as a result of CPTR_EL3.TFP.</p><table class="valuetable"><tr><th>EZ</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control causes execution of these instructions at  all Exception levels to be trapped.</p>

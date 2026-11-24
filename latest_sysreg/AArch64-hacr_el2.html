@@ -5,8 +5,8 @@
         <p>Controls trapping to EL2 of <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> aspects of EL1 or EL0 operation.</p>
 
       
-        <div class="note"><p>Arm recommends that the values in this register do not cause unnecessary traps to EL2 when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} == {1, 1}.</p></div>
-      </div><h3>Configuration</h3><p>AArch64 System register HACR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-hacr.html">HACR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to HACR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+        <div class="note"><p>Arm recommends that the values in this register do not cause unnecessary traps to EL2 when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} == {1, 1}.</p></div>
+      </div><h3>Configuration</h3><p>AArch64 System register HACR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-hacr.html">HACR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to HACR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
 
       

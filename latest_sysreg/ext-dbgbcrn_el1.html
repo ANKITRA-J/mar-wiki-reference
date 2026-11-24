@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>DBGBCR&lt;n&gt;_EL1 | Jon's Arm Reference</title><meta name="description" content="Holds control information for a breakpoint. Forms breakpoint n together with value register DBGBVR&lt;n&gt;_EL1."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">DBGBCR&lt;n&gt;_EL1, n = 0 - 63</h1><p class="insn_subtitle" data-pagefind-body="1">Debug Breakpoint Control Registers</p><div data-pagefind-body="1">
-        <p>Holds control information for a breakpoint. Forms breakpoint n together with value register <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.</p>
-      </div><h3>Configuration</h3><p>External register DBGBCR&lt;n&gt;_EL1 bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1[31:0]</a>.</p><p>External register DBGBCR&lt;n&gt;_EL1 bits [63:32] are architecturally mapped to AArch64 System register <a href="AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1[63:32]</a> when FEAT_Debugv8p9 is implemented.</p><p>External register DBGBCR&lt;n&gt;_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-dbgbcrn.html">DBGBCR&lt;n&gt;[31:0]</a>.</p><p>DBGBCR&lt;n&gt;_EL1 is in the Core power domain.
+        <p>Holds control information for a breakpoint. Forms breakpoint n together with value register <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.</p>
+      </div><h3>Configuration</h3><p>External register DBGBCR&lt;n&gt;_EL1 bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1[31:0]</a>.</p><p>External register DBGBCR&lt;n&gt;_EL1 bits [63:32] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1[63:32]</a> when FEAT_Debugv8p9 is implemented.</p><p>External register DBGBCR&lt;n&gt;_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-dbgbcrn.html">DBGBCR&lt;n&gt;[31:0]</a>.</p><p>DBGBCR&lt;n&gt;_EL1 is in the Core power domain.
     </p>
         <p>If breakpoint n is not implemented, then accesses to this register are:</p>
 
@@ -53,7 +53,7 @@ These fields must be considered in combination, and the values that are permitte
 </li><li>DBGBCR&lt;n&gt;_EL1.MASK is zero, DBGBCR&lt;n&gt;_EL1.{BT2, BT} is {0, <span class="binarynumber">0b010x</span>} (address mismatch breakpoint without linking enabled), and AArch32 is not supported at EL1.
 </li><li>DBGBCR&lt;n&gt;_EL1.MASK is a valid nonzero value and any of the following apply:<ul>
 <li>DBGBCR&lt;n&gt;_EL1.BAS is not <span class="binarynumber">0b1111</span>, and AArch32 is supported at EL0.
-</li><li><a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>[(MASK-1):0] is nonzero.
+</li><li><a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>[(MASK-1):0] is nonzero.
 </li><li>DBGBCR&lt;n&gt;_EL1.{BT2, BT} is {0, <span class="binarynumber">0b0x1x</span>} or {0, <span class="binarynumber">0b1xxx</span>} (Context matching breakpoint).
 </li></ul>
 
@@ -70,35 +70,35 @@ These fields must be considered in combination, and the values that are permitte
     </div><h4 id="fieldset_0-23_20">BT, bits [23:20]:
       </h4><div class="field"><p>Breakpoint Type.</p>
 <p>With DBGBCR&lt;n&gt;_EL1.BT2 when implemented, specifies breakpoint type.</p><table class="valuetable"><tr><th>BT</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>Unlinked instruction address match. <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a> is the address of an instruction.</p>
+          <p>Unlinked instruction address match. <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a> is the address of an instruction.</p>
         </td><td></td></tr><tr><td class="bitfield">0b0001</td><td>
           <p>Linked instruction address match. As <span class="binarynumber">0b0000</span>, but linked to a breakpoint that has linking enabled.</p>
         </td><td></td></tr><tr><td class="bitfield">0b0010</td><td>
-          <p>Unlinked Context ID match. If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1 and either the PE is executing at EL0 with <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE set to 1 or the PE is executing at EL2, then <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is compared against <a href="AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>. Otherwise, <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is compared against <a href="AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a>.</p>
+          <p>Unlinked Context ID match. If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1 and either the PE is executing at EL0 with <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE set to 1 or the PE is executing at EL2, then <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is compared against <a href="/latest_sysreg/AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>. Otherwise, <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is compared against <a href="/latest_sysreg/AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a>.</p>
         </td><td>When breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b0011</td><td>
           <p>As <span class="binarynumber">0b0010</span>, with linking enabled.</p>
         </td><td>When breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b0100</td><td>
-          <p>Unlinked instruction address mismatch. <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a> is the address of an instruction.</p>
+          <p>Unlinked instruction address mismatch. <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a> is the address of an instruction.</p>
         </td><td>When FEAT_BWE is implemented or EL1 is using AArch32</td></tr><tr><td class="bitfield">0b0101</td><td>
           <p>Linked instruction address mismatch. As <span class="binarynumber">0b0100</span>, but linked to a breakpoint that has linking enabled.</p>
         </td><td>When FEAT_BWE is implemented or EL1 is using AArch32</td></tr><tr><td class="bitfield">0b0110</td><td>
-          <p>Unlinked <a href="AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a> match. <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is a Context ID compared against <a href="AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a>.</p>
+          <p>Unlinked <a href="/latest_sysreg/AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a> match. <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is a Context ID compared against <a href="/latest_sysreg/AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a>.</p>
         </td><td>When EL2 is implemented, FEAT_Debugv8p1 is implemented, and breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b0111</td><td>
           <p>As <span class="binarynumber">0b0110</span>, with linking enabled.</p>
         </td><td>When EL2 is implemented, FEAT_Debugv8p1 is implemented, and breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b1000</td><td>
-          <p>Unlinked VMID match. <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.VMID is a VMID compared against <a href="AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.</p>
+          <p>Unlinked VMID match. <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.VMID is a VMID compared against <a href="/latest_sysreg/AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.</p>
         </td><td>When EL2 is implemented and breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b1001</td><td>
           <p>As <span class="binarynumber">0b1000</span>, with linking enabled.</p>
         </td><td>When EL2 is implemented and breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b1010</td><td>
-          <p>Unlinked VMID and Context ID match. <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is a Context ID compared against <a href="AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a>, and <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.VMID is a VMID compared against <a href="AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.</p>
+          <p>Unlinked VMID and Context ID match. <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is a Context ID compared against <a href="/latest_sysreg/AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a>, and <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.VMID is a VMID compared against <a href="/latest_sysreg/AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.</p>
         </td><td>When EL2 is implemented and breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b1011</td><td>
           <p>As <span class="binarynumber">0b1010</span>, with linking enabled.</p>
         </td><td>When EL2 is implemented and breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b1100</td><td>
-          <p>Unlinked <a href="AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a> match. <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID2 is a Context ID compared against <a href="AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>.</p>
+          <p>Unlinked <a href="/latest_sysreg/AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a> match. <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID2 is a Context ID compared against <a href="/latest_sysreg/AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>.</p>
         </td><td>When EL2 is implemented, FEAT_Debugv8p1 is implemented, and breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b1101</td><td>
           <p>As <span class="binarynumber">0b1100</span>, with linking enabled.</p>
         </td><td>When EL2 is implemented, FEAT_Debugv8p1 is implemented, and breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b1110</td><td>
-          <p>Unlinked Full Context ID match. <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is compared against <a href="AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a>, and <a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID2 is compared against <a href="AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>.</p>
+          <p>Unlinked Full Context ID match. <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID is compared against <a href="/latest_sysreg/AArch64-contextidr_el1.html">CONTEXTIDR_EL1</a>, and <a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>.ContextID2 is compared against <a href="/latest_sysreg/AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>.</p>
         </td><td>When EL2 is implemented, FEAT_Debugv8p1 is implemented, and breakpoint n is context-aware</td></tr><tr><td class="bitfield">0b1111</td><td>
           <p>As <span class="binarynumber">0b1110</span>, with linking enabled.</p>
         </td><td>When EL2 is implemented, FEAT_Debugv8p1 is implemented, and breakpoint n is context-aware</td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
@@ -113,7 +113,7 @@ These fields must be considered in combination, and the values that are permitte
 <p>For more information on the operation of the SSC, HMC, and PMC fields, see <span class="xref">'Execution conditions for which a breakpoint generates Breakpoint exceptions'</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-13_13">HMC, bit [13]:
-      </h4><div class="field"><p>Higher mode control. Determines the debug perspective for deciding when a Breakpoint debug event for breakpoint n is generated. This field must be interpreted along with the SSC and PMC fields, and there are constraints on the permitted values of the {HMC, SSC, PMC} fields. For more information see <a href="ext-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.SSC description.</p>
+      </h4><div class="field"><p>Higher mode control. Determines the debug perspective for deciding when a Breakpoint debug event for breakpoint n is generated. This field must be interpreted along with the SSC and PMC fields, and there are constraints on the permitted values of the {HMC, SSC, PMC} fields. For more information see <a href="/latest_sysreg/ext-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.SSC description.</p>
 <p>For more information on the operation of the SSC, HMC, and PMC fields, see <span class="xref">'Execution conditions for which a breakpoint generates Breakpoint exceptions'</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-12_9">Bits [12:9]:
@@ -123,11 +123,11 @@ These fields must be considered in combination, and the values that are permitte
       </h4><div class="field"><p>Byte address select. Defines which halfwords an address-matching breakpoint matches, regardless of the instruction set and Execution state.</p>
 <p>The permitted values depend on the breakpoint type.</p>
 <p>For Address match breakpoints in either AArch32 or AArch64 state, the permitted values are:</p>
-<table class="valuetable"><thead><tr><th>BAS</th><th>Match instruction at</th><th>Constraint for debuggers</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0011</span></td><td><a href="AArch64-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a></td><td>Use for T32 instructions.</td></tr><tr><td><span class="binarynumber">0b1100</span></td><td><a href="AArch64-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a> + 2</td><td>Use for T32 instructions.</td></tr><tr><td><span class="binarynumber">0b1111</span></td><td><a href="AArch64-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a></td><td>Use for A64 and A32 instructions.</td></tr></tbody></table>
+<table class="valuetable"><thead><tr><th>BAS</th><th>Match instruction at</th><th>Constraint for debuggers</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0011</span></td><td><a href="/latest_sysreg/AArch64-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a></td><td>Use for T32 instructions.</td></tr><tr><td><span class="binarynumber">0b1100</span></td><td><a href="/latest_sysreg/AArch64-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a> + 2</td><td>Use for T32 instructions.</td></tr><tr><td><span class="binarynumber">0b1111</span></td><td><a href="/latest_sysreg/AArch64-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a></td><td>Use for A64 and A32 instructions.</td></tr></tbody></table>
 <p>All other values are reserved.</p>
 <p>For more information, see <span class="xref">'Using the BAS field in Address Match breakpoints'</span>.</p>
 <p>For Address mismatch breakpoints in an AArch32 stage 1 translation regime, the permitted values are:</p>
-<table class="valuetable"><thead><tr><th>BAS</th><th>Match instruction at</th><th>Constraint for debuggers</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0000</span></td><td>-</td><td>Use for a match anywhere breakpoint.</td></tr><tr><td><span class="binarynumber">0b0011</span></td><td><a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a></td><td>Use for stepping T32 instructions.</td></tr><tr><td><span class="binarynumber">0b1100</span></td><td><a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a> + 2</td><td>Use for stepping T32 instructions.</td></tr><tr><td><span class="binarynumber">0b1111</span></td><td><a href="ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a></td><td>Use for stepping A64 and A32 instructions.</td></tr></tbody></table>
+<table class="valuetable"><thead><tr><th>BAS</th><th>Match instruction at</th><th>Constraint for debuggers</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0000</span></td><td>-</td><td>Use for a match anywhere breakpoint.</td></tr><tr><td><span class="binarynumber">0b0011</span></td><td><a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a></td><td>Use for stepping T32 instructions.</td></tr><tr><td><span class="binarynumber">0b1100</span></td><td><a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a> + 2</td><td>Use for stepping T32 instructions.</td></tr><tr><td><span class="binarynumber">0b1111</span></td><td><a href="/latest_sysreg/ext-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a></td><td>Use for stepping A64 and A32 instructions.</td></tr></tbody></table>
 <p>All other values are reserved.</p>
 <p>For more information, see <span class="xref">'Using the BAS field in Address Match breakpoints'</span>.</p>
 <p>For Context matching breakpoints, this field is <span class="arm-defined-word">RES1</span> and ignored.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
@@ -152,7 +152,7 @@ These fields must be considered in combination, and the values that are permitte
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-2_1">PMC, bits [2:1]:
-      </h4><div class="field"><p>Privilege mode control. Determines the Exception level or levels at which a Breakpoint debug event for breakpoint n is generated. This field must be interpreted along with the SSC and HMC fields, and there are constraints on the permitted values of the {HMC, SSC, PMC} fields. For more information see the <a href="ext-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.SSC description.</p>
+      </h4><div class="field"><p>Privilege mode control. Determines the Exception level or levels at which a Breakpoint debug event for breakpoint n is generated. This field must be interpreted along with the SSC and HMC fields, and there are constraints on the permitted values of the {HMC, SSC, PMC} fields. For more information see the <a href="/latest_sysreg/ext-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.SSC description.</p>
 <p>For more information on the operation of the SSC, HMC, and PMC fields, see <span class="xref">'Execution conditions for which a breakpoint generates Breakpoint exceptions'</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-0_0">E, bit [0]:
@@ -165,8 +165,8 @@ These fields must be considered in combination, and the values that are permitte
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>Any of the following are true:<ul>
-<li><span class="function">HaltOnBreakpointOrWatchpoint()</span> is FALSE and the Effective value of <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a>.EMBWE is 0.
-</li><li><span class="function">HaltOnBreakpointOrWatchpoint()</span> is TRUE and the Effective value of <a href="ext-edscr2.html">EDSCR2</a>.EHBWE is 0.
+<li><span class="function">HaltOnBreakpointOrWatchpoint()</span> is FALSE and the Effective value of <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a>.EMBWE is 0.
+</li><li><span class="function">HaltOnBreakpointOrWatchpoint()</span> is TRUE and the Effective value of <a href="/latest_sysreg/ext-edscr2.html">EDSCR2</a>.EHBWE is 0.
 </li></ul>
 
 </li><li><span class="xref">FEAT_Debugv8p9</span> is implemented.

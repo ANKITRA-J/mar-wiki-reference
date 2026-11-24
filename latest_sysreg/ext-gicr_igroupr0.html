@@ -15,19 +15,19 @@
 <ul>
 <li>Bits [31:16] are group status bits for PPIs.
 </li><li>Bits [15:0] are group status bits for SGIs.
-</li></ul><table class="valuetable"><tr><th>Redistributor_group_status_bit&lt;x&gt;</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==1, the corresponding interrupt is Group 0.</p>
-<p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, the corresponding interrupt is Secure.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==1, the corresponding interrupt is Group 1.</p>
-<p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, the corresponding interrupt is Non-secure Group 1.</p></td></tr></table>
-      <p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, the bit that corresponds to the interrupt is concatenated with the equivalent bit in <a href="ext-gicr_igrpmodr0.html">GICR_IGRPMODR0</a> to form a 2-bit field that defines an interrupt group. The encoding of this field is at <a href="ext-gicr_igrpmodr0.html">GICR_IGRPMODR0</a>.</p>
+</li></ul><table class="valuetable"><tr><th>Redistributor_group_status_bit&lt;x&gt;</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==1, the corresponding interrupt is Group 0.</p>
+<p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, the corresponding interrupt is Secure.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==1, the corresponding interrupt is Group 1.</p>
+<p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, the corresponding interrupt is Non-secure Group 1.</p></td></tr></table>
+      <p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, the bit that corresponds to the interrupt is concatenated with the equivalent bit in <a href="/latest_sysreg/ext-gicr_igrpmodr0.html">GICR_IGRPMODR0</a> to form a 2-bit field that defines an interrupt group. The encoding of this field is at <a href="/latest_sysreg/ext-gicr_igrpmodr0.html">GICR_IGRPMODR0</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information</h4><div class="text_after_fields">
-    <p>The considerations for the reset value of this register are the same as those for <a href="ext-gicd_igrouprn.html">GICD_IGROUPR&lt;n&gt;</a> with n=0.</p>
+    <p>The considerations for the reset value of this register are the same as those for <a href="/latest_sysreg/ext-gicd_igrouprn.html">GICD_IGROUPR&lt;n&gt;</a> with n=0.</p>
   </div><h2>Accessing GICR_IGROUPR0</h2>
-        <p>When affinity routing is not enabled for the Security state of an interrupt in GICR_IGROUPR0, the corresponding bit is <span class="arm-defined-word">RES0</span> and equivalent functionality is provided by <a href="ext-gicd_igrouprn.html">GICD_IGROUPR&lt;n&gt;</a> with n=0.</p>
+        <p>When affinity routing is not enabled for the Security state of an interrupt in GICR_IGROUPR0, the corresponding bit is <span class="arm-defined-word">RES0</span> and equivalent functionality is provided by <a href="/latest_sysreg/ext-gicd_igrouprn.html">GICD_IGROUPR&lt;n&gt;</a> with n=0.</p>
 
       
-        <p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, the register is RAZ/WI to Non-secure accesses.</p>
+        <p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, the register is RAZ/WI to Non-secure accesses.</p>
 
       
         <p>Bits corresponding to unimplemented interrupts are RAZ/WI.</p>

@@ -3,7 +3,7 @@
 <title>ICH_LR&lt;n&gt;_EL2 | Jon's Arm Reference</title><meta name="description" content="Provides interrupt context information for the virtual CPU interface."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ICH_LR&lt;n&gt;_EL2, n = 0 - 15</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Controller List Registers</p><div data-pagefind-body="1">
         <p>Provides interrupt context information for the virtual CPU interface.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register ICH_LR&lt;n&gt;_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-ich_lrn.html">ICH_LR&lt;n&gt;[31:0]</a>.</p><p>AArch64 System register ICH_LR&lt;n&gt;_EL2 bits [63:32] are architecturally mapped to AArch32 System register <a href="AArch32-ich_lrcn.html">ICH_LRC&lt;n&gt;[31:0]</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented), (EL2 is implemented or EL3 is implemented), and FEAT_AA64 is implemented. Otherwise, direct accesses to ICH_LR&lt;n&gt;_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register ICH_LR&lt;n&gt;_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-ich_lrn.html">ICH_LR&lt;n&gt;[31:0]</a>.</p><p>AArch64 System register ICH_LR&lt;n&gt;_EL2 bits [63:32] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-ich_lrcn.html">ICH_LRC&lt;n&gt;[31:0]</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented), (EL2 is implemented or EL3 is implemented), and FEAT_AA64 is implemented. Otherwise, direct accesses to ICH_LR&lt;n&gt;_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
 
       
@@ -33,7 +33,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td><p>If FEAT_GICv3 is implemented, all of the following are true:</p>
 <ul>
 <li>The interrupt maps directly to a hardware interrupt. A deactivate interrupt request is sent to the Distributor when the virtual interrupt is deactivated, using the pINTID field from this register to indicate the physical interrupt ID.
-</li><li>If <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VEOIM is 0, this request corresponds to a write to <a href="AArch64-icc_eoir0_el1.html">ICC_EOIR0_EL1</a> or <a href="AArch64-icc_eoir1_el1.html">ICC_EOIR1_EL1</a>. Otherwise, it corresponds to a write to <a href="AArch64-icc_dir_el1.html">ICC_DIR_EL1</a>.
+</li><li>If <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VEOIM is 0, this request corresponds to a write to <a href="/latest_sysreg/AArch64-icc_eoir0_el1.html">ICC_EOIR0_EL1</a> or <a href="/latest_sysreg/AArch64-icc_eoir1_el1.html">ICC_EOIR1_EL1</a>. Otherwise, it corresponds to a write to <a href="/latest_sysreg/AArch64-icc_dir_el1.html">ICC_DIR_EL1</a>.
 </li></ul>
 <p>If FEAT_GCIE_LEGACY is implemented, the virtual interrupt also deactivates the physical interrupt specified in pINTID.</p></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -41,9 +41,9 @@
       </h4><div class="field">
       <p>Indicates the group for this virtual interrupt.</p>
     <table class="valuetable"><tr><th>Group</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>This is a Group 0 virtual interrupt. <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VFIQEn determines whether it is signaled as a virtual IRQ or as a virtual FIQ, and <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG0 enables signaling of this interrupt to the virtual machine.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>This is a Group 1 virtual interrupt, signaled as a virtual IRQ. <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG1 enables the signaling of this interrupt to the virtual machine.</p>
-<p>If <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VCBPR is 0, then <a href="AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1</a> determines if a pending Group 1 interrupt has sufficient priority to preempt current execution. Otherwise, <a href="AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a> determines preemption.</p></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+          <p>This is a Group 0 virtual interrupt. <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VFIQEn determines whether it is signaled as a virtual IRQ or as a virtual FIQ, and <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG0 enables signaling of this interrupt to the virtual machine.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>This is a Group 1 virtual interrupt, signaled as a virtual IRQ. <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG1 enables the signaling of this interrupt to the virtual machine.</p>
+<p>If <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VCBPR is 0, then <a href="/latest_sysreg/AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1</a> determines if a pending Group 1 interrupt has sufficient priority to preempt current execution. Otherwise, <a href="/latest_sysreg/AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a> determines preemption.</p></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-59_59-1">NMI, bit [59] <span class="condition">when FEAT_GICv3_NMI is implemented or FEAT_GCIE_LEGACY is implemented</span>:
       </h4><div class="field">
@@ -67,7 +67,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-55_48">Priority, bits [55:48]:
       </h4><div class="field"><p>The priority of this interrupt.</p>
-<p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> how many bits of priority are implemented, though at least five bits must be implemented. Unimplemented bits are <span class="arm-defined-word">RES0</span> and start from bit[48] up to bit[50]. The number of implemented bits can be discovered from <a href="AArch64-ich_vtr_el2.html">ICH_VTR_EL2</a>.PRIbits.</p>
+<p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> how many bits of priority are implemented, though at least five bits must be implemented. Unimplemented bits are <span class="arm-defined-word">RES0</span> and start from bit[48] up to bit[50]. The number of implemented bits can be discovered from <a href="/latest_sysreg/AArch64-ich_vtr_el2.html">ICH_VTR_EL2</a>.PRIbits.</p>
 <p>When ICH_LR&lt;n&gt;_EL2.NMI is set to 1, this field is <span class="arm-defined-word">RES0</span> and the virtual interrupt's priority is treated as <span class="hexnumber">0x00</span>.</p>
 <p>If FEAT_GCIE_LEGACY is implemented, 5 bits of priority are implemented meaning that bits[50:48] are <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -98,10 +98,10 @@
 <p>When ICH_LR&lt;n&gt;_EL2.HW is 1 (there is a corresponding physical interrupt):</p>
 <ul>
 <li>This field indicates the physical INTID. This field is only required to implement enough bits to hold a valid value for the implemented INTID size. Any unused higher order bits are <span class="arm-defined-word">RES0</span>.
-</li><li>When <a href="AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.ExtRange is 0, then bits[44:42] of this field are <span class="arm-defined-word">RES0</span>.
+</li><li>When <a href="/latest_sysreg/AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.ExtRange is 0, then bits[44:42] of this field are <span class="arm-defined-word">RES0</span>.
 </li><li>If the value of pINTID is not a valid INTID, behavior is <span class="arm-defined-word">UNPREDICTABLE</span>. If the value of pINTID indicates a PPI, this field applies to the PPI associated with this same physical PE ID as the virtual CPU interface requesting the deactivation.
 </li></ul>
-<p>A hardware physical identifier is only required in List Registers for interrupts that require deactivation. This means only 13 bits of Physical INTID are required, regardless of the number specified by <a href="AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.IDbits.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>A hardware physical identifier is only required in List Registers for interrupts that require deactivation. This means only 13 bits of Physical INTID are required, regardless of the number specified by <a href="/latest_sysreg/AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.IDbits.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-31_0">vINTID, bits [31:0]:
       </h4><div class="field"><p>Virtual INTID of the interrupt.</p>
@@ -112,8 +112,8 @@
 </li><li>ICH_LR&lt;n&gt;_EL2.State == <span class="binarynumber">0b10</span>.
 </li><li>ICH_LR&lt;n&gt;_EL2.State == <span class="binarynumber">0b11</span>.
 </li></ul>
-<p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> how many bits are implemented, though at least 16 bits must be implemented. Unimplemented bits are <span class="arm-defined-word">RES0</span>. The number of implemented bits can be discovered from <a href="AArch64-ich_vtr_el2.html">ICH_VTR_EL2</a>.IDbits.</p>
-<p>When <a href="AArch64-icc_sre_el1.html">ICC_SRE_EL1</a>.SRE == 0, specifying a vINTID in the LPI range is <span class="arm-defined-word">UNPREDICTABLE</span></p>
+<p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> how many bits are implemented, though at least 16 bits must be implemented. Unimplemented bits are <span class="arm-defined-word">RES0</span>. The number of implemented bits can be discovered from <a href="/latest_sysreg/AArch64-ich_vtr_el2.html">ICH_VTR_EL2</a>.IDbits.</p>
+<p>When <a href="/latest_sysreg/AArch64-icc_sre_el1.html">ICC_SRE_EL1</a>.SRE == 0, specifying a vINTID in the LPI range is <span class="arm-defined-word">UNPREDICTABLE</span></p>
 <div class="note"><p>When a VM is using memory-mapped access to the GIC, software must ensure that the correct source PE ID is provided in bits[12:10].</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, ICH_LR&lt;m&gt;_EL2

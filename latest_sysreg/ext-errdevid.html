@@ -18,7 +18,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Any FEAT_RASSA_PFG registers are implemented in a separate fault injection group page.</p>
         </td></tr></table><p>FEAT_RASSA_PFG_GRP implements the functionality identified by the value <span class="binarynumber">0b1</span></p>
-<div class="note"><p>The value of this field does not indicate that any FEAT_RASSA_PFG registers are implemented by the nodes in this error record group. Software must use <a href="ext-errnfr.html">ERR&lt;n&gt;FR</a> to discover whether each node implements FEAT_RASSA_PFG registers.</p></div><p>Accessing this field has the following behavior:</p><ul><li>When ERRDEVID is part of a fault injection group, access to this field
+<div class="note"><p>The value of this field does not indicate that any FEAT_RASSA_PFG registers are implemented by the nodes in this error record group. Software must use <a href="/latest_sysreg/ext-errnfr.html">ERR&lt;n&gt;FR</a> to discover whether each node implements FEAT_RASSA_PFG registers.</p></div><p>Accessing this field has the following behavior:</p><ul><li>When ERRDEVID is part of a fault injection group, access to this field
                             is <span class="access_level">RAZ/WI</span>.
                         </li><li>
                   Otherwise,

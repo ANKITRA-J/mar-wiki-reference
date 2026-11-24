@@ -4,16 +4,16 @@
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">GICD_IPRIORITYR&lt;n&gt;, n = 0 - 254</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Priority Registers</p><div data-pagefind-body="1">
         <p>Holds the priority of the corresponding interrupt.</p>
       </div><h3>Configuration</h3>
-        <p>These registers are available in all configurations of the GIC. When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, these registers are Common.</p>
+        <p>These registers are available in all configurations of the GIC. When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, these registers are Common.</p>
 
       
-        <p>The number of implemented GICD_IPRIORITYR&lt;n&gt; registers is 8*(<a href="ext-gicd_typer.html">GICD_TYPER</a>.ITLinesNumber+1). Registers are numbered from 0.</p>
+        <p>The number of implemented GICD_IPRIORITYR&lt;n&gt; registers is 8*(<a href="/latest_sysreg/ext-gicd_typer.html">GICD_TYPER</a>.ITLinesNumber+1). Registers are numbered from 0.</p>
 
       
-        <p>GICD_IPRIORITYR0 to GICD_IPRIORITYR7 are Banked for each connected PE with <a href="ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &lt; 8.</p>
+        <p>GICD_IPRIORITYR0 to GICD_IPRIORITYR7 are Banked for each connected PE with <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &lt; 8.</p>
 
       
-        <p>Accessing GICD_IPRIORITYR0 to GICD_IPRIORITYR7 from a PE with <a href="ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &gt; 7 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
+        <p>Accessing GICD_IPRIORITYR0 to GICD_IPRIORITYR7 from a PE with <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &gt; 7 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
 
       
         <ul>
@@ -58,7 +58,7 @@
 
       
         <ul>
-<li><a href="ext-gicr_ipriorityrn.html">GICR_IPRIORITYR&lt;n&gt;</a> is used instead of GICD_IPRIORITYR&lt;n&gt; where n = 0 to 7 (that is, for SGIs and PPIs).
+<li><a href="/latest_sysreg/ext-gicr_ipriorityrn.html">GICR_IPRIORITYR&lt;n&gt;</a> is used instead of GICD_IPRIORITYR&lt;n&gt; where n = 0 to 7 (that is, for SGIs and PPIs).
 </li><li>GICD_IPRIORITYR&lt;n&gt; is RAZ/WI where n = 0 to 7.
 </li></ul>
 
@@ -72,7 +72,7 @@
         <p>A GIC might implement fewer than eight priority bits, but must implement at least bits [7:4] of each field. In each field, unimplemented bits are RAZ/WI, see <span class="xref">'Interrupt prioritization' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>.</p>
 
       
-        <p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0:</p>
+        <p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0:</p>
 
       
         <ul>

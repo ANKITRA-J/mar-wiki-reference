@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>SCTLR2MASK_EL1 | Jon's Arm Reference</title><meta name="description" content="Mask register to prevent updates of fields in SCTLR2_EL1 on writes to SCTLR2_EL1 or SCTLR2ALIAS_EL1."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">SCTLR2MASK_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">Extended System Control Masking Register (EL1)</p><div data-pagefind-body="1">
-        <p>Mask register to prevent updates of fields in <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a> on writes to <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a> or SCTLR2ALIAS_EL1.</p>
+        <p>Mask register to prevent updates of fields in <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a> on writes to <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a> or SCTLR2ALIAS_EL1.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_SRMASK is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to SCTLR2MASK_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>SCTLR2MASK_EL1 is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-63_30">RES0</a></td></tr><tr class="firstrow"><td class="lr" colspan="2"><a href="#fieldset_0-63_30">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-29_29-1">EnCF0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-28_28">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-27_27-1">GM0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-26_26-1">TLBOSNIS</a></td><td class="lr" colspan="1"><a href="#fieldset_0-25_25-1">FDIT</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_24-1">BTD</a></td><td class="lr" colspan="1"><a href="#fieldset_0-23_23-1">BTD0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-22_22-1">EnIA2</a></td><td class="lr" colspan="1"><a href="#fieldset_0-21_21-1">EnIB2</a></td><td class="lr" colspan="1"><a href="#fieldset_0-20_20-1">EnDA2</a></td><td class="lr" colspan="1"><a href="#fieldset_0-19_19-1">EnDB2</a></td><td class="lr" colspan="6"><a href="#fieldset_0-18_13">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-12_12-1">CPTM0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-11_11-1">CPTM</a></td><td class="lr" colspan="1"><a href="#fieldset_0-10_10-1">CPTA0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-9_9-1">CPTA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-8_8-1">EnPACM0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-7_7-1">EnPACM</a></td><td class="lr" colspan="1"><a href="#fieldset_0-6_6-1">EnIDCP128</a></td><td class="lr" colspan="1"><a href="#fieldset_0-5_5-1">EASE</a></td><td class="lr" colspan="1"><a href="#fieldset_0-4_4-1">EnANERR</a></td><td class="lr" colspan="1"><a href="#fieldset_0-3_3-1">EnADERR</a></td><td class="lr" colspan="1"><a href="#fieldset_0-2_2-1">NMEA</a></td><td class="lr" colspan="2"><a href="#fieldset_0-1_0">RES0</a></td></tr></tbody></table><h4 id="fieldset_0-63_30">Bits [63:30]:
@@ -12,9 +12,9 @@
       </h4><div class="field">
       <p>Mask bit for EnCF0.</p>
     <table class="valuetable"><tr><th>EnCF0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnCF0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnCF0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnCF0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnCF0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -34,9 +34,9 @@
       </h4><div class="field">
       <p>Mask bit for GM0.</p>
     <table class="valuetable"><tr><th>GM0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.GM0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.GM0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.GM0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.GM0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -53,9 +53,9 @@
       </h4><div class="field">
       <p>Mask bit for TLBOSNIS.</p>
     <table class="valuetable"><tr><th>TLBOSNIS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.TLBOSNIS is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.TLBOSNIS is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.TLBOSNIS is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.TLBOSNIS is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -72,9 +72,9 @@
       </h4><div class="field">
       <p>Mask bit for FDIT.</p>
     <table class="valuetable"><tr><th>FDIT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.FDIT is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.FDIT is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.FDIT is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.FDIT is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -91,9 +91,9 @@
       </h4><div class="field">
       <p>Mask bit for BTD.</p>
     <table class="valuetable"><tr><th>BTD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.BTD is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.BTD is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.BTD is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.BTD is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -110,9 +110,9 @@
       </h4><div class="field">
       <p>Mask bit for BTD0.</p>
     <table class="valuetable"><tr><th>BTD0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.BTD0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.BTD0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.BTD0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.BTD0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -129,9 +129,9 @@
       </h4><div class="field">
       <p>Mask bit for EnIA2.</p>
     <table class="valuetable"><tr><th>EnIA2</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIA2 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIA2 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIA2 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIA2 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -148,9 +148,9 @@
       </h4><div class="field">
       <p>Mask bit for EnIB2.</p>
     <table class="valuetable"><tr><th>EnIB2</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIB2 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIB2 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIB2 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIB2 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -167,9 +167,9 @@
       </h4><div class="field">
       <p>Mask bit for EnDA2.</p>
     <table class="valuetable"><tr><th>EnDA2</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnDA2 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnDA2 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnDA2 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnDA2 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -186,9 +186,9 @@
       </h4><div class="field">
       <p>Mask bit for EnDB2.</p>
     <table class="valuetable"><tr><th>EnDB2</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnDB2 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnDB2 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnDB2 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnDB2 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -208,9 +208,9 @@
       </h4><div class="field">
       <p>Mask bit for CPTM0.</p>
     <table class="valuetable"><tr><th>CPTM0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTM0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTM0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTM0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTM0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -227,9 +227,9 @@
       </h4><div class="field">
       <p>Mask bit for CPTM.</p>
     <table class="valuetable"><tr><th>CPTM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTM is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTM is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTM is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTM is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -246,9 +246,9 @@
       </h4><div class="field">
       <p>Mask bit for CPTA0.</p>
     <table class="valuetable"><tr><th>CPTA0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTA0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTA0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTA0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTA0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -265,9 +265,9 @@
       </h4><div class="field">
       <p>Mask bit for CPTA.</p>
     <table class="valuetable"><tr><th>CPTA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTA is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTA is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTA is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.CPTA is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -284,9 +284,9 @@
       </h4><div class="field">
       <p>Mask bit for EnPACM0.</p>
     <table class="valuetable"><tr><th>EnPACM0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnPACM0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnPACM0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnPACM0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnPACM0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -303,9 +303,9 @@
       </h4><div class="field">
       <p>Mask bit for EnPACM.</p>
     <table class="valuetable"><tr><th>EnPACM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnPACM is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnPACM is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnPACM is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnPACM is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -322,9 +322,9 @@
       </h4><div class="field">
       <p>Mask bit for EnIDCP128.</p>
     <table class="valuetable"><tr><th>EnIDCP128</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIDCP128 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIDCP128 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIDCP128 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIDCP128 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -341,9 +341,9 @@
       </h4><div class="field">
       <p>Mask bit for EASE.</p>
     <table class="valuetable"><tr><th>EASE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EASE is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EASE is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EASE is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EASE is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -360,9 +360,9 @@
       </h4><div class="field">
       <p>Mask bit for EnANERR.</p>
     <table class="valuetable"><tr><th>EnANERR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnANERR is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnANERR is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnANERR is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnANERR is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -379,9 +379,9 @@
       </h4><div class="field">
       <p>Mask bit for EnADERR.</p>
     <table class="valuetable"><tr><th>EnADERR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnADERR is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnADERR is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnADERR is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnADERR is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -398,9 +398,9 @@
       </h4><div class="field">
       <p>Mask bit for NMEA.</p>
     <table class="valuetable"><tr><th>NMEA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.NMEA is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.NMEA is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.NMEA is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.NMEA is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -417,7 +417,7 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name SCTLR2MASK_EL1 or SCTLR2MASK_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name SCTLR2MASK_EL1 or SCTLR2MASK_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, SCTLR2MASK_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b000, CRn = 0b0001, CRm = 0b0100, op2 = 0b011)
       </p><p class="pseudocode">

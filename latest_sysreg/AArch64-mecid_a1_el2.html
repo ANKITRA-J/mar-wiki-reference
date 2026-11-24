@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>MECID_A1_EL2 | Jon's Arm Reference</title><meta name="description" content="Alternate MECID for EL2&amp;0 accesses translated by TTBR1_EL2."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">MECID_A1_EL2</h1><p class="insn_subtitle" data-pagefind-body="1">Alternate MECID for EL2&amp;0 translation regimes</p><div data-pagefind-body="1">
-        <p>Alternate MECID for EL2&amp;0 accesses translated by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+        <p>Alternate MECID for EL2&amp;0 accesses translated by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_MEC is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to MECID_A1_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
@@ -12,7 +12,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_0">MECID, bits [15:0]:
       </h4><div class="field"><p>If MECIDWidth is less than 16 bits, bits[15:MECIDWidth] are <span class="arm-defined-word">RES0</span>.</p>
-<div class="note"><p>MECIDWidth is defined in <a href="AArch64-mecidr_el2.html">MECIDR_EL2</a>.MECIDWidthm1.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<div class="note"><p>MECIDWidth is defined in <a href="/latest_sysreg/AArch64-mecidr_el2.html">MECIDR_EL2</a>.MECIDWidthm1.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, MECID_A1_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b1010, CRm = 0b1000, op2 = 0b011)

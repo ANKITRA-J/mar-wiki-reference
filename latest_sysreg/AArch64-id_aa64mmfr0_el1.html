@@ -14,9 +14,9 @@
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>ECV</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>Enhanced Counter Virtualization is not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>Enhanced Counter Virtualization is implemented. Supports <a href="AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.{EL1TVT, EL1TVCT, EL1NVPCT, EL1NVVCT, EVNTIS}, <a href="AArch64-cntkctl_el1.html">CNTKCTL_EL1</a>.EVNTIS, <a href="AArch64-cntpctss_el0.html">CNTPCTSS_EL0</a> counter views, and <a href="AArch64-cntvctss_el0.html">CNTVCTSS_EL0</a> counter views. Extends the <a href="AArch64-pmscr_el1.html">PMSCR_EL1</a>.PCT, <a href="AArch64-pmscr_el2.html">PMSCR_EL2</a>.PCT, <a href="AArch64-trfcr_el1.html">TRFCR_EL1</a>.TS, and <a href="AArch64-trfcr_el2.html">TRFCR_EL2</a>.TS fields.</p>
+          <p>Enhanced Counter Virtualization is implemented. Supports <a href="/latest_sysreg/AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.{EL1TVT, EL1TVCT, EL1NVPCT, EL1NVVCT, EVNTIS}, <a href="/latest_sysreg/AArch64-cntkctl_el1.html">CNTKCTL_EL1</a>.EVNTIS, <a href="/latest_sysreg/AArch64-cntpctss_el0.html">CNTPCTSS_EL0</a> counter views, and <a href="/latest_sysreg/AArch64-cntvctss_el0.html">CNTVCTSS_EL0</a> counter views. Extends the <a href="/latest_sysreg/AArch64-pmscr_el1.html">PMSCR_EL1</a>.PCT, <a href="/latest_sysreg/AArch64-pmscr_el2.html">PMSCR_EL2</a>.PCT, <a href="/latest_sysreg/AArch64-trfcr_el1.html">TRFCR_EL1</a>.TS, and <a href="/latest_sysreg/AArch64-trfcr_el2.html">TRFCR_EL2</a>.TS fields.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
-          <p>As <span class="binarynumber">0b0001</span>, and the <a href="AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> register and the <a href="AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.ECV and <a href="AArch64-scr_el3.html">SCR_EL3</a>.ECVEn fields are implemented.</p>
+          <p>As <span class="binarynumber">0b0001</span>, and the <a href="/latest_sysreg/AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> register and the <a href="/latest_sysreg/AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.ECV and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.ECVEn fields are implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_ECV</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p><span class="xref">FEAT_ECV_POFF</span> implements the functionality identified by the value <span class="binarynumber">0b0010</span>.</p>
@@ -27,14 +27,14 @@
           <p>Fine-grained trap controls are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td><p>Fine-grained trap controls are implemented. Supports:</p>
 <ul>
-<li>If EL2 is implemented, the <a href="AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a>, <a href="AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>, <a href="AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>, <a href="AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>, <a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a> and <a href="AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> registers, and their associated traps.
-</li><li>If EL2 is implemented, <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDCC.
-</li><li>If EL3 is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC.
-</li><li>If both EL2 and EL3 are implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn.
+<li>If EL2 is implemented, the <a href="/latest_sysreg/AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>, <a href="/latest_sysreg/AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a> and <a href="/latest_sysreg/AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> registers, and their associated traps.
+</li><li>If EL2 is implemented, <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDCC.
+</li><li>If EL3 is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC.
+</li><li>If both EL2 and EL3 are implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn.
 </li></ul></td></tr><tr><td class="bitfield">0b0010</td><td><p>As <span class="binarynumber">0b0001</span>, and also includes support for:</p>
 <ul>
-<li>If EL2 is implemented, the <a href="AArch64-hdfgrtr2_el2.html">HDFGRTR2_EL2</a>, <a href="AArch64-hdfgwtr2_el2.html">HDFGWTR2_EL2</a>, <a href="AArch64-hfgitr2_el2.html">HFGITR2_EL2</a>, <a href="AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a>, and <a href="AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a> registers, and their associated traps.
-</li><li>If both EL2 and EL3 are implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2.
+<li>If EL2 is implemented, the <a href="/latest_sysreg/AArch64-hdfgrtr2_el2.html">HDFGRTR2_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgwtr2_el2.html">HDFGWTR2_EL2</a>, <a href="/latest_sysreg/AArch64-hfgitr2_el2.html">HFGITR2_EL2</a>, <a href="/latest_sysreg/AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a>, and <a href="/latest_sysreg/AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a> registers, and their associated traps.
+</li><li>If both EL2 and EL3 are implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2.
 </li></ul></td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_FGT</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p><span class="xref">FEAT_FGT2</span> implements the functionality identified by the value <span class="binarynumber">0b0010</span>.</p>
@@ -122,9 +122,9 @@
       </h4><div class="field">
       <p>Indicates support for mixed-endian at EL0 only.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>BigEndEL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>No mixed-endian support at EL0. The <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.E0E bit has a fixed value.</p>
+          <p>No mixed-endian support at EL0. The <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.E0E bit has a fixed value.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>Mixed-endian support at EL0. The <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.E0E bit can be configured.</p>
+          <p>Mixed-endian support at EL0. The <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.E0E bit can be configured.</p>
         </td></tr></table><p><span class="xref">FEAT_MixedEndEL0</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p>All other values are reserved.</p>
 <p>This field is invalid and is <span class="arm-defined-word">RES0</span> if ID_AA64MMFR0_EL1.BigEnd is not <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-15_12">SNSMem, bits [15:12]:
@@ -145,7 +145,7 @@
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>BigEnd</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>No mixed-endian support. The <span class="xref">SCTLR_ELx</span>.EE bits have a fixed value. See the BigEndEL0 field, bits[19:16], for whether EL0 supports mixed-endian.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>Mixed-endian support. The <span class="xref">SCTLR_ELx</span>.EE and <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.E0E bits can be configured.</p>
+          <p>Mixed-endian support. The <span class="xref">SCTLR_ELx</span>.EE and <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.E0E bits can be configured.</p>
         </td></tr></table><p><span class="xref">FEAT_MixedEnd</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p>If this field is <span class="binarynumber">0b0001</span>, <span class="xref">FEAT_MixedEndEL0</span> is also implemented.</p>
 <p>All other values are reserved.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_4">ASIDBits, bits [7:4]:

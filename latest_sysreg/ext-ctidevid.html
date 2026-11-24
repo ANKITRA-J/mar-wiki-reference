@@ -13,9 +13,9 @@
       </h4><div class="field">
       <p>Input/output options. Indicates presence of the input gate. If the CTM is not implemented or CTIv2 is not implemented, this field is RAZ.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>INOUT</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
-          <p><a href="ext-ctigate.html">CTIGATE</a> does not mask propagation of input events from external channels.</p>
+          <p><a href="/latest_sysreg/ext-ctigate.html">CTIGATE</a> does not mask propagation of input events from external channels.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
-          <p><a href="ext-ctigate.html">CTIGATE</a> masks propagation of input events from external channels.</p>
+          <p><a href="/latest_sysreg/ext-ctigate.html">CTIGATE</a> masks propagation of input events from external channels.</p>
         </td></tr></table>
       <p>All other values are reserved.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_22">Bits [23:22]:
@@ -44,7 +44,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-4_0">EXTMUXNUM, bits [4:0]:
       </h4><div class="field">
-      <p>Number of multiplexers available on triggers. This value is used in conjunction with External Control register, <a href="ext-asicctl.html">ASICCTL</a>.</p>
+      <p>Number of multiplexers available on triggers. This value is used in conjunction with External Control register, <a href="/latest_sysreg/ext-asicctl.html">ASICCTL</a>.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing CTIDEVID</h2><h4>CTIDEVID can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>CTI</td><td><span class="hexnumber">0xFC8</span></td><td>CTIDEVID</td></tr></table><p>Accesses to this register are <span class="access_level">RO</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

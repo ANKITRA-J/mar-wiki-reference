@@ -12,11 +12,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-59_56">SCRX, bits [59:56]:
       </h4><div class="field">
-      <p>Indicates support for <a href="AArch64-scr2_el3.html">SCR2_EL3</a>.</p>
+      <p>Indicates support for <a href="/latest_sysreg/AArch64-scr2_el3.html">SCR2_EL3</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>SCRX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p><a href="AArch64-scr2_el3.html">SCR2_EL3</a> is not supported.</p>
+          <p><a href="/latest_sysreg/AArch64-scr2_el3.html">SCR2_EL3</a> is not supported.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-scr2_el3.html">SCR2_EL3</a> is supported.</p>
+          <p><a href="/latest_sysreg/AArch64-scr2_el3.html">SCR2_EL3</a> is supported.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_SCR2</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-55_48">Bits [55:48]:
       </h4><div class="field">
@@ -24,25 +24,25 @@
     </div><h4 id="fieldset_0-47_44">SRMASK, bits [47:44]:
       </h4><div class="field"><p>Indicates support for bitwise write masks for the following registers:</p>
 <ul>
-<li><a href="AArch64-actlr_el1.html">ACTLR_EL1</a>.
-</li><li><a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.
-</li><li><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.
-</li><li><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.
-</li><li><a href="AArch64-tcr_el1.html">TCR_EL1</a>.
-</li><li><a href="AArch64-tcr2_el1.html">TCR2_EL1</a>.
-</li><li><a href="AArch64-actlr_el2.html">ACTLR_EL2</a>.
-</li><li><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.
-</li><li><a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.
-</li><li><a href="AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.
-</li><li><a href="AArch64-tcr_el2.html">TCR_EL2</a>.
-</li><li><a href="AArch64-tcr2_el2.html">TCR2_EL2</a>.
+<li><a href="/latest_sysreg/AArch64-actlr_el1.html">ACTLR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-actlr_el2.html">ACTLR_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-tcr_el2.html">TCR_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-tcr2_el2.html">TCR2_EL2</a>.
 </li></ul>
 <p>When <span class="xref">FEAT_SRMASK2</span> is implemented, indicates support for bitwise write masks for the following registers:</p>
 <ul>
-<li><a href="AArch64-hcr_el2.html">HCR_EL2</a> and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.
+<li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a> and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.
 </li><li>If <span class="xref">FEAT_NV3</span> is implemented, indicates support for the following:<ul>
-<li>The <a href="AArch64-nvhcrx_el2.html">NVHCRX_EL2</a> register.
-</li><li>Bitwise masks for <a href="AArch64-nvhcrx_el2.html">NVHCRX_EL2</a> and <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a>.
+<li>The <a href="/latest_sysreg/AArch64-nvhcrx_el2.html">NVHCRX_EL2</a> register.
+</li><li>Bitwise masks for <a href="/latest_sysreg/AArch64-nvhcrx_el2.html">NVHCRX_EL2</a> and <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a>.
 </li></ul>
 
 </li></ul><p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>SRMASK</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
@@ -61,15 +61,15 @@
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p><span class="xref">FEAT_TLBID</span> is implemented.</p>
         </td></tr></table><p><span class="xref">FEAT_TLBID</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
-<p>The number of bits of TLBI  Domains supported is described in <a href="AArch64-tlbididr_el1.html">TLBIDIDR_El1</a>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-39_36">E3DSE, bits [39:36]:
+<p>The number of bits of TLBI  Domains supported is described in <a href="/latest_sysreg/AArch64-tlbididr_el1.html">TLBIDIDR_El1</a>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-39_36">E3DSE, bits [39:36]:
       </h4><div class="field">
       <p>Delegated SError exceptions from EL3. Describes support for delegated SError injection from EL3.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>E3DSE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p><span class="xref">FEAT_E3DSE</span> is not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td><p><span class="xref">FEAT_E3DSE</span> is implemented. The following are implemented:</p>
 <ul>
-<li>Register fields <a href="AArch64-scr_el3.html">SCR_EL3</a>.DSE and <a href="AArch64-scr_el3.html">SCR_EL3</a>.EnDSE.
-</li><li>Registers <a href="AArch64-vsesr_el3.html">VSESR_EL3</a> and <a href="AArch64-vdisr_el3.html">VDISR_EL3</a>.
+<li>Register fields <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.DSE and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EnDSE.
+</li><li>Registers <a href="/latest_sysreg/AArch64-vsesr_el3.html">VSESR_EL3</a> and <a href="/latest_sysreg/AArch64-vdisr_el3.html">VDISR_EL3</a>.
 </li></ul></td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_E3DSE</span> implements the functionality described by the value <span class="binarynumber">0b0001</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-35_32">EAESR, bits [35:32]:
       </h4><div class="field">
@@ -89,21 +89,21 @@
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_RME_GDI</span> implements the functionality described by the value <span class="binarynumber">0b0001</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-27_24-1">E2H0, bits [27:24] <span class="condition">when FEAT_AA64EL2 is implemented</span>:
       </h4><div class="field">
-      <p>Indicates support for programming <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H.</p>
+      <p>Indicates support for programming <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>E2H0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p><span class="xref">FEAT_E2H0</span> is implemented.</p>
         </td></tr><tr><td class="bitfield">0b1110</td><td>
-          <p><span class="xref">FEAT_E2H0</span> is not implemented. <a href="AArch64-hcr_el2.html">HCR_EL2</a>.NV1 is <span class="arm-defined-word">RES0</span>.</p>
+          <p><span class="xref">FEAT_E2H0</span> is not implemented. <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.NV1 is <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b1111</td><td>
           <p><span class="xref">FEAT_E2H0</span> is not implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>If <span class="xref">FEAT_NV</span> is not implemented, then the value <span class="binarynumber">0b1110</span> is not permitted.</p>
-<p>If <span class="xref">FEAT_E2H0</span> is implemented and <span class="xref">FEAT_VHE</span> is not implemented, then <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is <span class="arm-defined-word">RES0</span>.</p>
-<p>If <span class="xref">FEAT_E2H0</span> is implemented and <span class="xref">FEAT_VHE</span> is implemented, then <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H can be programmed to 0 or 1.</p>
+<p>If <span class="xref">FEAT_E2H0</span> is implemented and <span class="xref">FEAT_VHE</span> is not implemented, then <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is <span class="arm-defined-word">RES0</span>.</p>
+<p>If <span class="xref">FEAT_E2H0</span> is implemented and <span class="xref">FEAT_VHE</span> is implemented, then <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H can be programmed to 0 or 1.</p>
 <p>If <span class="xref">FEAT_E2H0</span> is not implemented then:</p>
 <ul>
 <li><span class="xref">FEAT_VHE</span> is implemented.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is <span class="arm-defined-word">RES1</span> and behaves as though it is 1.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is <span class="arm-defined-word">RES1</span> and behaves as though it is 1.
 </li></ul><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-27_24-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -111,11 +111,11 @@
       </h4><div class="field">
       <p>Indicates support for a subset of <span class="xref">FEAT_NV</span> and <span class="xref">FEAT_NV2</span> behaviors.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>NV_frac</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>Support for <span class="xref">FEAT_NV</span> and <span class="xref">FEAT_NV2</span> is described in <a href="AArch64-id_aa64mmfr2_el1.html">ID_AA64MMFR2_EL1</a>.NV.</p>
+          <p>Support for <span class="xref">FEAT_NV</span> and <span class="xref">FEAT_NV2</span> is described in <a href="/latest_sysreg/AArch64-id_aa64mmfr2_el1.html">ID_AA64MMFR2_EL1</a>.NV.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td><p><span class="xref">FEAT_NV</span> and <span class="xref">FEAT_NV2</span> are implemented, but all of the following apply:</p>
 <ul>
-<li><a href="AArch64-id_aa64mmfr2_el1.html">ID_AA64MMFR2_EL1</a>.NV is <span class="binarynumber">0b0000</span>.
-</li><li>Programming <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{NV, NV2} to {1, 0} behaves as {1, 1}.
+<li><a href="/latest_sysreg/AArch64-id_aa64mmfr2_el1.html">ID_AA64MMFR2_EL1</a>.NV is <span class="binarynumber">0b0000</span>.
+</li><li>Programming <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{NV, NV2} to {1, 0} behaves as {1, 1}.
 </li></ul></td></tr><tr><td class="bitfield">0b0010</td><td>
           <p>As <span class="binarynumber">0b0001</span> and adds stateful bits in specified _EL1 registers for software usage under nested virtualization.</p>
         </td></tr><tr><td class="bitfield">0b0011</td><td>
@@ -149,20 +149,20 @@
       </h4><div class="field">
       <p>Early Implicit Error Synchronization event. Indicates whether the implicit Error synchronization event inserted on taking an exception to ELx when SCTLR_ELx.IESB is 1 is inserted before or after the exception is taken.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>EIESB</th><th>Meaning</th></tr><tr><td class="bitfield">0b1111</td><td>
-          <p>When <span class="xref">FEAT_IESB</span> is implemented and enabled, SError exceptions are routed to EL3, and either <span class="xref">FEAT_DoubleFault</span> is not implemented or the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.NMEA is 1, an implicit Error synchronization event might be inserted after an exception is taken to EL3, unless that exception is also an SError exception.</p>
+          <p>When <span class="xref">FEAT_IESB</span> is implemented and enabled, SError exceptions are routed to EL3, and either <span class="xref">FEAT_DoubleFault</span> is not implemented or the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NMEA is 1, an implicit Error synchronization event might be inserted after an exception is taken to EL3, unless that exception is also an SError exception.</p>
         </td></tr><tr><td class="bitfield">0b0000</td><td>
           <p><span class="xref">FEAT_IESB</span> is not implemented, or behavior is not described.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>When <span class="xref">FEAT_IESB</span> is implemented and enabled, SError exceptions are routed to EL3, and either <span class="xref">FEAT_DoubleFault</span> is not implemented or the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.NMEA is 1, an implicit Error synchronization event is inserted before an exception taken to EL3, unless that exception is also an SError exception.</p>
+          <p>When <span class="xref">FEAT_IESB</span> is implemented and enabled, SError exceptions are routed to EL3, and either <span class="xref">FEAT_DoubleFault</span> is not implemented or the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NMEA is 1, an implicit Error synchronization event is inserted before an exception taken to EL3, unless that exception is also an SError exception.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td><p>As <span class="binarynumber">0b0001</span>, and also:</p>
 <ul>
-<li>When <span class="xref">FEAT_IESB</span> is implemented and enabled, SError exceptions are routed to EL1, and either <span class="xref">FEAT_DoubleFault2</span> is not implemented or the Effective value of <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.NMEA is 1, an implicit Error synchronization event is inserted before an exception taken to EL1, unless that exception is also an SError exception.
-</li><li>When <span class="xref">FEAT_IESB</span> is implemented and enabled, SError exceptions are routed to EL2, and either <span class="xref">FEAT_DoubleFault2</span> is not implemented or the Effective value of <a href="AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.NMEA is 1, an implicit Error synchronization event is inserted before an exception taken to EL2, unless that exception is also an SError exception.
+<li>When <span class="xref">FEAT_IESB</span> is implemented and enabled, SError exceptions are routed to EL1, and either <span class="xref">FEAT_DoubleFault2</span> is not implemented or the Effective value of <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.NMEA is 1, an implicit Error synchronization event is inserted before an exception taken to EL1, unless that exception is also an SError exception.
+</li><li>When <span class="xref">FEAT_IESB</span> is implemented and enabled, SError exceptions are routed to EL2, and either <span class="xref">FEAT_DoubleFault2</span> is not implemented or the Effective value of <a href="/latest_sysreg/AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.NMEA is 1, an implicit Error synchronization event is inserted before an exception taken to EL2, unless that exception is also an SError exception.
 </li></ul></td></tr><tr><td class="bitfield">0b0011</td><td>
-          <p>When <span class="xref">FEAT_IESB</span> is implemented and enabled, an implicit Error synchronization event is inserted before taking an exception other than an SError exception, regardless of the Effective values of <a href="AArch64-scr_el3.html">SCR_EL3</a>.NMEA and SCTLR2_ELx.NMEA.</p>
+          <p>When <span class="xref">FEAT_IESB</span> is implemented and enabled, an implicit Error synchronization event is inserted before taking an exception other than an SError exception, regardless of the Effective values of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NMEA and SCTLR2_ELx.NMEA.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>This field describes the PE behavior on taking an exception to ELx when SCTLR_ELx.IESB is 1. This field does not describe the behavior when SCTLR_ELx.IESB is 0.</p>
-<p>The behavior described by this field only applies for the conditions described above. For example, if ID_AA64MMFR4_EL1.EIESB reads as <span class="binarynumber">0b0001</span>, then it does not describe the behavior when SError exceptions are not routed to EL3, or when <span class="xref">FEAT_DoubleFault</span> is implemented and the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.NMEA is 0.</p>
+<p>The behavior described by this field only applies for the conditions described above. For example, if ID_AA64MMFR4_EL1.EIESB reads as <span class="binarynumber">0b0001</span>, then it does not describe the behavior when SError exceptions are not routed to EL3, or when <span class="xref">FEAT_DoubleFault</span> is implemented and the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NMEA is 0.</p>
 <p>Inserting the event before the exception is taken means that if the Error synchronization event causes an SError exception to become pending, and SError exceptions are not masked and not disabled, then the SError exception is taken in place of the original exception.</p>
 <p>When <span class="xref">FEAT_IESB</span> is not implemented, the only permitted value of this field is <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_4-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">

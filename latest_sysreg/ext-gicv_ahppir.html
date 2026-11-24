@@ -5,7 +5,7 @@
         <p>Provides the INTID of the highest priority pending Group 1 virtual interrupt in the List registers.</p>
 
       
-        <p>This register corresponds to the physical CPU interface register <a href="ext-gicc_ahppir.html">GICC_AHPPIR</a>.</p>
+        <p>This register corresponds to the physical CPU interface register <a href="/latest_sysreg/ext-gicc_ahppir.html">GICC_AHPPIR</a>.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv3_LEGACY is implemented and EL2 is implemented. Otherwise, direct accesses to GICV_AHPPIR are <span class="arm-defined-word">RES0</span>.</p>
         <p>This register is available when the GIC implementation supports interrupt virtualization.</p>
       <h3>Attributes</h3>
@@ -28,12 +28,12 @@
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-icc_hppir1.html">ICC_HPPIR1</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-icc_hppir1_el1.html">ICC_HPPIR1_EL1</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-icc_hppir1.html">ICC_HPPIR1</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-icc_hppir1_el1.html">ICC_HPPIR1_EL1</a> provides equivalent functionality.
 </li></ul>
 
       
-        <p>This register is used for Group 1 interrupts only. <a href="ext-gicv_hppir.html">GICV_HPPIR</a> provides equivalent functionality for Group 0 interrupts.</p>
+        <p>This register is used for Group 1 interrupts only. <a href="/latest_sysreg/ext-gicv_hppir.html">GICV_HPPIR</a> provides equivalent functionality for Group 0 interrupts.</p>
 
       
         <p>The register does not return the INTID of an interrupt that is active and pending.</p>

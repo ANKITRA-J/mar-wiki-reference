@@ -3,7 +3,7 @@
 <title>CNTHP_CTL | Jon's Arm Reference</title><meta name="description" content="Control register for the Hyp mode physical timer."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">CNTHP_CTL</h1><p class="insn_subtitle" data-pagefind-body="1">Counter-timer Hyp Physical Timer Control register</p><div data-pagefind-body="1">
         <p>Control register for the Hyp mode physical timer.</p>
-      </div><h3>Configuration</h3><p>This register is banked between CNTHP_CTL and CNTHP_CTL_S and CNTHP_CTL_NS.<br></br></p><p>AArch32 System register CNTHP_CTL bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32 is implemented. Otherwise, direct accesses to CNTHP_CTL are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>This register is banked between CNTHP_CTL and CNTHP_CTL_S and CNTHP_CTL_NS.<br></br></p><p>AArch32 System register CNTHP_CTL bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32 is implemented. Otherwise, direct accesses to CNTHP_CTL are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>CNTHP_CTL is a 32-bit register.</p>
@@ -48,7 +48,7 @@
           <p>Timer disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Timer enabled.</p>
-        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="AArch32-cnthp_tval.html">CNTHP_TVAL</a> continues to count down.</p>
+        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="/latest_sysreg/AArch32-cnthp_tval.html">CNTHP_TVAL</a> continues to count down.</p>
 <div class="note"><p>Disabling the output signal might be a power-saving option.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL3 or the highest implemented Exception level is EL2,
             this field resets to

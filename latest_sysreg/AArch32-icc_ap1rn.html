@@ -3,7 +3,7 @@
 <title>ICC_AP1R&lt;n&gt; | Jon's Arm Reference</title><meta name="description" content="Provides information about Group 1 active priorities."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ICC_AP1R&lt;n&gt;, n = 0 - 3</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Controller Active Priorities Group 1 Registers</p><div data-pagefind-body="1">
         <p>Provides information about Group 1 active priorities.</p>
-      </div><h3>Configuration</h3><p>This register is banked between ICC_AP1R&lt;n&gt; and ICC_AP1R&lt;n&gt;_S and ICC_AP1R&lt;n&gt;_NS.<br></br></p><p>AArch32 System register ICC_AP1R&lt;n&gt; bits [31:0] (ICC_AP1R&lt;n&gt;_S) are architecturally mapped to AArch64 System register <a href="AArch64-icc_ap1rn_el1.html">ICC_AP1R&lt;n&gt;_EL1[31:0]</a> (ICC_AP1R&lt;n&gt;_EL1_S).</p><p>AArch32 System register ICC_AP1R&lt;n&gt; bits [31:0] (ICC_AP1R&lt;n&gt;_NS) are architecturally mapped to AArch64 System register <a href="AArch64-icc_ap1rn_el1.html">ICC_AP1R&lt;n&gt;_EL1[31:0]</a> (ICC_AP1R&lt;n&gt;_EL1_NS).</p><p>This register is present only when FEAT_AA32EL1 is implemented and GICv3 is implemented. Otherwise, direct accesses to ICC_AP1R&lt;n&gt; are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>This register is banked between ICC_AP1R&lt;n&gt; and ICC_AP1R&lt;n&gt;_S and ICC_AP1R&lt;n&gt;_NS.<br></br></p><p>AArch32 System register ICC_AP1R&lt;n&gt; bits [31:0] (ICC_AP1R&lt;n&gt;_S) are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-icc_ap1rn_el1.html">ICC_AP1R&lt;n&gt;_EL1[31:0]</a> (ICC_AP1R&lt;n&gt;_EL1_S).</p><p>AArch32 System register ICC_AP1R&lt;n&gt; bits [31:0] (ICC_AP1R&lt;n&gt;_NS) are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-icc_ap1rn_el1.html">ICC_AP1R&lt;n&gt;_EL1[31:0]</a> (ICC_AP1R&lt;n&gt;_EL1_NS).</p><p>This register is present only when FEAT_AA32EL1 is implemented and GICv3 is implemented. Otherwise, direct accesses to ICC_AP1R&lt;n&gt; are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>ICC_AP1R&lt;n&gt; is a 32-bit register.</p>
 
       
@@ -35,13 +35,13 @@
         <p>ICC_AP1R1 is implemented only in implementations that support 6 or more bits of preemption. ICC_AP1R2 and ICC_AP1R3 are implemented only in implementations that support 7 bits of preemption. Unimplemented registers are <span class="arm-defined-word">UNDEFINED</span>.</p>
 
       
-        <div class="note"><p>The number of bits of preemption is indicated by <a href="AArch32-ich_vtr.html">ICH_VTR</a>.PREbits.</p></div>
+        <div class="note"><p>The number of bits of preemption is indicated by <a href="/latest_sysreg/AArch32-ich_vtr.html">ICH_VTR</a>.PREbits.</p></div>
       
         <p>Writing to the active priority registers in any order other than the following order will result in <span class="arm-defined-word">UNPREDICTABLE</span> behavior:</p>
 
       
         <ul>
-<li><a href="AArch32-icc_ap0rn.html">ICC_AP0R&lt;n&gt;</a>
+<li><a href="/latest_sysreg/AArch32-icc_ap0rn.html">ICC_AP0R&lt;n&gt;</a>
 </li><li>Secure ICC_AP1R&lt;n&gt;
 </li><li>Non-secure ICC_AP1R&lt;n&gt;
 </li></ul>

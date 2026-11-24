@@ -65,16 +65,16 @@
         </td></tr></table>
       <p>Redistributors in the same CommonLPIAff group must use the same copy of the LPI Configuration table, and if GICv4.1 is implemented the same copy of the vPE Configuration table.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_8">Processor_Number, bits [23:8]:
-      </h4><div class="field"><p>A unique identifier for the PE. When <a href="ext-gits_typer.html">GITS_TYPER</a>.PTA == 0, an ITS uses this field to identify the interrupt target.</p>
-<p>When affinity routing is disabled for a Security state, this field indicates which <a href="ext-gicd_itargetsrn.html">GICD_ITARGETSR&lt;n&gt;</a> corresponds to this Redistributor.</p>
+      </h4><div class="field"><p>A unique identifier for the PE. When <a href="/latest_sysreg/ext-gits_typer.html">GITS_TYPER</a>.PTA == 0, an ITS uses this field to identify the interrupt target.</p>
+<p>When affinity routing is disabled for a Security state, this field indicates which <a href="/latest_sysreg/ext-gicd_itargetsrn.html">GICD_ITARGETSR&lt;n&gt;</a> corresponds to this Redistributor.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_7-1">RVPEID, bit [7] <span class="condition">when GICv4.1 is implemented</span>:
       </h4><div class="field">
       <p>Indicates how the resident vPE is specified.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>RVPEID</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-gicr_vpendbaser.html">GICR_VPENDBASER</a> records the address of the vPE's Virtual Pending Table.</p>
+          <p><a href="/latest_sysreg/ext-gicr_vpendbaser.html">GICR_VPENDBASER</a> records the address of the vPE's Virtual Pending Table.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-gicr_vpendbaser.html">GICR_VPENDBASER</a> records vPEID.</p>
+          <p><a href="/latest_sysreg/ext-gicr_vpendbaser.html">GICR_VPENDBASER</a> records vPEID.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_7-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -90,11 +90,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-5_5">DPGS, bit [5]:
       </h4><div class="field">
-      <p>Sets support for <a href="ext-gicr_ctlr.html">GICR_CTLR</a>.DPG* bits.</p>
+      <p>Sets support for <a href="/latest_sysreg/ext-gicr_ctlr.html">GICR_CTLR</a>.DPG* bits.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>DPGS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-gicr_ctlr.html">GICR_CTLR</a>.DPG* bits are not supported.</p>
+          <p><a href="/latest_sysreg/ext-gicr_ctlr.html">GICR_CTLR</a>.DPG* bits are not supported.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-gicr_ctlr.html">GICR_CTLR</a>.DPG* bits are supported.</p>
+          <p><a href="/latest_sysreg/ext-gicr_ctlr.html">GICR_CTLR</a>.DPG* bits are supported.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-4_4">Last, bit [4]:
       </h4><div class="field">
       <p>Indicates whether this Redistributor is the highest-numbered Redistributor in a series of contiguous Redistributor pages.</p>
@@ -106,16 +106,16 @@
       </h4><div class="field">
       <p>Indicates whether this Redistributor supports direct injection of LPIs.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>DirectLPI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>This Redistributor does not support direct injection of LPIs. The <a href="ext-gicr_setlpir.html">GICR_SETLPIR</a>, <a href="ext-gicr_clrlpir.html">GICR_CLRLPIR</a>, <a href="ext-gicr_invlpir.html">GICR_INVLPIR</a>, <a href="ext-gicr_invallr.html">GICR_INVALLR</a>, and <a href="ext-gicr_syncr.html">GICR_SYNCR</a> registers are either not implemented, or have an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
+          <p>This Redistributor does not support direct injection of LPIs. The <a href="/latest_sysreg/ext-gicr_setlpir.html">GICR_SETLPIR</a>, <a href="/latest_sysreg/ext-gicr_clrlpir.html">GICR_CLRLPIR</a>, <a href="/latest_sysreg/ext-gicr_invlpir.html">GICR_INVLPIR</a>, <a href="/latest_sysreg/ext-gicr_invallr.html">GICR_INVALLR</a>, and <a href="/latest_sysreg/ext-gicr_syncr.html">GICR_SYNCR</a> registers are either not implemented, or have an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>This Redistributor supports direct injection of LPIs. The <a href="ext-gicr_setlpir.html">GICR_SETLPIR</a>, <a href="ext-gicr_clrlpir.html">GICR_CLRLPIR</a>, <a href="ext-gicr_invlpir.html">GICR_INVLPIR</a>, <a href="ext-gicr_invallr.html">GICR_INVALLR</a>, and <a href="ext-gicr_syncr.html">GICR_SYNCR</a> registers are implemented.</p>
+          <p>This Redistributor supports direct injection of LPIs. The <a href="/latest_sysreg/ext-gicr_setlpir.html">GICR_SETLPIR</a>, <a href="/latest_sysreg/ext-gicr_clrlpir.html">GICR_CLRLPIR</a>, <a href="/latest_sysreg/ext-gicr_invlpir.html">GICR_INVLPIR</a>, <a href="/latest_sysreg/ext-gicr_invallr.html">GICR_INVALLR</a>, and <a href="/latest_sysreg/ext-gicr_syncr.html">GICR_SYNCR</a> registers are implemented.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-2_2">Dirty, bit [2]:
       </h4><div class="field">
-      <p>Controls the functionality of <a href="ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Dirty.</p>
+      <p>Controls the functionality of <a href="/latest_sysreg/ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Dirty.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>Dirty</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Dirty is <span class="arm-defined-word">UNKNOWN</span> when <a href="ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Valid == 1.</p>
+          <p><a href="/latest_sysreg/ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Dirty is <span class="arm-defined-word">UNKNOWN</span> when <a href="/latest_sysreg/ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Valid == 1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Dirty indicates when the Virtual Pending Table has been parsed when <a href="ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Valid is written from 0 to 1.</p>
+          <p><a href="/latest_sysreg/ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Dirty indicates when the Virtual Pending Table has been parsed when <a href="/latest_sysreg/ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Valid is written from 0 to 1.</p>
         </td></tr></table><p>When GICR_TYPER.VLPIS == 0, this field is <span class="arm-defined-word">RES0</span>.</p>
 <div class="note"><p>In GICv4p1 implementations this field is <span class="arm-defined-word">RES1</span>.</p></div><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-1_1-1">VLPIS, bit [1] <span class="condition">when GICv4 is implemented</span>:
       </h4><div class="field">

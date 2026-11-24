@@ -19,7 +19,7 @@
       
         <div class="note"><p>The value of &lt;n&gt; in an instance of CNTVOFF&lt;n&gt; specifies the value of N for the associated CNTBaseN frame.</p></div>
       
-        <p>In a system that supports the Realm Management Extension, <a href="ext-cntnsar.html">CNTNSAR</a>.NS&lt;n&gt; describes how these registers can be accessed by Root or Realm accesses.</p>
+        <p>In a system that supports the Realm Management Extension, <a href="/latest_sysreg/ext-cntnsar.html">CNTNSAR</a>.NS&lt;n&gt; describes how these registers can be accessed by Root or Realm accesses.</p>
 
       
         <p>In a system that recognizes two Security states, for any CNTVOFF&lt;n&gt; register in the CNTCTLBase frame:</p>
@@ -27,14 +27,14 @@
       
         <ul>
 <li>CNTVOFF&lt;n&gt; is always accessible by Secure accesses.
-</li><li><a href="ext-cntnsar.html">CNTNSAR</a>.NS&lt;n&gt; determines whether CNTVOFF&lt;n&gt; is accessible by Non-secure accesses.
+</li><li><a href="/latest_sysreg/ext-cntnsar.html">CNTNSAR</a>.NS&lt;n&gt; determines whether CNTVOFF&lt;n&gt; is accessible by Non-secure accesses.
 </li></ul>
 
       
         <p>The register location of any unimplemented CNTVOFF&lt;n&gt; register in the CNTCTLBase frame is RAZ/WI.</p>
 
       
-        <p>The CNTVOFF&lt;n&gt; register is accessible in the CNTBaseN frame using <a href="ext-cntvoff.html">CNTVOFF</a>.</p>
+        <p>The CNTVOFF&lt;n&gt; register is accessible in the CNTBaseN frame using <a href="/latest_sysreg/ext-cntvoff.html">CNTVOFF</a>.</p>
 
       
         <p>In an implementation that supports 64-bit atomic accesses, then the CNTVOFF&lt;n&gt; registers must be accessible as atomic 64-bit values.</p>

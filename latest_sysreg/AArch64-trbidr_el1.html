@@ -3,7 +3,7 @@
 <title>TRBIDR_EL1 | Jon's Arm Reference</title><meta name="description" content="Describes constraints on using the Trace Buffer Unit to software, including whether the Trace Buffer Unit can be programmed at the current Exception level."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">TRBIDR_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">Trace Buffer ID Register</p><div data-pagefind-body="1">
         <p>Describes constraints on using the Trace Buffer Unit to software, including whether the Trace Buffer Unit can be programmed at the current Exception level.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register TRBIDR_EL1 bits [63:0] are architecturally mapped to External register <a href="ext-trbidr_el1.html">TRBIDR_EL1[63:0]</a> when FEAT_TRBE_EXT is implemented.</p><p>This register is present only when FEAT_TRBE is implemented. Otherwise, direct accesses to TRBIDR_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch64 System register TRBIDR_EL1 bits [63:0] are architecturally mapped to External register <a href="/latest_sysreg/ext-trbidr_el1.html">TRBIDR_EL1[63:0]</a> when FEAT_TRBE_EXT is implemented.</p><p>This register is present only when FEAT_TRBE is implemented. Otherwise, direct accesses to TRBIDR_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>TRBIDR_EL1 is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_0-63_48">RES0</a></td><td class="lr" colspan="16"><a href="#fieldset_0-47_32">MaxBuffSize</a></td></tr><tr class="firstrow"><td class="lr" colspan="12"><a href="#fieldset_0-31_20">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_0-19_16-1">MPAM2</a></td><td class="lr" colspan="4"><a href="#fieldset_0-15_12-1">MPAM</a></td><td class="lr" colspan="4"><a href="#fieldset_0-11_8">EA</a></td><td class="lr" colspan="2"><a href="#fieldset_0-7_6">AddrMode</a></td><td class="lr" colspan="1"><a href="#fieldset_0-5_5">F</a></td><td class="lr" colspan="1"><a href="#fieldset_0-4_4">P</a></td><td class="lr" colspan="4"><a href="#fieldset_0-3_0">Align</a></td></tr></tbody></table><h4 id="fieldset_0-63_48">Bits [63:48]:
       </h4><div class="field">
@@ -64,7 +64,7 @@
         </td></tr><tr><td class="bitfield">0b10</td><td>
           <p>Reserved for software use under virtualization, to show that only physical address mode is supported.</p>
         </td></tr></table><p>Other values are reserved.</p>
-<p>If the Effective value of <a href="AArch64-trfcr_el2.html">TRFCR_EL2</a>.DnVM is 1 and the value returned for TRBIDR_EL1.P is 0, then this field reads as <span class="binarynumber">0b01</span>. Otherwise, this field reads as <span class="binarynumber">0b00</span>.</p>
+<p>If the Effective value of <a href="/latest_sysreg/AArch64-trfcr_el2.html">TRFCR_EL2</a>.DnVM is 1 and the value returned for TRBIDR_EL1.P is 0, then this field reads as <span class="binarynumber">0b01</span>. Otherwise, this field reads as <span class="binarynumber">0b00</span>.</p>
 <div class="note"><p>A hypervisor might trap accesses to this register to describe limitations of its virtualization support to a guest operating system.</p></div></div><h4 id="fieldset_0-5_5">F, bit [5]:
       </h4><div class="field">
       <p>Flag updates. Describes how address translations performed by the Trace Buffer Unit manage the Access flag and dirty state.</p>
@@ -86,34 +86,34 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Programming not allowed.</p>
         </td></tr></table><p>The value read from this field depends on the current Exception level and the Effective values of 
-<a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTB, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTBE, and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB:</p>
+<a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTB, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTBE, and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB:</p>
 <ul>
-<li>If EL3 is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTB is <span class="binarynumber">0b0x</span>, and either <span class="xref">FEAT_RME</span> is not implemented, or Secure state is implemented and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTBE is 0, then this field reads as one from:<ul>
+<li>If EL3 is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTB is <span class="binarynumber">0b0x</span>, and either <span class="xref">FEAT_RME</span> is not implemented, or Secure state is implemented and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTBE is 0, then this field reads as one from:<ul>
 <li>Non-secure EL1 and Non-secure EL2.
 </li><li>If <span class="xref">FEAT_RME</span> is implemented, Realm EL1 and Realm EL2.
-</li><li>If Secure EL2 is implemented and enabled, and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB is <span class="binarynumber">0b00</span>, Secure EL1.
+</li><li>If Secure EL2 is implemented and enabled, and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB is <span class="binarynumber">0b00</span>, Secure EL1.
 </li></ul>
 
-</li><li>If EL3 is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTB is <span class="binarynumber">0b1x</span> and either <span class="xref">FEAT_RME</span> is not implemented or <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTBE is 0, then this field reads as one from:<ul>
+</li><li>If EL3 is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTB is <span class="binarynumber">0b1x</span> and either <span class="xref">FEAT_RME</span> is not implemented or <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSTBE is 0, then this field reads as one from:<ul>
 <li>If Secure state is implemented, Secure EL1.
 </li><li>If Secure EL2 is implemented, Secure EL2.
-</li><li>If EL2 is implemented and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB is <span class="binarynumber">0b00</span>, Non-secure EL1.
+</li><li>If EL2 is implemented and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB is <span class="binarynumber">0b00</span>, Non-secure EL1.
 </li><li>If <span class="xref">FEAT_RME</span> is implemented, Realm EL1 and Realm EL2.
 </li></ul>
 
-</li><li>If <span class="xref">FEAT_RME</span> is implemented, and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{NSTB, NSTBE} is {<span class="binarynumber">0b1x</span>, 1}, then this field reads as one from:<ul>
+</li><li>If <span class="xref">FEAT_RME</span> is implemented, and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{NSTB, NSTBE} is {<span class="binarynumber">0b1x</span>, 1}, then this field reads as one from:<ul>
 <li>Non-secure EL1 and Non-secure EL2.
 </li><li>If Secure state is implemented, Secure EL1 and Secure EL2.
-</li><li>If <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB is <span class="binarynumber">0b00</span>, Realm EL1.
+</li><li>If <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB is <span class="binarynumber">0b00</span>, Realm EL1.
 </li></ul>
 
-</li><li>If EL3 is not implemented, EL2 is implemented, and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB is <span class="binarynumber">0b00</span>, then this field reads as one from EL1.
+</li><li>If EL3 is not implemented, EL2 is implemented, and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2TB is <span class="binarynumber">0b00</span>, then this field reads as one from EL1.
 </li></ul>
-<p>If EL3 is implemented and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{NSTB, NSTBE} has a reserved combination of values, then this field reads as an <span class="arm-defined-word">UNKNOWN</span> value from EL2 and EL1.</p>
+<p>If EL3 is implemented and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{NSTB, NSTBE} has a reserved combination of values, then this field reads as an <span class="arm-defined-word">UNKNOWN</span> value from EL2 and EL1.</p>
 <p>If EL2 is implemented and enabled in the current Security state, and MDCR_EL2.E2TB has a reserved value, then this field reads as an <span class="arm-defined-word">UNKNOWN</span> value from EL1.</p>
 <p>Otherwise, this field reads as zero.</p></div><h4 id="fieldset_0-3_0">Align, bits [3:0]:
       </h4><div class="field">
-      <p>Defines the minimum alignment constraint for writes to <a href="AArch64-trbptr_el1.html">TRBPTR_EL1</a> and <a href="AArch64-trbtrg_el1.html">TRBTRG_EL1</a>.</p>
+      <p>Defines the minimum alignment constraint for writes to <a href="/latest_sysreg/AArch64-trbptr_el1.html">TRBPTR_EL1</a> and <a href="/latest_sysreg/AArch64-trbtrg_el1.html">TRBTRG_EL1</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>Align</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>Byte.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>

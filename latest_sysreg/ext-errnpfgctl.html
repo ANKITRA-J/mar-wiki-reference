@@ -4,10 +4,10 @@
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ERR&lt;n&gt;PFGCTL, n = 0 - 65534</h1><p class="insn_subtitle" data-pagefind-body="1">Error Record &lt;n&gt; Pseudo-fault Generation Control Register</p><div data-pagefind-body="1">
         <p>Enables controlled fault generation.</p>
       </div><h3>Configuration</h3><p>This register is present only when error record n is implemented, the node that owns error record n implements the Common Fault Injection Model Extension, and error record n is the first error record in the node. Otherwise, direct accesses to ERR&lt;n&gt;PFGCTL are <span class="arm-defined-word">RES0</span>.</p>
-        <p><a href="ext-errnpfgf.html">ERR&lt;n&gt;PFGF</a> describes the Common Fault Injection features implemented by the node.</p>
+        <p><a href="/latest_sysreg/ext-errnpfgf.html">ERR&lt;n&gt;PFGF</a> describes the Common Fault Injection features implemented by the node.</p>
 
       
-        <p><a href="ext-errnfr.html">ERR&lt;n&gt;FR</a> describes the features implemented by the node.</p>
+        <p><a href="/latest_sysreg/ext-errnfr.html">ERR&lt;n&gt;FR</a> describes the features implemented by the node.</p>
       <h3>Attributes</h3>
         <p>ERR&lt;n&gt;PFGCTL is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-63_32">RES0</a></td></tr><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-31_31">CDNEN</a></td><td class="lr" colspan="1"><a href="#fieldset_0-30_30-1">R</a></td><td class="lr" colspan="17"><a href="#fieldset_0-29_13">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-12_12-1">MV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-11_11-1">AV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-10_10-1">PN</a></td><td class="lr" colspan="1"><a href="#fieldset_0-9_9-1">ER</a></td><td class="lr" colspan="1"><a href="#fieldset_0-8_8-1">CI</a></td><td class="lr" colspan="2"><a href="#fieldset_0-7_6-1">CE</a></td><td class="lr" colspan="1"><a href="#fieldset_0-5_5-1">DE</a></td><td class="lr" colspan="1"><a href="#fieldset_0-4_4-1">UEO</a></td><td class="lr" colspan="1"><a href="#fieldset_0-3_3-1">UER</a></td><td class="lr" colspan="1"><a href="#fieldset_0-2_2-1">UEU</a></td><td class="lr" colspan="1"><a href="#fieldset_0-1_1-1">UC</a></td><td class="lr" colspan="1"><a href="#fieldset_0-0_0-1">OF</a></td></tr></tbody></table><h4 id="fieldset_0-63_32">Bits [63:32]:
@@ -15,11 +15,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-31_31">CDNEN, bit [31]:
       </h4><div class="field">
-      <p>Countdown Enable. Controls transfers of the value held in <a href="ext-errnpfgcdn.html">ERR&lt;n&gt;PFGCDN</a> to the Error Generation Counter and enables this counter.</p>
+      <p>Countdown Enable. Controls transfers of the value held in <a href="/latest_sysreg/ext-errnpfgcdn.html">ERR&lt;n&gt;PFGCDN</a> to the Error Generation Counter and enables this counter.</p>
     <table class="valuetable"><tr><th>CDNEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>The Error Generation Counter is disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The Error Generation Counter is enabled. On a write of 1 to this field, the Error Generation Counter is set to <a href="ext-errnpfgcdn.html">ERR&lt;n&gt;PFGCDN</a>.CDN.</p>
+          <p>The Error Generation Counter is enabled. On a write of 1 to this field, the Error Generation Counter is set to <a href="/latest_sysreg/ext-errnpfgcdn.html">ERR&lt;n&gt;PFGCDN</a>.CDN.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -29,7 +29,7 @@
     <table class="valuetable"><tr><th>R</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>On reaching zero, the Error Generation Counter will stop counting.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>On reaching zero, the Error Generation Counter is set to <a href="ext-errnpfgcdn.html">ERR&lt;n&gt;PFGCDN</a>.CDN.</p>
+          <p>On reaching zero, the Error Generation Counter is set to <a href="/latest_sysreg/ext-errnpfgcdn.html">ERR&lt;n&gt;PFGCDN</a>.CDN.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-30_30-2"> <span class="condition">Otherwise</span>:
@@ -40,11 +40,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-12_12-1">MV, bit [12] <span class="condition">when ERR&lt;n&gt;PFGF.MV == '1'</span>:
       </h4><div class="field">
-      <p>Miscellaneous syndrome. The value written to <a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.MV when an injected error is recorded.</p>
+      <p>Miscellaneous syndrome. The value written to <a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.MV when an injected error is recorded.</p>
     <table class="valuetable"><tr><th>MV</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.MV is set to 0 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.MV is set to 0 when an injected error is recorded.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.MV is set to 1 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.MV is set to 1 when an injected error is recorded.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On an Error recovery reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>When the node always sets ERR&lt;n&gt;STATUS.MV to 1 when an injected error is recorded, access to this field is <span class="access_level">RAO/WI</span>.</p></div><h4 id="fieldset_0-12_12-2"> <span class="condition">when the node always sets ERR&lt;n&gt;STATUS.MV to 1 when an injected error is recorded and this field is RAO/WI</span>:
@@ -55,11 +55,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-11_11-1">AV, bit [11] <span class="condition">when ERR&lt;n&gt;PFGF.AV == '1'</span>:
       </h4><div class="field">
-      <p>Address syndrome. The value written to <a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.AV when an injected error is recorded.</p>
+      <p>Address syndrome. The value written to <a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.AV when an injected error is recorded.</p>
     <table class="valuetable"><tr><th>AV</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.AV is set to 0 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.AV is set to 0 when an injected error is recorded.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.AV is set to 1 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.AV is set to 1 when an injected error is recorded.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On an Error recovery reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>When the node always sets ERR&lt;n&gt;STATUS.AV to 1 when an injected error is recorded, access to this field is <span class="access_level">RAO/WI</span>.</p></div><h4 id="fieldset_0-11_11-2"> <span class="condition">when the node always sets ERR&lt;n&gt;STATUS.AV to 1 when an injected error is recorded and this field is RAO/WI</span>:
@@ -70,11 +70,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-10_10-1">PN, bit [10] <span class="condition">when ERR&lt;n&gt;PFGF.PN == '1'</span>:
       </h4><div class="field">
-      <p>Poison flag. The value written to <a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.PN when an injected error is recorded.</p>
+      <p>Poison flag. The value written to <a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.PN when an injected error is recorded.</p>
     <table class="valuetable"><tr><th>PN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.PN is set to 0 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.PN is set to 0 when an injected error is recorded.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.PN is set to 1 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.PN is set to 1 when an injected error is recorded.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-10_10-2"> <span class="condition">Otherwise</span>:
@@ -82,11 +82,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-9_9-1">ER, bit [9] <span class="condition">when ERR&lt;n&gt;PFGF.ER == '1'</span>:
       </h4><div class="field">
-      <p>Error Reported flag. The value written to <a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.ER when an injected error is recorded.</p>
+      <p>Error Reported flag. The value written to <a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.ER when an injected error is recorded.</p>
     <table class="valuetable"><tr><th>ER</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.ER is set to 0 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.ER is set to 0 when an injected error is recorded.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.ER is set to 1 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.ER is set to 1 when an injected error is recorded.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-9_9-2"> <span class="condition">Otherwise</span>:
@@ -94,11 +94,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-8_8-1">CI, bit [8] <span class="condition">when ERR&lt;n&gt;PFGF.CI == '1'</span>:
       </h4><div class="field">
-      <p>Critical Error flag. The value written to <a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CI when an injected error is recorded.</p>
+      <p>Critical Error flag. The value written to <a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CI when an injected error is recorded.</p>
     <table class="valuetable"><tr><th>CI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CI is set to 0 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CI is set to 0 when an injected error is recorded.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CI is set to 1 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CI is set to 1 when an injected error is recorded.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-8_8-2"> <span class="condition">Otherwise</span>:
@@ -110,12 +110,12 @@
     <table class="valuetable"><tr><th>CE</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>An injected Corrected error will not be generated by the fault injection feature of the node.</p>
         </td><td></td></tr><tr><td class="bitfield">0b01</td><td>
-          <p>An injected non-specific Corrected error is generated in the fault injection state. <a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CE is set to <span class="binarynumber">0b10</span> when the injected error is recorded.</p>
+          <p>An injected non-specific Corrected error is generated in the fault injection state. <a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CE is set to <span class="binarynumber">0b10</span> when the injected error is recorded.</p>
         </td><td>When ERR&lt;n&gt;PFGF.CE == '01'</td></tr><tr><td class="bitfield">0b10</td><td>
-          <p>An injected transient Corrected error is generated in the fault injection state. <a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CE is set to <span class="binarynumber">0b01</span> when the injected error is recorded.</p>
+          <p>An injected transient Corrected error is generated in the fault injection state. <a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CE is set to <span class="binarynumber">0b01</span> when the injected error is recorded.</p>
         </td><td>When ERR&lt;n&gt;PFGF.CE == '11'</td></tr><tr><td class="bitfield">0b11</td><td>
-          <p>An injected persistent Corrected error is generated in the fault injection state. <a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CE is set to <span class="binarynumber">0b11</span> when the injected error is recorded.</p>
-        </td><td>When ERR&lt;n&gt;PFGF.CE == '11'</td></tr></table><p>The set of permitted values for this field is defined by <a href="ext-errnpfgf.html">ERR&lt;n&gt;PFGF</a>.CE.</p>
+          <p>An injected persistent Corrected error is generated in the fault injection state. <a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.CE is set to <span class="binarynumber">0b11</span> when the injected error is recorded.</p>
+        </td><td>When ERR&lt;n&gt;PFGF.CE == '11'</td></tr></table><p>The set of permitted values for this field is defined by <a href="/latest_sysreg/ext-errnpfgf.html">ERR&lt;n&gt;PFGF</a>.CE.</p>
 <p>The node enters the fault injection state when the Error Generation Counter decrements to zero. It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether the injected error is generated when the error is generated on an access to the component in the fault injection state and the data is not consumed.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-7_6-2"> <span class="condition">Otherwise</span>:
@@ -193,11 +193,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-0_0-1">OF, bit [0] <span class="condition">when ERR&lt;n&gt;PFGF.OF == '1'</span>:
       </h4><div class="field">
-      <p>Overflow flag. The value written to <a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.OF when an injected error is recorded.</p>
+      <p>Overflow flag. The value written to <a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.OF when an injected error is recorded.</p>
     <table class="valuetable"><tr><th>OF</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.OF is set to 0 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.OF is set to 0 when an injected error is recorded.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.OF is set to 1 when an injected error is recorded.</p>
+          <p><a href="/latest_sysreg/ext-errnstatus.html">ERR&lt;n&gt;STATUS</a>.OF is set to 1 when an injected error is recorded.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-0_0-2"> <span class="condition">Otherwise</span>:

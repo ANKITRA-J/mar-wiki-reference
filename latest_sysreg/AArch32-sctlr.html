@@ -3,7 +3,7 @@
 <title>SCTLR | Jon's Arm Reference</title><meta name="description" content="Provides the top-level control of the system, including its memory system."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">SCTLR</h1><p class="insn_subtitle" data-pagefind-body="1">System Control Register</p><div data-pagefind-body="1">
         <p>Provides the top-level control of the system, including its memory system.</p>
-      </div><h3>Configuration</h3><p>This register is banked between SCTLR and SCTLR_S and SCTLR_NS.<br></br></p><p>AArch32 System register SCTLR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-sctlr_el1.html">SCTLR_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to SCTLR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>This register is banked between SCTLR and SCTLR_S and SCTLR_NS.<br></br></p><p>AArch32 System register SCTLR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to SCTLR are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>Some bits in the register are read-only. These bits relate to non-configurable features of an implementation, and are provided for compatibility with previous versions of the architecture.</p>
       <h3>Attributes</h3>
         <p>SCTLR is a 32-bit register.</p>
@@ -60,7 +60,7 @@
           <p>TEX remap disabled. TEX[2:0] are used, with the C and B bits, to describe the memory region attributes.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>TEX remap enabled. TEX[2:1] are reassigned for use as bits managed by the operating system. The TEX[0], C, and B bits are used to describe the memory region attributes, with the MMU remap registers.</p>
-        </td></tr></table><p>When the value of <a href="AArch32-ttbcr.html">TTBCR</a>.EAE is 1, this bit is <span class="arm-defined-word">RES1</span>.</p>
+        </td></tr></table><p>When the value of <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE is 1, this bit is <span class="arm-defined-word">RES1</span>.</p>
 <p>The TRE bit is permitted to be cached in a TLB.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -156,7 +156,7 @@
       </h4><div class="field">
       <p>Vectors bit. This bit selects the base address of the exception vectors for exceptions taken to a PE mode other than Monitor mode or Hyp mode:</p>
     <table class="valuetable"><tr><th>V</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Normal exception vectors. Base address is held in <a href="AArch32-vbar.html">VBAR</a>.</p>
+          <p>Normal exception vectors. Base address is held in <a href="/latest_sysreg/AArch32-vbar.html">VBAR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>High exception vectors (Hivecs), base address <span class="hexnumber">0xFFFF0000</span>. This base address cannot be remapped.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -168,8 +168,8 @@
 <p>If the value of SCTLR.M is 0, instruction accesses from stage 1 of the PL1&amp;0 translation regime are to Normal, Outer Shareable, Inner Non-cacheable, Outer Non-cacheable memory.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>All instruction access to Normal memory from PL1 and PL0 can be cached at all levels of instruction and unified cache.</p>
 <p>If the value of SCTLR.M is 0, instruction accesses from stage 1 of the PL1&amp;0 translation regime are to Normal, Outer Shareable, Inner Write-Through, Outer Write-Through memory.</p></td></tr></table><p>Instruction accesses to Normal memory from EL1 and EL0 are Cacheable regardless of the value of the SCTLR.I bit if either:</p>
 <ul>
-<li>EL2 is using AArch32 and the value of <a href="AArch32-hcr.html">HCR</a>.DC is 1.
-</li><li>EL2 is using AArch64 and the value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.DC is 1.
+<li>EL2 is using AArch32 and the value of <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.DC is 1.
+</li><li>EL2 is using AArch64 and the value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.DC is 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -179,10 +179,10 @@
     </div><h4 id="fieldset_0-10_10-1">EnRCTX, bit [10] <span class="condition">when FEAT_SPECRES is implemented</span>:
       </h4><div class="field"><p>Enable EL0 access to the following System instructions:</p>
 <ul>
-<li><a href="AArch32-cfprctx.html">CFPRCTX</a>.
-</li><li><a href="AArch32-dvprctx.html">DVPRCTX</a>.
-</li><li><a href="AArch32-cpprctx.html">CPPRCTX</a>.
-</li><li>If FEAT_SPECRES2 is implemented, <a href="AArch32-cosprctx.html">COSPRCTX</a>.
+<li><a href="/latest_sysreg/AArch32-cfprctx.html">CFPRCTX</a>.
+</li><li><a href="/latest_sysreg/AArch32-dvprctx.html">DVPRCTX</a>.
+</li><li><a href="/latest_sysreg/AArch32-cpprctx.html">CPPRCTX</a>.
+</li><li>If FEAT_SPECRES2 is implemented, <a href="/latest_sysreg/AArch32-cosprctx.html">COSPRCTX</a>.
 </li></ul><table class="valuetable"><tr><th>EnRCTX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL0 access to these instructions is disabled, and these instructions are trapped to EL1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -237,7 +237,7 @@
 </li></ul>
 <p>This means that, for the situations that are <span class="arm-defined-word">UNDEFINED</span>, either the second 16-bit instruction or the 32-bit instruction is <span class="arm-defined-word">UNDEFINED</span>.</p>
 <p>An implementation might vary dynamically as to whether IT is treated as a 16-bit instruction or the first half of a 32-bit instruction.</p></td></tr></table><p>If an instruction in an active IT block that would be disabled by this field sets this field to 1, then behavior is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>. For more information see <span class="xref">'Changes to an ITD control by an instruction in an IT block'</span>.</p>
-<p>ITD is optional, but if it is implemented in the SCTLR, then it must also be implemented in the <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>, and <a href="AArch32-hsctlr.html">HSCTLR</a>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>ITD is optional, but if it is implemented in the SCTLR, then it must also be implemented in the <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>, and <a href="/latest_sysreg/AArch32-hsctlr.html">HSCTLR</a>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul><p>When an implementation does not implement ITD, access to this field is <span class="access_level">RAZ/WI</span>.</p></div><h4 id="fieldset_0-6_6">UNK, bit [6]:
@@ -249,11 +249,11 @@
       </h4><div class="field">
       <p>System instruction memory barrier enable. Enables accesses to the DMB, DSB, and ISB System instructions in the (coproc==<span class="binarynumber">0b1111</span>) encoding space from PL1 and PL0:</p>
     <table class="valuetable"><tr><th>CP15BEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>PL0 and PL1 execution of the <a href="AArch32-cp15dmb.html">CP15DMB</a>, <a href="AArch32-cp15dsb.html">CP15DSB</a>, and <a href="AArch32-cp15isb.html">CP15ISB</a> instructions is <span class="arm-defined-word">UNDEFINED</span>.</p>
+          <p>PL0 and PL1 execution of the <a href="/latest_sysreg/AArch32-cp15dmb.html">CP15DMB</a>, <a href="/latest_sysreg/AArch32-cp15dsb.html">CP15DSB</a>, and <a href="/latest_sysreg/AArch32-cp15isb.html">CP15ISB</a> instructions is <span class="arm-defined-word">UNDEFINED</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>PL0 and PL1 execution of the <a href="AArch32-cp15dmb.html">CP15DMB</a>, <a href="AArch32-cp15dsb.html">CP15DSB</a>, and <a href="AArch32-cp15isb.html">CP15ISB</a> instructions is enabled.</p>
+          <p>PL0 and PL1 execution of the <a href="/latest_sysreg/AArch32-cp15dmb.html">CP15DMB</a>, <a href="/latest_sysreg/AArch32-cp15dsb.html">CP15DSB</a>, and <a href="/latest_sysreg/AArch32-cp15isb.html">CP15ISB</a> instructions is enabled.</p>
         </td></tr></table>
-      <p>CP15BEN is optional, but if it is implemented in the SCTLR, then it must also be implemented in the <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>, and <a href="AArch32-hsctlr.html">HSCTLR</a>.</p>
+      <p>CP15BEN is optional, but if it is implemented in the SCTLR, then it must also be implemented in the <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>, and <a href="/latest_sysreg/AArch32-hsctlr.html">HSCTLR</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'1'</span>.
@@ -296,8 +296,8 @@
           <p>All data access to Normal memory from PL1 and PL0, and all accesses to the PL1&amp;0 stage 1 translation tables, can be cached at all levels of data and unified cache.</p>
         </td></tr></table><p>The PE ignores SCTLR.C, and data accesses to Normal memory from EL1 and EL0 are Cacheable, if either:</p>
 <ul>
-<li>EL2 is using AArch32 and the value of <a href="AArch32-hcr.html">HCR</a>.DC is 1.
-</li><li>EL2 is using AArch64 and the value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.DC is 1.
+<li>EL2 is using AArch32 and the value of <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.DC is 1.
+</li><li>EL2 is using AArch64 and the value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.DC is 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -319,8 +319,8 @@
           <p>EL1 and EL0 stage 1 address translation enabled.</p>
         </td></tr></table><p>The PE behaves as if the value of the SCTLR.M field is 0 for all purposes other than returning the value of a direct read of the field if either:</p>
 <ul>
-<li>EL2 is using AArch32 and the value of <a href="AArch32-hcr.html">HCR</a>.{DC, TGE} is not {0, 0}.
-</li><li>EL2 is using AArch64 and the value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{DC, TGE} is not {0, 0}.
+<li>EL2 is using AArch32 and the value of <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{DC, TGE} is not {0, 0}.
+</li><li>EL2 is using AArch64 and the value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{DC, TGE} is not {0, 0}.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.

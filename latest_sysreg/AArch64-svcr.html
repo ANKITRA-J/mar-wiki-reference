@@ -18,7 +18,7 @@ invalid and not accessible.</p>
 <p>This control causes execution at any Exception level of instructions that can access this storage to be trapped.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>SME ZA storage and, if implemented, ZT0 storage are
 valid and accessible.</p>
 <p>This control does not cause execution of any instructions to be trapped.</p></td></tr></table><p>When a write to SVCR.ZA changes the value of PSTATE.ZA from 0 to 1, all implemented bits of the storage are set to zero.</p>
-<p>Changes to this field do not have an effect on the SVE vector and predicate registers and <a href="AArch64-fpsr.html">FPSR</a>.</p>
+<p>Changes to this field do not have an effect on the SVE vector and predicate registers and <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.</p>
 <p>A direct or indirect read of ZA appears to occur in program order relative to a direct write of SVCR, and to <span class="instruction">MSR SVCRZA</span> and <span class="instruction">MSR SVCRSMZA</span> instructions, without the need for explicit synchronization.</p>
 <p>The reset behavior of this field is:</p>
 <ul>
@@ -36,8 +36,8 @@ valid and accessible.</p>
 <li>When changed from 0 to 1, an entry to Streaming SVE mode is performed.
 </li><li>When changed from 1 to 0, an exit from Streaming SVE mode is performed.
 </li><li>All implemented bits of the SVE registers Z0-Z31, P0-P15, and FFR in the new mode are set to zero.
-</li><li>All bits in <a href="AArch64-fpmr.html">FPMR</a> are set to zero.
-</li><li><a href="AArch64-fpsr.html">FPSR</a> in the new mode is set to 0x0000_0000_0800_009f, in which all cumulative status bits are set to 1.
+</li><li>All bits in <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> are set to zero.
+</li><li><a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a> in the new mode is set to 0x0000_0000_0800_009f, in which all cumulative status bits are set to 1.
 </li></ul>
 <p>Changes to this field do not have an effect on SME ZA 
 storage or, if implemented, ZT0 

@@ -3,7 +3,7 @@
 <title>CNTHPS_CTL | Jon's Arm Reference</title><meta name="description" content="Provides AArch32 access from EL0 to the Secure EL2 physical timer."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">CNTHPS_CTL</h1><p class="insn_subtitle" data-pagefind-body="1">Counter-timer Secure Physical Timer Control Register (EL2)</p><div data-pagefind-body="1">
         <p>Provides AArch32 access from EL0 to the Secure EL2 physical timer.</p>
-      </div><h3>Configuration</h3><p>This register is banked between CNTHPS_CTL and CNTHPS_CTL_S and CNTHPS_CTL_NS.<br></br></p><p>AArch32 System register CNTHPS_CTL bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-cnthps_ctl_el2.html">CNTHPS_CTL_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32 is implemented and FEAT_SEL2 is implemented. Otherwise, direct accesses to CNTHPS_CTL are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>This register is banked between CNTHPS_CTL and CNTHPS_CTL_S and CNTHPS_CTL_NS.<br></br></p><p>AArch32 System register CNTHPS_CTL bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-cnthps_ctl_el2.html">CNTHPS_CTL_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32 is implemented and FEAT_SEL2 is implemented. Otherwise, direct accesses to CNTHPS_CTL are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>CNTHPS_CTL is a 32-bit register.</p>
 
       
@@ -46,11 +46,11 @@
           <p>Timer disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Timer enabled.</p>
-        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="AArch32-cnthps_tval.html">CNTHPS_TVAL</a> continues to count down.</p>
+        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="/latest_sysreg/AArch32-cnthps_tval.html">CNTHPS_TVAL</a> continues to count down.</p>
 <div class="note"><p>Disabling the output signal might be a power-saving option.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>This register is accessed using the encoding for <a href="AArch32-cntp_ctl.html">CNTP_CTL</a>.</p>
+        <p>This register is accessed using the encoding for <a href="/latest_sysreg/AArch32-cntp_ctl.html">CNTP_CTL</a>.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRC{&lt;c&gt;}{&lt;q&gt;} &lt;coproc&gt;, {#}&lt;opc1&gt;, &lt;Rt&gt;, &lt;CRn&gt;, &lt;CRm&gt;{, {#}&lt;opc2&gt;}</p></div></div><p style="text-align: right">
       (coproc = 0b1111, opc1 = 0b000, CRn = 0b1110, CRm = 0b0010, opc2 = 0b001)
       </p><p class="pseudocode">

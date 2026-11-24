@@ -14,13 +14,13 @@
       </h4><div class="field">
       <p>Status bit for List register &lt;n&gt;:</p>
     <table class="valuetable"><tr><th>Status&lt;n&gt;</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>, if implemented, contains a valid interrupt. Using this List register can result in overwriting a valid interrupt.</p>
+          <p><a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>, if implemented, contains a valid interrupt. Using this List register can result in overwriting a valid interrupt.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> does not contain a valid interrupt. The List register is empty and can be used without overwriting a valid interrupt or losing an EOI maintenance interrupt.</p>
-        </td></tr></table><p>For any <a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> register, the corresponding status bit is set to 1 if <a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.State is <span class="binarynumber">0b00</span> and either:</p>
+          <p><a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> does not contain a valid interrupt. The List register is empty and can be used without overwriting a valid interrupt or losing an EOI maintenance interrupt.</p>
+        </td></tr></table><p>For any <a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a> register, the corresponding status bit is set to 1 if <a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.State is <span class="binarynumber">0b00</span> and either:</p>
 <ul>
-<li><a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.HW == 1.
-</li><li><a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.EOI == 0.
+<li><a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.HW == 1.
+</li><li><a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.EOI == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to the expression <span class="pseudocode">0x0001</span>.</li></ul></div><h2>Accessing GICH_ELRSR</h2>
@@ -28,8 +28,8 @@
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-ich_elrsr.html">ICH_ELRSR</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-ich_elrsr_el2.html">ICH_ELRSR_EL2</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-ich_elrsr.html">ICH_ELRSR</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-ich_elrsr_el2.html">ICH_ELRSR_EL2</a> provides equivalent functionality.
 </li></ul>
 
       

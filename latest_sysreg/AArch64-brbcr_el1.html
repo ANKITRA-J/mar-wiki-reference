@@ -39,7 +39,7 @@
     <table class="valuetable"><tr><th>FZPSS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Branch recording is not affected by this control.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If either EL2 is not implemented or <a href="AArch64-brbcr_el2.html">BRBCR_EL2</a>.FZPSS is 1, then a BRBE freeze event occurs when a successful Capture event occurs.</p>
+          <p>If either EL2 is not implemented or <a href="/latest_sysreg/AArch64-brbcr_el2.html">BRBCR_EL2</a>.FZPSS is 1, then a BRBE freeze event occurs when a successful Capture event occurs.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-9_9-2"> <span class="condition">Otherwise</span>:
@@ -50,16 +50,16 @@
       <p>Freeze BRBE on PMU overflow.</p>
     <table class="valuetable"><tr><th>FZP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Branch recording is not affected by this control.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>A BRBE freeze event occurs when the PE is in a Non-prohibited region, <a href="AArch64-brbfcr_el1.html">BRBFCR_EL1</a>.PAUSED is 0, and any of the following applies:</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>A BRBE freeze event occurs when the PE is in a Non-prohibited region, <a href="/latest_sysreg/AArch64-brbfcr_el1.html">BRBFCR_EL1</a>.PAUSED is 0, and any of the following applies:</p>
 <ul>
 <li>
-<p>For any event counter <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> in the first range, <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>[m] is 1.</p>
+<p>For any event counter <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> in the first range, <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>[m] is 1.</p>
 
 </li><li>
-<p><span class="xref">FEAT_PMUv3_ICNTR</span> is implemented and <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.F0 is 1.</p>
+<p><span class="xref">FEAT_PMUv3_ICNTR</span> is implemented and <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.F0 is 1.</p>
 
 </li></ul>
-<p>For more information about event counter ranges, see <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, when FEAT_BRBEv1p1 is implemented, 
+<p>For more information about event counter ranges, see <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, when FEAT_BRBEv1p1 is implemented, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li><li>On a Warm reset, when FEAT_BRBEv1p1 is not implemented, 
       this field resets
@@ -73,16 +73,16 @@
       </h4><div class="field">
       <p>Timestamp Control.</p>
     <table class="valuetable"><tr><th>TS</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b01</td><td>
-          <p>Virtual timestamp. The BRBE recorded timestamp is the physical counter value, minus the value of <a href="AArch64-cntvoff_el2.html">CNTVOFF_EL2</a>.</p>
-        </td><td></td></tr><tr><td class="bitfield">0b10</td><td><p>Guest physical timestamp. The BRBE recorded timestamp is the physical counter value minus a physical offset. If any of the following are true, the physical offset is zero, otherwise the physical offset is the value of <a href="AArch64-cntpoff_el2.html">CNTPOFF_EL2</a>:</p>
+          <p>Virtual timestamp. The BRBE recorded timestamp is the physical counter value, minus the value of <a href="/latest_sysreg/AArch64-cntvoff_el2.html">CNTVOFF_EL2</a>.</p>
+        </td><td></td></tr><tr><td class="bitfield">0b10</td><td><p>Guest physical timestamp. The BRBE recorded timestamp is the physical counter value minus a physical offset. If any of the following are true, the physical offset is zero, otherwise the physical offset is the value of <a href="/latest_sysreg/AArch64-cntpoff_el2.html">CNTPOFF_EL2</a>:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.ECVEn == 0.
-</li><li>EL2 is implemented and <a href="AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.ECV == 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.ECVEn == 0.
+</li><li>EL2 is implemented and <a href="/latest_sysreg/AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.ECV == 0.
 </li><li><span class="xref">FEAT_ECV_POFF</span> is not implemented.
 </li></ul></td><td>When FEAT_ECV is implemented</td></tr><tr><td class="bitfield">0b11</td><td>
           <p>Physical timestamp. The BRBE recorded timestamp is the physical counter value.</p>
         </td><td></td></tr></table><p>All other values are reserved.</p>
-<p>This field is ignored by the PE when EL2 is implemented and <a href="AArch64-brbcr_el2.html">BRBCR_EL2</a>.TS != <span class="binarynumber">0b00</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, when FEAT_BRBEv1p1 is implemented, 
+<p>This field is ignored by the PE when EL2 is implemented and <a href="/latest_sysreg/AArch64-brbcr_el2.html">BRBCR_EL2</a>.TS != <span class="binarynumber">0b00</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, when FEAT_BRBEv1p1 is implemented, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li><li>On a Warm reset, when FEAT_BRBEv1p1 is not implemented, 
       this field resets
@@ -130,13 +130,13 @@
           <p>Branch recording enabled at EL0.</p>
         </td></tr></table><p>This field is ignored by the PE when all of the following are true:</p>
 <ul>
-<li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1.
+<li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1.
 </li><li>EL2 is implemented and enabled in the current Security state.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name BRBCR_EL1 or BRBCR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name BRBCR_EL1 or BRBCR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, BRBCR_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b10, op1 = 0b001, CRn = 0b1001, CRm = 0b0000, op2 = 0b000)
       </p><p class="pseudocode">

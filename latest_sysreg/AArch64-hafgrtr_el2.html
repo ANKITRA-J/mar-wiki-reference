@@ -12,13 +12,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-49_49">AMEVTYPER1&lt;x&gt;_EL0, bit [19+2x], for x = 15 to 0:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-amevtyper1n_el0.html">AMEVTYPER1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="AArch32-amevtyper1n.html">AMEVTYPER1&lt;x&gt;</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-amevtyper1n_el0.html">AMEVTYPER1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-amevtyper1n.html">AMEVTYPER1&lt;x&gt;</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>AMEVTYPER1&lt;x&gt;_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-amevtyper1n_el0.html">AMEVTYPER1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="AArch32-amevtyper1n.html">AMEVTYPER1&lt;x&gt;</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, EL1 is using AArch64, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then, unless the read generates a higher priority exception:</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-amevtyper1n_el0.html">AMEVTYPER1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-amevtyper1n.html">AMEVTYPER1&lt;x&gt;</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, EL1 is using AArch64, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then, unless the read generates a higher priority exception:</p>
 <ul>
-<li><span class="instruction">MRS</span> reads of <a href="AArch64-amevtyper1n_el0.html">AMEVTYPER1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
-</li><li><span class="instruction">MRC</span> reads of <a href="AArch32-amevtyper1n.html">AMEVTYPER1&lt;x&gt;</a> at EL0 using AArch32 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
+<li><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-amevtyper1n_el0.html">AMEVTYPER1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
+</li><li><span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-amevtyper1n.html">AMEVTYPER1&lt;x&gt;</a> at EL0 using AArch32 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
 </li></ul></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -38,13 +38,13 @@
         </span>.
                         </li></ul></div><h4 id="fieldset_0-48_48">AMEVCNTR1&lt;x&gt;_EL0, bit [18+2x], for x = 15 to 0:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-amevcntr1n_el0.html">AMEVCNTR1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="AArch32-amevcntr1n.html">AMEVCNTR1&lt;x&gt;</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-amevcntr1n_el0.html">AMEVCNTR1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-amevcntr1n.html">AMEVCNTR1&lt;x&gt;</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>AMEVCNTR1&lt;x&gt;_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-amevcntr1n_el0.html">AMEVCNTR1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="AArch32-amevcntr1n.html">AMEVCNTR1&lt;x&gt;</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, EL1 is using AArch64, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then, unless the read generates a higher priority exception:</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-amevcntr1n_el0.html">AMEVCNTR1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-amevcntr1n.html">AMEVCNTR1&lt;x&gt;</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, EL1 is using AArch64, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then, unless the read generates a higher priority exception:</p>
 <ul>
-<li><span class="instruction">MRS</span> reads of <a href="AArch64-amevcntr1n_el0.html">AMEVCNTR1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
-</li><li><span class="instruction">MRC</span> reads of <a href="AArch32-amevcntr1n.html">AMEVCNTR1&lt;x&gt;</a> at EL0 using AArch32 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
+<li><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-amevcntr1n_el0.html">AMEVCNTR1&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
+</li><li><span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-amevcntr1n.html">AMEVCNTR1&lt;x&gt;</a> at EL0 using AArch32 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
 </li></ul></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -70,7 +70,7 @@
 </li><li>At EL0 using AArch32 when EL1 is using AArch64: <span class="instruction">MRC</span> reads of AMCNTENCLR&lt;x&gt; and AMCNTENSET&lt;x&gt;.
 </li></ul><table class="valuetable"><tr><th>AMCNTEN&lt;x&gt;</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>The operations listed above are not trapped by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, EL1 is using AArch64, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then, unless the read generates a higher priority exception:</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, EL1 is using AArch64, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then, unless the read generates a higher priority exception:</p>
 <ul>
 <li><span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of AMCNTENCLR&lt;x&gt;_EL0 and AMCNTENSET&lt;x&gt;_EL0 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
 </li><li><span class="instruction">MRC</span> reads at EL0 using AArch32 of AMCNTENCLR&lt;x&gt; and AMCNTENSET&lt;x&gt; are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
@@ -88,13 +88,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-4_1">AMEVCNTR0&lt;x&gt;_EL0, bit [x+1], for x = 3 to 0:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-amevcntr0n_el0.html">AMEVCNTR0&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="AArch32-amevcntr0n.html">AMEVCNTR0&lt;x&gt;</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-amevcntr0n_el0.html">AMEVCNTR0&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-amevcntr0n.html">AMEVCNTR0&lt;x&gt;</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>AMEVCNTR0&lt;x&gt;_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-amevcntr0n_el0.html">AMEVCNTR0&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="AArch32-amevcntr0n.html">AMEVCNTR0&lt;x&gt;</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, EL1 is using AArch64, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then, unless the read generates a higher priority exception:</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-amevcntr0n_el0.html">AMEVCNTR0&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 and <span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-amevcntr0n.html">AMEVCNTR0&lt;x&gt;</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, EL1 is using AArch64, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then, unless the read generates a higher priority exception:</p>
 <ul>
-<li><span class="instruction">MRS</span> reads of <a href="AArch64-amevcntr0n_el0.html">AMEVCNTR0&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
-</li><li><span class="instruction">MRC</span> reads of <a href="AArch32-amevcntr0n.html">AMEVCNTR0&lt;x&gt;</a> at EL0 using AArch32 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
+<li><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-amevcntr0n_el0.html">AMEVCNTR0&lt;x&gt;_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
+</li><li><span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-amevcntr0n.html">AMEVCNTR0&lt;x&gt;</a> at EL0 using AArch32 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
 </li></ul></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to

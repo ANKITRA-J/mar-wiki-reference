@@ -10,9 +10,9 @@
       </h4><div class="field"><p>Acknowledge for output trigger &lt;n&gt;.</p>
 <p>If any of the following is true, writes to ACK&lt;n&gt; are ignored:</p>
 <ul>
-<li>n &gt;= <a href="ext-ctidevid.html">CTIDEVID</a>.NUMTRIG, the number of implemented triggers.
+<li>n &gt;= <a href="/latest_sysreg/ext-ctidevid.html">CTIDEVID</a>.NUMTRIG, the number of implemented triggers.
 </li><li>Output trigger n is not active.
-</li><li>The channel mapping function output, as controlled by <a href="ext-ctioutenn.html">CTIOUTEN&lt;n&gt;</a>, is still active.
+</li><li>The channel mapping function output, as controlled by <a href="/latest_sysreg/ext-ctioutenn.html">CTIOUTEN&lt;n&gt;</a>, is still active.
 </li></ul>
 <p>Otherwise, if any of the following are true, ACK&lt;n&gt; is <span class="arm-defined-word">RES0</span>:</p>
 <ul>
@@ -32,7 +32,7 @@
                   access to this field
                   is <span class="access_level">WO/UNKNOWN</span>.
                 </li></ul></div><h2>Accessing CTIINTACK</h2>
-        <p>A debugger must read <a href="ext-ctitrigoutstatus.html">CTITRIGOUTSTATUS</a> to confirm that the output trigger has been acknowledged before generating any event that must be ordered after the write to CTIINTACK, such as a write to CTIAPPPULSE to activate another trigger.</p>
+        <p>A debugger must read <a href="/latest_sysreg/ext-ctitrigoutstatus.html">CTITRIGOUTSTATUS</a> to confirm that the output trigger has been acknowledged before generating any event that must be ordered after the write to CTIINTACK, such as a write to CTIAPPPULSE to activate another trigger.</p>
       <h4>CTIINTACK can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>CTI</td><td><span class="hexnumber">0x010</span></td><td>CTIINTACK</td></tr></table><p>Accessible as follows:</p><ul><li>When SoftwareLockStatus(addrdesc), accesses to this register are <span class="access_level">WI</span>.
           </li><li>Otherwise, accesses to this register are <span class="access_level">WO</span>.
           </li></ul><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

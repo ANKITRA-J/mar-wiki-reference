@@ -3,7 +3,7 @@
 <title>CNTHP_CTL_EL2 | Jon's Arm Reference</title><meta name="description" content="Control register for the EL2 physical timer."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">CNTHP_CTL_EL2</h1><p class="insn_subtitle" data-pagefind-body="1">Counter-timer Hypervisor Physical Timer Control Register</p><div data-pagefind-body="1">
         <p>Control register for the EL2 physical timer.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register CNTHP_CTL_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-cnthp_ctl.html">CNTHP_CTL[31:0]</a>.</p><p>This register is present only when (EL3 is implemented or (EL3 is not implemented, EL2 is implemented, and FEAT_SEL2 is not implemented)) and FEAT_AA64 is implemented. Otherwise, direct accesses to CNTHP_CTL_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register CNTHP_CTL_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-cnthp_ctl.html">CNTHP_CTL[31:0]</a>.</p><p>This register is present only when (EL3 is implemented or (EL3 is not implemented, EL2 is implemented, and FEAT_SEL2 is not implemented)) and FEAT_AA64 is implemented. Otherwise, direct accesses to CNTHP_CTL_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>CNTHP_CTL_EL2 is a 64-bit register.</p>
@@ -38,11 +38,11 @@
           <p>Timer disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Timer enabled.</p>
-        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="AArch64-cnthp_tval_el2.html">CNTHP_TVAL_EL2</a> continues to count down.</p>
+        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="/latest_sysreg/AArch64-cnthp_tval_el2.html">CNTHP_TVAL_EL2</a> continues to count down.</p>
 <div class="note"><p>Disabling the output signal might be a power-saving option.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name CNTHP_CTL_EL2 or CNTP_CTL_EL0 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name CNTHP_CTL_EL2 or CNTP_CTL_EL0 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, CNTHP_CTL_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b1110, CRm = 0b0010, op2 = 0b001)
       </p><p class="pseudocode">

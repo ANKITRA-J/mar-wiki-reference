@@ -3,7 +3,7 @@
 <title>ICH_HCR_EL2 | Jon's Arm Reference</title><meta name="description" content="Controls the environment for the virtual CPU interface."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ICH_HCR_EL2</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Controller Hyp Control Register</p><div data-pagefind-body="1">
         <p>Controls the environment for the virtual CPU interface.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register ICH_HCR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-ich_hcr.html">ICH_HCR[31:0]</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented), (EL2 is implemented or EL3 is implemented), and FEAT_AA64 is implemented. Otherwise, direct accesses to ICH_HCR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register ICH_HCR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-ich_hcr.html">ICH_HCR[31:0]</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented), (EL2 is implemented or EL3 is implemented), and FEAT_AA64 is implemented. Otherwise, direct accesses to ICH_HCR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>ICH_HCR_EL2 is a 64-bit register.</p>
@@ -17,7 +17,7 @@
 </li><li>A virtual write to DIR with a valid interrupt identifier that is not in the LPI range (that is &lt; 8192) when EOI mode is one and no List Register was found.
 </li></ul>
 <p>This allows software to manage more active interrupts than there are implemented List Registers.</p>
-<p>It is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether a virtual write to EOIR that does not clear a bit in the Active Priorities registers (<a href="AArch64-ich_ap0rn_el2.html">ICH_AP0R&lt;n&gt;_EL2</a>/<a href="AArch64-ich_ap1rn_el2.html">ICH_AP1R&lt;n&gt;_EL2</a>) increments EOIcount. Permitted behaviors are:</p>
+<p>It is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether a virtual write to EOIR that does not clear a bit in the Active Priorities registers (<a href="/latest_sysreg/AArch64-ich_ap0rn_el2.html">ICH_AP0R&lt;n&gt;_EL2</a>/<a href="/latest_sysreg/AArch64-ich_ap1rn_el2.html">ICH_AP1R&lt;n&gt;_EL2</a>) increments EOIcount. Permitted behaviors are:</p>
 <ul>
 <li>Increment EOIcount.
 </li><li>Leave EOIcount unchanged.
@@ -42,11 +42,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-14_14-1">TDIR, bit [14] <span class="condition">when ICH_VTR_EL2.TDS == '1'</span>:
       </h4><div class="field">
-      <p>Trap EL1 writes to <a href="AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> and <a href="AArch64-icv_dir_el1.html">ICV_DIR_EL1</a>.</p>
+      <p>Trap EL1 writes to <a href="/latest_sysreg/AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> and <a href="/latest_sysreg/AArch64-icv_dir_el1.html">ICV_DIR_EL1</a>.</p>
     <table class="valuetable"><tr><th>TDIR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>EL1 writes of <a href="AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> and <a href="AArch64-icv_dir_el1.html">ICV_DIR_EL1</a> are not trapped to EL2, unless trapped by other mechanisms.</p>
+          <p>EL1 writes of <a href="/latest_sysreg/AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> and <a href="/latest_sysreg/AArch64-icv_dir_el1.html">ICV_DIR_EL1</a> are not trapped to EL2, unless trapped by other mechanisms.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>EL1 writes of <a href="AArch64-icv_dir_el1.html">ICV_DIR_EL1</a> are trapped to EL2. It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether writes of <a href="AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> are trapped. Not trapping <a href="AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> writes is DEPRECATED.</p>
+          <p>EL1 writes of <a href="/latest_sysreg/AArch64-icv_dir_el1.html">ICV_DIR_EL1</a> are trapped to EL2. It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether writes of <a href="/latest_sysreg/AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> are trapped. Not trapping <a href="/latest_sysreg/AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> writes is DEPRECATED.</p>
         </td></tr></table><p>Arm deprecates not including this trap bit.</p>
 <p>If EL2 is disabled in the current Security state, the Effective value of ICH_HCR_EL2.TDIR is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -62,7 +62,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Locally generated SEIs trap to EL2.</p>
         </td></tr></table>
-      <p>If <a href="AArch64-ich_vtr_el2.html">ICH_VTR_EL2</a>.SEIS is 0, this bit is <span class="arm-defined-word">RES0</span>.</p>
+      <p>If <a href="/latest_sysreg/AArch64-ich_vtr_el2.html">ICH_VTR_EL2</a>.SEIS is 0, this bit is <span class="arm-defined-word">RES0</span>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -100,7 +100,7 @@
           <p>EL1 accesses to common registers proceed as normal.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>EL1 accesses to common registers trap to EL2.</p>
-        </td></tr></table><p>This affects accesses to <a href="AArch64-icc_sgi0r_el1.html">ICC_SGI0R_EL1</a>, <a href="AArch64-icc_sgi1r_el1.html">ICC_SGI1R_EL1</a>, <a href="AArch64-icc_asgi1r_el1.html">ICC_ASGI1R_EL1</a>, <a href="AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>, <a href="AArch64-icc_dir_el1.html">ICC_DIR_EL1</a>, <a href="AArch64-icc_pmr_el1.html">ICC_PMR_EL1</a>, <a href="AArch64-icc_rpr_el1.html">ICC_RPR_EL1</a>, <a href="AArch64-icv_ctlr_el1.html">ICV_CTLR_EL1</a>, <a href="AArch64-icv_dir_el1.html">ICV_DIR_EL1</a>, <a href="AArch64-icv_pmr_el1.html">ICV_PMR_EL1</a>, and <a href="AArch64-icv_rpr_el1.html">ICV_RPR_EL1</a>.</p>
+        </td></tr></table><p>This affects accesses to <a href="/latest_sysreg/AArch64-icc_sgi0r_el1.html">ICC_SGI0R_EL1</a>, <a href="/latest_sysreg/AArch64-icc_sgi1r_el1.html">ICC_SGI1R_EL1</a>, <a href="/latest_sysreg/AArch64-icc_asgi1r_el1.html">ICC_ASGI1R_EL1</a>, <a href="/latest_sysreg/AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>, <a href="/latest_sysreg/AArch64-icc_dir_el1.html">ICC_DIR_EL1</a>, <a href="/latest_sysreg/AArch64-icc_pmr_el1.html">ICC_PMR_EL1</a>, <a href="/latest_sysreg/AArch64-icc_rpr_el1.html">ICC_RPR_EL1</a>, <a href="/latest_sysreg/AArch64-icv_ctlr_el1.html">ICV_CTLR_EL1</a>, <a href="/latest_sysreg/AArch64-icv_dir_el1.html">ICV_DIR_EL1</a>, <a href="/latest_sysreg/AArch64-icv_pmr_el1.html">ICV_PMR_EL1</a>, and <a href="/latest_sysreg/AArch64-icv_rpr_el1.html">ICV_RPR_EL1</a>.</p>
 <p>If EL2 is disabled in the current Security state, the Effective value of ICH_HCR_EL2.TALL0 is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -126,7 +126,7 @@
     <table class="valuetable"><tr><th>VGrp1DIE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Maintenance interrupt disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Maintenance interrupt signaled when <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG1 is 0.</p>
+          <p>Maintenance interrupt signaled when <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG1 is 0.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -136,7 +136,7 @@
     <table class="valuetable"><tr><th>VGrp1EIE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Maintenance interrupt disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Maintenance interrupt signaled when <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG1 is 1.</p>
+          <p>Maintenance interrupt signaled when <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG1 is 1.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -146,7 +146,7 @@
     <table class="valuetable"><tr><th>VGrp0DIE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Maintenance interrupt disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Maintenance interrupt signaled when <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG0 is 0.</p>
+          <p>Maintenance interrupt signaled when <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG0 is 0.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -156,7 +156,7 @@
     <table class="valuetable"><tr><th>VGrp0EIE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Maintenance interrupt disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Maintenance interrupt signaled when <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG0 is 1.</p>
+          <p>Maintenance interrupt signaled when <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG0 is 1.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -197,14 +197,14 @@
           <p>Virtual CPU interface operation disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Virtual CPU interface operation enabled.</p>
-        </td></tr></table><p>If FEAT_GCIE_LEGACY is implemented and <a href="AArch64-ich_vctlr_el2.html">ICH_VCTLR_EL2</a>.V3 is 0, the Effective value of this field is 0.</p>
+        </td></tr></table><p>If FEAT_GCIE_LEGACY is implemented and <a href="/latest_sysreg/AArch64-ich_vctlr_el2.html">ICH_VCTLR_EL2</a>.V3 is 0, the Effective value of this field is 0.</p>
 <p>When this field is set to 0:</p>
 <ul>
 <li>The virtual CPU interface does not signal any maintenance interrupts.
 </li><li>The virtual CPU interface does not signal any virtual interrupts.
-</li><li>A read of <a href="AArch64-icv_iar0_el1.html">ICV_IAR0_EL1</a>, <a href="AArch64-icv_iar1_el1.html">ICV_IAR1_EL1</a>, <a href="AArch64-icv_nmiar1_el1.html">ICV_NMIAR1_EL1</a>, <a href="ext-gicv_iar.html">GICV_IAR</a> or <a href="ext-gicv_aiar.html">GICV_AIAR</a> returns a spurious interrupt ID.
+</li><li>A read of <a href="/latest_sysreg/AArch64-icv_iar0_el1.html">ICV_IAR0_EL1</a>, <a href="/latest_sysreg/AArch64-icv_iar1_el1.html">ICV_IAR1_EL1</a>, <a href="/latest_sysreg/AArch64-icv_nmiar1_el1.html">ICV_NMIAR1_EL1</a>, <a href="/latest_sysreg/ext-gicv_iar.html">GICV_IAR</a> or <a href="/latest_sysreg/ext-gicv_aiar.html">GICV_AIAR</a> returns a spurious interrupt ID.
 </li></ul>
-<div class="note"><p>This field is <span class="arm-defined-word">RES0</span> when <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NS,EEL2}=={0,0}</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<div class="note"><p>This field is <span class="arm-defined-word">RES0</span> when <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NS,EEL2}=={0,0}</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, ICH_HCR_EL2</p></div></div><p style="text-align: right">

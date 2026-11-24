@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>MPAMCFG_MBW_MIN | Jon's Arm Reference</title><meta name="description" content="MPAMCFG_MBW_MIN is a 32-bit read/write register that controls the minimum fraction of memory bandwidth that the PARTID selected by MPAMCFG_PART_SEL is permitted to use."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">MPAMCFG_MBW_MIN</h1><p class="insn_subtitle" data-pagefind-body="1">MPAM Memory Bandwidth Minimum Partition Configuration Register</p><div data-pagefind-body="1">
-        <p>MPAMCFG_MBW_MIN is a 32-bit read/write register that controls the minimum fraction of memory bandwidth that the PARTID selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> is permitted to use.</p>
+        <p>MPAMCFG_MBW_MIN is a 32-bit read/write register that controls the minimum fraction of memory bandwidth that the PARTID selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> is permitted to use.</p>
 
       
         <p>A PARTID that has used less than MIN is given preferential access to bandwidth.</p>
       </div><h3>Configuration</h3><p>The power domain of MPAMCFG_MBW_MIN is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.
     </p><p>This register is present only when (FEAT_MPAMv0p1 is implemented, or FEAT_MPAMv1p0 is implemented, or FEAT_MPAMv2_MSC is implemented), MPAMF_IDR.HAS_MBW_PART == '1', and MPAMF_MBW_IDR.HAS_MIN == '1'. Otherwise, direct accesses to MPAMCFG_MBW_MIN are <span class="arm-defined-word">RES0</span>.</p>
-        <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, the control settings accessed are those of the resource instance currently selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS and the PARTID selected by MPAMCFG_PART_SEL.PARTID_SEL.</p>
+        <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, the control settings accessed are those of the resource instance currently selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS and the PARTID selected by MPAMCFG_PART_SEL.PARTID_SEL.</p>
 
       
         <p>If <span class="xref">FEAT_MPAMv0p1</span> or <span class="xref">FEAT_MPAMv1p0</span> is implemented, then the following statements apply:</p>
@@ -16,19 +16,19 @@
       
         <ul>
 <li>
-<p>MPAMCFG_MBW_MIN_s controls the minimum bandwidth for the Secure PARTID selected by the Secure instance of <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.</p>
+<p>MPAMCFG_MBW_MIN_s controls the minimum bandwidth for the Secure PARTID selected by the Secure instance of <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.</p>
 
 </li><li>
-<p>MPAMCFG_MBW_MIN_ns controls the minimum bandwidth for the Non-secure PARTID selected by the Non-secure instance of <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.</p>
+<p>MPAMCFG_MBW_MIN_ns controls the minimum bandwidth for the Non-secure PARTID selected by the Non-secure instance of <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.</p>
 
 </li><li>
 <p>If <span class="xref">FEAT_RME</span> is implemented, then the following statements also apply:</p>
 <ul>
 <li>
-<p>MPAMCFG_MBW_MIN_rt controls the minimum bandwidth for the Root PARTID selected by the Root instance of <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.</p>
+<p>MPAMCFG_MBW_MIN_rt controls the minimum bandwidth for the Root PARTID selected by the Root instance of <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.</p>
 
 </li><li>
-<p>MPAMCFG_MBW_MIN_rl controls the minimum bandwidth for the Realm PARTID selected by the Realm instance of <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.</p>
+<p>MPAMCFG_MBW_MIN_rl controls the minimum bandwidth for the Realm PARTID selected by the Realm instance of <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.</p>
 
 </li></ul>
 
@@ -43,8 +43,8 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_0">MIN, bits [15:0]:
       </h4><div class="field">
-      <p>Memory minimum bandwidth allocated to the partition selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>. MIN is in fixed-point fraction format. The fraction represents the portion of the total memory bandwidth capacity through the controlled component that the PARTID is permitted to allocate.</p>
-    <p>The implemented width of the fixed-point fraction is given in <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a>.BWA_WD. Unimplemented bits are RAZ/WI. The implemented bits of the MIN field are always to the left of the field. For example, if BWA_WD = 4, the implemented bits are MPAMCFG_MBW_MIN[15:12] and MPAMCFG_MBW_MIN[11:0] are unimplemented.</p>
+      <p>Memory minimum bandwidth allocated to the partition selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>. MIN is in fixed-point fraction format. The fraction represents the portion of the total memory bandwidth capacity through the controlled component that the PARTID is permitted to allocate.</p>
+    <p>The implemented width of the fixed-point fraction is given in <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a>.BWA_WD. Unimplemented bits are RAZ/WI. The implemented bits of the MIN field are always to the left of the field. For example, if BWA_WD = 4, the implemented bits are MPAMCFG_MBW_MIN[15:12] and MPAMCFG_MBW_MIN[11:0] are unimplemented.</p>
 <p>The fixed-point fraction MIN is less than 1. The implied binary point is between bits 15 and 16. In an implementation with w implemented bits, the largest fraction of the bandwidth that can be represented is 1- (0.5)<sup>w</sup>.</p></div><h2>Accessing MPAMCFG_MBW_MIN</h2>
         <p>If both <span class="xref">FEAT_MPAM</span> and <span class="xref">FEAT_RME</span> are implemented, the following statements apply:</p>
 
@@ -83,14 +83,14 @@
 </li></ul>
 
       
-        <p>When RIS is implemented, loads and stores to MPAMCFG_MBW_MIN access the memory minimum bandwidth partitioning configuration settings for the bandwidth resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS and the PARTID selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.PARTID_SEL.</p>
+        <p>When RIS is implemented, loads and stores to MPAMCFG_MBW_MIN access the memory minimum bandwidth partitioning configuration settings for the bandwidth resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS and the PARTID selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.PARTID_SEL.</p>
 
       
-        <p>When RIS is not implemented, loads and stores to MPAMCFG_MBW_MIN access the memory minimum bandwidth partitioning configuration settings for the PARTID selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.PARTID_SEL.</p>
+        <p>When RIS is not implemented, loads and stores to MPAMCFG_MBW_MIN access the memory minimum bandwidth partitioning configuration settings for the PARTID selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.PARTID_SEL.</p>
 
       
-        <p>When PARTID narrowing is implemented, loads and stores to MPAMCFG_MBW_MIN access the memory minimum bandwidth partitioning configuration settings for the internal PARTID selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.PARTID_SEL, and <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.INTERNAL must be 1.</p>
+        <p>When PARTID narrowing is implemented, loads and stores to MPAMCFG_MBW_MIN access the memory minimum bandwidth partitioning configuration settings for the internal PARTID selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.PARTID_SEL, and <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.INTERNAL must be 1.</p>
 
       
-        <p>When PARTID narrowing is not implemented, loads and stores to MPAMCFG_MBW_MIN access the memory minimum bandwidth partitioning configuration settings for the request PARTID selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.PARTID_SEL, and <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.INTERNAL must be 0.</p>
+        <p>When PARTID narrowing is not implemented, loads and stores to MPAMCFG_MBW_MIN access the memory minimum bandwidth partitioning configuration settings for the request PARTID selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.PARTID_SEL, and <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.INTERNAL must be 0.</p>
       <h4>MPAMCFG_MBW_MIN can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th></tr><tr><td>MPAM</td><td><span class="hexnumber">0x0200</span></td></tr></table><p>When FEAT_MPAMv2_MSC is implemented, accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_s</td><td><span class="hexnumber">0x0200</span></td><td>MPAMCFG_MBW_MIN_s</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_ns</td><td><span class="hexnumber">0x0200</span></td><td>MPAMCFG_MBW_MIN_ns</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rt</td><td><span class="hexnumber">0x0200</span></td><td>MPAMCFG_MBW_MIN_rt</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rl</td><td><span class="hexnumber">0x0200</span></td><td>MPAMCFG_MBW_MIN_rl</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>EDDEVAFF0 | Jon's Arm Reference</title><meta name="description" content="Copy of the low half of the PE MPIDR_EL1 register that allows a debugger to determine which PE in a multiprocessor system the external debug component relates to."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">EDDEVAFF0</h1><p class="insn_subtitle" data-pagefind-body="1">External Debug Device Affinity register 0</p><div data-pagefind-body="1">
-        <p>Copy of the low half of the PE <a href="AArch64-mpidr_el1.html">MPIDR_EL1</a> register that allows a debugger to determine which PE in a multiprocessor system the external debug component relates to.</p>
+        <p>Copy of the low half of the PE <a href="/latest_sysreg/AArch64-mpidr_el1.html">MPIDR_EL1</a> register that allows a debugger to determine which PE in a multiprocessor system the external debug component relates to.</p>
       </div><h3>Configuration</h3><p>When FEAT_DoPD is implemented, EDDEVAFF0 is in the Core power domain. Otherwise, EDDEVAFF0 is in the Debug power domain.
     </p><h3>Attributes</h3>
         <p>EDDEVAFF0 is a 32-bit register.</p>
@@ -42,7 +42,7 @@
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_0">Aff0, bits [7:0]:
       </h4><div class="field">
-      <p>Affinity level 0. The value of the <a href="AArch32-mpidr.html">MPIDR</a>.{Aff2, Aff1, Aff0} or <a href="AArch64-mpidr_el1.html">MPIDR_EL1</a>.{Aff3, Aff2, Aff1, Aff0} set of fields of each PE must be unique within the system as a whole.</p>
+      <p>Affinity level 0. The value of the <a href="/latest_sysreg/AArch32-mpidr.html">MPIDR</a>.{Aff2, Aff1, Aff0} or <a href="/latest_sysreg/AArch64-mpidr_el1.html">MPIDR_EL1</a>.{Aff3, Aff2, Aff1, Aff0} set of fields of each PE must be unique within the system as a whole.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing EDDEVAFF0</h2><h4>EDDEVAFF0 can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>Debug</td><td><span class="hexnumber">0xFA8</span></td><td>EDDEVAFF0</td></tr></table><p>Accessible as follows:</p><ul><li>When FEAT_DoPD is implemented and !IsCorePowered(), accesses to this register generate an error response.

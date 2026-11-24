@@ -5,18 +5,18 @@
         <p>ITS Read Event Request Register.</p>
 
       
-        <p>This register is used to read the translation information for an EventID and DeviceID specified in <a href="its_config_frame.its_eidr.html">ITS_EIDR</a> and <a href="its_config_frame.its_didr.html">ITS_DIDR</a> registers, respectively.</p>
+        <p>This register is used to read the translation information for an EventID and DeviceID specified in <a href="/latest_sysreg/its_config_frame.its_eidr.html">ITS_EIDR</a> and <a href="/latest_sysreg/its_config_frame.its_didr.html">ITS_DIDR</a> registers, respectively.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv5_EXT is implemented. Otherwise, direct accesses to ITS_READ_EVENTR are <span class="arm-defined-word">RES0</span>.</p>
-        <p>The effects of a write to this register are not guaranteed to have completed before <a href="its_config_frame.its_statusr.html">ITS_STATUSR</a>.IDLE is 1.</p>
+        <p>The effects of a write to this register are not guaranteed to have completed before <a href="/latest_sysreg/its_config_frame.its_statusr.html">ITS_STATUSR</a>.IDLE is 1.</p>
       <h3>Attributes</h3>
         <p>ITS_READ_EVENTR is a 32-bit register.</p>
-      <p>This  register is part of the <a href="its_config_frame.html">ITS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-31_31">R</a></td><td class="lr" colspan="31"><a href="#fieldset_0-30_0">RES0</a></td></tr></tbody></table><h4 id="fieldset_0-31_31">R, bit [31]:
+      <p>This  register is part of the <a href="/latest_sysreg/its_config_frame.html">ITS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-31_31">R</a></td><td class="lr" colspan="31"><a href="#fieldset_0-30_0">RES0</a></td></tr></tbody></table><h4 id="fieldset_0-31_31">R, bit [31]:
       </h4><div class="field">
       <p>Request ITS to read event translation information.</p>
     <table class="valuetable"><tr><th>R</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>The write has no effect on the ITS.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Read the translation information for the specified DeviceID and EventID into <a href="its_config_frame.its_read_event_datar.html">ITS_READ_EVENT_DATAR</a>.</p>
+          <p>Read the translation information for the specified DeviceID and EventID into <a href="/latest_sysreg/its_config_frame.its_read_event_datar.html">ITS_READ_EVENT_DATAR</a>.</p>
         </td></tr></table></div><h4 id="fieldset_0-30_0">Bits [30:0]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>

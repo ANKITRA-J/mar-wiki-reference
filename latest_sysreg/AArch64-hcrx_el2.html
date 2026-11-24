@@ -12,12 +12,12 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-36_36-1">FNB, bit [36] <span class="condition">when FEAT_TLBID is implemented</span>:
       </h4><div class="field">
-      <p>This field, evaluated with <a href="AArch64-hcr_el2.html">HCR_EL2</a>.FB, configures how TLBI and IC instructions are broadcast when executed from EL1.</p>
-    <p>For a description of the values derived by evaluating FB and FNB together, see <a href="AArch64-hcr_el2.html">HCR_EL2</a>.FB.</p>
+      <p>This field, evaluated with <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.FB, configures how TLBI and IC instructions are broadcast when executed from EL1.</p>
+    <p>For a description of the values derived by evaluating FB and FNB together, see <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.FB.</p>
 <p>The Effective value of this field is 0 if any of the following apply:</p>
 <ul>
 <li>EL2 is not enabled in the current Security state.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -35,14 +35,14 @@
         </span>.</p></div><h4 id="fieldset_0-35_35-1">VTLBIDOSEn, bit [35] <span class="condition">when FEAT_TLBID is implemented</span>:
       </h4><div class="field"><p>Enable application of VTLBIDOS transformations.</p>
 <p>This control applies to <span class="instruction">TLBI OS</span> instructions executed at EL1.</p><table class="valuetable"><tr><th>VTLBIDOSEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>TLBI OS operations executed at EL1 are not transformed by <a href="AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a>.</p>
+          <p>TLBI OS operations executed at EL1 are not transformed by <a href="/latest_sysreg/AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>TLBI OS operations executed at EL1 are transformed by <a href="AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a>.</p>
+          <p>TLBI OS operations executed at EL1 are transformed by <a href="/latest_sysreg/AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a>.</p>
         </td></tr></table><p>The Effective value of this field is 0 if any of the following apply:</p>
 <ul>
-<li><a href="AArch64-scr_el3.html">SCR_EL3</a>.VTLBIDEn is 0.
+<li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.VTLBIDEn is 0.
 </li><li>EL2 is not enabled in the current Security state.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -57,11 +57,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-34_34-1">NVnTTLBOS, bit [34] <span class="condition">when FEAT_NV3 is implemented</span>:
       </h4><div class="field">
-      <p>Nested Virtualization override of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBOS} for <span class="instruction">TLBI E1</span> instructions that specify the OS Shareability domain.</p>
+      <p>Nested Virtualization override of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBOS} for <span class="instruction">TLBI E1</span> instructions that specify the OS Shareability domain.</p>
     <table class="valuetable"><tr><th>NVnTTLBOS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not affect trapping of the specified instructions.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is 1, <span class="instruction">TLBI E1OS</span> instructions that apply to stage 1 of the EL1&amp;0 translation regime have their architected effect instead of being trapped by <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBOS}.</p>
+          <p>If <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is 1, <span class="instruction">TLBI E1OS</span> instructions that apply to stage 1 of the EL1&amp;0 translation regime have their architected effect instead of being trapped by <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBOS}.</p>
         </td></tr></table>
       <p>If the Effective value of HCRX_EL2.NVTGE is 0, this field is ignored and has an Effective value of 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -71,11 +71,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-33_33-1">NVnTTLBIS, bit [33] <span class="condition">when FEAT_NV3 is implemented</span>:
       </h4><div class="field">
-      <p>Nested Virtualization override of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBIS} for <span class="instruction">TLBI E1</span> instructions that specify the IS Shareability domain.</p>
+      <p>Nested Virtualization override of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBIS} for <span class="instruction">TLBI E1</span> instructions that specify the IS Shareability domain.</p>
     <table class="valuetable"><tr><th>NVnTTLBIS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not affect trapping of the specified instructions.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is 1, <span class="instruction">TLBI E1IS</span> instructions that apply to stage 1 of the EL1&amp;0 translation regime have their architected effect instead of being trapped by <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBIS}.</p>
+          <p>If <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is 1, <span class="instruction">TLBI E1IS</span> instructions that apply to stage 1 of the EL1&amp;0 translation regime have their architected effect instead of being trapped by <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBIS}.</p>
         </td></tr></table>
       <p>If the Effective value of HCRX_EL2.NVTGE is 0, this field is ignored and has an Effective value of 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -85,11 +85,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-32_32-1">NVnTTLB, bit [32] <span class="condition">when FEAT_NV3 is implemented</span>:
       </h4><div class="field">
-      <p>Nested Virtualization override of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TTLB for <span class="instruction">TLBI E1</span> instructions that do not specify an IS or OS Shareability domain.</p>
+      <p>Nested Virtualization override of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TTLB for <span class="instruction">TLBI E1</span> instructions that do not specify an IS or OS Shareability domain.</p>
     <table class="valuetable"><tr><th>NVnTTLB</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not affect trapping of the specified instructions.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is 1, <span class="instruction">TLBI E1</span> instructions that apply to stage 1 of the EL1&amp;0 translation regime and do not specify an IS or OS Shareability domain have their architected effect instead of being trapped by <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TTLB.</p>
+          <p>If <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is 1, <span class="instruction">TLBI E1</span> instructions that apply to stage 1 of the EL1&amp;0 translation regime and do not specify an IS or OS Shareability domain have their architected effect instead of being trapped by <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TTLB.</p>
         </td></tr></table>
       <p>If the Effective value of HCRX_EL2.NVTGE is 0, this field is ignored and has an Effective value of 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -104,10 +104,10 @@
           <p>This control does not affect data-independent timing of execution.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Data-independent timing of execution is enforced.</p>
-        </td></tr></table><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
+        </td></tr></table><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
 <p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
-<li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+<li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li><li>EL2 is not implemented or not enabled in the current Security state.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
@@ -126,15 +126,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-27_27-1">NVTGE, bit [27] <span class="condition">when FEAT_NV3 is implemented</span>:
       </h4><div class="field"><p>Nested Virtualization Guest TGE behavior enable.</p>
-<p>EL1 accesses to <a href="AArch64-hcr_el2.html">HCR_EL2</a> are redirected to <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a>.</p>
-<p>If <span class="xref">FEAT_SRMASK2</span> is implemented, EL1 accesses to HCRX_EL2 are redirected to <a href="AArch64-nvhcrx_el2.html">NVHCRX_EL2</a>.</p><table class="valuetable"><tr><th>NVTGE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is ignored and EL1 accesses to <a href="AArch64-hcr_el2.html">HCR_EL2</a> are not redirected to <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a>.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>EL1 accesses to <a href="AArch64-hcr_el2.html">HCR_EL2</a> are redirected to <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a> instead of being transformed to loads and stores. <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is considered for ERET and TLBI traps.</p>
-<p>If <span class="xref">FEAT_SRMASK2</span> is implemented, EL1 accesses to HCRX_EL2 are redirected to <a href="AArch64-nvhcrx_el2.html">NVHCRX_EL2</a> instead of being transformed to loads and stores.</p></td></tr></table><p>This field has an Effective value of 0 if any of the following apply:</p>
+<p>EL1 accesses to <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a> are redirected to <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a>.</p>
+<p>If <span class="xref">FEAT_SRMASK2</span> is implemented, EL1 accesses to HCRX_EL2 are redirected to <a href="/latest_sysreg/AArch64-nvhcrx_el2.html">NVHCRX_EL2</a>.</p><table class="valuetable"><tr><th>NVTGE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p><a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is ignored and EL1 accesses to <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a> are not redirected to <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a>.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>EL1 accesses to <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a> are redirected to <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a> instead of being transformed to loads and stores. <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a>.TGE is considered for ERET and TLBI traps.</p>
+<p>If <span class="xref">FEAT_SRMASK2</span> is implemented, EL1 accesses to HCRX_EL2 are redirected to <a href="/latest_sysreg/AArch64-nvhcrx_el2.html">NVHCRX_EL2</a> instead of being transformed to loads and stores.</p></td></tr></table><p>This field has an Effective value of 0 if any of the following apply:</p>
 <ul>
-<li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{NV, NV1, NV2} is not {1, 0, 1}.
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
-</li><li>EL3 is implemented and <a href="AArch64-scr2_el3.html">SCR2_EL3</a>.NV3En is 0.
+<li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{NV, NV1, NV2} is not {1, 0, 1}.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr2_el3.html">SCR2_EL3</a>.NV3En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK2 is implemented.</li><li>EL2 is the current Exception level.</li><li>EL3 is not implemented or SCR2_EL3.SRMASK2En == '1'.</li><li>HCRXMASK_EL2.NVTGE == '1'.</li></ul></li></ul></div><h4 id="fieldset_0-27_27-2"> <span class="condition">Otherwise</span>:
@@ -143,19 +143,19 @@
     </div><h4 id="fieldset_0-26_26-1">SRMASKEn, bit [26] <span class="condition">when FEAT_SRMASK is implemented</span>:
       </h4><div class="field"><p>If EL1 is using AArch64, accesses to the following registers are trapped to EL2 and reported using EC syndrome value <span class="hexnumber">0x18</span>:</p>
 <ul>
-<li><a href="AArch64-cpacrmask_el1.html">CPACRMASK_EL1</a>.
-</li><li><a href="AArch64-sctlrmask_el1.html">SCTLRMASK_EL1</a>.
-</li><li><a href="AArch64-sctlr2mask_el1.html">SCTLR2MASK_EL1</a>.
-</li><li><a href="AArch64-tcrmask_el1.html">TCRMASK_EL1</a>.
-</li><li><a href="AArch64-tcr2mask_el1.html">TCR2MASK_EL1</a>.
-</li><li><a href="AArch64-actlrmask_el1.html">ACTLRMASK_EL1</a>, if it is implemented.
+<li><a href="/latest_sysreg/AArch64-cpacrmask_el1.html">CPACRMASK_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-sctlrmask_el1.html">SCTLRMASK_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-sctlr2mask_el1.html">SCTLR2MASK_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-tcrmask_el1.html">TCRMASK_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-tcr2mask_el1.html">TCR2MASK_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-actlrmask_el1.html">ACTLRMASK_EL1</a>, if it is implemented.
 </li></ul><table class="valuetable"><tr><th>SRMASKEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL1 accesses to the specified EL1 registers are trapped to EL2. The values in the registers are treated as 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
-        </td></tr></table><p>Traps generated by this control have a lower priority than traps generated by the <a href="AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a> and <a href="AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a> controls.</p>
+        </td></tr></table><p>Traps generated by this control have a lower priority than traps generated by the <a href="/latest_sysreg/AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a> and <a href="/latest_sysreg/AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a> controls.</p>
 <p>When EL2 is not implemented or not enabled in the current Security state, the Effective value of this field is 1.</p>
-<p>Otherwise, when the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0, the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
+<p>Otherwise, when the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0, the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
             <span class="binarynumber">'0'</span>.
@@ -170,15 +170,15 @@
     </div><h4 id="fieldset_0-25_25-1">VTLBIDEn, bit [25] <span class="condition">when FEAT_TLBID is implemented</span>:
       </h4><div class="field"><p>Enable application of VTLBID transformations.</p>
 <p>This control applies to <span class="instruction">TLBI IS</span> and <span class="instruction">IC IALLUIS</span> instructions executed at EL1.</p>
-<p>This control additionally applies to <span class="instruction">TLBI</span> and <span class="instruction">IC IALLU</span> instructions executed at EL1, if they apply to the Inner Shareable shareability domain as the result of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.FB configuration.</p><table class="valuetable"><tr><th>VTLBIDEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>TLBI operations executed at EL1 are not transformed by <a href="AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a>.</p>
+<p>This control additionally applies to <span class="instruction">TLBI</span> and <span class="instruction">IC IALLU</span> instructions executed at EL1, if they apply to the Inner Shareable shareability domain as the result of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.FB configuration.</p><table class="valuetable"><tr><th>VTLBIDEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>TLBI operations executed at EL1 are not transformed by <a href="/latest_sysreg/AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>TLBI operations executed at EL1 are transformed by <a href="AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a>.</p>
+          <p>TLBI operations executed at EL1 are transformed by <a href="/latest_sysreg/AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a>.</p>
         </td></tr></table><p>The Effective value of this field is 0 if any of the following apply:</p>
 <ul>
-<li><a href="AArch64-scr_el3.html">SCR_EL3</a>.VTLBIDEn is 0.
+<li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.VTLBIDEn is 0.
 </li><li>EL2 is not enabled in the current Security state.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -201,13 +201,13 @@
         </td></tr></table><p>The Effective value of this field is 1 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 <p>The Effective value of this field is 0 when all of the following are true:</p>
 <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -221,26 +221,26 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-23_23-1">EnFPM, bit [23] <span class="condition">when FEAT_FPMR is implemented</span>:
-      </h4><div class="field"><p>Enables direct and indirect accesses to <a href="AArch64-fpmr.html">FPMR</a> from EL0 and EL1.</p>
+      </h4><div class="field"><p>Enables direct and indirect accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> from EL0 and EL1.</p>
 <p>When accesses to FPMR are disabled by this control:</p>
 <ul>
-<li>Direct accesses to <a href="AArch64-fpmr.html">FPMR</a> from EL0 and EL1 are trapped to EL2 and reported using EC syndrome value <span class="hexnumber">0x18</span>.
-</li><li>Execution of FP8 data-processing instructions that indirectly access <a href="AArch64-fpmr.html">FPMR</a> is <span class="arm-defined-word">UNDEFINED</span> at EL0 and EL1.
+<li>Direct accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> from EL0 and EL1 are trapped to EL2 and reported using EC syndrome value <span class="hexnumber">0x18</span>.
+</li><li>Execution of FP8 data-processing instructions that indirectly access <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> is <span class="arm-defined-word">UNDEFINED</span> at EL0 and EL1.
 </li></ul><table class="valuetable"><tr><th>EnFPM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Direct and indirect accesses to <a href="AArch64-fpmr.html">FPMR</a> are disabled at EL1 and EL0.</p>
+          <p>Direct and indirect accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> are disabled at EL1 and EL0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>Traps are not taken if there is a higher priority exception generated by the access.</p>
 <p>The Effective value of this field is 1 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 <p>The Effective value of this field is 0 when all of the following are true:</p>
 <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -263,13 +263,13 @@
         </td></tr></table><p>The Effective value of this field is 1 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 <p>The Effective value of this field is 0 when all of the following are true:</p>
 <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -291,13 +291,13 @@
         </td></tr></table><p>The Effective value of this field is 1 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 <p>The Effective value of this field is 0 when all of the following are true:</p>
 <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -312,7 +312,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-20_20-1">EnSDERR, bit [20] <span class="condition">when FEAT_ADERR is implemented</span>:
       </h4><div class="field">
-      <p>Enable Synchronous Device Read Error. Override <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnADERR.</p>
+      <p>Enable Synchronous Device Read Error. Override <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnADERR.</p>
     <table class="valuetable"><tr><th>EnSDERR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This field has no effect on External aborts on Device memory reads in the EL1&amp;0 translation regime.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -325,12 +325,12 @@
 <ul>
 <li>All of the following are true:<ul>
 <li><span class="xref">FEAT_ANERR</span> is implemented.
-</li><li><a href="AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ADERR reads as <span class="binarynumber">0b0010</span>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ADERR reads as <span class="binarynumber">0b0010</span>.
 </li><li>HCRX_EL2.{EnSDERR, EnSNERR} == {1, 0}.
 </li></ul>
 
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li><li>EL2 is not implemented or not enabled in the current Security state.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
@@ -357,18 +357,18 @@
 <p>Masked physical SError exceptions are taken to EL2, unless they are routed to EL3.</p>
 
 </li><li>
-<p>If <span class="xref">FEAT_E3DSE</span> is implemented, then masked delegated SError exceptions enabled by <a href="AArch64-scr_el3.html">SCR_EL3</a>.DSE are taken to EL2.</p>
+<p>If <span class="xref">FEAT_E3DSE</span> is implemented, then masked delegated SError exceptions enabled by <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.DSE are taken to EL2.</p>
 
 </li><li>
-<p>If <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 0, then virtual SError exceptions are enabled.</p>
+<p>If <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 0, then virtual SError exceptions are enabled.</p>
 
 </li></ul></td></tr></table><p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
-<li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+<li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li><li>EL2 is not implemented or not enabled in the current Security state.
 </li></ul>
-<p>Virtual SError exceptions are disabled when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.AMO is 0 and the Effective value of HCRX_EL2.TMEA is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
+<p>Virtual SError exceptions are disabled when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.AMO is 0 and the Effective value of HCRX_EL2.TMEA is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
             <span class="binarynumber">'0'</span>.
@@ -382,7 +382,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-18_18-1">EnSNERR, bit [18] <span class="condition">when FEAT_ANERR is implemented</span>:
       </h4><div class="field">
-      <p>Enable Synchronous Normal Read Error. Override <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnANERR.</p>
+      <p>Enable Synchronous Normal Read Error. Override <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnANERR.</p>
     <table class="valuetable"><tr><th>EnSNERR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This field has no effect on External aborts on Normal memory reads in the EL1&amp;0 translation regime.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -395,12 +395,12 @@
 <ul>
 <li>All of the following are true:<ul>
 <li><span class="xref">FEAT_ADERR</span> is implemented.
-</li><li><a href="AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ANERR reads as <span class="binarynumber">0b0010</span>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ANERR reads as <span class="binarynumber">0b0010</span>.
 </li><li>HCRX_EL2.{EnSDERR, EnSNERR} == {0, 1}.
 </li></ul>
 
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li><li>EL2 is not implemented or not enabled in the current Security state.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
@@ -418,16 +418,16 @@
       </h4><div class="field"><p>128-bit System Register trap control. Enable access to 128-bit System Registers that relate to VMSAv9-128 using <span class="instruction">MRRS</span>, <span class="instruction">MSRR</span> instructions.</p>
 <p>If EL1 is using AArch64, accesses to the following registers are trapped to EL2 and reported using EC syndrome value <span class="hexnumber">0x14</span>:</p>
 <ul>
-<li><a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a>.
-</li><li><a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a>.
-</li><li>If <span class="xref">FEAT_THE</span> is implemented, <a href="AArch64-rcwmask_el1.html">RCWMASK_EL1</a>, <a href="AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>.
-</li><li><a href="AArch64-par_el1.html">PAR_EL1</a>.
+<li><a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a>.
+</li><li>If <span class="xref">FEAT_THE</span> is implemented, <a href="/latest_sysreg/AArch64-rcwmask_el1.html">RCWMASK_EL1</a>, <a href="/latest_sysreg/AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-par_el1.html">PAR_EL1</a>.
 </li></ul><table class="valuetable"><tr><th>D128En</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL1 accesses to the specified registers are disabled, and trapped to EL2.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>When EL2 is not implemented or not enabled in the current Security state, the Effective value of this field is 1.</p>
-<p>Otherwise, when the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0, the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
+<p>Otherwise, when the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0, the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
             <span class="binarynumber">'0'</span>.
@@ -444,17 +444,17 @@
 <p>Permits RCWS instructions to generate writes that have the Reduced Coherence property.</p><table class="valuetable"><tr><th>PTTWI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Write accesses generated by RCWS at EL1 and EL0 do not have the Reduced Coherence property.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Write accesses generated by RCWS at EL1 and EL0 have the Reduced Coherence property, if enabled by <a href="AArch64-tcr2_el1.html">TCR2_EL1</a>.PTTWI.</p>
+          <p>Write accesses generated by RCWS at EL1 and EL0 have the Reduced Coherence property, if enabled by <a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a>.PTTWI.</p>
         </td></tr></table><p>The Effective value of this field is 1 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 <p>The Effective value of this field is 0 when all of the following are true:</p>
 <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul>
 <p>This field is permitted to be cached in TLB.</p>
 <p>This field is permitted to be implemented as a read-only field with a fixed value of 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
@@ -471,13 +471,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_15-1">SCTLR2En, bit [15] <span class="condition">when FEAT_SCTLR2 is implemented</span>:
       </h4><div class="field">
-      <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a> Enable. In AArch64 state, accesses to <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a> are trapped to EL2 and reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
+      <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a> Enable. In AArch64 state, accesses to <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a> are trapped to EL2 and reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
     <table class="valuetable"><tr><th>SCTLR2En</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Accesses to <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a> at EL1 are trapped to EL2, unless the access generates a higher priority exception. The value in <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a> is treated as 0.</p>
+          <p>Accesses to <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a> at EL1 are trapped to EL2, unless the access generates a higher priority exception. The value in <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a> is treated as 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>When EL2 is not implemented or not enabled in the current Security state, the Effective value of this field is 1.</p>
-<p>Otherwise, when the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0, the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
+<p>Otherwise, when the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0, the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
             <span class="binarynumber">'0'</span>.
@@ -491,13 +491,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-14_14-1">TCR2En, bit [14] <span class="condition">when FEAT_TCR2 is implemented</span>:
       </h4><div class="field">
-      <p><a href="AArch64-tcr2_el1.html">TCR2_EL1</a> Enable. In AArch64 state, accesses to <a href="AArch64-tcr2_el1.html">TCR2_EL1</a> are trapped to EL2 and reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
+      <p><a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a> Enable. In AArch64 state, accesses to <a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a> are trapped to EL2 and reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
     <table class="valuetable"><tr><th>TCR2En</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Accesses to <a href="AArch64-tcr2_el1.html">TCR2_EL1</a> at EL1 are trapped to EL2, unless the access generates a higher priority exception. The value in <a href="AArch64-tcr2_el1.html">TCR2_EL1</a> is treated as 0.</p>
+          <p>Accesses to <a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a> at EL1 are trapped to EL2, unless the access generates a higher priority exception. The value in <a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a> is treated as 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>When EL2 is not implemented or not enabled in the current Security state, the Effective value of this field is 1.</p>
-<p>Otherwise, when the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0, the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
+<p>Otherwise, when the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0, the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
             <span class="binarynumber">'0'</span>.
@@ -522,13 +522,13 @@
         </td></tr></table><p>The Effective value of this field is 1 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 <p>The Effective value of this field is 0 when all of the following are true:</p>
 <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -551,7 +551,7 @@
         </td></tr></table><p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -580,8 +580,8 @@
 </li></ul>
 <p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
-<li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+<li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li><li>EL2 is not implemented or not enabled in the current Security state.
 </li></ul>
 <p>This field is permitted to be cached in a TLB.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
@@ -600,14 +600,14 @@
       </h4><div class="field">
       <p>Virtual FIQ Interrupt with Superpriority. Enables signaling of virtual FIQ interrupts with Superpriority.</p>
     <table class="valuetable"><tr><th>VFNMI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>When <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VF is 1, a signaled pending virtual FIQ interrupt does not have Superpriority.</p>
+          <p>When <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VF is 1, a signaled pending virtual FIQ interrupt does not have Superpriority.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>When <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VF is 1, a signaled pending virtual FIQ interrupt has Superpriority.</p>
-        </td></tr></table><p>When <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VF is 0, this field has no effect.</p>
+          <p>When <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VF is 1, a signaled pending virtual FIQ interrupt has Superpriority.</p>
+        </td></tr></table><p>When <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VF is 0, this field has no effect.</p>
 <p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -624,14 +624,14 @@
       </h4><div class="field">
       <p>Virtual IRQ Interrupt with Superpriority. Enables signaling of virtual IRQ interrupts with Superpriority.</p>
     <table class="valuetable"><tr><th>VINMI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>When <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VI is 1, a signaled pending virtual IRQ interrupt does not have Superpriority.</p>
+          <p>When <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VI is 1, a signaled pending virtual IRQ interrupt does not have Superpriority.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>When <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VI is 1, a signaled pending virtual IRQ interrupt has Superpriority.</p>
-        </td></tr></table><p>When <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VI is 0, this field has no effect.</p>
+          <p>When <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VI is 1, a signaled pending virtual IRQ interrupt has Superpriority.</p>
+        </td></tr></table><p>When <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VI is 0, this field has no effect.</p>
 <p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -647,8 +647,8 @@
     </div><h4 id="fieldset_0-6_6-1">TALLINT, bit [6] <span class="condition">when FEAT_NMI is implemented</span>:
       </h4><div class="field"><p>Traps the following writes at EL1 using AArch64 to EL2, when EL2 is implemented and enabled:</p>
 <ul>
-<li>MSR (register) writes of <a href="AArch64-allint.html">ALLINT</a>.
-</li><li>MSR (immediate) writes of <a href="AArch64-allint.html">ALLINT</a> with a value of 1.
+<li>MSR (register) writes of <a href="/latest_sysreg/AArch64-allint.html">ALLINT</a>.
+</li><li>MSR (immediate) writes of <a href="/latest_sysreg/AArch64-allint.html">ALLINT</a> with a value of 1.
 </li></ul><table class="valuetable"><tr><th>TALLINT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -656,7 +656,7 @@
         </td></tr></table><p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -671,17 +671,17 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-5_5-1">SMPME, bit [5] <span class="condition">when FEAT_SME is implemented</span>:
       </h4><div class="field"><p>Streaming Mode Priority Mapping Enable.</p>
-<p>Controls mapping of the value of <a href="AArch64-smpri_el1.html">SMPRI_EL1</a>.Priority for streaming execution priority at EL0 or EL1.</p><table class="valuetable"><tr><th>SMPME</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The effective priority value is taken from <a href="AArch64-smpri_el1.html">SMPRI_EL1</a>.Priority.</p>
+<p>Controls mapping of the value of <a href="/latest_sysreg/AArch64-smpri_el1.html">SMPRI_EL1</a>.Priority for streaming execution priority at EL0 or EL1.</p><table class="valuetable"><tr><th>SMPME</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>The effective priority value is taken from <a href="/latest_sysreg/AArch64-smpri_el1.html">SMPRI_EL1</a>.Priority.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td><p>The effective priority value is:</p>
 <ul>
-<li>When the current Exception level is EL2 or EL3, the value of <a href="AArch64-smpri_el1.html">SMPRI_EL1</a>.Priority.
-</li><li>When the current Exception level is EL0 or EL1, the value of the <a href="AArch64-smprimap_el2.html">SMPRIMAP_EL2</a> field corresponding to the value of <a href="AArch64-smpri_el1.html">SMPRI_EL1</a>.Priority.
-</li></ul></td></tr></table><p>When <a href="AArch64-smidr_el1.html">SMIDR_EL1</a>.SMPS is '0', this field is <span class="arm-defined-word">RES0</span>.</p>
+<li>When the current Exception level is EL2 or EL3, the value of <a href="/latest_sysreg/AArch64-smpri_el1.html">SMPRI_EL1</a>.Priority.
+</li><li>When the current Exception level is EL0 or EL1, the value of the <a href="/latest_sysreg/AArch64-smprimap_el2.html">SMPRIMAP_EL2</a> field corresponding to the value of <a href="/latest_sysreg/AArch64-smpri_el1.html">SMPRI_EL1</a>.Priority.
+</li></ul></td></tr></table><p>When <a href="/latest_sysreg/AArch64-smidr_el1.html">SMIDR_EL1</a>.SMPS is '0', this field is <span class="arm-defined-word">RES0</span>.</p>
 <p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
-<li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+<li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li><li>EL2 is not implemented or not enabled in the current Security state.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
@@ -697,15 +697,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-4_4-1">FGTnXS, bit [4] <span class="condition">when FEAT_XS is implemented</span>:
       </h4><div class="field">
-      <p>Determines if the fine-grained traps in <a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a> that apply to each of the TLBI maintenance instructions that are accessible at EL1 also apply to the corresponding TLBI maintenance instructions with the nXS qualifier.</p>
+      <p>Determines if the fine-grained traps in <a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a> that apply to each of the TLBI maintenance instructions that are accessible at EL1 also apply to the corresponding TLBI maintenance instructions with the nXS qualifier.</p>
     <table class="valuetable"><tr><th>FGTnXS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The fine-grained trap in the <a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a> that applies to a TLBI maintenance instruction at EL1 also applies to the corresponding TLBI instruction with the nXS qualifier at EL1.</p>
+          <p>The fine-grained trap in the <a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a> that applies to a TLBI maintenance instruction at EL1 also applies to the corresponding TLBI instruction with the nXS qualifier at EL1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The fine-grained trap in the <a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a> that applies to a TLBI maintenance instruction at EL1 does not apply to the corresponding TLBI instruction with the nXS qualifier at EL1.</p>
+          <p>The fine-grained trap in the <a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a> that applies to a TLBI maintenance instruction at EL1 does not apply to the corresponding TLBI instruction with the nXS qualifier at EL1.</p>
         </td></tr></table><p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -726,7 +726,7 @@
 <p>An AArch64 DSB instruction that applies to both loads and stores executed at EL1 or EL0 behaves in the same way as the corresponding DSB instruction with the nXS qualifier executed at EL1 or EL0.</p></td></tr></table><p>The Effective value of this field is 0 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul>
 <p>This field is permitted to be cached in a TLB.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
@@ -741,11 +741,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-2_2-1">EnASR, bit [2] <span class="condition">when FEAT_LS64_V is implemented</span>:
-      </h4><div class="field"><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, traps execution of the following instructions at EL0 or EL1 to EL2:</p>
+      </h4><div class="field"><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, traps execution of the following instructions at EL0 or EL1 to EL2:</p>
 <ul>
 <li><span class="instruction">ST64BV</span>.
 </li><li>If <span class="xref">FEAT_LSC64B</span> is implemented, <span class="instruction">STL64BV</span>.
-</li></ul><table class="valuetable"><tr><th>EnASR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Execution of the specified instructions at EL0 are trapped to EL2 if the execution is not trapped by <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnASR.</p>
+</li></ul><table class="valuetable"><tr><th>EnASR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Execution of the specified instructions at EL0 are trapped to EL2 if the execution is not trapped by <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnASR.</p>
 <p>Execution of the specified instructions at EL1 are trapped to EL2.</p></td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>A trap of an <span class="instruction">ST64BV</span> instruction is reported using EC syndrome value <span class="hexnumber">0x0A</span>, with an ISS code of <span class="hexnumber">0x0000000</span>.</p>
@@ -753,13 +753,13 @@
 <p>The Effective value of this field is 1 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 <p>The Effective value of this field is 0 when all of the following are true:</p>
 <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -773,11 +773,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-1_1-1">EnALS, bit [1] <span class="condition">when FEAT_LS64 is implemented</span>:
-      </h4><div class="field"><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, traps execution of the following instructions at EL0 or EL1 to EL2:</p>
+      </h4><div class="field"><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, traps execution of the following instructions at EL0 or EL1 to EL2:</p>
 <ul>
 <li><span class="instruction">LD64B</span> or <span class="instruction">ST64B</span>.
 </li><li>If <span class="xref">FEAT_LSC64B</span> is implemented, <span class="instruction">LDA64B</span> or <span class="instruction">STL64B</span>.
-</li></ul><table class="valuetable"><tr><th>EnALS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Execution of the specified instructions at EL0 are trapped to EL2 if the execution is not trapped by <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnALS.</p>
+</li></ul><table class="valuetable"><tr><th>EnALS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Execution of the specified instructions at EL0 are trapped to EL2 if the execution is not trapped by <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnALS.</p>
 <p>Execution of the specified instructions at EL1 are trapped to EL2.</p></td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>A trap of an <span class="instruction">LD64B</span> or <span class="instruction">ST64B</span> instruction is reported using EC syndrome value <span class="hexnumber">0x0A</span>, with an ISS code of <span class="hexnumber">0x0000002</span>.</p>
@@ -785,13 +785,13 @@
 <p>The Effective value of this field is 1 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 <p>The Effective value of this field is 0 when all of the following are true:</p>
 <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -805,11 +805,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-0_0-1">EnAS0, bit [0] <span class="condition">when FEAT_LS64_ACCDATA is implemented</span>:
-      </h4><div class="field"><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, traps execution of the following instructions at EL0 or EL1 to EL2:</p>
+      </h4><div class="field"><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, traps execution of the following instructions at EL0 or EL1 to EL2:</p>
 <ul>
 <li><span class="instruction">ST64BV0</span>.
 </li><li>If <span class="xref">FEAT_LSC64B</span> is implemented, <span class="instruction">STL64BV0</span>.
-</li></ul><table class="valuetable"><tr><th>EnAS0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Execution of the specified instructions at EL0 are trapped to EL2 if the execution is not trapped by <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnAS0.</p>
+</li></ul><table class="valuetable"><tr><th>EnAS0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Execution of the specified instructions at EL0 are trapped to EL2 if the execution is not trapped by <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnAS0.</p>
 <p>Execution of the specified instructions at EL1 are trapped to EL2.</p></td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>A trap of an <span class="instruction">ST64BV0</span> instruction is reported using EC syndrome value <span class="hexnumber">0x0A</span>, with an ISS code of <span class="hexnumber">0x0000001</span>.</p>
@@ -817,13 +817,13 @@
 <p>The Effective value of this field is 1 when any of the following are true:</p>
 <ul>
 <li>EL2 is not implemented or not enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 <p>The Effective value of this field is 0 when all of the following are true:</p>
 <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HXEn is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to

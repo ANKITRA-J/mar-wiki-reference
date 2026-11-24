@@ -5,12 +5,12 @@
         <p>IRS VM Selection Register.</p>
 
       
-        <p>Selects a VM. The 1ofN doorbell configuration of the selected VM can be accessed using <a href="irs_config_frame.irs_vm_dbr.html">IRS_VM_DBR</a>.</p>
+        <p>Selects a VM. The 1ofN doorbell configuration of the selected VM can be accessed using <a href="/latest_sysreg/irs_config_frame.irs_vm_dbr.html">IRS_VM_DBR</a>.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv5_EXT is implemented and (IRS_IDR0.VIRT == '1' and IRS_IDR0.VIRT_ONE_N == '1'). Otherwise, direct accesses to IRS_VM_SELR are <span class="arm-defined-word">RES0</span>.</p>
-        <p>The effects of a write to this register are not guaranteed to have completed before <a href="irs_config_frame.irs_vm_statusr.html">IRS_VM_STATUSR</a>.IDLE is 1.</p>
+        <p>The effects of a write to this register are not guaranteed to have completed before <a href="/latest_sysreg/irs_config_frame.irs_vm_statusr.html">IRS_VM_STATUSR</a>.IDLE is 1.</p>
       <h3>Attributes</h3>
         <p>IRS_VM_SELR is a 32-bit register.</p>
-      <p>This  register is part of the <a href="irs_config_frame.html">IRS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_0-31_16">RES0</a></td><td class="lr" colspan="16"><a href="#fieldset_0-15_0">VM_ID</a></td></tr></tbody></table><h4 id="fieldset_0-31_16">Bits [31:16]:
+      <p>This  register is part of the <a href="/latest_sysreg/irs_config_frame.html">IRS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_0-31_16">RES0</a></td><td class="lr" colspan="16"><a href="#fieldset_0-15_0">VM_ID</a></td></tr></tbody></table><h4 id="fieldset_0-31_16">Bits [31:16]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_0">VM_ID, bits [15:0]:

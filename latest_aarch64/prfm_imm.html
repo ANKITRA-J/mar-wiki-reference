@@ -287,17 +287,17 @@ let tagchecked : boolean = FALSE;</p>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
       <p class="pseudocode">var address : bits(64);
 
-let privileged : boolean = <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="shared_pseudocode.html#global_EL0" title="">EL0</a>;
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescGPR_5" title="">CreateAccDescGPR</a>(<a href="shared_pseudocode.html#enum_MemOp_PREFETCH" title="">MemOp_PREFETCH</a>, nontemporal, privileged,
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="/latest_aarch64/shared_pseudocode.html#global_EL0" title="">EL0</a>;
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescGPR_5" title="">CreateAccDescGPR</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_PREFETCH" title="">MemOp_PREFETCH</a>, nontemporal, privileged,
                                                   tagchecked, t);
 
 if n == 31 then
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
-address = <a href="shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
+address = <a href="/latest_aarch64/shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
 let supports_ir : boolean = IsFeatureImplemented(FEAT_PCDPHINT);
-<a href="shared_pseudocode.html#func_Prefetch_3" title="">Prefetch</a>(address, t[4:0], supports_ir);</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#func_Prefetch_3" title="">Prefetch</a>(address, t[4:0], supports_ir);</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

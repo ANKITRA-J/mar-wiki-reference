@@ -24,8 +24,8 @@
           <p>Events not attributable with any event source are not counted by System PMU &lt;s&gt;, unless overridden by SPMSCR_EL1.SO.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Counting non-attributable events by System PMU &lt;s&gt; is not prevented by this mechanism.</p>
-        </td></tr></table><p>When both <a href="AArch64-spmrootcr_el3.html">SPMROOTCR_EL3</a> and SPMSCR_EL1 are implemented, non-attributable events are counted only if both <a href="AArch64-spmrootcr_el3.html">SPMROOTCR_EL3</a>.NAO is 1 and SPMSCR_EL1.{NAO, SO} is nonzero.</p>
-<p>SPMSCR_EL1.NAO has the opposite reset polarity to <a href="AArch64-spmrootcr_el3.html">SPMROOTCR_EL3</a>.NAO.</p>
+        </td></tr></table><p>When both <a href="/latest_sysreg/AArch64-spmrootcr_el3.html">SPMROOTCR_EL3</a> and SPMSCR_EL1 are implemented, non-attributable events are counted only if both <a href="/latest_sysreg/AArch64-spmrootcr_el3.html">SPMROOTCR_EL3</a>.NAO is 1 and SPMSCR_EL1.{NAO, SO} is nonzero.</p>
+<p>SPMSCR_EL1.NAO has the opposite reset polarity to <a href="/latest_sysreg/AArch64-spmrootcr_el3.html">SPMROOTCR_EL3</a>.NAO.</p>
 <p>This field is optional if Root and Realm states are not implemented. When this field is not implemented, System PMU &lt;s&gt; behaves as if SPMSCR_EL1.NAO is 0, and whether events or monitorable characteristics not attributable with any source can be monitored is controlled by SPMSCR_EL1.SO.</p><p>The reset behavior of this field is:</p><ul><li>On a System PMU reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -48,7 +48,7 @@
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>To access SPMSCR_EL1 for System PMU &lt;s&gt;, set <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL to s.</p>
+        <p>To access SPMSCR_EL1 for System PMU &lt;s&gt;, set <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL to s.</p>
 
       
         <p>SPMSCR_EL1 reads-as-zero and ignores writes if any of the following are true:</p>

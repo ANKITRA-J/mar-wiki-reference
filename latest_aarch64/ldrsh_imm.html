@@ -72,50 +72,50 @@ let regsize : integer{} = 64 &gt;&gt; UInt(opc[0]);
 let nontemporal : boolean = FALSE;
 let tagchecked : boolean = wback || n != 31;
 
-var c : <a href="shared_pseudocode.html#type_Constraint" title="">Constraint</a>;
+var c : <a href="/latest_aarch64/shared_pseudocode.html#type_Constraint" title="">Constraint</a>;
 var wb_unknown : boolean = FALSE;
 if wback &amp;&amp; n == t &amp;&amp; n != 31 then
-    c = ConstrainUnpredictable(<a href="shared_pseudocode.html#enum_Unpredictable_WBOVERLAPLD" title="">Unpredictable_WBOVERLAPLD</a>);
-    assert c IN {<a href="shared_pseudocode.html#enum_Constraint_WBSUPPRESS" title="">Constraint_WBSUPPRESS</a>, <a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
+    c = ConstrainUnpredictable(<a href="/latest_aarch64/shared_pseudocode.html#enum_Unpredictable_WBOVERLAPLD" title="">Unpredictable_WBOVERLAPLD</a>);
+    assert c IN {<a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_WBSUPPRESS" title="">Constraint_WBSUPPRESS</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
     case c of
-        when <a href="shared_pseudocode.html#enum_Constraint_WBSUPPRESS" title="">Constraint_WBSUPPRESS</a> =&gt; wback = FALSE;       // Writeback is suppressed
-        when <a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    wb_unknown = TRUE;   // Writeback is UNKNOWN
-        when <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
-        when <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_WBSUPPRESS" title="">Constraint_WBSUPPRESS</a> =&gt; wback = FALSE;       // Writeback is suppressed
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    wb_unknown = TRUE;   // Writeback is UNKNOWN
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
     end;
 end;</p></div>
   
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
       <p class="pseudocode">var address : bits(64);
 
-let privileged : boolean = <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="shared_pseudocode.html#global_EL0" title="">EL0</a>;
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescGPR_5" title="">CreateAccDescGPR</a>(<a href="shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, nontemporal, privileged,
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="/latest_aarch64/shared_pseudocode.html#global_EL0" title="">EL0</a>;
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescGPR_5" title="">CreateAccDescGPR</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, nontemporal, privileged,
                                                   tagchecked, t);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
 if !postindex then
-    address = <a href="shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
 end;
 
-let data : bits(16) = <a href="shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{16}(address, accdesc);
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{regsize}(t) = SignExtend{regsize}(data);
+let data : bits(16) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{16}(address, accdesc);
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{regsize}(t) = SignExtend{regsize}(data);
 
 if wback then
     if wb_unknown then
         address = ARBITRARY : bits(64);
     elsif postindex then
-        address = <a href="shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
+        address = <a href="/latest_aarch64/shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
     end;
     if n == 31 then
-        <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}() = address;
+        <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}() = address;
     else
-        <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n) = address;
+        <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n) = address;
     end;
 end;</p></div>
   <h2>Operational information</h2>

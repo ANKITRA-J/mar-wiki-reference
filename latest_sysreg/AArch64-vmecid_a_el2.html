@@ -12,7 +12,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_0">MECID, bits [15:0]:
       </h4><div class="field"><p>If MECIDWidth is less than 16 bits, bits[15:MECIDWidth] are <span class="arm-defined-word">RES0</span>.</p>
-<div class="note"><p>MECIDWidth is defined in <a href="AArch64-mecidr_el2.html">MECIDR_EL2</a>.MECIDWidthm1.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<div class="note"><p>MECIDWidth is defined in <a href="/latest_sysreg/AArch64-mecidr_el2.html">MECIDR_EL2</a>.MECIDWidthm1.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, VMECID_A_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b1010, CRm = 0b1001, op2 = 0b001)

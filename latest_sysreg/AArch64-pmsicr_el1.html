@@ -19,19 +19,19 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-31_0">COUNT, bits [31:0]:
       </h4><div class="field"><p>Primary sample interval counter. Provides the primary counter used for sampling.</p>
-<p>When the PE moves from a state or Exception level where profiling is disabled to a state or Exception level where profiling is enabled, if the value of this register is zero, then the primary counter is loaded from <a href="AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.</p>
+<p>When the PE moves from a state or Exception level where profiling is disabled to a state or Exception level where profiling is enabled, if the value of this register is zero, then the primary counter is loaded from <a href="/latest_sysreg/AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.</p>
 <p>While the primary counter is nonzero and sampling is enabled, the primary counter decrements by 1 for each member of the sample population.</p>
-<p>The sample interval counter counts either a number of operations or a number of instructions, depending on the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value of <a href="AArch64-pmsidr_el1.html">PMSIDR_EL1</a>.ArchInst.</p>
-<p>When the counter reaches zero, the behavior depends on the value of <a href="AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.RND and whether <span class="xref">FEAT_SPE_ERnd</span> is implemented:</p>
+<p>The sample interval counter counts either a number of operations or a number of instructions, depending on the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value of <a href="/latest_sysreg/AArch64-pmsidr_el1.html">PMSIDR_EL1</a>.ArchInst.</p>
+<p>When the counter reaches zero, the behavior depends on the value of <a href="/latest_sysreg/AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.RND and whether <span class="xref">FEAT_SPE_ERnd</span> is implemented:</p>
 <ul>
-<li>If <a href="AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.RND is 1 and <span class="xref">FEAT_SPE_ERnd</span> is implemented, then the secondary counter is set to a random or pseudorandom value in the range <span class="hexnumber">0x00</span> to <span class="hexnumber">0xFF</span>.
+<li>If <a href="/latest_sysreg/AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.RND is 1 and <span class="xref">FEAT_SPE_ERnd</span> is implemented, then the secondary counter is set to a random or pseudorandom value in the range <span class="hexnumber">0x00</span> to <span class="hexnumber">0xFF</span>.
 </li><li>Otherwise, a member of the sampling population is selected for sampling.
-</li><li>The primary counter is loaded from <a href="AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.
+</li><li>The primary counter is loaded from <a href="/latest_sysreg/AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.
 </li></ul>
-<p>The primary counter is loaded from <a href="AArch64-pmsirr_el1.html">PMSIRR_EL1</a> means:</p>
+<p>The primary counter is loaded from <a href="/latest_sysreg/AArch64-pmsirr_el1.html">PMSIRR_EL1</a> means:</p>
 <ul>
-<li>PMSICR_EL1.COUNT[31:8] is set to the value of <a href="AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.INTERVAL.
-</li><li>If <a href="AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.RND is 1 and <span class="xref">FEAT_SPE_ERnd</span> is not implemented, then PMSICR_EL1.COUNT[7:0] is set to a random or pseudorandom value in the range <span class="hexnumber">0x00</span> to <span class="hexnumber">0xFF</span>.
+<li>PMSICR_EL1.COUNT[31:8] is set to the value of <a href="/latest_sysreg/AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.INTERVAL.
+</li><li>If <a href="/latest_sysreg/AArch64-pmsirr_el1.html">PMSIRR_EL1</a>.RND is 1 and <span class="xref">FEAT_SPE_ERnd</span> is not implemented, then PMSICR_EL1.COUNT[7:0] is set to a random or pseudorandom value in the range <span class="hexnumber">0x00</span> to <span class="hexnumber">0xFF</span>.
 </li><li>Otherwise, PMSICR_EL1.COUNT[7:0] is set to <span class="hexnumber">0x00</span>.
 </li></ul>
 <p>For more information, see <span class="xref">Initializing the sample interval counters</span> and <span class="xref">Behavior of the sample interval counter while profiling is enabled</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 

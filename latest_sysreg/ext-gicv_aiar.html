@@ -5,7 +5,7 @@
         <p>Provides the INTID of the signaled Group 1 virtual interrupt. A read of this register by the PE acts as an acknowledge for the interrupt.</p>
 
       
-        <p>This register corresponds to the physical CPU interface register <a href="ext-gicc_aiar.html">GICC_AIAR</a>.</p>
+        <p>This register corresponds to the physical CPU interface register <a href="/latest_sysreg/ext-gicc_aiar.html">GICC_AIAR</a>.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv3_LEGACY is implemented and EL2 is implemented. Otherwise, direct accesses to GICV_AIAR are <span class="arm-defined-word">RES0</span>.</p>
         <p>This register is available when the GIC implementation supports interrupt virtualization.</p>
       <h3>Attributes</h3>
@@ -19,14 +19,14 @@
 <ul>
 <li>Bits [23:13] are <span class="arm-defined-word">RES0</span>.
 </li><li>For SGIs, bits [12:10] identify the CPU interface corresponding to the source PE. For all other interrupts these bits are <span class="arm-defined-word">RES0</span>.
-</li></ul></div><h4>Additional information</h4><div class="text_after_fields"><p>The operation of this register is similar to the operation of <a href="ext-gicv_iar.html">GICV_IAR</a>. When a vPE reads this register, the corresponding <a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.Group field is checked to determine whether the interrupt is in Group 0 or Group 1:</p>
+</li></ul></div><h4>Additional information</h4><div class="text_after_fields"><p>The operation of this register is similar to the operation of <a href="/latest_sysreg/ext-gicv_iar.html">GICV_IAR</a>. When a vPE reads this register, the corresponding <a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.Group field is checked to determine whether the interrupt is in Group 0 or Group 1:</p>
 <ul>
 <li>If the interrupt is Group 0, the spurious INTID 1023 is returned and the interrupt is not acknowledged.
-</li><li>If the interrupt is Group 1, the INTID is returned. The List register entry is updated to active state, and the appropriate bit in <a href="ext-gich_aprn.html">GICH_APR&lt;n&gt;</a> is set to 1.
+</li><li>If the interrupt is Group 1, the INTID is returned. The List register entry is updated to active state, and the appropriate bit in <a href="/latest_sysreg/ext-gich_aprn.html">GICH_APR&lt;n&gt;</a> is set to 1.
 </li></ul>
 <p>A read of this register returns the spurious INTID 1023 if any of the following are true:</p>
 <ul>
-<li>When the virtual CPU interface is enabled and <a href="ext-gich_hcr.html">GICH_HCR</a>.En == 1:<ul>
+<li>When the virtual CPU interface is enabled and <a href="/latest_sysreg/ext-gich_hcr.html">GICH_HCR</a>.En == 1:<ul>
 <li>There are no pending interrupts of sufficiently high priority value to be signaled to the PE.
 </li><li>The highest priority pending interrupt is in Group 0.
 </li></ul>
@@ -37,12 +37,12 @@
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-icc_iar1.html">ICC_IAR1</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-icc_iar1_el1.html">ICC_IAR1_EL1</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-icc_iar1.html">ICC_IAR1</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-icc_iar1_el1.html">ICC_IAR1_EL1</a> provides equivalent functionality.
 </li></ul>
 
       
-        <p>This register is used for Group 1 interrupts only. <a href="ext-gicv_iar.html">GICV_IAR</a> provides equivalent functionality for Group 0 interrupts.</p>
+        <p>This register is used for Group 1 interrupts only. <a href="/latest_sysreg/ext-gicv_iar.html">GICV_IAR</a> provides equivalent functionality for Group 0 interrupts.</p>
 
       
         <p>When affinity routing is enabled, it is a programming error to use memory-mapped registers to access the GIC.</p>

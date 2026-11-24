@@ -103,11 +103,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-34_34-1">PnCH, bit [34] <span class="condition">when FEAT_THE is implemented</span>:
       </h4><div class="field">
-      <p>Protected attribute enable. Enables use of bit[52] of the stage 1 translation table entries as the Protected bit, for translations using <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
+      <p>Protected attribute enable. Enables use of bit[52] of the stage 1 translation table entries as the Protected bit, for translations using <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
     <table class="valuetable"><tr><th>PnCH</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>, bit[52] of each stage 1 translation table entry is not the Protected bit.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>, bit[52] of each stage 1 translation table entry is not the Protected bit.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>, bit[52] of each stage 1 translation table entry is the Protected bit.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>, bit[52] of each stage 1 translation table entry is the Protected bit.</p>
         </td></tr></table><p>If bit[52] is used as the Protected bit, it is not used as the Contiguous bit.</p>
 <p>This field is <span class="arm-defined-word">RES0</span> when TCR_EL3.D128 is 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -116,7 +116,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-33_33-1">MTX, bit [33] <span class="condition">when FEAT_MTE_NO_ADDRESS_TAGS is implemented or FEAT_MTE_CANONICAL_TAGS is implemented</span>:
       </h4><div class="field"><p>Extended memory tag checking.</p>
-<p>This field controls address generation and Canonical tagging when EL3 is using AArch64 where the data address would be translated by tables pointed to by <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
+<p>This field controls address generation and Canonical tagging when EL3 is using AArch64 where the data address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
 <p>This control has an effect regardless of whether stage 1 of the EL3 translation regime is enabled or not.</p><table class="valuetable"><tr><th>MTX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Canonical tagging is disabled.</p>
 <p>This control has no effect on address generation.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>Canonical tagging is enabled.</p>
 <p>Bits[59:56] of a 64-bit VA hold a Logical Address Tag, and all of the following apply:</p>
@@ -145,7 +145,7 @@
 <p>The shareability information of Block and Page descriptors for cacheable locations is determined by TCR_EL3.SH0.</p>
 <p>The minimum value of TCR_EL3.T0SZ is 12. Any memory access using a smaller value generates a stage 1 level 0 translation table fault.</p>
 <p>All calculations of the stage 1 base address are modified for tables of fewer than 8 entries so that the table is aligned to 64 bytes.</p>
-<p>Bits[5:2] of <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a> are used to hold bits[51:48] of the output address in all cases.</p>
+<p>Bits[5:2] of <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a> are used to hold bits[51:48] of the output address in all cases.</p>
 <div class="note"><p>As <span class="xref">FEAT_LVA</span> must be implemented if TCR_EL3.DS == 1, the minimum value of the TCR_EL3.T0SZ field is 12, as determined by that extension.</p></div><p>For the TLBI Range instructions affecting VA, the format of the argument is changed so that bits[36:0] hold BaseADDR[52:16]. For the 4KB translation granule, bits[15:12] of BaseADDR are treated as <span class="binarynumber">0b0000</span>. For the 16KB translation granule, bits[15:14] of BaseADDR are treated as <span class="binarynumber">0b00</span>.</p>
 <div class="note"><p>This forces alignment of the ranges used by the TLBI range instructions.</p></div></td></tr></table>
       <p>This field is <span class="arm-defined-word">RES0</span> for a 64KB translation granule.</p>
@@ -178,7 +178,7 @@
           <p>TCR_EL3.TBI applies to Instruction and Data accesses.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>TCR_EL3.TBI applies to Data accesses only.</p>
-        </td></tr></table><p>This affects addresses where the address would be translated by tables pointed to by <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>. It has an effect whether the EL3 translation regime is enabled or not.</p>
+        </td></tr></table><p>This affects addresses where the address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>. It has an effect whether the EL3 translation regime is enabled or not.</p>
 <p>For the purpose of this field, all cache maintenance and address translation instructions that perform address translation are treated as data accesses.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-29_29-2"> <span class="condition">Otherwise</span>:
@@ -242,7 +242,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-24_24-1">HPD, bit [24] <span class="condition">when FEAT_HPDS is implemented</span>:
       </h4><div class="field">
-      <p>Hierarchical Permission Disables. This affects the hierarchical control bits, APTable, PXNTable, and UXNTable, except NSTable, in the translation tables pointed to by <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
+      <p>Hierarchical Permission Disables. This affects the hierarchical control bits, APTable, PXNTable, and UXNTable, except NSTable, in the translation tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
     <table class="valuetable"><tr><th>HPD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Hierarchical permissions are enabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td><p>Hierarchical permissions are disabled.</p>
@@ -284,12 +284,12 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-20_20">TBI, bit [20]:
       </h4><div class="field">
-      <p>Top Byte Ignored. Indicates whether the top byte of an address is used for address match for the <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a> region, or ignored and used for tagged addresses.</p>
+      <p>Top Byte Ignored. Indicates whether the top byte of an address is used for address match for the <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a> region, or ignored and used for tagged addresses.</p>
     <table class="valuetable"><tr><th>TBI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Top Byte used in the address calculation.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Top Byte ignored in the address calculation.</p>
-        </td></tr></table><p>This affects addresses generated at EL3 using AArch64 where the address would be translated by tables pointed to by <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>. It has an effect whether the EL3 translation regime is enabled or not.</p>
+        </td></tr></table><p>This affects addresses generated at EL3 using AArch64 where the address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>. It has an effect whether the EL3 translation regime is enabled or not.</p>
 <p>If <span class="xref">FEAT_PAuth</span> is implemented and TCR_EL3.TBID is 1, then this field only applies to Data accesses.</p>
 <p>Otherwise, if the value of TBI is 1, then bits[63:56] of that target address are also set to 0 before the address is stored in the PC, in the following cases:</p>
 <ul>
@@ -325,16 +325,16 @@
         </td></tr></table><p>The values <span class="binarynumber">0b110</span> and <span class="binarynumber">0b111</span> represent different output address sizes depending on implementation choices and translation configuration.</p>
 <p>The following table captures the output address size represented by the value <span class="binarynumber">0b110</span>:</p>
 <table class="valuetable"><thead><tr><th>Descriptor Format</th><th>ID_AA64MMFR0_EL1.PARange</th><th>Translation Granule</th><th>DS<sup>1</sup></th><th>Represented OA size</th></tr></thead><tbody><tr><td>Any</td><td><span class="binarynumber">0b0101</span></td><td>Any</td><td>Any</td><td>48 bits, 256TB</td></tr><tr><td>VMSAv8-64</td><td><span class="binarynumber">0b011x</span></td><td>4KB or 16KB</td><td>0</td><td>48 bits, 256TB</td></tr><tr><td>VMSAv8-64</td><td><span class="binarynumber">0b011x</span></td><td>4KB or 16KB</td><td>1</td><td>52 bits, 4PB</td></tr><tr><td>VMSAv8-64</td><td><span class="binarynumber">0b011x</span></td><td>64KB</td><td>N/A</td><td>52 bits, 4PB</td></tr><tr><td>VMSAv9-128</td><td><span class="binarynumber">0b011x</span></td><td>Any</td><td>N/A</td><td>52 bits, 4PB</td></tr></tbody></table>
-<p><sup>1</sup> This column represents the Effective value of <a href="AArch64-tcr_el3.html">TCR_EL3</a>.DS.</p>
+<p><sup>1</sup> This column represents the Effective value of <a href="/latest_sysreg/AArch64-tcr_el3.html">TCR_EL3</a>.DS.</p>
 <p>The following table captures the output address size represented by the value <span class="binarynumber">0b111</span>:</p>
 <table class="valuetable"><thead><tr><th>Descriptor Format</th><th>ID_AA64MMFR0_EL1.PARange</th><th>Translation Granule</th><th>Represented OA size</th></tr></thead><tbody><tr><td>Any</td><td><span class="binarynumber">0b0110</span></td><td>Any</td><td>OA size represented by<span class="binarynumber">0b110</span></td></tr><tr><td>VMSAv8-64</td><td><span class="binarynumber">0b0111</span></td><td>Any</td><td>OA size represented by<span class="binarynumber">0b110</span></td></tr><tr><td>VMSAv9-128</td><td><span class="binarynumber">0b0111</span></td><td>Any</td><td>56 bits, 64PB</td></tr></tbody></table>
-<p>If 52-bit PA is supported, and the translation table descriptors cannot express an OA larger than 48-bits, then bits[51:48] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by <a href="AArch64-tcr_el3.html">TCR_EL3</a>.</p>
-<p>If 56-bit PA is supported, and the translation table descriptors cannot express an OA larger than 52-bits, then bits[55:52] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by <a href="AArch64-tcr_el3.html">TCR_EL3</a>.</p>
-<p>If the output address size represented by this field is larger than the supported PA size expressed in <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange, then the output address size is treated as being the same as the supported PA size. Arm strongly recommends that software avoids configuring this field to a value representing an output address size larger than the supported PA size.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If 52-bit PA is supported, and the translation table descriptors cannot express an OA larger than 48-bits, then bits[51:48] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by <a href="/latest_sysreg/AArch64-tcr_el3.html">TCR_EL3</a>.</p>
+<p>If 56-bit PA is supported, and the translation table descriptors cannot express an OA larger than 52-bits, then bits[55:52] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by <a href="/latest_sysreg/AArch64-tcr_el3.html">TCR_EL3</a>.</p>
+<p>If the output address size represented by this field is larger than the supported PA size expressed in <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange, then the output address size is treated as being the same as the supported PA size. Arm strongly recommends that software avoids configuring this field to a value representing an output address size larger than the supported PA size.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-15_14">TG0, bits [15:14]:
       </h4><div class="field">
-      <p>Granule size for the <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
+      <p>Granule size for the <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
     <table class="valuetable"><tr><th>TG0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>4KB.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -347,7 +347,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-13_12">SH0, bits [13:12]:
       </h4><div class="field">
-      <p>Shareability attribute for memory associated with translation table walks using <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
+      <p>Shareability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
     <table class="valuetable"><tr><th>SH0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Non-shareable.</p>
         </td></tr><tr><td class="bitfield">0b10</td><td>
@@ -360,7 +360,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-11_10">ORGN0, bits [11:10]:
       </h4><div class="field">
-      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
+      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
     <table class="valuetable"><tr><th>ORGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Outer Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -373,7 +373,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-9_8">IRGN0, bits [9:8]:
       </h4><div class="field">
-      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
+      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p>
     <table class="valuetable"><tr><th>IRGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Inner Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -388,7 +388,7 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-5_0">T0SZ, bits [5:0]:
-      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>. The region size is 2<sup>(64-T0SZ)</sup> bytes.</p>
+      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>. The region size is 2<sup>(64-T0SZ)</sup> bytes.</p>
 <p>The maximum and minimum possible values for T0SZ depend on the level of translation table and the memory translation granule size, as described in the AArch64 Virtual Memory System Architecture chapter. It has an effect on computation of PAC whether the EL3 translation regime is enabled or not.</p>
 <div class="note"><p>For the 4KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented, TCR_EL3.DS is 1, and this field is less than 16, the translation table walk begins with a level -1 initial lookup.</p><p>For the 16KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented, TCR_EL3.DS is 1, and this field is less than 17, the translation table walk begins with a level 0 initial lookup.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

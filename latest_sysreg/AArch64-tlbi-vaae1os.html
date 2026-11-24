@@ -21,10 +21,10 @@
 <p>When EL2 is implemented and enabled in the current Security state:</p>
 <ul>
 <li>
-<p>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, the entry would be used with the current VMID and would be required to translate the specified VA using the EL1&amp;0 translation regime for the Security state.</p>
+<p>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, the entry would be used with the current VMID and would be required to translate the specified VA using the EL1&amp;0 translation regime for the Security state.</p>
 
 </li><li>
-<p>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, the entry would be required to translate the specified VA using the EL2&amp;0 translation regime for the Security state.</p>
+<p>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, the entry would be required to translate the specified VA using the EL2&amp;0 translation regime for the Security state.</p>
 
 </li></ul>
 
@@ -32,7 +32,7 @@
 <p>When EL2 is not implemented or is disabled in the current Security state, the entry would be required to translate the specified VA using the EL1&amp;0 translation regime for the Security state.</p>
 
 </li><li>
-<p>The Security state is indicated by the value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.NS if <span class="xref">FEAT_RME</span> is not implemented, or <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} if <span class="xref">FEAT_RME</span> is implemented.</p>
+<p>The Security state is indicated by the value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS if <span class="xref">FEAT_RME</span> is not implemented, or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} if <span class="xref">FEAT_RME</span> is implemented.</p>
 
 </li></ul>
 
@@ -41,7 +41,7 @@
 
       
         <div class="note"><p>When
-a TLB maintenance instruction is generated to the Secure EL1&amp;0 translation regime and is defined to pass a VMID argument, or would be defined to pass a VMID argument if <a href="AArch64-scr_el3.html">SCR_EL3</a>.EEL2==1, then:</p><ul><li>A PE with <a href="AArch64-scr_el3.html">SCR_EL3</a>.EEL2==1 is not architecturally required to invalidate any entries in the Secure EL1&amp;0 translation of a PE in the same required shareability domain with <a href="AArch64-scr_el3.html">SCR_EL3</a>.EEL2==0.</li><li>A PE with <a href="AArch64-scr_el3.html">SCR_EL3</a>.EEL2==0 is not architecturally required to invalidate any entries in the Secure EL1&amp;0 translation of a PE in the same required shareability domain with <a href="AArch64-scr_el3.html">SCR_EL3</a>.EEL2==1.</li><li>A PE is architecturally required to invalidate all relevant entries in the Secure EL1&amp;0 translation of a System MMU in the same required shareability domain with a VMID of 0.</li></ul></div>
+a TLB maintenance instruction is generated to the Secure EL1&amp;0 translation regime and is defined to pass a VMID argument, or would be defined to pass a VMID argument if <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EEL2==1, then:</p><ul><li>A PE with <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EEL2==1 is not architecturally required to invalidate any entries in the Secure EL1&amp;0 translation of a PE in the same required shareability domain with <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EEL2==0.</li><li>A PE with <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EEL2==0 is not architecturally required to invalidate any entries in the Secure EL1&amp;0 translation of a PE in the same required shareability domain with <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EEL2==1.</li><li>A PE is architecturally required to invalidate all relevant entries in the Secure EL1&amp;0 translation of a System MMU in the same required shareability domain with a VMID of 0.</li></ul></div>
       
         <div class="note"><p>For the EL1&amp;0 and EL2&amp;0 translation regimes, the invalidation applies to both global entries and non-global entries with any ASID.</p></div>
       

@@ -11,24 +11,24 @@
 </li></ul>
 
       
-        <p>If an implementation uses a shared SMCU, then the MPAM labels in this register have precedence over the labels in <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a>, <a href="AArch64-mpam1_el1.html">MPAM1_EL1</a>, <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>, and <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
+        <p>If an implementation uses a shared SMCU, then the MPAM labels in this register have precedence over the labels in <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a>, <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1</a>, <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>, and <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
 
       
-        <p>If an implementation includes an SMCU that is not shared with other PEs, then it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether the MPAM labels in this register have precedence over the labels in <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a>, <a href="AArch64-mpam1_el1.html">MPAM1_EL1</a>, <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>, and <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
+        <p>If an implementation includes an SMCU that is not shared with other PEs, then it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether the MPAM labels in this register have precedence over the labels in <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a>, <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1</a>, <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>, and <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
 
       
-        <p>When <span class="xref">FEAT_MPAMv1p0</span> or <span class="xref">FEAT_MPAMv0p1</span> is implemented, the MPAM labels in this register are used if <a href="AArch64-mpam1_el1.html">MPAM1_EL1</a>.MPAMEN is 1.</p>
+        <p>When <span class="xref">FEAT_MPAMv1p0</span> or <span class="xref">FEAT_MPAMv0p1</span> is implemented, the MPAM labels in this register are used if <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1</a>.MPAMEN is 1.</p>
 
       
-        <p>When <span class="xref">FEAT_MPAMv2</span> is implemented, the MPAM labels in this register are used if <a href="AArch64-mpamctl_el1.html">MPAMCTL_EL1</a>.MPAMEN is 1. </p>
+        <p>When <span class="xref">FEAT_MPAMv2</span> is implemented, the MPAM labels in this register are used if <a href="/latest_sysreg/AArch64-mpamctl_el1.html">MPAMCTL_EL1</a>.MPAMEN is 1. </p>
 
       
         <p>For memory requests issued from EL0, the MPAM PARTID in this register is virtual and mapped into a physical PARTID when all of the following are true:</p>
 
       
         <ul>
-<li>EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
-</li><li>The MPAM virtualization option is implemented and <a href="AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL0_VPMEN is 1.
+<li>EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>The MPAM virtualization option is implemented and <a href="/latest_sysreg/AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL0_VPMEN is 1.
 </li></ul>
 
       
@@ -37,7 +37,7 @@
       
         <ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The MPAM virtualization option is implemented and <a href="AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL1_VPMEN is 1.
+</li><li>The MPAM virtualization option is implemented and <a href="/latest_sysreg/AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL1_VPMEN is 1.
 </li></ul>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_MPAM is implemented and FEAT_SME is implemented. Otherwise, direct accesses to MPAMSM_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>MPAMSM_EL1 is a 64-bit register.</p>

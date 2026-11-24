@@ -5,7 +5,7 @@
         <p>This register indicates the running priority of the virtual CPU interface.</p>
 
       
-        <p>This register corresponds to the physical CPU interface register <a href="ext-gicc_rpr.html">GICC_RPR</a>.</p>
+        <p>This register corresponds to the physical CPU interface register <a href="/latest_sysreg/ext-gicc_rpr.html">GICC_RPR</a>.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv3_LEGACY is implemented and EL2 is implemented. Otherwise, direct accesses to GICV_RPR are <span class="arm-defined-word">RES0</span>.</p>
         <p>This register is available when the GIC implementation supports interrupt virtualization.</p>
       <h3>Attributes</h3>
@@ -21,12 +21,12 @@
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-icc_rpr.html">ICC_RPR</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-icc_rpr_el1.html">ICC_RPR_EL1</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-icc_rpr.html">ICC_RPR</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-icc_rpr_el1.html">ICC_RPR_EL1</a> provides equivalent functionality.
 </li></ul>
 
       
-        <p>Depending on the implementation, if no bits are set to 1 in <a href="ext-gich_aprn.html">GICH_APR&lt;n&gt;</a>, indicating no active virtual interrupts in the virtual CPU interface, the priority reads as <span class="hexnumber">0xFF</span> or <span class="hexnumber">0xF8</span> to reflect the number of supported interrupt priority bits defined by <a href="ext-gich_vtr.html">GICH_VTR</a>.PRIbits.</p>
+        <p>Depending on the implementation, if no bits are set to 1 in <a href="/latest_sysreg/ext-gich_aprn.html">GICH_APR&lt;n&gt;</a>, indicating no active virtual interrupts in the virtual CPU interface, the priority reads as <span class="hexnumber">0xFF</span> or <span class="hexnumber">0xF8</span> to reflect the number of supported interrupt priority bits defined by <a href="/latest_sysreg/ext-gich_vtr.html">GICH_VTR</a>.PRIbits.</p>
       <h4>GICV_RPR can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Virtual CPU interface</td><td><span class="hexnumber">0x0014</span></td><td>GICV_RPR</td></tr></table><p>Accessible as follows:</p><ul><li>When GICD_CTLR.DS == '0', accesses to this register are <span class="access_level">RO</span>.
           </li><li>When an access is Secure, accesses to this register are <span class="access_level">RO</span>.
           </li><li>When an access is Non-secure, accesses to this register are <span class="access_level">RO</span>.

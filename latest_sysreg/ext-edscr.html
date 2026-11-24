@@ -3,7 +3,7 @@
 <title>EDSCR | Jon's Arm Reference</title><meta name="description" content="Main control register for the debug implementation."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">EDSCR</h1><p class="insn_subtitle" data-pagefind-body="1">External Debug Status and Control Register</p><div data-pagefind-body="1">
         <p>Main control register for the debug implementation.</p>
-      </div><h3>Configuration</h3><p>External register EDSCR bits [31:29, 27:26, 23:21, 19, 14, 6] are architecturally mapped to AArch64 System register <a href="AArch64-mdscr_el1.html">MDSCR_EL1[31:29, 27:26, 23:21, 19, 14, 6]</a> when FEAT_AA64 is implemented.</p><p>External register EDSCR bits [31:29, 27:26, 23:21, 19, 14, 6] are architecturally mapped to AArch32 System register <a href="AArch32-dbgdscrext.html">DBGDSCRext[31:29, 27:26, 23:21, 19, 14, 6]</a> when FEAT_AA32EL1 is implemented.</p><p>External register EDSCR bits [30:29] are architecturally mapped to AArch64 System register <a href="AArch64-mdccsr_el0.html">MDCCSR_EL0[30:29]</a> when FEAT_AA64 is implemented.</p><p>External register EDSCR bits [30:29] are architecturally mapped to AArch32 System register <a href="AArch32-dbgdscrint.html">DBGDSCRint[30:29]</a> when FEAT_AA32EL0 is implemented.</p><p>EDSCR is in the Core power domain.
+      </div><h3>Configuration</h3><p>External register EDSCR bits [31:29, 27:26, 23:21, 19, 14, 6] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1[31:29, 27:26, 23:21, 19, 14, 6]</a> when FEAT_AA64 is implemented.</p><p>External register EDSCR bits [31:29, 27:26, 23:21, 19, 14, 6] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext[31:29, 27:26, 23:21, 19, 14, 6]</a> when FEAT_AA32EL1 is implemented.</p><p>External register EDSCR bits [30:29] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-mdccsr_el0.html">MDCCSR_EL0[30:29]</a> when FEAT_AA64 is implemented.</p><p>External register EDSCR bits [30:29] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-dbgdscrint.html">DBGDSCRint[30:29]</a> when FEAT_AA32EL0 is implemented.</p><p>EDSCR is in the Core power domain.
     </p><h3>Attributes</h3>
         <p>EDSCR is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-31_31-1">TFO</a></td><td class="lr" colspan="1"><a href="#fieldset_0-30_30">RXfull</a></td><td class="lr" colspan="1"><a href="#fieldset_0-29_29">TXfull</a></td><td class="lr" colspan="1"><a href="#fieldset_0-28_28">ITO</a></td><td class="lr" colspan="1"><a href="#fieldset_0-27_27">RXO</a></td><td class="lr" colspan="1"><a href="#fieldset_0-26_26">TXU</a></td><td class="lr" colspan="1"><a href="#fieldset_0-25_25">PipeAdv</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_24">ITE</a></td><td class="lr" colspan="2"><a href="#fieldset_0-23_22-1">INTdis</a></td><td class="lr" colspan="1"><a href="#fieldset_0-21_21">TDA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-20_20">MA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-19_19-1">SC2</a></td><td class="lr" colspan="1"><a href="#fieldset_0-18_18-1">NS</a></td><td class="lr" colspan="1"><a href="#fieldset_0-17_17">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-16_16-1">SDD</a></td><td class="lr" colspan="1"><a href="#fieldset_0-15_15-1">NSE</a></td><td class="lr" colspan="1"><a href="#fieldset_0-14_14">HDE</a></td><td class="lr" colspan="4"><a href="#fieldset_0-13_10">RW</a></td><td class="lr" colspan="2"><a href="#fieldset_0-9_8">EL</a></td><td class="lr" colspan="1"><a href="#fieldset_0-7_7">A</a></td><td class="lr" colspan="1"><a href="#fieldset_0-6_6">ERR</a></td><td class="lr" colspan="6"><a href="#fieldset_0-5_0">STATUS</a></td></tr></tbody></table><h4 id="fieldset_0-31_31-1">TFO, bit [31] <span class="condition">when FEAT_TRF is implemented</span>:
@@ -11,12 +11,12 @@
       <p>Trace Filter Override. Overrides the Trace Filter controls allowing the external debugger to trace any visible Exception level.</p>
     <table class="valuetable"><tr><th>TFO</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Trace Filter controls are not affected.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>Trace Filter controls in <a href="AArch64-trfcr_el1.html">TRFCR_EL1</a> and <a href="AArch64-trfcr_el2.html">TRFCR_EL2</a> are ignored.</p>
-<p>Trace Filter controls <a href="AArch32-trfcr.html">TRFCR</a> and <a href="AArch32-htrfcr.html">HTRFCR</a> are ignored.</p></td></tr></table><p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>Trace Filter controls in <a href="/latest_sysreg/AArch64-trfcr_el1.html">TRFCR_EL1</a> and <a href="/latest_sysreg/AArch64-trfcr_el2.html">TRFCR_EL2</a> are ignored.</p>
+<p>Trace Filter controls <a href="/latest_sysreg/AArch32-trfcr.html">TRFCR</a> and <a href="/latest_sysreg/AArch32-htrfcr.html">HTRFCR</a> are ignored.</p></td></tr></table><p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
 <p>This bit is ignored by the PE when any of the following is true:</p>
 <ul>
-<li><span class="function">ExternalSecureNoninvasiveDebugEnabled()</span> is FALSE and the Effective value of <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.STE is 1.
-</li><li>FEAT_RME is implemented, <span class="function">ExternalRealmNoninvasiveDebugEnabled()</span> is FALSE, and the Effective value of <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.RLTE is 1.
+<li><span class="function">ExternalSecureNoninvasiveDebugEnabled()</span> is FALSE and the Effective value of <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.STE is 1.
+</li><li>FEAT_RME is implemented, <span class="function">ExternalRealmNoninvasiveDebugEnabled()</span> is FALSE, and the Effective value of <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.RLTE is 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -27,7 +27,7 @@
       </h4><div class="field">
       <p>DTRRX full.</p>
     
-      <p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
+      <p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -35,7 +35,7 @@
       </h4><div class="field">
       <p>DTRTX full.</p>
     
-      <p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
+      <p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -53,7 +53,7 @@
       </h4><div class="field">
       <p>DTRRX overrun.</p>
     
-      <p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
+      <p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -61,7 +61,7 @@
       </h4><div class="field">
       <p>DTRTX underrun.</p>
     
-      <p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
+      <p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -69,9 +69,9 @@
       </h4><div class="field">
       <p>Pipeline Advance. Indicates that software execution is progressing.</p>
     <table class="valuetable"><tr><th>PipeAdv</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>No progress has been made by the PE since the last time this field was cleared to zero by writing 1 to <a href="ext-edrcr.html">EDRCR</a>.CSPA.</p>
+          <p>No progress has been made by the PE since the last time this field was cleared to zero by writing 1 to <a href="/latest_sysreg/ext-edrcr.html">EDRCR</a>.CSPA.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Progress has been made by the PE since the last time this field was cleared to zero by writing 1 to <a href="ext-edrcr.html">EDRCR</a>.CSPA.</p>
+          <p>Progress has been made by the PE since the last time this field was cleared to zero by writing 1 to <a href="/latest_sysreg/ext-edrcr.html">EDRCR</a>.CSPA.</p>
         </td></tr></table><p>The architecture does not define precisely when this field is set to 1. It requires only that this happen periodically in Non-debug state to indicate that software execution is progressing. For example, a PE might set this field to 1 each time the PE retires one or more instructions, or at periodic intervals during the progression of an instruction.</p>
 <p>When <span class="xref">FEAT_MOPS</span> is implemented, <span class="instruction">CPY</span>, <span class="instruction">CPYF</span>, <span class="instruction">SET</span>, and <span class="instruction">SETG</span> are examples of instructions that periodically make forward progress.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -93,10 +93,10 @@
         </td></tr><tr><td class="bitfield">0b01</td><td><p>If ExternalInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Non-secure state are masked.</p>
 <p>If ExternalSecureInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Secure state are masked.</p>
 <p>If ExternalRootInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Root state are masked.</p>
-<p>If ExternalRealmInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Realm state are masked.</p></td></tr></table><div class="note"><p>This control affects both physical and virtual interrupts and SError exceptions.</p></div><p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this field can be indirectly read and written through the following System registers:</p>
+<p>If ExternalRealmInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Realm state are masked.</p></td></tr></table><div class="note"><p>This control affects both physical and virtual interrupts and SError exceptions.</p></div><p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this field can be indirectly read and written through the following System registers:</p>
 <ul>
-<li><a href="AArch64-mdscr_el1.html">MDSCR_EL1</a>.
-</li><li><a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.
+<li><a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.
 </li></ul>
 <p>The Effective value of this field is <span class="binarynumber">0b00</span> when <span class="function">ExternalInvasiveDebugEnabled()</span> is FALSE.</p>
 <p>When FEAT_RME is implemented, bit[23] of this register is <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
@@ -108,10 +108,10 @@
     <table class="valuetable"><tr><th>INTdis</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Masking of interrupts and SError exceptions is controlled by PSTATE and interrupt routing controls.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td><p>If ExternalInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Non-secure state are masked.</p>
-<p>If ExternalSecureInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Secure state are masked.</p></td></tr></table><div class="note"><p>This control affects both physical and virtual interrupts and SError exceptions.</p></div><p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this field can be indirectly read and written through the following System registers:</p>
+<p>If ExternalSecureInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Secure state are masked.</p></td></tr></table><div class="note"><p>This control affects both physical and virtual interrupts and SError exceptions.</p></div><p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this field can be indirectly read and written through the following System registers:</p>
 <ul>
-<li><a href="AArch64-mdscr_el1.html">MDSCR_EL1</a>.
-</li><li><a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.
+<li><a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.
 </li></ul>
 <p>The Effective value of this field is <span class="binarynumber">0b00</span> when <span class="function">ExternalInvasiveDebugEnabled()</span> is FALSE.</p>
 <p>When FEAT_Debugv8p4 is implemented, bit[23] of this register is <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
@@ -126,10 +126,10 @@
           <p>If ExternalInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Non-secure EL1 are masked.</p>
         </td></tr><tr><td class="bitfield">0b10</td><td><p>If ExternalInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Non-secure state are masked.</p>
 <p>If ExternalSecureInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Secure EL1 are masked.</p></td></tr><tr><td class="bitfield">0b11</td><td><p>If ExternalInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Non-secure state are masked.</p>
-<p>If ExternalSecureInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Secure state are masked.</p></td></tr></table><div class="note"><p>This control affects both physical and virtual interrupts and SError exceptions.</p></div><p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this field can be indirectly read and written through the following System registers:</p>
+<p>If ExternalSecureInvasiveDebugEnabled() is TRUE, then all interrupts and SError exceptions taken to Secure state are masked.</p></td></tr></table><div class="note"><p>This control affects both physical and virtual interrupts and SError exceptions.</p></div><p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this field can be indirectly read and written through the following System registers:</p>
 <ul>
-<li><a href="AArch64-mdscr_el1.html">MDSCR_EL1</a>.
-</li><li><a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.
+<li><a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.
 </li></ul>
 <p>The Effective value of this field is <span class="binarynumber">0b00</span> when <span class="function">ExternalInvasiveDebugEnabled()</span> is FALSE.</p>
 <p>Support for the values <span class="binarynumber">0b01</span> and <span class="binarynumber">0b10</span> is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>. If these values are not supported, they are reserved. If programmed with a reserved value, the PE behaves as if EDSCR.INTdis has been programmed with a defined value, other than for a direct read of EDSCR, and the value returned by a read of EDSCR.INTdis is <span class="arm-defined-word">UNKNOWN</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
@@ -138,14 +138,14 @@
 </li></ul></div><h4 id="fieldset_0-21_21">TDA, bit [21]:
       </h4><div class="field"><p>Traps accesses to the following debug registers:</p>
 <ul>
-<li>AArch64: <a href="AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>, <a href="AArch64-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>, <a href="AArch64-dbgwcrn_el1.html">DBGWCR&lt;n&gt;_EL1</a>, <a href="AArch64-dbgwvrn_el1.html">DBGWVR&lt;n&gt;_EL1</a>.
-</li><li>AArch32: <a href="AArch32-dbgbcrn.html">DBGBCR&lt;n&gt;</a>, <a href="AArch32-dbgbvrn.html">DBGBVR&lt;n&gt;</a>, <a href="AArch32-dbgbxvrn.html">DBGBXVR&lt;n&gt;</a>, <a href="AArch32-dbgwcrn.html">DBGWCR&lt;n&gt;</a>, <a href="AArch32-dbgwvrn.html">DBGWVR&lt;n&gt;</a>.
+<li>AArch64: <a href="/latest_sysreg/AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>, <a href="/latest_sysreg/AArch64-dbgbvrn_el1.html">DBGBVR&lt;n&gt;_EL1</a>, <a href="/latest_sysreg/AArch64-dbgwcrn_el1.html">DBGWCR&lt;n&gt;_EL1</a>, <a href="/latest_sysreg/AArch64-dbgwvrn_el1.html">DBGWVR&lt;n&gt;_EL1</a>.
+</li><li>AArch32: <a href="/latest_sysreg/AArch32-dbgbcrn.html">DBGBCR&lt;n&gt;</a>, <a href="/latest_sysreg/AArch32-dbgbvrn.html">DBGBVR&lt;n&gt;</a>, <a href="/latest_sysreg/AArch32-dbgbxvrn.html">DBGBXVR&lt;n&gt;</a>, <a href="/latest_sysreg/AArch32-dbgwcrn.html">DBGWCR&lt;n&gt;</a>, <a href="/latest_sysreg/AArch32-dbgwvrn.html">DBGWVR&lt;n&gt;</a>.
 </li></ul><table class="valuetable"><tr><th>TDA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Accesses to debug registers do not generate a Software Access Debug event.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Accesses to debug registers generate a Software Access Debug event, if <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 0 and if halting is allowed.</p>
+          <p>Accesses to debug registers generate a Software Access Debug event, if <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 0 and if halting is allowed.</p>
         </td></tr></table>
-      <p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
+      <p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -160,13 +160,13 @@
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-19_19-1">SC2, bit [19] <span class="condition">when FEAT_PCSRv8 is implemented, EL2 is implemented, FEAT_Debugv8p1 is implemented, and FEAT_PCSRv8p2 is not implemented</span>:
       </h4><div class="field">
-      <p>Sample <a href="AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>. Controls whether the PC Sample-based Profiling Extension samples <a href="AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a> or <a href="AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.</p>
+      <p>Sample <a href="/latest_sysreg/AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>. Controls whether the PC Sample-based Profiling Extension samples <a href="/latest_sysreg/AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a> or <a href="/latest_sysreg/AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.</p>
     <table class="valuetable"><tr><th>SC2</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Sample <a href="AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.</p>
+          <p>Sample <a href="/latest_sysreg/AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Sample <a href="AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>.</p>
+          <p>Sample <a href="/latest_sysreg/AArch64-contextidr_el2.html">CONTEXTIDR_EL2</a>.</p>
         </td></tr></table>
-      <p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
+      <p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -233,7 +233,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Halting enabled for Breakpoint, Watchpoint and Halt Instruction debug events.</p>
         </td></tr></table>
-      <p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
+      <p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -279,9 +279,9 @@
                 </li></ul></div><h4 id="fieldset_0-7_7">A, bit [7]:
       </h4><div class="field"><p>SError exception pending. In Debug state, indicates whether an SError exception is pending:</p>
 <ul>
-<li>If EL2 is enabled in the current Security state, the PE is executing at EL0 or EL1, <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 0 and either <a href="AArch64-hcr_el2.html">HCR_EL2</a>.AMO is 1, a virtual SError exception.
-</li><li>If EL2 is enabled in the current Security state, the PE is executing at EL0 or EL1, <span class="xref">FEAT_DoubleFault2</span> is implemented and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TMEA is 1, a virtual SError exception.
-</li><li>Otherwise, if <span class="xref">FEAT_E3DSE</span> is implemented, the PE is executing at EL0, EL1, or EL2, and the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.EnDSE is 1, a delegated SError exception.
+<li>If EL2 is enabled in the current Security state, the PE is executing at EL0 or EL1, <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 0 and either <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.AMO is 1, a virtual SError exception.
+</li><li>If EL2 is enabled in the current Security state, the PE is executing at EL0 or EL1, <span class="xref">FEAT_DoubleFault2</span> is implemented and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TMEA is 1, a virtual SError exception.
+</li><li>Otherwise, if <span class="xref">FEAT_E3DSE</span> is implemented, the PE is executing at EL0, EL1, or EL2, and the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EnDSE is 1, a delegated SError exception.
 </li><li>Otherwise, a physical SError exception.
 </li></ul><table class="valuetable"><tr><th>A</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No SError exception pending.</p>
@@ -300,7 +300,7 @@
       </h4><div class="field">
       <p>Cumulative error flag. This bit is set to 1 following exceptions in Debug state and on any signaled overrun or underrun on the DTR or EDITR.</p>
     
-      <p>When <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
+      <p>When <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK is 1, this bit can be indirectly read and written through <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a> and <a href="/latest_sysreg/AArch32-dbgdscrext.html">DBGDSCRext</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.

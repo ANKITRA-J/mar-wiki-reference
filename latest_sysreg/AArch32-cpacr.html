@@ -6,8 +6,8 @@
 
       
         <p>In an implementation that includes EL2, the CPACR has no effect on instructions executed at EL2.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register CPACR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-cpacr_el1.html">CPACR_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to CPACR are <span class="arm-defined-word">UNDEFINED</span>.</p>
-        <p>Bits in the <a href="AArch32-nsacr.html">NSACR</a> control Non-secure access to the CPACR fields. See the field descriptions for more information.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register CPACR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to CPACR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+        <p>Bits in the <a href="/latest_sysreg/AArch32-nsacr.html">NSACR</a> control Non-secure access to the CPACR fields. See the field descriptions for more information.</p>
 
       
         <div class="note"><p>In the register field descriptions, controls are described as applying at specified Privilege levels. This is because, in Secure state, a PL1 control:</p><ul><li>Applies to execution in a Secure EL3 mode when EL3 is using AArch32.</li><li>Applies to execution in a Secure EL1 mode when EL3 is using AArch64.</li></ul><p>See <span class="xref">'Security state, Exception levels, and AArch32 execution privilege'</span>.</p></div>
@@ -21,7 +21,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>All instruction encodings that are Advanced SIMD instruction encodings, but are not also floating-point instruction encodings, are <span class="arm-defined-word">UNDEFINED</span> at PL0 and PL1.</p>
         </td></tr></table><p>If the implementation does not include Advanced SIMD and floating-point functionality, this field is <span class="arm-defined-word">RES0</span>. Otherwise, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether this field is implemented as a RW field. If it is not implemented as a RW field, it is RAZ/WI.</p>
-<p>If EL3 is implemented and is using AArch32, and the value of <a href="AArch32-nsacr.html">NSACR</a>.NSASEDIS is 1, this field behaves as RAO/WI in Non-secure state, regardless of its actual value. This applies even if the field is implemented as RAZ/WI.</p>
+<p>If EL3 is implemented and is using AArch32, and the value of <a href="/latest_sysreg/AArch32-nsacr.html">NSACR</a>.NSASEDIS is 1, this field behaves as RAO/WI in Non-secure state, regardless of its actual value. This applies even if the field is implemented as RAZ/WI.</p>
 <p>For the list of instructions affected by this field, see <span class="xref">'Controls of Advanced SIMD operation that do not apply to floating-point operation'</span>.</p>
 <p>See the description of CPACR.cp10 for a list of other controls that can disable or trap execution of Advanced SIMD instructions in AArch32 state.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -37,7 +37,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>PL0 and PL1 System register accesses to all implemented trace System registers are trapped to Undefined mode.</p>
         </td></tr></table><p>If the implementation does not include a trace unit, or does not include a System register interface to the trace unit registers, this field is <span class="arm-defined-word">RES0</span>. Otherwise, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether this field is implemented as a RW field. If it is not implemented as a RW field, it is RAZ/WI.</p>
-<p>If EL3 is implemented and is using AArch32, and the value of <a href="AArch32-nsacr.html">NSACR</a>.NSTRCDIS is 1, this field behaves as RAO/WI in Non-secure state, regardless of its actual value. This applies even if the field is implemented as RAZ/WI.</p>
+<p>If EL3 is implemented and is using AArch32, and the value of <a href="/latest_sysreg/AArch32-nsacr.html">NSACR</a>.NSTRCDIS is 1, this field behaves as RAO/WI in Non-secure state, regardless of its actual value. This applies even if the field is implemented as RAZ/WI.</p>
 <div class="note"><ul><li>FEAT_ETMv4 and FEAT_ETE do not permit EL0 to access the trace System registers. EL0 accesses to the trace System registers are <span class="arm-defined-word">UNDEFINED</span>.</li><li>The Arm architecture does not provide traps on trace register accesses through the optional memory-mapped external debug interface.</li></ul></div><p>System register accesses to the trace System registers can have side-effects. When a System register access is trapped, any side-effects that are normally associated with the access do not occur before the exception is taken.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-27_24">Bits [27:24]:
@@ -46,7 +46,7 @@
     </div><h4 id="fieldset_0-23_22">cp11, bits [23:22]:
       </h4><div class="field"><p>The value of this field is ignored. If this field is programmed with a different value to the cp10 field then this field is <span class="arm-defined-word">UNKNOWN</span> on a direct read of the CPACR.</p>
 <p>If the implementation does not include Advanced SIMD and floating-point functionality, this field is <span class="arm-defined-word">RES0</span>.</p>
-<p>In Non-secure state, if EL3 is implemented and is using AArch32, when the value of <a href="AArch32-nsacr.html">NSACR</a>.cp10 is 0, this field behaves as RAZ/WI, regardless of its actual value.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>In Non-secure state, if EL3 is implemented and is using AArch32, when the value of <a href="/latest_sysreg/AArch32-nsacr.html">NSACR</a>.cp10 is 0, this field behaves as RAZ/WI, regardless of its actual value.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'00'</span>.
 </li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RAZ/WI</span> if all the following are true:<ul><li>EL3 is implemented.</li><li>EL3 is using AArch32.</li><li>!IsCurrentSecurityState(SS_Secure).</li><li>NSACR.cp10 == '0'.</li></ul></li></ul></div><h4 id="fieldset_0-21_20">cp10, bits [21:20]:
@@ -70,22 +70,22 @@
 <ul>
 <li>Execution of any floating-point or Advanced SIMD instruction.
 </li><li>Any access to the Advanced SIMD and floating-point registers D0-D31 and their views as S0-S31 and Q0-Q15.
-</li><li>Any access to the <a href="AArch32-fpscr.html">FPSCR</a>, <a href="AArch32-fpsid.html">FPSID</a>, <a href="AArch32-mvfr0.html">MVFR0</a>, <a href="AArch32-mvfr1.html">MVFR1</a>, <a href="AArch32-mvfr2.html">MVFR2</a>, or <a href="AArch32-fpexc.html">FPEXC</a> System registers.
+</li><li>Any access to the <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR</a>, <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a>, <a href="/latest_sysreg/AArch32-mvfr0.html">MVFR0</a>, <a href="/latest_sysreg/AArch32-mvfr1.html">MVFR1</a>, <a href="/latest_sysreg/AArch32-mvfr2.html">MVFR2</a>, or <a href="/latest_sysreg/AArch32-fpexc.html">FPEXC</a> System registers.
 </li></ul>
-<div class="note"><p>The <a href="AArch32-cpacr.html">CPACR</a> has no effect on Advanced SIMD and floating-point accesses from PL2. These can be disabled by the <a href="AArch32-hcptr.html">HCPTR</a>.TCP10 field.</p></div><p>If the implementation does not include Advanced SIMD and floating-point functionality, this field is <span class="arm-defined-word">RES0</span>.</p>
-<p>In Non-secure state, if EL3 is implemented and is using AArch32, when the value of <a href="AArch32-nsacr.html">NSACR</a>.cp10 is 0, this field behaves as RAZ/WI, regardless of its actual value.</p>
+<div class="note"><p>The <a href="/latest_sysreg/AArch32-cpacr.html">CPACR</a> has no effect on Advanced SIMD and floating-point accesses from PL2. These can be disabled by the <a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TCP10 field.</p></div><p>If the implementation does not include Advanced SIMD and floating-point functionality, this field is <span class="arm-defined-word">RES0</span>.</p>
+<p>In Non-secure state, if EL3 is implemented and is using AArch32, when the value of <a href="/latest_sysreg/AArch32-nsacr.html">NSACR</a>.cp10 is 0, this field behaves as RAZ/WI, regardless of its actual value.</p>
 <p>Execution of Advanced SIMD and floating-point instructions in AArch32 state can be disabled or trapped by the following controls:</p>
 <ul>
-<li>CPACR.cp10, or, if executing at EL0, <a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.FPEN.
-</li><li><a href="AArch32-fpexc.html">FPEXC</a>.EN.
+<li>CPACR.cp10, or, if executing at EL0, <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.FPEN.
+</li><li><a href="/latest_sysreg/AArch32-fpexc.html">FPEXC</a>.EN.
 </li><li>If executing in Non-secure state:<ul>
-<li><a href="AArch32-hcptr.html">HCPTR</a>.TCP10, or if EL2 is using AArch64, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TFP.
-</li><li><a href="AArch32-nsacr.html">NSACR</a>.cp10, or if EL3 is using AArch64, <a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TFP.
+<li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TCP10, or if EL2 is using AArch64, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TFP.
+</li><li><a href="/latest_sysreg/AArch32-nsacr.html">NSACR</a>.cp10, or if EL3 is using AArch64, <a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TFP.
 </li></ul>
 
 </li><li>For Advanced SIMD instructions only:<ul>
 <li>CPACR.ASEDIS.
-</li><li>If executing in Non-secure state, <a href="AArch32-hcptr.html">HCPTR</a>.TASE and <a href="AArch32-nsacr.html">NSACR</a>.NSASEDIS.
+</li><li>If executing in Non-secure state, <a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TASE and <a href="/latest_sysreg/AArch32-nsacr.html">NSACR</a>.NSASEDIS.
 </li></ul>
 
 </li></ul>

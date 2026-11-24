@@ -7,12 +7,12 @@
       
         <div class="note"><p>Higher interrupt priority corresponds to a lower value of the Priority field.</p></div>
       
-        <p>This register corresponds to the physical CPU interface register <a href="ext-gicc_pmr.html">GICC_PMR</a>.</p>
+        <p>This register corresponds to the physical CPU interface register <a href="/latest_sysreg/ext-gicc_pmr.html">GICC_PMR</a>.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv3_LEGACY is implemented and EL2 is implemented. Otherwise, direct accesses to GICV_PMR are <span class="arm-defined-word">RES0</span>.</p>
         <p>This register is available when the GIC implementation supports interrupt virtualization.</p>
 
       
-        <p>The Priority field of this register is aliased to <a href="ext-gich_vmcr.html">GICH_VMCR</a>.VMPR, to enable state to be switched easily between virtual machines during context-switching.</p>
+        <p>The Priority field of this register is aliased to <a href="/latest_sysreg/ext-gich_vmcr.html">GICH_VMCR</a>.VMPR, to enable state to be switched easily between virtual machines during context-switching.</p>
       <h3>Attributes</h3>
         <p>GICV_PMR is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="24"><a href="#fieldset_0-31_8">RES0</a></td><td class="lr" colspan="8"><a href="#fieldset_0-7_0">Priority</a></td></tr></tbody></table><h4 id="fieldset_0-31_8">Bits [31:8]:
@@ -34,8 +34,8 @@
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-icc_pmr.html">ICC_PMR</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-icc_pmr_el1.html">ICC_PMR_EL1</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-icc_pmr.html">ICC_PMR</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-icc_pmr_el1.html">ICC_PMR_EL1</a> provides equivalent functionality.
 </li></ul>
       <h4>GICV_PMR can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Virtual CPU interface</td><td><span class="hexnumber">0x0004</span></td><td>GICV_PMR</td></tr></table><p>Accessible as follows:</p><ul><li>When GICD_CTLR.DS == '0', accesses to this register are <span class="access_level">RW</span>.
           </li><li>When an access is Secure, accesses to this register are <span class="access_level">RW</span>.

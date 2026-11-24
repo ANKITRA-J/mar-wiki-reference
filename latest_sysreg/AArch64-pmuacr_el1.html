@@ -10,16 +10,16 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-32_32-1">F0, bit [32] <span class="condition">when FEAT_PMUv3_ICNTR is implemented</span>:
       </h4><div class="field">
-      <p>EL0 accesses to <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a> enable. With <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN and <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.IR, controls EL0 accesses to <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.</p>
+      <p>EL0 accesses to <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a> enable. With <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN and <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.IR, controls EL0 accesses to <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.</p>
     <table class="valuetable"><tr><th>F0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If the Effective value of <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a> and associated controls are RAZ/WI, and permitted EL0 writes to <a href="AArch64-pmzr_el0.html">PMZR_EL0</a>.F0 are ignored.</p>
+          <p>If the Effective value of <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a> and associated controls are RAZ/WI, and permitted EL0 writes to <a href="/latest_sysreg/AArch64-pmzr_el0.html">PMZR_EL0</a>.F0 are ignored.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If the Effective value of <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a> and associated controls are either read-only or read/write, depending on the value of <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.IR.</p>
-        </td></tr></table><p>The controls associated with <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a> that are accessible at EL0 are <a href="AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.F0, <a href="AArch64-pmcntenclr_el0.html">PMCNTENCLR_EL0</a>.F0, <a href="AArch64-pmovsset_el0.html">PMOVSSET_EL0</a>.F0, and <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.F0.</p>
+          <p>If the Effective value of <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a> and associated controls are either read-only or read/write, depending on the value of <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.IR.</p>
+        </td></tr></table><p>The controls associated with <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a> that are accessible at EL0 are <a href="/latest_sysreg/AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.F0, <a href="/latest_sysreg/AArch64-pmcntenclr_el0.html">PMCNTENCLR_EL0</a>.F0, <a href="/latest_sysreg/AArch64-pmovsset_el0.html">PMOVSSET_EL0</a>.F0, and <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.F0.</p>
 <p>This field is ignored by the PE when any of the following are true:</p>
 <ul>
 <li>EL1 is using AArch32.
-</li><li><a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 0.
+</li><li><a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 0.
 </li><li>The access generates an exception.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -28,31 +28,31 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-31_31">C, bit [31]:
       </h4><div class="field">
-      <p>EL0 accesses to <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> enable. With <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.EN, <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN, and <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.CR, controls EL0 accesses to <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>.</p>
+      <p>EL0 accesses to <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> enable. With <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.EN, <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN, and <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.CR, controls EL0 accesses to <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>.</p>
     <table class="valuetable"><tr><th>C</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If the Effective value of <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> and associated controls are RAZ/WI, and permitted EL0 writes to <a href="AArch64-pmzr_el0.html">PMZR_EL0</a>.C are ignored.</p>
+          <p>If the Effective value of <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> and associated controls are RAZ/WI, and permitted EL0 writes to <a href="/latest_sysreg/AArch64-pmzr_el0.html">PMZR_EL0</a>.C are ignored.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If the Effective value of <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> and associated controls are either read-only or read/write, depending on the value of <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.CR.</p>
-        </td></tr></table><p>The controls associated with <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> that are accessible at EL0 are <a href="AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.C, <a href="AArch64-pmcntenclr_el0.html">PMCNTENCLR_EL0</a>.C, <a href="AArch64-pmovsset_el0.html">PMOVSSET_EL0</a>.C, and <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.C.</p>
+          <p>If the Effective value of <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> and associated controls are either read-only or read/write, depending on the value of <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.CR.</p>
+        </td></tr></table><p>The controls associated with <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> that are accessible at EL0 are <a href="/latest_sysreg/AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.C, <a href="/latest_sysreg/AArch64-pmcntenclr_el0.html">PMCNTENCLR_EL0</a>.C, <a href="/latest_sysreg/AArch64-pmovsset_el0.html">PMOVSSET_EL0</a>.C, and <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.C.</p>
 <p>This field is ignored by the PE when any of the following are true:</p>
 <ul>
 <li>EL1 is using AArch32.
-</li><li><a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 0.
+</li><li><a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 0.
 </li><li>The access generates an exception.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-30_0">P&lt;m&gt;, bit [m], for m = 30 to 0:
       </h4><div class="field">
-      <p>EL0 accesses to <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> enable. With <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.EN, <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN, and <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.ER, controls EL0 accesses to <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a>.</p>
+      <p>EL0 accesses to <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> enable. With <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.EN, <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN, and <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.ER, controls EL0 accesses to <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a>.</p>
     <table class="valuetable"><tr><th>P&lt;m&gt;</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If the Effective value of <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> and associated controls are RAZ/WI, and permitted EL0 writes to <a href="AArch64-pmzr_el0.html">PMZR_EL0</a>.P&lt;m&gt; are ignored.</p>
+          <p>If the Effective value of <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> and associated controls are RAZ/WI, and permitted EL0 writes to <a href="/latest_sysreg/AArch64-pmzr_el0.html">PMZR_EL0</a>.P&lt;m&gt; are ignored.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If the Effective value of <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> and associated controls are either read-only or read/write, depending on the value of <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.ER.</p>
-        </td></tr></table><p>The controls associated with <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> that are accessible at EL0 are <a href="AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.P&lt;m&gt;, <a href="AArch64-pmcntenclr_el0.html">PMCNTENCLR_EL0</a>.P&lt;m&gt;, <a href="AArch64-pmovsset_el0.html">PMOVSSET_EL0</a>.P&lt;m&gt;, and <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.P&lt;m&gt;.</p>
+          <p>If the Effective value of <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 1, then EL0 accesses to <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> and associated controls are either read-only or read/write, depending on the value of <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.ER.</p>
+        </td></tr></table><p>The controls associated with <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> that are accessible at EL0 are <a href="/latest_sysreg/AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.P&lt;m&gt;, <a href="/latest_sysreg/AArch64-pmcntenclr_el0.html">PMCNTENCLR_EL0</a>.P&lt;m&gt;, <a href="/latest_sysreg/AArch64-pmovsset_el0.html">PMOVSSET_EL0</a>.P&lt;m&gt;, and <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.P&lt;m&gt;.</p>
 <p>This field is ignored by the PE when any of the following are true:</p>
 <ul>
 <li>EL1 is using AArch32.
-</li><li><a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 0.
+</li><li><a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN is 0.
 </li><li>The access generates an exception.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

@@ -14,7 +14,7 @@
       
         <p>For each bit, if the node does not support the feature, then the bit is <span class="arm-defined-word">RES0</span>. The definition of each record is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.</p>
       </div><h3>Configuration</h3><p>This register is present only when error record n is implemented and error record n is the first error record in the node. Otherwise, direct accesses to ERR&lt;n&gt;CTLR are <span class="arm-defined-word">RES0</span>.</p>
-        <p><a href="ext-errnfr.html">ERR&lt;n&gt;FR</a> contains additional information about the node.</p>
+        <p><a href="/latest_sysreg/ext-errnfr.html">ERR&lt;n&gt;FR</a> contains additional information about the node.</p>
       <h3>Attributes</h3>
         <p>ERR&lt;n&gt;CTLR is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-63_32">IMPLEMENTATION DEFINED</a></td></tr><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_0-31_16">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-15_15-1">WDFI</a></td><td class="lr" colspan="1"><a href="#fieldset_0-14_14-1">Bit[14]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-13_13-1">CI</a></td><td class="lr" colspan="1"><a href="#fieldset_0-12_12-1">CED</a></td><td class="lr" colspan="1"><a href="#fieldset_0-11_11-1">WDUI</a></td><td class="lr" colspan="1"><a href="#fieldset_0-10_10-1">Bit[10]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-9_9-1">WCFI</a></td><td class="lr" colspan="1"><a href="#fieldset_0-8_8-1">Bit[8]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-7_7-1">WUE</a></td><td class="lr" colspan="1"><a href="#fieldset_0-6_6-1">WFI</a></td><td class="lr" colspan="1"><a href="#fieldset_0-5_5-1">WUI</a></td><td class="lr" colspan="1"><a href="#fieldset_0-4_4-1">Bit[4]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-3_3-1">Bit[3]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-2_2-1">Bit[2]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-1_1">IMPLEMENTATION DEFINED</a></td><td class="lr" colspan="1"><a href="#fieldset_0-0_0-1">ED</a></td></tr></tbody></table><h4 id="fieldset_0-63_32">IMPLEMENTATION DEFINED, bits [63:32]:
@@ -40,7 +40,7 @@
     </div><h4 id="fieldset_0-14_14-1">Bit[14] <span class="condition">when FEAT_RASSA_DFI is implemented and ERR&lt;n&gt;FR.DFI == '10'</span>:
       </h4><h5>DFI, bit 
                         [14]</h5><div class="field"><p>Fault handling interrupt for Deferred errors enable, with ERR&lt;n&gt;CTLR.FI.</p>
-<p>When <a href="ext-errnfr.html">ERR&lt;n&gt;FR</a>.DFI == <span class="binarynumber">0b10</span>, this control applies to errors on both reads and writes.</p>
+<p>When <a href="/latest_sysreg/ext-errnfr.html">ERR&lt;n&gt;FR</a>.DFI == <span class="binarynumber">0b10</span>, this control applies to errors on both reads and writes.</p>
 <p>When enabled by ERR&lt;n&gt;CTLR.{DFI, FI}:</p>
 <ul>
 <li>The fault handling interrupt is generated for all errors recorded as Deferred error.
@@ -107,7 +107,7 @@
     </div><h4 id="fieldset_0-10_10-1">Bit[10] <span class="condition">when FEAT_RASSA_DUI is implemented and ERR&lt;n&gt;FR.DUI == '10'</span>:
       </h4><h5>DUI, bit 
                         [10]</h5><div class="field"><p>Error recovery interrupt for Deferred errors enable.</p>
-<p>When <a href="ext-errnfr.html">ERR&lt;n&gt;FR</a>.DUI == <span class="binarynumber">0b10</span>, this control applies to errors arising from both reads and writes.</p>
+<p>When <a href="/latest_sysreg/ext-errnfr.html">ERR&lt;n&gt;FR</a>.DUI == <span class="binarynumber">0b10</span>, this control applies to errors arising from both reads and writes.</p>
 <p>When enabled, the error recovery interrupt is generated for all errors recorded as Deferred error.</p><table class="valuetable"><tr><th>DUI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Error recovery interrupt not generated for Deferred errors.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -145,7 +145,7 @@
     </div><h4 id="fieldset_0-8_8-1">Bit[8] <span class="condition">when FEAT_RASSA_CFI is implemented and ERR&lt;n&gt;FR.CFI == '10'</span>:
       </h4><h5>CFI, bit 
                         [8]</h5><div class="field"><p>Fault handling interrupt for corrected error events enable.</p>
-<p>When <a href="ext-errnfr.html">ERR&lt;n&gt;FR</a>.CFI == <span class="binarynumber">0b10</span>, this control applies to errors on both reads and writes.</p>
+<p>When <a href="/latest_sysreg/ext-errnfr.html">ERR&lt;n&gt;FR</a>.CFI == <span class="binarynumber">0b10</span>, this control applies to errors on both reads and writes.</p>
 <p>When enabled, the fault handling interrupt is generated for all corrected error events.</p><table class="valuetable"><tr><th>CFI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Fault handling interrupt not generated for corrected error events.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -235,7 +235,7 @@
     </div><h4 id="fieldset_0-4_4-1">Bit[4] <span class="condition">when FEAT_RASSA_UE_CTRL is implemented and ERR&lt;n&gt;FR.UE == '10'</span>:
       </h4><h5>UE, bit 
                         [4]</h5><div class="field"><p>In-band error response enable.</p>
-<p>When <a href="ext-errnfr.html">ERR&lt;n&gt;FR</a>.UE == <span class="binarynumber">0b10</span>, this control applies to errors arising from both reads and writes.</p>
+<p>When <a href="/latest_sysreg/ext-errnfr.html">ERR&lt;n&gt;FR</a>.UE == <span class="binarynumber">0b10</span>, this control applies to errors arising from both reads and writes.</p>
 <p>When enabled, responses to transactions that detect an error that is not corrected and is not deferred are signaled with an in-band error response (External abort).</p>
 <p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether an uncorrected error that is deferred and recorded as Deferred error, but is not deferred to the Requester, will signal an in-band error response to the Requester.</p><table class="valuetable"><tr><th>UE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>In-band error response for uncorrected errors disabled.</p>
@@ -259,7 +259,7 @@
     </div><h4 id="fieldset_0-3_3-1">Bit[3] <span class="condition">when FEAT_RASSA_FI is implemented and ERR&lt;n&gt;FR.FI == '10'</span>:
       </h4><h5>FI, bit 
                         [3]</h5><div class="field"><p>Fault handling interrupt enable.</p>
-<p>When <a href="ext-errnfr.html">ERR&lt;n&gt;FR</a>.FI == <span class="binarynumber">0b10</span>, this control applies to errors on both reads and writes.</p>
+<p>When <a href="/latest_sysreg/ext-errnfr.html">ERR&lt;n&gt;FR</a>.FI == <span class="binarynumber">0b10</span>, this control applies to errors on both reads and writes.</p>
 <p>When enabled:</p>
 <ul>
 <li>The fault handling interrupt is generated for all errors recorded as Uncorrected error.
@@ -293,7 +293,7 @@
     </div><h4 id="fieldset_0-2_2-1">Bit[2] <span class="condition">when FEAT_RASSA_UI is implemented and ERR&lt;n&gt;FR.UI == '10'</span>:
       </h4><h5>UI, bit 
                         [2]</h5><div class="field"><p>Uncorrected error recovery interrupt enable.</p>
-<p>When <a href="ext-errnfr.html">ERR&lt;n&gt;FR</a>.UI == <span class="binarynumber">0b10</span>, this control applies to errors arising from both reads and writes.</p>
+<p>When <a href="/latest_sysreg/ext-errnfr.html">ERR&lt;n&gt;FR</a>.UI == <span class="binarynumber">0b10</span>, this control applies to errors arising from both reads and writes.</p>
 <p>When enabled, the error recovery interrupt is generated for all errors recorded as Uncorrected error.</p><table class="valuetable"><tr><th>UI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Error recovery interrupt disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>

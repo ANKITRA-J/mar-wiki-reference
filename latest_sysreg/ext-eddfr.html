@@ -5,7 +5,7 @@
         <p>Provides top-level information about the debug system.</p>
 
       
-        <div class="note"><p>Debuggers must use <a href="ext-eddevarch.html">EDDEVARCH</a> to determine the Debug architecture version.</p></div>
+        <div class="note"><p>Debuggers must use <a href="/latest_sysreg/ext-eddevarch.html">EDDEVARCH</a> to determine the Debug architecture version.</p></div>
       
         <p>For general information about the interpretation of the ID registers, see <span class="xref">'Principles of the ID scheme for fields in ID registers'</span>.</p>
       </div><h3>Configuration</h3><p>There are no configuration notes.</p><h3>Attributes</h3>
@@ -23,7 +23,7 @@
         </td></tr></table><p>All other values are reserved.</p>
 <p>If <span class="xref">FEAT_TRBE</span> is not implemented, the only permitted value is <span class="binarynumber">0b0000</span>.</p>
 <p><span class="xref">FEAT_TRBE_EXT</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
-<p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.ExtTrcBuff.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-55_48">Bits [55:48]:
+<p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.ExtTrcBuff.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-55_48">Bits [55:48]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">UNKNOWN</span>.</p>
     </div><h4 id="fieldset_0-47_44-1">TraceBuffer, bits [47:44] <span class="condition">when FEAT_TRBE_EXT is implemented</span>:
@@ -36,7 +36,7 @@
         </td></tr><tr><td class="bitfield">0b0010</td><td><p>As <span class="binarynumber">0b0001</span>, and adds:</p>
 <ul>
 <li>If EL2 and <span class="xref">FEAT_FGT</span> are implemented, a fine-grained trap on the <span class="instruction">TSB CSYNC</span> instruction.
-</li><li>If EL2 is implemented, an EL2 control to override <a href="AArch64-trblimitr_el1.html">TRBLIMITR_EL1</a>.nVM.
+</li><li>If EL2 is implemented, an EL2 control to override <a href="/latest_sysreg/AArch64-trblimitr_el1.html">TRBLIMITR_EL1</a>.nVM.
 </li><li>The TRBE Profiling exception extension, <span class="xref">FEAT_TRBE_EXC</span>.
 </li></ul></td></tr></table><p>All other values are reserved.</p>
 <p>FEAT_TRBE implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
@@ -64,8 +64,8 @@
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>CTX_CMPs</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000..0b1111</td><td>
           <p>The number of context-aware breakpoints, minus 1.</p>
         </td></tr></table><p>The value of this field is never greater than EDDFR.BRPs.</p>
-<p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.CTX_CMPs.</p>
-<p>If <span class="xref">FEAT_Debugv8p9</span> is implemented and 16 or more context-aware breakpoints are implemented, then this field reads as <span class="binarynumber">0b1111</span> and <a href="ext-eddfr1.html">EDDFR1</a>.CTX_CMPs indicates the number of context-aware breakpoints.</p>
+<p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.CTX_CMPs.</p>
+<p>If <span class="xref">FEAT_Debugv8p9</span> is implemented and 16 or more context-aware breakpoints are implemented, then this field reads as <span class="binarynumber">0b1111</span> and <a href="/latest_sysreg/ext-eddfr1.html">EDDFR1</a>.CTX_CMPs indicates the number of context-aware breakpoints.</p>
 <div class="note"><p>If AArch32 is supported at EL1, then the PE does not implement more than 16 breakpoints.</p></div><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-27_24">Bits [27:24]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -74,11 +74,11 @@
       <p>Number of watchpoints, minus 1.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>WRPs</th><th>Meaning</th></tr><tr><td class="bitfield">0b0001..0b1111</td><td>
           <p>The number of watchpoints, minus 1.</p>
-        </td></tr></table><p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.WRPs.</p>
-<p>If <span class="xref">FEAT_Debugv8p9</span> is implemented and 16 or more watchpoints are implemented, then this field reads as <span class="binarynumber">0b1111</span> and <a href="ext-eddfr1.html">EDDFR1</a>.WRPs indicates the number of watchpoints.</p>
+        </td></tr></table><p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.WRPs.</p>
+<p>If <span class="xref">FEAT_Debugv8p9</span> is implemented and 16 or more watchpoints are implemented, then this field reads as <span class="binarynumber">0b1111</span> and <a href="/latest_sysreg/ext-eddfr1.html">EDDFR1</a>.WRPs indicates the number of watchpoints.</p>
 <div class="note"><p>If AArch32 is supported at EL1, then the PE does not implement more than 16 watchpoints.</p></div><p>The value <span class="binarynumber">0b0000</span> is reserved.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-19_16">PMSS, bits [19:16]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.PMSS or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.PMSS or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-15_12">BRPs, bits [15:12]:
@@ -86,8 +86,8 @@
       <p>Number of breakpoints, minus 1.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>BRPs</th><th>Meaning</th></tr><tr><td class="bitfield">0b0001..0b1111</td><td>
           <p>The number of breakpoints, minus 1.</p>
-        </td></tr></table><p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.BRPs.</p>
-<p>If <span class="xref">FEAT_Debugv8p9</span> is implemented and 16 or more breakpoints are implemented, then this field reads as <span class="binarynumber">0b1111</span> and <a href="ext-eddfr1.html">EDDFR1</a>.BRPs indicates the number of breakpoints.</p>
+        </td></tr></table><p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.BRPs.</p>
+<p>If <span class="xref">FEAT_Debugv8p9</span> is implemented and 16 or more breakpoints are implemented, then this field reads as <span class="binarynumber">0b1111</span> and <a href="/latest_sysreg/ext-eddfr1.html">EDDFR1</a>.BRPs indicates the number of breakpoints.</p>
 <div class="note"><p>If AArch32 is supported at EL1, then the PE does not implement more than 16 breakpoints.</p></div><p>The value <span class="binarynumber">0b0000</span> is reserved.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-11_8">PMUVer, bits [11:8]:
       </h4><div class="field"><p>Performance Monitors Extension version.</p>
 <p>This field does not follow the standard ID scheme, but uses the alternative ID scheme described in <span class="xref">'Alternative ID scheme used for the Performance Monitors Extension version'</span></p><p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>PMUVer</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
@@ -96,19 +96,19 @@
           <p>Performance Monitors Extension, PMUv3 implemented.</p>
         </td></tr><tr><td class="bitfield">0b0100</td><td><p>PMUv3 for Armv8.1. As <span class="binarynumber">0b0001</span>, and adds support for:</p>
 <ul>
-<li>Extended 16-bit <a href="pmu.pmevtypern_el0.html">PMEVTYPER&lt;n&gt;_EL0</a>.evtCount field.
-</li><li>If EL2 is implemented, the <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMD control.
+<li>Extended 16-bit <a href="/latest_sysreg/pmu.pmevtypern_el0.html">PMEVTYPER&lt;n&gt;_EL0</a>.evtCount field.
+</li><li>If EL2 is implemented, the <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMD control.
 </li></ul></td></tr><tr><td class="bitfield">0b0101</td><td>
-          <p>PMUv3 for Armv8.4. As <span class="binarynumber">0b0100</span>, and adds support for the <a href="AArch64-pmmir_el1.html">PMMIR_EL1</a> register.</p>
+          <p>PMUv3 for Armv8.4. As <span class="binarynumber">0b0100</span>, and adds support for the <a href="/latest_sysreg/AArch64-pmmir_el1.html">PMMIR_EL1</a> register.</p>
         </td></tr><tr><td class="bitfield">0b0110</td><td><p>PMUv3 for Armv8.5. As <span class="binarynumber">0b0101</span>, and adds support for:</p>
 <ul>
 <li>64-bit event counters.
-</li><li>If EL2 is implemented, the <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HCCD control.
-</li><li>If EL3 is implemented, the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.SCCD control.
+</li><li>If EL2 is implemented, the <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HCCD control.
+</li><li>If EL3 is implemented, the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.SCCD control.
 </li></ul></td></tr><tr><td class="bitfield">0b0111</td><td><p>PMUv3 for Armv8.7. As <span class="binarynumber">0b0110</span>, and adds support for:</p>
 <ul>
-<li>The  <a href="pmu.pmcr_el0.html">PMCR_EL0</a>.FZO and, if EL2 is implemented, <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMFZO controls.
-</li><li>If EL3 is implemented, the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{MPMX,MCCD} controls.
+<li>The  <a href="/latest_sysreg/pmu.pmcr_el0.html">PMCR_EL0</a>.FZO and, if EL2 is implemented, <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMFZO controls.
+</li><li>If EL3 is implemented, the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{MPMX,MCCD} controls.
 </li></ul></td></tr><tr><td class="bitfield">0b1000</td><td><p>PMUv3 for Armv8.8. As <span class="binarynumber">0b0111</span>, and:</p>
 <ul>
 <li>Extends the Common event number space to include <span class="hexnumber">0x0040</span> to <span class="hexnumber">0x00BF</span> and <span class="hexnumber">0x4040</span> to <span class="hexnumber">0x40BF</span>.
@@ -116,8 +116,8 @@
 </li></ul></td></tr><tr><td class="bitfield">0b1001</td><td><p>PMUv3 for Armv8.9. As <span class="binarynumber">0b1000</span>, and:</p>
 <ul>
 <li>Updates the definitions of existing PMU events.
-</li><li>Adds support for the <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN control and the PMUACR_EL1 register.
-</li><li>Adds support for the <a href="ext-edecr.html">EDECR</a>.PME control.
+</li><li>Adds support for the <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.UEN control and the PMUACR_EL1 register.
+</li><li>Adds support for the <a href="/latest_sysreg/ext-edecr.html">EDECR</a>.PME control.
 </li></ul></td></tr><tr><td class="bitfield">0b1111</td><td>
           <p><span class="arm-defined-word">IMPLEMENTATION DEFINED</span> form of performance monitors supported, PMUv3 not supported. Arm does not recommend this value for new implementations.</p>
         </td></tr></table><p>All other values are reserved.</p>
@@ -134,7 +134,7 @@
 <p>From Armv8.7, if <span class="xref">FEAT_PMUv3</span> is implemented, the value <span class="binarynumber">0b0110</span> is not permitted.</p>
 <p>From Armv8.8, if <span class="xref">FEAT_PMUv3</span> is implemented, the value <span class="binarynumber">0b0111</span> is not permitted.</p>
 <p>From Armv8.9, if <span class="xref">FEAT_PMUv3</span> is implemented, the value <span class="binarynumber">0b1000</span> is not permitted.</p>
-<p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.PMUVer.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_4">TraceVer, bits [7:4]:
+<p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.PMUVer.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_4">TraceVer, bits [7:4]:
       </h4><div class="field">
       <p>Trace support. Indicates whether System register interface to a trace unit is implemented.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>TraceVer</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
@@ -143,7 +143,7 @@
           <p>Trace unit System registers implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>A value of <span class="binarynumber">0b0000</span> only indicates that no System register interface to a trace unit is implemented. A trace unit might nevertheless be implemented without a System register interface.</p>
-<p>In an implementation that supports AArch64, this field returns the value of <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.TraceVer.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">Bits [3:0]:
+<p>In an implementation that supports AArch64, this field returns the value of <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.TraceVer.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">Bits [3:0]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">UNKNOWN</span>.</p>
     </div><h2>Accessing EDDFR</h2><h4>EDDFR can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>Debug</td><td><span class="hexnumber">0xD28</span></td><td>EDDFR</td></tr></table><p>Accessible as follows:</p><ul><li>When IsCorePowered() and !DoubleLockStatus(), accesses to this register are <span class="access_level">RO</span>.

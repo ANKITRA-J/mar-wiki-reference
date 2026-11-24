@@ -14,7 +14,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Output channel &lt;n&gt; is active.</p>
         </td></tr></table><p>If the ECT channels do not support multicycle events, then it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether an output channel can be observed as active.</p>
-<div class="note"><p>The value in CTICHOUTSTATUS is after gating by the channel gate. For more information, see <a href="ext-ctigate.html">CTIGATE</a>.</p></div><p>Accessing this field has the following behavior:</p><ul><li>When n &gt;= UInt(CTIDEVID.NUMCHAN), access to this field
+<div class="note"><p>The value in CTICHOUTSTATUS is after gating by the channel gate. For more information, see <a href="/latest_sysreg/ext-ctigate.html">CTIGATE</a>.</p></div><p>Accessing this field has the following behavior:</p><ul><li>When n &gt;= UInt(CTIDEVID.NUMCHAN), access to this field
                             is <span class="access_level">RAZ/WI</span>.
                         </li><li>
                   Otherwise,

@@ -3,7 +3,7 @@
 <title>ESR_EL1 | Jon's Arm Reference</title><meta name="description" content="Holds syndrome information for an exception taken to EL1."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ESR_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">Exception Syndrome Register (EL1)</p><div data-pagefind-body="1">
         <p>Holds syndrome information for an exception taken to EL1.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register ESR_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-dfsr.html">DFSR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to ESR_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch64 System register ESR_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-dfsr.html">DFSR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to ESR_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>ESR_EL1 is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="8"><a href="#fieldset_0-63_56">RES0</a></td><td class="lr" colspan="24"><a href="#fieldset_0-55_32">ISS2</a></td></tr><tr class="firstrow"><td class="lr" colspan="6"><a href="#fieldset_0-31_26">EC</a></td><td class="lr" colspan="1"><a href="#fieldset_0-25_25">IL</a></td><td class="lr" colspan="25"><a href="#fieldset_0-24_0">ISS</a></td></tr></tbody></table><div class="text_before_fields"><p>ESR_EL1 is made <span class="arm-defined-word">UNKNOWN</span> as a result of an exception return from EL1.</p>
 <p>When an <span class="arm-defined-word">UNPREDICTABLE</span> instruction is treated as <span class="arm-defined-word">UNDEFINED</span>, and the exception is taken to EL1, the value of ESR_EL1 is <span class="arm-defined-word">UNKNOWN</span>. The value written to ESR_EL1 must be consistent with a value that could be created as a result of an exception from the same Exception level that generated the exception as a result of a situation that is not <span class="arm-defined-word">UNPREDICTABLE</span> at that Exception level, in order to avoid the possibility of a privilege violation.</p></div><h4 id="fieldset_0-63_56">Bits [63:56]:
@@ -244,10 +244,10 @@
         </td><td><a href="#fieldset_0-24_0_2">ISS encoding for an exception from an MCR or MRC access</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_AA32 is implemented</td></tr><tr><td class="bitfield">0b000110</td><td><p>Trapped LDC or STC access.</p>
 <p>The only architected uses of these instruction are:</p>
 <ul>
-<li>An STC to write data to memory from <a href="AArch32-dbgdtrrxint.html">DBGDTRRXint</a>.
-</li><li>An LDC to read data from memory to <a href="AArch32-dbgdtrtxint.html">DBGDTRTXint</a>.
-</li></ul></td><td><a href="#fieldset_0-24_0_6">ISS encoding for an exception from an LDC or STC instruction</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_AA32 is implemented</td></tr><tr><td class="bitfield">0b000111</td><td><p>Access to SME, SVE, Advanced SIMD or floating-point functionality trapped by <a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.FPEN, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.FPEN, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TFP, or <a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TFP control.</p>
-<p>Excludes exceptions resulting from <a href="AArch64-cpacr_el1.html">CPACR_EL1</a> when the value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1, or because SVE or Advanced SIMD and floating-point are not implemented. These are reported with EC value <span class="binarynumber">0b000000</span>.</p></td><td><a href="#fieldset_0-24_0_7">ISS encoding for an exception from an access to a register or instruction resulting from the FPEN and TFP traps</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td></td></tr><tr><td class="bitfield">0b001001</td><td>
+<li>An STC to write data to memory from <a href="/latest_sysreg/AArch32-dbgdtrrxint.html">DBGDTRRXint</a>.
+</li><li>An LDC to read data from memory to <a href="/latest_sysreg/AArch32-dbgdtrtxint.html">DBGDTRTXint</a>.
+</li></ul></td><td><a href="#fieldset_0-24_0_6">ISS encoding for an exception from an LDC or STC instruction</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_AA32 is implemented</td></tr><tr><td class="bitfield">0b000111</td><td><p>Access to SME, SVE, Advanced SIMD or floating-point functionality trapped by <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.FPEN, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.FPEN, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TFP, or <a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TFP control.</p>
+<p>Excludes exceptions resulting from <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a> when the value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1, or because SVE or Advanced SIMD and floating-point are not implemented. These are reported with EC value <span class="binarynumber">0b000000</span>.</p></td><td><a href="#fieldset_0-24_0_7">ISS encoding for an exception from an access to a register or instruction resulting from the FPEN and TFP traps</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td></td></tr><tr><td class="bitfield">0b001001</td><td>
           <p>Trapped use of a Pointer authentication instruction.</p>
         </td><td><a href="#fieldset_0-24_0_27">ISS encoding for an exception from a trapped Pointer Authentication instruction</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_PAuth is implemented</td></tr><tr><td class="bitfield">0b001010</td><td>
           <p>Trapped execution of any instruction not covered by other EC values.</p>
@@ -267,13 +267,13 @@
           <p>SVC instruction execution in AArch64 state.</p>
         </td><td><a href="#fieldset_0-24_0_12">ISS encoding for an exception from HVC or SVC instruction execution</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_AA64 is implemented</td></tr><tr><td class="bitfield">0b011000</td><td><p>Trapped MSR, MRS or System instruction execution in AArch64 state, that is not reported using EC values <span class="binarynumber">0b000000</span>, <span class="binarynumber">0b000001</span>, or <span class="binarynumber">0b000111</span>.</p>
 <p>This includes all instructions that cause exceptions that are part of the encoding space defined in <span class="xref">'System instruction class encoding overview'</span>, except for those exceptions reported using EC values <span class="binarynumber">0b000000</span>, <span class="binarynumber">0b000001</span>, or <span class="binarynumber">0b000111</span>.</p></td><td><a href="#fieldset_0-24_0_13">ISS encoding for an exception from MSR, MRS, or System instruction execution in AArch64 state</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_AA64 is implemented</td></tr><tr><td class="bitfield">0b011001</td><td>
-          <p>Access to SVE functionality trapped as a result of <a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.ZEN, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.ZEN, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TZ, or <a href="AArch64-cptr_el3.html">CPTR_EL3</a>.EZ, that is not reported using EC value <span class="binarynumber">0b000000</span>.</p>
+          <p>Access to SVE functionality trapped as a result of <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.ZEN, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.ZEN, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TZ, or <a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.EZ, that is not reported using EC value <span class="binarynumber">0b000000</span>.</p>
         </td><td><a href="#fieldset_0-24_0_8">ISS encoding for an exception from an access to SVE functionality, resulting from CPACR_EL1.ZEN, CPTR_EL2.ZEN, CPTR_EL2.TZ, or CPTR_EL3.EZ</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_SVE is implemented</td></tr><tr><td class="bitfield">0b011010</td><td>
           <p>Trapped ERET, ERETAA, or ERETAB instruction execution.</p>
         </td><td><a href="#fieldset_0-24_0_25">ISS encoding for an exception from an ERET, ERETAA, or ERETAB instruction</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_FGT is implemented or FEAT_NV is implemented</td></tr><tr><td class="bitfield">0b011100</td><td>
           <p>Exception from a PAC Fail</p>
         </td><td><a href="#fieldset_0-24_0_28">ISS encoding for a PAC Fail exception</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_FPAC is implemented</td></tr><tr><td class="bitfield">0b011101</td><td>
-          <p>Access to SME functionality trapped as a result of <a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.SMEN, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TSM, <a href="AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, or an attempted execution of an instruction that is illegal because of the value of PSTATE.SM or PSTATE.ZA, that is not reported using EC value <span class="binarynumber">0b000000</span>.</p>
+          <p>Access to SME functionality trapped as a result of <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.SMEN, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TSM, <a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, or an attempted execution of an instruction that is illegal because of the value of PSTATE.SM or PSTATE.ZA, that is not reported using EC value <span class="binarynumber">0b000000</span>.</p>
         </td><td><a href="#fieldset_0-24_0_16">ISS encoding for an exception due to SME functionality</a></td><td><a href="#fieldset_0-55_32_3">ISS2 encoding for all other exceptions</a></td><td>When FEAT_SME is implemented</td></tr><tr><td class="bitfield">0b100000</td><td><p>Instruction Abort from a lower Exception level.</p>
 <p>Used for MMU faults generated by instruction accesses and synchronous External aborts, including synchronous parity or ECC errors. Not used for debug-related exceptions.</p></td><td><a href="#fieldset_0-24_0_15">ISS encoding for an exception from an Instruction Abort</a></td><td><a href="#fieldset_0-55_32_1">ISS2 encoding for an exception from an Instruction Abort</a></td><td></td></tr><tr><td class="bitfield">0b100001</td><td><p>Instruction Abort taken without a change in Exception level.</p>
 <p>Used for MMU faults generated by instruction accesses and synchronous External aborts, including synchronous parity or ECC errors. Not used for debug-related exceptions.</p></td><td><a href="#fieldset_0-24_0_15">ISS encoding for an exception from an Instruction Abort</a></td><td><a href="#fieldset_0-55_32_1">ISS2 encoding for an exception from an Instruction Abort</a></td><td></td></tr><tr><td class="bitfield">0b100010</td><td>
@@ -385,25 +385,25 @@
 </li><li>In Non-debug state, the attempted execution of an instruction bit pattern that is not accessible in Non-debug state.
 </li><li>In AArch32 state, attempted execution of a short vector floating-point instruction.
 </li><li>In an implementation that does not include Advanced SIMD and floating-point functionality, an attempted access to Advanced SIMD or floating-point functionality under conditions where that access would be permitted if that functionality was present. This includes the attempted execution of an Advanced SIMD or floating-point instruction, and attempted accesses to Advanced SIMD and floating-point System registers.
-</li><li>An exception generated because of the value of one of the <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.{ITD, SED, CP15BEN} control bits.
+</li><li>An exception generated because of the value of one of the <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.{ITD, SED, CP15BEN} control bits.
 </li><li>Attempted execution of:<ul>
-<li>An HVC instruction when disabled by <a href="AArch64-hcr_el2.html">HCR_EL2</a>.HCD or <a href="AArch64-scr_el3.html">SCR_EL3</a>.HCE.
-</li><li>An SMC instruction when disabled by <a href="AArch64-scr_el3.html">SCR_EL3</a>.SMD.
-</li><li>An HLT instruction when disabled by <a href="ext-edscr.html">EDSCR</a>.HDE.
+<li>An HVC instruction when disabled by <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.HCD or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HCE.
+</li><li>An SMC instruction when disabled by <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SMD.
+</li><li>An HLT instruction when disabled by <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.HDE.
 </li></ul>
 
-</li><li>Attempted execution of an MSR or MRS instruction to access <a href="AArch64-sp_el0.html">SP_EL0</a> when the value of <a href="AArch64-spsel.html">SPSel</a>.SP is 0.
-</li><li>Attempted execution of an MSR or MRS instruction using a _EL12 register name when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is not 1.
+</li><li>Attempted execution of an MSR or MRS instruction to access <a href="/latest_sysreg/AArch64-sp_el0.html">SP_EL0</a> when the value of <a href="/latest_sysreg/AArch64-spsel.html">SPSel</a>.SP is 0.
+</li><li>Attempted execution of an MSR or MRS instruction using a _EL12 register name when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is not 1.
 </li><li>Attempted execution, in Debug state, of:<ul>
-<li>A DCPS1 instruction when the value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1 and EL2 is disabled or not implemented in the current Security state.
+<li>A DCPS1 instruction when the value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1 and EL2 is disabled or not implemented in the current Security state.
 </li><li>A DCPS2 instruction from EL1 or EL0 when EL2 is disabled or not implemented in the current Security state.
-</li><li>A DCPS3 instruction when the value of <a href="ext-edscr.html">EDSCR</a>.SDD is 1, or when EL3 is not implemented.
+</li><li>A DCPS3 instruction when the value of <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.SDD is 1, or when EL3 is not implemented.
 </li></ul>
 
 </li><li>When EL3 is using AArch64, attempted execution from Secure EL1 of an SRS instruction using R13_mon.
-</li><li>In Debug state when the value of <a href="ext-edscr.html">EDSCR</a>.SDD is 1, the attempted execution at EL2, EL1, and EL0 of an instruction that is configured to trap to EL3.
+</li><li>In Debug state when the value of <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.SDD is 1, the attempted execution at EL2, EL1, and EL0 of an instruction that is configured to trap to EL3.
 </li><li>In AArch32 state, the attempted execution of an MRS (banked register) or an MSR (banked register) instruction to SPSR_mon, SP_mon, or LR_mon.
-</li><li>An exception that is taken to EL2 because the value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1. If the value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 0, this exception is reported using an ESR_EL1.EC value of <span class="binarynumber">0b000111</span>.
+</li><li>An exception that is taken to EL2 because the value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1. If the value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 0, this exception is reported using an ESR_EL1.EC value of <span class="binarynumber">0b000111</span>.
 </li><li>If <span class="xref">FEAT_UINJ</span> is implemented, an Undefined exception caused by attempting to execute any instruction when PSTATE.UINJ is 1.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_1">ISS encoding for an exception from a WF* instruction</h3><table class="regdiagram" id="fieldset_0-24_0_1"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_1-24_24">CV</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_1-23_20">COND</a></td><td class="lr" colspan="10"><a href="#fieldset_0-24_0_1-19_10">RES0</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_1-9_5-1">RN</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_1-4_3">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_1-2_2-1">RV</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_1-1_0">TI</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_1-24_24">CV, bit [24]:
       </h4><div class="field">
@@ -485,11 +485,11 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from a WF* instruction</h4><div class="text_after_fields"><p>The following fields describe configuration settings for generating this exception:</p>
 <ul>
-<li><a href="AArch32-hcr.html">HCR</a>.{TWE, TWI}.
-</li><li><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.{nTWE, nTWI}.
-</li><li><a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.{nTWE, nTWI}.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TWE, TWI}.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.{TWE, TWI}.
+<li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TWE, TWI}.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.{nTWE, nTWI}.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.{nTWE, nTWI}.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TWE, TWI}.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{TWE, TWI}.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_2">ISS encoding for an exception from an MCR or MRC access</h3><table class="regdiagram" id="fieldset_0-24_0_2"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_2-24_24">CV</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_2-23_20">COND</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_2-19_17">Opc2</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_2-16_14">Opc1</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_2-13_10">CRn</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_2-9_5">Rt</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_2-4_1">CRm</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_2-0_0">Direction</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_2-24_24">CV, bit [24]:
       </h4><div class="field">
             <p>Condition code valid.</p>
@@ -575,48 +575,48 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from an MCR or MRC access</h4><div class="text_after_fields"><p>The following fields describe configuration settings for generating exceptions from an MCR or MRC access using coproc <span class="binarynumber">0b1111</span>, that are reported using EC value <span class="binarynumber">0b000011</span>:</p>
 <ul>
-<li>If <span class="xref">FEAT_TIDCP1</span> is implemented, <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP, for EL0 accesses to <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> functionality using AArch32 state, trapped to EL1.
-</li><li><a href="AArch64-cntkctl_el1.html">CNTKCTL_EL1</a>.{EL0PTEN, EL0VTEN, EL0PCTEN, EL0VCTEN}, for accesses to the Generic Timer Registers from EL0 using AArch32 state, trapped to EL1 or EL2.
-</li><li><a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.{ER, CR, SW, EN}, for accesses to Performance Monitor System registers from EL0 using AArch32 state, trapped to EL1 or EL2.
-</li><li><a href="AArch64-amuserenr_el0.html">AMUSERENR_EL0</a>.EN, for accesses to Activity Monitors System registers from EL0 using AArch32 state, trapped to EL1 or EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.{TRVM, TVM} and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TRVM, TVM}, for accesses to virtual memory control registers from EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.TTLB and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TTLB, for execution of TLB maintenance instructions at EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.{TSW, TPC, TPU} and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TSW, TPC, TPU} for execution of cache maintenance instructions at EL0 and EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.TAC and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TACR, for accesses to the Auxiliary Control Register at EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.TIDCP and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TIDCP, for accesses to lockdown, DMA, and TCM operations at EL0 and EL1 using AArch32 state, trapped to EL2.
-</li><li>If <span class="xref">FEAT_TIDCP1</span> is implemented, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP, for EL0 accesses to <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> functionality using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.{TID1, TID2, TID3} and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TID1, TID2, TID3}, for accesses to ID registers at EL0 and EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcr2.html">HCR2</a>.TERR, for Non-secure accesses to error record registers at EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TCPAC and <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC, for accesses to <a href="AArch64-cpacr_el1.html">CPACR_EL1</a> or <a href="AArch32-cpacr.html">CPACR</a> using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hstr.html">HSTR</a>.T&lt;n&gt; and <a href="AArch64-hstr_el2.html">HSTR_EL2</a>.T&lt;n&gt;, for accesses to System registers using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-cnthctl.html">CNTHCTL</a>.PL1PCEN and <a href="AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.EL1PCEN, for accesses to the Generic Timer registers from EL0 and EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TTRF, for Non-secure accesses to trace filter control registers from System registers using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.{TPM, TPMCR} and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.{TPM, TPMCR}, for accesses to Performance Monitor System registers from EL0 and EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TAM and <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TAM, for accesses to Activity Monitors System registers from EL0 and EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TCPAC, for accesses to <a href="AArch32-cpacr.html">CPACR</a> from EL1 and EL2, and accesses to <a href="AArch32-hcptr.html">HCPTR</a> from EL2 using AArch32 state, trapped to EL3.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TPM, for accesses to Performance Monitor System registers from EL0, EL1 and EL2 using AArch32 state, trapped to EL3.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TAM, for accesses to Activity Monitors System registers from EL0, EL1 and EL2 using AArch32 state, trapped to EL3.
+<li>If <span class="xref">FEAT_TIDCP1</span> is implemented, <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP, for EL0 accesses to <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> functionality using AArch32 state, trapped to EL1.
+</li><li><a href="/latest_sysreg/AArch64-cntkctl_el1.html">CNTKCTL_EL1</a>.{EL0PTEN, EL0VTEN, EL0PCTEN, EL0VCTEN}, for accesses to the Generic Timer Registers from EL0 using AArch32 state, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.{ER, CR, SW, EN}, for accesses to Performance Monitor System registers from EL0 using AArch32 state, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-amuserenr_el0.html">AMUSERENR_EL0</a>.EN, for accesses to Activity Monitors System registers from EL0 using AArch32 state, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TRVM, TVM} and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TRVM, TVM}, for accesses to virtual memory control registers from EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TTLB and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TTLB, for execution of TLB maintenance instructions at EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TSW, TPC, TPU} and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TSW, TPC, TPU} for execution of cache maintenance instructions at EL0 and EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TAC and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TACR, for accesses to the Auxiliary Control Register at EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TIDCP and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TIDCP, for accesses to lockdown, DMA, and TCM operations at EL0 and EL1 using AArch32 state, trapped to EL2.
+</li><li>If <span class="xref">FEAT_TIDCP1</span> is implemented, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP, for EL0 accesses to <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> functionality using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TID1, TID2, TID3} and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TID1, TID2, TID3}, for accesses to ID registers at EL0 and EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr2.html">HCR2</a>.TERR, for Non-secure accesses to error record registers at EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TCPAC and <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC, for accesses to <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a> or <a href="/latest_sysreg/AArch32-cpacr.html">CPACR</a> using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hstr.html">HSTR</a>.T&lt;n&gt; and <a href="/latest_sysreg/AArch64-hstr_el2.html">HSTR_EL2</a>.T&lt;n&gt;, for accesses to System registers using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-cnthctl.html">CNTHCTL</a>.PL1PCEN and <a href="/latest_sysreg/AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.EL1PCEN, for accesses to the Generic Timer registers from EL0 and EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TTRF, for Non-secure accesses to trace filter control registers from System registers using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.{TPM, TPMCR} and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.{TPM, TPMCR}, for accesses to Performance Monitor System registers from EL0 and EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TAM and <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TAM, for accesses to Activity Monitors System registers from EL0 and EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TCPAC, for accesses to <a href="/latest_sysreg/AArch32-cpacr.html">CPACR</a> from EL1 and EL2, and accesses to <a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a> from EL2 using AArch32 state, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TPM, for accesses to Performance Monitor System registers from EL0, EL1 and EL2 using AArch32 state, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TAM, for accesses to Activity Monitors System registers from EL0, EL1 and EL2 using AArch32 state, trapped to EL3.
 </li><li>If <span class="xref">FEAT_FGT</span> is implemented, access to some registers at EL0, trapped to EL2.
 </li></ul>
 <p>The following fields describe configuration settings for generating exceptions from an MCR or MRC access using coproc <span class="binarynumber">0b1110</span>, that are reported using EC value <span class="binarynumber">0b000101</span>:</p>
 <ul>
-<li><a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.TTA for accesses to trace System registers, trapped to EL1 or EL2.
-</li><li><a href="AArch64-mdscr_el1.html">MDSCR_EL1</a>.TDCC, for accesses to the Debug Communications Channel (DCC) registers at EL0 and EL1 using AArch32 state, trapped to EL1 or EL2.
-</li><li>If <span class="xref">FEAT_FGT</span> is implemented, <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDCC for accesses to the DCC System registers at EL0 and EL1 trapped to EL2, and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC for accesses to the DCC System registers at EL0, EL1, and EL2 trapped to EL3.
-</li><li><a href="AArch32-hcr.html">HCR</a>.TID0 and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TID0, for accesses to the <a href="AArch32-jidr.html">JIDR</a> register in the ID group 0 at EL0 and EL1 using AArch32, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TTA and <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TTA, for accesses to trace System registers using AArch32, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TDRA and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDRA, for accesses to Debug ROM registers <a href="AArch32-dbgdrar.html">DBGDRAR</a> and <a href="AArch32-dbgdsar.html">DBGDSAR</a> using AArch32, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TDOSA and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDOSA, for accesses to powerdown debug System registers, using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TDA and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDA, for accesses to other debug System registers, using AArch32 state, trapped to EL2.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TTA, for accesses to trace System registers using AArch32, trapped to EL3.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDOSA, for accesses to powerdown debug System registers using AArch32, trapped to EL3.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDA, for accesses to other debug System registers, using AArch32, trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.TTA for accesses to trace System registers, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a>.TDCC, for accesses to the Debug Communications Channel (DCC) registers at EL0 and EL1 using AArch32 state, trapped to EL1 or EL2.
+</li><li>If <span class="xref">FEAT_FGT</span> is implemented, <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDCC for accesses to the DCC System registers at EL0 and EL1 trapped to EL2, and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC for accesses to the DCC System registers at EL0, EL1, and EL2 trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TID0 and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TID0, for accesses to the <a href="/latest_sysreg/AArch32-jidr.html">JIDR</a> register in the ID group 0 at EL0 and EL1 using AArch32, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TTA and <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TTA, for accesses to trace System registers using AArch32, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDRA and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDRA, for accesses to Debug ROM registers <a href="/latest_sysreg/AArch32-dbgdrar.html">DBGDRAR</a> and <a href="/latest_sysreg/AArch32-dbgdsar.html">DBGDSAR</a> using AArch32, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDOSA and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDOSA, for accesses to powerdown debug System registers, using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDA and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDA, for accesses to other debug System registers, using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TTA, for accesses to trace System registers using AArch32, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDOSA, for accesses to powerdown debug System registers using AArch32, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDA, for accesses to other debug System registers, using AArch32, trapped to EL3.
 </li></ul>
 <p>The following fields describe configuration settings for generating exceptions from a VMSR or VMRS access, that are reported using EC value <span class="binarynumber">0b001000</span>:</p>
 <ul>
-<li><a href="AArch32-hcr.html">HCR</a>.TID0 and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TID0, for accesses to the <a href="AArch32-fpsid.html">FPSID</a> register in ID group 0 at EL1 using AArch32 state, VMRS access trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.TID3 and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TID3, for accesses to registers in ID group 3 including <a href="AArch32-mvfr0.html">MVFR0</a>, <a href="AArch32-mvfr1.html">MVFR1</a> and <a href="AArch32-mvfr2.html">MVFR2</a>, VMRS access trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.{TCP10, TCP11}, for Non-secure accesses to <a href="AArch32-fpscr.html">FPSCR</a>, <a href="AArch32-fpsid.html">FPSID</a>, <a href="AArch32-fpexc.html">FPEXC</a>, <a href="AArch32-mvfr0.html">MVFR0</a>, <a href="AArch32-mvfr1.html">MVFR1</a>, and <a href="AArch32-mvfr2.html">MVFR2</a>, trapped to EL2.
+<li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TID0 and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TID0, for accesses to the <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a> register in ID group 0 at EL1 using AArch32 state, VMRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TID3 and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TID3, for accesses to registers in ID group 3 including <a href="/latest_sysreg/AArch32-mvfr0.html">MVFR0</a>, <a href="/latest_sysreg/AArch32-mvfr1.html">MVFR1</a> and <a href="/latest_sysreg/AArch32-mvfr2.html">MVFR2</a>, VMRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.{TCP10, TCP11}, for Non-secure accesses to <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR</a>, <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a>, <a href="/latest_sysreg/AArch32-fpexc.html">FPEXC</a>, <a href="/latest_sysreg/AArch32-mvfr0.html">MVFR0</a>, <a href="/latest_sysreg/AArch32-mvfr1.html">MVFR1</a>, and <a href="/latest_sysreg/AArch32-mvfr2.html">MVFR2</a>, trapped to EL2.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_3">ISS encoding for an exception from any other instruction</h3><table class="regdiagram" id="fieldset_0-24_0_3"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="25"><a href="#fieldset_0-24_0_3-24_0">ISS</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_3-24_0">ISS, bits [24:0]:
       </h4><div class="field"><table class="valuetable"><tr><th>ISS</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b0000000000000000000000000</td><td>
                 <p><span class="instruction">ST64BV</span> instruction trapped.</p>
@@ -750,27 +750,27 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from an MCRR or MRRC access</h4><div class="text_after_fields"><p>The following fields describe configuration settings for generating exceptions from an MCRR or MRRC access using coproc <span class="binarynumber">0b1111</span>, that are reported using EC value <span class="binarynumber">0b000100</span>:</p>
 <ul>
-<li><a href="AArch64-cntkctl_el1.html">CNTKCTL_EL1</a>.{EL0PTEN, EL0VTEN, EL0PCTEN, EL0VCTEN}, for accesses to the Generic Timer Registers from EL0 using AArch32 state, trapped to EL1 or EL2.
-</li><li><a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.{CR, EN}, for accesses to Performance Monitor System registers from EL0 using AArch32 state, trapped to EL1 or EL2.
-</li><li><a href="AArch64-amuserenr_el0.html">AMUSERENR_EL0</a>.{EN}, for accesses to Activity Monitors System registers AMEVCNTR0&lt;n&gt; and AMEVCNTR1&lt;n&gt; from EL0 using AArch32 state, trapped to EL1 or EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.{TRVM, TVM} and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TRVM, TVM}, for accesses to virtual memory control registers from EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcr2.html">HCR2</a>.TERR, for Non-secure accesses to error record registers at EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hstr.html">HSTR</a>.T&lt;n&gt; and <a href="AArch64-hstr_el2.html">HSTR_EL2</a>.T&lt;n&gt;, for accesses to System registers using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-cnthctl.html">CNTHCTL</a>.{PL1PCEN, PL1PCTEN} and <a href="AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.{EL1PCEN, EL1PCTEN}, for accesses to the Generic Timer registers from EL0 and EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TPM and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.{TPM, TPMCR}, for accesses to Performance Monitor System registers from EL0 and EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TAM and <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TAM, for accesses to Activity Monitors System registers AMEVCNTR0&lt;n&gt; and AMEVCNTR1&lt;n&gt; from EL0 and EL1 using AArch32 state, trapped to EL2.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TPM, for accesses to Performance Monitor System registers from EL0, EL1 and EL2 using AArch32 state, trapped to EL3.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TAM, for accesses to Activity Monitors System registers from EL0, EL1 and EL2 using AArch32 state, trapped to EL3.
-</li><li>If <span class="xref">FEAT_FGT</span> is implemented, <a href="AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>.PMCCNTR_EL0 for MRRC access and <a href="AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>.PMCCNTR_EL0 for MCRR access to <a href="AArch32-pmccntr.html">PMCCNTR</a> at EL0, trapped to EL2.
+<li><a href="/latest_sysreg/AArch64-cntkctl_el1.html">CNTKCTL_EL1</a>.{EL0PTEN, EL0VTEN, EL0PCTEN, EL0VCTEN}, for accesses to the Generic Timer Registers from EL0 using AArch32 state, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>.{CR, EN}, for accesses to Performance Monitor System registers from EL0 using AArch32 state, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-amuserenr_el0.html">AMUSERENR_EL0</a>.{EN}, for accesses to Activity Monitors System registers AMEVCNTR0&lt;n&gt; and AMEVCNTR1&lt;n&gt; from EL0 using AArch32 state, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TRVM, TVM} and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TRVM, TVM}, for accesses to virtual memory control registers from EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr2.html">HCR2</a>.TERR, for Non-secure accesses to error record registers at EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hstr.html">HSTR</a>.T&lt;n&gt; and <a href="/latest_sysreg/AArch64-hstr_el2.html">HSTR_EL2</a>.T&lt;n&gt;, for accesses to System registers using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-cnthctl.html">CNTHCTL</a>.{PL1PCEN, PL1PCTEN} and <a href="/latest_sysreg/AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.{EL1PCEN, EL1PCTEN}, for accesses to the Generic Timer registers from EL0 and EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TPM and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.{TPM, TPMCR}, for accesses to Performance Monitor System registers from EL0 and EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TAM and <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TAM, for accesses to Activity Monitors System registers AMEVCNTR0&lt;n&gt; and AMEVCNTR1&lt;n&gt; from EL0 and EL1 using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TPM, for accesses to Performance Monitor System registers from EL0, EL1 and EL2 using AArch32 state, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TAM, for accesses to Activity Monitors System registers from EL0, EL1 and EL2 using AArch32 state, trapped to EL3.
+</li><li>If <span class="xref">FEAT_FGT</span> is implemented, <a href="/latest_sysreg/AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>.PMCCNTR_EL0 for MRRC access and <a href="/latest_sysreg/AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>.PMCCNTR_EL0 for MCRR access to <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> at EL0, trapped to EL2.
 </li></ul>
 <p>The following fields describe configuration settings for generating exceptions from an MCRR or MRRC access using coproc <span class="binarynumber">0b1110</span>, that are reported using EC value <span class="binarynumber">0b001100</span>:</p>
 <ul>
-<li><a href="AArch64-mdscr_el1.html">MDSCR_EL1</a>.TDCC, for accesses to the Debug ROM registers <a href="AArch32-dbgdsar.html">DBGDSAR</a> and <a href="AArch32-dbgdrar.html">DBGDRAR</a> at EL0 using AArch32 state, trapped to EL1 or EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TDRA and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDRA, for accesses to Debug ROM registers <a href="AArch32-dbgdrar.html">DBGDRAR</a> and <a href="AArch32-dbgdsar.html">DBGDSAR</a> using AArch32, trapped to EL2.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDA, for accesses to debug System registers, using AArch32, trapped to EL3.
-</li><li><a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.TTA for accesses to trace System registers using AArch32, trapped to EL1 or EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TTA and <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TTA, for accesses to trace System registers using AArch32, trapped to EL2.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TTA, for accesses to trace System registers using AArch32, trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a>.TDCC, for accesses to the Debug ROM registers <a href="/latest_sysreg/AArch32-dbgdsar.html">DBGDSAR</a> and <a href="/latest_sysreg/AArch32-dbgdrar.html">DBGDRAR</a> at EL0 using AArch32 state, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDRA and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDRA, for accesses to Debug ROM registers <a href="/latest_sysreg/AArch32-dbgdrar.html">DBGDRAR</a> and <a href="/latest_sysreg/AArch32-dbgdsar.html">DBGDSAR</a> using AArch32, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDA, for accesses to debug System registers, using AArch32, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.TTA for accesses to trace System registers using AArch32, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TTA and <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TTA, for accesses to trace System registers using AArch32, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TTA, for accesses to trace System registers using AArch32, trapped to EL3.
 </li></ul>
 <div class="note"><p>If FEAT_ETMv4 or FEAT_ETE are implemented, MCRR and MRRC accesses to trace System registers are <span class="arm-defined-word">UNDEFINED</span> and the resulting exception is higher priority than an exception due to these traps.</p></div></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_6">ISS encoding for an exception from an LDC or STC instruction</h3><table class="regdiagram" id="fieldset_0-24_0_6"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_6-24_24">CV</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_6-23_20">COND</a></td><td class="lr" colspan="8"><a href="#fieldset_0-24_0_6-19_12">imm8</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_6-11_10">RES0</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_6-9_5">Rn</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_6-4_4">Offset</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_6-3_1">AM</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_6-0_0">Direction</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_6-24_24">CV, bit [24]:
       </h4><div class="field">
@@ -880,10 +880,10 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from an LDC or STC instruction</h4><div class="text_after_fields"><p>The following fields describe the configuration settings from an LDC or STC access for the traps that are reported using EC value <span class="binarynumber">0b000110</span>:</p>
 <ul>
-<li><a href="AArch64-mdscr_el1.html">MDSCR_EL1</a>.TDCC, for accesses to <a href="AArch32-dbgdtrtxint.html">DBGDTRTXint</a> and <a href="AArch32-dbgdtrrxint.html">DBGDTRRXint</a>, using AArch32 state, trapped to EL1 or EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TDA and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDA, for accesses to <a href="AArch32-dbgdtrtxint.html">DBGDTRTXint</a> and <a href="AArch32-dbgdtrrxint.html">DBGDTRRXint</a>, using AArch32 state, trapped to EL2.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDA, for accesses to <a href="AArch32-dbgdtrtxint.html">DBGDTRTXint</a> and <a href="AArch32-dbgdtrrxint.html">DBGDTRRXint</a>, using AArch32 state, trapped to EL3.
-</li><li>If <span class="xref">FEAT_FGT</span> is implemented, <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDCC for accesses to the DCC System registers at EL0 and EL1 trapped to EL2, and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC for accesses to the DCC System registers at EL0, EL1, and EL2 trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a>.TDCC, for accesses to <a href="/latest_sysreg/AArch32-dbgdtrtxint.html">DBGDTRTXint</a> and <a href="/latest_sysreg/AArch32-dbgdtrrxint.html">DBGDTRRXint</a>, using AArch32 state, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDA and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDA, for accesses to <a href="/latest_sysreg/AArch32-dbgdtrtxint.html">DBGDTRTXint</a> and <a href="/latest_sysreg/AArch32-dbgdtrrxint.html">DBGDTRRXint</a>, using AArch32 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDA, for accesses to <a href="/latest_sysreg/AArch32-dbgdtrtxint.html">DBGDTRTXint</a> and <a href="/latest_sysreg/AArch32-dbgdtrrxint.html">DBGDTRRXint</a>, using AArch32 state, trapped to EL3.
+</li><li>If <span class="xref">FEAT_FGT</span> is implemented, <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDCC for accesses to the DCC System registers at EL0 and EL1 trapped to EL2, and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC for accesses to the DCC System registers at EL0, EL1, and EL2 trapped to EL3.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_7">ISS encoding for an exception from an access to a register or instruction resulting from the FPEN and TFP traps</h3><table class="regdiagram" id="fieldset_0-24_0_7"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_7-24_24">CV</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_7-23_20">COND</a></td><td class="lr" colspan="20"><a href="#fieldset_0-24_0_7-19_0">RES0</a></td></tr></tbody></table><div class="text_before_fields"><p>The accesses covered by this trap include:</p>
 <ul>
 <li>Execution of Advanced SIMD and floating-point instructions.
@@ -933,11 +933,11 @@
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
           </div><h4>Additional information for the ISS encoding for an exception from an access to a register or instruction resulting from the FPEN and TFP traps</h4><div class="text_after_fields"><p>The following fields describe the configuration settings for the traps that are reported using EC value <span class="binarynumber">0b000111</span>:</p>
 <ul>
-<li><a href="AArch32-hcptr.html">HCPTR</a>.{TCP10, TCP11}, for Non-secure accesses to Advanced SIMD and floating-point registers and instructions, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TASE, for Non-secure accesses to Advanced SIMD functionality, trapped to EL2.
-</li><li><a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.FPEN, for accesses to SIMD and floating-point registers trapped to EL1.
-</li><li><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.FPEN and <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TFP, for accesses to SIMD and floating-point registers trapped to EL2.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TFP, for accesses to SIMD and floating-point registers trapped to EL3.
+<li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.{TCP10, TCP11}, for Non-secure accesses to Advanced SIMD and floating-point registers and instructions, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TASE, for Non-secure accesses to Advanced SIMD functionality, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.FPEN, for accesses to SIMD and floating-point registers trapped to EL1.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.FPEN and <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TFP, for accesses to SIMD and floating-point registers trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TFP, for accesses to SIMD and floating-point registers trapped to EL3.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_8">ISS encoding for an exception from an access to SVE functionality, resulting from CPACR_EL1.ZEN, CPTR_EL2.ZEN, CPTR_EL2.TZ, or CPTR_EL3.EZ</h3><table class="regdiagram" id="fieldset_0-24_0_8"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="25"><a href="#fieldset_0-24_0_8-24_0">RES0</a></td></tr></tbody></table><div class="text_before_fields"><p>The accesses covered by this trap include:</p>
 <ul>
 <li>Execution of SVE instructions when the PE is not in Streaming SVE mode.
@@ -948,9 +948,9 @@
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
           </div><h4>Additional information for the ISS encoding for an exception from an access to SVE functionality, resulting from CPACR_EL1.ZEN, CPTR_EL2.ZEN, CPTR_EL2.TZ, or CPTR_EL3.EZ</h4><div class="text_after_fields"><p>The following fields describe the configuration settings for the traps that are reported using EC value <span class="binarynumber">0b011001</span>:</p>
 <ul>
-<li><a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.ZEN, for execution of SVE instructions and accesses to SVE registers at EL1 or EL0, trapped to EL1.
-</li><li><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.ZEN and <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TZ, for execution of SVE instructions and accesses to SVE registers at EL0, EL1, or EL2, trapped to EL2.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.EZ, for execution of SVE instructions and accesses to SVE registers from all Exception levels, trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.ZEN, for execution of SVE instructions and accesses to SVE registers at EL1 or EL0, trapped to EL1.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.ZEN and <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TZ, for execution of SVE instructions and accesses to SVE registers at EL0, EL1, or EL2, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.EZ, for execution of SVE instructions and accesses to SVE registers from all Exception levels, trapped to EL3.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_9">ISS encoding for a Profiling exception</h3><table class="regdiagram" id="fieldset_0-24_0_9"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="19"><a href="#fieldset_0-24_0_9-24_6">RES0</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_9-5_1">FSC</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_9-0_0">RES0</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_9-24_6">Bits [24:6]:
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -960,9 +960,9 @@
           <table class="valuetable"><tr><th>FSC</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b00000</td><td>
                 <p>PMU Profiling exception. The exception was generated because at least one PMU counter overflow status flag was 1.</p>
               </td><td>When FEAT_EBEP is implemented</td></tr><tr><td class="bitfield">0b00001</td><td>
-                <p>Profiling Buffer management event. The exception was generated because <a href="AArch64-pmbsr_el1.html">PMBSR_EL1</a>.S was 1.</p>
+                <p>Profiling Buffer management event. The exception was generated because <a href="/latest_sysreg/AArch64-pmbsr_el1.html">PMBSR_EL1</a>.S was 1.</p>
               </td><td>When FEAT_SPE_EXC is implemented</td></tr><tr><td class="bitfield">0b00010</td><td>
-                <p>Trace buffer management event. The exception was generated because <a href="AArch64-trbsr_el1.html">TRBSR_EL1</a>.IRQ was 1.</p>
+                <p>Trace buffer management event. The exception was generated because <a href="/latest_sysreg/AArch64-trbsr_el1.html">TRBSR_EL1</a>.IRQ was 1.</p>
               </td><td>When FEAT_TRBE_EXC is implemented</td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-24_0_9-0_0">Bit [0]:
@@ -1077,7 +1077,7 @@
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from HVC or SVC instruction execution</h4><div class="text_after_fields"><p>In AArch32 state, the HVC instruction is unconditional, and a conditional SVC instruction generates an exception only if it passes its condition code check. Therefore, the syndrome information for these exceptions does not require conditionality information.</p>
 <p>For T32 and A32 instructions, see <span class="xref">'SVC'</span> and <span class="xref">'HVC'</span>.</p>
 <p>For A64 instructions, see <span class="xref">'SVC'</span> and <span class="xref">'HVC'</span>.</p>
-<p>If <span class="xref">FEAT_FGT</span> is implemented, <a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a>.{SVC_EL1, SVC_EL0} control fine-grained traps on SVC execution.</p></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_13">ISS encoding for an exception from MSR, MRS, or System instruction execution in AArch64 state</h3><table class="regdiagram" id="fieldset_0-24_0_13"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="3"><a href="#fieldset_0-24_0_13-24_22">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_13-21_20">Op0</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_13-19_17">Op2</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_13-16_14">Op1</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_13-13_10">CRn</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_13-9_5">Rt</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_13-4_1">CRm</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_13-0_0">Direction</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_13-24_22">Bits [24:22]:
+<p>If <span class="xref">FEAT_FGT</span> is implemented, <a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a>.{SVC_EL1, SVC_EL0} control fine-grained traps on SVC execution.</p></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_13">ISS encoding for an exception from MSR, MRS, or System instruction execution in AArch64 state</h3><table class="regdiagram" id="fieldset_0-24_0_13"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="3"><a href="#fieldset_0-24_0_13-24_22">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_13-21_20">Op0</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_13-19_17">Op2</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_13-16_14">Op1</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_13-13_10">CRn</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_13-9_5">Rt</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_13-4_1">CRm</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_13-0_0">Direction</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_13-24_22">Bits [24:22]:
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
           </div><h4 id="fieldset_0-24_0_13-21_20">Op0, bits [21:20]:
@@ -1121,114 +1121,114 @@
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from MSR, MRS, or System instruction execution in AArch64 state</h4><div class="text_after_fields"><p>For exceptions caused by System instructions, see <span class="xref">'System instructions' subsection of 'Branches, exception generating and System instructions'</span> for the encoding values returned by an instruction.</p>
 <p>The following fields describe configuration settings for generating the exception that is reported using EC value <span class="binarynumber">0b011000</span>:</p>
 <ul>
-<li>If <span class="xref">FEAT_TIDCP1</span> is implemented, <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP, for EL0 accesses to <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> functionality using AArch64 state, MSR or MRS access trapped to EL1.
-</li><li><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.UCI, for execution of cache maintenance instructions using AArch64 state, execution is trapped to EL1 or EL2.
-</li><li><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.UCT, for accesses to <a href="AArch64-ctr_el0.html">CTR_EL0</a> using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
-</li><li><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.DZE, for execution of DC ZVA instructions using AArch64 state, execution is trapped to EL1 or EL2.
-</li><li><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.UMA, for accesses to the PSTATE interrupt masks using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
-</li><li><a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.TTA, for accesses to the trace System registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
-</li><li><a href="AArch64-mdscr_el1.html">MDSCR_EL1</a>.TDCC, for accesses to the Debug Communications Channel (DCC) registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
-</li><li>If <span class="xref">FEAT_FGT</span> is implemented, <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDCC for accesses to the DCC registers at EL0 and EL1 trapped to EL2, and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC for accesses to the DCC registers at EL0, EL1, and EL2 trapped to EL3.
-</li><li><a href="AArch64-cntkctl_el1.html">CNTKCTL_EL1</a>.{EL0PTEN, EL0VTEN, EL0PCTEN, EL0VCTEN} accesses to the Generic Timer registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
-</li><li><a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>, for accesses to the Performance Monitor System registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
-</li><li><a href="AArch64-amuserenr_el0.html">AMUSERENR_EL0</a>.EN, for accesses to Activity Monitors System registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TRVM, TVM}, for accesses to virtual memory control registers using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.TDZ, for execution of DC ZVA instructions using AArch64 state, execution is trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.TTLB, for execution of TLB maintenance instructions using AArch64 state, execution is trapped to EL2.
+<li>If <span class="xref">FEAT_TIDCP1</span> is implemented, <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP, for EL0 accesses to <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> functionality using AArch64 state, MSR or MRS access trapped to EL1.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.UCI, for execution of cache maintenance instructions using AArch64 state, execution is trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.UCT, for accesses to <a href="/latest_sysreg/AArch64-ctr_el0.html">CTR_EL0</a> using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.DZE, for execution of DC ZVA instructions using AArch64 state, execution is trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.UMA, for accesses to the PSTATE interrupt masks using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.TTA, for accesses to the trace System registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a>.TDCC, for accesses to the Debug Communications Channel (DCC) registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
+</li><li>If <span class="xref">FEAT_FGT</span> is implemented, <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDCC for accesses to the DCC registers at EL0 and EL1 trapped to EL2, and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC for accesses to the DCC registers at EL0, EL1, and EL2 trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-cntkctl_el1.html">CNTKCTL_EL1</a>.{EL0PTEN, EL0VTEN, EL0PCTEN, EL0VCTEN} accesses to the Generic Timer registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a>, for accesses to the Performance Monitor System registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-amuserenr_el0.html">AMUSERENR_EL0</a>.EN, for accesses to Activity Monitors System registers using AArch64 state, MSR or MRS access trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TRVM, TVM}, for accesses to virtual memory control registers using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TDZ, for execution of DC ZVA instructions using AArch64 state, execution is trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TTLB, for execution of TLB maintenance instructions using AArch64 state, execution is trapped to EL2.
 </li><li>If <span class="xref">FEAT_EVT</span> is implemented, the following registers control traps for EL1 and EL0 registers and instructions that use this EC value:<ul>
-<li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TICAB, TOCU, TID4}.
-</li><li><a href="AArch32-hcr2.html">HCR2</a>.{TICAB, TOCU, TID4}.
+<li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TICAB, TOCU, TID4}.
+</li><li><a href="/latest_sysreg/AArch32-hcr2.html">HCR2</a>.{TICAB, TOCU, TID4}.
 </li></ul>
 
 </li><li>If <span class="xref">FEAT_EVT2</span> is implemented, the following registers control traps for EL1 and EL0 instructions that use this EC value:<ul>
-<li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TTLBOS, TTLBIS}.
+<li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TTLBOS, TTLBIS}.
 </li></ul>
 
-</li><li>If <span class="xref">FEAT_EVT2</span> is implemented, <a href="AArch32-hcr2.html">HCR2</a>.TTLBIS controls traps for EL1 and EL0 instructions using AArch32 state that use this EC value.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TSW, TPC, TPU}, for execution of cache maintenance instructions using AArch64 state, execution is trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.TACR, for accesses to the Auxiliary Control Register, <a href="AArch64-actlr_el1.html">ACTLR_EL1</a>, using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.TIDCP, for accesses to lockdown, DMA, and TCM operations using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li>If <span class="xref">FEAT_TIDCP1</span> is implemented, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP, for EL0 accesses to <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> functionality using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TID1, TID2, TID3}, for accesses to ID group 1, ID group 2 or ID group 3 registers, using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li>If <span class="xref">FEAT_MTE2</span> is implemented, <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TID5, for accesses to <a href="AArch64-gmid_el1.html">GMID_EL1</a>, using AArch64 state, MRS or MSR access at EL1, trapped to EL2.
-</li><li>If <span class="xref">FEAT_IDTE3</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.TID3, for accesses to ID group 3 registers using AArch64 state, at EL1 and EL2, trapped to EL3.
-</li><li><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC, for accesses to <a href="AArch64-cpacr_el1.html">CPACR_EL1</a>, using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li>Effective value of <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TTA, for accesses to the trace System registers, using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TTRF, for accesses to the trace filter control register, <a href="AArch64-trfcr_el1.html">TRFCR_EL1</a>, using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDRA, for accesses to Debug ROM registers, using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDOSA, for accesses to powerdown debug System registers using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.{EL1PCEN, EL1PCTEN}, for accesses to the Generic Timer registers using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TDA, for accesses to debug System registers using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.{TPM, TPMCR}, for accesses to Performance Monitor System registers, using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TAM, for accesses to Activity Monitors System registers, using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.APK, for accesses to Pointer authentication key registers, using AArch64 state, MSR or MRS access trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{NV, NV1}, for Nested virtualization register access, using AArch64 state, MSR or MRS access, trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.AT, for execution of AT S1E* instructions, using AArch64 state, execution is trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TERR, FIEN}, for accesses to RAS registers, using AArch64 state, MSR or MRS access, trapped to EL2.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.APK, for accesses to Pointer authentication key registers, using AArch64 state, MSR or MRS access trapped to EL3.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.ST, for accesses to the Counter-timer Physical Secure timer registers, using AArch64 state, MSR or MRS access trapped to EL3.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.{TERR, FIEN}, for accesses to RAS registers, using AArch64 state, MSR or MRS access trapped to EL3.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TCPAC, for accesses to <a href="AArch64-cptr_el2.html">CPTR_EL2</a> and <a href="AArch64-cpacr_el1.html">CPACR_EL1</a> using AArch64 state, MSR or MRS access trapped to EL3.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TTA, for accesses to the trace System registers, using AArch64 state, MSR or MRS access trapped to EL3.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TTRF, for accesses to the trace filter control registers, <a href="AArch64-trfcr_el1.html">TRFCR_EL1</a> and <a href="AArch64-trfcr_el2.html">TRFCR_EL2</a>, using AArch64 state, MSR or MRS access trapped to EL3.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDA, for accesses to debug System registers, using AArch64 state, MSR or MRS access trapped to EL3.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDOSA, for accesses to powerdown debug System registers, using AArch64 state, MSR or MRS access trapped to EL3.
-</li><li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TPM, for accesses to Performance Monitor System registers, using AArch64 state, MSR or MRS access trapped to EL3.
+</li><li>If <span class="xref">FEAT_EVT2</span> is implemented, <a href="/latest_sysreg/AArch32-hcr2.html">HCR2</a>.TTLBIS controls traps for EL1 and EL0 instructions using AArch32 state that use this EC value.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TSW, TPC, TPU}, for execution of cache maintenance instructions using AArch64 state, execution is trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TACR, for accesses to the Auxiliary Control Register, <a href="/latest_sysreg/AArch64-actlr_el1.html">ACTLR_EL1</a>, using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TIDCP, for accesses to lockdown, DMA, and TCM operations using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li>If <span class="xref">FEAT_TIDCP1</span> is implemented, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP, for EL0 accesses to <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> functionality using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TID1, TID2, TID3}, for accesses to ID group 1, ID group 2 or ID group 3 registers, using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li>If <span class="xref">FEAT_MTE2</span> is implemented, <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TID5, for accesses to <a href="/latest_sysreg/AArch64-gmid_el1.html">GMID_EL1</a>, using AArch64 state, MRS or MSR access at EL1, trapped to EL2.
+</li><li>If <span class="xref">FEAT_IDTE3</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TID3, for accesses to ID group 3 registers using AArch64 state, at EL1 and EL2, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC, for accesses to <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>, using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li>Effective value of <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TTA, for accesses to the trace System registers, using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TTRF, for accesses to the trace filter control register, <a href="/latest_sysreg/AArch64-trfcr_el1.html">TRFCR_EL1</a>, using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDRA, for accesses to Debug ROM registers, using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDOSA, for accesses to powerdown debug System registers using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.{EL1PCEN, EL1PCTEN}, for accesses to the Generic Timer registers using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TDA, for accesses to debug System registers using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.{TPM, TPMCR}, for accesses to Performance Monitor System registers, using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TAM, for accesses to Activity Monitors System registers, using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.APK, for accesses to Pointer authentication key registers, using AArch64 state, MSR or MRS access trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{NV, NV1}, for Nested virtualization register access, using AArch64 state, MSR or MRS access, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.AT, for execution of AT S1E* instructions, using AArch64 state, execution is trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TERR, FIEN}, for accesses to RAS registers, using AArch64 state, MSR or MRS access, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.APK, for accesses to Pointer authentication key registers, using AArch64 state, MSR or MRS access trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.ST, for accesses to the Counter-timer Physical Secure timer registers, using AArch64 state, MSR or MRS access trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{TERR, FIEN}, for accesses to RAS registers, using AArch64 state, MSR or MRS access trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TCPAC, for accesses to <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a> and <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a> using AArch64 state, MSR or MRS access trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TTA, for accesses to the trace System registers, using AArch64 state, MSR or MRS access trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TTRF, for accesses to the trace filter control registers, <a href="/latest_sysreg/AArch64-trfcr_el1.html">TRFCR_EL1</a> and <a href="/latest_sysreg/AArch64-trfcr_el2.html">TRFCR_EL2</a>, using AArch64 state, MSR or MRS access trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDA, for accesses to debug System registers, using AArch64 state, MSR or MRS access trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDOSA, for accesses to powerdown debug System registers, using AArch64 state, MSR or MRS access trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TPM, for accesses to Performance Monitor System registers, using AArch64 state, MSR or MRS access trapped to EL3.
 </li><li>If <span class="xref">FEAT_SPE</span> is implemented:<ul>
-<li><a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPB for accesses to Statistical Profiling and Profiling Buffer control registers, using AArch64 state, MSR or MRS access at EL1 and EL2 trapped to EL3.
-</li><li><a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.TPMS for accesses to SPE registers, using AArch64 state, MSR or MRS access at EL1 trapped to EL2.
+<li><a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPB for accesses to Statistical Profiling and Profiling Buffer control registers, using AArch64 state, MSR or MRS access at EL1 and EL2 trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.TPMS for accesses to SPE registers, using AArch64 state, MSR or MRS access at EL1 trapped to EL2.
 </li></ul>
 
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.TAM, for accesses to Activity Monitors System registers, using AArch64 state, MSR or MRS access, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.TAM, for accesses to Activity Monitors System registers, using AArch64 state, MSR or MRS access, trapped to EL3.
 </li><li>If <span class="xref">FEAT_FGT</span> is implemented:<ul>
-<li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn, for accesses to the fine-grained trap registers, MSR or MRS access at EL2 trapped to EL3.
-</li><li><a href="AArch64-hfgrtr_el2.html">HFGRTR_EL2</a> for reads and <a href="AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> for writes of registers, using AArch64 state, MSR or MRS access at EL0 and EL1 trapped to EL2.
-</li><li><a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a> for execution of system instructions trapped to EL2.
-</li><li><a href="AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a> for reads and <a href="AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a> for writes of registers, using AArch64 state, MSR or MRS access at EL0 and EL1 state trapped to EL2.
-</li><li><a href="AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a> for reads of Activity Monitor counters, using AArch64 state, MRS access at EL0 and EL1 trapped to EL2.
+<li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn, for accesses to the fine-grained trap registers, MSR or MRS access at EL2 trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-hfgrtr_el2.html">HFGRTR_EL2</a> for reads and <a href="/latest_sysreg/AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> for writes of registers, using AArch64 state, MSR or MRS access at EL0 and EL1 trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a> for execution of system instructions trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a> for reads and <a href="/latest_sysreg/AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a> for writes of registers, using AArch64 state, MSR or MRS access at EL0 and EL1 state trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a> for reads of Activity Monitor counters, using AArch64 state, MRS access at EL0 and EL1 trapped to EL2.
 </li></ul>
 
-</li><li>If <span class="xref">FEAT_RNG_TRAP</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.TRNDR for reads of <a href="AArch64-rndr.html">RNDR</a> and <a href="AArch64-rndrrs.html">RNDRRS</a> using AArch64 state, MRS access trapped to EL3.
+</li><li>If <span class="xref">FEAT_RNG_TRAP</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TRNDR for reads of <a href="/latest_sysreg/AArch64-rndr.html">RNDR</a> and <a href="/latest_sysreg/AArch64-rndrrs.html">RNDRRS</a> using AArch64 state, MRS access trapped to EL3.
 </li><li>If <span class="xref">FEAT_SME</span> is implemented:<ul>
-<li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, for MSR or MRS accesses to <a href="AArch64-smpri_el1.html">SMPRI_EL1</a> at EL1, EL2, and EL3, trapped to EL3.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, for MSR or MRS accesses to <a href="AArch64-smprimap_el2.html">SMPRIMAP_EL2</a> at EL2 and EL3, trapped to EL3.
-</li><li><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnTP2, for MSR or MRS accesses to <a href="AArch64-tpidr2_el0.html">TPIDR2_EL0</a> at EL0, trapped to EL1 or EL2.
-</li><li><a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.EnTP2, for MSR or MRS accesses to <a href="AArch64-tpidr2_el0.html">TPIDR2_EL0</a> at EL0, trapped to EL2.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.EnTP2, for MSR or MRS accesses to <a href="AArch64-tpidr2_el0.html">TPIDR2_EL0</a> at EL0, EL1, and EL2, trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, for MSR or MRS accesses to <a href="/latest_sysreg/AArch64-smpri_el1.html">SMPRI_EL1</a> at EL1, EL2, and EL3, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, for MSR or MRS accesses to <a href="/latest_sysreg/AArch64-smprimap_el2.html">SMPRIMAP_EL2</a> at EL2 and EL3, trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnTP2, for MSR or MRS accesses to <a href="/latest_sysreg/AArch64-tpidr2_el0.html">TPIDR2_EL0</a> at EL0, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.EnTP2, for MSR or MRS accesses to <a href="/latest_sysreg/AArch64-tpidr2_el0.html">TPIDR2_EL0</a> at EL0, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EnTP2, for MSR or MRS accesses to <a href="/latest_sysreg/AArch64-tpidr2_el0.html">TPIDR2_EL0</a> at EL0, EL1, and EL2, trapped to EL3.
 </li></ul>
 
 </li><li>If <span class="xref">FEAT_FPMR</span> is implemented:<ul>
-<li><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnFPM, for accesses to <a href="AArch64-fpmr.html">FPMR</a> at EL0, trapped to EL1 or EL2.
-</li><li><a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.EnFPM, for accesses to <a href="AArch64-fpmr.html">FPMR</a> at EL0, trapped to EL2.
-</li><li><a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnFPM, for accesses to <a href="AArch64-fpmr.html">FPMR</a> at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.EnFPM, for accesses to <a href="AArch64-fpmr.html">FPMR</a> at EL0, EL1, and EL2, trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnFPM, for accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> at EL0, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.EnFPM, for accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> at EL0, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnFPM, for accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EnFPM, for accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> at EL0, EL1, and EL2, trapped to EL3.
 </li></ul>
 
-</li><li>If <span class="xref">FEAT_NMI</span> is implemented, <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TALLINT, for MSR writes of <a href="AArch64-allint.html">ALLINT</a> at EL1, trapped to EL2.
+</li><li>If <span class="xref">FEAT_NMI</span> is implemented, <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TALLINT, for MSR writes of <a href="/latest_sysreg/AArch64-allint.html">ALLINT</a> at EL1, trapped to EL2.
 </li><li>If <span class="xref">FEAT_FGT2</span> is implemented:<ul>
-<li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2, for accesses to the fine-grained trap registers, MSR or MRS access at EL2 trapped to EL3.
-</li><li><a href="AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a> for reads and <a href="AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a> for writes of registers, using AArch64 state, using MSR or MRS access at EL1 trapped to EL2.
-</li><li><a href="AArch64-hdfgrtr2_el2.html">HDFGRTR2_EL2</a> for reads and <a href="AArch64-hdfgwtr2_el2.html">HDFGWTR2_EL2</a> for writes of registers, using AArch64 state, using MSR or MRS access at EL0 and EL1 trapped to EL2.
-</li><li><a href="AArch64-hfgitr2_el2.html">HFGITR2_EL2</a> for execution of system instructions trapped to EL2.
+<li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2, for accesses to the fine-grained trap registers, MSR or MRS access at EL2 trapped to EL3.
+</li><li><a href="/latest_sysreg/AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a> for reads and <a href="/latest_sysreg/AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a> for writes of registers, using AArch64 state, using MSR or MRS access at EL1 trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hdfgrtr2_el2.html">HDFGRTR2_EL2</a> for reads and <a href="/latest_sysreg/AArch64-hdfgwtr2_el2.html">HDFGWTR2_EL2</a> for writes of registers, using AArch64 state, using MSR or MRS access at EL0 and EL1 trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hfgitr2_el2.html">HFGITR2_EL2</a> for execution of system instructions trapped to EL2.
 </li></ul>
 
-</li><li>If <span class="xref">FEAT_ITE</span> is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EnITE, for accesses to Instrumentation trace System registers, using AArch64 state, MSR or MRS access, trapped to EL3.
-</li><li>If <span class="xref">FEAT_MEC</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.MECEn, for accesses to MECID registers at EL2, trapped to EL3.
-</li><li>If <span class="xref">FEAT_SPE_FDS</span> is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EnPMS3 for accesses to SPE registers, using AArch64 state, MSR or MRS access at EL1 and EL2 trapped to EL3.
-</li><li>If <span class="xref">FEAT_SPE_nVM</span> is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EnPMS4 for accesses to SPE registers, using AArch64 state, MSR or MRS access at EL1 and EL2 trapped to EL3.
-</li><li>If <span class="xref">FEAT_RASv2</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.TWERR, for accesses to Error Record registers, MSR access at EL1 and EL2 trapped to EL3.
-</li><li>If <span class="xref">FEAT_Debugv8p9</span> is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EBWE for accesses of <a href="AArch64-mdselr_el1.html">MDSELR_EL1</a>, using AArch64 state, MRS or MSR access at EL2 and EL1 trapped to EL3.
-</li><li>If <span class="xref">FEAT_PMUv3p9</span>, <span class="xref">FEAT_SPMU</span>, <span class="xref">FEAT_EBEP</span>, or <span class="xref">FEAT_PMUv3_SS</span> is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EnPM2, for accesses to  PMU System registers, using AArch64 state, MSR or MRS access at EL2, EL1, and EL0, trapped to EL3.
-</li><li>If <span class="xref">FEAT_PMUv3_SS</span> is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EnPMSS, for accesses to PMU Snapshot registers, using AArch64 state, MSR or MRS access at EL2 and EL1 trapped to EL3.
-</li><li>If <span class="xref">FEAT_THE</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.RCWMASKEn for accesses to <a href="AArch64-rcwmask_el1.html">RCWMASK_EL1</a> and <a href="AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>, using AArch64 state, MSR or MRS access at EL2 and EL1 trapped to EL3.
-</li><li>If <span class="xref">FEAT_AIE</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.AIEn for accesses to Extended Memory Attribute registers, MSR or MRS access at EL2 and EL1 trapped to EL3.
-</li><li>If FEAT_S1PIE, FEAT_S2PIE, FEAT_S1POE, or FEAT_S2POE is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.PIEn for accesses to Permission Indirection, Overlay registers, MSR or MRS access at EL2, EL1 and EL0 trapped to EL3.
-</li><li>If <span class="xref">FEAT_MPAM_PE_BW_CTRL</span> is implemented, <a href="AArch64-mpambw2_el2.html">MPAMBW2_EL2</a>.{nTRAP_MPAMBWIDR_EL1, nTRAP_MPAMBW0_EL1, nTRAP_MPAMBW1_EL1} for accesses to <span class="xref">MPAMBWn_EL1</span> registers, using AArch64 state, MRS or MSR access at EL1, trapped to EL2.
-</li><li>If <span class="xref">FEAT_MPAM_PE_BW_CTRL</span> and <span class="xref">FEAT_SME</span> are implemented, <a href="AArch64-mpambw2_el2.html">MPAMBW2_EL2</a>.nTRAP_MPAMBWSM_EL1, for accesses to <a href="AArch64-mpambwsm_el1.html">MPAMBWSM_EL1</a>, using AArch64 state, MRS or MSR access at EL1, trapped to EL2.
-</li><li>If <span class="xref">FEAT_MPAM_PE_BW_CTRL</span> is implemented, <a href="AArch64-mpambw3_el3.html">MPAMBW3_EL3</a>.nTRAPLOWER, for accesses to <a href="AArch64-mpambw2_el2.html">MPAMBW2_EL2</a> and <span class="xref">MPAMBWn_EL1</span> registers, using AArch64 state, MRS or MSR access at EL1, trapped to EL3.
-</li><li>If <span class="xref">FEAT_HACDBS</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.HACDBSEn, for accesses to HACDBSBR_EL2 and HACDBSCONS_EL2, using AArch64 state, MRS or MSR access at EL2, trapped to EL3.
-</li><li>If <span class="xref">FEAT_HDBSS</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.HDBSSEn, for accesses to HDBSSBR_EL2 and HDBSSPROD_EL2, using AArch64 state, MRS or MSR access at EL2, trapped to EL3.
-</li><li>If <span class="xref">FEAT_SRMASK</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.SRMASKEn, for MSR or MRS accesses at EL1 or EL2 to the MASK registers using AArch64 state, trapped to EL3.
+</li><li>If <span class="xref">FEAT_ITE</span> is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EnITE, for accesses to Instrumentation trace System registers, using AArch64 state, MSR or MRS access, trapped to EL3.
+</li><li>If <span class="xref">FEAT_MEC</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.MECEn, for accesses to MECID registers at EL2, trapped to EL3.
+</li><li>If <span class="xref">FEAT_SPE_FDS</span> is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EnPMS3 for accesses to SPE registers, using AArch64 state, MSR or MRS access at EL1 and EL2 trapped to EL3.
+</li><li>If <span class="xref">FEAT_SPE_nVM</span> is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EnPMS4 for accesses to SPE registers, using AArch64 state, MSR or MRS access at EL1 and EL2 trapped to EL3.
+</li><li>If <span class="xref">FEAT_RASv2</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TWERR, for accesses to Error Record registers, MSR access at EL1 and EL2 trapped to EL3.
+</li><li>If <span class="xref">FEAT_Debugv8p9</span> is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EBWE for accesses of <a href="/latest_sysreg/AArch64-mdselr_el1.html">MDSELR_EL1</a>, using AArch64 state, MRS or MSR access at EL2 and EL1 trapped to EL3.
+</li><li>If <span class="xref">FEAT_PMUv3p9</span>, <span class="xref">FEAT_SPMU</span>, <span class="xref">FEAT_EBEP</span>, or <span class="xref">FEAT_PMUv3_SS</span> is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EnPM2, for accesses to  PMU System registers, using AArch64 state, MSR or MRS access at EL2, EL1, and EL0, trapped to EL3.
+</li><li>If <span class="xref">FEAT_PMUv3_SS</span> is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EnPMSS, for accesses to PMU Snapshot registers, using AArch64 state, MSR or MRS access at EL2 and EL1 trapped to EL3.
+</li><li>If <span class="xref">FEAT_THE</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.RCWMASKEn for accesses to <a href="/latest_sysreg/AArch64-rcwmask_el1.html">RCWMASK_EL1</a> and <a href="/latest_sysreg/AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>, using AArch64 state, MSR or MRS access at EL2 and EL1 trapped to EL3.
+</li><li>If <span class="xref">FEAT_AIE</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.AIEn for accesses to Extended Memory Attribute registers, MSR or MRS access at EL2 and EL1 trapped to EL3.
+</li><li>If FEAT_S1PIE, FEAT_S2PIE, FEAT_S1POE, or FEAT_S2POE is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.PIEn for accesses to Permission Indirection, Overlay registers, MSR or MRS access at EL2, EL1 and EL0 trapped to EL3.
+</li><li>If <span class="xref">FEAT_MPAM_PE_BW_CTRL</span> is implemented, <a href="/latest_sysreg/AArch64-mpambw2_el2.html">MPAMBW2_EL2</a>.{nTRAP_MPAMBWIDR_EL1, nTRAP_MPAMBW0_EL1, nTRAP_MPAMBW1_EL1} for accesses to <span class="xref">MPAMBWn_EL1</span> registers, using AArch64 state, MRS or MSR access at EL1, trapped to EL2.
+</li><li>If <span class="xref">FEAT_MPAM_PE_BW_CTRL</span> and <span class="xref">FEAT_SME</span> are implemented, <a href="/latest_sysreg/AArch64-mpambw2_el2.html">MPAMBW2_EL2</a>.nTRAP_MPAMBWSM_EL1, for accesses to <a href="/latest_sysreg/AArch64-mpambwsm_el1.html">MPAMBWSM_EL1</a>, using AArch64 state, MRS or MSR access at EL1, trapped to EL2.
+</li><li>If <span class="xref">FEAT_MPAM_PE_BW_CTRL</span> is implemented, <a href="/latest_sysreg/AArch64-mpambw3_el3.html">MPAMBW3_EL3</a>.nTRAPLOWER, for accesses to <a href="/latest_sysreg/AArch64-mpambw2_el2.html">MPAMBW2_EL2</a> and <span class="xref">MPAMBWn_EL1</span> registers, using AArch64 state, MRS or MSR access at EL1, trapped to EL3.
+</li><li>If <span class="xref">FEAT_HACDBS</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HACDBSEn, for accesses to HACDBSBR_EL2 and HACDBSCONS_EL2, using AArch64 state, MRS or MSR access at EL2, trapped to EL3.
+</li><li>If <span class="xref">FEAT_HDBSS</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HDBSSEn, for accesses to HDBSSBR_EL2 and HDBSSPROD_EL2, using AArch64 state, MRS or MSR access at EL2, trapped to EL3.
+</li><li>If <span class="xref">FEAT_SRMASK</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SRMASKEn, for MSR or MRS accesses at EL1 or EL2 to the MASK registers using AArch64 state, trapped to EL3.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_14">ISS encoding for an exception from MSRR, MRRS, or 128-bit System instruction execution in AArch64 state</h3><table class="regdiagram" id="fieldset_0-24_0_14"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="3"><a href="#fieldset_0-24_0_14-24_22">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_14-21_20">Op0</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_14-19_17">Op2</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_14-16_14">Op1</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_14-13_10">CRn</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_14-9_6">Rt</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_14-5_5">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_14-4_1">CRm</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_14-0_0">Direction</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_14-24_22">Bits [24:22]:
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -1276,29 +1276,29 @@
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from MSRR, MRRS, or 128-bit System instruction execution in AArch64 state</h4><div class="text_after_fields"><p>The following fields describe configuration settings for generating exceptions from an MSRR or MRRS access that are reported using EC value <span class="binarynumber">0b010100</span>:</p>
 <ul>
 <li>If <span class="xref">FEAT_FGT</span> is implemented:<ul>
-<li><a href="AArch64-hfgrtr_el2.html">HFGRTR_EL2</a> for reads and <a href="AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> for writes of registers, using AArch64 state, accesses at EL1 trapped to EL2.
+<li><a href="/latest_sysreg/AArch64-hfgrtr_el2.html">HFGRTR_EL2</a> for reads and <a href="/latest_sysreg/AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> for writes of registers, using AArch64 state, accesses at EL1 trapped to EL2.
 </li></ul>
 
 </li><li>If <span class="xref">FEAT_FGT2</span> is implemented:<ul>
-<li><a href="AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a>.nRCWSMASK_EL1 for reads and <a href="AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a>.nRCWSMASK_EL1 for writes of <a href="AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>, using AArch64 state, accesses at EL1 trapped to EL2.
+<li><a href="/latest_sysreg/AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a>.nRCWSMASK_EL1 for reads and <a href="/latest_sysreg/AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a>.nRCWSMASK_EL1 for writes of <a href="/latest_sysreg/AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>, using AArch64 state, accesses at EL1 trapped to EL2.
 </li></ul>
 
 </li><li>If <span class="xref">FEAT_SYSREG128</span> is implemented:<ul>
-<li><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIDCP128 for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL0 trapped to EL1.
-</li><li><a href="AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.EnIDCP128 for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL0 trapped to EL2.
-</li><li><a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnIDCP128 for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL1 and EL0 trapped to EL2.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.EnIDCP128 for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL2, EL1, and EL0 trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>.EnIDCP128 for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL0 trapped to EL1.
+</li><li><a href="/latest_sysreg/AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.EnIDCP128 for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL0 trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnIDCP128 for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL1 and EL0 trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EnIDCP128 for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL2, EL1, and EL0 trapped to EL3.
 </li></ul>
 
 </li><li>If <span class="xref">FEAT_D128</span> is implemented:<ul>
-<li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TRVM, TVM} for accesses to <a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a> and <a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a>, accesses at EL1 and EL0 trapped to EL2.
-</li><li><a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.D128En for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL1 trapped to EL2.
-</li><li><a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a> for execution of TLBIP system instructions trapped to EL2.
-</li><li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBOS, TTLBIS}, for execution of TLBIP instructions using AArch64 state, execution is trapped to EL2.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.D128En for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL2 and EL1 trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TRVM, TVM} for accesses to <a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a> and <a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a>, accesses at EL1 and EL0 trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.D128En for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL1 trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a> for execution of TLBIP system instructions trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{TTLB, TTLBOS, TTLBIS}, for execution of TLBIP instructions using AArch64 state, execution is trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.D128En for accesses to 128-bit <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> System registers, accesses at EL2 and EL1 trapped to EL3.
 </li></ul>
 
-</li><li>If <span class="xref">FEAT_THE</span> is implemented, <a href="AArch64-scr_el3.html">SCR_EL3</a>.RCWMASKEn for accesses to <a href="AArch64-rcwmask_el1.html">RCWMASK_EL1</a> and <a href="AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>, using AArch64 state, accesses at EL2 and EL1 trapped to EL3.
+</li><li>If <span class="xref">FEAT_THE</span> is implemented, <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.RCWMASKEn for accesses to <a href="/latest_sysreg/AArch64-rcwmask_el1.html">RCWMASK_EL1</a> and <a href="/latest_sysreg/AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>, using AArch64 state, accesses at EL2 and EL1 trapped to EL3.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_15">ISS encoding for an exception from an Instruction Abort</h3><table class="regdiagram" id="fieldset_0-24_0_15"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="10"><a href="#fieldset_0-24_0_15-24_15">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_15-14_14-1">PFV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_15-13_13">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_15-12_11-1">SET</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_15-10_10">FnV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_15-9_9">EA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_15-8_8">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_15-7_7">S1PTW</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_15-6_6">RES0</a></td><td class="lr" colspan="6"><a href="#fieldset_0-24_0_15-5_0">IFSC</a></td></tr></tbody></table><div class="text_before_fields"><p>The ISS2 encoding for an exception from an Instruction Abort includes further information about the exception if any of the following are true:</p>
 <ul>
 <li>
@@ -1470,7 +1470,7 @@
 <ul>
 <li>Execution of SME instructions.
 </li><li>Execution of SVE and Advanced SIMD instructions, when the PE is in Streaming SVE mode.
-</li><li>Direct accesses of <a href="AArch64-svcr.html">SVCR</a>, <a href="AArch64-smcr_el1.html">SMCR_EL1</a>, <a href="AArch64-smcr_el2.html">SMCR_EL2</a>, <a href="AArch64-smcr_el3.html">SMCR_EL3</a>.
+</li><li>Direct accesses of <a href="/latest_sysreg/AArch64-svcr.html">SVCR</a>, <a href="/latest_sysreg/AArch64-smcr_el1.html">SMCR_EL1</a>, <a href="/latest_sysreg/AArch64-smcr_el2.html">SMCR_EL2</a>, <a href="/latest_sysreg/AArch64-smcr_el3.html">SMCR_EL3</a>.
 </li></ul></div><h4 id="fieldset_0-24_0_16-24_3">Bits [24:3]:
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -1478,7 +1478,7 @@
       </h4><div class="field">
             <p>SME Trap Code. Identifies the reason for instruction trapping.</p>
           <table class="valuetable"><tr><th>SMTC</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b000</td><td>
-                <p>Access to SME functionality trapped as a result of <a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.SMEN, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN, <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TSM, or <a href="AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, that is not reported using EC value <span class="binarynumber">0b000000</span>.</p>
+                <p>Access to SME functionality trapped as a result of <a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.SMEN, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN, <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TSM, or <a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, that is not reported using EC value <span class="binarynumber">0b000000</span>.</p>
               </td><td></td></tr><tr><td class="bitfield">0b001</td><td>
                 <p>Advanced SIMD, SVE, or SVE2 instruction trapped because PSTATE.SM is 1.</p>
               </td><td></td></tr><tr><td class="bitfield">0b010</td><td>
@@ -1486,18 +1486,18 @@
               </td><td></td></tr><tr><td class="bitfield">0b011</td><td>
                 <p>SME instruction trapped because PSTATE.ZA is 0.</p>
               </td><td></td></tr><tr><td class="bitfield">0b100</td><td>
-                <p>Access to the SME2 ZT0 register trapped as a result of <a href="AArch64-smcr_el1.html">SMCR_EL1</a>.EZT0, <a href="AArch64-smcr_el2.html">SMCR_EL2</a>.EZT0, or <a href="AArch64-smcr_el3.html">SMCR_EL3</a>.EZT0.</p>
+                <p>Access to the SME2 ZT0 register trapped as a result of <a href="/latest_sysreg/AArch64-smcr_el1.html">SMCR_EL1</a>.EZT0, <a href="/latest_sysreg/AArch64-smcr_el2.html">SMCR_EL2</a>.EZT0, or <a href="/latest_sysreg/AArch64-smcr_el3.html">SMCR_EL3</a>.EZT0.</p>
               </td><td>When FEAT_SME2 is implemented</td></tr></table>
             <p>All other values are reserved.</p>
           </div><h4>Additional information for the ISS encoding for an exception due to SME functionality</h4><div class="text_after_fields"><p>The following fields describe the configuration settings for the traps that are reported using the EC value <span class="binarynumber">0b011101</span>:</p>
 <ul>
-<li><a href="AArch64-cpacr_el1.html">CPACR_EL1</a>.SMEN, for execution of SME instructions, SVE instructions when the PE is in Streaming SVE mode, and instructions that directly access <a href="AArch64-svcr.html">SVCR</a> and <a href="AArch64-smcr_el1.html">SMCR_EL1</a> System registers at EL1 and EL0, trapped to EL1 or EL2.
-</li><li><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN and <a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TSM, for execution of SME instructions, SVE instructions when the PE is in Streaming SVE mode, and instructions that directly access <a href="AArch64-svcr.html">SVCR</a>, <a href="AArch64-smcr_el1.html">SMCR_EL1</a>, <a href="AArch64-smcr_el2.html">SMCR_EL2</a> at EL2, EL1, and EL0, trapped to EL2.
-</li><li><a href="AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, for execution of SME instructions, SVE instructions when the PE is in Streaming SVE mode, and instructions that directly access <a href="AArch64-svcr.html">SVCR</a>, <a href="AArch64-smcr_el1.html">SMCR_EL1</a>, <a href="AArch64-smcr_el2.html">SMCR_EL2</a>, <a href="AArch64-smcr_el3.html">SMCR_EL3</a> from all Exception levels and any Security state, trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-cpacr_el1.html">CPACR_EL1</a>.SMEN, for execution of SME instructions, SVE instructions when the PE is in Streaming SVE mode, and instructions that directly access <a href="/latest_sysreg/AArch64-svcr.html">SVCR</a> and <a href="/latest_sysreg/AArch64-smcr_el1.html">SMCR_EL1</a> System registers at EL1 and EL0, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN and <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TSM, for execution of SME instructions, SVE instructions when the PE is in Streaming SVE mode, and instructions that directly access <a href="/latest_sysreg/AArch64-svcr.html">SVCR</a>, <a href="/latest_sysreg/AArch64-smcr_el1.html">SMCR_EL1</a>, <a href="/latest_sysreg/AArch64-smcr_el2.html">SMCR_EL2</a> at EL2, EL1, and EL0, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-cptr_el3.html">CPTR_EL3</a>.ESM, for execution of SME instructions, SVE instructions when the PE is in Streaming SVE mode, and instructions that directly access <a href="/latest_sysreg/AArch64-svcr.html">SVCR</a>, <a href="/latest_sysreg/AArch64-smcr_el1.html">SMCR_EL1</a>, <a href="/latest_sysreg/AArch64-smcr_el2.html">SMCR_EL2</a>, <a href="/latest_sysreg/AArch64-smcr_el3.html">SMCR_EL3</a> from all Exception levels and any Security state, trapped to EL3.
 </li><li>If FEAT_SME2 is implemented:<ul>
-<li><a href="AArch64-smcr_el1.html">SMCR_EL1</a>.EZT0, for accesses to ZT0 at EL1 and EL0, trapped to EL1 or EL2.
-</li><li><a href="AArch64-smcr_el2.html">SMCR_EL2</a>.EZT0, for accesses to ZT0 at EL2, EL1, and EL0, trapped to EL2.
-</li><li><a href="AArch64-smcr_el3.html">SMCR_EL3</a>.EZT0, for accesses to ZT0 at any Exception level, trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-smcr_el1.html">SMCR_EL1</a>.EZT0, for accesses to ZT0 at EL1 and EL0, trapped to EL1 or EL2.
+</li><li><a href="/latest_sysreg/AArch64-smcr_el2.html">SMCR_EL2</a>.EZT0, for accesses to ZT0 at EL2, EL1, and EL0, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-smcr_el3.html">SMCR_EL3</a>.EZT0, for accesses to ZT0 at any Exception level, trapped to EL3.
 </li></ul>
 
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_17">ISS encoding for an exception from a Data Abort</h3><table class="regdiagram" id="fieldset_0-24_0_17"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-24_24">ISV</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_17-23_22-1">SAS</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-21_21-1">SSE</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_17-20_16-1">Bits[20:16]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-15_15-1">Bit[15]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-14_14-1">Bit[14]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-13_13">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_17-12_11-1">Bits[12:11]</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-10_10">FnV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-9_9">EA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-8_8">CM</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-7_7">S1PTW</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_17-6_6">WnR</a></td><td class="lr" colspan="6"><a href="#fieldset_0-24_0_17-5_0">DFSC</a></td></tr></tbody></table><div class="text_before_fields"><p>The ISS2 encoding for an exception from a Data Abort includes further information about the exception when any of the following features are implemented:</p>
@@ -1578,8 +1578,8 @@
 </li></ul>
 
 </li><li>One of the following applies:<ul>
-<li>The address reported in <a href="AArch64-far_el1.html">FAR_EL1</a> is the lowest address accessed by the instruction.
-</li><li>If FEAT_EAESR is not implemented, the address reported in <a href="AArch64-far_el1.html">FAR_EL1</a> is not the lowest address accessed by the instruction, and the implementation reports ISV as 1 in this case. Arm recommends against this behavior.
+<li>The address reported in <a href="/latest_sysreg/AArch64-far_el1.html">FAR_EL1</a> is the lowest address accessed by the instruction.
+</li><li>If FEAT_EAESR is not implemented, the address reported in <a href="/latest_sysreg/AArch64-far_el1.html">FAR_EL1</a> is not the lowest address accessed by the instruction, and the implementation reports ISV as 1 in this case. Arm recommends against this behavior.
 </li></ul>
 
 </li></ul>
@@ -1589,7 +1589,7 @@
 </li></ul>
 <p>When FEAT_RAS is not implemented, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether ISV is set to 1 or 0 on a synchronous External abort on a stage 2 translation table walk.</p>
 <p>Otherwise the value of this field is 0.</p>
-<div class="note"><p>The value of this field is 0 if any of the following apply:</p><ul><li><span class="xref">FEAT_MOPS</span> is implemented and the fault was for a memory access generated by a Memory Copy and Memory Set instruction.</li><li><span class="xref">FEAT_MTE</span> is implemented and the fault was for a direct access to Allocation Tags.</li><li><span class="xref">FEAT_GCS</span> is implemented and the fault was for a Guarded control stack data access.</li><li><span class="xref">FEAT_NV2</span> is implemented and the fault was for a System register access that was transformed to a load or store relative to <a href="AArch64-vncr_el2.html">VNCR_EL2</a>.</li><li><span class="xref">FEAT_LSE</span> is implemented and the fault was for an atomic instruction.</li></ul></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<div class="note"><p>The value of this field is 0 if any of the following apply:</p><ul><li><span class="xref">FEAT_MOPS</span> is implemented and the fault was for a memory access generated by a Memory Copy and Memory Set instruction.</li><li><span class="xref">FEAT_MTE</span> is implemented and the fault was for a direct access to Allocation Tags.</li><li><span class="xref">FEAT_GCS</span> is implemented and the fault was for a Guarded control stack data access.</li><li><span class="xref">FEAT_NV2</span> is implemented and the fault was for a System register access that was transformed to a load or store relative to <a href="/latest_sysreg/AArch64-vncr_el2.html">VNCR_EL2</a>.</li><li><span class="xref">FEAT_LSE</span> is implemented and the fault was for an atomic instruction.</li></ul></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-24_0_17-23_22-1">SAS, bits [23:22] <span class="condition">when ISV == '1'</span>:
       </h4><div class="field">
@@ -1730,7 +1730,7 @@
                 <p>The FAR holds the faulting virtual address that generated the Data Abort.</p>
               </td><td></td></tr><tr><td class="bitfield">0b1</td><td><p>The FAR holds any virtual address within the naturally-aligned granule that contains the faulting virtual address that generated a Data Abort due to an SVE contiguous vector load/store
 instruction, or an SME load/store instruction.</p>
-<p>For more information about the naturally-aligned fault granule, see FAR_ELx (for example, <a href="AArch64-far_el1.html">FAR_EL1</a>).</p></td><td>When FEAT_SME is implemented or FEAT_SVE is implemented</td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>For more information about the naturally-aligned fault granule, see FAR_ELx (for example, <a href="/latest_sysreg/AArch64-far_el1.html">FAR_EL1</a>).</p></td><td>When FEAT_SME is implemented or FEAT_SVE is implemented</td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-24_0_17-14_14-1">Bit[14] <span class="condition">when ISV == '1'</span>:
       </h4><h5>AR, bit 
@@ -1844,7 +1844,7 @@ instruction, or an SME load/store instruction.</p>
           <table class="valuetable"><tr><th>CM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
                 <p>The Data Abort was not generated by the execution of one of the System instructions identified in the description of value 1.</p>
               </td></tr><tr><td class="bitfield">0b1</td><td>
-                <p>The Data Abort was generated by either the execution of a cache maintenance instruction or by a synchronous fault on the execution of an address translation instruction. The <a href="AArch64-dc-zva.html">DC ZVA</a>, <a href="AArch64-dc-gva.html">DC GVA</a>, and <a href="AArch64-dc-gzva.html">DC GZVA</a> instructions are not classified as cache maintenance instructions, and therefore their execution cannot cause this field to be set to 1.</p>
+                <p>The Data Abort was generated by either the execution of a cache maintenance instruction or by a synchronous fault on the execution of an address translation instruction. The <a href="/latest_sysreg/AArch64-dc-zva.html">DC ZVA</a>, <a href="/latest_sysreg/AArch64-dc-gva.html">DC GVA</a>, and <a href="/latest_sysreg/AArch64-dc-gzva.html">DC GZVA</a> instructions are not classified as cache maintenance instructions, and therefore their execution cannot cause this field to be set to 1.</p>
               </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-24_0_17-7_7">S1PTW, bit [7]:
@@ -2052,8 +2052,8 @@ instruction, or an SME load/store instruction.</p>
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from a trapped floating-point exception</h4><div class="text_after_fields"><p>When <span class="xref">FEAT_TRAPFPE</span> is implemented:</p>
 <ul>
-<li>From an Exception level using AArch64, the <a href="AArch64-fpcr.html">FPCR</a>.{IDE, IXE, UFE, OFE, DZE, IOE} bits enable each of the floating-point exception traps.
-</li><li>From an Exception level using AArch32, the <a href="AArch32-fpscr.html">FPSCR</a>.{IDE, IXE, UFE, OFE, DZE, IOE} bits enable each of the floating-point exception traps.
+<li>From an Exception level using AArch64, the <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.{IDE, IXE, UFE, OFE, DZE, IOE} bits enable each of the floating-point exception traps.
+</li><li>From an Exception level using AArch32, the <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR</a>.{IDE, IXE, UFE, OFE, DZE, IOE} bits enable each of the floating-point exception traps.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_19">ISS encoding for a GCS exception</h3><table class="regdiagram" id="fieldset_0-24_0_19"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_19-24_24">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_19-23_20">ExType</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_19-19_15">RES0</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_19-14_10-1">Raddr</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_19-9_5-1">Bits[9:5]</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_19-4_0-1">IT</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_19-24_24">Bit [24]:
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -2129,11 +2129,11 @@ instruction, or an SME load/store instruction.</p>
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
           </div><h4>Additional information for the ISS encoding for a GCS exception</h4><div class="text_after_fields"><p>The following fields describe the configuration settings for the traps that are reported using EC value <span class="binarynumber">0b101101</span> and ExType value <span class="binarynumber">0b0010</span>:</p>
 <ul>
-<li><a href="AArch64-gcscre0_el1.html">GCSCRE0_EL1</a>.STREn
-</li><li><a href="AArch64-gcscr_el1.html">GCSCR_EL1</a>.STREn.
-</li><li><a href="AArch64-gcscr_el2.html">GCSCR_EL2</a>.STREn.
-</li><li><a href="AArch64-gcscr_el3.html">GCSCR_EL3</a>.STREn.
-</li><li><a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a>.nGCSSTR_EL1.
+<li><a href="/latest_sysreg/AArch64-gcscre0_el1.html">GCSCRE0_EL1</a>.STREn
+</li><li><a href="/latest_sysreg/AArch64-gcscr_el1.html">GCSCR_EL1</a>.STREn.
+</li><li><a href="/latest_sysreg/AArch64-gcscr_el2.html">GCSCR_EL2</a>.STREn.
+</li><li><a href="/latest_sysreg/AArch64-gcscr_el3.html">GCSCR_EL3</a>.STREn.
+</li><li><a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a>.nGCSSTR_EL1.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_20">ISS encoding for an SError exception</h3><table class="regdiagram" id="fieldset_0-24_0_20"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_20-24_24">IDS</a></td><td class="lr" colspan="5"><a href="#fieldset_0-24_0_20-23_19">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_20-18_18-1">ELS</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_20-17_16-1">WU</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_20-15_15-1">VFV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_20-14_14-1">PFV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_20-13_13-1">IESB</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_20-12_10-1">AET</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_20-9_9-1">EA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_20-8_8">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_20-7_7-1">WnRV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_20-6_6-1">WnR</a></td><td class="lr" colspan="6"><a href="#fieldset_0-24_0_20-5_0-1">DFSC</a></td></tr></tbody></table><div class="text_before_fields">
           <div class="note">
             <p>In earlier versions of the architecture, an SError exception is referred to as an SError interrupt or an asynchronous External abort exception.</p>
@@ -2418,7 +2418,7 @@ instruction, or an SME load/store instruction.</p>
           <table class="valuetable"><tr><th>CM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
                 <p>The Watchpoint exception was not generated by the execution of one of the System instructions identified in the description of value 1.</p>
               </td></tr><tr><td class="bitfield">0b1</td><td>
-                <p>The Watchpoint exception was generated by the execution of a cache maintenance instruction. The <a href="AArch64-dc-zva.html">DC ZVA</a>, <a href="AArch64-dc-gva.html">DC GVA</a>, and <a href="AArch64-dc-gzva.html">DC GZVA</a> instructions are not classified as a cache maintenance instructions, and therefore their execution does not cause this field to be set to 1.</p>
+                <p>The Watchpoint exception was generated by the execution of a cache maintenance instruction. The <a href="/latest_sysreg/AArch64-dc-zva.html">DC ZVA</a>, <a href="/latest_sysreg/AArch64-dc-gva.html">DC GVA</a>, and <a href="/latest_sysreg/AArch64-dc-gzva.html">DC GZVA</a> instructions are not classified as a cache maintenance instructions, and therefore their execution does not cause this field to be set to 1.</p>
               </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-24_0_23-7_7">Bit [7]:
@@ -2459,7 +2459,7 @@ instruction, or an SME load/store instruction.</p>
 <p><span class="xref">FEAT_FGT</span> is implemented.</p>
 
 </li><li>
-<p>The Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.NV is 1.</p>
+<p>The Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.NV is 1.</p>
 
 </li></ul></div><h4 id="fieldset_0-24_0_25-24_2">Bits [24:2]:
       </h4><div class="field">
@@ -2486,8 +2486,8 @@ instruction, or an SME load/store instruction.</p>
             <p>When the ERET field is 0, this bit is <span class="arm-defined-word">RES0</span>.</p>
           <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
-       to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from an ERET, ERETAA, or ERETAB instruction</h4><div class="text_after_fields"><p>For more information about generating these exceptions, see <a href="AArch64-hcr_el2.html">HCR_EL2</a>.NV.</p>
-<p>If <span class="xref">FEAT_FGT</span> is implemented, <a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a>.ERET controls fine-grained trap exceptions from ERET, ERETAA, and ERETAB execution.</p></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_26">ISS encoding for a Branch Target Exception</h3><table class="regdiagram" id="fieldset_0-24_0_26"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="23"><a href="#fieldset_0-24_0_26-24_2">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_26-1_0">BTYPE</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_26-24_2">Bits [24:2]:
+       to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from an ERET, ERETAA, or ERETAB instruction</h4><div class="text_after_fields"><p>For more information about generating these exceptions, see <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.NV.</p>
+<p>If <span class="xref">FEAT_FGT</span> is implemented, <a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a>.ERET controls fine-grained trap exceptions from ERET, ERETAA, and ERETAB execution.</p></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_26">ISS encoding for a Branch Target Exception</h3><table class="regdiagram" id="fieldset_0-24_0_26"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="23"><a href="#fieldset_0-24_0_26-24_2">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_26-1_0">BTYPE</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_26-24_2">Bits [24:2]:
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
           </div><h4 id="fieldset_0-24_0_26-1_0">BTYPE, bits [1:0]:
@@ -2500,8 +2500,8 @@ instruction, or an SME load/store instruction.</p>
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
           </div><h4>Additional information for the ISS encoding for an exception from a trapped Pointer Authentication instruction</h4><div class="text_after_fields"><p>For more information about generating these exceptions, see:</p>
 <ul>
-<li><a href="AArch64-hcr_el2.html">HCR_EL2</a>.API, for exceptions from Pointer authentication instructions, using AArch64 state, trapped to EL2.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.API, for exceptions from Pointer authentication instructions, using AArch64 state, trapped to EL3.
+<li><a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.API, for exceptions from Pointer authentication instructions, using AArch64 state, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.API, for exceptions from Pointer authentication instructions, using AArch64 state, trapped to EL3.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_28">ISS encoding for a PAC Fail exception</h3><table class="regdiagram" id="fieldset_0-24_0_28"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="23"><a href="#fieldset_0-24_0_28-24_2">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_28-1_1">DnI</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_28-0_0">BnA</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_28-24_2">Bits [24:2]:
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -2542,7 +2542,7 @@ instruction, or an SME load/store instruction.</p>
 </li><li><span class="instruction">ERETAA</span>, <span class="instruction">ERETAB</span>.
 </li><li><span class="instruction">LDRAA</span>, <span class="instruction">LDRAB</span>, whether the authenticated address is written back to the base register or not.
 </li></ul></div></div></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name ESR_EL1 or ESR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name ESR_EL1 or ESR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, ESR_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b000, CRn = 0b0101, CRm = 0b0010, op2 = 0b000)
       </p><p class="pseudocode">

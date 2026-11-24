@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>SPSel | Jon's Arm Reference</title><meta name="description" content="Allows the Stack Pointer to be selected between SP_EL0 and SP_ELx."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">SPSel</h1><p class="insn_subtitle" data-pagefind-body="1">Stack Pointer Select</p><div data-pagefind-body="1">
-        <p>Allows the Stack Pointer to be selected between <a href="AArch64-sp_el0.html">SP_EL0</a> and SP_ELx.</p>
+        <p>Allows the Stack Pointer to be selected between <a href="/latest_sysreg/AArch64-sp_el0.html">SP_EL0</a> and SP_ELx.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to SPSel are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>This register is a Special-purpose register.</p>
       <h3>Attributes</h3>
@@ -14,7 +14,7 @@
       </h4><div class="field">
       <p>Stack pointer to use. Possible values of this bit are:</p>
     <table class="valuetable"><tr><th>SP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Use <a href="AArch64-sp_el0.html">SP_EL0</a> at all Exception levels.</p>
+          <p>Use <a href="/latest_sysreg/AArch64-sp_el0.html">SP_EL0</a> at all Exception levels.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td><p>Use SP_ELx for Exception level ELx.</p>
 <p>When <span class="xref">FEAT_NMI</span> is implemented and <span class="xref">SCTLR_ELx</span>.SPINTMASK is 1, if execution is at ELx, an IRQ or FIQ interrupt that is targeted to ELx is masked regardless of any indication of Superpriority.</p></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

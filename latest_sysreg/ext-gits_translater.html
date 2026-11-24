@@ -4,12 +4,12 @@
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">GITS_TRANSLATER</h1><p class="insn_subtitle" data-pagefind-body="1">ITS Translation Register</p><div data-pagefind-body="1">
         <p>Written by a requesting Device to signal an interrupt for translation by the ITS.</p>
       </div><h3>Configuration</h3>
-        <p>This register is at the same offset as <a href="ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a> in the Distributor, and is at the same offset as <a href="ext-gicr_setlpir.html">GICR_SETLPIR</a> in the Redistributor.</p>
+        <p>This register is at the same offset as <a href="/latest_sysreg/ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a> in the Distributor, and is at the same offset as <a href="/latest_sysreg/ext-gicr_setlpir.html">GICR_SETLPIR</a> in the Redistributor.</p>
       <h3>Attributes</h3>
         <p>GITS_TRANSLATER is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-31_0">EventID</a></td></tr></tbody></table><h4 id="fieldset_0-31_0">EventID, bits [31:0]:
       </h4><div class="field"><p>An identifier corresponding to the interrupt to be translated.</p>
-<div class="note"><p>The size of the EventID is DeviceID specific, and set when the DeviceID is mapped to an ITT (using <span class="xref">MAPD</span>).</p></div><p>The number of EventID bits implemented is reported by <a href="ext-gits_typer.html">GITS_TYPER</a>.ID_bits. If a write specifies nonzero identifiers bits outside this range behavior is a <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> choice between:</p>
+<div class="note"><p>The size of the EventID is DeviceID specific, and set when the DeviceID is mapped to an ITT (using <span class="xref">MAPD</span>).</p></div><p>The number of EventID bits implemented is reported by <a href="/latest_sysreg/ext-gits_typer.html">GITS_TYPER</a>.ID_bits. If a write specifies nonzero identifiers bits outside this range behavior is a <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> choice between:</p>
 <ul>
 <li>Nonzero identifier bits outside the supported range are ignored.
 </li><li>The write is ignored.
@@ -32,7 +32,7 @@
 
       
         <ul>
-<li><a href="ext-gits_ctlr.html">GITS_CTLR</a>.Enabled == 0.
+<li><a href="/latest_sysreg/ext-gits_ctlr.html">GITS_CTLR</a>.Enabled == 0.
 </li><li>The presented DeviceID is not mapped to an Interrupt Translation Table.
 </li><li>The DeviceID is larger than the supported size.
 </li><li>The DeviceID is mapped to an Interrupt Translation Table, but the EventID is outside the range specified by <span class="xref">MAPD</span>.

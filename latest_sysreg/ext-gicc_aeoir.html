@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>GICC_AEOIR | Jon's Arm Reference</title><meta name="description" content="A write to this register performs priority drop for the specified Group 1 interrupt and, if the appropriate GICC_CTLR.DS0_S.EOImodeS or GICC_CTLR.DS0_NS.EOImodeNS field == 0, also deactivates the interrupt."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">GICC_AEOIR</h1><p class="insn_subtitle" data-pagefind-body="1">CPU Interface Aliased End Of Interrupt Register</p><div data-pagefind-body="1">
-        <p>A write to this register performs priority drop for the specified Group 1 interrupt and, if the appropriate <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS or <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS field == 0, also deactivates the interrupt.</p>
+        <p>A write to this register performs priority drop for the specified Group 1 interrupt and, if the appropriate <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS or <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS field == 0, also deactivates the interrupt.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv3_LEGACY is implemented. Otherwise, direct accesses to GICC_AEOIR are <span class="arm-defined-word">RES0</span>.</p>
-        <p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, this register is an alias of the Non-secure view of <a href="ext-gicc_eoir.html">GICC_EOIR</a>. A Secure access to this register is identical to a Non-secure access to <a href="ext-gicc_eoir.html">GICC_EOIR</a>.</p>
+        <p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, this register is an alias of the Non-secure view of <a href="/latest_sysreg/ext-gicc_eoir.html">GICC_EOIR</a>. A Secure access to this register is identical to a Non-secure access to <a href="/latest_sysreg/ext-gicc_eoir.html">GICC_EOIR</a>.</p>
       <h3>Attributes</h3>
         <p>GICC_AEOIR is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="8"><a href="#fieldset_0-31_24">RES0</a></td><td class="lr" colspan="24"><a href="#fieldset_0-23_0">INTID</a></td></tr></tbody></table><h4 id="fieldset_0-31_24">Bits [31:24]:
@@ -17,15 +17,15 @@
 <li>Bits [23:13] are <span class="arm-defined-word">RES0</span>.
 </li><li>For SGIs, bits [12:10] identify the CPU interface corresponding to the source PE. For all other interrupts these bits are <span class="arm-defined-word">RES0</span>.
 </li></ul></div><h2>Accessing GICC_AEOIR</h2>
-        <p>A write to this register must correspond to the most recently acknowledged Group 1 interrupt. If a value other than the last value read from <a href="ext-gicc_aiar.html">GICC_AIAR</a> is written to this register, the effect is <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
+        <p>A write to this register must correspond to the most recently acknowledged Group 1 interrupt. If a value other than the last value read from <a href="/latest_sysreg/ext-gicc_aiar.html">GICC_AIAR</a> is written to this register, the effect is <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
 
       
         <p>This register is used only when System register access is not enabled. When System register access is enabled:</p>
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-icc_eoir1.html">ICC_EOIR1</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-icc_eoir1_el1.html">ICC_EOIR1_EL1</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-icc_eoir1.html">ICC_EOIR1</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-icc_eoir1_el1.html">ICC_EOIR1_EL1</a> provides equivalent functionality.
 </li></ul>
 
       

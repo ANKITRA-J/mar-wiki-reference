@@ -3,7 +3,7 @@
 <title>ICC_BPR1 | Jon's Arm Reference</title><meta name="description" content="Defines the point at which the priority value fields split into two parts, the group priority field and the subpriority field. The group priority field determines Group 1 interrupt preemption."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ICC_BPR1</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Controller Binary Point Register 1</p><div data-pagefind-body="1">
         <p>Defines the point at which the priority value fields split into two parts, the group priority field and the subpriority field. The group priority field determines Group 1 interrupt preemption.</p>
-      </div><h3>Configuration</h3><p>This register is banked between ICC_BPR1 and ICC_BPR1_S and ICC_BPR1_NS.<br></br></p><p>AArch32 System register ICC_BPR1 bits [31:0] (ICC_BPR1_S) are architecturally mapped to AArch64 System register <a href="AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1[31:0]</a> (ICC_BPR1_EL1_S).</p><p>AArch32 System register ICC_BPR1 bits [31:0] (ICC_BPR1_NS) are architecturally mapped to AArch64 System register <a href="AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1[31:0]</a> (ICC_BPR1_EL1_NS).</p><p>This register is present only when FEAT_AA32EL1 is implemented and GICv3 is implemented. Otherwise, direct accesses to ICC_BPR1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>This register is banked between ICC_BPR1 and ICC_BPR1_S and ICC_BPR1_NS.<br></br></p><p>AArch32 System register ICC_BPR1 bits [31:0] (ICC_BPR1_S) are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1[31:0]</a> (ICC_BPR1_EL1_S).</p><p>AArch32 System register ICC_BPR1 bits [31:0] (ICC_BPR1_NS) are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1[31:0]</a> (ICC_BPR1_EL1_NS).</p><p>This register is present only when FEAT_AA32EL1 is implemented and GICv3 is implemented. Otherwise, direct accesses to ICC_BPR1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>In GIC implementations supporting two Security states, this register is Banked.</p>
       <h3>Attributes</h3>
         <p>ICC_BPR1 is a 32-bit register.</p>
@@ -23,34 +23,34 @@
     </div><h4 id="fieldset_0-2_0">BinaryPoint, bits [2:0]:
       </h4><div class="field"><p>If the GIC is configured to use separate binary point fields for Group 0 and Group 1 interrupts, the value of this field controls how the 8-bit interrupt priority field is split into a group priority field, that determines interrupt preemption, and a subpriority field. For more information about priorities, see <span class="xref">'Priority grouping' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>.</p>
 <p>Writing 0 to this field will set this field to its reset value.</p>
-<p>If EL3 is implemented and <a href="AArch32-icc_mctlr.html">ICC_MCTLR</a>.CBPR_EL1S is 1:</p>
+<p>If EL3 is implemented and <a href="/latest_sysreg/AArch32-icc_mctlr.html">ICC_MCTLR</a>.CBPR_EL1S is 1:</p>
 <ul>
-<li>Accesses to this register at EL3 not in Monitor mode access the state of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a>.
-</li><li>When <a href="AArch64-scr_el3.html">SCR_EL3</a>.EEL2 is 1 and <a href="AArch64-hcr_el2.html">HCR_EL2</a>.IMO is 1, Secure accesses to this register at EL1 access the state of <a href="AArch32-icv_bpr1.html">ICV_BPR1</a>.
-</li><li>Otherwise, Secure accesses to this register at EL1 access the state of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a>.
+<li>Accesses to this register at EL3 not in Monitor mode access the state of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a>.
+</li><li>When <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.EEL2 is 1 and <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.IMO is 1, Secure accesses to this register at EL1 access the state of <a href="/latest_sysreg/AArch32-icv_bpr1.html">ICV_BPR1</a>.
+</li><li>Otherwise, Secure accesses to this register at EL1 access the state of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a>.
 </li></ul>
-<p>If EL3 is implemented and <a href="AArch32-icc_mctlr.html">ICC_MCTLR</a>.CBPR_EL1NS is 1, Non-secure accesses to this register at EL1 and EL2 behave as follows, depending on the values of <span class="xref">HCR</span>.IMO and <span class="xref">SCR</span>.IRQ:</p>
-<table class="valuetable"><thead><tr><th>HCR.IMO</th><th>SCR_IRQ</th><th>Behavior</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>Non-secure EL1 and EL2 reads return <a href="AArch32-icc_bpr0.html">ICC_BPR0</a> + 1 saturated to <span class="binarynumber">0b111</span>. Non-secure EL1 and EL2 writes are ignored.</td></tr><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b1</span></td><td>Non-secure EL1 and EL2 accesses trap to EL3.</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b0</span></td><td>Non-secure EL1 accesses affect virtual interrupts. Non-secure EL2 reads return <a href="AArch32-icc_bpr0.html">ICC_BPR0</a> + 1 saturated to <span class="binarynumber">0b111</span>. Non-secure EL2 writes ignored.</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b1</span></td><td>Non-secure EL1 accesses affect virtual interrupts. Non-secure EL2 accesses trap to EL3.</td></tr></tbody></table>
-<p>If EL3 is not implemented and <a href="AArch32-icc_ctlr.html">ICC_CTLR</a>.CBPR is 1, Non-secure accesses to this register at EL1 and EL2 behave as follows, depending on the values of <span class="xref">HCR</span>.IMO:</p>
-<table class="valuetable"><thead><tr><th>HCR.IMO</th><th>Behavior</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td>Non-secure EL1 and EL2 reads return <a href="AArch32-icc_bpr0.html">ICC_BPR0</a> + 1 saturated to <span class="binarynumber">0b111</span>. Non-secure EL1 and EL2 writes are ignored.</td></tr><tr><td><span class="binarynumber">0b1</span></td><td>Non-secure EL1 accesses affect virtual interrupts. Non-secure EL2 reads return <a href="AArch32-icc_bpr0.html">ICC_BPR0</a> + 1 saturated to <span class="binarynumber">0b111</span>. Non-secure EL2 writes are ignored.</td></tr></tbody></table><p>This field resets to an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> nonzero value.</p></div><div class="access_mechanisms"><h2>Access Instructions</h2>
+<p>If EL3 is implemented and <a href="/latest_sysreg/AArch32-icc_mctlr.html">ICC_MCTLR</a>.CBPR_EL1NS is 1, Non-secure accesses to this register at EL1 and EL2 behave as follows, depending on the values of <span class="xref">HCR</span>.IMO and <span class="xref">SCR</span>.IRQ:</p>
+<table class="valuetable"><thead><tr><th>HCR.IMO</th><th>SCR_IRQ</th><th>Behavior</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>Non-secure EL1 and EL2 reads return <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> + 1 saturated to <span class="binarynumber">0b111</span>. Non-secure EL1 and EL2 writes are ignored.</td></tr><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b1</span></td><td>Non-secure EL1 and EL2 accesses trap to EL3.</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b0</span></td><td>Non-secure EL1 accesses affect virtual interrupts. Non-secure EL2 reads return <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> + 1 saturated to <span class="binarynumber">0b111</span>. Non-secure EL2 writes ignored.</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b1</span></td><td>Non-secure EL1 accesses affect virtual interrupts. Non-secure EL2 accesses trap to EL3.</td></tr></tbody></table>
+<p>If EL3 is not implemented and <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a>.CBPR is 1, Non-secure accesses to this register at EL1 and EL2 behave as follows, depending on the values of <span class="xref">HCR</span>.IMO:</p>
+<table class="valuetable"><thead><tr><th>HCR.IMO</th><th>Behavior</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td>Non-secure EL1 and EL2 reads return <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> + 1 saturated to <span class="binarynumber">0b111</span>. Non-secure EL1 and EL2 writes are ignored.</td></tr><tr><td><span class="binarynumber">0b1</span></td><td>Non-secure EL1 accesses affect virtual interrupts. Non-secure EL2 reads return <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> + 1 saturated to <span class="binarynumber">0b111</span>. Non-secure EL2 writes are ignored.</td></tr></tbody></table><p>This field resets to an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> nonzero value.</p></div><div class="access_mechanisms"><h2>Access Instructions</h2>
         <p>When the PE resets into an Exception level that is using AArch32, the reset value is equal to:</p>
 
       
         <ul>
-<li>For the Secure copy of the register, the minimum value of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a> plus one.
-</li><li>For the Non-secure copy of the register, the minimum value of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a>.
+<li>For the Secure copy of the register, the minimum value of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> plus one.
+</li><li>For the Non-secure copy of the register, the minimum value of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a>.
 </li></ul>
 
       
-        <p>Where the minimum value of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a> is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.</p>
+        <p>Where the minimum value of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.</p>
 
       
         <p>If EL3 is not implemented:</p>
 
       
         <ul>
-<li>If the PE is Secure this reset value is the (minimum value of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a> plus one).
-</li><li>If the PE is Non-secure this reset value is (minimum value of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a>).
+<li>If the PE is Secure this reset value is the (minimum value of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> plus one).
+</li><li>If the PE is Non-secure this reset value is (minimum value of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a>).
 </li></ul>
 
       

@@ -7,7 +7,7 @@
         <p>These registers are available in all configurations of the GIC. If the GIC implementation supports two Security states, these registers are Common.</p>
 
       
-        <p>The maximum value of n is given by (32*(GICD_TYPER.ITLinesNumber+1) - 1). <a href="ext-gicd_iroutern.html">GICD_IROUTER&lt;n&gt;</a> registers where n=0 to 31 are reserved.</p>
+        <p>The maximum value of n is given by (32*(GICD_TYPER.ITLinesNumber+1) - 1). <a href="/latest_sysreg/ext-gicd_iroutern.html">GICD_IROUTER&lt;n&gt;</a> registers where n=0 to 31 are reserved.</p>
       <h3>Attributes</h3>
         <p>GICD_IROUTER&lt;n&gt; is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="24"><a href="#fieldset_0-63_40">RES0</a></td><td class="lr" colspan="8"><a href="#fieldset_0-39_32">Aff3</a></td></tr><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-31_31">Interrupt_Routing_Mode</a></td><td class="lr" colspan="7"><a href="#fieldset_0-30_24">RES0</a></td><td class="lr" colspan="8"><a href="#fieldset_0-23_16">Aff2</a></td><td class="lr" colspan="8"><a href="#fieldset_0-15_8">Aff1</a></td><td class="lr" colspan="8"><a href="#fieldset_0-7_0">Aff0</a></td></tr></tbody></table><h4 id="fieldset_0-63_40">Bits [63:40]:
@@ -37,7 +37,7 @@
 <p>The affinity path is treated as an <span class="arm-defined-word">UNKNOWN</span> implemented PE, direct reads return the written value</p>
 
 </li></ul>
-<p>When <a href="ext-gicd_typer.html">GICD_TYPER</a>.No1N is 1, 1 of N distribution is not supported. Setting this field to 1 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>, the permitted behaviors are:</p>
+<p>When <a href="/latest_sysreg/ext-gicd_typer.html">GICD_TYPER</a>.No1N is 1, 1 of N distribution is not supported. Setting this field to 1 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>, the permitted behaviors are:</p>
 <ul>
 <li>
 <p>The field behaves as if set to 0 for all purposes.</p>
@@ -80,13 +80,13 @@
       
         <ul>
 <li>These registers are <span class="arm-defined-word">RES0</span>. An implementation is permitted to make the register RAZ/WI in this case.
-</li><li>The <a href="ext-gicd_itargetsrn.html">GICD_ITARGETSR&lt;n&gt;</a> registers provide interrupt routing information.
+</li><li>The <a href="/latest_sysreg/ext-gicd_itargetsrn.html">GICD_ITARGETSR&lt;n&gt;</a> registers provide interrupt routing information.
 </li></ul>
 
       
-        <div class="note"><p>When affinity routing becomes enabled for a Security state (for example, following a reset or following a write to <a href="ext-gicd_ctlr.html">GICD_CTLR</a>) the value of all writable fields in this register is <span class="arm-defined-word">UNKNOWN</span> for that Security state. When the group of an interrupt changes so the ARE setting for the interrupt changes to 1, the value of this register is <span class="arm-defined-word">UNKNOWN</span> for that interrupt.</p></div>
+        <div class="note"><p>When affinity routing becomes enabled for a Security state (for example, following a reset or following a write to <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>) the value of all writable fields in this register is <span class="arm-defined-word">UNKNOWN</span> for that Security state. When the group of an interrupt changes so the ARE setting for the interrupt changes to 1, the value of this register is <span class="arm-defined-word">UNKNOWN</span> for that interrupt.</p></div>
       
-        <p>If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, unless the <a href="ext-gicd_nsacrn.html">GICD_NSACR&lt;n&gt;</a> registers permit Non-secure software to control Group 0 and Secure Group 1 interrupts, any GICD_IROUTER&lt;n&gt; registers that correspond to Group 0 or Secure Group 1 interrupts are accessible only by Secure accesses and are RAZ/WI to Non-secure accesses.</p>
+        <p>If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, unless the <a href="/latest_sysreg/ext-gicd_nsacrn.html">GICD_NSACR&lt;n&gt;</a> registers permit Non-secure software to control Group 0 and Secure Group 1 interrupts, any GICD_IROUTER&lt;n&gt; registers that correspond to Group 0 or Secure Group 1 interrupts are accessible only by Secure accesses and are RAZ/WI to Non-secure accesses.</p>
 
       
         <div class="note"><p>For each interrupt, a GIC implementation might support fewer than 256 values for an affinity level. In this case, some bits of the corresponding affinity level field might be RO.

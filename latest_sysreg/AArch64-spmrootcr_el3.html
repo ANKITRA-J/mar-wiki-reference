@@ -25,8 +25,8 @@
           <p>Events not attributable with any event source are not counted by System PMU &lt;s&gt;.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Counting non-attributable events by System PMU &lt;s&gt; is not prevented by this mechanism.</p>
-        </td></tr></table><p>When both SPMROOTCR_EL3 and <a href="AArch64-spmscr_el1.html">SPMSCR_EL1</a> are implemented, non-attributable events are counted only if both SPMROOTCR_EL3.NAO is 1 and <a href="AArch64-spmscr_el1.html">SPMSCR_EL1</a>.{NAO, SO} is nonzero.</p>
-<p>SPMROOTCR_EL3.NAO has the opposite reset polarity to <a href="AArch64-spmscr_el1.html">SPMSCR_EL1</a>.NAO.</p><p>The reset behavior of this field is:</p><ul><li>On a System PMU reset, 
+        </td></tr></table><p>When both SPMROOTCR_EL3 and <a href="/latest_sysreg/AArch64-spmscr_el1.html">SPMSCR_EL1</a> are implemented, non-attributable events are counted only if both SPMROOTCR_EL3.NAO is 1 and <a href="/latest_sysreg/AArch64-spmscr_el1.html">SPMSCR_EL1</a>.{NAO, SO} is nonzero.</p>
+<p>SPMROOTCR_EL3.NAO has the opposite reset polarity to <a href="/latest_sysreg/AArch64-spmscr_el1.html">SPMSCR_EL1</a>.NAO.</p><p>The reset behavior of this field is:</p><ul><li>On a System PMU reset, 
       this field resets
        to <span class="binarynumber">'1'</span>.
 </li></ul></div><h4 id="fieldset_0-3_3-2"> <span class="condition">Otherwise</span>:
@@ -56,7 +56,7 @@
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>To access SPMROOTCR_EL3 for System PMU &lt;s&gt;, set <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL to s.</p>
+        <p>To access SPMROOTCR_EL3 for System PMU &lt;s&gt;, set <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL to s.</p>
 
       
         <p>SPMROOTCR_EL3 reads-as-zero and ignores writes if any of the following are true:</p>

@@ -5,11 +5,11 @@
         <p>Provides information about the instruction sets implemented by the PE in AArch32 state.</p>
 
       
-        <p>Must be interpreted with <a href="AArch32-id_isar0.html">ID_ISAR0</a>, <a href="AArch32-id_isar1.html">ID_ISAR1</a>, <a href="AArch32-id_isar2.html">ID_ISAR2</a>, <a href="AArch32-id_isar3.html">ID_ISAR3</a>, <a href="AArch32-id_isar4.html">ID_ISAR4</a>, and <a href="AArch32-id_isar5.html">ID_ISAR5</a>.</p>
+        <p>Must be interpreted with <a href="/latest_sysreg/AArch32-id_isar0.html">ID_ISAR0</a>, <a href="/latest_sysreg/AArch32-id_isar1.html">ID_ISAR1</a>, <a href="/latest_sysreg/AArch32-id_isar2.html">ID_ISAR2</a>, <a href="/latest_sysreg/AArch32-id_isar3.html">ID_ISAR3</a>, <a href="/latest_sysreg/AArch32-id_isar4.html">ID_ISAR4</a>, and <a href="/latest_sysreg/AArch32-id_isar5.html">ID_ISAR5</a>.</p>
 
       
         <p>For general information about the interpretation of the ID registers, see <span class="xref">'Principles of the ID scheme for fields in ID registers'</span>.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register ID_ISAR6 bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-id_isar6_el1.html">ID_ISAR6_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to ID_ISAR6 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register ID_ISAR6 bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-id_isar6_el1.html">ID_ISAR6_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to ID_ISAR6 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <div class="note"><p>Prior to the introduction of the features described by this register, this register was unnamed and reserved, <span class="arm-defined-word">RES0</span> from EL1, EL2, and EL3.</p></div>
       <h3>Attributes</h3>
         <p>ID_ISAR6 is a 32-bit register.</p>

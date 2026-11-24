@@ -26,9 +26,9 @@ SIMD&amp;FP destination register.</p>
             </h4><a id="FCVTMS_sisd_32H"></a><span class="bitdiff"> (sf == 0 &amp;&amp; ftype == 11)</span></div><p class="asm-code">FCVTMS  <a href="#Sd" title='Is the 32-bit name of the SIMD&amp;FP destination register, encoded in the "Rd" field.'>&lt;Sd&gt;</a>, <a href="#Hn__2" title='Is the 16-bit name of the SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Hn&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Half-precision to 64-bit encoding
             </h4><a id="FCVTMS_sisd_64H"></a><span class="bitdiff"> (sf == 1 &amp;&amp; ftype == 11)</span></div><p class="asm-code">FCVTMS  <a href="#Dd" title='Is the 64-bit name of the SIMD&amp;FP destination register, encoded in the "Rd" field.'>&lt;Dd&gt;</a>, <a href="#Hn__2" title='Is the 16-bit name of the SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Hn&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Single-precision to 64-bit encoding
             </h4><a id="FCVTMS_sisd_64S"></a><span class="bitdiff"> (sf == 1 &amp;&amp; ftype == 00)</span></div><p class="asm-code">FCVTMS  <a href="#Dd" title='Is the 64-bit name of the SIMD&amp;FP destination register, encoded in the "Rd" field.'>&lt;Dd&gt;</a>, <a href="#Sn" title='Is the 32-bit name of the SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Sn&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Double-precision to 32-bit encoding
-            </h4><a id="FCVTMS_sisd_32D"></a><span class="bitdiff"> (sf == 0 &amp;&amp; ftype == 01)</span></div><p class="asm-code">FCVTMS  <a href="#Sd" title='Is the 32-bit name of the SIMD&amp;FP destination register, encoded in the "Rd" field.'>&lt;Sd&gt;</a>, <a href="#Dn" title='Is the 64-bit name of the SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Dn&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_FPRCVT) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if ftype == '10' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if (sf == '0' &amp;&amp; ftype == '00') || (sf == '1' &amp;&amp; ftype == '01') then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="FCVTMS_sisd_32D"></a><span class="bitdiff"> (sf == 0 &amp;&amp; ftype == 01)</span></div><p class="asm-code">FCVTMS  <a href="#Sd" title='Is the 32-bit name of the SIMD&amp;FP destination register, encoded in the "Rd" field.'>&lt;Sd&gt;</a>, <a href="#Dn" title='Is the 64-bit name of the SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Dn&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_FPRCVT) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if ftype == '10' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if (sf == '0' &amp;&amp; ftype == '00') || (sf == '1' &amp;&amp; ftype == '01') then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 
 let d : integer = UInt(Rd);
 let n : integer = UInt(Rn);
@@ -57,16 +57,16 @@ let fltsize : integer{} = 8 &lt;&lt; UInt(ftype XOR '10');</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode"><a href="shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
+      <p class="pseudocode"><a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
 
 var fltval : bits(fltsize);
 var intval : bits(intsize);
-let merge : boolean = <a href="shared_pseudocode.html#func_IsMerging_1" title="">IsMerging</a>(FPCR());
-var result : bits(128) = if merge then <a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{128}(d) else Zeros{128};
+let merge : boolean = <a href="/latest_aarch64/shared_pseudocode.html#func_IsMerging_1" title="">IsMerging</a>(FPCR());
+var result : bits(128) = if merge then <a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{128}(d) else Zeros{128};
 
-fltval = <a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{fltsize}(n);
-intval = <a href="shared_pseudocode.html#func_FPToFixed_7" title="">FPToFixed</a>{intsize, fltsize}(fltval, 0, FALSE, FPCR(), <a href="shared_pseudocode.html#enum_FPRounding_NEGINF" title="">FPRounding_NEGINF</a>);
+fltval = <a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{fltsize}(n);
+intval = <a href="/latest_aarch64/shared_pseudocode.html#func_FPToFixed_7" title="">FPToFixed</a>{intsize, fltsize}(fltval, 0, FALSE, FPCR(), <a href="/latest_aarch64/shared_pseudocode.html#enum_FPRounding_NEGINF" title="">FPRounding_NEGINF</a>);
 result[0+:intsize] = intval;
 
-<a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{128}(d) = result;</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{128}(d) = result;</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

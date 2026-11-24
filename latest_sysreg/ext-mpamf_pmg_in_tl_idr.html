@@ -14,20 +14,20 @@
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>DIRECT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Direct translation of PMG at ingress to the MSC is not supported.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Direct translation of PMG at ingress to the MSC is supported. Direct translations are configured in <a href="ext-msmon_in_tl.html">MSMON_IN_TL</a>.</p>
+          <p>Direct translation of PMG at ingress to the MSC is supported. Direct translations are configured in <a href="/latest_sysreg/ext-msmon_in_tl.html">MSMON_IN_TL</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-30_30">BASE_MASK, bit [30]:
       </h4><div class="field">
       <p>Reports support for calculated translation of PMG at ingress to the MSC, using a configurable base and mask.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>BASE_MASK</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Calculated translation of PMG at ingress to the MSC using a configurable base and mask is not supported.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Calculated translation of PMG at ingress to the MSC using a configurable base and mask is supported. Direct translation takes precedence. Base and mask are configured in <a href="ext-msmon_in_tl_base.html">MSMON_IN_TL_BASE</a> and <a href="ext-msmon_in_tl_mask.html">MSMON_IN_TL_MASK</a>.</p>
+          <p>Calculated translation of PMG at ingress to the MSC using a configurable base and mask is supported. Direct translation takes precedence. Base and mask are configured in <a href="/latest_sysreg/ext-msmon_in_tl_base.html">MSMON_IN_TL_BASE</a> and <a href="/latest_sysreg/ext-msmon_in_tl_mask.html">MSMON_IN_TL_MASK</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-29_16">Bits [29:16]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_0-1">PMGTL_MAX, bits [15:0] <span class="condition">when MPAMF_PMG_IN_TL_IDR.DIRECT == '1'</span>:
       </h4><div class="field">
-      <p>Reports the maximum value of PMG translation supported for direct translations at ingress to the MSC, as configured in <a href="ext-msmon_in_tl.html">MSMON_IN_TL</a>.PMGTL.</p>
+      <p>Reports the maximum value of PMG translation supported for direct translations at ingress to the MSC, as configured in <a href="/latest_sysreg/ext-msmon_in_tl.html">MSMON_IN_TL</a>.PMGTL.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-15_0-2"> <span class="condition">Otherwise</span>:

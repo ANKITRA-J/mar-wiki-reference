@@ -2,17 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>MSMON_CSA | Jon's Arm Reference</title><meta name="description" content="Accesses the cache storage allocation monitor instance selected by MSMON_CFG_MON_SEL."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">MSMON_CSA</h1><p class="insn_subtitle" data-pagefind-body="1">MPAM Cache Storage Allocation Monitor Register</p><div data-pagefind-body="1">
-        <p>Accesses the cache storage allocation monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+        <p>Accesses the cache storage allocation monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
       </div><h3>Configuration</h3><p>The power domain of MSMON_CSA is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.
     </p><p>This register is present only when FEAT_MPAM_CSA is implemented. Otherwise, direct accesses to MSMON_CSA are <span class="arm-defined-word">RES0</span>.</p>
-        <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, the monitor instance register accessed is for the resource instance currently selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the monitor instance of that resource instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
+        <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, the monitor instance register accessed is for the resource instance currently selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the monitor instance of that resource instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
 
       
         <p>If FEAT_MPAMv2_MSC_MON_SEC is implemented, the following statement applies:</p>
 
       
         <ul>
-<li><a href="ext-msmon_csa_rootcr.html">MSMON_CSA_ROOTCR</a>.PAS controls the PAS this register applies to.
+<li><a href="/latest_sysreg/ext-msmon_csa_rootcr.html">MSMON_CSA_ROOTCR</a>.PAS controls the PAS this register applies to.
 </li></ul>
 
       
@@ -21,19 +21,19 @@
       
         <ul>
 <li>
-<p>MSMON_CSA_s is the Secure cache storage allocation monitor instance selected by the Secure instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>. </p>
+<p>MSMON_CSA_s is the Secure cache storage allocation monitor instance selected by the Secure instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>. </p>
 
 </li><li>
-<p>MSMON_CSA_ns is the Non-secure cache storage allocation monitor instance selected by the Non-secure instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>. </p>
+<p>MSMON_CSA_ns is the Non-secure cache storage allocation monitor instance selected by the Non-secure instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>. </p>
 
 </li><li>
 <p>If FEAT_RME is implemented, the following statements also apply:</p>
 <ul>
 <li>
-<p>MSMON_CSA_rt is the Root cache storage allocation monitor instance selected by the Root instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+<p>MSMON_CSA_rt is the Root cache storage allocation monitor instance selected by the Root instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
 
 </li><li>
-<p>MSMON_CSA_rl is the Realm cache storage allocation monitor instance selected by the Realm instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+<p>MSMON_CSA_rl is the Realm cache storage allocation monitor instance selected by the Realm instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
 
 </li></ul>
 
@@ -52,8 +52,8 @@
           <p>The monitor instance is not ready and the contents of the MSMON_CSA.VALUE field might be inaccurate or otherwise not represent the actual cache storage allocations.</p>
         </td></tr></table></div><h4 id="fieldset_0-30_0">VALUE, bits [30:0]:
       </h4><div class="field"><p>Cache storage allocation counter value if MSMON_CSA.NRDY is 0. Invalid if MSMON_CSA.NRDY is 1.</p>
-<p>VALUE is the scaled count of bytes allocated since the monitor was last reset that met the criteria set in <a href="ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a> and <a href="ext-msmon_cfg_csa_ctl.html">MSMON_CFG_CSA_CTL</a> for the monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
-<p>If <a href="ext-msmon_cfg_csa_ctl.html">MSMON_CFG_CSA_CTL</a>.SCLEN enables scaling, the count in VALUE is the number of bytes shifted right by <a href="ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.SCALE bit positions and rounded.</p></div><h2>Accessing MSMON_CSA</h2>
+<p>VALUE is the scaled count of bytes allocated since the monitor was last reset that met the criteria set in <a href="/latest_sysreg/ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a> and <a href="/latest_sysreg/ext-msmon_cfg_csa_ctl.html">MSMON_CFG_CSA_CTL</a> for the monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+<p>If <a href="/latest_sysreg/ext-msmon_cfg_csa_ctl.html">MSMON_CFG_CSA_CTL</a>.SCLEN enables scaling, the count in VALUE is the number of bytes shifted right by <a href="/latest_sysreg/ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.SCALE bit positions and rounded.</p></div><h2>Accessing MSMON_CSA</h2>
         <p>This register is within the MPAM feature page memory frames.</p>
 
       
@@ -163,10 +163,10 @@
       
         <ul>
 <li>
-<p>When RIS is implemented, reads and writes to MSMON_CSA access the cache storage allocation monitor instance for the  resource instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the cache storage allocation monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
+<p>When RIS is implemented, reads and writes to MSMON_CSA access the cache storage allocation monitor instance for the  resource instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the cache storage allocation monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
 
 </li><li>
-<p>When RIS is not implemented, reads and writes to MSMON_CSA access the cache storage allocation monitor instance for the cache storage allocation monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
+<p>When RIS is not implemented, reads and writes to MSMON_CSA access the cache storage allocation monitor instance for the cache storage allocation monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
 
 </li></ul>
 
@@ -175,6 +175,6 @@
 
       
         <ul>
-<li>Reads and writes to MSMON_CSA access the cache storage allocation monitor for the cache storage allocation monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.
+<li>Reads and writes to MSMON_CSA access the cache storage allocation monitor for the cache storage allocation monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.
 </li></ul>
       <h4>MSMON_CSA can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th></tr><tr><td>MPAM</td><td><span class="hexnumber">0x08A0</span></td></tr></table><p>When FEAT_MPAMv2_MSC is implemented, accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_s</td><td><span class="hexnumber">0x08A0</span></td><td>MSMON_CSA_s</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_ns</td><td><span class="hexnumber">0x08A0</span></td><td>MSMON_CSA_ns</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rt</td><td><span class="hexnumber">0x08A0</span></td><td>MSMON_CSA_rt</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rl</td><td><span class="hexnumber">0x08A0</span></td><td>MSMON_CSA_rl</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

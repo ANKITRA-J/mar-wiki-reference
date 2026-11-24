@@ -9,9 +9,9 @@
       </h4><div class="field">
       <p>S[&lt;m&gt;] is the Data Source filter for <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> Data Source &lt;m&gt;.</p>
     <table class="valuetable"><tr><th>S&lt;m&gt;</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FDS is 1, do not record load operations that have bits [5:0] of the Data Source packet set to &lt;m&gt;.</p>
+          <p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FDS is 1, do not record load operations that have bits [5:0] of the Data Source packet set to &lt;m&gt;.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Load operations with Data Source &lt;m&gt; are unaffected by <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FDS.</p>
+          <p>Load operations with Data Source &lt;m&gt; are unaffected by <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FDS.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>When filtering on Data Source &lt;m&gt; is not supported, access to this field is <span class="access_level">RAZ/WI</span>.</p></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, PMSDSFR_EL1</p></div></div><p style="text-align: right">

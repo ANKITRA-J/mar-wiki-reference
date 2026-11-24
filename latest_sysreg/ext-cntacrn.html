@@ -9,15 +9,15 @@
 
       
         <ul>
-<li><a href="ext-cntnsar.html">CNTNSAR</a> controls whether CNTACR&lt;n&gt; is accessible by Non-secure accesses.
-</li><li>If frame CNTEL0BaseN is implemented, the <a href="ext-cntel0acr.html">CNTEL0ACR</a> in frame CNTBaseN provides additional control of accesses to frame CNTEL0BaseN.
+<li><a href="/latest_sysreg/ext-cntnsar.html">CNTNSAR</a> controls whether CNTACR&lt;n&gt; is accessible by Non-secure accesses.
+</li><li>If frame CNTEL0BaseN is implemented, the <a href="/latest_sysreg/ext-cntel0acr.html">CNTEL0ACR</a> in frame CNTBaseN provides additional control of accesses to frame CNTEL0BaseN.
 </li></ul>
       </div><h3>Configuration</h3><p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether CNTACR&lt;n&gt; is implemented in the Core power domain or in the Debug power domain.
     </p>
         <p>For more information, see <span class="xref">'Power and reset domains for the system level implementation of the Generic Timer'</span>.</p>
 
       
-        <p>Implemented only if the value of <a href="ext-cnttidr.html">CNTTIDR</a>.Frame&lt;n&gt; is 1.</p>
+        <p>Implemented only if the value of <a href="/latest_sysreg/ext-cnttidr.html">CNTTIDR</a>.Frame&lt;n&gt; is 1.</p>
 
       
         <p>An implementation of the counters might not provide configurable access to some or all of the features. In this case, the associated field in the CNTACR&lt;n&gt; register is:</p>
@@ -34,7 +34,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-5_5">RWPT, bit [5]:
       </h4><div class="field">
-      <p>Read/write access to the EL1 Physical Timer registers <a href="ext-cntp_cval.html">CNTP_CVAL</a>, <a href="ext-cntp_tval.html">CNTP_TVAL</a>, and <a href="ext-cntp_ctl.html">CNTP_CTL</a>, in frame &lt;n&gt;.</p>
+      <p>Read/write access to the EL1 Physical Timer registers <a href="/latest_sysreg/ext-cntp_cval.html">CNTP_CVAL</a>, <a href="/latest_sysreg/ext-cntp_tval.html">CNTP_TVAL</a>, and <a href="/latest_sysreg/ext-cntp_ctl.html">CNTP_CTL</a>, in frame &lt;n&gt;.</p>
     <table class="valuetable"><tr><th>RWPT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No access to the EL1 Physical Timer registers in frame &lt;n&gt;. The registers are <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -43,7 +43,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-4_4">RWVT, bit [4]:
       </h4><div class="field">
-      <p>Read/write access to the Virtual Timer register <a href="ext-cntv_cval.html">CNTV_CVAL</a>, <a href="ext-cntv_tval.html">CNTV_TVAL</a>, and <a href="ext-cntv_ctl.html">CNTV_CTL</a>, in frame &lt;n&gt;.</p>
+      <p>Read/write access to the Virtual Timer register <a href="/latest_sysreg/ext-cntv_cval.html">CNTV_CVAL</a>, <a href="/latest_sysreg/ext-cntv_tval.html">CNTV_TVAL</a>, and <a href="/latest_sysreg/ext-cntv_ctl.html">CNTV_CTL</a>, in frame &lt;n&gt;.</p>
     <table class="valuetable"><tr><th>RWVT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No access to the Virtual Timer registers in frame &lt;n&gt;. The registers are <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -52,42 +52,42 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-3_3">RVOFF, bit [3]:
       </h4><div class="field">
-      <p>Read-only access to <a href="ext-cntvoff.html">CNTVOFF</a>, in frame &lt;n&gt;.</p>
+      <p>Read-only access to <a href="/latest_sysreg/ext-cntvoff.html">CNTVOFF</a>, in frame &lt;n&gt;.</p>
     <table class="valuetable"><tr><th>RVOFF</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>No access to <a href="ext-cntvoff.html">CNTVOFF</a> in frame &lt;n&gt;. The register is <span class="arm-defined-word">RES0</span>.</p>
+          <p>No access to <a href="/latest_sysreg/ext-cntvoff.html">CNTVOFF</a> in frame &lt;n&gt;. The register is <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Read-only access to <a href="ext-cntvoff.html">CNTVOFF</a> in frame &lt;n&gt;.</p>
+          <p>Read-only access to <a href="/latest_sysreg/ext-cntvoff.html">CNTVOFF</a> in frame &lt;n&gt;.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_2">RFRQ, bit [2]:
       </h4><div class="field">
-      <p>Read-only access to <a href="ext-cntfrq.html">CNTFRQ</a>, in frame &lt;n&gt;.</p>
+      <p>Read-only access to <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a>, in frame &lt;n&gt;.</p>
     <table class="valuetable"><tr><th>RFRQ</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>No access to <a href="ext-cntfrq.html">CNTFRQ</a> in frame &lt;n&gt;. The register is <span class="arm-defined-word">RES0</span>.</p>
+          <p>No access to <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a> in frame &lt;n&gt;. The register is <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Read-only access to <a href="ext-cntfrq.html">CNTFRQ</a> in frame &lt;n&gt;.</p>
+          <p>Read-only access to <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a> in frame &lt;n&gt;.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-1_1">RVCT, bit [1]:
       </h4><div class="field">
-      <p>Read-only access to <a href="ext-cntvct.html">CNTVCT</a>, in frame &lt;n&gt;.</p>
+      <p>Read-only access to <a href="/latest_sysreg/ext-cntvct.html">CNTVCT</a>, in frame &lt;n&gt;.</p>
     <table class="valuetable"><tr><th>RVCT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>No access to <a href="ext-cntvct.html">CNTVCT</a> in frame &lt;n&gt;. The register is <span class="arm-defined-word">RES0</span>.</p>
+          <p>No access to <a href="/latest_sysreg/ext-cntvct.html">CNTVCT</a> in frame &lt;n&gt;. The register is <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Read-only access to <a href="ext-cntvct.html">CNTVCT</a> in frame &lt;n&gt;.</p>
+          <p>Read-only access to <a href="/latest_sysreg/ext-cntvct.html">CNTVCT</a> in frame &lt;n&gt;.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-0_0">RPCT, bit [0]:
       </h4><div class="field">
-      <p>Read-only access to <a href="ext-cntpct.html">CNTPCT</a>, in frame &lt;n&gt;.</p>
+      <p>Read-only access to <a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a>, in frame &lt;n&gt;.</p>
     <table class="valuetable"><tr><th>RPCT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>No access to <a href="ext-cntpct.html">CNTPCT</a> in frame &lt;n&gt;. The register is <span class="arm-defined-word">RES0</span>.</p>
+          <p>No access to <a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a> in frame &lt;n&gt;. The register is <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Read-only access to <a href="ext-cntpct.html">CNTPCT</a> in frame &lt;n&gt;.</p>
+          <p>Read-only access to <a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a> in frame &lt;n&gt;.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing CNTACR&lt;n&gt;</h2>
-        <p>In a system that supports the Realm Management Extension, <a href="ext-cntnsar.html">CNTNSAR</a>.NS&lt;n&gt; describes how these registers can be accessed by Root or Realm accesses.</p>
+        <p>In a system that supports the Realm Management Extension, <a href="/latest_sysreg/ext-cntnsar.html">CNTNSAR</a>.NS&lt;n&gt; describes how these registers can be accessed by Root or Realm accesses.</p>
 
       
         <p>In a system that recognizes two Security states:</p>
@@ -95,6 +95,6 @@
       
         <ul>
 <li>CNTACR&lt;n&gt; is always accessible by Secure accesses.
-</li><li><a href="ext-cntnsar.html">CNTNSAR</a>.NS&lt;n&gt; determines whether CNTACR&lt;n&gt; is accessible by Non-secure accesses.
+</li><li><a href="/latest_sysreg/ext-cntnsar.html">CNTNSAR</a>.NS&lt;n&gt; determines whether CNTACR&lt;n&gt; is accessible by Non-secure accesses.
 </li></ul>
       <h4>CNTACR&lt;n&gt; can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>Timer</td><td>CNTCTLBase</td><td><span class="hexnumber">0x040</span> + (4 * n)</td><td>CNTACR&lt;n&gt;</td></tr></table><p>Accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

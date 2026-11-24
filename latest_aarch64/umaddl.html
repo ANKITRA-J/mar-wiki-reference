@@ -5,7 +5,7 @@ register value, and writes the result to the 64-bit destination register."></met
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="instruction-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">UMADDL</h1><p class="insn_subtitle" data-pagefind-body="1">Unsigned multiply-add long</p>
       <p class="aml" data-pagefind-body="1">This instruction multiplies two 32-bit register values, adds a 64-bit
 register value, and writes the result to the 64-bit destination register.</p>
-    <p class="desc">This instruction is used by the alias <a href="umull_umaddl.html" title="Unsigned multiply long">UMULL (32-bit)</a>.</p>
+    <p class="desc">This instruction is used by the alias <a href="/latest_aarch64/umull_umaddl.html" title="Unsigned multiply long">UMULL (32-bit)</a>.</p>
     <p class="desc"></p><div class="regdiagram-32"><table class="regdiagram"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr">1</td><td class="l">0</td><td class="r">0</td><td class="lr">1</td><td class="l">1</td><td>0</td><td class="r">1</td><td class="lr">1</td><td class="lr">1</td><td class="l">0</td><td class="r">1</td><td colspan="5" class="lr">Rm</td><td class="lr">0</td><td colspan="5" class="lr">Ra</td><td colspan="5" class="lr">Rn</td><td colspan="5" class="lr">Rd</td></tr><tr class="secondrow"><td class="droppedname">sf</td><td colspan="2" class="droppedname">op54</td><td></td><td colspan="3"></td><td></td><td class="droppedname">U</td><td colspan="2"></td><td colspan="5"></td><td class="droppedname">o0</td><td colspan="5"></td><td colspan="5"></td><td colspan="5"></td></tr></tbody></table></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Encoding</h4><a id="UMADDL_64WA_dp_3src"></a></div><p class="asm-code">UMADDL  <a href="#XdOrXZR__6" title='Is the 64-bit name of the general-purpose destination register, encoded in the "Rd" field.'>&lt;Xd&gt;</a>, <a href="#WnOrWZR__5" title='Is the 32-bit name of the first general-purpose source register holding the multiplicand, encoded in the "Rn" field.'>&lt;Wn&gt;</a>, <a href="#WmOrWZR__6" title='Is the 32-bit name of the second general-purpose source register holding the multiplier, encoded in the "Rm" field.'>&lt;Wm&gt;</a>, <a href="#XaOrXZR" title='Is the 64-bit name of the third general-purpose source register holding the addend, encoded in the "Ra" field.'>&lt;Xa&gt;</a></p></div><h4>Decode</h4><p class="pseudocode">let d : integer{} = UInt(Rd);
 let n : integer{} = UInt(Rn);
 let m : integer{} = UInt(Rm);
@@ -26,15 +26,15 @@ let a : integer{} = UInt(Ra);</p>
         
           <p class="aml" data-pagefind-body="1">Is the 64-bit name of the third general-purpose source register holding the addend, encoded in the "Ra" field.</p>
         
-      </td></tr></table></div><div class="syntax-notes"></div><h3 class="aliastable" id="">Alias Conditions</h3><table class="aliastable"><thead><tr><th>Alias</th><th>Is preferred when</th></tr></thead><tbody><tr><td><a href="umull_umaddl.html" title="Unsigned multiply long">UMULL (32-bit)</a></td><td class="notfirst"><span class="pseudocode">Ra == '11111'</span></td></tr></tbody></table>
+      </td></tr></table></div><div class="syntax-notes"></div><h3 class="aliastable" id="">Alias Conditions</h3><table class="aliastable"><thead><tr><th>Alias</th><th>Is preferred when</th></tr></thead><tbody><tr><td><a href="/latest_aarch64/umull_umaddl.html" title="Unsigned multiply long">UMULL (32-bit)</a></td><td class="notfirst"><span class="pseudocode">Ra == '11111'</span></td></tr></tbody></table>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode">let operand1 : bits(32) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(n);
-let operand2 : bits(32) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(m);
-let operand3 : bits(64) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(a);
+      <p class="pseudocode">let operand1 : bits(32) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(n);
+let operand2 : bits(32) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(m);
+let operand3 : bits(64) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(a);
 
 let result : integer = UInt(operand3) + UInt(operand1) * UInt(operand2);
 
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(d) = result[63:0];</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(d) = result[63:0];</p></div>
   <h2>Operational information</h2>
     
       

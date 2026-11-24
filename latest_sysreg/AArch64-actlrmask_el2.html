@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>ACTLRMASK_EL2 | Jon's Arm Reference</title><meta name="description" content="Mask register to prevent updates of fields in ACTLR_EL2 on writes."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ACTLRMASK_EL2</h1><p class="insn_subtitle" data-pagefind-body="1">Auxiliary Control Masking Register (EL2)</p><div data-pagefind-body="1">
-        <p>Mask register to prevent updates of fields in <a href="AArch64-actlr_el2.html">ACTLR_EL2</a> on writes.</p>
+        <p>Mask register to prevent updates of fields in <a href="/latest_sysreg/AArch64-actlr_el2.html">ACTLR_EL2</a> on writes.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_SRMASK is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to ACTLRMASK_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
 
@@ -14,7 +14,7 @@
       </h4><div class="field">
       <p><span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.</p>
     </div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name ACTLRMASK_EL2 or ACTLRMASK_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name ACTLRMASK_EL2 or ACTLRMASK_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, ACTLRMASK_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b0001, CRm = 0b0100, op2 = 0b001)
       </p><p class="pseudocode">

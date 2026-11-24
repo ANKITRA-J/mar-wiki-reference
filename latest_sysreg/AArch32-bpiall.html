@@ -11,7 +11,7 @@
         <p>The PE ignores the value of &lt;Rt&gt;. Software does not have to write a value to this register before issuing this instruction.</p>
 
       
-        <p>When <a href="AArch32-hcr.html">HCR</a>.FB is 1, at Non-secure EL1 this instruction executes as a <a href="AArch32-bpiallis.html">BPIALLIS</a>.</p>
+        <p>When <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.FB is 1, at Non-secure EL1 this instruction executes as a <a href="/latest_sysreg/AArch32-bpiallis.html">BPIALLIS</a>.</p>
       <p>Accesses to this instruction use the following encodings in the System instruction encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MCR{&lt;c&gt;}{&lt;q&gt;} &lt;coproc&gt;, {#}&lt;opc1&gt;, &lt;Rt&gt;, &lt;CRn&gt;, &lt;CRm&gt;{, {#}&lt;opc2&gt;}</p></div></div><p style="text-align: right">
       (coproc = 0b1111, opc1 = 0b000, CRn = 0b0111, CRm = 0b0101, opc2 = 0b110)
       </p><p class="pseudocode">

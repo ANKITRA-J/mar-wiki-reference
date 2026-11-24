@@ -10,11 +10,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-28_28-1">MTPME, bit [28] <span class="condition">when FEAT_MTPMU is implemented</span>:
       </h4><div class="field">
-      <p>Multi-threaded PMU Enable. Enables use of the <a href="AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT bits.</p>
+      <p>Multi-threaded PMU Enable. Enables use of the <a href="/latest_sysreg/AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT bits.</p>
     <table class="valuetable"><tr><th>MTPME</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><span class="xref">FEAT_MTPMU</span> is disabled. The Effective value of <a href="AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT is 0.</p>
+          <p><span class="xref">FEAT_MTPMU</span> is disabled. The Effective value of <a href="/latest_sysreg/AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT is 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT bits not affected by this field.</p>
+          <p><a href="/latest_sysreg/AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT bits not affected by this field.</p>
         </td></tr></table>
       <p>If <span class="xref">FEAT_MTPMU</span> is disabled for any other PE in the system that has the same level 1 Affinity as the PE, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether the PE behaves as if this field is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Cold reset, when the highest implemented Exception level is EL3, 
@@ -31,11 +31,11 @@
         </td></tr><tr><td class="bitfield">0b1</td><td><p>Accesses to the DCC registers in modes other than Monitor mode generate a Monitor Trap exception, unless the access also generates a higher priority exception.</p>
 <p>Traps on the DCC data transfer registers are ignored when the PE is in Debug state.</p></td></tr></table><p>The DCC registers trapped by this control are:</p>
 <ul>
-<li><a href="AArch32-dbgdtrrxext.html">DBGDTRRXext</a>, <a href="AArch32-dbgdtrtxext.html">DBGDTRTXext</a>, <a href="AArch32-dbgdscrint.html">DBGDSCRint</a>, <a href="AArch32-dbgdccint.html">DBGDCCINT</a>, and, when the PE is in Non-debug state, <a href="AArch32-dbgdtrrxint.html">DBGDTRRXint</a> and <a href="AArch32-dbgdtrtxint.html">DBGDTRTXint</a>.
+<li><a href="/latest_sysreg/AArch32-dbgdtrrxext.html">DBGDTRRXext</a>, <a href="/latest_sysreg/AArch32-dbgdtrtxext.html">DBGDTRTXext</a>, <a href="/latest_sysreg/AArch32-dbgdscrint.html">DBGDSCRint</a>, <a href="/latest_sysreg/AArch32-dbgdccint.html">DBGDCCINT</a>, and, when the PE is in Non-debug state, <a href="/latest_sysreg/AArch32-dbgdtrrxint.html">DBGDTRRXint</a> and <a href="/latest_sysreg/AArch32-dbgdtrtxint.html">DBGDTRTXint</a>.
 </li></ul>
 <p>When the PE is in Debug state, SDCR.TDCC does not trap any accesses to:</p>
 <ul>
-<li><a href="AArch32-dbgdtrrxint.html">DBGDTRRXint</a> and <a href="AArch32-dbgdtrtxint.html">DBGDTRTXint</a>.
+<li><a href="/latest_sysreg/AArch32-dbgdtrrxint.html">DBGDTRRXint</a> and <a href="/latest_sysreg/AArch32-dbgdtrtxint.html">DBGDTRTXint</a>.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-27_27-2"> <span class="condition">Otherwise</span>:
@@ -46,11 +46,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-23_23-1">SCCD, bit [23] <span class="condition">when FEAT_PMUv3p5 is implemented</span>:
       </h4><div class="field">
-      <p>Secure Cycle Counter Disable. Prohibits <a href="AArch32-pmccntr.html">PMCCNTR</a> from counting in Secure state and EL3.</p>
+      <p>Secure Cycle Counter Disable. Prohibits <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> from counting in Secure state and EL3.</p>
     <table class="valuetable"><tr><th>SCCD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Cycle counting by <a href="AArch32-pmccntr.html">PMCCNTR</a> is not affected by this mechanism.</p>
+          <p>Cycle counting by <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> is not affected by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Cycle counting by <a href="AArch32-pmccntr.html">PMCCNTR</a> is prohibited in Secure state and EL3.</p>
+          <p>Cycle counting by <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> is prohibited in Secure state and EL3.</p>
         </td></tr></table>
       <p>This field does not affect the CPU_CYCLES event or any other event that counts cycles.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
@@ -70,7 +70,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Non-secure accesses from an external debugger to the affected Performance Monitor registers are prohibited.</p>
         </td></tr></table>
-      <p>Otherwise, if EL3 is not implemented and the Effective value of <a href="AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p>
+      <p>Otherwise, if EL3 is not implemented and the Effective value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -82,7 +82,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>If the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> authentication interface function <span class="function">ExternalSecureInvasiveDebugEnabled()</span> returns FALSE, then accesses from an external debugger to the affected Performance Monitor registers are prohibited.</p>
         </td></tr></table>
-      <p>Otherwise, if EL3 is not implemented and the Effective value of <a href="AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p>
+      <p>Otherwise, if EL3 is not implemented and the Effective value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -91,46 +91,46 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-20_20-1">EDAD, bit [20] <span class="condition">when FEAT_Debugv8p4 is implemented</span>:
       </h4><div class="field">
-      <p>External debug Non-secure access disable. Controls Non-secure access to breakpoint, watchpoint, and <a href="ext-oslar_el1.html">OSLAR_EL1</a> registers by an external debugger.</p>
+      <p>External debug Non-secure access disable. Controls Non-secure access to breakpoint, watchpoint, and <a href="/latest_sysreg/ext-oslar_el1.html">OSLAR_EL1</a> registers by an external debugger.</p>
     <table class="valuetable"><tr><th>EDAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No accesses from an external debugger to the debug registers are prohibited by this control.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Non-secure accesses from an external debugger to the affected debug registers are prohibited.</p>
         </td></tr></table>
-      <p>If EL3 is not implemented and the Effective value of <a href="AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p>
+      <p>If EL3 is not implemented and the Effective value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-20_20-2"> <span class="condition">when FEAT_Debugv8p2 is implemented</span>:
       </h4><div class="field">
-      <p>External debug access disable. Controls access to breakpoint, watchpoint, and <a href="ext-oslar_el1.html">OSLAR_EL1</a> registers by an external debugger.</p>
+      <p>External debug access disable. Controls access to breakpoint, watchpoint, and <a href="/latest_sysreg/ext-oslar_el1.html">OSLAR_EL1</a> registers by an external debugger.</p>
     <table class="valuetable"><tr><th>EDAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No accesses from an external debugger to the debug registers are prohibited by this control.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>If the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> authentication interface function <span class="function">ExternalSecureInvasiveDebugEnabled()</span> returns FALSE, then accesses from an external debugger to the affected debug registers are prohibited.</p>
         </td></tr></table>
-      <p>If EL3 is not implemented and the Effective value of <a href="AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p>
+      <p>If EL3 is not implemented and the Effective value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-20_20-3"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
-      <p>External debug access disable. Controls access to breakpoint, watchpoint, and optionally <a href="ext-oslar_el1.html">OSLAR_EL1</a> registers by an external debugger.</p>
+      <p>External debug access disable. Controls access to breakpoint, watchpoint, and optionally <a href="/latest_sysreg/ext-oslar_el1.html">OSLAR_EL1</a> registers by an external debugger.</p>
     <table class="valuetable"><tr><th>EDAD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No accesses from an external debugger to the debug registers are prohibited by this control.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>If the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> authentication interface function <span class="function">ExternalSecureInvasiveDebugEnabled()</span> returns FALSE, then accesses from an external debugger to the affected debug registers are prohibited.</p>
-        </td></tr></table><p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether accesses to <a href="ext-oslar_el1.html">OSLAR_EL1</a> from an external debugger are affected by this control.</p>
-<p>If EL3 is not implemented and the Effective value of <a href="AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
+        </td></tr></table><p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether accesses to <a href="/latest_sysreg/ext-oslar_el1.html">OSLAR_EL1</a> from an external debugger are affected by this control.</p>
+<p>If EL3 is not implemented and the Effective value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-19_19-1">TTRF, bit [19] <span class="condition">when FEAT_TRF is implemented</span>:
       </h4><div class="field">
       <p>Trap Trace Filter controls. Controls whether accesses in modes other than Monitor mode to the trace filter control registers generate a Monitor Trap exception.</p>
     <table class="valuetable"><tr><th>TTRF</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Accesses to <a href="AArch32-htrfcr.html">HTRFCR</a> and <a href="AArch32-trfcr.html">TRFCR</a> are not affected by this control bit.</p>
+          <p>Accesses to <a href="/latest_sysreg/AArch32-htrfcr.html">HTRFCR</a> and <a href="/latest_sysreg/AArch32-trfcr.html">TRFCR</a> are not affected by this control bit.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>When not in Monitor mode, accesses to <a href="AArch32-htrfcr.html">HTRFCR</a> and <a href="AArch32-trfcr.html">TRFCR</a> generate a Monitor Trap exception, unless the access generates a higher priority exception.</p>
+          <p>When not in Monitor mode, accesses to <a href="/latest_sysreg/AArch32-htrfcr.html">HTRFCR</a> and <a href="/latest_sysreg/AArch32-trfcr.html">TRFCR</a> generate a Monitor Trap exception, unless the access generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -145,7 +145,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Trace in Secure state is not affected by this field.</p>
         </td></tr></table><p>This field also controls the level of authentication required by an external debugger to enable external tracing. See <span class="xref">'Register controls to enable self-hosted trace'</span>.</p>
-<p>If EL3 is not implemented and the Effective value of <a href="AArch32-scr.html">SCR</a>.NS is 0, the PE behaves as if this field is set to 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
+<p>If EL3 is not implemented and the Effective value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, the PE behaves as if this field is set to 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-18_18-2"> <span class="condition">Otherwise</span>:
@@ -155,23 +155,23 @@
       </h4><div class="field">
       <p>Secure Performance Monitors Enable. Controls event counting in Secure state.</p>
     <table class="valuetable"><tr><th>SPME</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Event counting is prohibited in Secure state. If <a href="AArch32-pmcr.html">PMCR</a>.DP is 1, <a href="AArch32-pmccntr.html">PMCCNTR</a> is disabled in Secure state. Otherwise, <a href="AArch32-pmccntr.html">PMCCNTR</a> is not affected by this mechanism.</p>
+          <p>Event counting is prohibited in Secure state. If <a href="/latest_sysreg/AArch32-pmcr.html">PMCR</a>.DP is 1, <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> is disabled in Secure state. Otherwise, <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> is not affected by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Event counting and <a href="AArch32-pmccntr.html">PMCCNTR</a> are not affected by this mechanism.</p>
-        </td></tr></table><p>This field affects the operation of all event counters in Secure state, and if <a href="AArch32-pmcr.html">PMCR</a>.DP is 1, the operation of <a href="AArch32-pmccntr.html">PMCCNTR</a> in Secure state. When <a href="AArch32-pmcr.html">PMCR</a>.DP is 0, <a href="AArch32-pmccntr.html">PMCCNTR</a> is not affected by this field.</p>
-<p>If EL3 is not implemented and the Effective value of <a href="AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
+          <p>Event counting and <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> are not affected by this mechanism.</p>
+        </td></tr></table><p>This field affects the operation of all event counters in Secure state, and if <a href="/latest_sysreg/AArch32-pmcr.html">PMCR</a>.DP is 1, the operation of <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> in Secure state. When <a href="/latest_sysreg/AArch32-pmcr.html">PMCR</a>.DP is 0, <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> is not affected by this field.</p>
+<p>If EL3 is not implemented and the Effective value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-17_17-2"> <span class="condition">when FEAT_PMUv3 is implemented</span>:
       </h4><div class="field">
       <p>Secure Performance Monitors Enable. Controls event counting in Secure state.</p>
     <table class="valuetable"><tr><th>SPME</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If <span class="function">ExternalSecureNoninvasiveDebugEnabled()</span> is FALSE, event counting is prohibited in Secure state, and if <a href="AArch32-pmcr.html">PMCR</a>.DP is 1, <a href="AArch32-pmccntr.html">PMCCNTR</a> is disabled in Secure state.</p>
+          <p>If <span class="function">ExternalSecureNoninvasiveDebugEnabled()</span> is FALSE, event counting is prohibited in Secure state, and if <a href="/latest_sysreg/AArch32-pmcr.html">PMCR</a>.DP is 1, <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> is disabled in Secure state.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Event counting and <a href="AArch32-pmccntr.html">PMCCNTR</a> are not affected by this mechanism.</p>
-        </td></tr></table><p>If <span class="function">ExternalSecureNoninvasiveDebugEnabled()</span> is TRUE, the event counters and <a href="AArch32-pmccntr.html">PMCCNTR</a> are not affected by this field.</p>
-<p>Otherwise, this field affects the operation of all event counters in Secure state, and if <a href="AArch32-pmcr.html">PMCR</a>.DP is 1, the operation of <a href="AArch32-pmccntr.html">PMCCNTR</a> in Secure state. When <a href="AArch32-pmcr.html">PMCR</a>.DP is 0, <a href="AArch32-pmccntr.html">PMCCNTR</a> is not affected by this field.</p>
-<p>If EL3 is not implemented and the Effective value of <a href="AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
+          <p>Event counting and <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> are not affected by this mechanism.</p>
+        </td></tr></table><p>If <span class="function">ExternalSecureNoninvasiveDebugEnabled()</span> is TRUE, the event counters and <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> are not affected by this field.</p>
+<p>Otherwise, this field affects the operation of all event counters in Secure state, and if <a href="/latest_sysreg/AArch32-pmcr.html">PMCR</a>.DP is 1, the operation of <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> in Secure state. When <a href="/latest_sysreg/AArch32-pmcr.html">PMCR</a>.DP is 0, <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a> is not affected by this field.</p>
+<p>If EL3 is not implemented and the Effective value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-17_17-3"> <span class="condition">Otherwise</span>:
@@ -193,8 +193,8 @@
 <p>This field has no effect on Breakpoint Instruction exceptions. These are always enabled.</p>
 <p>This field is ignored in Non-secure state.</p>
 <p>If debug exceptions from EL3 are enabled, then debug exceptions from Secure EL0 are also enabled.</p>
-<p>Otherwise, debug exceptions from Secure EL0 are enabled only if the value of <a href="AArch32-sder.html">SDER</a>.SUIDEN is 1.</p>
-<p>If EL3 is not implemented and the Effective value of <a href="AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is <span class="binarynumber">0b11</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
+<p>Otherwise, debug exceptions from Secure EL0 are enabled only if the value of <a href="/latest_sysreg/AArch32-sder.html">SDER</a>.SUIDEN is 1.</p>
+<p>If EL3 is not implemented and the Effective value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, then the Effective value of this field is <span class="binarynumber">0b11</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'00'</span>.
 </li></ul></div><h4 id="fieldset_0-13_0">Bits [13:0]:

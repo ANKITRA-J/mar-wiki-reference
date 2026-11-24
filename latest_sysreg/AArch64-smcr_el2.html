@@ -33,7 +33,7 @@ at EL2, EL1, and EL0, if they are treated as legal at EL3.</p>
     </div><h4 id="fieldset_0-30_30-1">EZT0, bit [30] <span class="condition">when FEAT_SME2 is implemented</span>:
       </h4><div class="field"><p>Traps execution at EL2, EL1, and EL0 of the LDR, LUTI2, LUTI4, MOVT, STR, and ZERO instructions that access the ZT0 register to 
 EL2, when EL2 is enabled in the current Security state.</p>
-<p>The exception is reported using <a href="AArch64-esr_el2.html">ESR_EL2</a>.EC value <span class="hexnumber">0x1D</span>, with an ISS code of <span class="hexnumber">0x0000004</span>, at a lower priority than a trap due to PSTATE.SM or PSTATE.ZA.</p><table class="valuetable"><tr><th>EZT0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p>The exception is reported using <a href="/latest_sysreg/AArch64-esr_el2.html">ESR_EL2</a>.EC value <span class="hexnumber">0x1D</span>, with an ISS code of <span class="hexnumber">0x0000004</span>, at a lower priority than a trap due to PSTATE.SM or PSTATE.ZA.</p><table class="valuetable"><tr><th>EZT0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control causes execution of these instructions at EL2, EL1, and EL0 to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause execution of any instruction to be trapped.</p>
@@ -52,10 +52,10 @@ EL2, when EL2 is enabled in the current Security state.</p>
       <p>Reserved, RAZ/WI.</p>
     </div><h4 id="fieldset_0-3_0">LEN, bits [3:0]:
       </h4><div class="field"><p>Requests an Effective Streaming SVE vector length (SVL) at EL2 of (LEN+1)*128 bits.
-This field also defines the Effective Streaming SVE vector length at EL0 when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.</p>
+This field also defines the Effective Streaming SVE vector length at EL0 when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.</p>
 <p>The Streaming SVE vector length can be any power of two from 128 bits to 2048 bits inclusive. An implementation can support any subset of the architecturally permitted lengths.</p>
 <p>When the PE is in Streaming SVE mode, the Effective SVE vector length (VL) is equal to SVL.</p>
-<p>When FEAT_SVE is implemented, and the PE is not in Streaming SVE mode, VL is equal to the Effective Non-streaming SVE vector length. See <a href="AArch64-zcr_el2.html">ZCR_EL2</a>.</p>
+<p>When FEAT_SVE is implemented, and the PE is not in Streaming SVE mode, VL is equal to the Effective Non-streaming SVE vector length. See <a href="/latest_sysreg/AArch64-zcr_el2.html">ZCR_EL2</a>.</p>
 <p>For all purposes other than returning the result of a direct read of SMCR_EL2, the PE selects the Effective Streaming SVE vector length by performing checks in the following order:</p>
 <ol>
 <li>
@@ -71,7 +71,7 @@ This field also defines the Effective Streaming SVE vector length at EL0 when th
 <p>An indirect read of SMCR_EL2.LEN appears to occur in program order relative to a direct write of the same register, without the need for explicit synchronization.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name SMCR_EL2 or SMCR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name SMCR_EL2 or SMCR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, SMCR_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b0001, CRm = 0b0010, op2 = 0b110)
       </p><p class="pseudocode">

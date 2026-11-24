@@ -161,7 +161,7 @@
 <p><span class="xref">FEAT_PAuth_LR</span> implements the functionality identified by the value <span class="binarynumber">0b0110</span>.</p>
 <p>When this field is nonzero, <span class="xref">FEAT_PACQARMA3</span> is implemented.</p>
 <p>From Armv8.6, the values <span class="binarynumber">0b0001</span> and <span class="binarynumber">0b0010</span> are not permitted.</p>
-<p>If the value of <a href="AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.API is nonzero, or the value of <a href="AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.APA is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-11_8">GPA3, bits [11:8]:
+<p>If the value of <a href="/latest_sysreg/AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.API is nonzero, or the value of <a href="/latest_sysreg/AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.APA is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-11_8">GPA3, bits [11:8]:
       </h4><div class="field">
       <p>Indicates whether the QARMA3 algorithm is implemented in the PE for generic code authentication in AArch64 state.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>GPA3</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
@@ -171,16 +171,16 @@
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_PACQARMA3</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p>When this field is nonzero, <span class="xref">FEAT_PACQARMA3</span> is implemented.</p>
-<p>If the value of <a href="AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.GPI is nonzero, or the value of <a href="AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.GPA is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_4">RPRES, bits [7:4]:
+<p>If the value of <a href="/latest_sysreg/AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.GPI is nonzero, or the value of <a href="/latest_sysreg/AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.GPA is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_4">RPRES, bits [7:4]:
       </h4><div class="field">
-      <p>Indicates support for 12 bits of mantissa in single-precision reciprocal and reciprocal square root instructions in AArch64 state, when <a href="AArch64-fpcr.html">FPCR</a>.AH is 1.</p>
+      <p>Indicates support for 12 bits of mantissa in single-precision reciprocal and reciprocal square root instructions in AArch64 state, when <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.AH is 1.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>RPRES</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>Single-precision reciprocal and reciprocal square root estimates give 8 bits of mantissa, when <a href="AArch64-fpcr.html">FPCR</a>.AH is 1.</p>
+          <p>Single-precision reciprocal and reciprocal square root estimates give 8 bits of mantissa, when <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.AH is 1.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>Single-precision reciprocal and reciprocal square root estimates give 12 bits of mantissa, when <a href="AArch64-fpcr.html">FPCR</a>.AH is 1.</p>
+          <p>Single-precision reciprocal and reciprocal square root estimates give 12 bits of mantissa, when <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.AH is 1.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_RPRES</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
-<p>When <a href="AArch64-fpcr.html">FPCR</a>.AH is 0, the floating-point reciprocal estimate and reciprocal square root estimate instructions give 8 bits of mantissa.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">WFxT, bits [3:0]:
+<p>When <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.AH is 0, the floating-point reciprocal estimate and reciprocal square root estimate instructions give 8 bits of mantissa.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">WFxT, bits [3:0]:
       </h4><div class="field">
       <p>Indicates support for the <span class="instruction">WFET</span> and <span class="instruction">WFIT</span> instructions in AArch64 state.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>WFxT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>

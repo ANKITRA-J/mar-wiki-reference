@@ -3,7 +3,7 @@
 <title>TRFCR | Jon's Arm Reference</title><meta name="description" content="Provides EL1 controls for Trace."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">TRFCR</h1><p class="insn_subtitle" data-pagefind-body="1">Trace Filter Control Register</p><div data-pagefind-body="1">
         <p>Provides EL1 controls for Trace.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register TRFCR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-trfcr_el1.html">TRFCR_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented and FEAT_TRF is implemented. Otherwise, direct accesses to TRFCR are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch32 System register TRFCR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-trfcr_el1.html">TRFCR_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented and FEAT_TRF is implemented. Otherwise, direct accesses to TRFCR are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>TRFCR is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="25"><a href="#fieldset_0-31_7">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-6_5">TS</a></td><td class="lr" colspan="3"><a href="#fieldset_0-4_2">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-1_1">E1TRE</a></td><td class="lr" colspan="1"><a href="#fieldset_0-0_0">E0TRE</a></td></tr></tbody></table><h4 id="fieldset_0-31_7">Bits [31:7]:
       </h4><div class="field">
@@ -12,20 +12,20 @@
       </h4><div class="field">
       <p>Timestamp Control. Controls which timebase is used for trace timestamps.</p>
     <table class="valuetable"><tr><th>TS</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b01</td><td>
-          <p>Virtual timestamp. The traced timestamp is the physical counter value minus the value of <a href="AArch32-cntvoff.html">CNTVOFF</a>.</p>
-        </td><td></td></tr><tr><td class="bitfield">0b10</td><td><p>Guest physical timestamp. The traced timestamp is the physical counter value minus a physical offset. If any of the following are true, the physical offset is zero, otherwise the physical offset is the value of <a href="AArch64-cntpoff_el2.html">CNTPOFF_EL2</a>:</p>
+          <p>Virtual timestamp. The traced timestamp is the physical counter value minus the value of <a href="/latest_sysreg/AArch32-cntvoff.html">CNTVOFF</a>.</p>
+        </td><td></td></tr><tr><td class="bitfield">0b10</td><td><p>Guest physical timestamp. The traced timestamp is the physical counter value minus a physical offset. If any of the following are true, the physical offset is zero, otherwise the physical offset is the value of <a href="/latest_sysreg/AArch64-cntpoff_el2.html">CNTPOFF_EL2</a>:</p>
 <ul>
 <li>EL3 is implemented and is using AArch32.
-</li><li>EL3 is implemented, using AArch64, and <a href="AArch64-scr_el3.html">SCR_EL3</a>.ECVEn is 0.
+</li><li>EL3 is implemented, using AArch64, and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.ECVEn is 0.
 </li><li>EL2 is using AArch32.
-</li><li>EL2 is using AArch64 and <a href="AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.ECV is 0.
+</li><li>EL2 is using AArch64 and <a href="/latest_sysreg/AArch64-cnthctl_el2.html">CNTHCTL_EL2</a>.ECV is 0.
 </li><li><span class="xref">FEAT_ECV_POFF</span> is not implemented.
 </li></ul></td><td>When FEAT_ECV is implemented</td></tr><tr><td class="bitfield">0b11</td><td>
           <p>Physical timestamp. The traced timestamp is the physical counter value.</p>
         </td><td></td></tr></table><p>All other values are reserved.</p>
 <p>This field is ignored by the PE when any of the following are true:</p>
 <ul>
-<li>EL2 is implemented and <a href="AArch32-htrfcr.html">HTRFCR</a>.TS != <span class="binarynumber">0b00</span>.
+<li>EL2 is implemented and <a href="/latest_sysreg/AArch32-htrfcr.html">HTRFCR</a>.TS != <span class="binarynumber">0b00</span>.
 </li><li><span class="function">SelfHostedTraceEnabled()</span> == FALSE.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -54,7 +54,7 @@
         </td></tr></table><p>This field is ignored if any of the following are true:</p>
 <ul>
 <li><span class="function">SelfHostedTraceEnabled</span>() == FALSE.
-</li><li>EL2 is implemented and enabled in the current security state and <a href="AArch32-hcr.html">HCR</a>.TGE == 1.
+</li><li>EL2 is implemented and enabled in the current security state and <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TGE == 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.

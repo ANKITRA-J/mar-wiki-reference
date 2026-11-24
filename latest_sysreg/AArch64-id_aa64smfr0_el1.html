@@ -16,7 +16,7 @@
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>FA64</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Only those AArch64 instructions defined as being legal can be executed in streaming SVE mode.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>All implemented AArch64 instructions are legal for execution in Streaming SVE mode, when enabled by <a href="AArch64-smcr_el1.html">SMCR_EL1</a>.FA64, <a href="AArch64-smcr_el2.html">SMCR_EL2</a>.FA64, and <a href="AArch64-smcr_el3.html">SMCR_EL3</a>.FA64.</p>
+          <p>All implemented AArch64 instructions are legal for execution in Streaming SVE mode, when enabled by <a href="/latest_sysreg/AArch64-smcr_el1.html">SMCR_EL1</a>.FA64, <a href="/latest_sysreg/AArch64-smcr_el2.html">SMCR_EL2</a>.FA64, and <a href="/latest_sysreg/AArch64-smcr_el3.html">SMCR_EL3</a>.FA64.</p>
         </td></tr></table>
       <p><span class="xref">FEAT_SME_FA64</span> implements the functionality identified by the value 1.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-62_62">Bit [62]:
@@ -235,7 +235,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-25_25">SBitPerm, bit [25]:
       </h4><div class="field">
-      <p>Indicates support for the SVE bit permute instructions identified as implemented by <a href="AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.BitPerm, when the PE is in Streaming SVE mode.</p>
+      <p>Indicates support for the SVE bit permute instructions identified as implemented by <a href="/latest_sysreg/AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.BitPerm, when the PE is in Streaming SVE mode.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>SBitPerm</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control has no effect on Streaming SVE mode behavior.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -247,7 +247,7 @@
       <p><span class="xref">FEAT_SSVE_BitPerm</span> implements the functionality identified by the value 1.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-24_24">AES, bit [24]:
       </h4><div class="field">
-      <p>Indicates support for the SVE AES and 128-bit polynomial multiply long instructions identified as implemented by <a href="AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.AES, when the PE is in Streaming SVE mode.</p>
+      <p>Indicates support for the SVE AES and 128-bit polynomial multiply long instructions identified as implemented by <a href="/latest_sysreg/AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.AES, when the PE is in Streaming SVE mode.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>AES</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control has no effect on Streaming SVE mode behavior.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>

@@ -114,8 +114,8 @@ software condition such that the result of the compare does not prevent the subs
             </h4><a id="CASPT_CP64_comswappr_unpriv"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 0)</span></div><p class="asm-code">CASPT  <a href="#Xs" title='Is the 64-bit name of the first general-purpose register to be compared and loaded, encoded in the "Rs" field. &lt;Xs&gt; must be an even-numbered register.'>&lt;Xs&gt;</a>, <a href="#XsPlus1" title="Is the 64-bit name of the second general-purpose register to be compared and loaded.">&lt;X(s+1)&gt;</a>, <a href="#Xt" title='Is the 64-bit name of the first general-purpose register to be conditionally stored, encoded in the "Rt" field. &lt;Xt&gt; must be an even-numbered register.'>&lt;Xt&gt;</a>, <a href="#XtPlus1__3" title="Is the 64-bit name of the second general-purpose register to be conditionally stored.">&lt;X(t+1)&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">CASPAT encoding
             </h4><a id="CASPAT_CP64_comswappr_unpriv"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 0)</span></div><p class="asm-code">CASPAT  <a href="#Xs" title='Is the 64-bit name of the first general-purpose register to be compared and loaded, encoded in the "Rs" field. &lt;Xs&gt; must be an even-numbered register.'>&lt;Xs&gt;</a>, <a href="#XsPlus1" title="Is the 64-bit name of the second general-purpose register to be compared and loaded.">&lt;X(s+1)&gt;</a>, <a href="#Xt" title='Is the 64-bit name of the first general-purpose register to be conditionally stored, encoded in the "Rt" field. &lt;Xt&gt; must be an even-numbered register.'>&lt;Xt&gt;</a>, <a href="#XtPlus1__3" title="Is the 64-bit name of the second general-purpose register to be conditionally stored.">&lt;X(t+1)&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">CASPALT encoding
             </h4><a id="CASPALT_CP64_comswappr_unpriv"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 1)</span></div><p class="asm-code">CASPALT  <a href="#Xs" title='Is the 64-bit name of the first general-purpose register to be compared and loaded, encoded in the "Rs" field. &lt;Xs&gt; must be an even-numbered register.'>&lt;Xs&gt;</a>, <a href="#XsPlus1" title="Is the 64-bit name of the second general-purpose register to be compared and loaded.">&lt;X(s+1)&gt;</a>, <a href="#Xt" title='Is the 64-bit name of the first general-purpose register to be conditionally stored, encoded in the "Rt" field. &lt;Xt&gt; must be an even-numbered register.'>&lt;Xt&gt;</a>, <a href="#XtPlus1__3" title="Is the 64-bit name of the second general-purpose register to be conditionally stored.">&lt;X(t+1)&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">CASPLT encoding
-            </h4><a id="CASPLT_CP64_comswappr_unpriv"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">CASPLT  <a href="#Xs" title='Is the 64-bit name of the first general-purpose register to be compared and loaded, encoded in the "Rs" field. &lt;Xs&gt; must be an even-numbered register.'>&lt;Xs&gt;</a>, <a href="#XsPlus1" title="Is the 64-bit name of the second general-purpose register to be compared and loaded.">&lt;X(s+1)&gt;</a>, <a href="#Xt" title='Is the 64-bit name of the first general-purpose register to be conditionally stored, encoded in the "Rt" field. &lt;Xt&gt; must be an even-numbered register.'>&lt;Xt&gt;</a>, <a href="#XtPlus1__3" title="Is the 64-bit name of the second general-purpose register to be conditionally stored.">&lt;X(t+1)&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSUI) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if Rs[0] == '1' || Rt[0] == '1' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="CASPLT_CP64_comswappr_unpriv"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">CASPLT  <a href="#Xs" title='Is the 64-bit name of the first general-purpose register to be compared and loaded, encoded in the "Rs" field. &lt;Xs&gt; must be an even-numbered register.'>&lt;Xs&gt;</a>, <a href="#XsPlus1" title="Is the 64-bit name of the second general-purpose register to be compared and loaded.">&lt;X(s+1)&gt;</a>, <a href="#Xt" title='Is the 64-bit name of the first general-purpose register to be conditionally stored, encoded in the "Rt" field. &lt;Xt&gt; must be an even-numbered register.'>&lt;Xt&gt;</a>, <a href="#XtPlus1__3" title="Is the 64-bit name of the second general-purpose register to be conditionally stored.">&lt;X(t+1)&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSUI) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if Rs[0] == '1' || Rt[0] == '1' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let s : integer{} = UInt(Rs);
 let t : integer{} = UInt(Rt);
 let n : integer{} = UInt(Rn);
@@ -154,27 +154,27 @@ let s2 : bits(datasize) = X{}(s+1);
 let t1 : bits(datasize) = X{}(t);
 let t2 : bits(datasize) = X{}(t+1);
 
-let privileged : boolean = <a href="shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>();
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescAtomicOp_9" title="">CreateAccDescAtomicOp</a>(<a href="shared_pseudocode.html#enum_MemAtomicOp_CAS" title="">MemAtomicOp_CAS</a>, acquire, release,
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>();
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescAtomicOp_9" title="">CreateAccDescAtomicOp</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemAtomicOp_CAS" title="">MemAtomicOp_CAS</a>, acquire, release,
                                                        tagchecked, privileged, t, t+1, s, s+1);
 
-comparevalue = if <a href="shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then s1::s2 else s2::s1;
-newvalue     = if <a href="shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then t1::t2 else t2::t1;
+comparevalue = if <a href="/latest_aarch64/shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then s1::s2 else s2::s1;
+newvalue     = if <a href="/latest_aarch64/shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then t1::t2 else t2::t1;
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
 let data : bits(2*datasize) = MemAtomic{}(address, comparevalue, newvalue, accdesc);
 
-if <a href="shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s)   = data[2*datasize-1:datasize];
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s+1) = data[datasize-1:0];
+if <a href="/latest_aarch64/shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s)   = data[2*datasize-1:datasize];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s+1) = data[datasize-1:0];
 else
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s)   = data[datasize-1:0];
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s+1) = data[2*datasize-1:datasize];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s)   = data[datasize-1:0];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s+1) = data[2*datasize-1:datasize];
 end;</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

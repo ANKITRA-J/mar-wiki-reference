@@ -26,9 +26,9 @@
       </h4><div class="field">
       <p>Sticky powerdown status. Indicates whether the trace register state is valid.</p>
     <table class="valuetable"><tr><th>STICKYPD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The state of <a href="ext-trcoslsr.html">TRCOSLSR</a> and the trace registers are valid.</p>
+          <p>The state of <a href="/latest_sysreg/ext-trcoslsr.html">TRCOSLSR</a> and the trace registers are valid.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The state of <a href="ext-trcoslsr.html">TRCOSLSR</a> and the trace registers might not be valid.</p>
+          <p>The state of <a href="/latest_sysreg/ext-trcoslsr.html">TRCOSLSR</a> and the trace registers might not be valid.</p>
         </td></tr></table><p>This field is set to 1 if the power to the trace unit core power domain is removed and the trace unit register state is not valid.</p>
 <p>The STICKYPD field is read-sensitive. On a read of the TRCPDSR, this field is cleared to 0 after the register has been read.</p><p>The reset behavior of this field is:</p><ul><li>On a Trace unit reset, 
       this field resets

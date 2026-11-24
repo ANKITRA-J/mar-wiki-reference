@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>LORN_EL1 | Jon's Arm Reference</title><meta name="description" content="Holds the number of the LORegion described in the current LORegion descriptor selected by LORC_EL1.DS."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">LORN_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">LORegion Number (EL1)</p><div data-pagefind-body="1">
-        <p>Holds the number of the LORegion described in the current LORegion descriptor selected by <a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
+        <p>Holds the number of the LORegion described in the current LORegion descriptor selected by <a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_LOR is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to LORN_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>This register is <span class="arm-defined-word">RES0</span> if any of the following apply:</p>
 
       
         <ul>
 <li>No LORegion descriptors are supported by the PE.
-</li><li><a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS points to a LORegion that is not supported by the PE.
+</li><li><a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS points to a LORegion that is not supported by the PE.
 </li></ul>
       <h3>Attributes</h3>
         <p>LORN_EL1 is a 64-bit register.</p>
@@ -19,7 +19,7 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-7_0">Num, bits [7:0]:
-      </h4><div class="field"><p>Number of the LORegion described in the current LORegion descriptor selected by <a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
+      </h4><div class="field"><p>Number of the LORegion described in the current LORegion descriptor selected by <a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
 <p>The maximum number of LORegions supported by the PE is 256. If the maximum number is less than 256, then bits[8:N] are <span class="arm-defined-word">RES0</span>, where N is (Log<sub>2</sub>(Number of LORegions supported by the PE)).</p>
 <p>If this field points to a LORegion that is not supported by the PE, then the current LORegion descriptor does not match any LORegion.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

@@ -7,10 +7,10 @@
         <p>These registers are available in all GIC configurations. If the GIC implementation supports two Security states, these registers are Common.</p>
 
       
-        <p>GICD_ICFGR1 is Banked for each connected PE with <a href="ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &lt; 8.</p>
+        <p>GICD_ICFGR1 is Banked for each connected PE with <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &lt; 8.</p>
 
       
-        <p>Accessing GICD_ICFGR1 from a PE with <a href="ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &gt; 7 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
+        <p>Accessing GICD_ICFGR1 from a PE with <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &gt; 7 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
 
       
         <ul>
@@ -54,5 +54,5 @@
 <p>For SGIs, this field always indicates edge-triggered.</p><p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing GICD_ICFGR&lt;n&gt;</h2>
-        <p>For SPIs and PPIs, when <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, a register bit that corresponds to a Group 0 or Secure Group 1 interrupt is RAZ/WI to Non-secure accesses.</p>
+        <p>For SPIs and PPIs, when <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, a register bit that corresponds to a Group 0 or Secure Group 1 interrupt is RAZ/WI to Non-secure accesses.</p>
       <h4>GICD_ICFGR&lt;n&gt; can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Distributor</td><td>Dist_base</td><td><span class="hexnumber">0x0C00</span> + (4 * n)</td><td>GICD_ICFGR&lt;n&gt;</td></tr></table><p>Accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

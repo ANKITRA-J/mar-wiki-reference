@@ -19,12 +19,12 @@
       </h4><div class="field"><p>A 4-bit field indicating the features of frame CNTBase&lt;n&gt;.</p>
 <p>Bit[3] of the field is <span class="arm-defined-word">RES0</span>.</p>
 <p>Bit[2], the FEL0 subfield, indicates whether frame CNTBase&lt;n&gt; has a second view, CNTEL0Base&lt;n&gt;. The possible values of this bit are:</p>
-<table class="valuetable"><thead><tr><th>Bit[2]</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td>Frame&lt;n&gt; does not have a second view. The <a href="ext-cntel0acr.html">CNTEL0ACR</a> register in the first view of the frame is <span class="arm-defined-word">RES0</span>.</td></tr><tr><td><span class="binarynumber">0b1</span></td><td>Frame&lt;n&gt; has a second view, CNTEL0Base&lt;n&gt;.</td></tr></tbody></table>
+<table class="valuetable"><thead><tr><th>Bit[2]</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td>Frame&lt;n&gt; does not have a second view. The <a href="/latest_sysreg/ext-cntel0acr.html">CNTEL0ACR</a> register in the first view of the frame is <span class="arm-defined-word">RES0</span>.</td></tr><tr><td><span class="binarynumber">0b1</span></td><td>Frame&lt;n&gt; has a second view, CNTEL0Base&lt;n&gt;.</td></tr></tbody></table>
 <p>If bit[0] is 0, bit[2] is <span class="arm-defined-word">RES0</span>.</p>
 <p>Bit[1], the FVI subfield, indicates whether both:</p>
 <ul>
-<li>Frame CNTBase&lt;n&gt; implements the virtual timer registers <a href="ext-cntv_cval.html">CNTV_CVAL</a>, <a href="ext-cntv_tval.html">CNTV_TVAL</a>, and <a href="ext-cntv_ctl.html">CNTV_CTL</a>.
-</li><li>This CNTCTLBase frame implements the virtual timer offset register <a href="ext-cntvoffn.html">CNTVOFF&lt;n&gt;</a>.
+<li>Frame CNTBase&lt;n&gt; implements the virtual timer registers <a href="/latest_sysreg/ext-cntv_cval.html">CNTV_CVAL</a>, <a href="/latest_sysreg/ext-cntv_tval.html">CNTV_TVAL</a>, and <a href="/latest_sysreg/ext-cntv_ctl.html">CNTV_CTL</a>.
+</li><li>This CNTCTLBase frame implements the virtual timer offset register <a href="/latest_sysreg/ext-cntvoffn.html">CNTVOFF&lt;n&gt;</a>.
 </li></ul>
 <p>The possible values of bit[1] are:</p>
 <table class="valuetable"><thead><tr><th>Bit[1]</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td>Frame&lt;n&gt; does not have virtual capability. The virtual time and offset registers are <span class="arm-defined-word">RES0</span>.</td></tr><tr><td><span class="binarynumber">0b1</span></td><td>Frame&lt;n&gt; has virtual capability. The virtual time and offset registers are implemented.</td></tr></tbody></table>

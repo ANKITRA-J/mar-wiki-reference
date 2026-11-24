@@ -49,7 +49,7 @@ for general use.</p>
             </h4><a id="RCWSSET_64_memop"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 0)</span></div><p class="asm-code">RCWSSET  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">RCWSSETA encoding
             </h4><a id="RCWSSETA_64_memop"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 0)</span></div><p class="asm-code">RCWSSETA  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">RCWSSETAL encoding
             </h4><a id="RCWSSETAL_64_memop"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 1)</span></div><p class="asm-code">RCWSSETAL  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">RCWSSETL encoding
-            </h4><a id="RCWSSETL_64_memop"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">RCWSSETL  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_THE) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="RCWSSETL_64_memop"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">RCWSSETL  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_THE) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let s : integer{} = UInt(Rs);
 let t : integer{} = UInt(Rt);
 let n : integer{} = UInt(Rn);
@@ -72,26 +72,26 @@ let tagchecked : boolean = n != 31;</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode">if <a href="shared_pseudocode.html#func_IsD128Enabled_1" title="">IsD128Enabled</a>(<a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL) then Undefined(); end;
+      <p class="pseudocode">if <a href="/latest_aarch64/shared_pseudocode.html#func_IsD128Enabled_1" title="">IsD128Enabled</a>(<a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL) then Undefined(); end;
 
 var address : bits(64);
 let newdata : bits(64) = X{}(s);
 var readdata : bits(64);
 var nzcv : bits(4);
 
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescRCW_7" title="">CreateAccDescRCW</a>(<a href="shared_pseudocode.html#enum_MemAtomicOp_ORR" title="">MemAtomicOp_ORR</a>, soft, acquire, release,
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescRCW_7" title="">CreateAccDescRCW</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemAtomicOp_ORR" title="">MemAtomicOp_ORR</a>, soft, acquire, release,
                                                   tagchecked, t, s);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
 let compdata : bits(64) = ARBITRARY : bits(64);    // Irrelevant when not executing CAS
-(nzcv, readdata) = <a href="shared_pseudocode.html#func_MemAtomicRCW_5" title="">MemAtomicRCW</a>{64}(address, compdata, newdata, accdesc);
+(nzcv, readdata) = <a href="/latest_aarch64/shared_pseudocode.html#func_MemAtomicRCW_5" title="">MemAtomicRCW</a>{64}(address, compdata, newdata, accdesc);
 
 PSTATE.[N,Z,C,V] = nzcv;
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = readdata;    // Return the old value when t!=31</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = readdata;    // Return the old value when t!=31</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

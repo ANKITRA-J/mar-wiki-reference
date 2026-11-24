@@ -14,8 +14,8 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-33_33-1">SL2, bit [33] <span class="condition">when FEAT_LPA2 is implemented and (FEAT_D128 is not implemented or VTCR_EL2.D128 == '0')</span>:
       </h4><div class="field"><p>Starting level of the Secure stage 2 translation lookup controlled by VSTCR_EL2.</p>
-<p>If <a href="AArch64-vtcr_el2.html">VTCR_EL2</a>.DS == 1, then VSTCR_EL2.SL2, in combination with VSTCR_EL2.SL0, gives encodings for the Secure stage 2 translation table walk initial lookup level.</p>
-<p>If <a href="AArch64-vtcr_el2.html">VTCR_EL2</a>.DS == 0, then VSTCR_EL2.SL2 is <span class="arm-defined-word">RES0</span>.</p>
+<p>If <a href="/latest_sysreg/AArch64-vtcr_el2.html">VTCR_EL2</a>.DS == 1, then VSTCR_EL2.SL2, in combination with VSTCR_EL2.SL0, gives encodings for the Secure stage 2 translation table walk initial lookup level.</p>
+<p>If <a href="/latest_sysreg/AArch64-vtcr_el2.html">VTCR_EL2</a>.DS == 0, then VSTCR_EL2.SL2 is <span class="arm-defined-word">RES0</span>.</p>
 <p>If the translation granule size is not 4KB, then this field is <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-33_33-2"> <span class="condition">Otherwise</span>:
@@ -52,7 +52,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_14">TG0, bits [15:14]:
       </h4><div class="field">
-      <p>Secure stage 2 granule size for <a href="AArch64-vsttbr_el2.html">VSTTBR_EL2</a>.</p>
+      <p>Secure stage 2 granule size for <a href="/latest_sysreg/AArch64-vsttbr_el2.html">VSTTBR_EL2</a>.</p>
     <table class="valuetable"><tr><th>TG0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>4KB.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -60,8 +60,8 @@
         </td></tr><tr><td class="bitfield">0b10</td><td>
           <p>16KB.</p>
         </td></tr></table><p>Other values are reserved.</p>
-<p>If <span class="xref">FEAT_GTG</span> is implemented, <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.{TGran4_2, TGran16_2, TGran64_2} indicate which granule sizes are supported for stage 2 translation.</p>
-<p>If <span class="xref">FEAT_GTG</span> is not implemented, <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.{TGran4, TGran16, TGran64} indicate which granule sizes are supported.</p>
+<p>If <span class="xref">FEAT_GTG</span> is implemented, <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.{TGran4_2, TGran16_2, TGran64_2} indicate which granule sizes are supported for stage 2 translation.</p>
+<p>If <span class="xref">FEAT_GTG</span> is not implemented, <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.{TGran4, TGran16, TGran64} indicate which granule sizes are supported.</p>
 <p>If the value is programmed to either a reserved value, or a size that has not been implemented, then the hardware will treat the field as if it has been programmed to an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of the sizes that has been implemented for all purposes other than the value read back from this register.</p>
 <p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether the value read back is the value programmed or the value that corresponds to the size chosen.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -140,7 +140,7 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-5_0">T0SZ, bits [5:0]:
-      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="AArch64-vsttbr_el2.html">VSTTBR_EL2</a>. The region size is 2<sup>(64-T0SZ)</sup> bytes.</p>
+      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="/latest_sysreg/AArch64-vsttbr_el2.html">VSTTBR_EL2</a>. The region size is 2<sup>(64-T0SZ)</sup> bytes.</p>
 <p>The maximum and minimum possible values for this field depend on the level of translation table and the memory translation granule size, as described in the AArch64 Virtual Memory System Architecture chapter.</p>
 <p>If this field is programmed to a value that is not consistent with the programming of SL0, then a stage 2 level 0 Translation fault is generated.</p>
 <div class="note"><p>For the 4KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented and this field is less than 16, the translation table walk begins with a level -1 initial lookup.</p><p>For the 16KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented and this field is less than 17, the translation table walk begins with a level 0 initial lookup.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 

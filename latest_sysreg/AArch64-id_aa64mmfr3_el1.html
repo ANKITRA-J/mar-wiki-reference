@@ -25,13 +25,13 @@
           <p>If <span class="xref">FEAT_RASv2</span> is not implemented and ID_AA64MMFR3_EL1.SDERR is <span class="binarynumber">0b0000</span>, then the behavior is not described. Otherwise, the behavior is described by ID_AA64MMFR3_EL1.SDERR.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p>Some External aborts on Device memory loads are handled asynchronously.</p>
-        </td></tr><tr><td class="bitfield">0b0010</td><td><p><span class="xref">FEAT_ADERR</span> is implemented. SCTLR2_ELx.EnADERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR are implemented.</p>
+        </td></tr><tr><td class="bitfield">0b0010</td><td><p><span class="xref">FEAT_ADERR</span> is implemented. SCTLR2_ELx.EnADERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR are implemented.</p>
 <p>If <span class="xref">FEAT_ANERR</span> is also implemented, then software should ensure that all the following apply:</p>
 <ul>
 <li>SCTLR2_ELx.EnADERR is set to the value of SCTLR2_ELx.EnANERR.
-</li><li><a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR is set to the value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR.
-</li></ul></td></tr><tr><td class="bitfield">0b0011</td><td><p><span class="xref">FEAT_ADERR</span> is implemented. SCTLR2_ELx.EnADERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR are implemented.</p>
-<p>If <span class="xref">FEAT_ANERR</span> is also implemented, then SCTLR2_ELx.EnADERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR operate independently of SCTLR2_ELx.EnANERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR.</p></td></tr></table><p>All other values are reserved.</p>
+</li><li><a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR is set to the value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR.
+</li></ul></td></tr><tr><td class="bitfield">0b0011</td><td><p><span class="xref">FEAT_ADERR</span> is implemented. SCTLR2_ELx.EnADERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR are implemented.</p>
+<p>If <span class="xref">FEAT_ANERR</span> is also implemented, then SCTLR2_ELx.EnADERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR operate independently of SCTLR2_ELx.EnANERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR.</p></td></tr></table><p>All other values are reserved.</p>
 <p>Implementation-specific exceptions to applications of this field are described in <span class="xref">'Taking error exceptions'</span>.</p>
 <p>When <span class="xref">FEAT_RASv2</span> is implemented and ID_AA64MMFR3_EL1.SDERR is <span class="binarynumber">0b0000</span>, the value of this field is <span class="binarynumber">0b0001</span>.</p>
 <p>When ID_AA64MMFR3_EL1.SDERR is <span class="binarynumber">0b0001</span>, the value of this field is <span class="binarynumber">0b0000</span>.</p>
@@ -44,13 +44,13 @@
           <p>If <span class="xref">FEAT_RASv2</span> is not implemented and ID_AA64MMFR3_EL1.ADERR is <span class="binarynumber">0b0000</span>, then the behavior is not described. Otherwise, the behavior is described by ID_AA64MMFR3_EL1.ADERR.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p>All External aborts on Device memory loads are handled synchronously.</p>
-        </td></tr><tr><td class="bitfield">0b0010</td><td><p><span class="xref">FEAT_ADERR</span> is implemented. SCTLR2_ELx.EnADERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR are implemented.</p>
+        </td></tr><tr><td class="bitfield">0b0010</td><td><p><span class="xref">FEAT_ADERR</span> is implemented. SCTLR2_ELx.EnADERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR are implemented.</p>
 <p>If <span class="xref">FEAT_ANERR</span> is also implemented, then software should ensure that all the following apply:</p>
 <ul>
 <li>SCTLR2_ELx.EnADERR is set to the value of SCTLR2_ELx.EnANERR.
-</li><li><a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR is set to the value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR.
-</li></ul></td></tr><tr><td class="bitfield">0b0011</td><td><p><span class="xref">FEAT_ADERR</span> is implemented. SCTLR2_ELx.EnADERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR are implemented.</p>
-<p>If <span class="xref">FEAT_ANERR</span> is also implemented, then SCTLR2_ELx.EnADERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR operate independently of SCTLR2_ELx.EnANERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR.</p></td></tr></table><p>All other values are reserved.</p>
+</li><li><a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR is set to the value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR.
+</li></ul></td></tr><tr><td class="bitfield">0b0011</td><td><p><span class="xref">FEAT_ADERR</span> is implemented. SCTLR2_ELx.EnADERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR are implemented.</p>
+<p>If <span class="xref">FEAT_ANERR</span> is also implemented, then SCTLR2_ELx.EnADERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR operate independently of SCTLR2_ELx.EnANERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR.</p></td></tr></table><p>All other values are reserved.</p>
 <p>Implementation-specific exceptions to applications of this field are described in <span class="xref">'Taking error exceptions'</span>.</p>
 <p>When <span class="xref">FEAT_RASv2</span> is implemented and ID_AA64MMFR3_EL1.ADERR is <span class="binarynumber">0b0000</span>, the value of this field is <span class="binarynumber">0b0001</span>.</p>
 <p>When ID_AA64MMFR3_EL1.ADERR is <span class="binarynumber">0b0001</span>, the value of this field is <span class="binarynumber">0b0000</span>.</p>
@@ -66,13 +66,13 @@
           <p>If <span class="xref">FEAT_RASv2</span> is not implemented and ID_AA64MMFR3_EL1.SNERR is <span class="binarynumber">0b0000</span>, then the behavior is not described. Otherwise, the behavior is described by ID_AA64MMFR3_EL1.SNERR.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p>Some External aborts on Normal memory loads are handled asynchronously.</p>
-        </td></tr><tr><td class="bitfield">0b0010</td><td><p><span class="xref">FEAT_ANERR</span> is implemented. SCTLR2_ELx.EnANERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR are implemented.</p>
+        </td></tr><tr><td class="bitfield">0b0010</td><td><p><span class="xref">FEAT_ANERR</span> is implemented. SCTLR2_ELx.EnANERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR are implemented.</p>
 <p>If <span class="xref">FEAT_ADERR</span> is also implemented, then software should ensure that all the following apply:</p>
 <ul>
 <li>SCTLR2_ELx.EnANERR is set to the value of SCTLR2_ELx.EnADERR.
-</li><li><a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR is set to the value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR.
-</li></ul></td></tr><tr><td class="bitfield">0b0011</td><td><p><span class="xref">FEAT_ANERR</span> is implemented. SCTLR2_ELx.EnANERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR are implemented.</p>
-<p>If <span class="xref">FEAT_ADERR</span> is also implemented, then SCTLR2_ELx.EnANERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR operate independently of SCTLR2_ELx.EnADERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR.</p></td></tr></table><p>All other values are reserved.</p>
+</li><li><a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR is set to the value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR.
+</li></ul></td></tr><tr><td class="bitfield">0b0011</td><td><p><span class="xref">FEAT_ANERR</span> is implemented. SCTLR2_ELx.EnANERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR are implemented.</p>
+<p>If <span class="xref">FEAT_ADERR</span> is also implemented, then SCTLR2_ELx.EnANERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR operate independently of SCTLR2_ELx.EnADERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR.</p></td></tr></table><p>All other values are reserved.</p>
 <p>Implementation-specific exceptions to applications of this field are described in <span class="xref">'Taking error exceptions'</span>.</p>
 <p>When <span class="xref">FEAT_RASv2</span> is implemented and ID_AA64MMFR3_EL1.SNERR is <span class="binarynumber">0b0000</span>, the value of this field is <span class="binarynumber">0b0001</span>.</p>
 <p>When ID_AA64MMFR3_EL1.SNERR is <span class="binarynumber">0b0001</span>, the value of this field is <span class="binarynumber">0b0000</span>.</p>
@@ -85,13 +85,13 @@
           <p>If <span class="xref">FEAT_RASv2</span> is not implemented and ID_AA64MMFR3_EL1.ANERR is <span class="binarynumber">0b0000</span>, then the behavior is not described. Otherwise, the behavior is described by ID_AA64MMFR3_EL1.ANERR.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p>All External aborts on Normal memory loads are handled synchronously.</p>
-        </td></tr><tr><td class="bitfield">0b0010</td><td><p><span class="xref">FEAT_ANERR</span> is implemented. SCTLR2_ELx.EnANERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR are implemented.</p>
+        </td></tr><tr><td class="bitfield">0b0010</td><td><p><span class="xref">FEAT_ANERR</span> is implemented. SCTLR2_ELx.EnANERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR are implemented.</p>
 <p>If <span class="xref">FEAT_ADERR</span> is also implemented, then software should ensure that all the following apply:</p>
 <ul>
 <li>SCTLR2_ELx.EnANERR is set to the value of SCTLR2_ELx.EnADERR.
-</li><li><a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR is set to the value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR.
-</li></ul></td></tr><tr><td class="bitfield">0b0011</td><td><p><span class="xref">FEAT_ANERR</span> is implemented. SCTLR2_ELx.EnANERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR are implemented.</p>
-<p>If <span class="xref">FEAT_ADERR</span> is also implemented, then SCTLR2_ELx.EnANERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR operate independently of SCTLR2_ELx.EnADERR and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR.</p></td></tr></table><p>All other values are reserved.</p>
+</li><li><a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR is set to the value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR.
+</li></ul></td></tr><tr><td class="bitfield">0b0011</td><td><p><span class="xref">FEAT_ANERR</span> is implemented. SCTLR2_ELx.EnANERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR are implemented.</p>
+<p>If <span class="xref">FEAT_ADERR</span> is also implemented, then SCTLR2_ELx.EnANERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR operate independently of SCTLR2_ELx.EnADERR and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR.</p></td></tr></table><p>All other values are reserved.</p>
 <p>Implementation-specific exceptions to applications of this field are described in <span class="xref">'Taking error exceptions'</span>.</p>
 <p>When <span class="xref">FEAT_RASv2</span> is implemented and ID_AA64MMFR3_EL1.ANERR is <span class="binarynumber">0b0000</span>, the value of this field is <span class="binarynumber">0b0001</span>.</p>
 <p>When ID_AA64MMFR3_EL1.ANERR is <span class="binarynumber">0b0001</span>, the value of this field is <span class="binarynumber">0b0000</span>.</p>
@@ -165,18 +165,18 @@
       </h4><div class="field">
       <p>SCTLR Extension. Indicates support for extension of <span class="xref">SCTLR_ELx</span>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>SCTLRX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>, <a href="AArch64-sctlr2_el2.html">SCTLR2_EL2</a>, <a href="AArch64-sctlr2_el3.html">SCTLR2_EL3</a> registers, and their associated trap controls are not implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>, <a href="/latest_sysreg/AArch64-sctlr2_el2.html">SCTLR2_EL2</a>, <a href="/latest_sysreg/AArch64-sctlr2_el3.html">SCTLR2_EL3</a> registers, and their associated trap controls are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a>, <a href="AArch64-sctlr2_el2.html">SCTLR2_EL2</a>, <a href="AArch64-sctlr2_el3.html">SCTLR2_EL3</a> resisters, and their associated trap controls are implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a>, <a href="/latest_sysreg/AArch64-sctlr2_el2.html">SCTLR2_EL2</a>, <a href="/latest_sysreg/AArch64-sctlr2_el3.html">SCTLR2_EL3</a> resisters, and their associated trap controls are implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>From Armv8.9, the value <span class="binarynumber">0b0000</span> is not permitted.</p>
 <p><span class="xref">FEAT_SCTLR2</span> implements the functionality described by the value <span class="binarynumber">0b0001</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">TCRX, bits [3:0]:
       </h4><div class="field">
       <p>TCR Extension. Indicates support for extension of <span class="xref">TCR_ELx</span>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>TCRX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p><a href="AArch64-tcr2_el1.html">TCR2_EL1</a>, <a href="AArch64-tcr2_el2.html">TCR2_EL2</a>, and their associated trap controls are not implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a>, <a href="/latest_sysreg/AArch64-tcr2_el2.html">TCR2_EL2</a>, and their associated trap controls are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-tcr2_el1.html">TCR2_EL1</a>, <a href="AArch64-tcr2_el2.html">TCR2_EL2</a>, and their associated trap controls are implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a>, <a href="/latest_sysreg/AArch64-tcr2_el2.html">TCR2_EL2</a>, and their associated trap controls are implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>From Armv8.9, the value <span class="binarynumber">0b0000</span> is not permitted.</p>
 <p><span class="xref">FEAT_TCR2</span> implements the functionality described by the value <span class="binarynumber">0b0001</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, ID_AA64MMFR3_EL1</p></div></div><p style="text-align: right">

@@ -36,7 +36,7 @@
 </li><li>ERR&lt;n&gt;STATUS.{CI, ER, PN, IERR, SERR} are syndrome fields.
 </li></ul>
       </div><h3>Configuration</h3><p>This register is present only when error record n is implemented. Otherwise, direct accesses to ERR&lt;n&gt;STATUS are <span class="arm-defined-word">RES0</span>.</p>
-        <p><a href="ext-errnfr.html">ERRFR[FirstRecordOfNode(n)]</a> describes the features implemented by the node that owns error record &lt;n&gt;. FirstRecordOfNode(n) is the index of the first error record owned by the same node as error record &lt;n&gt;. If the node owns a single record then FirstRecordOfNode(n) = n.</p>
+        <p><a href="/latest_sysreg/ext-errnfr.html">ERRFR[FirstRecordOfNode(n)]</a> describes the features implemented by the node that owns error record &lt;n&gt;. FirstRecordOfNode(n) is the index of the first error record owned by the same node as error record &lt;n&gt;. If the node owns a single record then FirstRecordOfNode(n) = n.</p>
 
       
         <p>For <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> fields in ERR&lt;n&gt;STATUS, writing zero returns the error record to an initial quiescent state.</p>
@@ -48,7 +48,7 @@
         <p>Fields that are read-only, nonzero, and ignore writes are compliant with this requirement.</p>
 
       
-        <div class="note"><p>Arm recommends that any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> syndrome field that can generate a Fault Handling, Error Recovery, Critical, or <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>, interrupt request is disabled at Cold reset and is enabled by software writing an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> nonzero value to an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> field in <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.</p></div>
+        <div class="note"><p>Arm recommends that any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> syndrome field that can generate a Fault Handling, Error Recovery, Critical, or <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>, interrupt request is disabled at Cold reset and is enabled by software writing an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> nonzero value to an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> field in <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.</p></div>
       <h3>Attributes</h3>
         <p>ERR&lt;n&gt;STATUS is a 64-bit register.</p>
       <h2>Field descriptions</h2><h3>When RAS System Architecture v2 is implemented, ERR&lt;n&gt;FR.ED == '00', and ERR&lt;n&gt;FR.ERT == '01':</h3><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-63_32">RES0</a></td></tr><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-31_31-1">AV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-30_30">V</a></td><td class="lr" colspan="1"><a href="#fieldset_0-29_29">RAZ</a></td><td class="lr" colspan="2"><a href="#fieldset_0-28_27">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-26_26-1">MV</a></td><td class="lr" colspan="3"><a href="#fieldset_0-25_23">RAZ</a></td><td class="lr" colspan="3"><a href="#fieldset_0-22_20">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-19_19">RAZ</a></td><td class="lr" colspan="3"><a href="#fieldset_0-18_16">RES0</a></td><td class="lr" colspan="8"><a href="#fieldset_0-15_8">IERR</a></td><td class="lr" colspan="8"><a href="#fieldset_0-7_0">RES0</a></td></tr></tbody></table><div class="text_before_fields">
@@ -60,9 +60,9 @@
       </h4><div class="field">
       <p>Address Valid.</p>
     <table class="valuetable"><tr><th>AV</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> not valid.</p>
+          <p><a href="/latest_sysreg/ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> not valid.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> contains an additional address associated with the highest priority error recorded by this record.</p>
+          <p><a href="/latest_sysreg/ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> contains an additional address associated with the highest priority error recorded by this record.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset:<ul>
             <li>When FEAT_RASSA_SRV is implemented,
             this field resets to
@@ -197,9 +197,9 @@
       </h4><div class="field">
       <p>Address Valid.</p>
     <table class="valuetable"><tr><th>AV</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> not valid.</p>
+          <p><a href="/latest_sysreg/ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> not valid.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> contains an address associated with the highest priority error recorded by this record.</p>
+          <p><a href="/latest_sysreg/ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> contains an address associated with the highest priority error recorded by this record.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset:<ul>
             <li>When FEAT_RASSA_SRV is implemented,
             this field resets to
@@ -256,8 +256,8 @@
           <p>No in-band error response (External abort) signaled to the Requester making the access or other transaction.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td><p>An in-band error response was signaled by the component to the Requester making the access or other transaction. This can be because any of the following are true:</p>
 <ul>
-<li>The <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.UE field, or applicable one of the <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE} fields, is implemented and was 1 when an error was detected and not corrected.
-</li><li>The <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE, UE} fields are not implemented and the component always reports errors.
+<li>The <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.UE field, or applicable one of the <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE} fields, is implemented and was 1 when an error was detected and not corrected.
+</li><li>The <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE, UE} fields are not implemented and the component always reports errors.
 </li></ul></td></tr></table>
       <div class="note">
         <p>An in-band error response signaled by the component might be masked and not generate any exception.</p>
@@ -277,8 +277,8 @@
           <p>No in-band error response (External abort) signaled to the Requester making the access or other transaction.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td><p>An in-band error response was signaled by the component to the Requester making the access or other transaction. This can be because any of the following are true:</p>
 <ul>
-<li>The <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.UE field, or applicable one of the <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE} fields, is implemented and was 1 when an error was detected and not corrected.
-</li><li>The <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE, UE} fields are not implemented and the component always reports errors.
+<li>The <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.UE field, or applicable one of the <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE} fields, is implemented and was 1 when an error was detected and not corrected.
+</li><li>The <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE, UE} fields are not implemented and the component always reports errors.
 </li></ul></td></tr></table>
       <div class="note">
         <p>An in-band error response signaled by the component might be masked and not generate any exception.</p>
@@ -565,9 +565,9 @@
       </h4><div class="field">
       <p>Address Valid.</p>
     <table class="valuetable"><tr><th>AV</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> not valid.</p>
+          <p><a href="/latest_sysreg/ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> not valid.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> contains an address associated with the highest priority error recorded by this record.</p>
+          <p><a href="/latest_sysreg/ext-errnaddr.html">ERR&lt;n&gt;ADDR</a> contains an address associated with the highest priority error recorded by this record.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -622,8 +622,8 @@
           <p>No in-band error response (External abort) signaled to the Requester making the access or other transaction.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td><p>An in-band error response was signaled by the component to the Requester making the access or other transaction. This can be because any of the following are true:</p>
 <ul>
-<li>The <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.UE field, or applicable one of the <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE} fields, is implemented and was 1 when an error was detected and not corrected.
-</li><li>The <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE, UE} fields are not implemented and the component always reports errors.
+<li>The <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.UE field, or applicable one of the <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE} fields, is implemented and was 1 when an error was detected and not corrected.
+</li><li>The <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE, UE} fields are not implemented and the component always reports errors.
 </li></ul></td></tr></table><p>If this field is nonzero, then Arm recommends that software write 1 to this field to clear this field to zero, when any of:</p>
 <ul>
 <li>Clearing ERR&lt;n&gt;STATUS.V to 0.
@@ -642,8 +642,8 @@
           <p>No in-band error response (External abort) signaled to the Requester making the access or other transaction.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td><p>An in-band error response was signaled by the component to the Requester making the access or other transaction. This can be because any of the following are true:</p>
 <ul>
-<li>The <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.UE field, or applicable one of the <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE} fields, is implemented and was 1 when an error was detected and not corrected.
-</li><li>The <a href="ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE, UE} fields are not implemented and the component always reports errors.
+<li>The <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.UE field, or applicable one of the <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE} fields, is implemented and was 1 when an error was detected and not corrected.
+</li><li>The <a href="/latest_sysreg/ext-errnctlr.html">ERRCTLR[FirstRecordOfNode(n)]</a>.{WUE, RUE, UE} fields are not implemented and the component always reports errors.
 </li></ul></td></tr></table><p>If this field is nonzero, then Arm recommends that software write 1 to this field to clear this field to zero, when any of:</p>
 <ul>
 <li>Clearing ERR&lt;n&gt;STATUS.V to 0.
@@ -890,7 +890,7 @@
                   access to this field
                   is <span class="access_level">RW</span>.
                 </li></ul></div><h2>Accessing ERR&lt;n&gt;STATUS</h2>
-        <p>ERR&lt;n&gt;STATUS.{AV, V, UE, ER, OF, MV, CE, DE, PN, UET, CI} are write-one-to-clear (W1C) fields, meaning writes of zero are ignored, and a write of one or all-ones to the field clears the field to zero. ERR&lt;n&gt;STATUS.{IERR, SERR} are read/write (RW) fields, although the set of implemented valid values is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>. See also <a href="ext-errnpfgf.html">ERR&lt;n&gt;PFGF</a>.SYN.</p>
+        <p>ERR&lt;n&gt;STATUS.{AV, V, UE, ER, OF, MV, CE, DE, PN, UET, CI} are write-one-to-clear (W1C) fields, meaning writes of zero are ignored, and a write of one or all-ones to the field clears the field to zero. ERR&lt;n&gt;STATUS.{IERR, SERR} are read/write (RW) fields, although the set of implemented valid values is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>. See also <a href="/latest_sysreg/ext-errnpfgf.html">ERR&lt;n&gt;PFGF</a>.SYN.</p>
 
       
         <p>After reading ERR&lt;n&gt;STATUS, software must clear the valid fields in the register to allow new errors to be recorded. However, between reading the register and clearing the valid fields, a new error might have overwritten the register. To prevent this error being lost by software, the register prevents updates to fields that might have been updated by a new error.</p>

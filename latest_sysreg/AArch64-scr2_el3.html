@@ -11,9 +11,9 @@
     </div><h4 id="fieldset_0-2_2-1">SRMASK2En, bit [2] <span class="condition">when FEAT_SRMASK2 is implemented</span>:
       </h4><div class="field"><p>Enables access to the following registers:</p>
 <ul>
-<li><a href="AArch64-hcrmask_el2.html">HCRMASK_EL2</a>.
-</li><li><a href="AArch64-hcrxmask_el2.html">HCRXMASK_EL2</a>.
-</li><li>If <span class="xref">FEAT_NV3</span> is implemented, <a href="AArch64-nvhcrx_el2.html">NVHCRX_EL2</a>, <a href="AArch64-nvhcrmask_el2.html">NVHCRMASK_EL2</a>, and <a href="AArch64-nvhcrxmask_el2.html">NVHCRXMASK_EL2</a>.
+<li><a href="/latest_sysreg/AArch64-hcrmask_el2.html">HCRMASK_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-hcrxmask_el2.html">HCRXMASK_EL2</a>.
+</li><li>If <span class="xref">FEAT_NV3</span> is implemented, <a href="/latest_sysreg/AArch64-nvhcrx_el2.html">NVHCRX_EL2</a>, <a href="/latest_sysreg/AArch64-nvhcrmask_el2.html">NVHCRMASK_EL2</a>, and <a href="/latest_sysreg/AArch64-nvhcrxmask_el2.html">NVHCRXMASK_EL2</a>.
 </li></ul><table class="valuetable"><tr><th>SRMASK2En</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL2 accesses to the specified registers are trapped to EL3.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -27,12 +27,12 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-1_1-1">NV3En, bit [1] <span class="condition">when FEAT_NV3 is implemented</span>:
       </h4><div class="field">
-      <p>Enables access to the <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a> register at EL2.</p>
+      <p>Enables access to the <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a> register at EL2.</p>
     <table class="valuetable"><tr><th>NV3En</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>EL2 accesses to the specified register is trapped to EL3. The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.NVTGE is 0.</p>
+          <p>EL2 accesses to the specified register is trapped to EL3. The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.NVTGE is 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>No accesses are trapped by this mechanism.</p>
-        </td></tr></table><p>Access to <a href="AArch64-nvhcr_el2.html">NVHCR_EL2</a> is trapped to EL3 and reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
+        </td></tr></table><p>Access to <a href="/latest_sysreg/AArch64-nvhcr_el2.html">NVHCR_EL2</a> is trapped to EL3 and reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
 <p>When EL3 is not implemented, the Effective value of this field is 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.

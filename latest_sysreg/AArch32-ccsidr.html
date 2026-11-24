@@ -5,9 +5,9 @@
         <p>Provides information about the architecture of the currently selected cache.</p>
 
       
-        <p>When <span class="xref">FEAT_CCIDX</span> is implemented, this register is used in conjunction with <a href="AArch32-ccsidr2.html">CCSIDR2</a>.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register CCSIDR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-ccsidr_el1.html">CCSIDR_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to CCSIDR are <span class="arm-defined-word">UNDEFINED</span>.</p>
-        <p>The implementation includes one CCSIDR for each cache that it can access. <a href="AArch32-csselr.html">CSSELR</a> and the Security state select which Cache Size ID Register is accessible.</p>
+        <p>When <span class="xref">FEAT_CCIDX</span> is implemented, this register is used in conjunction with <a href="/latest_sysreg/AArch32-ccsidr2.html">CCSIDR2</a>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register CCSIDR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-ccsidr_el1.html">CCSIDR_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to CCSIDR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+        <p>The implementation includes one CCSIDR for each cache that it can access. <a href="/latest_sysreg/AArch32-csselr.html">CSSELR</a> and the Security state select which Cache Size ID Register is accessible.</p>
       <h3>Attributes</h3>
         <p>CCSIDR is a 32-bit register.</p>
       <h2>Field descriptions</h2><h3>CCIDX variant when FEAT_CCIDX is implemented:</h3><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="8"><a href="#fieldset_0-31_24">RES0</a></td><td class="lr" colspan="21"><a href="#fieldset_0-23_3">Associativity</a></td><td class="lr" colspan="3"><a href="#fieldset_0-2_0">LineSize</a></td></tr></tbody></table><div class="text_before_fields">
@@ -42,7 +42,7 @@
 <p>For a line length of 16 bytes: Log<sub>2</sub>(16) = 4, LineSize entry = 0. This is the minimum line length.</p>
 <p>For a line length of 32 bytes: Log<sub>2</sub>(32) = 5, LineSize entry = 1.</p>
 <div class="note"><p>The C++ 17 specification has two defined parameters relating to the granularity of memory that does not interfere. For generic software and tools, Arm will set the hardware_destructive_interference_size parameter to 256 bytes and the hardware_constructive_interference_size parameter to 64 bytes.</p></div></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>If <a href="AArch32-csselr.html">CSSELR</a>.{Level, InD} is programmed to a cache level that is not implemented, then on a read of the CCSIDR the behavior is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>, and can be one of the following:</p>
+        <p>If <a href="/latest_sysreg/AArch32-csselr.html">CSSELR</a>.{Level, InD} is programmed to a cache level that is not implemented, then on a read of the CCSIDR the behavior is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>, and can be one of the following:</p>
 
       
         <ul>

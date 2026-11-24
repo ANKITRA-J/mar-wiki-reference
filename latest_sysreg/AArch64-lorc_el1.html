@@ -11,8 +11,8 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-9_2">DS, bits [9:2]:
-      </h4><div class="field"><p>Descriptor Select. Selects the current LORegion descriptor accessed by <a href="AArch64-lorsa_el1.html">LORSA_EL1</a>, <a href="AArch64-lorea_el1.html">LOREA_EL1</a>, and <a href="AArch64-lorn_el1.html">LORN_EL1</a>.</p>
-<p>If this field points to an LORegion descriptor that is not supported by an implementation, then the registers <a href="AArch64-lorn_el1.html">LORN_EL1</a>, <a href="AArch64-lorea_el1.html">LOREA_EL1</a>, and <a href="AArch64-lorsa_el1.html">LORSA_EL1</a> are <span class="arm-defined-word">RES0</span>.</p>
+      </h4><div class="field"><p>Descriptor Select. Selects the current LORegion descriptor accessed by <a href="/latest_sysreg/AArch64-lorsa_el1.html">LORSA_EL1</a>, <a href="/latest_sysreg/AArch64-lorea_el1.html">LOREA_EL1</a>, and <a href="/latest_sysreg/AArch64-lorn_el1.html">LORN_EL1</a>.</p>
+<p>If this field points to an LORegion descriptor that is not supported by an implementation, then the registers <a href="/latest_sysreg/AArch64-lorn_el1.html">LORN_EL1</a>, <a href="/latest_sysreg/AArch64-lorea_el1.html">LOREA_EL1</a>, and <a href="/latest_sysreg/AArch64-lorsa_el1.html">LORSA_EL1</a> are <span class="arm-defined-word">RES0</span>.</p>
       <p>The number of LORegion descriptors in <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>. The maximum number of LORegion descriptors supported is 256. If the number is less than 256, then bits[63:M+2] are <span class="arm-defined-word">RES0</span>, where M is Log<sub>2</sub>(Number of LORegion descriptors supported by the implementation).</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

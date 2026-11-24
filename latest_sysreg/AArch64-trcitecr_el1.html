@@ -26,12 +26,12 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Instrumentation trace not prohibited at EL0.</p>
         </td></tr></table>
-      <p>This field is ignored by the PE when EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1.</p>
+      <p>This field is ignored by the PE when EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name TRCITECR_EL1 or TRCITECR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name TRCITECR_EL1 or TRCITECR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, TRCITECR_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b000, CRn = 0b0001, CRm = 0b0010, op2 = 0b011)
       </p><p class="pseudocode">

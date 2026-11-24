@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>BRBINF&lt;n&gt;_EL1 | Jon's Arm Reference</title><meta name="description" content="The information for Branch record n + (BRBFCR_EL1.BANK × 32)."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">BRBINF&lt;n&gt;_EL1, n = 0 - 31</h1><p class="insn_subtitle" data-pagefind-body="1">Branch Record Buffer Information Register &lt;n&gt;</p><div data-pagefind-body="1">
-        <p>The information for Branch record n + (<a href="AArch64-brbfcr_el1.html">BRBFCR_EL1</a>.BANK × 32).</p>
+        <p>The information for Branch record n + (<a href="/latest_sysreg/AArch64-brbfcr_el1.html">BRBFCR_EL1</a>.BANK × 32).</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_BRBE is implemented. Otherwise, direct accesses to BRBINF&lt;n&gt;_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>BRBINF&lt;n&gt;_EL1 is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="17"><a href="#fieldset_0-63_47">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-46_46">CCU</a></td><td class="lr" colspan="14"><a href="#fieldset_0-45_32">CC</a></td></tr><tr class="firstrow"><td class="lr" colspan="18"><a href="#fieldset_0-31_14">RES0</a></td><td class="lr" colspan="6"><a href="#fieldset_0-13_8">TYPE</a></td><td class="lr" colspan="2"><a href="#fieldset_0-7_6">EL</a></td><td class="lr" colspan="1"><a href="#fieldset_0-5_5">MPRED</a></td><td class="lr" colspan="3"><a href="#fieldset_0-4_2">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-1_0">VALID</a></td></tr></tbody></table><h4 id="fieldset_0-63_47">Bits [63:47]:
@@ -156,8 +156,8 @@
     <table class="valuetable"><tr><th>VALID</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td><p>This Branch record is not valid.</p>
 <p>The values of following fields are not valid:</p>
 <ul>
-<li><a href="AArch64-brbtgtn_el1.html">BRBTGT&lt;n&gt;_EL1</a>.ADDRESS.
-</li><li><a href="AArch64-brbsrcn_el1.html">BRBSRC&lt;n&gt;_EL1</a>.ADDRESS.
+<li><a href="/latest_sysreg/AArch64-brbtgtn_el1.html">BRBTGT&lt;n&gt;_EL1</a>.ADDRESS.
+</li><li><a href="/latest_sysreg/AArch64-brbsrcn_el1.html">BRBSRC&lt;n&gt;_EL1</a>.ADDRESS.
 </li><li>BRBINF&lt;n&gt;_EL1.MPRED.
 </li><li>BRBINF&lt;n&gt;_EL1.EL.
 </li><li>BRBINF&lt;n&gt;_EL1.TYPE.
@@ -166,19 +166,19 @@
 </li></ul></td></tr><tr><td class="bitfield">0b01</td><td><p>This Branch record is valid.</p>
 <p>The values of following fields are not valid:</p>
 <ul>
-<li><a href="AArch64-brbsrcn_el1.html">BRBSRC&lt;n&gt;_EL1</a>.ADDRESS.
+<li><a href="/latest_sysreg/AArch64-brbsrcn_el1.html">BRBSRC&lt;n&gt;_EL1</a>.ADDRESS.
 </li><li>BRBINF&lt;n&gt;_EL1.MPRED.
 </li></ul></td></tr><tr><td class="bitfield">0b10</td><td><p>This Branch record is valid.</p>
 <p>The values of following fields are not valid:</p>
 <ul>
-<li><a href="AArch64-brbtgtn_el1.html">BRBTGT&lt;n&gt;_EL1</a>.ADDRESS.
+<li><a href="/latest_sysreg/AArch64-brbtgtn_el1.html">BRBTGT&lt;n&gt;_EL1</a>.ADDRESS.
 </li><li>BRBINF&lt;n&gt;_EL1.EL.
 </li></ul></td></tr><tr><td class="bitfield">0b11</td><td>
           <p>This Branch record is valid.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>BRBINF&lt;n&gt;_EL1 reads-as-zero if n + (<a href="AArch64-brbfcr_el1.html">BRBFCR_EL1</a>.BANK × 32) &gt;= <a href="AArch64-brbidr0_el1.html">BRBIDR0_EL1</a>.NUMREC.</p>
+        <p>BRBINF&lt;n&gt;_EL1 reads-as-zero if n + (<a href="/latest_sysreg/AArch64-brbfcr_el1.html">BRBFCR_EL1</a>.BANK × 32) &gt;= <a href="/latest_sysreg/AArch64-brbidr0_el1.html">BRBIDR0_EL1</a>.NUMREC.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, BRBINF&lt;m&gt;_EL1
           ; Where m = 0-31</p></div></div><p style="text-align: right">
       (op0 = 0b10, op1 = 0b001, CRn = 0b1000, CRm = m[3:0], op2 = m[4]:0b00)

@@ -26,9 +26,9 @@ and writes the result to the SIMD&amp;FP destination register.</p>
             <span style="font-size:smaller;"><br></br>(FEAT_FP)
             </span></h4><a id="FMSUB_S_floatdp3"></a><span class="bitdiff"> (ftype == 00)</span></div><p class="asm-code">FMSUB  <a href="#Sd" title='Is the 32-bit name of the SIMD&amp;FP destination register, encoded in the "Rd" field.'>&lt;Sd&gt;</a>, <a href="#Sn__6" title='Is the 32-bit name of the first SIMD&amp;FP source register holding the multiplicand, encoded in the "Rn" field.'>&lt;Sn&gt;</a>, <a href="#Sm__2" title='Is the 32-bit name of the second SIMD&amp;FP source register holding the multiplier, encoded in the "Rm" field.'>&lt;Sm&gt;</a>, <a href="#Sa__2" title='Is the 32-bit name of the third SIMD&amp;FP source register holding the minuend, encoded in the "Ra" field.'>&lt;Sa&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Double-precision encoding
             <span style="font-size:smaller;"><br></br>(FEAT_FP)
-            </span></h4><a id="FMSUB_D_floatdp3"></a><span class="bitdiff"> (ftype == 01)</span></div><p class="asm-code">FMSUB  <a href="#Dd" title='Is the 64-bit name of the SIMD&amp;FP destination register, encoded in the "Rd" field.'>&lt;Dd&gt;</a>, <a href="#Dn__5" title='Is the 64-bit name of the first SIMD&amp;FP source register holding the multiplicand, encoded in the "Rn" field.'>&lt;Dn&gt;</a>, <a href="#Dm__2" title='Is the 64-bit name of the second SIMD&amp;FP source register holding the multiplier, encoded in the "Rm" field.'>&lt;Dm&gt;</a>, <a href="#Da__2" title='Is the 64-bit name of the third SIMD&amp;FP source register holding the minuend, encoded in the "Ra" field.'>&lt;Da&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_FP) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if ftype == '10' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if ftype == '11' &amp;&amp; !IsFeatureImplemented(FEAT_FP16) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </span></h4><a id="FMSUB_D_floatdp3"></a><span class="bitdiff"> (ftype == 01)</span></div><p class="asm-code">FMSUB  <a href="#Dd" title='Is the 64-bit name of the SIMD&amp;FP destination register, encoded in the "Rd" field.'>&lt;Dd&gt;</a>, <a href="#Dn__5" title='Is the 64-bit name of the first SIMD&amp;FP source register holding the multiplicand, encoded in the "Rn" field.'>&lt;Dn&gt;</a>, <a href="#Dm__2" title='Is the 64-bit name of the second SIMD&amp;FP source register holding the multiplier, encoded in the "Rm" field.'>&lt;Dm&gt;</a>, <a href="#Da__2" title='Is the 64-bit name of the third SIMD&amp;FP source register holding the minuend, encoded in the "Ra" field.'>&lt;Da&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_FP) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if ftype == '10' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if ftype == '11' &amp;&amp; !IsFeatureImplemented(FEAT_FP16) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 
 let d : integer{} = UInt(Rd);
 let n : integer{} = UInt(Rn);
@@ -86,14 +86,14 @@ let esize : integer{} = 8 &lt;&lt; UInt(ftype XOR '10');</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode"><a href="shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
+      <p class="pseudocode"><a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
 
-let addend : bits(esize)   = <a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{esize}(a);
-let operand1 : bits(esize) = <a href="shared_pseudocode.html#func_FPNeg_3" title="">FPNeg</a>{esize}(<a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{esize}(n), FPCR());
+let addend : bits(esize)   = <a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{esize}(a);
+let operand1 : bits(esize) = <a href="/latest_aarch64/shared_pseudocode.html#func_FPNeg_3" title="">FPNeg</a>{esize}(<a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{esize}(n), FPCR());
 let operand2 : bits(esize) = V{}(m);
 
-var result : bits(128) = if <a href="shared_pseudocode.html#func_IsMerging_1" title="">IsMerging</a>(FPCR()) then <a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{128}(a) else Zeros{128};
+var result : bits(128) = if <a href="/latest_aarch64/shared_pseudocode.html#func_IsMerging_1" title="">IsMerging</a>(FPCR()) then <a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{128}(a) else Zeros{128};
 
-result[0+:esize] = <a href="shared_pseudocode.html#func_FPMulAdd_5" title="">FPMulAdd</a>{esize}(addend, operand1, operand2, FPCR());
-<a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{128}(d) = result;</p></div>
+result[0+:esize] = <a href="/latest_aarch64/shared_pseudocode.html#func_FPMulAdd_5" title="">FPMulAdd</a>{esize}(addend, operand1, operand2, FPCR());
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{128}(d) = result;</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

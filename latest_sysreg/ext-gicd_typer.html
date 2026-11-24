@@ -11,7 +11,7 @@
 </li><li>The number of PEs that can be used as interrupt targets.
 </li></ul>
       </div><h3>Configuration</h3>
-        <p>This register is available in all configurations of the GIC. When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, this register is Common.</p>
+        <p>This register is available in all configurations of the GIC. When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, this register is Common.</p>
       <h3>Attributes</h3>
         <p>GICD_TYPER is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="5"><a href="#fieldset_0-31_27-1">ESPI_range</a></td><td class="lr" colspan="1"><a href="#fieldset_0-26_26">RSS</a></td><td class="lr" colspan="1"><a href="#fieldset_0-25_25">No1N</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_24">A3V</a></td><td class="lr" colspan="5"><a href="#fieldset_0-23_19">IDbits</a></td><td class="lr" colspan="1"><a href="#fieldset_0-18_18-1">DVIS</a></td><td class="lr" colspan="1"><a href="#fieldset_0-17_17">LPIS</a></td><td class="lr" colspan="1"><a href="#fieldset_0-16_16">MBIS</a></td><td class="lr" colspan="5"><a href="#fieldset_0-15_11">num_LPIs</a></td><td class="lr" colspan="1"><a href="#fieldset_0-10_10">SecurityExtn</a></td><td class="lr" colspan="1"><a href="#fieldset_0-9_9">NMI</a></td><td class="lr" colspan="1"><a href="#fieldset_0-8_8">ESPI</a></td><td class="lr" colspan="3"><a href="#fieldset_0-7_5">CPUNumber</a></td><td class="lr" colspan="5"><a href="#fieldset_0-4_0">ITLinesNumber</a></td></tr></tbody></table><h4 id="fieldset_0-31_27-1">ESPI_range, bits [31:27] <span class="condition">when GICD_TYPER.ESPI == '1'</span>:
@@ -20,17 +20,17 @@
     <p>Maximum Extended SPI INTID is (32*(ESPI_range + 1) + 4095).</p>
 <p>The ESPI_range field only indicates the maximum number of SPIs that the GIC implementation might support. This value determines the number of instances of the following interrupt registers:</p>
 <ul>
-<li><a href="ext-gicd_igrouprne.html">GICD_IGROUPR&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_isenablerne.html">GICD_ISENABLER&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_icenablerne.html">GICD_ICENABLER&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_ispendrne.html">GICD_ISPENDR&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_icpendrne.html">GICD_ICPENDR&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_isactiverne.html">GICD_ISACTIVER&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_icactiverne.html">GICD_ICACTIVER&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_ipriorityrne.html">GICD_IPRIORITYR&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_icfgrne.html">GICD_ICFGR&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_irouterne.html">GICD_IROUTER&lt;n&gt;E</a>.
-</li><li><a href="ext-gicd_igrpmodrne.html">GICD_IGRPMODR&lt;n&gt;E</a>.
+<li><a href="/latest_sysreg/ext-gicd_igrouprne.html">GICD_IGROUPR&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_isenablerne.html">GICD_ISENABLER&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_icenablerne.html">GICD_ICENABLER&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_ispendrne.html">GICD_ISPENDR&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_icpendrne.html">GICD_ICPENDR&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_isactiverne.html">GICD_ISACTIVER&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_icactiverne.html">GICD_ICACTIVER&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_ipriorityrne.html">GICD_IPRIORITYR&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_icfgrne.html">GICD_ICFGR&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_irouterne.html">GICD_IROUTER&lt;n&gt;E</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_igrpmodrne.html">GICD_IGRPMODR&lt;n&gt;E</a>.
 </li></ul>
 <p>The GIC architecture does not require a GIC implementation to support a continuous range of SPI interrupt IDs. Software must check which SPI INTIDs are supported, up to the maximum value indicated by GICD_TYPER.ESPI_range.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-31_27-2"> <span class="condition">Otherwise</span>:
@@ -83,8 +83,8 @@
       </h4><div class="field">
       <p>Indicates whether the implementation supports message-based interrupts by writing to Distributor registers.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>MBIS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>The implementation does not support message-based interrupts by writing to Distributor registers.</p>
-<p>The <a href="ext-gicd_clrspi_nsr.html">GICD_CLRSPI_NSR</a>, <a href="ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a>, <a href="ext-gicd_clrspi_sr.html">GICD_CLRSPI_SR</a>, and <a href="ext-gicd_setspi_sr.html">GICD_SETSPI_SR</a> registers are reserved.</p></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The implementation supports message-based interrupts by writing to the <a href="ext-gicd_clrspi_nsr.html">GICD_CLRSPI_NSR</a>, <a href="ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a>, <a href="ext-gicd_clrspi_sr.html">GICD_CLRSPI_SR</a>, or <a href="ext-gicd_setspi_sr.html">GICD_SETSPI_SR</a> registers.</p>
+<p>The <a href="/latest_sysreg/ext-gicd_clrspi_nsr.html">GICD_CLRSPI_NSR</a>, <a href="/latest_sysreg/ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a>, <a href="/latest_sysreg/ext-gicd_clrspi_sr.html">GICD_CLRSPI_SR</a>, and <a href="/latest_sysreg/ext-gicd_setspi_sr.html">GICD_SETSPI_SR</a> registers are reserved.</p></td></tr><tr><td class="bitfield">0b1</td><td>
+          <p>The implementation supports message-based interrupts by writing to the <a href="/latest_sysreg/ext-gicd_clrspi_nsr.html">GICD_CLRSPI_NSR</a>, <a href="/latest_sysreg/ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a>, <a href="/latest_sysreg/ext-gicd_clrspi_sr.html">GICD_CLRSPI_SR</a>, or <a href="/latest_sysreg/ext-gicd_setspi_sr.html">GICD_SETSPI_SR</a> registers.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-15_11">num_LPIs, bits [15:11]:
       </h4><div class="field"><p>Number of supported LPIs.</p>
 <ul>
@@ -145,17 +145,17 @@
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4>Additional information</h4><div class="text_after_fields"><p>The ITLinesNumber field only indicates the maximum number of SPIs that the GIC implementation might support. This value determines the number of instances of the following interrupt registers:</p>
 <ul>
-<li><a href="ext-gicd_igrouprn.html">GICD_IGROUPR&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_isenablern.html">GICD_ISENABLER&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_icenablern.html">GICD_ICENABLER&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_ispendrn.html">GICD_ISPENDR&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_icpendrn.html">GICD_ICPENDR&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_isactivern.html">GICD_ISACTIVER&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_icactivern.html">GICD_ICACTIVER&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_ipriorityrn.html">GICD_IPRIORITYR&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_itargetsrn.html">GICD_ITARGETSR&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_icfgrn.html">GICD_ICFGR&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_iroutern.html">GICD_IROUTER&lt;n&gt;</a>.
-</li><li><a href="ext-gicd_igrpmodrn.html">GICD_IGRPMODR&lt;n&gt;</a>.
+<li><a href="/latest_sysreg/ext-gicd_igrouprn.html">GICD_IGROUPR&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_isenablern.html">GICD_ISENABLER&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_icenablern.html">GICD_ICENABLER&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_ispendrn.html">GICD_ISPENDR&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_icpendrn.html">GICD_ICPENDR&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_isactivern.html">GICD_ISACTIVER&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_icactivern.html">GICD_ICACTIVER&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_ipriorityrn.html">GICD_IPRIORITYR&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_itargetsrn.html">GICD_ITARGETSR&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_icfgrn.html">GICD_ICFGR&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_iroutern.html">GICD_IROUTER&lt;n&gt;</a>.
+</li><li><a href="/latest_sysreg/ext-gicd_igrpmodrn.html">GICD_IGRPMODR&lt;n&gt;</a>.
 </li></ul>
 <p>The GIC architecture does not require a GIC implementation to support a continuous range of SPI interrupt IDs. Software must check which SPI INTIDs are supported, up to the maximum value indicated by GICD_TYPER.ITLinesNumber.</p></div><h2>Accessing GICD_TYPER</h2><h4>GICD_TYPER can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Distributor</td><td>Dist_base</td><td><span class="hexnumber">0x0004</span></td><td>GICD_TYPER</td></tr></table><p>Accesses to this register are <span class="access_level">RO</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

@@ -13,16 +13,16 @@
     </div><h4 id="fieldset_0-14_14-1">DCGBVA, bit [14] <span class="condition">when FEAT_MTETC is implemented</span>:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1 and EL0 to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-gbva.html">DC GBVA</a>.
-</li><li><a href="AArch64-dc-zgbva.html">DC ZGBVA</a>.
+<li><a href="/latest_sysreg/AArch64-dc-gbva.html">DC GBVA</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-zgbva.html">DC ZGBVA</a>.
 </li></ul><table class="valuetable"><tr><th>DCGBVA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -41,8 +41,8 @@
     </div><h4 id="fieldset_0-1_1-1">nDCCIVAPS, bit [1] <span class="condition">when FEAT_PoPS is implemented</span>:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1  to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-civaps.html">DC CIVAPS</a>.
-</li><li><a href="AArch64-dc-cigdvaps.html">DC CIGDVAPS</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-civaps.html">DC CIVAPS</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-cigdvaps.html">DC CIGDVAPS</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
 </li></ul>
 <p>If the Point of Physical Storage is before any level of data cache, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether the execution of the affected instruction is trapped when the value of this control is 1.</p><table class="valuetable"><tr><th>nDCCIVAPS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>If EL2 is implemented and enabled in the current Security state, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
@@ -51,7 +51,7 @@
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -70,11 +70,11 @@
     <table class="valuetable"><tr><th>TSBCSYNC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of TSB CSYNC is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then execution of TSB CSYNC at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x0A</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then execution of TSB CSYNC at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x0A</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to

@@ -74,15 +74,15 @@
           <p>PARTID_SEL is interpreted as a request PARTID.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>PARTID_SEL is interpreted as an internal PARTID.</p>
-        </td></tr></table><p>For accesses to <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, PARTID_SEL is interpreted as a request PARTID and the value of INTERNAL must be 0.</p>
-<p>For accesses to MPAMCFG registers other than <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, PARTID_SEL is interpreted as an internal PARTID and the value of INTERNAL must be 1.</p>
-<p>If PARTID narrowing is implemented as indicated by <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_PARTID_NRW = 1, when accessing other MPAMCFG registers the value of the MPAMCFG_PART_SEL.INTERNAL bit is checked for these conditions:</p>
+        </td></tr></table><p>For accesses to <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, PARTID_SEL is interpreted as a request PARTID and the value of INTERNAL must be 0.</p>
+<p>For accesses to MPAMCFG registers other than <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, PARTID_SEL is interpreted as an internal PARTID and the value of INTERNAL must be 1.</p>
+<p>If PARTID narrowing is implemented as indicated by <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_PARTID_NRW = 1, when accessing other MPAMCFG registers the value of the MPAMCFG_PART_SEL.INTERNAL bit is checked for these conditions:</p>
 <ul>
 <li>
-<p>When the <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> register is read or written, if the value of MPAMCFG_PART_SEL.INTERNAL is not 0, an Unexpected_INTERNAL error is set in <a href="ext-mpamf_esr.html">MPAMF_ESR</a>.</p>
+<p>When the <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> register is read or written, if the value of MPAMCFG_PART_SEL.INTERNAL is not 0, an Unexpected_INTERNAL error is set in <a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a>.</p>
 
 </li><li>
-<p>When an MPAMCFG register other than <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> is read or written, if the value of MPAMCFG_PART_SEL.INTERNAL is not 1, <a href="ext-mpamf_esr.html">MPAMF_ESR</a> is set to indicate an intPARTID_Range error.</p>
+<p>When an MPAMCFG register other than <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> is read or written, if the value of MPAMCFG_PART_SEL.INTERNAL is not 1, <a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a> is set to indicate an intPARTID_Range error.</p>
 
 </li></ul>
 <p>In either error case listed here, the value returned by a read operation is <span class="arm-defined-word">UNPREDICTABLE</span>, and the control settings are not affected by a write.</p></div><h4 id="fieldset_0-16_16-2"> <span class="condition">Otherwise</span>:

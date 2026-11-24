@@ -3,14 +3,14 @@
 <title>TRCSSCSR&lt;n&gt; | Jon's Arm Reference</title><meta name="description" content="Returns the status of the corresponding Single-shot Comparator Control."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">TRCSSCSR&lt;n&gt;, n = 0 - 7</h1><p class="insn_subtitle" data-pagefind-body="1">Trace Single-shot Comparator Control Status Register &lt;n&gt;</p><div data-pagefind-body="1">
         <p>Returns the status of the corresponding Single-shot Comparator Control.</p>
-      </div><h3>Configuration</h3><p>External register TRCSSCSR&lt;n&gt; bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-trcsscsrn.html">TRCSSCSR&lt;n&gt;[31:0]</a>.</p><p>This register is present only when FEAT_ETE is implemented and FEAT_TRC_EXT is implemented. Otherwise, direct accesses to TRCSSCSR&lt;n&gt; are <span class="arm-defined-word">RES0</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>External register TRCSSCSR&lt;n&gt; bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-trcsscsrn.html">TRCSSCSR&lt;n&gt;[31:0]</a>.</p><p>This register is present only when FEAT_ETE is implemented and FEAT_TRC_EXT is implemented. Otherwise, direct accesses to TRCSSCSR&lt;n&gt; are <span class="arm-defined-word">RES0</span>.</p><h3>Attributes</h3>
         <p>TRCSSCSR&lt;n&gt; is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-31_31">STATUS</a></td><td class="lr" colspan="1"><a href="#fieldset_0-30_30">PENDING</a></td><td class="lr" colspan="26"><a href="#fieldset_0-29_4">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-3_3">PC</a></td><td class="lr" colspan="1"><a href="#fieldset_0-2_2">DV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-1_1">DA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-0_0">INST</a></td></tr></tbody></table><h4 id="fieldset_0-31_31">STATUS, bit [31]:
       </h4><div class="field">
-      <p>Single-shot Comparator Control status. Indicates if any of the comparators selected by this Single-shot Comparator control have matched. The selected comparators are defined by <a href="ext-trcssccrn.html">TRCSSCCR&lt;n&gt;</a>.ARC, <a href="ext-trcssccrn.html">TRCSSCCR&lt;n&gt;</a>.SAC, and <a href="ext-trcsspcicrn.html">TRCSSPCICR&lt;n&gt;</a>.PC.</p>
+      <p>Single-shot Comparator Control status. Indicates if any of the comparators selected by this Single-shot Comparator control have matched. The selected comparators are defined by <a href="/latest_sysreg/ext-trcssccrn.html">TRCSSCCR&lt;n&gt;</a>.ARC, <a href="/latest_sysreg/ext-trcssccrn.html">TRCSSCCR&lt;n&gt;</a>.SAC, and <a href="/latest_sysreg/ext-trcsspcicrn.html">TRCSSPCICR&lt;n&gt;</a>.PC.</p>
     <table class="valuetable"><tr><th>STATUS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No match has occurred. When the first match occurs, this field takes a value of 1. It remains at 1 until explicitly modified by a write to this register.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>One or more matches has occurred. If <a href="ext-trcssccrn.html">TRCSSCCR&lt;n&gt;</a>.RST == 0 then:</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>One or more matches has occurred. If <a href="/latest_sysreg/ext-trcssccrn.html">TRCSSCCR&lt;n&gt;</a>.RST == 0 then:</p>
 <ul>
 <li>There is only one match and no more matches are possible.
 </li><li>Software must reset this field to 0 to re-enable the Single-shot Comparator Control.
@@ -32,7 +32,7 @@
       </h4><div class="field">
       <p>PE Comparator Input support. Indicates if the Single-shot Comparator Control supports PE Comparator Inputs.</p>
     <table class="valuetable"><tr><th>PC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>This Single-shot Comparator Control does not support PE Comparator Inputs. Selecting any PE Comparator Inputs using the associated <a href="ext-trcsspcicrn.html">TRCSSPCICR&lt;n&gt;</a> results in <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> behavior of the Single-shot Comparator Control resource. The Single-shot Comparator Control might match unexpectedly or might not match.</p>
+          <p>This Single-shot Comparator Control does not support PE Comparator Inputs. Selecting any PE Comparator Inputs using the associated <a href="/latest_sysreg/ext-trcsspcicrn.html">TRCSSPCICR&lt;n&gt;</a> results in <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> behavior of the Single-shot Comparator Control resource. The Single-shot Comparator Control might match unexpectedly or might not match.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This Single-shot Comparator Control supports PE Comparator Inputs.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-2_2">DV, bit [2]:
@@ -63,7 +63,7 @@
         </td></tr></table>
       <p>When FEAT_ETE is implemented, the only permitted value is 1.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing TRCSSCSR&lt;n&gt;</h2>
-        <p>Must be programmed if <a href="ext-trcrsctlrn.html">TRCRSCTLR&lt;a&gt;</a>.GROUP == <span class="binarynumber">0b0011</span> and <a href="ext-trcrsctlrn.html">TRCRSCTLR&lt;a&gt;</a>.SINGLE_SHOT[n] == 1.</p>
+        <p>Must be programmed if <a href="/latest_sysreg/ext-trcrsctlrn.html">TRCRSCTLR&lt;a&gt;</a>.GROUP == <span class="binarynumber">0b0011</span> and <a href="/latest_sysreg/ext-trcrsctlrn.html">TRCRSCTLR&lt;a&gt;</a>.SINGLE_SHOT[n] == 1.</p>
 
       
         <p>If the trace unit is not in the Idle state it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether writes to this register are ignored.</p>

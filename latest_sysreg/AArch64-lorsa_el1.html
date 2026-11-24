@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>LORSA_EL1 | Jon's Arm Reference</title><meta name="description" content="Indicates whether the current LORegion descriptor selected by LORC_EL1.DS is enabled, and holds the physical address of the start of the LORegion."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">LORSA_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">LORegion Start Address (EL1)</p><div data-pagefind-body="1">
-        <p>Indicates whether the current LORegion descriptor selected by <a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS is enabled, and holds the physical address of the start of the LORegion.</p>
+        <p>Indicates whether the current LORegion descriptor selected by <a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS is enabled, and holds the physical address of the start of the LORegion.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_LOR is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to LORSA_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>This register is <span class="arm-defined-word">RES0</span> if any of the following apply:</p>
 
       
         <ul>
 <li>No LORegion descriptors are supported by the PE.
-</li><li><a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS points to a LORegion that is not supported by the PE.
+</li><li><a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS points to a LORegion that is not supported by the PE.
 </li></ul>
       <h3>Attributes</h3>
         <p>LORSA_EL1 is a 64-bit register.</p>
@@ -20,7 +20,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-55_16">SA, bits [55:16]:
       </h4><div class="field"><div class="partial_fieldset"><h3 id="fieldset_0-55_16_0">SA encoding when FEAT_D128 is implemented</h3><table class="regdiagram" id="fieldset_0-55_16_0"><thead><tr><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="8"><a href="#fieldset_0-55_16_0-39_0">SA</a></td></tr><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-55_16_0-39_0">SA</a></td></tr></tbody></table><h4 id="fieldset_0-55_16_0-39_0">SA, bits [39:0]:
-      </h4><div class="field"><p>Bits [55:16] of the start physical address of the LORegion described in the current LORegion descriptor selected by <a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
+      </h4><div class="field"><p>Bits [55:16] of the start physical address of the LORegion described in the current LORegion descriptor selected by <a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
 <p>Bits[15:0] of this address are <span class="hexnumber">0x0000</span>.</p>
 <p>For implementations with fewer than 56 physical address bits, the corresponding upper bits of this field are <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -28,7 +28,7 @@
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
           </div><h4 id="fieldset_0-55_16_1-35_0">SA, bits [35:0]:
-      </h4><div class="field"><p>Bits [51:16] of the start physical address of the LORegion described in the current LORegion descriptor selected by <a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
+      </h4><div class="field"><p>Bits [51:16] of the start physical address of the LORegion described in the current LORegion descriptor selected by <a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
 <p>Bits[15:0] of this address are <span class="hexnumber">0x0000</span>.</p>
 <p>For implementations with fewer than 52 physical address bits, the corresponding upper bits of this field are <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -36,7 +36,7 @@
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
           </div><h4 id="fieldset_0-55_16_2-31_0">SA, bits [31:0]:
-      </h4><div class="field"><p>Bits [47:16] of the start physical address of the LORegion described in the current LORegion descriptor selected by <a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
+      </h4><div class="field"><p>Bits [47:16] of the start physical address of the LORegion described in the current LORegion descriptor selected by <a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
 <p>Bits[15:0] of this address are <span class="hexnumber">0x0000</span>.</p>
 <p>For implementations with fewer than 48 physical address bits, the corresponding upper bits of this field are <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

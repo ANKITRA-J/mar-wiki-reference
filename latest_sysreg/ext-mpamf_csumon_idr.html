@@ -5,7 +5,7 @@
         <p>Indicates the number of cache storage usage monitor instances and other properties of the CSU monitoring.</p>
       </div><h3>Configuration</h3><p>The power domain of MPAMF_CSUMON_IDR is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.
     </p><p>This register is present only when FEAT_MPAM_MSC_MSMON is implemented and MPAMF_MSMON_IDR.MSMON_CSU == '1'. Otherwise, direct accesses to MPAMF_CSUMON_IDR are <span class="arm-defined-word">RES0</span>.</p>
-        <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, fields that mention RIS must reflect the properties of the resource instance currently selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. Fields that do not mention RIS are constant across all resource instances.</p>
+        <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, fields that mention RIS must reflect the properties of the resource instance currently selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. Fields that do not mention RIS are constant across all resource instances.</p>
 
       
         <p>If <span class="xref">FEAT_MPAMv0p1</span> or <span class="xref">FEAT_MPAMv1p0</span> is implemented, the register is banked and the following statements apply:</p>
@@ -53,70 +53,70 @@
           <p>Monitor instance assignment to physical address space is implemented for the monitor type. This value is mandatory if FEAT_RME is implemented.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-31_31">HAS_CAPTURE, bit [31]:
       </h4><div class="field">
-      <p>The implementation supports copying an <a href="ext-msmon_csu.html">MSMON_CSU</a> to the corresponding <a href="ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> on a capture event.</p>
+      <p>The implementation supports copying an <a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> to the corresponding <a href="/latest_sysreg/ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> on a capture event.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CAPTURE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> is not implemented and there is no support for capture events in the CSU monitor.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> is not implemented and there is no support for capture events in the CSU monitor.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The <a href="ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> register is implemented and the CSU monitor supports the capture event behavior.</p>
+          <p>The <a href="/latest_sysreg/ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> register is implemented and the CSU monitor supports the capture event behavior.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that CSU monitor capture is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that CSU monitor capture is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-30_30">CSU_RO, bit [30]:
       </h4><div class="field">
-      <p>The implementation of <a href="ext-msmon_csu.html">MSMON_CSU</a> is read-only.</p>
+      <p>The implementation of <a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> is read-only.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>CSU_RO</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csu.html">MSMON_CSU</a> is read/write.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> is read/write.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_csu.html">MSMON_CSU</a> is read-only.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> is read-only.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the <a href="ext-msmon_csu.html">MSMON_CSU</a> monitor register is read-only for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the <a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> monitor register is read-only for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-29_29">HAS_XCL, bit [29]:
       </h4><div class="field">
-      <p>Has filtering to exclude clean data and implements the <a href="ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a>.XCL field.</p>
+      <p>Has filtering to exclude clean data and implements the <a href="/latest_sysreg/ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a>.XCL field.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_XCL</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> does not implement the XCL field.</p>
+          <p><a href="/latest_sysreg/ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> does not implement the XCL field.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> implements the XCL field to exclude counting data in the clean state in the monitor instance.</p>
+          <p><a href="/latest_sysreg/ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> implements the XCL field to exclude counting data in the clean state in the monitor instance.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the <a href="ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a>.XCL field is implemented in the CSU monitor instances for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the <a href="/latest_sysreg/ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a>.XCL field is implemented in the CSU monitor instances for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-28_28">Bit [28]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-27_27">HAS_OFLOW_LNKG, bit [27]:
       </h4><div class="field">
-      <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG field to control how overflow on an instance affects other monitor instances in this MSC.</p>
+      <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG field to control how overflow on an instance affects other monitor instances in this MSC.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_OFLOW_LNKG</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Does not support CSU overflow linkage.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports CSU overflow linkage and the <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG field.</p>
+          <p>Supports CSU overflow linkage and the <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG field.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-26_26">HAS_OFSR, bit [26]:
       </h4><div class="field">
-      <p>The CSU monitor overflow status bitmap register, <a href="ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a>, is implemented.</p>
+      <p>The CSU monitor overflow status bitmap register, <a href="/latest_sysreg/ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a>, is implemented.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_OFSR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a> register is not implemented.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a> register is not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a> register is implemented.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a> register is implemented.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the CSU monitor overflow status bitmap register is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the CSU monitor overflow status bitmap register is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-25_25">HAS_CEVNT_OFLW, bit [25]:
       </h4><div class="field">
-      <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW field which can enable the CSU monitor instance to perform overflow behaviors on a capture event.</p>
+      <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW field which can enable the CSU monitor instance to perform overflow behaviors on a capture event.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CEVNT_OFLW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW.</p>
+          <p>Does not support <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW.</p>
+          <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-24_24">HAS_OFLOW_CAPT, bit [24]:
       </h4><div class="field">
-      <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT field which can enable the CSU monitor instance to capture the monitor on an overflow.</p>
+      <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT field which can enable the CSU monitor instance to capture the monitor on an overflow.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_OFLOW_CAPT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT.</p>
+          <p>Does not support <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT.</p>
+          <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_23">NO_MATCH_PARTID, bit [23]:
       </h4><div class="field">
       <p>Indicates support for using PARTID identifiers for monitoring.</p>
@@ -136,34 +136,34 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_0">NUM_MON, bits [15:0]:
       </h4><div class="field"><p>The number of cache storage usage monitor instances implemented.</p>
-<p>The largest <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL value is NUM_MON minus 1.</p><p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports the number of CSU monitor instances implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+<p>The largest <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL value is NUM_MON minus 1.</p><p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports the number of CSU monitor instances implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h3>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented:</h3><table class="regdiagram" id="fieldset_1"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_1-31_31">HAS_CAPTURE</a></td><td class="lr" colspan="1"><a href="#fieldset_1-30_30">CSU_RO</a></td><td class="lr" colspan="1"><a href="#fieldset_1-29_29-1">HAS_XCL</a></td><td class="lr" colspan="1"><a href="#fieldset_1-28_28">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_1-27_27-1">HAS_OFLOW_LNKG</a></td><td class="lr" colspan="1"><a href="#fieldset_1-26_26-1">HAS_OFSR</a></td><td class="lr" colspan="1"><a href="#fieldset_1-25_25-1">HAS_CEVNT_OFLW</a></td><td class="lr" colspan="1"><a href="#fieldset_1-24_24-1">HAS_OFLOW_CAPT</a></td><td class="lr" colspan="1"><a href="#fieldset_1-23_23">NO_MATCH_PARTID</a></td><td class="lr" colspan="1"><a href="#fieldset_1-22_22">NO_MATCH_PMG</a></td><td class="lr" colspan="6"><a href="#fieldset_1-21_16">RES0</a></td><td class="lr" colspan="16"><a href="#fieldset_1-15_0">NUM_MON</a></td></tr></tbody></table><h4 id="fieldset_1-31_31">HAS_CAPTURE, bit [31]:
       </h4><div class="field">
-      <p>The implementation supports copying an <a href="ext-msmon_csu.html">MSMON_CSU</a> to the corresponding <a href="ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> on a capture event.</p>
+      <p>The implementation supports copying an <a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> to the corresponding <a href="/latest_sysreg/ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> on a capture event.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CAPTURE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> is not implemented and there is no support for capture events in the CSU monitor.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> is not implemented and there is no support for capture events in the CSU monitor.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The <a href="ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> register is implemented and the CSU monitor supports the capture event behavior.</p>
+          <p>The <a href="/latest_sysreg/ext-msmon_csu_capture.html">MSMON_CSU_CAPTURE</a> register is implemented and the CSU monitor supports the capture event behavior.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that CSU monitor capture is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that CSU monitor capture is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-30_30">CSU_RO, bit [30]:
       </h4><div class="field">
-      <p>The implementation of <a href="ext-msmon_csu.html">MSMON_CSU</a> is read-only.</p>
+      <p>The implementation of <a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> is read-only.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>CSU_RO</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csu.html">MSMON_CSU</a> is read/write.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> is read/write.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_csu.html">MSMON_CSU</a> is read-only.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> is read-only.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the <a href="ext-msmon_csu.html">MSMON_CSU</a> monitor register is read-only for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the <a href="/latest_sysreg/ext-msmon_csu.html">MSMON_CSU</a> monitor register is read-only for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-29_29-1">HAS_XCL, bit [29] <span class="condition">when FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p1 is implemented</span>:
       </h4><div class="field">
-      <p>Has filtering to exclude clean data and implements the <a href="ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a>.XCL field.</p>
+      <p>Has filtering to exclude clean data and implements the <a href="/latest_sysreg/ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a>.XCL field.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_XCL</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> does not implement the XCL field.</p>
+          <p><a href="/latest_sysreg/ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> does not implement the XCL field.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> implements the XCL field to exclude counting data in the clean state in the monitor instance.</p>
+          <p><a href="/latest_sysreg/ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> implements the XCL field to exclude counting data in the clean state in the monitor instance.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the <a href="ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a>.XCL field is implemented in the CSU monitor instances for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the <a href="/latest_sysreg/ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a>.XCL field is implemented in the CSU monitor instances for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-29_29-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -172,49 +172,49 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-27_27-1">HAS_OFLOW_LNKG, bit [27] <span class="condition">when FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p1 is implemented</span>:
       </h4><div class="field">
-      <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG field to control how overflow on an instance affects other monitor instances in this MSC.</p>
+      <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG field to control how overflow on an instance affects other monitor instances in this MSC.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_OFLOW_LNKG</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Does not support CSU overflow linkage.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports CSU overflow linkage and the <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG field.</p>
+          <p>Supports CSU overflow linkage and the <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG field.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_LNKG is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-27_27-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-26_26-1">HAS_OFSR, bit [26] <span class="condition">when FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p1 is implemented</span>:
       </h4><div class="field">
-      <p>The CSU monitor overflow status bitmap register, <a href="ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a>, is implemented.</p>
+      <p>The CSU monitor overflow status bitmap register, <a href="/latest_sysreg/ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a>, is implemented.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_OFSR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a> register is not implemented.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a> register is not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a> register is implemented.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csu_ofsr.html">MSMON_CSU_OFSR</a> register is implemented.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the CSU monitor overflow status bitmap register is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that the CSU monitor overflow status bitmap register is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-26_26-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-25_25-1">HAS_CEVNT_OFLW, bit [25] <span class="condition">when FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p1 is implemented</span>:
       </h4><div class="field">
-      <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW field which can enable the CSU monitor instance to perform overflow behaviors on a capture event.</p>
+      <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW field which can enable the CSU monitor instance to perform overflow behaviors on a capture event.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CEVNT_OFLW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW.</p>
+          <p>Does not support <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW.</p>
+          <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.CEVNT_OFLW is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-25_25-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-24_24-1">HAS_OFLOW_CAPT, bit [24] <span class="condition">when FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p1 is implemented</span>:
       </h4><div class="field">
-      <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT field which can enable the CSU monitor instance to capture the monitor on an overflow.</p>
+      <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT field which can enable the CSU monitor instance to capture the monitor on an overflow.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_OFLOW_CAPT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT.</p>
+          <p>Does not support <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT.</p>
+          <p>Supports <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT is implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports that <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a>.OFLOW_CAPT is implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-24_24-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -237,7 +237,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-15_0">NUM_MON, bits [15:0]:
       </h4><div class="field"><p>The number of cache storage usage monitor instances implemented.</p>
-<p>The largest <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL value is NUM_MON minus 1.</p><p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports the number of CSU monitor instances implemented for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+<p>The largest <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL value is NUM_MON minus 1.</p><p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, this field reports the number of CSU monitor instances implemented for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing MPAMF_CSUMON_IDR</h2>
         <p>This register is within the MPAM feature page memory frames.</p>
 
@@ -310,10 +310,10 @@
       
         <ul>
 <li>
-<p>When <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, MPAMF_CSUMON_IDR shows the configuration of cache storage usage monitoring for the cache resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. Fields that mention RIS in their field descriptions have values that track the implemented properties of the resource instance. Fields that do not mention RIS are constant across all resource instances.</p>
+<p>When <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, MPAMF_CSUMON_IDR shows the configuration of cache storage usage monitoring for the cache resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. Fields that mention RIS in their field descriptions have values that track the implemented properties of the resource instance. Fields that do not mention RIS are constant across all resource instances.</p>
 
 </li><li>
-<p>Access to MPAMF_CSUMON_IDR is not affected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS.</p>
+<p>Access to MPAMF_CSUMON_IDR is not affected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS.</p>
 
 </li></ul>
       <h4>MPAMF_CSUMON_IDR can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th></tr><tr><td>MPAM</td><td><span class="hexnumber">0x0088</span></td></tr></table><p>When FEAT_MPAMv2_MSC is implemented, accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_s</td><td><span class="hexnumber">0x0088</span></td><td>MPAMF_CSUMON_IDR_s</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_ns</td><td><span class="hexnumber">0x0088</span></td><td>MPAMF_CSUMON_IDR_ns</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rt</td><td><span class="hexnumber">0x0088</span></td><td>MPAMF_CSUMON_IDR_rt</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rl</td><td><span class="hexnumber">0x0088</span></td><td>MPAMF_CSUMON_IDR_rl</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RO</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

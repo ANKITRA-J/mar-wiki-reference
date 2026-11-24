@@ -109,9 +109,9 @@
       </h4><div class="field">
       <p>Partial record lost. Following a buffer management event, indicates whether the last record written to the Profiling Buffer is complete. PMBSR_EL1.DL is also set to 1 when an asynchronous External abort is reported to the SPU.</p>
     <table class="valuetable"><tr><th>DL</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-pmbptr_el1.html">PMBPTR_EL1</a> points to the first byte after the last complete record written to the Profiling Buffer by the SPU, and no asynchronous External abort has been reported to the SPU.</p>
+          <p><a href="/latest_sysreg/AArch64-pmbptr_el1.html">PMBPTR_EL1</a> points to the first byte after the last complete record written to the Profiling Buffer by the SPU, and no asynchronous External abort has been reported to the SPU.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Part of a record was lost because of a Profiling Buffer management event, or an asynchronous External abort has been reported to the SPU. <a href="AArch64-pmbptr_el1.html">PMBPTR_EL1</a> might not be the address of the first byte after the last complete sample record written to the Profiling Buffer by the SPU.</p>
+          <p>Part of a record was lost because of a Profiling Buffer management event, or an asynchronous External abort has been reported to the SPU. <a href="/latest_sysreg/AArch64-pmbptr_el1.html">PMBPTR_EL1</a> might not be the address of the first byte after the last complete sample record written to the Profiling Buffer by the SPU.</p>
         </td></tr></table><p>When the SPU sets this bit to 1, software must not assume that there is any valid data between the end of the last complete record and PMBPTR_EL1. If software restarts profiling from the saved PMBPTR_EL1 value, then this might result in buffer contents that software cannot parse. If PMBSR_EL1.EA is also set to 1 by the SPU, then software must not assume that any valid data has been written to the Profiling Buffer.</p>
 <p>This bit is <span class="arm-defined-word">RES0</span> if there are no circumstances when the PE would ever set this bit to 1 as a result of a Profiling Buffer management event.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -274,7 +274,7 @@
       </h4><div class="field">
             <p><span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.</p>
           </div></div></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1 and FEAT_SPE_EXC is implemented, without explicit synchronization, accesses from EL3 using the accessor name PMBSR_EL1 or PMBSR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1 and FEAT_SPE_EXC is implemented, without explicit synchronization, accesses from EL3 using the accessor name PMBSR_EL1 or PMBSR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, PMBSR_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b000, CRn = 0b1001, CRm = 0b1010, op2 = 0b011)
       </p><p class="pseudocode">

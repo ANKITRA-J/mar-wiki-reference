@@ -19,9 +19,9 @@
           <p>Disables privileged read and write accesses to addresses accessible at EL0 for an enabled stage 1 translation regime that defines the EL0 permissions.</p>
         </td></tr></table><p>The value of this bit is usually preserved on taking an exception, except in the following situations:</p>
 <ul>
-<li>When the target of the exception is EL1, and the value of the <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.SPAN bit is 0, this bit is set to 1.
-</li><li>When the target of the exception is EL2, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, and the value of the <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.SPAN bit is 0, this bit is set to 1.
-</li><li>When the target of the exception is EL2, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 0}, and the value of the <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.SPAN bit is 0, the following applies:<ul>
+<li>When the target of the exception is EL1, and the value of the <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.SPAN bit is 0, this bit is set to 1.
+</li><li>When the target of the exception is EL2, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, and the value of the <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.SPAN bit is 0, this bit is set to 1.
+</li><li>When the target of the exception is EL2, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 0}, and the value of the <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.SPAN bit is 0, the following applies:<ul>
 <li>If <span class="xref">FEAT_NV3</span> is not implemented, it is <span class="arm-defined-word">IMPLEMENTATION SPECIFIC</span> whether this bit is set to 1. Arm recommends that it is set to 1 in this case.
 </li><li>If <span class="xref">FEAT_NV3</span> is implemented, this bit is set to 1.
 </li></ul>

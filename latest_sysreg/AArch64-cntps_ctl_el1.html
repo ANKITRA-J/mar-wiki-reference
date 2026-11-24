@@ -36,7 +36,7 @@
           <p>Timer disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Timer enabled.</p>
-        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="AArch64-cntps_tval_el1.html">CNTPS_TVAL_EL1</a> continues to count down.</p>
+        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="/latest_sysreg/AArch64-cntps_tval_el1.html">CNTPS_TVAL_EL1</a> continues to count down.</p>
 <div class="note"><p>Disabling the output signal might be a power-saving option.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, CNTPS_CTL_EL1</p></div></div><p style="text-align: right">

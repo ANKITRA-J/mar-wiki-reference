@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>DBGDEVID1 | Jon's Arm Reference</title><meta name="description" content="Adds to the information given by the DBGDIDR by describing other features of the debug implementation."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">DBGDEVID1</h1><p class="insn_subtitle" data-pagefind-body="1">Debug Device ID register 1</p><div data-pagefind-body="1">
-        <p>Adds to the information given by the <a href="AArch32-dbgdidr.html">DBGDIDR</a> by describing other features of the debug implementation.</p>
+        <p>Adds to the information given by the <a href="/latest_sysreg/AArch32-dbgdidr.html">DBGDIDR</a> by describing other features of the debug implementation.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to DBGDEVID1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>This register is required in all implementations.</p>
       <h3>Attributes</h3>
@@ -12,13 +12,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-3_0">PCSROffset, bits [3:0]:
       </h4><div class="field">
-      <p>This field indicates the offset applied to PC samples returned by reads of <a href="ext-edpcsr.html">EDPCSR</a>.</p>
+      <p>This field indicates the offset applied to PC samples returned by reads of <a href="/latest_sysreg/ext-edpcsr.html">EDPCSR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>PCSROffset</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p><a href="ext-edpcsr.html">EDPCSR</a> is not implemented.</p>
+          <p><a href="/latest_sysreg/ext-edpcsr.html">EDPCSR</a> is not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
-          <p><a href="ext-edpcsr.html">EDPCSR</a> implemented. Samples have no offset applied and do not sample the instruction set state in AArch32 state.</p>
+          <p><a href="/latest_sysreg/ext-edpcsr.html">EDPCSR</a> implemented. Samples have no offset applied and do not sample the instruction set state in AArch32 state.</p>
         </td></tr></table><p>When <span class="xref">FEAT_PCSRv8p2</span> is implemented, the only permitted value is <span class="binarynumber">0b0000</span>.</p>
-<div class="note"><p><span class="xref">FEAT_PCSRv8p2</span> implements the PC Sample-based Profiling Extension in the Performance Monitors register space, as indicated by the value of <a href="pmu.pmdevid.html">PMDEVID</a>.PCSample.</p></div><p>Access to this field is <span class="access_level">RO</span>.</p></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRC{&lt;c&gt;}{&lt;q&gt;} &lt;coproc&gt;, {#}&lt;opc1&gt;, &lt;Rt&gt;, &lt;CRn&gt;, &lt;CRm&gt;{, {#}&lt;opc2&gt;}</p></div></div><p style="text-align: right">
+<div class="note"><p><span class="xref">FEAT_PCSRv8p2</span> implements the PC Sample-based Profiling Extension in the Performance Monitors register space, as indicated by the value of <a href="/latest_sysreg/pmu.pmdevid.html">PMDEVID</a>.PCSample.</p></div><p>Access to this field is <span class="access_level">RO</span>.</p></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRC{&lt;c&gt;}{&lt;q&gt;} &lt;coproc&gt;, {#}&lt;opc1&gt;, &lt;Rt&gt;, &lt;CRn&gt;, &lt;CRm&gt;{, {#}&lt;opc2&gt;}</p></div></div><p style="text-align: right">
       (coproc = 0b1110, opc1 = 0b000, CRn = 0b0111, CRm = 0b0001, opc2 = 0b111)
       </p><p class="pseudocode">
 if !IsFeatureImplemented(FEAT_AA32EL1) then

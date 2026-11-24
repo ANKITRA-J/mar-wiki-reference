@@ -3,16 +3,16 @@
 <title>ICC_CR0_EL1 | Jon's Arm Reference</title><meta name="description" content="Controls behavior of the physical CPU interface for the Non-secure, Realm, and Secure Interrupt Domains."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ICC_CR0_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Controller Physical Control Register (EL1)</p><div data-pagefind-body="1">
         <p>Controls behavior of the physical CPU interface for the Non-secure, Realm, and Secure Interrupt Domains.</p>
-      </div><h3>Configuration</h3><p>This register is banked between ICC_CR0_EL1 and ICC_CR0_EL1_NS and ICC_CR0_EL1_RL and ICC_CR0_EL1_S.<br></br></p><p>AArch64 System register ICC_CR0_EL1 bits [2:1] are architecturally mapped to AArch64 System register <a href="AArch64-icc_cr0_el3.html">ICC_CR0_EL3[2:1]</a> when FEAT_EL3 is implemented.</p><p>This register is present only when FEAT_GCIE is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_CR0_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>This register is banked between ICC_CR0_EL1 and ICC_CR0_EL1_NS and ICC_CR0_EL1_RL and ICC_CR0_EL1_S.<br></br></p><p>AArch64 System register ICC_CR0_EL1 bits [2:1] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-icc_cr0_el3.html">ICC_CR0_EL3[2:1]</a> when FEAT_EL3 is implemented.</p><p>This register is present only when FEAT_GCIE is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_CR0_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>Direct accesses at EL3 use the register copy selected based on the following:</p>
 
       
         <ul>
 <li>
-<p>When the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.NS is 0, direct accesses use the Secure banked copy.</p>
+<p>When the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS is 0, direct accesses use the Secure banked copy.</p>
 
 </li><li>
-<p>When the Effective value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NS,NSE} is {1,1}, direct accesses use the Realm banked copy.</p>
+<p>When the Effective value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NS,NSE} is {1,1}, direct accesses use the Realm banked copy.</p>
 
 </li><li>
 <p>Otherwise, direct accesses use the Non-secure banked copy.</p>
@@ -42,7 +42,7 @@
       <p>Reserved, RAZ/WI.</p>
     </div><h4 id="fieldset_0-37_32">IPPT, bits [37:32]:
       </h4><div class="field"><p>Interrupt Preemptive Priority Threshold value for the Preemptive Interrupt Domain.</p>
-<div class="note"><p><a href="AArch64-icc_cr0_el1.html">ICC_CR0_EL1</a>.IPPT is a 6 bits field to ensure it can be strictly higher than the interrupt priority, which is a 5-bit unsigned value.</p></div><p>See <span class="xref">'Preemptive interrupts'</span> in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 5 (ARM IHI 111701) for more information.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<div class="note"><p><a href="/latest_sysreg/AArch64-icc_cr0_el1.html">ICC_CR0_EL1</a>.IPPT is a 6 bits field to ensure it can be strictly higher than the interrupt priority, which is a 5-bit unsigned value.</p></div><p>See <span class="xref">'Preemptive interrupts'</span> in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 5 (ARM IHI 111701) for more information.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>When ICC_CR0_EL1.PID == '0', access to this field is <span class="access_level">
           <span class="arm-defined-word">RES0</span>

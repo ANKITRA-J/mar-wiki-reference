@@ -3,7 +3,7 @@
 <title>ICH_EISR_EL2 | Jon's Arm Reference</title><meta name="description" content="Indicates which List registers have outstanding EOI maintenance interrupts."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ICH_EISR_EL2</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Controller End of Interrupt Status Register</p><div data-pagefind-body="1">
         <p>Indicates which List registers have outstanding EOI maintenance interrupts.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register ICH_EISR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-ich_eisr.html">ICH_EISR[31:0]</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented), (EL2 is implemented or EL3 is implemented), and FEAT_AA64 is implemented. Otherwise, direct accesses to ICH_EISR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register ICH_EISR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-ich_eisr.html">ICH_EISR[31:0]</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented), (EL2 is implemented or EL3 is implemented), and FEAT_AA64 is implemented. Otherwise, direct accesses to ICH_EISR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>ICH_EISR_EL2 is a 64-bit register.</p>
@@ -14,14 +14,14 @@
       </h4><div class="field">
       <p>EOI maintenance interrupt status bit for List register &lt;n&gt;:</p>
     <table class="valuetable"><tr><th>Status&lt;n&gt;</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>List register &lt;n&gt;, <a href="AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>, does not have an EOI maintenance interrupt.</p>
+          <p>List register &lt;n&gt;, <a href="/latest_sysreg/AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>, does not have an EOI maintenance interrupt.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>List register &lt;n&gt;, <a href="AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>, has an EOI maintenance interrupt that has not been handled.</p>
-        </td></tr></table><p>For any <a href="AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>, the corresponding status bit is set to 1 if all of the following are true:</p>
+          <p>List register &lt;n&gt;, <a href="/latest_sysreg/AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>, has an EOI maintenance interrupt that has not been handled.</p>
+        </td></tr></table><p>For any <a href="/latest_sysreg/AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>, the corresponding status bit is set to 1 if all of the following are true:</p>
 <ul>
-<li><a href="AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>.State is <span class="binarynumber">0b00</span>.
-</li><li><a href="AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>.HW is 0.
-</li><li><a href="AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>.EOI (bit [41]) is 1, indicating that when the interrupt corresponding to that List register is deactivated, a maintenance interrupt is asserted.
+<li><a href="/latest_sysreg/AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>.State is <span class="binarynumber">0b00</span>.
+</li><li><a href="/latest_sysreg/AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>.HW is 0.
+</li><li><a href="/latest_sysreg/AArch64-ich_lrn_el2.html">ICH_LR&lt;n&gt;_EL2</a>.EOI (bit [41]) is 1, indicating that when the interrupt corresponding to that List register is deactivated, a maintenance interrupt is asserted.
 </li></ul>
 <p>Otherwise the status bit takes the value 0.</p></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, ICH_EISR_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b1100, CRm = 0b1011, op2 = 0b011)

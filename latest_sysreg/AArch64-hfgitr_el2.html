@@ -13,7 +13,7 @@
     <table class="valuetable"><tr><th>PSBCSYNC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of PSB CSYNC is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of PSB CSYNC at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x0A</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of PSB CSYNC at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x0A</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -28,11 +28,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-62_62-1">ATS1E1A, bit [62] <span class="condition">when FEAT_ATS1A is implemented</span>:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-at-s1e1a.html">AT S1E1A</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-at-s1e1a.html">AT S1E1A</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ATS1E1A</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-at-s1e1a.html">AT S1E1A</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-at-s1e1a.html">AT S1E1A</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-at-s1e1a.html">AT S1E1A</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-at-s1e1a.html">AT S1E1A</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -50,13 +50,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-60_60-1">COSPRCTX, bit [60] <span class="condition">when FEAT_SPECRES2 is implemented</span>:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-cosp-rctx.html">COSP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="AArch32-cosprctx.html">COSPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-cosp-rctx.html">COSP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="/latest_sysreg/AArch32-cosprctx.html">COSPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>COSPRCTX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-cosp-rctx.html">COSP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="AArch32-cosprctx.html">COSPRCTX</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-cosp-rctx.html">COSP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="/latest_sysreg/AArch32-cosprctx.html">COSPRCTX</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
 <ul>
-<li>Execution of <a href="AArch64-cosp-rctx.html">COSP RCTX</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
-</li><li>Execution of <a href="AArch32-cosprctx.html">COSPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
+<li>Execution of <a href="/latest_sysreg/AArch64-cosp-rctx.html">COSP RCTX</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
+</li><li>Execution of <a href="/latest_sysreg/AArch32-cosprctx.html">COSPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
 </li></ul></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -75,7 +75,7 @@
 <li><span class="instruction">GCSPUSHX</span>.
 </li><li><span class="instruction">GCSPOPCX</span>.
 </li></ul><table class="valuetable"><tr><th>nGCSEPP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
@@ -94,10 +94,10 @@
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1  to EL2:</p>
 <ul>
 <li><span class="instruction">GCSSTR</span>.
-</li><li><span class="instruction">GCSSTTR</span> when <span class="xref">PSTATE</span>.<a href="AArch64-uao.html">UAO</a> is 1.
-</li><li><span class="instruction">GCSSTTR</span> when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{NV, NV1} is {1, 1}.
+</li><li><span class="instruction">GCSSTTR</span> when <span class="xref">PSTATE</span>.<a href="/latest_sysreg/AArch64-uao.html">UAO</a> is 1.
+</li><li><span class="instruction">GCSSTTR</span> when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{NV, NV1} is {1, 1}.
 </li></ul><table class="valuetable"><tr><th>nGCSSTR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions generates a GCS exception with EC syndrome value <span class="hexnumber">0x2D</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions generates a GCS exception with EC syndrome value <span class="hexnumber">0x2D</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
@@ -116,7 +116,7 @@
       </h4><div class="field">
       <p>Trap execution of <span class="instruction">GCSPUSHM</span> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nGCSPUSHM_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <span class="instruction">GCSPUSHM</span> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <span class="instruction">GCSPUSHM</span> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Execution of <span class="instruction">GCSPUSHM</span> is not trapped by this mechanism.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
@@ -133,11 +133,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-56_56-1">nBRBIALL, bit [56] <span class="condition">when FEAT_BRBE is implemented</span>:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-brb-iall.html">BRB IALL</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-brb-iall.html">BRB IALL</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nBRBIALL</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-brb-iall.html">BRB IALL</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-brb-iall.html">BRB IALL</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Execution of <a href="AArch64-brb-iall.html">BRB IALL</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-brb-iall.html">BRB IALL</a> is not trapped by this mechanism.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -152,11 +152,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-55_55-1">nBRBINJ, bit [55] <span class="condition">when FEAT_BRBE is implemented</span>:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-brb-inj.html">BRB INJ</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-brb-inj.html">BRB INJ</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nBRBINJ</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-brb-inj.html">BRB INJ</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-brb-inj.html">BRB INJ</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Execution of <a href="AArch64-brb-inj.html">BRB INJ</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-brb-inj.html">BRB INJ</a> is not trapped by this mechanism.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -172,15 +172,15 @@
     </div><h4 id="fieldset_0-54_54">DCCVAC, bit [54]:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1 and EL0 to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-cvac.html">DC CVAC</a>.
-</li><li><a href="AArch64-dc-cgvac.html">DC CGVAC</a>, if <span class="xref">FEAT_MTE</span> is implemented.
-</li><li><a href="AArch64-dc-cgdvac.html">DC CGDVAC</a>, if <span class="xref">FEAT_MTE</span> is implemented.
-</li><li><a href="AArch64-dc-cvaoc.html">DC CVAOC</a>, if <span class="xref">FEAT_OCCMO</span> is implemented.
-</li><li><a href="AArch64-dc-cgdvaoc.html">DC CGDVAOC</a>, if <span class="xref">FEAT_OCCMO</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-cvac.html">DC CVAC</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-cgvac.html">DC CGVAC</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-cgdvac.html">DC CGDVAC</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-cvaoc.html">DC CVAOC</a>, if <span class="xref">FEAT_OCCMO</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-cgdvaoc.html">DC CGDVAOC</a>, if <span class="xref">FEAT_OCCMO</span> is implemented.
 </li></ul><table class="valuetable"><tr><th>DCCVAC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -196,7 +196,7 @@
     <table class="valuetable"><tr><th>SVC_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of <span class="instruction">SVC</span> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <span class="instruction">SVC</span> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x15</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <span class="instruction">SVC</span> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x15</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -211,7 +211,7 @@
       <p>Trap execution of <span class="instruction">SVC</span> at EL0 using AArch64 and execution of <span class="instruction">SVC</span> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>SVC_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of <span class="instruction">SVC</span> at EL0 using AArch64 and execution of <span class="instruction">SVC</span> at EL0 using AArch32 are not trapped by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
 <ul>
 <li>Execution of <span class="instruction">SVC</span> at EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x15</span>.
 </li><li>Execution of <span class="instruction">SVC</span> at EL0 using AArch32 when EL1 is using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x11</span>.
@@ -233,9 +233,9 @@
 </li></ul><table class="valuetable"><tr><th>ERET</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x1A</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x1A</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table>
-      <p>If EL2 is implemented and enabled in the current Security state, <a href="AArch64-hcr_el2.html">HCR_EL2</a>.API == 0, and this field enables a fine-grained trap on the instruction, then execution at EL1 using AArch64 of <span class="instruction">ERETAA</span> or <span class="instruction">ERETAB</span> instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x1A</span> with its associated ISS field, as the fine-grained trap has higher priority than the trap enabled by <a href="AArch64-hcr_el2.html">HCR_EL2</a>.API == 0.</p>
+      <p>If EL2 is implemented and enabled in the current Security state, <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.API == 0, and this field enables a fine-grained trap on the instruction, then execution at EL1 using AArch64 of <span class="instruction">ERETAA</span> or <span class="instruction">ERETAB</span> instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x1A</span> with its associated ISS field, as the fine-grained trap has higher priority than the trap enabled by <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.API == 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -247,13 +247,13 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-50_50-1">CPPRCTX, bit [50] <span class="condition">when FEAT_SPECRES is implemented</span>:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-cpp-rctx.html">CPP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="AArch32-cpprctx.html">CPPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-cpp-rctx.html">CPP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="/latest_sysreg/AArch32-cpprctx.html">CPPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>CPPRCTX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-cpp-rctx.html">CPP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="AArch32-cpprctx.html">CPPRCTX</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-cpp-rctx.html">CPP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="/latest_sysreg/AArch32-cpprctx.html">CPPRCTX</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
 <ul>
-<li>Execution of <a href="AArch64-cpp-rctx.html">CPP RCTX</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
-</li><li>Execution of <a href="AArch32-cpprctx.html">CPPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
+<li>Execution of <a href="/latest_sysreg/AArch64-cpp-rctx.html">CPP RCTX</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
+</li><li>Execution of <a href="/latest_sysreg/AArch32-cpprctx.html">CPPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
 </li></ul></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -268,13 +268,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-49_49-1">DVPRCTX, bit [49] <span class="condition">when FEAT_SPECRES is implemented</span>:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-dvp-rctx.html">DVP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="AArch32-dvprctx.html">DVPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-dvp-rctx.html">DVP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="/latest_sysreg/AArch32-dvprctx.html">DVPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>DVPRCTX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-dvp-rctx.html">DVP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="AArch32-dvprctx.html">DVPRCTX</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-dvp-rctx.html">DVP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="/latest_sysreg/AArch32-dvprctx.html">DVPRCTX</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
 <ul>
-<li>Execution of <a href="AArch64-dvp-rctx.html">DVP RCTX</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
-</li><li>Execution of <a href="AArch32-dvprctx.html">DVPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
+<li>Execution of <a href="/latest_sysreg/AArch64-dvp-rctx.html">DVP RCTX</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
+</li><li>Execution of <a href="/latest_sysreg/AArch32-dvprctx.html">DVPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
 </li></ul></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -289,13 +289,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-48_48-1">CFPRCTX, bit [48] <span class="condition">when FEAT_SPECRES is implemented</span>:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-cfp-rctx.html">CFP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="AArch32-cfprctx.html">CFPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-cfp-rctx.html">CFP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="/latest_sysreg/AArch32-cfprctx.html">CFPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>CFPRCTX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-cfp-rctx.html">CFP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="AArch32-cfprctx.html">CFPRCTX</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-cfp-rctx.html">CFP RCTX</a> at EL1 and EL0 using AArch64 and execution of <a href="/latest_sysreg/AArch32-cfprctx.html">CFPRCTX</a> at EL0 using AArch32 are not trapped by this mechanism.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then unless the instruction generates a higher priority exception:</p>
 <ul>
-<li>Execution of <a href="AArch64-cfp-rctx.html">CFP RCTX</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
-</li><li>Execution of <a href="AArch32-cfprctx.html">CFPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
+<li>Execution of <a href="/latest_sysreg/AArch64-cfp-rctx.html">CFP RCTX</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
+</li><li>Execution of <a href="/latest_sysreg/AArch32-cfprctx.html">CFPRCTX</a> at EL0 using AArch32 when EL1 is using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x03</span>.
 </li></ul></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -309,13 +309,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-47_47">TLBIVAALE1, bit [47]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vaale1.html">TLBI VAALE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAALE1NXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vaale1.html">TLBIP VAALE1</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vaale1.html">TLBI VAALE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAALE1NXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vaale1.html">TLBIP VAALE1</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VAALE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIVAALE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vaale1.html">TLBI VAALE1</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vaale1.html">TLBI VAALE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vaale1.html">TLBI VAALE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vaale1.html">TLBI VAALE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -326,13 +326,13 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-46_46">TLBIVALE1, bit [46]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vale1.html">TLBI VALE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VALE1NXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vale1.html">TLBIP VALE1</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vale1.html">TLBI VALE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VALE1NXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vale1.html">TLBIP VALE1</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VALE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIVALE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vale1.html">TLBI VALE1</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vale1.html">TLBI VALE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vale1.html">TLBI VALE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vale1.html">TLBI VALE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -343,13 +343,13 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-45_45">TLBIVAAE1, bit [45]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vaae1.html">TLBI VAAE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAAE1NXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vaae1.html">TLBIP VAAE1</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vaae1.html">TLBI VAAE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAAE1NXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vaae1.html">TLBIP VAAE1</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VAAE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIVAAE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vaae1.html">TLBI VAAE1</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vaae1.html">TLBI VAAE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vaae1.html">TLBI VAAE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vaae1.html">TLBI VAAE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -360,11 +360,11 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-44_44">TLBIASIDE1, bit [44]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-aside1.html">TLBI ASIDE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI ASIDE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIASIDE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-aside1.html">TLBI ASIDE1</a> is not trapped by this mechanism.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-aside1.html">TLBI ASIDE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI ASIDE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIASIDE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-aside1.html">TLBI ASIDE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-aside1.html">TLBI ASIDE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-aside1.html">TLBI ASIDE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -375,13 +375,13 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-43_43">TLBIVAE1, bit [43]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vae1.html">TLBI VAE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAE1NXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vae1.html">TLBIP VAE1</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vae1.html">TLBI VAE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAE1NXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vae1.html">TLBIP VAE1</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VAE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIVAE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vae1.html">TLBI VAE1</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vae1.html">TLBI VAE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vae1.html">TLBI VAE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vae1.html">TLBI VAE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -392,11 +392,11 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-42_42">TLBIVMALLE1, bit [42]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vmalle1.html">TLBI VMALLE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VMALLE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIVMALLE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vmalle1.html">TLBI VMALLE1</a> is not trapped by this mechanism.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vmalle1.html">TLBI VMALLE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VMALLE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIVMALLE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vmalle1.html">TLBI VMALLE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vmalle1.html">TLBI VMALLE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vmalle1.html">TLBI VMALLE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -407,13 +407,13 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-41_41-1">TLBIRVAALE1, bit [41] <span class="condition">when FEAT_TLBIRANGE is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvaale1.html">TLBI RVAALE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAALE1NXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvaale1.html">TLBIP RVAALE1</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvaale1.html">TLBI RVAALE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAALE1NXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvaale1.html">TLBIP RVAALE1</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVAALE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIRVAALE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvaale1.html">TLBI RVAALE1</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvaale1.html">TLBI RVAALE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvaale1.html">TLBI RVAALE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvaale1.html">TLBI RVAALE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -427,13 +427,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-40_40-1">TLBIRVALE1, bit [40] <span class="condition">when FEAT_TLBIRANGE is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvale1.html">TLBI RVALE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVALE1NXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvale1.html">TLBIP RVALE1</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvale1.html">TLBI RVALE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVALE1NXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvale1.html">TLBIP RVALE1</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVALE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIRVALE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvale1.html">TLBI RVALE1</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvale1.html">TLBI RVALE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvale1.html">TLBI RVALE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvale1.html">TLBI RVALE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -447,13 +447,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-39_39-1">TLBIRVAAE1, bit [39] <span class="condition">when FEAT_TLBIRANGE is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvaae1.html">TLBI RVAAE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAAE1NXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvaae1.html">TLBIP RVAAE1</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvaae1.html">TLBI RVAAE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAAE1NXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvaae1.html">TLBIP RVAAE1</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVAAE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIRVAAE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvaae1.html">TLBI RVAAE1</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvaae1.html">TLBI RVAAE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvaae1.html">TLBI RVAAE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvaae1.html">TLBI RVAAE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -467,13 +467,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-38_38-1">TLBIRVAE1, bit [38] <span class="condition">when FEAT_TLBIRANGE is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvae1.html">TLBI RVAE1</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAE1NXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvae1.html">TLBIP RVAE1</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvae1.html">TLBI RVAE1</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAE1NXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvae1.html">TLBIP RVAE1</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVAE1NXS</span>.</p><table class="valuetable"><tr><th>TLBIRVAE1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvae1.html">TLBI RVAE1</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvae1.html">TLBI RVAE1</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvae1.html">TLBI RVAE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvae1.html">TLBI RVAE1</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -487,13 +487,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-37_37-1">TLBIRVAALE1IS, bit [37] <span class="condition">when FEAT_TLBIRANGE is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvaale1is.html">TLBI RVAALE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAALE1ISNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvaale1is.html">TLBIP RVAALE1IS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvaale1is.html">TLBI RVAALE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAALE1ISNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvaale1is.html">TLBIP RVAALE1IS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVAALE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIRVAALE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvaale1is.html">TLBI RVAALE1IS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvaale1is.html">TLBI RVAALE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvaale1is.html">TLBI RVAALE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvaale1is.html">TLBI RVAALE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -507,13 +507,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-36_36-1">TLBIRVALE1IS, bit [36] <span class="condition">when FEAT_TLBIRANGE is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvale1is.html">TLBI RVALE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVALE1ISNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvale1is.html">TLBIP RVALE1IS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvale1is.html">TLBI RVALE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVALE1ISNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvale1is.html">TLBIP RVALE1IS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVALE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIRVALE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvale1is.html">TLBI RVALE1IS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvale1is.html">TLBI RVALE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvale1is.html">TLBI RVALE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvale1is.html">TLBI RVALE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -527,13 +527,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-35_35-1">TLBIRVAAE1IS, bit [35] <span class="condition">when FEAT_TLBIRANGE is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvaae1is.html">TLBI RVAAE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAAE1ISNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvaae1is.html">TLBIP RVAAE1IS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvaae1is.html">TLBI RVAAE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAAE1ISNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvaae1is.html">TLBIP RVAAE1IS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVAAE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIRVAAE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvaae1is.html">TLBI RVAAE1IS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvaae1is.html">TLBI RVAAE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvaae1is.html">TLBI RVAAE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvaae1is.html">TLBI RVAAE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -547,13 +547,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-34_34-1">TLBIRVAE1IS, bit [34] <span class="condition">when FEAT_TLBIRANGE is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvae1is.html">TLBI RVAE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAE1ISNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvae1is.html">TLBIP RVAE1IS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvae1is.html">TLBI RVAE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAE1ISNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvae1is.html">TLBIP RVAE1IS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVAE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIRVAE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvae1is.html">TLBI RVAE1IS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvae1is.html">TLBI RVAE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvae1is.html">TLBI RVAE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvae1is.html">TLBI RVAE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -567,13 +567,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-33_33">TLBIVAALE1IS, bit [33]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vaale1is.html">TLBI VAALE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAALE1ISNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vaale1is.html">TLBIP VAALE1IS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vaale1is.html">TLBI VAALE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAALE1ISNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vaale1is.html">TLBIP VAALE1IS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VAALE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIVAALE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vaale1is.html">TLBI VAALE1IS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vaale1is.html">TLBI VAALE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vaale1is.html">TLBI VAALE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vaale1is.html">TLBI VAALE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -584,13 +584,13 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-32_32">TLBIVALE1IS, bit [32]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vale1is.html">TLBI VALE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VALE1ISNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vale1is.html">TLBIP VALE1IS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vale1is.html">TLBI VALE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VALE1ISNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vale1is.html">TLBIP VALE1IS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VALE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIVALE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vale1is.html">TLBI VALE1IS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vale1is.html">TLBI VALE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vale1is.html">TLBI VALE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vale1is.html">TLBI VALE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -601,13 +601,13 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-31_31">TLBIVAAE1IS, bit [31]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vaae1is.html">TLBI VAAE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAAE1ISNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vaae1is.html">TLBIP VAAE1IS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vaae1is.html">TLBI VAAE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAAE1ISNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vaae1is.html">TLBIP VAAE1IS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VAAE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIVAAE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vaae1is.html">TLBI VAAE1IS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vaae1is.html">TLBI VAAE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vaae1is.html">TLBI VAAE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vaae1is.html">TLBI VAAE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -618,11 +618,11 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-30_30">TLBIASIDE1IS, bit [30]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-aside1is.html">TLBI ASIDE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI ASIDE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIASIDE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-aside1is.html">TLBI ASIDE1IS</a> is not trapped by this mechanism.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-aside1is.html">TLBI ASIDE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI ASIDE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIASIDE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-aside1is.html">TLBI ASIDE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-aside1is.html">TLBI ASIDE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-aside1is.html">TLBI ASIDE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -633,13 +633,13 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-29_29">TLBIVAE1IS, bit [29]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vae1is.html">TLBI VAE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAE1ISNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vae1is.html">TLBIP VAE1IS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vae1is.html">TLBI VAE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAE1ISNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vae1is.html">TLBIP VAE1IS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VAE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIVAE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vae1is.html">TLBI VAE1IS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vae1is.html">TLBI VAE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vae1is.html">TLBI VAE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vae1is.html">TLBI VAE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -650,11 +650,11 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-28_28">TLBIVMALLE1IS, bit [28]:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vmalle1is.html">TLBI VMALLE1IS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VMALLE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIVMALLE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vmalle1is.html">TLBI VMALLE1IS</a> is not trapped by this mechanism.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vmalle1is.html">TLBI VMALLE1IS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VMALLE1ISNXS</span>.</p><table class="valuetable"><tr><th>TLBIVMALLE1IS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vmalle1is.html">TLBI VMALLE1IS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vmalle1is.html">TLBI VMALLE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vmalle1is.html">TLBI VMALLE1IS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -665,13 +665,13 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-27_27-1">TLBIRVAALE1OS, bit [27] <span class="condition">when FEAT_TLBIRANGE is implemented and FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvaale1os.html">TLBI RVAALE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAALE1OSNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvaale1os.html">TLBIP RVAALE1OS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvaale1os.html">TLBI RVAALE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAALE1OSNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvaale1os.html">TLBIP RVAALE1OS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVAALE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIRVAALE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvaale1os.html">TLBI RVAALE1OS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvaale1os.html">TLBI RVAALE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvaale1os.html">TLBI RVAALE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvaale1os.html">TLBI RVAALE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -685,13 +685,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-26_26-1">TLBIRVALE1OS, bit [26] <span class="condition">when FEAT_TLBIRANGE is implemented and FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvale1os.html">TLBI RVALE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVALE1OSNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvale1os.html">TLBIP RVALE1OS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvale1os.html">TLBI RVALE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVALE1OSNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvale1os.html">TLBIP RVALE1OS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVALE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIRVALE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvale1os.html">TLBI RVALE1OS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvale1os.html">TLBI RVALE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvale1os.html">TLBI RVALE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvale1os.html">TLBI RVALE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -705,13 +705,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-25_25-1">TLBIRVAAE1OS, bit [25] <span class="condition">when FEAT_TLBIRANGE is implemented and FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvaae1os.html">TLBI RVAAE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAAE1OSNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvaae1os.html">TLBIP RVAAE1OS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvaae1os.html">TLBI RVAAE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAAE1OSNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvaae1os.html">TLBIP RVAAE1OS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVAAE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIRVAAE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvaae1os.html">TLBI RVAAE1OS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvaae1os.html">TLBI RVAAE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvaae1os.html">TLBI RVAAE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvaae1os.html">TLBI RVAAE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -725,13 +725,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-24_24-1">TLBIRVAE1OS, bit [24] <span class="condition">when FEAT_TLBIRANGE is implemented and FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-rvae1os.html">TLBI RVAE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAE1OSNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-rvae1os.html">TLBIP RVAE1OS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-rvae1os.html">TLBI RVAE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI RVAE1OSNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-rvae1os.html">TLBIP RVAE1OS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP RVAE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIRVAE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-rvae1os.html">TLBI RVAE1OS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-rvae1os.html">TLBI RVAE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-rvae1os.html">TLBI RVAE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-rvae1os.html">TLBI RVAE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -745,13 +745,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-23_23-1">TLBIVAALE1OS, bit [23] <span class="condition">when FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vaale1os.html">TLBI VAALE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAALE1OSNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vaale1os.html">TLBIP VAALE1OS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vaale1os.html">TLBI VAALE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAALE1OSNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vaale1os.html">TLBIP VAALE1OS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VAALE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIVAALE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vaale1os.html">TLBI VAALE1OS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vaale1os.html">TLBI VAALE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vaale1os.html">TLBI VAALE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vaale1os.html">TLBI VAALE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -765,13 +765,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-22_22-1">TLBIVALE1OS, bit [22] <span class="condition">when FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vale1os.html">TLBI VALE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VALE1OSNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vale1os.html">TLBIP VALE1OS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vale1os.html">TLBI VALE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VALE1OSNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vale1os.html">TLBIP VALE1OS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VALE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIVALE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vale1os.html">TLBI VALE1OS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vale1os.html">TLBI VALE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vale1os.html">TLBI VALE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vale1os.html">TLBI VALE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -785,13 +785,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-21_21-1">TLBIVAAE1OS, bit [21] <span class="condition">when FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vaae1os.html">TLBI VAAE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAAE1OSNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vaae1os.html">TLBIP VAAE1OS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vaae1os.html">TLBI VAAE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAAE1OSNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vaae1os.html">TLBIP VAAE1OS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VAAE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIVAAE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vaae1os.html">TLBI VAAE1OS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vaae1os.html">TLBI VAAE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vaae1os.html">TLBI VAAE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vaae1os.html">TLBI VAAE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -805,11 +805,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-20_20-1">TLBIASIDE1OS, bit [20] <span class="condition">when FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-aside1os.html">TLBI ASIDE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI ASIDE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIASIDE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-aside1os.html">TLBI ASIDE1OS</a> is not trapped by this mechanism.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-aside1os.html">TLBI ASIDE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI ASIDE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIASIDE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-aside1os.html">TLBI ASIDE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-aside1os.html">TLBI ASIDE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-aside1os.html">TLBI ASIDE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -823,13 +823,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-19_19-1">TLBIVAE1OS, bit [19] <span class="condition">when FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vae1os.html">TLBI VAE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAE1OSNXS</span>.</p>
-<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="AArch64-tlbip-vae1os.html">TLBIP VAE1OS</a>.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vae1os.html">TLBI VAE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VAE1OSNXS</span>.</p>
+<p>If <span class="xref">FEAT_D128</span> is implemented, then this field also traps execution of <a href="/latest_sysreg/AArch64-tlbip-vae1os.html">TLBIP VAE1OS</a>.</p>
 <p>If <span class="xref">FEAT_XS</span> and <span class="xref">FEAT_D128</span> are implemented, then this field also traps execution of <span class="xref">TLBIP VAE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIVAE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vae1os.html">TLBI VAE1OS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vae1os.html">TLBI VAE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vae1os.html">TLBI VAE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vae1os.html">TLBI VAE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -843,11 +843,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-18_18-1">TLBIVMALLE1OS, bit [18] <span class="condition">when FEAT_TLBIOS is implemented</span>:
-      </h4><div class="field"><p>Trap execution of <a href="AArch64-tlbi-vmalle1os.html">TLBI VMALLE1OS</a> at EL1  using AArch64 to EL2.</p>
-<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VMALLE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIVMALLE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-tlbi-vmalle1os.html">TLBI VMALLE1OS</a> is not trapped by this mechanism.</p>
+      </h4><div class="field"><p>Trap execution of <a href="/latest_sysreg/AArch64-tlbi-vmalle1os.html">TLBI VMALLE1OS</a> at EL1  using AArch64 to EL2.</p>
+<p>If <span class="xref">FEAT_XS</span> is implemented and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.FGTnXS == 0, this field also traps execution of <span class="xref">TLBI VMALLE1OSNXS</span>.</p><table class="valuetable"><tr><th>TLBIVMALLE1OS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>Execution of <a href="/latest_sysreg/AArch64-tlbi-vmalle1os.html">TLBI VMALLE1OS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-tlbi-vmalle1os.html">TLBI VMALLE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-tlbi-vmalle1os.html">TLBI VMALLE1OS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -862,11 +862,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-17_17-1">ATS1E1WP, bit [17] <span class="condition">when FEAT_PAN2 is implemented</span>:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-at-s1e1wp.html">AT S1E1WP</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-at-s1e1wp.html">AT S1E1WP</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ATS1E1WP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-at-s1e1wp.html">AT S1E1WP</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-at-s1e1wp.html">AT S1E1WP</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-at-s1e1wp.html">AT S1E1WP</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-at-s1e1wp.html">AT S1E1WP</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -881,11 +881,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-16_16-1">ATS1E1RP, bit [16] <span class="condition">when FEAT_PAN2 is implemented</span>:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-at-s1e1rp.html">AT S1E1RP</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-at-s1e1rp.html">AT S1E1RP</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ATS1E1RP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-at-s1e1rp.html">AT S1E1RP</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-at-s1e1rp.html">AT S1E1RP</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-at-s1e1rp.html">AT S1E1RP</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-at-s1e1rp.html">AT S1E1RP</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -900,11 +900,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_15">ATS1E0W, bit [15]:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-at-s1e0w.html">AT S1E0W</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-at-s1e0w.html">AT S1E0W</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ATS1E0W</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-at-s1e0w.html">AT S1E0W</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-at-s1e0w.html">AT S1E0W</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-at-s1e0w.html">AT S1E0W</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-at-s1e0w.html">AT S1E0W</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -916,11 +916,11 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-14_14">ATS1E0R, bit [14]:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-at-s1e0r.html">AT S1E0R</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-at-s1e0r.html">AT S1E0R</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ATS1E0R</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-at-s1e0r.html">AT S1E0R</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-at-s1e0r.html">AT S1E0R</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-at-s1e0r.html">AT S1E0R</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-at-s1e0r.html">AT S1E0R</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -932,11 +932,11 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-13_13">ATS1E1W, bit [13]:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-at-s1e1w.html">AT S1E1W</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-at-s1e1w.html">AT S1E1W</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ATS1E1W</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-at-s1e1w.html">AT S1E1W</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-at-s1e1w.html">AT S1E1W</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-at-s1e1w.html">AT S1E1W</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-at-s1e1w.html">AT S1E1W</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -948,11 +948,11 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-12_12">ATS1E1R, bit [12]:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-at-s1e1r.html">AT S1E1R</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-at-s1e1r.html">AT S1E1R</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ATS1E1R</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-at-s1e1r.html">AT S1E1R</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-at-s1e1r.html">AT S1E1R</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="AArch64-at-s1e1r.html">AT S1E1R</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution of <a href="/latest_sysreg/AArch64-at-s1e1r.html">AT S1E1R</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -965,14 +965,14 @@
           </ul></li></ul></div><h4 id="fieldset_0-11_11">DCZVA, bit [11]:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1 and EL0 to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-zva.html">DC ZVA</a>.
-</li><li><a href="AArch64-dc-gva.html">DC GVA</a>, if <span class="xref">FEAT_MTE</span> is implemented.
-</li><li><a href="AArch64-dc-gzva.html">DC GZVA</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-zva.html">DC ZVA</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-gva.html">DC GVA</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-gzva.html">DC GZVA</a>, if <span class="xref">FEAT_MTE</span> is implemented.
 </li></ul>
-<div class="note"><p>Unlike <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TDZ, this field has no effect on <a href="AArch64-dczid_el0.html">DCZID_EL0</a>.DZP.</p></div><table class="valuetable"><tr><th>DCZVA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<div class="note"><p>Unlike <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TDZ, this field has no effect on <a href="/latest_sysreg/AArch64-dczid_el0.html">DCZID_EL0</a>.DZP.</p></div><table class="valuetable"><tr><th>DCZVA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -985,15 +985,15 @@
           </ul></li></ul></div><h4 id="fieldset_0-10_10">DCCIVAC, bit [10]:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1 and EL0 to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-civac.html">DC CIVAC</a>.
-</li><li><a href="AArch64-dc-cigvac.html">DC CIGVAC</a>, if <span class="xref">FEAT_MTE</span> is implemented.
-</li><li><a href="AArch64-dc-cigdvac.html">DC CIGDVAC</a>, if <span class="xref">FEAT_MTE</span> is implemented.
-</li><li><a href="AArch64-dc-civaoc.html">DC CIVAOC</a>, if <span class="xref">FEAT_OCCMO</span> is implemented.
-</li><li><a href="AArch64-dc-cigdvaoc.html">DC CIGDVAOC</a>, if <span class="xref">FEAT_OCCMO</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-civac.html">DC CIVAC</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-cigvac.html">DC CIGVAC</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-cigdvac.html">DC CIGDVAC</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-civaoc.html">DC CIVAOC</a>, if <span class="xref">FEAT_OCCMO</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-cigdvaoc.html">DC CIGDVAOC</a>, if <span class="xref">FEAT_OCCMO</span> is implemented.
 </li></ul><table class="valuetable"><tr><th>DCCIVAC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1006,13 +1006,13 @@
           </ul></li></ul></div><h4 id="fieldset_0-9_9-1">DCCVADP, bit [9] <span class="condition">when FEAT_DPB2 is implemented</span>:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1 and EL0 to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-cvadp.html">DC CVADP</a>.
-</li><li><a href="AArch64-dc-cgvadp.html">DC CGVADP</a>, if <span class="xref">FEAT_MTE</span> is implemented.
-</li><li><a href="AArch64-dc-cgdvadp.html">DC CGDVADP</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-cvadp.html">DC CVADP</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-cgvadp.html">DC CGVADP</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-cgdvadp.html">DC CGDVADP</a>, if <span class="xref">FEAT_MTE</span> is implemented.
 </li></ul><table class="valuetable"><tr><th>DCCVADP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1028,13 +1028,13 @@
     </div><h4 id="fieldset_0-8_8">DCCVAP, bit [8]:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1 and EL0 to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-cvap.html">DC CVAP</a>.
-</li><li><a href="AArch64-dc-cgvap.html">DC CGVAP</a>, if <span class="xref">FEAT_MTE</span> is implemented.
-</li><li><a href="AArch64-dc-cgdvap.html">DC CGDVAP</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-cvap.html">DC CVAP</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-cgvap.html">DC CGVAP</a>, if <span class="xref">FEAT_MTE</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-cgdvap.html">DC CGDVAP</a>, if <span class="xref">FEAT_MTE</span> is implemented.
 </li></ul><table class="valuetable"><tr><th>DCCVAP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1 and EL0 using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1046,11 +1046,11 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-7_7">DCCVAU, bit [7]:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-dc-cvau.html">DC CVAU</a> at EL1 and EL0 using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-dc-cvau.html">DC CVAU</a> at EL1 and EL0 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>DCCVAU</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-dc-cvau.html">DC CVAU</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-dc-cvau.html">DC CVAU</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution of <a href="AArch64-dc-cvau.html">DC CVAU</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution of <a href="/latest_sysreg/AArch64-dc-cvau.html">DC CVAU</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1063,13 +1063,13 @@
           </ul></li></ul></div><h4 id="fieldset_0-6_6">DCCISW, bit [6]:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1  to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-cisw.html">DC CISW</a>.
-</li><li><a href="AArch64-dc-cigsw.html">DC CIGSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
-</li><li><a href="AArch64-dc-cigdsw.html">DC CIGDSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-cisw.html">DC CISW</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-cigsw.html">DC CIGSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-cigdsw.html">DC CIGDSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
 </li></ul><table class="valuetable"><tr><th>DCCISW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1082,13 +1082,13 @@
           </ul></li></ul></div><h4 id="fieldset_0-5_5">DCCSW, bit [5]:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1  to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-csw.html">DC CSW</a>.
-</li><li><a href="AArch64-dc-cgsw.html">DC CGSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
-</li><li><a href="AArch64-dc-cgdsw.html">DC CGDSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-csw.html">DC CSW</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-cgsw.html">DC CGSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-cgdsw.html">DC CGDSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
 </li></ul><table class="valuetable"><tr><th>DCCSW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1101,13 +1101,13 @@
           </ul></li></ul></div><h4 id="fieldset_0-4_4">DCISW, bit [4]:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1  to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-isw.html">DC ISW</a>.
-</li><li><a href="AArch64-dc-igsw.html">DC IGSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
-</li><li><a href="AArch64-dc-igdsw.html">DC IGDSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-isw.html">DC ISW</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-igsw.html">DC IGSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-igdsw.html">DC IGDSW</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
 </li></ul><table class="valuetable"><tr><th>DCISW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1120,13 +1120,13 @@
           </ul></li></ul></div><h4 id="fieldset_0-3_3">DCIVAC, bit [3]:
       </h4><div class="field"><p>Trap execution of any of the following AArch64 instructions at EL1  to EL2:</p>
 <ul>
-<li><a href="AArch64-dc-ivac.html">DC IVAC</a>.
-</li><li><a href="AArch64-dc-igvac.html">DC IGVAC</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
-</li><li><a href="AArch64-dc-igdvac.html">DC IGDVAC</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-dc-ivac.html">DC IVAC</a>.
+</li><li><a href="/latest_sysreg/AArch64-dc-igvac.html">DC IGVAC</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
+</li><li><a href="/latest_sysreg/AArch64-dc-igdvac.html">DC IGDVAC</a>, if <span class="xref">FEAT_MTE2</span> is implemented.
 </li></ul><table class="valuetable"><tr><th>DCIVAC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Execution of the specified instructions is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution at EL1  using AArch64 of any of the specified instructions is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1138,11 +1138,11 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-2_2">ICIVAU, bit [2]:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-ic-ivau.html">IC IVAU</a> at EL1 and EL0 using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-ic-ivau.html">IC IVAU</a> at EL1 and EL0 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ICIVAU</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-ic-ivau.html">IC IVAU</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-ic-ivau.html">IC IVAU</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution of <a href="AArch64-ic-ivau.html">IC IVAU</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution of <a href="/latest_sysreg/AArch64-ic-ivau.html">IC IVAU</a> at EL1 and EL0 using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1154,11 +1154,11 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-1_1">ICIALLU, bit [1]:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-ic-iallu.html">IC IALLU</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-ic-iallu.html">IC IALLU</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ICIALLU</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-ic-iallu.html">IC IALLU</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-ic-iallu.html">IC IALLU</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution of <a href="AArch64-ic-iallu.html">IC IALLU</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution of <a href="/latest_sysreg/AArch64-ic-iallu.html">IC IALLU</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -1170,11 +1170,11 @@
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><h4 id="fieldset_0-0_0">ICIALLUIS, bit [0]:
       </h4><div class="field">
-      <p>Trap execution of <a href="AArch64-ic-ialluis.html">IC IALLUIS</a> at EL1  using AArch64 to EL2.</p>
+      <p>Trap execution of <a href="/latest_sysreg/AArch64-ic-ialluis.html">IC IALLUIS</a> at EL1  using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>ICIALLUIS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Execution of <a href="AArch64-ic-ialluis.html">IC IALLUIS</a> is not trapped by this mechanism.</p>
+          <p>Execution of <a href="/latest_sysreg/AArch64-ic-ialluis.html">IC IALLUIS</a> is not trapped by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution of <a href="AArch64-ic-ialluis.html">IC IALLUIS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and either EL3 is not implemented or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn == 1, then if the execution can be trapped, execution of <a href="/latest_sysreg/AArch64-ic-ialluis.html">IC IALLUIS</a> at EL1  using AArch64 is trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to

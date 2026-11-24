@@ -5,7 +5,7 @@
         <p>Selects the PMG to configure by subsequent writes to control registers.</p>
       </div><h3>Configuration</h3><p>The power domain of MSMON_PMG_SEL is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.
     </p><p>This register is present only when FEAT_MPAMv2_MSC is implemented and FEAT_MPAM_MSC_DOMAINS is implemented. Otherwise, direct accesses to MSMON_PMG_SEL are <span class="arm-defined-word">RES0</span>.</p>
-        <p>If the MSC is implemented as shared by multiple physical address spaces, <a href="ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a> is banked for each physical address space that shares the MSC.</p>
+        <p>If the MSC is implemented as shared by multiple physical address spaces, <a href="/latest_sysreg/ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a> is banked for each physical address space that shares the MSC.</p>
 
       
         <p>The power and reset domain of each MSC component is specific to that component.</p>
@@ -16,11 +16,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-17_17-1">INGRESS_TL, bit [17] <span class="condition">when (MPAMF_IDR.HAS_IN_TL == '1' and MPAMF_PMG_IN_TL_IDR.DIRECT == '1') or (MPAMF_IDR.HAS_OUT_TL == '1' and MPAMF_PMG_OUT_TL_IDR.DIRECT == '1')</span>:
       </h4><div class="field">
-      <p>Controls if the value in <a href="ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a>.PMG is used for either ingress translation configuration, or PMG-sensitive behavior and egress translation configuration.</p>
+      <p>Controls if the value in <a href="/latest_sysreg/ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a>.PMG is used for either ingress translation configuration, or PMG-sensitive behavior and egress translation configuration.</p>
     <table class="valuetable"><tr><th>INGRESS_TL</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a>.PMG is used on configuration of PMG-sensitive behavior. If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_OUT_TL is 1 and <a href="ext-mpamf_pmg_out_tl_idr.html">MPAMF_PMG_OUT_TL_IDR</a>.DIRECT is 1, <a href="ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a>.PMG is also used on configuration of a direct egress translation as the source PMG to be translated.</p>
+          <p><a href="/latest_sysreg/ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a>.PMG is used on configuration of PMG-sensitive behavior. If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_OUT_TL is 1 and <a href="/latest_sysreg/ext-mpamf_pmg_out_tl_idr.html">MPAMF_PMG_OUT_TL_IDR</a>.DIRECT is 1, <a href="/latest_sysreg/ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a>.PMG is also used on configuration of a direct egress translation as the source PMG to be translated.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a>.PMG is used on configuration of a direct ingress translation as the source PMG to be translated.</p>
+          <p><a href="/latest_sysreg/ext-msmon_pmg_sel.html">MSMON_PMG_SEL</a>.PMG is used on configuration of a direct ingress translation as the source PMG to be translated.</p>
         </td></tr></table><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RAZ/WI</span> if any of the following are true:<ul><li>MPAMF_IDR.HAS_IN_TL == '0'.</li><li>MPAMF_PMG_IN_TL_IDR.DIRECT == '0'.</li></ul></li><li>
                   Otherwise,
                   

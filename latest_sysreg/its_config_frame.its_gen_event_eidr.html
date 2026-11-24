@@ -5,10 +5,10 @@
         <p>ITS Generate Incoming Event EventID Register.</p>
 
       
-        <p>This register is used to specify the EventID in a request to the ITS to generate an incoming event. The DeviceID of the event is specified in the <a href="its_config_frame.its_gen_event_didr.html">ITS_GEN_EVENT_DIDR</a> register.</p>
+        <p>This register is used to specify the EventID in a request to the ITS to generate an incoming event. The DeviceID of the event is specified in the <a href="/latest_sysreg/its_config_frame.its_gen_event_didr.html">ITS_GEN_EVENT_DIDR</a> register.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv5_EXT is implemented. Otherwise, direct accesses to ITS_GEN_EVENT_EIDR are <span class="arm-defined-word">RES0</span>.</p><h3>Attributes</h3>
         <p>ITS_GEN_EVENT_EIDR is a 32-bit register.</p>
-      <p>This  register is part of the <a href="its_config_frame.html">ITS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-31_0">EVENT_ID</a></td></tr></tbody></table><h4 id="fieldset_0-31_0">EVENT_ID, bits [31:0]:
+      <p>This  register is part of the <a href="/latest_sysreg/its_config_frame.html">ITS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-31_0">EVENT_ID</a></td></tr></tbody></table><h4 id="fieldset_0-31_0">EVENT_ID, bits [31:0]:
       </h4><div class="field"><p>EventID in the ITS Domain containing the register.</p>
 <p>Unimplemented upper bits are <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a reset reset, 
       this field resets

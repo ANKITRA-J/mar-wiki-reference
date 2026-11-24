@@ -13,8 +13,8 @@
 <ul>
 <li>GCSSTR.
 </li><li>GCSSTTR if any of the following are true.<ul>
-<li><span class="xref">PSTATE</span>.<a href="AArch64-uao.html">UAO</a> is 1.
-</li><li>If EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{NV,NV1} is {1,1}.
+<li><span class="xref">PSTATE</span>.<a href="/latest_sysreg/AArch64-uao.html">UAO</a> is 1.
+</li><li>If EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{NV,NV1} is {1,1}.
 </li></ul>
 
 </li></ul><table class="valuetable"><tr><th>STREn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
@@ -39,7 +39,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-6_6">EXLOCKEN, bit [6]:
       </h4><div class="field"><p>Exception state lock.</p>
-<p>Prevents <span class="instruction">MSR</span> instructions from writing to <a href="AArch64-elr_el1.html">ELR_EL1</a> or <a href="AArch64-spsr_el1.html">SPSR_EL1</a>.</p><table class="valuetable"><tr><th>EXLOCKEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p>Prevents <span class="instruction">MSR</span> instructions from writing to <a href="/latest_sysreg/AArch64-elr_el1.html">ELR_EL1</a> or <a href="/latest_sysreg/AArch64-spsr_el1.html">SPSR_EL1</a>.</p><table class="valuetable"><tr><th>EXLOCKEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL1 exception state locking disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>EL1 exception state locking enabled.</p>
@@ -69,7 +69,7 @@
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name GCSCR_EL1 or GCSCR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name GCSCR_EL1 or GCSCR_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, GCSCR_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b000, CRn = 0b0010, CRm = 0b0101, op2 = 0b000)
       </p><p class="pseudocode">

@@ -47,20 +47,20 @@ let tagchecked : boolean = n != 31;</p></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
       <p class="pseudocode">var address : bits(64);
 
-let privileged : boolean = <a href="shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>();
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescGPR_5" title="">CreateAccDescGPR</a>(<a href="shared_pseudocode.html#enum_MemOp_STORE" title="">MemOp_STORE</a>, nontemporal, privileged,
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>();
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescGPR_5" title="">CreateAccDescGPR</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_STORE" title="">MemOp_STORE</a>, nontemporal, privileged,
                                                   tagchecked, t);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
-address = <a href="shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
+address = <a href="/latest_aarch64/shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
 
-<a href="shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{datasize}(address, accdesc) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(t);</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{datasize}(address, accdesc) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(t);</p></div>
   <h2>Operational information</h2>
     
       

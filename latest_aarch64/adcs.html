@@ -40,15 +40,15 @@ let datasize : integer{} = 32 &lt;&lt; UInt(sf);</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode">let operand1 : bits(datasize) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(n);
-let operand2 : bits(datasize) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(m);
+      <p class="pseudocode">let operand1 : bits(datasize) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(n);
+let operand2 : bits(datasize) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(m);
 
 var result : bits(datasize);
 var nzcv : bits(4);
 
-(result, nzcv) = <a href="shared_pseudocode.html#func_AddWithCarry_4" title="">AddWithCarry</a>{datasize}(operand1, operand2, <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.C);
+(result, nzcv) = <a href="/latest_aarch64/shared_pseudocode.html#func_AddWithCarry_4" title="">AddWithCarry</a>{datasize}(operand1, operand2, <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.C);
 
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(d) = result;
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(d) = result;
 PSTATE.[N,Z,C,V] = nzcv;</p></div>
   <h2>Operational information</h2>
     

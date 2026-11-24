@@ -3,20 +3,20 @@
 <title>TTBR1 | Jon's Arm Reference</title><meta name="description" content="Holds the base address of the translation table for the initial lookup for stage 1 of the translation of an address from the higher VA range in the PL1&amp;0 translation regime, and other information for this translation regime."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">TTBR1</h1><p class="insn_subtitle" data-pagefind-body="1">Translation Table Base Register 1</p><div data-pagefind-body="1">
         <p>Holds the base address of the translation table for the initial lookup for stage 1 of the translation of an address from the higher VA range in the PL1&amp;0 translation regime, and other information for this translation regime.</p>
-      </div><h3>Configuration</h3><p>This register is banked between TTBR1 and TTBR1_S and TTBR1_NS.<br></br></p><p>AArch32 System register TTBR1 bits [63:0] are architecturally mapped to AArch64 System register <a href="AArch64-ttbr1_el1.html">TTBR1_EL1[63:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to TTBR1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>This register is banked between TTBR1 and TTBR1_S and TTBR1_NS.<br></br></p><p>AArch32 System register TTBR1 bits [63:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1[63:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to TTBR1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>TTBR1 is a 64-bit register that can also be accessed as a 32-bit value. If it is accessed as a 32-bit register, accesses read and write bits [31:0] and do not modify bits [63:32].</p>
 
       
-        <p><a href="AArch32-ttbcr.html">TTBCR</a>.EAE determines which TTBR1 format is used:</p>
+        <p><a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE determines which TTBR1 format is used:</p>
 
       
         <ul>
-<li><a href="AArch32-ttbcr.html">TTBCR</a>.EAE is 0: 32-bit format is used. TTBR1[63:32] are ignored.
-</li><li><a href="AArch32-ttbcr.html">TTBCR</a>.EAE is 1: 64-bit format is used.
+<li><a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE is 0: 32-bit format is used. TTBR1[63:32] are ignored.
+</li><li><a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE is 1: 64-bit format is used.
 </li></ul>
 
       
-        <p>Used in conjunction with the <a href="AArch32-ttbcr.html">TTBCR</a>. When the 64-bit TTBR1 format is used, cacheability and shareability information is held in the <a href="AArch32-ttbcr.html">TTBCR</a>, not in TTBR1.</p>
+        <p>Used in conjunction with the <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>. When the 64-bit TTBR1 format is used, cacheability and shareability information is held in the <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>, not in TTBR1.</p>
       <h3>Attributes</h3>
         <p>TTBR1 is a 64-bit register.</p>
 
@@ -99,7 +99,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-55_48">ASID, bits [55:48]:
       </h4><div class="field">
-      <p>An ASID for the translation table base address. The <a href="AArch32-ttbcr.html">TTBCR</a>.A1 field selects either <a href="AArch32-ttbr0.html">TTBR0</a>.ASID or TTBR1.ASID.</p>
+      <p>An ASID for the translation table base address. The <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.A1 field selects either <a href="/latest_sysreg/AArch32-ttbr0.html">TTBR0</a>.ASID or TTBR1.ASID.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-47_1">BADDR, bits [47:1]:
@@ -108,25 +108,25 @@
 <li>Register bits [x-1:3] are treated as if all the bits are zero. The value read back from these bits is either the value written or zero.
 </li><li>The result of the calculation of an address for a translation table walk using this register can be corrupted in those bits that are nonzero.
 </li></ul>
-<p>x is determined from the value of <a href="AArch32-ttbcr.html">TTBCR</a>.T1SZ as follows:</p>
+<p>x is determined from the value of <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.T1SZ as follows:</p>
 <ul>
-<li>If <a href="AArch32-ttbcr.html">TTBCR</a>.T1SZ is 0 or 1, x = 5 - <a href="AArch32-ttbcr.html">TTBCR</a>.T1SZ.
-</li><li>If <a href="AArch32-ttbcr.html">TTBCR</a>.T1SZ is greater than 1, x = 14 - <a href="AArch32-ttbcr.html">TTBCR</a>.T1SZ.
+<li>If <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.T1SZ is 0 or 1, x = 5 - <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.T1SZ.
+</li><li>If <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.T1SZ is greater than 1, x = 14 - <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.T1SZ.
 </li></ul>
 <p>If bits[47:40] of the translation table base address are not zero, an Address size fault is generated.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-0_0-1">CnP, bit [0] <span class="condition">when FEAT_TTCNP is implemented</span>:
       </h4><div class="field">
-      <p>Common not Private. When <a href="AArch32-ttbcr.html">TTBCR</a>.EAE ==1, this bit indicates whether each entry that is pointed to by TTBR1 is a member of a common set that can be used by every PE in the Inner Shareable domain for which the value of TTBR1.CnP is 1.</p>
+      <p>Common not Private. When <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE ==1, this bit indicates whether each entry that is pointed to by TTBR1 is a member of a common set that can be used by every PE in the Inner Shareable domain for which the value of TTBR1.CnP is 1.</p>
     <table class="valuetable"><tr><th>CnP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>The translation table entries pointed to by this instance of TTBR1, for the current ASID, are permitted to differ from corresponding entries for this instance of TTBR1 for other PEs in the Inner Shareable domain. This is not affected by:</p>
 <ul>
 <li>The value of TTBR1.CnP on those other PEs.
-</li><li>The value of <a href="AArch32-ttbcr.html">TTBCR</a>.EAE on those other PEs.
+</li><li>The value of <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE on those other PEs.
 </li><li>The value of the current ASID or, for the Non-secure instance of TTBR1, the value of the current VMID.
 </li></ul></td></tr><tr><td class="bitfield">0b1</td><td><p>The translation table entries pointed to by this instance of TTBR1 are the same as the translation table entries for every other PE in the Inner Shareable domain for which the value of TTBR1.CnP is 1 for this instance of TTBR1 and all of the following apply:</p>
 <ul>
 <li>The translation table entries are pointed to by this instance of TTBR1.
-</li><li>The value of the applicable <a href="AArch32-ttbcr.html">TTBCR</a>.EAE field is 1.
+</li><li>The value of the applicable <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE field is 1.
 </li><li>The ASID is the same as the current ASID.
 </li><li>For the Non-secure instance of TTBR1, the VMID is the same as the current VMID.
 </li></ul></td></tr></table><p>When a TLB combines entries from stage 1 translation and stage 2 translation into a single entry, that entry can only be shared between different PEs if the value of the CnP bit is 1 for both stage 1 and stage 2.</p>

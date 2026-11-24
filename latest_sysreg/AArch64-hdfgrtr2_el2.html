@@ -12,15 +12,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-24_24-1">nPMBMAR_EL1, bit [24] <span class="condition">when FEAT_SPE_nVM is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-pmbmar_el1.html">PMBMAR_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmbmar_el1.html">PMBMAR_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nPMBMAR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-pmbmar_el1.html">PMBMAR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmbmar_el1.html">PMBMAR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-pmbmar_el1.html">PMBMAR_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmbmar_el1.html">PMBMAR_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -35,15 +35,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-23_23-1">nMDSTEPOP_EL1, bit [23] <span class="condition">when FEAT_STEP2 is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nMDSTEPOP_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -58,15 +58,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-22_22-1">nTRBMPAM_EL1, bit [22] <span class="condition">when FEAT_TRBE_MPAM is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-trbmpam_el1.html">TRBMPAM_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-trbmpam_el1.html">TRBMPAM_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nTRBMPAM_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-trbmpam_el1.html">TRBMPAM_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-trbmpam_el1.html">TRBMPAM_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-trbmpam_el1.html">TRBMPAM_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-trbmpam_el1.html">TRBMPAM_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -84,15 +84,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-20_20-1">nTRCITECR_EL1, bit [20] <span class="condition">when FEAT_ITE is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-trcitecr_el1.html">TRCITECR_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-trcitecr_el1.html">TRCITECR_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nTRCITECR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-trcitecr_el1.html">TRCITECR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-trcitecr_el1.html">TRCITECR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-trcitecr_el1.html">TRCITECR_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-trcitecr_el1.html">TRCITECR_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -107,15 +107,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-19_19-1">nPMSDSFR_EL1, bit [19] <span class="condition">when FEAT_SPE_FDS is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nPMSDSFR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -130,15 +130,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-18_18-1">nSPMDEVAFF_EL1, bit [18] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-spmdevaff_el1.html">SPMDEVAFF_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmdevaff_el1.html">SPMDEVAFF_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nSPMDEVAFF_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-spmdevaff_el1.html">SPMDEVAFF_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmdevaff_el1.html">SPMDEVAFF_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-spmdevaff_el1.html">SPMDEVAFF_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmdevaff_el1.html">SPMDEVAFF_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -154,10 +154,10 @@
     </div><h4 id="fieldset_0-17_17-1">nSPMID, bit [17] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field"><p>Trap <span class="instruction">MRS</span> reads at EL1 using AArch64 of any of the following AArch64 System registers to EL2:</p>
 <ul>
-<li><a href="AArch64-spmcfgr_el1.html">SPMCFGR_EL1</a>.
-</li><li><a href="AArch64-spmcgcrn_el1.html">SPMCGCR&lt;n&gt;_EL1</a>.
-</li><li><a href="AArch64-spmdevarch_el1.html">SPMDEVARCH_EL1</a>.
-</li><li><a href="AArch64-spmiidr_el1.html">SPMIIDR_EL1</a>.
+<li><a href="/latest_sysreg/AArch64-spmcfgr_el1.html">SPMCFGR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-spmcgcrn_el1.html">SPMCGCR&lt;n&gt;_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-spmdevarch_el1.html">SPMDEVARCH_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-spmiidr_el1.html">SPMIIDR_EL1</a>.
 </li></ul><table class="valuetable"><tr><th>nSPMID</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads at EL1 using AArch64 of any of the specified System registers are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -165,7 +165,7 @@
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -180,15 +180,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-16_16-1">nSPMSCR_EL1, bit [16] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-spmscr_el1.html">SPMSCR_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmscr_el1.html">SPMSCR_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nSPMSCR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-spmscr_el1.html">SPMSCR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmscr_el1.html">SPMSCR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-spmscr_el1.html">SPMSCR_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmscr_el1.html">SPMSCR_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -203,15 +203,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_15-1">nSPMACCESSR_EL1, bit [15] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-spmaccessr_el1.html">SPMACCESSR_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmaccessr_el1.html">SPMACCESSR_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nSPMACCESSR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-spmaccessr_el1.html">SPMACCESSR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmaccessr_el1.html">SPMACCESSR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-spmaccessr_el1.html">SPMACCESSR_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmaccessr_el1.html">SPMACCESSR_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -226,15 +226,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-14_14-1">nSPMCR_EL0, bit [14] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-spmcr_el0.html">SPMCR_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmcr_el0.html">SPMCR_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nSPMCR_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and  the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads of <a href="AArch64-spmcr_el0.html">SPMCR_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and  the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmcr_el0.html">SPMCR_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-spmcr_el0.html">SPMCR_EL0</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmcr_el0.html">SPMCR_EL0</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -250,16 +250,16 @@
     </div><h4 id="fieldset_0-13_13-1">nSPMOVS, bit [13] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field"><p>Trap <span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of any of the following AArch64 System registers to EL2:</p>
 <ul>
-<li><a href="AArch64-spmovsclr_el0.html">SPMOVSCLR_EL0</a>.
-</li><li><a href="AArch64-spmovsset_el0.html">SPMOVSSET_EL0</a>.
+<li><a href="/latest_sysreg/AArch64-spmovsclr_el0.html">SPMOVSCLR_EL0</a>.
+</li><li><a href="/latest_sysreg/AArch64-spmovsset_el0.html">SPMOVSSET_EL0</a>.
 </li></ul><table class="valuetable"><tr><th>nSPMOVS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of any of the specified System registers are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of any of the specified System registers are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p><span class="instruction">MRS</span> reads of the specified System registers are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -275,8 +275,8 @@
     </div><h4 id="fieldset_0-12_12-1">nSPMINTEN, bit [12] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field"><p>Trap <span class="instruction">MRS</span> reads at EL1 using AArch64 of any of the following AArch64 System registers to EL2:</p>
 <ul>
-<li><a href="AArch64-spmintenclr_el1.html">SPMINTENCLR_EL1</a>.
-</li><li><a href="AArch64-spmintenset_el1.html">SPMINTENSET_EL1</a>.
+<li><a href="/latest_sysreg/AArch64-spmintenclr_el1.html">SPMINTENCLR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-spmintenset_el1.html">SPMINTENSET_EL1</a>.
 </li></ul><table class="valuetable"><tr><th>nSPMINTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads at EL1 using AArch64 of any of the specified System registers are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -284,7 +284,7 @@
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -300,16 +300,16 @@
     </div><h4 id="fieldset_0-11_11-1">nSPMCNTEN, bit [11] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field"><p>Trap <span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of any of the following AArch64 System registers to EL2:</p>
 <ul>
-<li><a href="AArch64-spmcntenclr_el0.html">SPMCNTENCLR_EL0</a>.
-</li><li><a href="AArch64-spmcntenset_el0.html">SPMCNTENSET_EL0</a>.
+<li><a href="/latest_sysreg/AArch64-spmcntenclr_el0.html">SPMCNTENCLR_EL0</a>.
+</li><li><a href="/latest_sysreg/AArch64-spmcntenset_el0.html">SPMCNTENSET_EL0</a>.
 </li></ul><table class="valuetable"><tr><th>nSPMCNTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of any of the specified System registers are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of any of the specified System registers are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p><span class="instruction">MRS</span> reads of the specified System registers are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -324,15 +324,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-10_10-1">nSPMSELR_EL0, bit [10] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nSPMSELR_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and  the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads of <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and  the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -348,17 +348,17 @@
     </div><h4 id="fieldset_0-9_9-1">nSPMEVTYPERn_EL0, bit [9] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field"><p>Trap <span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of any of the following AArch64 System registers to EL2:</p>
 <ul>
-<li><a href="AArch64-spmevtypern_el0.html">SPMEVTYPER&lt;n&gt;_EL0</a>.
-</li><li><a href="AArch64-spmevfiltrn_el0.html">SPMEVFILTR&lt;n&gt;_EL0</a>.
-</li><li><a href="AArch64-spmevfilt2rn_el0.html">SPMEVFILT2R&lt;n&gt;_EL0</a>.
+<li><a href="/latest_sysreg/AArch64-spmevtypern_el0.html">SPMEVTYPER&lt;n&gt;_EL0</a>.
+</li><li><a href="/latest_sysreg/AArch64-spmevfiltrn_el0.html">SPMEVFILTR&lt;n&gt;_EL0</a>.
+</li><li><a href="/latest_sysreg/AArch64-spmevfilt2rn_el0.html">SPMEVFILT2R&lt;n&gt;_EL0</a>.
 </li></ul><table class="valuetable"><tr><th>nSPMEVTYPERn_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of any of the specified System registers are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads at EL1 and EL0 using AArch64 of any of the specified System registers are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p><span class="instruction">MRS</span> reads of the specified System registers are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -373,15 +373,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-8_8-1">nSPMEVCNTRn_EL0, bit [8] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-spmevcntrn_el0.html">SPMEVCNTR&lt;n&gt;_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmevcntrn_el0.html">SPMEVCNTR&lt;n&gt;_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nSPMEVCNTRn_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and  the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads of <a href="AArch64-spmevcntrn_el0.html">SPMEVCNTR&lt;n&gt;_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and  the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmevcntrn_el0.html">SPMEVCNTR&lt;n&gt;_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-spmevcntrn_el0.html">SPMEVCNTR&lt;n&gt;_EL0</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-spmevcntrn_el0.html">SPMEVCNTR&lt;n&gt;_EL0</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -396,15 +396,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-7_7-1">nPMSSCR_EL1, bit [7] <span class="condition">when FEAT_PMUv3_SS is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-pmsscr_el1.html">PMSSCR_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmsscr_el1.html">PMSSCR_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nPMSSCR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-pmsscr_el1.html">PMSSCR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmsscr_el1.html">PMSSCR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-pmsscr_el1.html">PMSSCR_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmsscr_el1.html">PMSSCR_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -420,9 +420,9 @@
     </div><h4 id="fieldset_0-6_6-1">nPMSSDATA, bit [6] <span class="condition">when FEAT_PMUv3_SS is implemented</span>:
       </h4><div class="field"><p>Trap <span class="instruction">MRS</span> reads at EL1 using AArch64 of any of the following AArch64 System registers to EL2:</p>
 <ul>
-<li><a href="AArch64-pmccntsvr_el1.html">PMCCNTSVR_EL1</a>.
-</li><li><a href="AArch64-pmevcntsvrn_el1.html">PMEVCNTSVR&lt;n&gt;_EL1</a>.
-</li><li><a href="AArch64-pmicntsvr_el1.html">PMICNTSVR_EL1</a>, if <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented.
+<li><a href="/latest_sysreg/AArch64-pmccntsvr_el1.html">PMCCNTSVR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-pmevcntsvrn_el1.html">PMEVCNTSVR&lt;n&gt;_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-pmicntsvr_el1.html">PMICNTSVR_EL1</a>, if <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented.
 </li></ul><table class="valuetable"><tr><th>nPMSSDATA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads at EL1 using AArch64 of any of the specified System registers are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -430,7 +430,7 @@
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -445,17 +445,17 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-5_5-1">nMDSELR_EL1, bit [5] <span class="condition">when FEAT_Debugv8p9 is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-mdselr_el1.html">MDSELR_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-mdselr_el1.html">MDSELR_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nMDSELR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-mdselr_el1.html">MDSELR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-mdselr_el1.html">MDSELR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-mdselr_el1.html">MDSELR_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-mdselr_el1.html">MDSELR_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul>
-<p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether this field is implemented or is <span class="arm-defined-word">RES0</span> when 16 or fewer breakpoints are implemented, 16 or fewer watchpoints are implemented, and <a href="AArch64-mdselr_el1.html">MDSELR_EL1</a> is implemented as RAZ/WI.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
+<p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether this field is implemented or is <span class="arm-defined-word">RES0</span> when 16 or fewer breakpoints are implemented, 16 or fewer watchpoints are implemented, and <a href="/latest_sysreg/AArch64-mdselr_el1.html">MDSELR_EL1</a> is implemented as RAZ/WI.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
             <span class="binarynumber">'0'</span>.
@@ -469,15 +469,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-4_4-1">nPMUACR_EL1, bit [4] <span class="condition">when FEAT_PMUv3p9 is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-pmuacr_el1.html">PMUACR_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmuacr_el1.html">PMUACR_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nPMUACR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-pmuacr_el1.html">PMUACR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmuacr_el1.html">PMUACR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-pmuacr_el1.html">PMUACR_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmuacr_el1.html">PMUACR_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -492,18 +492,18 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-3_3-1">nPMICFILTR_EL0, bit [3] <span class="condition">when FEAT_PMUv3_ICNTR is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-pmicfiltr_el0.html">PMICFILTR_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
-    <table class="valuetable"><tr><th>nPMICFILTR_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then:</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmicfiltr_el0.html">PMICFILTR_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
+    <table class="valuetable"><tr><th>nPMICFILTR_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>If EL2 is implemented and enabled in the current Security state, and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then:</p>
 <ul>
-<li><span class="instruction">MRS</span> reads of <a href="AArch64-pmicfiltr_el0.html">PMICFILTR_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.
-</li><li><a href="AArch64-pmcntenclr_el0.html">PMCNTENCLR_EL0</a>.F0, <a href="AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.F0, <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.F0, and <a href="AArch64-pmovsset_el0.html">PMOVSSET_EL0</a>.F0 read as zero at EL1 and EL0.
-</li><li><a href="AArch64-pmintenclr_el1.html">PMINTENCLR_EL1</a>.F0 and <a href="AArch64-pmintenset_el1.html">PMINTENSET_EL1</a>.F0 read as zero at EL1.
+<li><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmicfiltr_el0.html">PMICFILTR_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.
+</li><li><a href="/latest_sysreg/AArch64-pmcntenclr_el0.html">PMCNTENCLR_EL0</a>.F0, <a href="/latest_sysreg/AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.F0, <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.F0, and <a href="/latest_sysreg/AArch64-pmovsset_el0.html">PMOVSSET_EL0</a>.F0 read as zero at EL1 and EL0.
+</li><li><a href="/latest_sysreg/AArch64-pmintenclr_el1.html">PMINTENCLR_EL1</a>.F0 and <a href="/latest_sysreg/AArch64-pmintenset_el1.html">PMINTENSET_EL1</a>.F0 read as zero at EL1.
 </li></ul></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-pmicfiltr_el0.html">PMICFILTR_EL0</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmicfiltr_el0.html">PMICFILTR_EL0</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -518,15 +518,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-2_2-1">nPMICNTR_EL0, bit [2] <span class="condition">when FEAT_PMUv3_ICNTR is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a> at EL1 and EL0 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nPMICNTR_EL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, and  the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads of <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, and  the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a> at EL1 and EL0 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -544,15 +544,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-0_0-1">nPMECR_EL1, bit [0] <span class="condition">when FEAT_EBEP is implemented or FEAT_PMUv3_SS is implemented</span>:
       </h4><div class="field">
-      <p>Trap <span class="instruction">MRS</span> reads of <a href="AArch64-pmecr_el1.html">PMECR_EL1</a> at EL1 using AArch64 to EL2.</p>
+      <p>Trap <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmecr_el1.html">PMECR_EL1</a> at EL1 using AArch64 to EL2.</p>
     <table class="valuetable"><tr><th>nPMECR_EL1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="AArch64-pmecr_el1.html">PMECR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
+          <p>If EL2 is implemented and enabled in the current Security state, then <span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmecr_el1.html">PMECR_EL1</a> at EL1 using AArch64 are trapped to EL2 and reported with EC syndrome value <span class="hexnumber">0x18</span>, unless the read generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><span class="instruction">MRS</span> reads of <a href="AArch64-pmecr_el1.html">PMECR_EL1</a> are not trapped by this mechanism.</p>
+          <p><span class="instruction">MRS</span> reads of <a href="/latest_sysreg/AArch64-pmecr_el1.html">PMECR_EL1</a> are not trapped by this mechanism.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when all of the following are true:</p>
 <ul>
 <li>EL3 is implemented.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.FGTEn2 == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to

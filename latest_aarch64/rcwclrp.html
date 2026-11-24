@@ -49,10 +49,10 @@ for general use.</p>
             </h4><a id="RCWCLRPA_128_memop_128"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 0)</span></div><p class="asm-code">RCWCLRPA  <a href="#Xt1OrXZR" title='Is the 64-bit name of the first general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt1&gt;</a>, <a href="#Xt2OrXZR" title='Is the 64-bit name of the second general-purpose register to be transferred, encoded in the "Rt2" field.'>&lt;Xt2&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">RCWCLRPAL encoding
             </h4><a id="RCWCLRPAL_128_memop_128"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 1)</span></div><p class="asm-code">RCWCLRPAL  <a href="#Xt1OrXZR" title='Is the 64-bit name of the first general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt1&gt;</a>, <a href="#Xt2OrXZR" title='Is the 64-bit name of the second general-purpose register to be transferred, encoded in the "Rt2" field.'>&lt;Xt2&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">RCWCLRPL encoding
             </h4><a id="RCWCLRPL_128_memop_128"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">RCWCLRPL  <a href="#Xt1OrXZR" title='Is the 64-bit name of the first general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt1&gt;</a>, <a href="#Xt2OrXZR" title='Is the 64-bit name of the second general-purpose register to be transferred, encoded in the "Rt2" field.'>&lt;Xt2&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_D128) || !IsFeatureImplemented(FEAT_THE) then
-    <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+    <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
 end;
-if Rt  == '11111' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if Rt2 == '11111' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if Rt  == '11111' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if Rt2 == '11111' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let t : integer{} = UInt(Rt);
 let t2 : integer{} = UInt(Rt2);
 let n : integer{} = UInt(Rn);
@@ -65,12 +65,12 @@ let tagchecked : boolean = n != 31;
 var rt_unknown : boolean = FALSE;
 
 if t == t2 then
-    let c : <a href="shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="shared_pseudocode.html#enum_Unpredictable_LSE128OVERLAP" title="">Unpredictable_LSE128OVERLAP</a>);
-    assert c IN {<a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
+    let c : <a href="/latest_aarch64/shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="/latest_aarch64/shared_pseudocode.html#enum_Unpredictable_LSE128OVERLAP" title="">Unpredictable_LSE128OVERLAP</a>);
+    assert c IN {<a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
     case c of
-        when <a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt; rt_unknown = TRUE;    // result is UNKNOWN
-        when <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;   <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
-        when <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;     <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt; rt_unknown = TRUE;    // result is UNKNOWN
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;   <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;     <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
     end;
 end;</p>
   <div class="encoding-notes">
@@ -89,7 +89,7 @@ end;</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode">if !<a href="shared_pseudocode.html#func_IsD128Enabled_1" title="">IsD128Enabled</a>(<a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL) then Undefined(); end;
+      <p class="pseudocode">if !<a href="/latest_aarch64/shared_pseudocode.html#func_IsD128Enabled_1" title="">IsD128Enabled</a>(<a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL) then Undefined(); end;
 var address : bits(64);
 var value1 : bits(64);
 var value2 : bits(64);
@@ -97,34 +97,34 @@ var newdata : bits(128);
 var readdata : bits(128);
 var nzcv : bits(4);
 
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescRCW_9" title="">CreateAccDescRCW</a>(<a href="shared_pseudocode.html#enum_MemAtomicOp_BIC" title="">MemAtomicOp_BIC</a>, soft, acquire, release,
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescRCW_9" title="">CreateAccDescRCW</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemAtomicOp_BIC" title="">MemAtomicOp_BIC</a>, soft, acquire, release,
                                                   tagchecked, t, t2, t, t2);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
-value1 = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t);
-value2 = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2);
+value1 = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t);
+value2 = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2);
 
-newdata = if <a href="shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then value1::value2 else value2::value1;
+newdata = if <a href="/latest_aarch64/shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then value1::value2 else value2::value1;
 
 let compdata : bits(128) = ARBITRARY : bits(128);    // Irrelevant when not executing CAS
-(nzcv, readdata) = <a href="shared_pseudocode.html#func_MemAtomicRCW_5" title="">MemAtomicRCW</a>{128}(address, compdata, newdata, accdesc);
+(nzcv, readdata) = <a href="/latest_aarch64/shared_pseudocode.html#func_MemAtomicRCW_5" title="">MemAtomicRCW</a>{128}(address, compdata, newdata, accdesc);
 
 PSTATE.[N,Z,C,V] = nzcv;
 if rt_unknown then
     readdata = ARBITRARY : bits(128);
 end;
 
-if <a href="shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = readdata[127:64];
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2) = readdata[63:0];
+if <a href="/latest_aarch64/shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = readdata[127:64];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2) = readdata[63:0];
 else
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = readdata[63:0];
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2) = readdata[127:64];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = readdata[63:0];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2) = readdata[127:64];
 end;</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

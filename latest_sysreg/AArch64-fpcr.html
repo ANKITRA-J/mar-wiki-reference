@@ -3,7 +3,7 @@
 <title>FPCR | Jon's Arm Reference</title><meta name="description" content="Controls behavior of the floating-point instructions."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">FPCR</h1><p class="insn_subtitle" data-pagefind-body="1">Floating-point Control Register</p><div data-pagefind-body="1">
         <p>Controls behavior of the floating-point instructions.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register FPCR bits [26:15] are architecturally mapped to AArch32 System register <a href="AArch32-fpscr.html">FPSCR[26:15]</a>.</p><p>AArch64 System register FPCR bits [12:8] are architecturally mapped to AArch32 System register <a href="AArch32-fpscr.html">FPSCR[12:8]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to FPCR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register FPCR bits [26:15] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR[26:15]</a>.</p><p>AArch64 System register FPCR bits [12:8] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR[12:8]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to FPCR are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether the Len and Stride fields can be programmed to nonzero values, which will cause some AArch32 floating-point instruction encodings to be <span class="arm-defined-word">UNDEFINED</span>, or whether these fields are RAZ.</p>
 
       
@@ -59,7 +59,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-21_20">Stride, bits [21:20]:
       </h4><div class="field"><p>This field has no function in AArch64 state, and nonzero values are ignored during execution in AArch64 state.</p>
-<p>This field is included only for context saving and restoration of the AArch32 <a href="AArch32-fpscr.html">FPSCR</a>.Stride field.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>This field is included only for context saving and restoration of the AArch32 <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR</a>.Stride field.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>When an implementation implements FPSCR.{Stride, Len} as RAZ, access to this field is <span class="access_level">RAZ/WI</span>.</p></div><h4 id="fieldset_0-19_19-1">FZ16, bit [19] <span class="condition">when FEAT_FP16 is implemented</span>:
       </h4><div class="field">
@@ -76,15 +76,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-18_16">Len, bits [18:16]:
       </h4><div class="field"><p>This field has no function in AArch64 state, and nonzero values are ignored during execution in AArch64 state.</p>
-<p>This field is included only for context saving and restoration of the AArch32 <a href="AArch32-fpscr.html">FPSCR</a>.Len field.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>This field is included only for context saving and restoration of the AArch32 <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR</a>.Len field.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>When an implementation implements FPSCR.{Stride, Len} as RAZ, access to this field is <span class="access_level">RAZ/WI</span>.</p></div><h4 id="fieldset_0-15_15">IDE, bit [15]:
       </h4><div class="field">
       <p>Input Denormal floating-point exception trap enable.</p>
     <table class="valuetable"><tr><th>IDE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="AArch64-fpsr.html">FPSR</a>.IDC bit is set to 1.</p>
+          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.IDC bit is set to 1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="AArch64-fpsr.html">FPSR</a>.IDC bit.</p>
+          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.IDC bit.</p>
         </td></tr></table><p>When the PE is in Streaming SVE mode, and FEAT_SME_FA64 is not implemented or not enabled, the value of FPCR.IDE is treated as 0 for all purposes other than a direct read or write of the FPCR.</p>
 <p>The Effective value of this bit controls both scalar and vector floating-point arithmetic.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -94,7 +94,7 @@
     </div><h4 id="fieldset_0-13_13-1">EBF, bit [13] <span class="condition">when FEAT_EBF16 is implemented</span>:
       </h4><div class="field"><p>The value of this bit controls the numeric behaviors of BFloat16 dot product calculations performed by the BFDOT, BFMMLA, BFMOPA, and BFMOPS instructions.
 If FEAT_SME2 is implemented, this also controls BFVDOT instruction.</p>
-<p>When <a href="AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.BF16 and <a href="AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.BF16 are <span class="binarynumber">0b0010</span>, the PE supports the FPCR.EBF field. Otherwise, FPCR.EBF is <span class="arm-defined-word">RES0</span>.</p><table class="valuetable"><tr><th>EBF</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>These instructions use the standard BFloat16 behaviors:</p>
+<p>When <a href="/latest_sysreg/AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.BF16 and <a href="/latest_sysreg/AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.BF16 are <span class="binarynumber">0b0010</span>, the PE supports the FPCR.EBF field. Otherwise, FPCR.EBF is <span class="arm-defined-word">RES0</span>.</p><table class="valuetable"><tr><th>EBF</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>These instructions use the standard BFloat16 behaviors:</p>
 <ul>
 <li>Ignoring the FPCR.RMode control and using the rounding mode defined for BFloat16. For more information, see <span class="xref">'Round to Odd mode'</span>.
 </li><li>Flushing denormalized inputs and outputs to zero, as if the FPCR.FZ and FPCR.FIZ controls had the value '1'.
@@ -115,9 +115,9 @@ If FEAT_SME2 is implemented, this also controls BFVDOT instruction.</p>
       </h4><div class="field">
       <p>Inexact floating-point exception trap enable.</p>
     <table class="valuetable"><tr><th>IXE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="AArch64-fpsr.html">FPSR</a>.IXC bit is set to 1.</p>
+          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.IXC bit is set to 1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="AArch64-fpsr.html">FPSR</a>.IXC bit.</p>
+          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.IXC bit.</p>
         </td></tr></table><p>When the PE is in Streaming SVE mode, and FEAT_SME_FA64 is not implemented or not enabled, the value of FPCR.IXE is treated as 0 for all purposes other than a direct read or write of the FPCR.</p>
 <p>The Effective value of this bit controls both scalar and vector floating-point arithmetic.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -125,9 +125,9 @@ If FEAT_SME2 is implemented, this also controls BFVDOT instruction.</p>
       </h4><div class="field">
       <p>Underflow floating-point exception trap enable.</p>
     <table class="valuetable"><tr><th>UFE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="AArch64-fpsr.html">FPSR</a>.UFC bit is set to 1.</p>
+          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.UFC bit is set to 1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Trapped exception handling selected. If the floating-point exception occurs and Flush-to-zero is not enabled, the PE does not update the <a href="AArch64-fpsr.html">FPSR</a>.UFC bit.</p>
+          <p>Trapped exception handling selected. If the floating-point exception occurs and Flush-to-zero is not enabled, the PE does not update the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.UFC bit.</p>
         </td></tr></table><p>When the PE is in Streaming SVE mode, and FEAT_SME_FA64 is not implemented or not enabled, the value of FPCR.UFE is treated as 0 for all purposes other than a direct read or write of the FPCR.</p>
 <p>The Effective value of this bit controls both scalar and vector floating-point arithmetic.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -135,9 +135,9 @@ If FEAT_SME2 is implemented, this also controls BFVDOT instruction.</p>
       </h4><div class="field">
       <p>Overflow floating-point exception trap enable.</p>
     <table class="valuetable"><tr><th>OFE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="AArch64-fpsr.html">FPSR</a>.OFC bit is set to 1.</p>
+          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.OFC bit is set to 1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="AArch64-fpsr.html">FPSR</a>.OFC bit.</p>
+          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.OFC bit.</p>
         </td></tr></table><p>When the PE is in Streaming SVE mode, and FEAT_SME_FA64 is not implemented or not enabled, the value of FPCR.OFE is treated as 0 for all purposes other than a direct read or write of the FPCR.</p>
 <p>The Effective value of this bit controls both scalar and vector floating-point arithmetic.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -145,9 +145,9 @@ If FEAT_SME2 is implemented, this also controls BFVDOT instruction.</p>
       </h4><div class="field">
       <p>Divide by Zero floating-point exception trap enable.</p>
     <table class="valuetable"><tr><th>DZE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="AArch64-fpsr.html">FPSR</a>.DZC bit is set to 1.</p>
+          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.DZC bit is set to 1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="AArch64-fpsr.html">FPSR</a>.DZC bit.</p>
+          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.DZC bit.</p>
         </td></tr></table><p>When the PE is in Streaming SVE mode, and FEAT_SME_FA64 is not implemented or not enabled, the value of FPCR.DZE is treated as 0 for all purposes other than a direct read or write of the FPCR.</p>
 <p>The Effective value of this bit controls both scalar and vector floating-point arithmetic.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -155,9 +155,9 @@ If FEAT_SME2 is implemented, this also controls BFVDOT instruction.</p>
       </h4><div class="field">
       <p>Invalid Operation floating-point exception trap enable.</p>
     <table class="valuetable"><tr><th>IOE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="AArch64-fpsr.html">FPSR</a>.IOC bit is set to 1.</p>
+          <p>Untrapped exception handling selected. If the floating-point exception occurs, the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.IOC bit is set to 1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="AArch64-fpsr.html">FPSR</a>.IOC bit.</p>
+          <p>Trapped exception handling selected. If the floating-point exception occurs, the PE does not update the <a href="/latest_sysreg/AArch64-fpsr.html">FPSR</a>.IOC bit.</p>
         </td></tr></table><p>When the PE is in Streaming SVE mode, and FEAT_SME_FA64 is not implemented or not enabled, the value of FPCR.IOE is treated as 0 for all purposes other than a direct read or write of the FPCR.</p>
 <p>The Effective value of this bit controls both scalar and vector floating-point arithmetic.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

@@ -51,7 +51,7 @@ The value initially loaded from memory is returned in the destination register.<
             </h4><a id="SWPT_64_memop_unpriv"></a><span class="bitdiff"> (sz == 1 &amp;&amp; A == 0 &amp;&amp; R == 0)</span></div><p class="asm-code">SWPT  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">64-bit SWPTA encoding
             </h4><a id="SWPTA_64_memop_unpriv"></a><span class="bitdiff"> (sz == 1 &amp;&amp; A == 1 &amp;&amp; R == 0)</span></div><p class="asm-code">SWPTA  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">64-bit SWPTAL encoding
             </h4><a id="SWPTAL_64_memop_unpriv"></a><span class="bitdiff"> (sz == 1 &amp;&amp; A == 1 &amp;&amp; R == 1)</span></div><p class="asm-code">SWPTAL  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">64-bit SWPTL encoding
-            </h4><a id="SWPTL_64_memop_unpriv"></a><span class="bitdiff"> (sz == 1 &amp;&amp; A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">SWPTL  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSUI) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="SWPTL_64_memop_unpriv"></a><span class="bitdiff"> (sz == 1 &amp;&amp; A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">SWPTL  <a href="#XsOrXZR" title='Is the 64-bit name of the general-purpose register to be stored, encoded in the "Rs" field.'>&lt;Xs&gt;</a>, <a href="#XtOrXZR__8" title='Is the 64-bit name of the general-purpose register to be loaded, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSUI) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 
 let s : integer{} = UInt(Rs);
 let t : integer{} = UInt(Rt);
@@ -88,22 +88,22 @@ let tagchecked : boolean = n != 31;</p>
 var data : bits(datasize);
 var store_value : bits(datasize);
 
-let privileged : boolean = <a href="shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>();
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescAtomicOp_7" title="">CreateAccDescAtomicOp</a>(<a href="shared_pseudocode.html#enum_MemAtomicOp_SWP" title="">MemAtomicOp_SWP</a>, acquire, release,
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>();
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescAtomicOp_7" title="">CreateAccDescAtomicOp</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemAtomicOp_SWP" title="">MemAtomicOp_SWP</a>, acquire, release,
                                                        tagchecked, privileged, t, s);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
-store_value = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s);
+store_value = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(s);
 
 // Irrelevant when not executing CAS
 let comparevalue : bits(datasize) = ARBITRARY : bits(datasize);
-data = <a href="shared_pseudocode.html#func_MemAtomic_5" title="">MemAtomic</a>{datasize}(address, comparevalue, store_value, accdesc);
+data = <a href="/latest_aarch64/shared_pseudocode.html#func_MemAtomic_5" title="">MemAtomic</a>{datasize}(address, comparevalue, store_value, accdesc);
 
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{regsize}(t) = ZeroExtend{regsize}(data);</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{regsize}(t) = ZeroExtend{regsize}(data);</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

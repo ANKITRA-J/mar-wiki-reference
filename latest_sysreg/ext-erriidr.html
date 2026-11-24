@@ -8,13 +8,13 @@
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="12"><a href="#fieldset_0-31_20">ProductID</a></td><td class="lr" colspan="4"><a href="#fieldset_0-19_16">Variant</a></td><td class="lr" colspan="4"><a href="#fieldset_0-15_12">Revision</a></td><td class="lr" colspan="12"><a href="#fieldset_0-11_0">Implementer</a></td></tr></tbody></table><h4 id="fieldset_0-31_20">ProductID, bits [31:20]:
       </h4><div class="field">
       <p>Part number, bits [11:0]. The part number is selected by the designer of the component.</p>
-    <p>If <a href="ext-errpidr0.html">ERRPIDR0</a> and <a href="ext-errpidr1.html">ERRPIDR1</a> are implemented, <a href="ext-errpidr0.html">ERRPIDR0</a>.PART_0 matches bits [7:0] of ERRIIDR.ProductID and <a href="ext-errpidr1.html">ERRPIDR1</a>.PART_1 matches bits [11:8] of ERRIIDR.ProductID.</p>
+    <p>If <a href="/latest_sysreg/ext-errpidr0.html">ERRPIDR0</a> and <a href="/latest_sysreg/ext-errpidr1.html">ERRPIDR1</a> are implemented, <a href="/latest_sysreg/ext-errpidr0.html">ERRPIDR0</a>.PART_0 matches bits [7:0] of ERRIIDR.ProductID and <a href="/latest_sysreg/ext-errpidr1.html">ERRPIDR1</a>.PART_1 matches bits [11:8] of ERRIIDR.ProductID.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-19_16">Variant, bits [19:16]:
       </h4><div class="field"><p>Component major revision.</p>
-<p>This field distinguishes product variants or major revisions of the product.</p><p>If <a href="ext-errpidr2.html">ERRPIDR2</a> is implemented, <a href="ext-errpidr2.html">ERRPIDR2</a>.REVISION matches ERRIIDR.Variant.</p>
+<p>This field distinguishes product variants or major revisions of the product.</p><p>If <a href="/latest_sysreg/ext-errpidr2.html">ERRPIDR2</a> is implemented, <a href="/latest_sysreg/ext-errpidr2.html">ERRPIDR2</a>.REVISION matches ERRIIDR.Variant.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-15_12">Revision, bits [15:12]:
       </h4><div class="field"><p>Component minor revision.</p>
-<p>This field distinguishes minor revisions of the product.</p><p>If <a href="ext-errpidr3.html">ERRPIDR3</a> is implemented, <a href="ext-errpidr3.html">ERRPIDR3</a>.REVAND matches ERRIIDR.Revision.</p>
+<p>This field distinguishes minor revisions of the product.</p><p>If <a href="/latest_sysreg/ext-errpidr3.html">ERRPIDR3</a> is implemented, <a href="/latest_sysreg/ext-errpidr3.html">ERRPIDR3</a>.REVAND matches ERRIIDR.Revision.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-11_0">Implementer, bits [11:0]:
       </h4><div class="field"><p>Contains the JEP106 manufacturer's identification code of the designer of the RAS component.</p>
 <p>The code identifies the designer of the component, which might not be the same as the implementer of the device containing the component.</p>
@@ -23,9 +23,9 @@
 <p>Bits [11:8] contain the JEP106 bank identifier of the designer minus 1.</p>
 <p>Bit 7 is <span class="arm-defined-word">RES0</span>.</p>
 <p>Bits [6:0] contain bits [6:0] of the JEP106 manufacturer's identification code of the designer.</p>
-<p>If <a href="ext.errpidr4.html">ERRPIDR4</a> is implemented, <a href="ext.errpidr4.html">ERRPIDR4</a>.DES_2 matches bits [11:8] of this field.</p>
-<p>If <a href="ext.errpidr2.html">ERRPIDR2</a> is implemented, <a href="ext.errpidr2.html">ERRPIDR2</a>.DES_1 matches bits [6:4] of this field.</p>
-<p>If <a href="ext.errpidr1.html">ERRPIDR1</a> is implemented, <a href="ext.errpidr1.html">ERRPIDR1</a>.DES_0 matches bits [3:0] of this field.</p>
+<p>If <a href="/latest_sysreg/ext.errpidr4.html">ERRPIDR4</a> is implemented, <a href="/latest_sysreg/ext.errpidr4.html">ERRPIDR4</a>.DES_2 matches bits [11:8] of this field.</p>
+<p>If <a href="/latest_sysreg/ext.errpidr2.html">ERRPIDR2</a> is implemented, <a href="/latest_sysreg/ext.errpidr2.html">ERRPIDR2</a>.DES_1 matches bits [6:4] of this field.</p>
+<p>If <a href="/latest_sysreg/ext.errpidr1.html">ERRPIDR1</a> is implemented, <a href="/latest_sysreg/ext.errpidr1.html">ERRPIDR1</a>.DES_0 matches bits [3:0] of this field.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing ERRIIDR</h2>
         <p>This section shows the offset of ERRIIDR when FEAT_RASSA_4KB_GRP is implemented.

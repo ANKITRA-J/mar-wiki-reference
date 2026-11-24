@@ -29,7 +29,7 @@
     </div><h4 id="fieldset_0-30_30-1">EZT0, bit [30] <span class="condition">when FEAT_SME2 is implemented</span>:
       </h4><div class="field"><p>Traps execution at all Exception levels of the LDR, LUTI2, LUTI4, MOVT, STR, and ZERO instructions that access the ZT0 register to 
 EL3.</p>
-<p>The exception is reported using <a href="AArch64-esr_el3.html">ESR_EL3</a>.EC value <span class="hexnumber">0x1D</span>, with an ISS code of <span class="hexnumber">0x0000004</span>, at a lower priority than a trap due to PSTATE.SM or PSTATE.ZA.</p><table class="valuetable"><tr><th>EZT0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p>The exception is reported using <a href="/latest_sysreg/AArch64-esr_el3.html">ESR_EL3</a>.EC value <span class="hexnumber">0x1D</span>, with an ISS code of <span class="hexnumber">0x0000004</span>, at a lower priority than a trap due to PSTATE.SM or PSTATE.ZA.</p><table class="valuetable"><tr><th>EZT0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control causes execution of these instructions at all Exception levels to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause execution of any instruction to be trapped.</p>
@@ -50,7 +50,7 @@ EL3.</p>
       </h4><div class="field"><p>Requests an Effective Streaming SVE vector length (SVL) at EL3 of (LEN+1)*128 bits.</p>
 <p>The Streaming SVE vector length can be any power of two from 128 bits to 2048 bits inclusive. An implementation can support any subset of the architecturally permitted lengths.</p>
 <p>When the PE is in Streaming SVE mode, the Effective SVE vector length (VL) is equal to SVL.</p>
-<p>When FEAT_SVE is implemented, and the PE is not in Streaming SVE mode, VL is equal to the Effective Non-streaming SVE vector length. See <a href="AArch64-zcr_el3.html">ZCR_EL3</a>.</p>
+<p>When FEAT_SVE is implemented, and the PE is not in Streaming SVE mode, VL is equal to the Effective Non-streaming SVE vector length. See <a href="/latest_sysreg/AArch64-zcr_el3.html">ZCR_EL3</a>.</p>
 <p>For all purposes other than returning the result of a direct read of SMCR_EL3, the PE selects the Effective Streaming SVE vector length by performing checks in the following order:</p>
 <ol>
 <li>

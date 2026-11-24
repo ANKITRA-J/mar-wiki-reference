@@ -162,7 +162,7 @@
           <p>16KB.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>The value of this field is permitted to be cached in a TLB.</p>
-<p>Granule sizes not supported for stage 1 and not supported for stage 2, as defined in <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>, are reserved. For example, if <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.TGran16 == <span class="binarynumber">0b0000</span> and <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.TGran16_2 == <span class="binarynumber">0b0001</span>, then the PGS encoding <span class="binarynumber">0b10</span> is reserved.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>Granule sizes not supported for stage 1 and not supported for stage 2, as defined in <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>, are reserved. For example, if <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.TGran16 == <span class="binarynumber">0b0000</span> and <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.TGran16_2 == <span class="binarynumber">0b0001</span>, then the PGS encoding <span class="binarynumber">0b10</span> is reserved.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-13_12">SH, bits [13:12]:
       </h4><div class="field">
@@ -262,7 +262,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-2_0-1">PPS, bits [2:0] <span class="condition">when FEAT_RME_GPC3 is implemented</span>:
       </h4><div class="field"><p>Protected Physical Address Size.</p>
-<p>The size of the memory region protected by <a href="AArch64-gptbr_el3.html">GPTBR_EL3</a>, in terms of the number of least-significant address bits.</p>
+<p>The size of the memory region protected by <a href="/latest_sysreg/AArch64-gptbr_el3.html">GPTBR_EL3</a>, in terms of the number of least-significant address bits.</p>
 <p>This field is evaluated with PPS3, as {PPS3, PPS} to give PPS[3:0], interpreted as:</p>
 <table class="valuetable"><thead><tr><th>PPS[3:0]</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0000</span></td><td>32 bits, 4GB protected address space.</td></tr><tr><td><span class="binarynumber">0b0001</span></td><td>36 bits, 64GB protected address space.</td></tr><tr><td><span class="binarynumber">0b0010</span></td><td>40 bits, 1TB protected address space.</td></tr><tr><td><span class="binarynumber">0b0011</span></td><td>42 bits, 4TB protected address space.</td></tr><tr><td><span class="binarynumber">0b0100</span></td><td>44 bits, 16TB protected address space.</td></tr><tr><td><span class="binarynumber">0b1000</span></td><td>46 bits, 64TB protected address space.</td></tr><tr><td><span class="binarynumber">0b1001</span></td><td>47 bits, 128TB protected address space.</td></tr><tr><td><span class="binarynumber">0b0101</span></td><td>48 bits, 256TB protected address space.</td></tr><tr><td><span class="binarynumber">0b0110</span></td><td>52 bits, 4PB protected address space.</td></tr><tr><td><span class="binarynumber">0b0111</span></td><td>56 bits, 64PB protected address space.</td></tr></tbody></table><p>All other values are reserved.</p>
 <p>Configuration of this field to a value exceeding the implemented physical address size is invalid.</p>
@@ -270,7 +270,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_0-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field"><p>Protected Physical Address Size.</p>
-<p>The size of the memory region protected by <a href="AArch64-gptbr_el3.html">GPTBR_EL3</a>, in terms of the number of least-significant address bits.</p><table class="valuetable"><tr><th>PPS</th><th>Meaning</th></tr><tr><td class="bitfield">0b000</td><td>
+<p>The size of the memory region protected by <a href="/latest_sysreg/AArch64-gptbr_el3.html">GPTBR_EL3</a>, in terms of the number of least-significant address bits.</p><table class="valuetable"><tr><th>PPS</th><th>Meaning</th></tr><tr><td class="bitfield">0b000</td><td>
           <p>32 bits, 4GB protected address space.</p>
         </td></tr><tr><td class="bitfield">0b001</td><td>
           <p>36 bits, 64GB protected address space.</p>

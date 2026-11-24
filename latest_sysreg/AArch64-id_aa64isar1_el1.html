@@ -10,7 +10,7 @@
         <p>ID_AA64ISAR1_EL1 is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="4"><a href="#fieldset_0-63_60">LS64</a></td><td class="lr" colspan="4"><a href="#fieldset_0-59_56">XS</a></td><td class="lr" colspan="4"><a href="#fieldset_0-55_52">I8MM</a></td><td class="lr" colspan="4"><a href="#fieldset_0-51_48">DGH</a></td><td class="lr" colspan="4"><a href="#fieldset_0-47_44">BF16</a></td><td class="lr" colspan="4"><a href="#fieldset_0-43_40">SPECRES</a></td><td class="lr" colspan="4"><a href="#fieldset_0-39_36">SB</a></td><td class="lr" colspan="4"><a href="#fieldset_0-35_32">FRINTTS</a></td></tr><tr class="firstrow"><td class="lr" colspan="4"><a href="#fieldset_0-31_28">GPI</a></td><td class="lr" colspan="4"><a href="#fieldset_0-27_24">GPA</a></td><td class="lr" colspan="4"><a href="#fieldset_0-23_20">LRCPC</a></td><td class="lr" colspan="4"><a href="#fieldset_0-19_16">FCMA</a></td><td class="lr" colspan="4"><a href="#fieldset_0-15_12">JSCVT</a></td><td class="lr" colspan="4"><a href="#fieldset_0-11_8">API</a></td><td class="lr" colspan="4"><a href="#fieldset_0-7_4">APA</a></td><td class="lr" colspan="4"><a href="#fieldset_0-3_0">DPB</a></td></tr></tbody></table><h4 id="fieldset_0-63_60">LS64, bits [63:60]:
       </h4><div class="field">
-      <p>Indicates support for <span class="instruction">LD64B</span> and <span class="instruction">ST64B*</span> instructions, and the <a href="AArch64-accdata_el1.html">ACCDATA_EL1</a> register.</p>
+      <p>Indicates support for <span class="instruction">LD64B</span> and <span class="instruction">ST64B*</span> instructions, and the <a href="/latest_sysreg/AArch64-accdata_el1.html">ACCDATA_EL1</a> register.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>LS64</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>No <span class="instruction">LD64B</span> or <span class="instruction">ST64B</span> instructions are supported.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
@@ -18,7 +18,7 @@
         </td></tr><tr><td class="bitfield">0b0010</td><td>
           <p>As <span class="binarynumber">0b0001</span>, and adds the <span class="instruction">ST64BV</span> instruction and traps.</p>
         </td></tr><tr><td class="bitfield">0b0011</td><td>
-          <p>As <span class="binarynumber">0b0010</span>, and adds the <span class="instruction">ST64BV0</span> instruction, <a href="AArch64-accdata_el1.html">ACCDATA_EL1</a> register, and traps.</p>
+          <p>As <span class="binarynumber">0b0010</span>, and adds the <span class="instruction">ST64BV0</span> instruction, <a href="/latest_sysreg/AArch64-accdata_el1.html">ACCDATA_EL1</a> register, and traps.</p>
         </td></tr><tr><td class="bitfield">0b0100</td><td><p>As <span class="binarynumber">0b0011</span>, and adds support for atomic accesses to Write-back Cacheable, Shareable memory using one of the following:</p>
 <ul>
 <li>
@@ -33,11 +33,11 @@
 <p><span class="xref">FEAT_LS64_ACCDATA</span> implements the functionality identified by <span class="binarynumber">0b0011</span>.</p>
 <p><span class="xref">FEAT_LS64WB</span> implements the functionality identified by <span class="binarynumber">0b0100</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-59_56">XS, bits [59:56]:
       </h4><div class="field">
-      <p>Indicates support for the XS attribute, the TLBI and DSB instructions with the nXS qualifier, and the <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.{FGTnXS, FnXS} fields in AArch64 state.</p>
+      <p>Indicates support for the XS attribute, the TLBI and DSB instructions with the nXS qualifier, and the <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.{FGTnXS, FnXS} fields in AArch64 state.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>XS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>The XS attribute, the TLBI and DSB instructions with the nXS qualifier, and the <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.{FGTnXS, FnXS} fields are not supported.</p>
+          <p>The XS attribute, the TLBI and DSB instructions with the nXS qualifier, and the <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.{FGTnXS, FnXS} fields are not supported.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>The XS attribute, the TLBI and DSB instructions with the nXS qualifier, and the <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.{FGTnXS, FnXS} fields are supported.</p>
+          <p>The XS attribute, the TLBI and DSB instructions with the nXS qualifier, and the <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.{FGTnXS, FnXS} fields are supported.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_XS</span> implements the functionality identified by <span class="binarynumber">0b0001</span>.</p>
 <p>From Armv8.7, the value <span class="binarynumber">0b0000</span> is not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-55_52">I8MM, bits [55:52]:
@@ -49,7 +49,7 @@
           <p>The specified instructions are implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_I8MM</span> implements the functionality identified by <span class="binarynumber">0b0001</span>.</p>
-<p>When Advanced SIMD and SVE are both implemented, this field must return the same value as <a href="AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.I8MM.</p>
+<p>When Advanced SIMD and SVE are both implemented, this field must return the same value as <a href="/latest_sysreg/AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.I8MM.</p>
 <p>From Armv8.6, the value <span class="binarynumber">0b0000</span> is not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-51_48">DGH, bits [51:48]:
       </h4><div class="field">
       <p>Indicates support for the Data Gathering Hint instruction.</p>
@@ -67,20 +67,20 @@
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p><span class="instruction">BFCVT</span>, <span class="instruction">BFCVTN, BFCVTN2</span>, <span class="instruction">BFDOT</span>, <span class="instruction">BFMLALB</span>, <span class="instruction">BFMLALT</span>, and <span class="instruction">BFMMLA</span> instructions are implemented.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
-          <p>As <span class="binarynumber">0b0001</span>, but the <a href="AArch64-fpcr.html">FPCR</a>.EBF field is also supported.</p>
+          <p>As <span class="binarynumber">0b0001</span>, but the <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.EBF field is also supported.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_BF16</span> implements the functionality identified by <span class="binarynumber">0b0001</span>.</p>
 <p><span class="xref">FEAT_EBF16</span> implements the functionality identified by <span class="binarynumber">0b0010</span>.</p>
-<p>When <span class="xref">FEAT_SVE</span> or <span class="xref">FEAT_SME</span> is implemented, this field must return the same value as <a href="AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.BF16.</p>
+<p>When <span class="xref">FEAT_SVE</span> or <span class="xref">FEAT_SME</span> is implemented, this field must return the same value as <a href="/latest_sysreg/AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.BF16.</p>
 <p>From Armv8.6 and Armv9.1, the value <span class="binarynumber">0b0000</span> is not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-43_40">SPECRES, bits [43:40]:
       </h4><div class="field">
       <p>Indicates support for prediction invalidation instructions in AArch64 state.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>SPECRES</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>Prediction invalidation instructions are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-cfp-rctx.html">CFP RCTX</a>, <a href="AArch64-dvp-rctx.html">DVP RCTX</a> and <a href="AArch64-cpp-rctx.html">CPP RCTX</a> instructions are implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-cfp-rctx.html">CFP RCTX</a>, <a href="/latest_sysreg/AArch64-dvp-rctx.html">DVP RCTX</a> and <a href="/latest_sysreg/AArch64-cpp-rctx.html">CPP RCTX</a> instructions are implemented.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
-          <p>As <span class="binarynumber">0b0001</span>, and <a href="AArch64-cosp-rctx.html">COSP RCTX</a> instruction is implemented.</p>
+          <p>As <span class="binarynumber">0b0001</span>, and <a href="/latest_sysreg/AArch64-cosp-rctx.html">COSP RCTX</a> instruction is implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_SPECRES</span> implements the functionality identified by <span class="binarynumber">0b0001</span>.</p>
 <p><span class="xref">FEAT_SPECRES2</span> implements the functionality identified by <span class="binarynumber">0b0010</span>.</p>
@@ -112,7 +112,7 @@
           <p>Generic Authentication using an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> algorithm is implemented. This includes the <span class="instruction">PACGA</span> instruction.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>When this field is nonzero, <span class="xref">FEAT_PACIMP</span> is implemented.</p>
-<p>If the value of ID_AA64ISAR1_EL1.GPA is nonzero, or the value of <a href="AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.GPA3 is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-27_24">GPA, bits [27:24]:
+<p>If the value of ID_AA64ISAR1_EL1.GPA is nonzero, or the value of <a href="/latest_sysreg/AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.GPA3 is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-27_24">GPA, bits [27:24]:
       </h4><div class="field">
       <p>Indicates whether the QARMA5 algorithm is implemented in the PE for generic code authentication in AArch64 state.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>GPA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
@@ -122,7 +122,7 @@
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_PACQARMA5</span> implements the functionality identified by <span class="binarynumber">0b0001</span>.</p>
 <p>When this field is nonzero, <span class="xref">FEAT_PACQARMA5</span> is implemented.</p>
-<p>If the value of ID_AA64ISAR1_EL1.GPI is nonzero, or the value of <a href="AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.GPA3 is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_20">LRCPC, bits [23:20]:
+<p>If the value of ID_AA64ISAR1_EL1.GPI is nonzero, or the value of <a href="/latest_sysreg/AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.GPA3 is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_20">LRCPC, bits [23:20]:
       </h4><div class="field">
       <p>Indicates support for weaker release consistency, RCpc, based model.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>LRCPC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
@@ -184,7 +184,7 @@
 <p><span class="xref">FEAT_PAuth_LR</span> implements the functionality identified by <span class="binarynumber">0b0110</span>.</p>
 <p>When this field is nonzero, <span class="xref">FEAT_PACIMP</span> is implemented.</p>
 <p>From Armv8.6, the values <span class="binarynumber">0b0001</span> and <span class="binarynumber">0b0010</span> are not permitted.</p>
-<p>If the value of ID_AA64ISAR1_EL1.APA is nonzero, or the value of <a href="AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.APA3 is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_4">APA, bits [7:4]:
+<p>If the value of ID_AA64ISAR1_EL1.APA is nonzero, or the value of <a href="/latest_sysreg/AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.APA3 is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_4">APA, bits [7:4]:
       </h4><div class="field">
       <p>Indicates whether the QARMA5 algorithm is implemented in the PE for address authentication, in AArch64 state. This applies to all Pointer Authentication instructions other than the <span class="instruction">PACGA</span> instruction.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>APA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
@@ -210,15 +210,15 @@
 <p><span class="xref">FEAT_PAuth_LR</span> implements the functionality identified by <span class="binarynumber">0b0110</span>.</p>
 <p>When this field is nonzero, <span class="xref">FEAT_PACQARMA5</span> is implemented.</p>
 <p>From Armv8.6, the values <span class="binarynumber">0b0001</span> and <span class="binarynumber">0b0010</span> are not permitted.</p>
-<p>If the value of ID_AA64ISAR1_EL1.API is nonzero, or the value of <a href="AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.APA3 is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">DPB, bits [3:0]:
+<p>If the value of ID_AA64ISAR1_EL1.API is nonzero, or the value of <a href="/latest_sysreg/AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.APA3 is nonzero, this field must have the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">DPB, bits [3:0]:
       </h4><div class="field">
-      <p>Data Persistence writeback. Indicates support for the <a href="AArch64-dc-cvap.html">DC CVAP</a> and <a href="AArch64-dc-cvadp.html">DC CVADP</a> instructions in AArch64 state.</p>
+      <p>Data Persistence writeback. Indicates support for the <a href="/latest_sysreg/AArch64-dc-cvap.html">DC CVAP</a> and <a href="/latest_sysreg/AArch64-dc-cvadp.html">DC CVADP</a> instructions in AArch64 state.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>DPB</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p><a href="AArch64-dc-cvap.html">DC CVAP</a> not supported.</p>
+          <p><a href="/latest_sysreg/AArch64-dc-cvap.html">DC CVAP</a> not supported.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-dc-cvap.html">DC CVAP</a> supported.</p>
+          <p><a href="/latest_sysreg/AArch64-dc-cvap.html">DC CVAP</a> supported.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
-          <p><a href="AArch64-dc-cvap.html">DC CVAP</a> and <a href="AArch64-dc-cvadp.html">DC CVADP</a> supported.</p>
+          <p><a href="/latest_sysreg/AArch64-dc-cvap.html">DC CVAP</a> and <a href="/latest_sysreg/AArch64-dc-cvadp.html">DC CVADP</a> supported.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_DPB</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p><span class="xref">FEAT_DPB2</span> implements the functionality identified by the value <span class="binarynumber">0b0010</span>.</p>

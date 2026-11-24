@@ -84,14 +84,14 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-4_0">IDbits, bits [4:0]:
       </h4><div class="field"><p>The number of bits of LPI INTID supported, minus one, by the LPI Configuration table starting at Physical_Address.</p>
-<p>If the value of this field is larger than the value of <a href="ext-gicd_typer.html">GICD_TYPER</a>.IDbits, the <a href="ext-gicd_typer.html">GICD_TYPER</a>.IDbits value applies.</p>
+<p>If the value of this field is larger than the value of <a href="/latest_sysreg/ext-gicd_typer.html">GICD_TYPER</a>.IDbits, the <a href="/latest_sysreg/ext-gicd_typer.html">GICD_TYPER</a>.IDbits value applies.</p>
 <p>If the value of this field is less than <span class="binarynumber">0b1101</span>, indicating that the largest INTID is less than 8192 (the smallest LPI interrupt ID), the GIC will behave as if all physical LPIs are out of range.</p><p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing GICR_PROPBASER</h2>
-        <p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether GICR_PROPBASER can be set to different values on different Redistributors. <a href="ext-gicr_typer.html">GICR_TYPER</a>.CommonLPIAff identifies the Redistributors that must have GICR_PROPBASER set to the same values whenever <a href="ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1.</p>
+        <p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether GICR_PROPBASER can be set to different values on different Redistributors. <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.CommonLPIAff identifies the Redistributors that must have GICR_PROPBASER set to the same values whenever <a href="/latest_sysreg/ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1.</p>
 
       
-        <p>Setting different values in different copies of GICR_PROPBASER on Redistributors that are required to use a common LPI Configuration table when <a href="ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1 leads to <span class="arm-defined-word">UNPREDICTABLE</span> behavior.</p>
+        <p>Setting different values in different copies of GICR_PROPBASER on Redistributors that are required to use a common LPI Configuration table when <a href="/latest_sysreg/ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1 leads to <span class="arm-defined-word">UNPREDICTABLE</span> behavior.</p>
 
       
         <p>Other restrictions apply when a Redistributor caches information from GICR_PROPBASER. For more information, see <span class="xref">'LPI Configuration tables' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>.</p>

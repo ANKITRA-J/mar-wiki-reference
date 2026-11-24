@@ -3,7 +3,7 @@
 <title>PAR | Jon's Arm Reference</title><meta name="description" content="Returns the output address (OA) from an Address translation instruction that executed successfully, or fault information if the instruction did not execute successfully."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">PAR</h1><p class="insn_subtitle" data-pagefind-body="1">Physical Address Register</p><div data-pagefind-body="1">
         <p>Returns the output address (OA) from an Address translation instruction that executed successfully, or fault information if the instruction did not execute successfully.</p>
-      </div><h3>Configuration</h3><p>This register is banked between PAR and PAR_S and PAR_NS.<br></br></p><p>AArch32 System register PAR bits [63:0] are architecturally mapped to AArch64 System register <a href="AArch64-par_el1.html">PAR_EL1[63:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to PAR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>This register is banked between PAR and PAR_S and PAR_NS.<br></br></p><p>AArch32 System register PAR bits [63:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-par_el1.html">PAR_EL1[63:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to PAR are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>PAR is a 64-bit register that can also be accessed as a 32-bit value. If it is accessed as a 32-bit register, accesses read and write bits[31:0] and do not modify bits[63:32].</p>
 
       
@@ -15,7 +15,7 @@
       
         <ul>
 <li>When the PE is not in Hyp mode and is using the Short-descriptor translation table format.
-</li><li>When the PE is in Hyp mode and executes an <a href="AArch32-ats12nsopr.html">ATS12NSOPR</a>, <a href="AArch32-ats12nsopw.html">ATS12NSOPW</a>, <a href="AArch32-ats12nsour.html">ATS12NSOUR</a>, or <a href="AArch32-ats12nsouw.html">ATS12NSOUW</a> instruction and the value of <a href="AArch32-hcr.html">HCR</a>.VM is 0 and the value of <a href="AArch32-ttbcr.html">TTBCR</a>.EAE is 0.
+</li><li>When the PE is in Hyp mode and executes an <a href="/latest_sysreg/AArch32-ats12nsopr.html">ATS12NSOPR</a>, <a href="/latest_sysreg/AArch32-ats12nsopw.html">ATS12NSOPW</a>, <a href="/latest_sysreg/AArch32-ats12nsour.html">ATS12NSOUR</a>, or <a href="/latest_sysreg/AArch32-ats12nsouw.html">ATS12NSOUW</a> instruction and the value of <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.VM is 0 and the value of <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE is 0.
 </li></ul>
 
       
@@ -27,12 +27,12 @@
       
         <ul>
 <li>When using the Long-descriptor translation table format.
-</li><li>If the stage 1 address translation is disabled and <a href="AArch32-ttbcr.html">TTBCR</a>.EAE is set to 1.
+</li><li>If the stage 1 address translation is disabled and <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE is set to 1.
 </li><li>In an implementation that includes EL2, for the result of an ATS1Cxx instruction performed from Hyp mode.
 </li></ul>
 
       
-        <p>For PL1&amp;0 stage 1 translations, <a href="AArch32-ttbcr.html">TTBCR</a>.EAE selects the translation table format.</p>
+        <p>For PL1&amp;0 stage 1 translations, <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE selects the translation table format.</p>
       <h3>Attributes</h3>
         <p>PAR is a 64-bit register.</p>
 
@@ -173,13 +173,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-6_6">FS[5], bit [6]:
-      </h4><div class="field"><p>Fault status bits, External abort type. Provides an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> classification of an External abort. Values are as in the <a href="AArch32-dfsr.html">DFSR</a>.ExT field when using the Short-descriptor translation table format.</p>
+      </h4><div class="field"><p>Fault status bits, External abort type. Provides an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> classification of an External abort. Values are as in the <a href="/latest_sysreg/AArch32-dfsr.html">DFSR</a>.ExT field when using the Short-descriptor translation table format.</p>
 <p>In an implementation that does not provide any classification of External aborts, this bit is <span class="arm-defined-word">RES0</span>.</p>
 <p>For aborts other than External aborts this bit always returns 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-5_1">FS[4:0], bits [5:1]:
       </h4><div class="field">
-      <p>Fault status bits. Values are as in the <a href="AArch32-dfsr.html">DFSR</a>.FS field when using the Short-descriptor translation table format.</p>
+      <p>Fault status bits. Values are as in the <a href="/latest_sysreg/AArch32-dfsr.html">DFSR</a>.FS field when using the Short-descriptor translation table format.</p>
     <table class="valuetable"><tr><th>FS[4:0]</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b00001</td><td>
           <p>Alignment fault.</p>
         </td><td></td></tr><tr><td class="bitfield">0b00011</td><td>
@@ -227,7 +227,7 @@
 <li>Memory attribute fields are permitted to report the resulting attributes, as determined by any permitted implementation choices and any applicable configuration bits, instead of reporting the values that appear in the Translation table descriptors. This applies to the ATTR and SH fields.
 </li><li>See the NS bit description for constraints on the value it returns.
 </li></ul></div><h4 id="fieldset_2-63_56">ATTR, bits [63:56]:
-      </h4><div class="field"><p>Memory attributes for the returned output address. This field uses the same encoding as the Attr&lt;n&gt; fields in <a href="AArch32-mair0.html">MAIR0</a> and <a href="AArch32-mair1.html">MAIR1</a>.</p>
+      </h4><div class="field"><p>Memory attributes for the returned output address. This field uses the same encoding as the Attr&lt;n&gt; fields in <a href="/latest_sysreg/AArch32-mair0.html">MAIR0</a> and <a href="/latest_sysreg/AArch32-mair1.html">MAIR1</a>.</p>
 <p>The value returned in this field can be the resulting attribute, as determined by any permitted implementation choices and any applicable configuration bits, instead of the value that appears in the Translation table descriptor.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_2-55_40">Bits [55:40]:
@@ -326,7 +326,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_3-6_1">FST, bits [6:1]:
       </h4><div class="field">
-      <p>Fault status field. Values are as in the <a href="AArch32-dfsr.html">DFSR</a>.STATUS and <a href="AArch32-ifsr.html">IFSR</a>.STATUS fields when using the Long-descriptor translation table format.</p>
+      <p>Fault status field. Values are as in the <a href="/latest_sysreg/AArch32-dfsr.html">DFSR</a>.STATUS and <a href="/latest_sysreg/AArch32-ifsr.html">IFSR</a>.STATUS fields when using the Long-descriptor translation table format.</p>
     <table class="valuetable"><tr><th>FST</th><th>Meaning</th><th>Applies when</th></tr><tr><td class="bitfield">0b000000</td><td>
           <p>Address size fault in translation table base register.</p>
         </td><td></td></tr><tr><td class="bitfield">0b000001</td><td>

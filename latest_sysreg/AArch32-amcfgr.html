@@ -6,7 +6,7 @@
 
       
         <p>Provides information on supported features, the number of counter groups implemented, the total number of activity monitor event counters implemented, and the size of the counters. AMCFGR is applicable to both the architected and the auxiliary counter groups.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register AMCFGR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-amcfgr_el0.html">AMCFGR_EL0[31:0]</a>.</p><p>AArch32 System register AMCFGR bits [31:0] are architecturally mapped to External register <a href="amu.amcfgr.html">AMCFGR[31:0]</a>.</p><p>This register is present only when FEAT_AMUv1 is implemented and FEAT_AA32 is implemented. Otherwise, direct accesses to AMCFGR are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch32 System register AMCFGR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-amcfgr_el0.html">AMCFGR_EL0[31:0]</a>.</p><p>AArch32 System register AMCFGR bits [31:0] are architecturally mapped to External register <a href="/latest_sysreg/amu.amcfgr.html">AMCFGR[31:0]</a>.</p><p>This register is present only when FEAT_AMUv1 is implemented and FEAT_AA32 is implemented. Otherwise, direct accesses to AMCFGR are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>AMCFGR is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="4"><a href="#fieldset_0-31_28">NCG</a></td><td class="lr" colspan="3"><a href="#fieldset_0-27_25">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_24">HDBG</a></td><td class="lr" colspan="10"><a href="#fieldset_0-23_14">RAZ</a></td><td class="lr" colspan="6"><a href="#fieldset_0-13_8">SIZE</a></td><td class="lr" colspan="8"><a href="#fieldset_0-7_0">N</a></td></tr></tbody></table><h4 id="fieldset_0-31_28">NCG, bits [31:28]:
       </h4><div class="field">
@@ -23,9 +23,9 @@
     </div><h4 id="fieldset_0-24_24">HDBG, bit [24]:
       </h4><div class="field"><p>Halt-on-debug supported.</p>
 <p>This feature must be supported, and so this bit is 1.</p><p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HDBG</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch32-amcr.html">AMCR</a>.HDBG is <span class="arm-defined-word">RES0</span>.</p>
+          <p><a href="/latest_sysreg/AArch32-amcr.html">AMCR</a>.HDBG is <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch32-amcr.html">AMCR</a>.HDBG is read/write.</p>
+          <p><a href="/latest_sysreg/AArch32-amcr.html">AMCR</a>.HDBG is read/write.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_14">Bits [23:14]:
       </h4><div class="field">
       <p>Reserved, RAZ.</p>
@@ -36,8 +36,8 @@
       <p>Reads as <span class="binarynumber">0b111111</span>.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_0">N, bits [7:0]:
       </h4><div class="field"><p>Defines the number of activity monitor event counters implemented in all groups.</p>
-<p>If <span class="xref">FEAT_AMUv1p1</span> is not implemented, the value of N is one less than the sum of <a href="amu.amcgcr.html">AMCGCR</a>.CG1NC and <a href="amu.amcgcr.html">AMCGCR</a>.CG0NC.</p>
-<p>If <span class="xref">FEAT_AMUv1p1</span> is implemented, then bits [15:0] of AMCG1IDR_EL0 define which auxiliary counters are implemented. The value of N is one less than the sum of <a href="amu.amcgcr.html">AMCGCR</a>.CG0NC and the number of auxiliary counters implemented.</p>
+<p>If <span class="xref">FEAT_AMUv1p1</span> is not implemented, the value of N is one less than the sum of <a href="/latest_sysreg/amu.amcgcr.html">AMCGCR</a>.CG1NC and <a href="/latest_sysreg/amu.amcgcr.html">AMCGCR</a>.CG0NC.</p>
+<p>If <span class="xref">FEAT_AMUv1p1</span> is implemented, then bits [15:0] of AMCG1IDR_EL0 define which auxiliary counters are implemented. The value of N is one less than the sum of <a href="/latest_sysreg/amu.amcgcr.html">AMCGCR</a>.CG0NC and the number of auxiliary counters implemented.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRC{&lt;c&gt;}{&lt;q&gt;} &lt;coproc&gt;, {#}&lt;opc1&gt;, &lt;Rt&gt;, &lt;CRn&gt;, &lt;CRm&gt;{, {#}&lt;opc2&gt;}</p></div></div><p style="text-align: right">
       (coproc = 0b1111, opc1 = 0b000, CRn = 0b1101, CRm = 0b0010, opc2 = 0b001)

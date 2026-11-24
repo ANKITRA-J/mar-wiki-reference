@@ -67,7 +67,7 @@
         </td></tr></table><p>All other values are reserved.</p>
 <p>Reserved values identify an unsupported format and behave as described in Reserved values in System and memory-mapped registers and translation table entries.</p>
 <p>Additionally, FP8 instructions are permitted to set an FP8 result with an unsupported format to <span class="hexnumber">0xFF</span> and signal an Invalid Operation floating-point exception.</p>
-<p>It is software's responsibility to check that a format value is supported in <a href="AArch64-id_aa64fpfr0_el1.html">ID_AA64FPFR0_EL1</a>[7:0], before writing it to this field.</p>
+<p>It is software's responsibility to check that a format value is supported in <a href="/latest_sysreg/AArch64-id_aa64fpfr0_el1.html">ID_AA64FPFR0_EL1</a>[7:0], before writing it to this field.</p>
 <p>For more information about the FP8 formats, see the OCP 8-bit Floating Point Specification (OFP8).</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-5_3">F8S2, bits [5:3]:
@@ -80,7 +80,7 @@
         </td></tr></table><p>All other values are reserved.</p>
 <p>Reserved values identify an unsupported format and behave as described in Reserved values in System and memory-mapped registers and translation table entries.</p>
 <p>Additionally FP8 instructions are permitted to treat FP8 input values with an unsupported format as a signaling NaN.</p>
-<p>It is software's responsibility to check that a format value is supported in <a href="AArch64-id_aa64fpfr0_el1.html">ID_AA64FPFR0_EL1</a>[7:0], before writing it to this field.</p>
+<p>It is software's responsibility to check that a format value is supported in <a href="/latest_sysreg/AArch64-id_aa64fpfr0_el1.html">ID_AA64FPFR0_EL1</a>[7:0], before writing it to this field.</p>
 <p>For more information about the FP8 formats, see the OCP 8-bit Floating Point Specification (OFP8).</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_0">F8S1, bits [2:0]:

@@ -62,16 +62,16 @@ let imm : bits(24) = if sh == '0' then Zeros{12}::imm12 else imm12::Zeros{12};</
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode">let operand1 : bits(datasize) = if n == 31 then <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{datasize}() else <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(n);
+      <p class="pseudocode">let operand1 : bits(datasize) = if n == 31 then <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{datasize}() else <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(n);
 let operand2 : bits(datasize) = NOT ZeroExtend{datasize}(imm);
 
 var result : bits(datasize);
-(result, -) = <a href="shared_pseudocode.html#func_AddWithCarry_4" title="">AddWithCarry</a>{datasize}(operand1, operand2, '1');
+(result, -) = <a href="/latest_aarch64/shared_pseudocode.html#func_AddWithCarry_4" title="">AddWithCarry</a>{datasize}(operand1, operand2, '1');
 
 if d == 31 then
-    <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}() = ZeroExtend{64}(result);
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}() = ZeroExtend{64}(result);
 else
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(d) = result;
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(d) = result;
 end;</p></div>
   <h2>Operational information</h2>
     

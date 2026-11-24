@@ -5,7 +5,7 @@
         <p>Provides the INTID of the highest priority pending Group 0 virtual interrupt in the List registers.</p>
 
       
-        <p>This register corresponds to the physical CPU interface register <a href="ext-gicc_hppir.html">GICC_HPPIR</a>.</p>
+        <p>This register corresponds to the physical CPU interface register <a href="/latest_sysreg/ext-gicc_hppir.html">GICC_HPPIR</a>.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv3_LEGACY is implemented and EL2 is implemented. Otherwise, direct accesses to GICV_HPPIR are <span class="arm-defined-word">RES0</span>.</p>
         <p>This register is available when the GIC implementation supports interrupt virtualization.</p>
       <h3>Attributes</h3>
@@ -20,18 +20,18 @@
 <li>Bits [23:13] are <span class="arm-defined-word">RES0</span>.
 </li><li>For SGIs, bits [12:10] identify the CPU interface corresponding to the source PE. For all other interrupts these bits are <span class="arm-defined-word">RES0</span>.
 </li></ul></div><h4>Additional information</h4><div class="text_after_fields"><p>Reads of the GICC_HPPIR that do not return a valid INTID return a spurious INTID, 1022 or 1023. See <span class="xref">'Special INTIDs' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>.</p>
-<table class="valuetable"><thead><tr><th>Highest priority pending interrupt Group</th><th>GICV_HPPIR read</th><th><a href="ext-gicv_ctlr.html">GICV_CTLR</a>.AckCtl</th><th>Returned INTID</th></tr></thead><tbody><tr><td>1</td><td>Non-secure</td><td>x</td><td>ID of Group 1 interrupt</td></tr><tr><td>1</td><td>Secure</td><td>0</td><td>1022</td></tr><tr><td>1</td><td>Secure</td><td>1</td><td>ID of Group 1 interrupt</td></tr><tr><td>0</td><td>Non-secure</td><td>x</td><td>1023</td></tr><tr><td>0</td><td>Secure</td><td>x</td><td>ID of Group 0 interrupt</td></tr><tr><td>No pending interrupts</td><td>x</td><td>x</td><td>1023</td></tr></tbody></table>
+<table class="valuetable"><thead><tr><th>Highest priority pending interrupt Group</th><th>GICV_HPPIR read</th><th><a href="/latest_sysreg/ext-gicv_ctlr.html">GICV_CTLR</a>.AckCtl</th><th>Returned INTID</th></tr></thead><tbody><tr><td>1</td><td>Non-secure</td><td>x</td><td>ID of Group 1 interrupt</td></tr><tr><td>1</td><td>Secure</td><td>0</td><td>1022</td></tr><tr><td>1</td><td>Secure</td><td>1</td><td>ID of Group 1 interrupt</td></tr><tr><td>0</td><td>Non-secure</td><td>x</td><td>1023</td></tr><tr><td>0</td><td>Secure</td><td>x</td><td>ID of Group 0 interrupt</td></tr><tr><td>No pending interrupts</td><td>x</td><td>x</td><td>1023</td></tr></tbody></table>
 <p>If the CPU interface supports only a single Security state, the entries that apply to Secure reads describe the behavior.</p></div><h2>Accessing GICV_HPPIR</h2>
         <p>This register is used only when System register access is not enabled. When System register access is enabled:</p>
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-icc_hppir0.html">ICC_HPPIR0</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-icc_hppir0_el1.html">ICC_HPPIR0_EL1</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-icc_hppir0.html">ICC_HPPIR0</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-icc_hppir0_el1.html">ICC_HPPIR0_EL1</a> provides equivalent functionality.
 </li></ul>
 
       
-        <p>This register is used for Group 0 interrupts only. <a href="ext-gicv_ahppir.html">GICV_AHPPIR</a> provides equivalent functionality for Group 1 interrupts.</p>
+        <p>This register is used for Group 0 interrupts only. <a href="/latest_sysreg/ext-gicv_ahppir.html">GICV_AHPPIR</a> provides equivalent functionality for Group 1 interrupts.</p>
 
       
         <p>When affinity routing is enabled, it is a programming error to use memory-mapped registers to access the GIC.</p>

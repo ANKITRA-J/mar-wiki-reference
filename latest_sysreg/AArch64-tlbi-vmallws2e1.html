@@ -12,17 +12,17 @@
 </li><li>
 <p>If <span class="xref">FEAT_RME</span> is implemented, one of the following applies:</p>
 <ul>
-<li>If <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 0}, then:<ul>
+<li>If <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 0}, then:<ul>
 <li>The entry would be required to translate an address using the Secure EL1&amp;0 translation regime.
 </li><li>If <span class="xref">FEAT_SEL2</span> is implemented and enabled, the entry would be used with the current VMID.
 </li></ul>
 
-</li><li>If <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 1}, then:<ul>
+</li><li>If <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 1}, then:<ul>
 <li>The entry would be required to translate an address using the Non-secure EL1&amp;0 translation regime.
 </li><li>If Non-secure EL2 is implemented, the entry would be used with the current VMID.
 </li></ul>
 
-</li><li>If <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {1, 1}, then:<ul>
+</li><li>If <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {1, 1}, then:<ul>
 <li>The entry would be required to translate an address using the Realm EL1&amp;0 translation regime.
 </li><li>The entry would be used with the current VMID.
 </li></ul>
@@ -32,12 +32,12 @@
 </li><li>
 <p>If <span class="xref">FEAT_RME</span> is not implemented, one of the following applies:</p>
 <ul>
-<li>If <a href="AArch64-scr_el3.html">SCR_EL3</a>.NS is 0, then:<ul>
+<li>If <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS is 0, then:<ul>
 <li>The entry would be required to translate an address using the Secure EL1&amp;0 translation regime.
 </li><li>If <span class="xref">FEAT_SEL2</span> is implemented and enabled, the entry would be used with the current VMID.
 </li></ul>
 
-</li><li>If <a href="AArch64-scr_el3.html">SCR_EL3</a>.NS is 1, then:<ul>
+</li><li>If <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS is 1, then:<ul>
 <li>The entry would be required to translate an address using the Non-secure EL1&amp;0 translation regime.
 </li><li>If Non-secure EL2 is implemented, the entry would be used with the current VMID.
 </li></ul>

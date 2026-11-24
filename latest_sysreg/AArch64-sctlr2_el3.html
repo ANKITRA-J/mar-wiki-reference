@@ -33,7 +33,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Pointer Arithmetic for Multiplication is checked.</p>
         </td></tr></table>
-      <p>If the Effective value of <a href="AArch64-sctlr2_el3.html">SCTLR2_EL3</a>.CPTA is 0, then the Effective value of this field is 0.</p>
+      <p>If the Effective value of <a href="/latest_sysreg/AArch64-sctlr2_el3.html">SCTLR2_EL3</a>.CPTA is 0, then the Effective value of this field is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -89,7 +89,7 @@
 <p>This field is ignored by the PE and treated as one when all of the following are true:</p>
 <ul>
 <li><span class="xref">FEAT_ADERR</span> is implemented.
-</li><li><a href="AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ANERR reads as <span class="binarynumber">0b0010</span>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ANERR reads as <span class="binarynumber">0b0010</span>.
 </li><li>SCTLR2_EL3.EnADERR is 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
@@ -110,7 +110,7 @@
 <p>This field is ignored by the PE and treated as one when all of the following are true:</p>
 <ul>
 <li><span class="xref">FEAT_ANERR</span> is implemented.
-</li><li><a href="AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ADERR reads as <span class="binarynumber">0b0010</span>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ADERR reads as <span class="binarynumber">0b0010</span>.
 </li><li>SCTLR2_EL3.EnANERR is 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, when the highest implemented Exception level is EL3, 
       this field resets
@@ -122,7 +122,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-1_1-1">EMEC, bit [1] <span class="condition">when FEAT_MEC is implemented</span>:
       </h4><div class="field">
-      <p>Enables MEC. When enabled, memory accesses to the Realm physical address space are associated with <a href="AArch64-mecid_rl_a_el3.html">MECID_RL_A_EL3</a>.</p>
+      <p>Enables MEC. When enabled, memory accesses to the Realm physical address space are associated with <a href="/latest_sysreg/AArch64-mecid_rl_a_el3.html">MECID_RL_A_EL3</a>.</p>
     <table class="valuetable"><tr><th>EMEC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>MEC is not enabled for the Realm physical address space.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>

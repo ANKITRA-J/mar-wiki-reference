@@ -15,15 +15,15 @@
 <p>If written, changes the state of the corresponding interrupt from pending to inactive, or from active and pending to active. This has no effect in the following cases:</p>
 <ul>
 <li>If the interrupt is not pending and is not active and pending.
-</li><li>If the interrupt is a level-sensitive interrupt that is pending or active and pending for a reason other than a write to <a href="ext-gicd_ispendrn.html">GICD_ISPENDR&lt;n&gt;</a>. In this case, if the interrupt signal continues to be asserted, the interrupt remains pending or active and pending.
+</li><li>If the interrupt is a level-sensitive interrupt that is pending or active and pending for a reason other than a write to <a href="/latest_sysreg/ext-gicd_ispendrn.html">GICD_ISPENDR&lt;n&gt;</a>. In this case, if the interrupt signal continues to be asserted, the interrupt remains pending or active and pending.
 </li></ul></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing GICR_ICPENDR0</h2>
-        <p>When affinity routing is not enabled for the Security state of an interrupt in GICR_ICPENDR0, the corresponding bit is RAZ/WI and equivalent functionality is provided by <a href="ext-gicd_icpendrn.html">GICD_ICPENDR&lt;n&gt;</a> with n=0.</p>
+        <p>When affinity routing is not enabled for the Security state of an interrupt in GICR_ICPENDR0, the corresponding bit is RAZ/WI and equivalent functionality is provided by <a href="/latest_sysreg/ext-gicd_icpendrn.html">GICD_ICPENDR&lt;n&gt;</a> with n=0.</p>
 
       
-        <p>This register only applies to SGIs (bits [15:0]) and PPIs (bits [31:16]). For SPIs, this functionality is provided by <a href="ext-gicd_icenablern.html">GICD_ICENABLER&lt;n&gt;</a>.</p>
+        <p>This register only applies to SGIs (bits [15:0]) and PPIs (bits [31:16]). For SPIs, this functionality is provided by <a href="/latest_sysreg/ext-gicd_icenablern.html">GICD_ICENABLER&lt;n&gt;</a>.</p>
 
       
-        <p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, bits corresponding to Secure SGIs and PPIs are RAZ/WI to Non-secure accesses.</p>
+        <p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, bits corresponding to Secure SGIs and PPIs are RAZ/WI to Non-secure accesses.</p>
       <h4>GICR_ICPENDR0 can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Redistributor</td><td>SGI_base</td><td><span class="hexnumber">0x0280</span></td><td>GICR_ICPENDR0</td></tr></table><p>Accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

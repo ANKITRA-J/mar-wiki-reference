@@ -114,11 +114,11 @@ let imm : bits(datasize) = ZeroExtend{}(imm5);</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode">if <a href="shared_pseudocode.html#func_ConditionHolds_1" title="">ConditionHolds</a>(condition) then
-    let operand1 : bits(datasize) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(n);
+      <p class="pseudocode">if <a href="/latest_aarch64/shared_pseudocode.html#func_ConditionHolds_1" title="">ConditionHolds</a>(condition) then
+    let operand1 : bits(datasize) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(n);
     let operand2 : bits(datasize) = imm;
 
-    (-, flags) = <a href="shared_pseudocode.html#func_AddWithCarry_4" title="">AddWithCarry</a>{datasize}(operand1, operand2, '0');
+    (-, flags) = <a href="/latest_aarch64/shared_pseudocode.html#func_AddWithCarry_4" title="">AddWithCarry</a>{datasize}(operand1, operand2, '0');
 end;
 PSTATE.[N,Z,C,V] = flags;</p></div>
   <h2>Operational information</h2>

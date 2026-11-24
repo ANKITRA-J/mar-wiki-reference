@@ -37,12 +37,12 @@ let tagchecked : boolean = n != 31;
 
 var rt_unknown : boolean = FALSE;
 if t == t2 then
-    let c : <a href="shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="shared_pseudocode.html#enum_Unpredictable_LDPOVERLAP" title="">Unpredictable_LDPOVERLAP</a>);
-    assert c IN {<a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
+    let c : <a href="/latest_aarch64/shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="/latest_aarch64/shared_pseudocode.html#enum_Unpredictable_LDPOVERLAP" title="">Unpredictable_LDPOVERLAP</a>);
+    assert c IN {<a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
     case c of
-        when <a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    rt_unknown = TRUE;    // result is UNKNOWN
-        when <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
-        when <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    rt_unknown = TRUE;    // result is UNKNOWN
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
     end;
 end;</p>
   <div class="encoding-notes">
@@ -73,31 +73,31 @@ end;</p>
 var data : bits(datasize);
 
 let dbytes : integer{} = datasize DIV 8;
-let privileged : boolean = <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="shared_pseudocode.html#global_EL0" title="">EL0</a>;
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="/latest_aarch64/shared_pseudocode.html#global_EL0" title="">EL0</a>;
 // When elsize is 32, the access is single-copy atomic
 let ispair : boolean = elsize == 64;
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescExLDST_7" title="">CreateAccDescExLDST</a>(<a href="shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, acqrel, tagchecked,
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescExLDST_7" title="">CreateAccDescExLDST</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, acqrel, tagchecked,
                                                      privileged, ispair, t, t2);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
-<a href="shared_pseudocode.html#func_AArch64_SetExclusiveMonitors_3" title="">AArch64_SetExclusiveMonitors</a>(address, dbytes, accdesc);
+<a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_SetExclusiveMonitors_3" title="">AArch64_SetExclusiveMonitors</a>(address, dbytes, accdesc);
 
-data = <a href="shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{datasize}(address, accdesc);
+data = <a href="/latest_aarch64/shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{datasize}(address, accdesc);
 if rt_unknown then
     // ConstrainedUNPREDICTABLE case
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(t)  = ARBITRARY : bits(datasize);        // In this case t = t2
-elsif <a href="shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t)  = data[elsize +: elsize];
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t2) = data[0 +: elsize];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{datasize}(t)  = ARBITRARY : bits(datasize);        // In this case t = t2
+elsif <a href="/latest_aarch64/shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t)  = data[elsize +: elsize];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t2) = data[0 +: elsize];
 else
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t)  = data[0 +: elsize];
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t2) = data[elsize +: elsize];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t)  = data[0 +: elsize];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t2) = data[elsize +: elsize];
 end;</p></div>
   <h2>Operational information</h2>
     

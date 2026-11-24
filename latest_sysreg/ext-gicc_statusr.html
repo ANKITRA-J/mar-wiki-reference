@@ -71,7 +71,7 @@
         <p>This is an optional register. If the register is not implemented, the location is RAZ/WI.</p>
 
       
-        <p>If this register is implemented, <a href="ext-gicv_statusr.html">GICV_STATUSR</a> must also be implemented.</p>
+        <p>If this register is implemented, <a href="/latest_sysreg/ext-gicv_statusr.html">GICV_STATUSR</a> must also be implemented.</p>
       <h4>GICC_STATUSR can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC CPU interface</td><td><span class="hexnumber">0x002C</span></td><td>GICC_STATUSR (S)</td></tr></table><p>Accessible as follows:</p><ul><li>When GICD_CTLR.DS == '0', accesses to this register are <span class="access_level">RW</span>.
           </li><li>When an access is Secure, accesses to this register are <span class="access_level">RW</span>.
           </li></ul><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC CPU interface</td><td><span class="hexnumber">0x002C</span></td><td>GICC_STATUSR (NS)</td></tr></table><p>Accessible as follows:</p><ul><li>When GICD_CTLR.DS == '0', accesses to this register are <span class="access_level">RW</span>.

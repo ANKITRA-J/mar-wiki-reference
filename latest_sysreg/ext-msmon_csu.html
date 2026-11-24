@@ -2,17 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>MSMON_CSU | Jon's Arm Reference</title><meta name="description" content="Accesses the CSU monitor instance selected by MSMON_CFG_MON_SEL."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">MSMON_CSU</h1><p class="insn_subtitle" data-pagefind-body="1">MPAM Cache Storage Usage Monitor Register</p><div data-pagefind-body="1">
-        <p>Accesses the CSU monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+        <p>Accesses the CSU monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
       </div><h3>Configuration</h3><p>The power domain of MSMON_CSU is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.
     </p><p>This register is present only when FEAT_MPAM_MSC_MSMON is implemented and MPAMF_MSMON_IDR.MSMON_CSU == '1'. Otherwise, direct accesses to MSMON_CSU are <span class="arm-defined-word">RES0</span>.</p>
-        <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, the monitor instance register accessed is for the resource instance currently selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the monitor instance of that resource instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
+        <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, the monitor instance register accessed is for the resource instance currently selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the monitor instance of that resource instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
 
       
         <p>If FEAT_MPAMv2_MSC_MON_SEC is implemented, the following statement applies:</p>
 
       
         <ul>
-<li><a href="ext-msmon_csu_rootcr.html">MSMON_CSU_ROOTCR</a>.PAS controls the PAS this register applies to.
+<li><a href="/latest_sysreg/ext-msmon_csu_rootcr.html">MSMON_CSU_ROOTCR</a>.PAS controls the PAS this register applies to.
 </li></ul>
 
       
@@ -21,19 +21,19 @@
       
         <ul>
 <li>
-<p>MSMON_CSU_s is the Secure cache storage usage monitor instance selected by the Secure instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>. </p>
+<p>MSMON_CSU_s is the Secure cache storage usage monitor instance selected by the Secure instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>. </p>
 
 </li><li>
-<p>MSMON_CSU_ns is the Non-secure cache storage usage monitor instance selected by the Non-secure instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>. </p>
+<p>MSMON_CSU_ns is the Non-secure cache storage usage monitor instance selected by the Non-secure instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>. </p>
 
 </li><li>
 <p>If FEAT_RME is implemented, the following statements also apply:</p>
 <ul>
 <li>
-<p>MSMON_CSU_rt is the Root cache storage usage monitor instance selected by the Root instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+<p>MSMON_CSU_rt is the Root cache storage usage monitor instance selected by the Root instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
 
 </li><li>
-<p>MSMON_CSU_rl is the Realm cache storage usage monitor instance selected by the Realm instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+<p>MSMON_CSU_rl is the Realm cache storage usage monitor instance selected by the Realm instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
 
 </li></ul>
 
@@ -52,7 +52,7 @@
           <p>The monitor instance is not ready and the contents of the MSMON_CSU.VALUE field might be inaccurate or otherwise not represent the actual cache storage usage.</p>
         </td></tr></table></div><h4 id="fieldset_0-30_0">VALUE, bits [30:0]:
       </h4><div class="field"><p>Cache storage usage measurement value if MSMON_CSU.NRDY is 0. Invalid if MSMON_CSU.NRDY is 1.</p>
-<p>VALUE is the cache storage usage measured in bytes meeting the criteria set in <a href="ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> and <a href="ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a> for the monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p></div><h2>Accessing MSMON_CSU</h2>
+<p>VALUE is the cache storage usage measured in bytes meeting the criteria set in <a href="/latest_sysreg/ext-msmon_cfg_csu_flt.html">MSMON_CFG_CSU_FLT</a> and <a href="/latest_sysreg/ext-msmon_cfg_csu_ctl.html">MSMON_CFG_CSU_CTL</a> for the monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p></div><h2>Accessing MSMON_CSU</h2>
         <p>If both <span class="xref">FEAT_MPAM</span> and <span class="xref">FEAT_RME</span> are implemented, the following statements apply:</p>
 
       
@@ -143,10 +143,10 @@
       
         <ul>
 <li>
-<p>When RIS is implemented, reads and writes to MSMON_CSU access the cache storage usage monitor monitor instance for the cache resource instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the cache storage usage monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
+<p>When RIS is implemented, reads and writes to MSMON_CSU access the cache storage usage monitor monitor instance for the cache resource instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the cache storage usage monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
 
 </li><li>
-<p>When RIS is not implemented, reads and writes to MSMON_CSU access the cache storage usage monitor monitor instance for the cache storage usage monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
+<p>When RIS is not implemented, reads and writes to MSMON_CSU access the cache storage usage monitor monitor instance for the cache storage usage monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
 
 </li></ul>
 
@@ -155,7 +155,7 @@
 
       
         <ul>
-<li>Reads and writes to MSMON_CSU access the cache storage usage monitor monitor for the cache storage usage monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.
+<li>Reads and writes to MSMON_CSU access the cache storage usage monitor monitor for the cache storage usage monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.
 </li></ul>
       <h4>MSMON_CSU can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_s</td><td><span class="hexnumber">0x0840</span></td><td>MSMON_CSU_s</td></tr></table><p>Accessible as follows:</p><ul><li>When (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented) and MPAMF_CSUMON_IDR.CSU_RO == '0', accesses to this register are <span class="access_level">RW</span>.
           </li><li>When (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented) and MPAMF_CSUMON_IDR.CSU_RO == '1', accesses to this register are <span class="access_level">RO</span>.

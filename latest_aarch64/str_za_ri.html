@@ -23,7 +23,7 @@ PEs that are executing in Streaming SVE mode.</p>
     
     <h3 class="classheading"><a id="iclass_sme"></a>SME class
         <span style="font-size:smaller;"><br></br>(FEAT_SME)
-          </span></h3><p class="desc"></p><div class="regdiagram-32"><table class="regdiagram"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr">1</td><td class="l">1</td><td class="r">1</td><td class="l">0</td><td>0</td><td>0</td><td class="r">0</td><td class="l">1</td><td>0</td><td class="r">0</td><td class="lr">1</td><td class="l">0</td><td>0</td><td>0</td><td>0</td><td class="r">0</td><td class="lr">0</td><td colspan="2" class="lr">Rv</td><td class="l">0</td><td>0</td><td class="r">0</td><td colspan="5" class="lr">Rn</td><td class="lr">0</td><td colspan="4" class="lr">off4</td></tr><tr class="secondrow"><td></td><td colspan="2"></td><td colspan="4"></td><td colspan="3"></td><td class="droppedname">op</td><td colspan="5"></td><td></td><td colspan="2"></td><td colspan="3"></td><td colspan="5"></td><td></td><td colspan="4"></td></tr></tbody></table></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Encoding</h4><a id="str_za_ri_"></a></div><p class="asm-code">STR  ZA[<a href="#Wv__2" title='Is the 32-bit name of the vector select register W12-W15, encoded as "Rv" plus 12.'>&lt;Wv&gt;</a>, <a href="#offs__7" title='Is the vector select offset and optional memory offset, in the range 0 to 15, defaulting to 0, encoded in the "off4" field.'>&lt;offs&gt;</a>], [<a href="#XnSP__3" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #<a href="#offs__7" title='Is the vector select offset and optional memory offset, in the range 0 to 15, defaulting to 0, encoded in the "off4" field.'>&lt;offs&gt;</a>, MUL VL}]</p></div><h4>Decode</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_SME) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+          </span></h3><p class="desc"></p><div class="regdiagram-32"><table class="regdiagram"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr">1</td><td class="l">1</td><td class="r">1</td><td class="l">0</td><td>0</td><td>0</td><td class="r">0</td><td class="l">1</td><td>0</td><td class="r">0</td><td class="lr">1</td><td class="l">0</td><td>0</td><td>0</td><td>0</td><td class="r">0</td><td class="lr">0</td><td colspan="2" class="lr">Rv</td><td class="l">0</td><td>0</td><td class="r">0</td><td colspan="5" class="lr">Rn</td><td class="lr">0</td><td colspan="4" class="lr">off4</td></tr><tr class="secondrow"><td></td><td colspan="2"></td><td colspan="4"></td><td colspan="3"></td><td class="droppedname">op</td><td colspan="5"></td><td></td><td colspan="2"></td><td colspan="3"></td><td colspan="5"></td><td></td><td colspan="4"></td></tr></tbody></table></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Encoding</h4><a id="str_za_ri_"></a></div><p class="asm-code">STR  ZA[<a href="#Wv__2" title='Is the 32-bit name of the vector select register W12-W15, encoded as "Rv" plus 12.'>&lt;Wv&gt;</a>, <a href="#offs__7" title='Is the vector select offset and optional memory offset, in the range 0 to 15, defaulting to 0, encoded in the "off4" field.'>&lt;offs&gt;</a>], [<a href="#XnSP__3" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #<a href="#offs__7" title='Is the vector select offset and optional memory offset, in the range 0 to 15, defaulting to 0, encoded in the "off4" field.'>&lt;offs&gt;</a>, MUL VL}]</p></div><h4>Decode</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_SME) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let n : integer = UInt(Rn);
 let v : integer = UInt('011'::Rv);
 let offset : integer = UInt(off4);</p>
@@ -41,35 +41,35 @@ let offset : integer = UInt(off4);</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode"><a href="shared_pseudocode.html#func_CheckSMEAndZAEnabled_0" title="">CheckSMEAndZAEnabled</a>();
-let SVL : integer{} = <a href="shared_pseudocode.html#func_CurrentSVL_0" title="">CurrentSVL</a>();
+      <p class="pseudocode"><a href="/latest_aarch64/shared_pseudocode.html#func_CheckSMEAndZAEnabled_0" title="">CheckSMEAndZAEnabled</a>();
+let SVL : integer{} = <a href="/latest_aarch64/shared_pseudocode.html#func_CurrentSVL_0" title="">CurrentSVL</a>();
 let dim : integer{} = SVL DIV 8;
 var base : bits(64);
 let moffs : integer = offset * dim;
 var src : bits(SVL);
-let vbase : bits(32) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(v);
+let vbase : bits(32) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(v);
 let vec : integer = (UInt(vbase) + offset) MOD dim;
 let contiguous : boolean = TRUE;
 let nontemporal : boolean = FALSE;
 let tagchecked : boolean = n != 31;
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescSME_4" title="">CreateAccDescSME</a>(<a href="shared_pseudocode.html#enum_MemOp_STORE" title="">MemOp_STORE</a>, nontemporal, contiguous,
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescSME_4" title="">CreateAccDescSME</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_STORE" title="">MemOp_STORE</a>, nontemporal, contiguous,
                                                   tagchecked);
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    base = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    base = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    base = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    base = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
-src = <a href="shared_pseudocode.html#accessor_ZAvector_2" title="">ZAvector</a>{SVL}(vec);
-var addr : bits(64) = <a href="shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(base, moffs, accdesc);
+src = <a href="/latest_aarch64/shared_pseudocode.html#accessor_ZAvector_2" title="">ZAvector</a>{SVL}(vec);
+var addr : bits(64) = <a href="/latest_aarch64/shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(base, moffs, accdesc);
 let aligned : boolean = IsAlignedSize(base, 16);
-if !aligned &amp;&amp; <a href="shared_pseudocode.html#func_AlignmentEnforced_0" title="">AlignmentEnforced</a>() then
-    let fault : <a href="shared_pseudocode.html#type_FaultRecord" title="">FaultRecord</a> = <a href="shared_pseudocode.html#func_AlignmentFault_2" title="">AlignmentFault</a>(accdesc, addr);
-    <a href="shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(fault);
+if !aligned &amp;&amp; <a href="/latest_aarch64/shared_pseudocode.html#func_AlignmentEnforced_0" title="">AlignmentEnforced</a>() then
+    let fault : <a href="/latest_aarch64/shared_pseudocode.html#type_FaultRecord" title="">FaultRecord</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_AlignmentFault_2" title="">AlignmentFault</a>(accdesc, addr);
+    <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_Abort_1" title="">AArch64_Abort</a>(fault);
 end;
 for e = 0 to dim-1 do
-    <a href="shared_pseudocode.html#accessor_AArch64_MemSingle_4" title="">AArch64_MemSingle</a>{8}(addr, accdesc, aligned) = src[e*:8];
-    addr = <a href="shared_pseudocode.html#func_AddressIncrement_3" title="">AddressIncrement</a>(addr, 1, accdesc);
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_AArch64_MemSingle_4" title="">AArch64_MemSingle</a>{8}(addr, accdesc, aligned) = src[e*:8];
+    addr = <a href="/latest_aarch64/shared_pseudocode.html#func_AddressIncrement_3" title="">AddressIncrement</a>(addr, 1, accdesc);
 end;</p></div>
   <h2>Operational information</h2>
     

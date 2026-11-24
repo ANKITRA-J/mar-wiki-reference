@@ -15,7 +15,7 @@
     </div><h4 id="fieldset_0-2_2">Bit [2]:
       </h4><div class="field">
       <p>Reserved, RAZ.</p>
-    <p>Not thirty-two bit. Describes the size of the <a href="ext-trblar.html">TRBLAR</a> register.</p>
+    <p>Not thirty-two bit. Describes the size of the <a href="/latest_sysreg/ext-trblar.html">TRBLAR</a> register.</p>
 <p>This field reads-as-zero.</p></div><h4 id="fieldset_0-1_1">Bit [1]:
       </h4><div class="field">
       <p>Reserved, RAZ.</p>
@@ -23,7 +23,7 @@
       </h4><div class="field">
       <p>Indicates the Software Lock is not implemented.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>SLI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Software Lock is not implemented. Writes to the <a href="ext-trblar.html">TRBLAR</a> are ignored.</p>
+          <p>Software Lock is not implemented. Writes to the <a href="/latest_sysreg/ext-trblar.html">TRBLAR</a> are ignored.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Software Lock is implemented.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RAZ/WI</span>.</p></div><h2>Accessing TRBLSR</h2><h4>TRBLSR can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>TRBE</td><td><span class="hexnumber">0xFB4</span></td><td>TRBLSR</td></tr></table><p>Accessible as follows:</p><ul><li>When DoubleLockStatus() or !IsCorePowered(), accesses to this register generate an error response.

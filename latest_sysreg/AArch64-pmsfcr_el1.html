@@ -168,8 +168,8 @@ FL, FT, and FE bits. For example, if PMSFCR_EL1.FE is 1 and PMSFCR_EL1.FT is 1, 
     <table class="valuetable"><tr><th>FDS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Data Source filtering disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Data Source filtering enabled. Samples of load instructions reporting a Data Source not selected by <a href="AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> will not be recorded.</p>
-        </td></tr></table><p>If PMSFCR_EL1.FDS is 1 and <a href="AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> is zero, then no load operations with a Data Source will be recorded.</p>
+          <p>Data Source filtering enabled. Samples of load instructions reporting a Data Source not selected by <a href="/latest_sysreg/AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> will not be recorded.</p>
+        </td></tr></table><p>If PMSFCR_EL1.FDS is 1 and <a href="/latest_sysreg/AArch64-pmsdsfr_el1.html">PMSDSFR_EL1</a> is zero, then no load operations with a Data Source will be recorded.</p>
 <p>Load operations without a Data Source and other sampled operations are unaffected by this field.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-4_4-2"> <span class="condition">Otherwise</span>:
@@ -181,11 +181,11 @@ FL, FT, and FE bits. For example, if PMSFCR_EL1.FE is 1 and PMSFCR_EL1.FT is 1, 
     <table class="valuetable"><tr><th>FnE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Inverted event filtering disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Inverted event filtering enabled. Samples including the events selected by <a href="AArch64-pmsnevfr_el1.html">PMSNEVFR_EL1</a> will not be recorded.</p>
+          <p>Inverted event filtering enabled. Samples including the events selected by <a href="/latest_sysreg/AArch64-pmsnevfr_el1.html">PMSNEVFR_EL1</a> will not be recorded.</p>
         </td></tr></table><p>If any of the following are true, then for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded or the PE behaves as if PMSFCR_EL1.FnE is 0:</p>
 <ul>
-<li>PMSFCR_EL1.FnE is 1 and <a href="AArch64-pmsnevfr_el1.html">PMSNEVFR_EL1</a> is zero.
-</li><li>PMSFCR_EL1.FnE is 1, PMSFCR_EL1.FE is 1, and there exists a value x such that <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[x] is 1 and <a href="AArch64-pmsnevfr_el1.html">PMSNEVFR_EL1</a>.E[x] is 1.
+<li>PMSFCR_EL1.FnE is 1 and <a href="/latest_sysreg/AArch64-pmsnevfr_el1.html">PMSNEVFR_EL1</a> is zero.
+</li><li>PMSFCR_EL1.FnE is 1, PMSFCR_EL1.FE is 1, and there exists a value x such that <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[x] is 1 and <a href="/latest_sysreg/AArch64-pmsnevfr_el1.html">PMSNEVFR_EL1</a>.E[x] is 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-3_3-2"> <span class="condition">Otherwise</span>:
@@ -219,11 +219,11 @@ FL, FT, and FE bits. For example, if PMSFCR_EL1.FE is 1 and PMSFCR_EL1.FT is 1, 
     <table class="valuetable"><tr><th>FE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Event filtering disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Event filtering enabled. Samples not including the events selected by <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a> will not be recorded.</p>
+          <p>Event filtering enabled. Samples not including the events selected by <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a> will not be recorded.</p>
         </td></tr></table><p>If any of the following are true, then for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded or the PE behaves as if PMSFCR_EL1.FE is 0:</p>
 <ul>
-<li>PMSFCR_EL1.FE is 1 and <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a> is zero.
-</li><li><span class="xref">FEAT_SPE_FnE</span> is implemented, PMSFCR_EL1.FnE is 1, PMSFCR_EL1.FE is 1, and there exists a value x such that <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[x] is 1 and <a href="AArch64-pmsnevfr_el1.html">PMSNEVFR_EL1</a>.E[x] is 1.
+<li>PMSFCR_EL1.FE is 1 and <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a> is zero.
+</li><li><span class="xref">FEAT_SPE_FnE</span> is implemented, PMSFCR_EL1.FnE is 1, PMSFCR_EL1.FE is 1, and there exists a value x such that <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[x] is 1 and <a href="/latest_sysreg/AArch64-pmsnevfr_el1.html">PMSNEVFR_EL1</a>.E[x] is 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, PMSFCR_EL1</p></div></div><p style="text-align: right">

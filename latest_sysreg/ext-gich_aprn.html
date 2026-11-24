@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>GICH_APR&lt;n&gt; | Jon's Arm Reference</title><meta name="description" content="These registers track which preemption levels are active in the virtual CPU interface, and indicate the current active priority. Corresponding bits are set to 1 in this register when an interrupt is acknowledged, based on GICH_LR&lt;n&gt;.Priority, and the least significant bit set is cleared on EOI."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">GICH_APR&lt;n&gt;, n = 0 - 3</h1><p class="insn_subtitle" data-pagefind-body="1">Active Priorities Registers</p><div data-pagefind-body="1">
-        <p>These registers track which preemption levels are active in the virtual CPU interface, and indicate the current active priority. Corresponding bits are set to 1 in this register when an interrupt is acknowledged, based on <a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.Priority, and the least significant bit set is cleared on EOI.</p>
+        <p>These registers track which preemption levels are active in the virtual CPU interface, and indicate the current active priority. Corresponding bits are set to 1 in this register when an interrupt is acknowledged, based on <a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.Priority, and the least significant bit set is cleared on EOI.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv3_LEGACY is implemented and EL2 is implemented. Otherwise, direct accesses to GICH_APR&lt;n&gt; are <span class="arm-defined-word">RES0</span>.</p>
         <p>This register is available when the GIC implementation supports interrupt virtualization.</p>
 
       
-        <p>The number of registers required depends on how many bits are implemented in <a href="ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.Priority:</p>
+        <p>The number of registers required depends on how many bits are implemented in <a href="/latest_sysreg/ext-gich_lrn.html">GICH_LR&lt;n&gt;</a>.Priority:</p>
 
       
         <ul>
@@ -48,13 +48,13 @@
       
         <ul>
 <li>In AArch64:<ul>
-<li>For Group 0, <a href="AArch64-ich_ap0rn_el2.html">ICH_AP0R&lt;n&gt;_EL2</a>.
-</li><li>For Group 1, <a href="AArch64-ich_ap1rn_el2.html">ICH_AP1R&lt;n&gt;_EL2</a>.
+<li>For Group 0, <a href="/latest_sysreg/AArch64-ich_ap0rn_el2.html">ICH_AP0R&lt;n&gt;_EL2</a>.
+</li><li>For Group 1, <a href="/latest_sysreg/AArch64-ich_ap1rn_el2.html">ICH_AP1R&lt;n&gt;_EL2</a>.
 </li></ul>
 
 </li><li>In AArch32:<ul>
-<li>For Group 0, <a href="AArch32-ich_ap0rn.html">ICH_AP0R&lt;n&gt;</a>.
-</li><li>For Group 1, <a href="AArch32-ich_ap1rn.html">ICH_AP1R&lt;n&gt;</a>.
+<li>For Group 0, <a href="/latest_sysreg/AArch32-ich_ap0rn.html">ICH_AP0R&lt;n&gt;</a>.
+</li><li>For Group 1, <a href="/latest_sysreg/AArch32-ich_ap1rn.html">ICH_AP1R&lt;n&gt;</a>.
 </li></ul>
 
 </li></ul>

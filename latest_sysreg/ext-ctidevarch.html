@@ -14,7 +14,7 @@
         <p>In an Armv8.5 compliant implementation, the CTI must be CTIv2.</p>
 
       
-        <p>If this register is not implemented, <a href="ext-ctidevaff0.html">CTIDEVAFF0</a> and <a href="ext-ctidevaff1.html">CTIDEVAFF1</a> are also not implemented.</p>
+        <p>If this register is not implemented, <a href="/latest_sysreg/ext-ctidevaff0.html">CTIDEVAFF0</a> and <a href="/latest_sysreg/ext-ctidevaff1.html">CTIDEVAFF1</a> are also not implemented.</p>
       <h3>Attributes</h3>
         <p>CTIDEVARCH is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="11"><a href="#fieldset_0-31_21">ARCHITECT</a></td><td class="lr" colspan="1"><a href="#fieldset_0-20_20">PRESENT</a></td><td class="lr" colspan="4"><a href="#fieldset_0-19_16">REVISION</a></td><td class="lr" colspan="16"><a href="#fieldset_0-15_0">ARCHID</a></td></tr></tbody></table><h4 id="fieldset_0-31_21">ARCHITECT, bits [31:21]:
@@ -33,7 +33,7 @@
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>REVISION</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>First revision.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>As <span class="binarynumber">0b0000</span>, and also adds support for <a href="ext-ctidevctl.html">CTIDEVCTL</a>.</p>
+          <p>As <span class="binarynumber">0b0000</span>, and also adds support for <a href="/latest_sysreg/ext-ctidevctl.html">CTIDEVCTL</a>.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>When <span class="xref">FEAT_DoPD</span> is implemented, the value <span class="binarynumber">0b0000</span> is not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-15_0">ARCHID, bits [15:0]:
       </h4><div class="field"><p>Defines this part to be an Armv8 debug component. For architectures defined by Arm this is further subdivided.</p>

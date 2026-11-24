@@ -26,15 +26,15 @@
 </li></ul>
 
       
-        <p>using the EL2 or EL2&amp;0 translation regime, as determined by the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H, for the Security state.</p>
+        <p>using the EL2 or EL2&amp;0 translation regime, as determined by the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H, for the Security state.</p>
 
       
         <ul>
 <li>
-<p>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is not 1, the entry is from any level of the translation table walk.</p>
+<p>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is not 1, the entry is from any level of the translation table walk.</p>
 
 </li><li>
-<p>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, one of the following applies:</p>
+<p>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, one of the following applies:</p>
 <ul>
 <li>
 <p>The entry is a global entry from the final level of the translation table walk.</p>
@@ -45,7 +45,7 @@
 </li></ul>
 
 </li><li>
-<p>The Security state is indicated by the value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.NS if <span class="xref">FEAT_RME</span> is not implemented, or <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} if <span class="xref">FEAT_RME</span> is implemented.</p>
+<p>The Security state is indicated by the value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS if <span class="xref">FEAT_RME</span> is not implemented, or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} if <span class="xref">FEAT_RME</span> is implemented.</p>
 
 </li></ul>
 

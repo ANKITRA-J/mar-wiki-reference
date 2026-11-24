@@ -6,14 +6,14 @@
 
       
         <ul>
-<li>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is not 1, this register controls stage 1 of the EL2 translation regime, that supports a single VA range, translated using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.
-</li><li>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, this register controls stage 1 of the EL2&amp;0 translation regime, that supports both:<ul>
-<li>A lower VA range, translated using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.
-</li><li>A higher VA range, translated using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.
+<li>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is not 1, this register controls stage 1 of the EL2 translation regime, that supports a single VA range, translated using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.
+</li><li>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, this register controls stage 1 of the EL2&amp;0 translation regime, that supports both:<ul>
+<li>A lower VA range, translated using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.
+</li><li>A higher VA range, translated using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.
 </li></ul>
 
 </li></ul>
-      </div><h3>Configuration</h3><p>AArch64 System register TCR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-htcr.html">HTCR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to TCR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register TCR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-htcr.html">HTCR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to TCR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
 
       
@@ -27,7 +27,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-33_33-1">MTX, bit [33] <span class="condition">when FEAT_MTE_NO_ADDRESS_TAGS is implemented or FEAT_MTE_CANONICAL_TAGS is implemented</span>:
       </h4><div class="field"><p>Extended memory tag checking.</p>
-<p>This field controls address generation and Canonical tagging when EL2 is using AArch64 where the data address would be translated by tables pointed to by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+<p>This field controls address generation and Canonical tagging when EL2 is using AArch64 where the data address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
 <p>This control has an effect regardless of whether stage 1 of the EL2 translation regime is enabled or not.</p><table class="valuetable"><tr><th>MTX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Canonical tagging is disabled.</p>
 <p>This control has no effect on address generation.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>Canonical tagging is enabled.</p>
 <p>Bits[59:56] of a 64-bit VA hold a Logical Address Tag, and all of the following apply:</p>
@@ -56,7 +56,7 @@
 <p>The shareability information of Block and Page descriptors for cacheable locations is determined by TCR_EL2.SH0.</p>
 <p>The minimum value of TCR_EL2.T0SZ is 12. Any memory access using a smaller value generates a stage 1 level 0 translation table fault.</p>
 <p>All calculations of the stage 1 base address are modified for tables of fewer than 8 entries so that the table is aligned to 64 bytes.</p>
-<p>Bits[5:2] of <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> are used to hold bits[51:48] of the output address in all cases.</p>
+<p>Bits[5:2] of <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> are used to hold bits[51:48] of the output address in all cases.</p>
 <div class="note"><p>As <span class="xref">FEAT_LVA</span> must be implemented if Effective value of TCR_EL2.DS is 1, the minimum value of the TCR_EL2.T0SZ field is 12, as determined by that extension.</p></div><p>For the TLBI Range instructions affecting VA, the format of the argument is changed so that bits[36:0] hold BaseADDR[52:16]. For the 4KB translation granule, bits[15:12] of BaseADDR are treated as <span class="binarynumber">0b0000</span>. For the 16KB translation granule, bits[15:14] of BaseADDR are treated as <span class="binarynumber">0b00</span>.</p>
 <div class="note"><p>This forces alignment of the ranges used by the TLBI range instructions.</p></div></td></tr></table>
       <p>This field is <span class="arm-defined-word">RES0</span> for a 64KB translation granule.</p>
@@ -90,7 +90,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>TCR_EL2.TBI applies to Data accesses only.</p>
         </td></tr></table>
-      <p>This affects addresses where the address would be translated by tables pointed to by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>. It has an effect whether the EL2 translation regime is enabled or not.</p>
+      <p>This affects addresses where the address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>. It has an effect whether the EL2 translation regime is enabled or not.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-29_29-2"> <span class="condition">Otherwise</span>:
@@ -154,7 +154,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-24_24-1">HPD, bit [24] <span class="condition">when FEAT_HPDS is implemented</span>:
       </h4><div class="field">
-      <p>Hierarchical Permission Disables. This affects the hierarchical control bits, APTable, PXNTable, and UXNTable, except NSTable, in the translation tables pointed to by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Hierarchical Permission Disables. This affects the hierarchical control bits, APTable, PXNTable, and UXNTable, except NSTable, in the translation tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>HPD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Hierarchical permissions are enabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td><p>Hierarchical permissions are disabled.</p>
@@ -195,12 +195,12 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-20_20">TBI, bit [20]:
-      </h4><div class="field"><p>Top Byte Ignored. Indicates whether the top byte of an address is used for address match for the <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> region, or ignored and used for tagged addresses.</p>
+      </h4><div class="field"><p>Top Byte Ignored. Indicates whether the top byte of an address is used for address match for the <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> region, or ignored and used for tagged addresses.</p>
 <p>For more information, see <span class="xref">'Address tagging'</span>.</p><table class="valuetable"><tr><th>TBI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Top Byte used in the address calculation.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Top Byte ignored in the address calculation.</p>
-        </td></tr></table><p>This affects addresses generated at EL2 using AArch64 where the address would be translated by tables pointed to by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>. It has an effect whether the EL2 translation regime is enabled or not.</p>
+        </td></tr></table><p>This affects addresses generated at EL2 using AArch64 where the address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>. It has an effect whether the EL2 translation regime is enabled or not.</p>
 <p>If <span class="xref">FEAT_PAuth</span> is implemented and TCR_EL2.TBID is 1, then this field only applies to Data accesses.</p>
 <p>If the value of TBI is 1, then bits[63:56] of that target address are also set to 0 before the address is stored in the PC, in the following cases:</p>
 <ul>
@@ -231,15 +231,15 @@
           <p>52 bits, 4PB.</p>
         </td></tr></table><p>The following table captures the output address size represented by the value <span class="binarynumber">0b110</span>:</p>
 <table class="valuetable"><thead><tr><th>ID_AA64MMFR0_EL1.PARange</th><th>Translation Granule</th><th>DS<sup>1</sup></th><th>Represented OA size</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0101</span></td><td>Any</td><td>Any</td><td>48 bits, 256TB</td></tr><tr><td><span class="binarynumber">0b011x</span></td><td>4KB or 16KB</td><td>0</td><td>48 bits, 256TB</td></tr><tr><td><span class="binarynumber">0b011x</span></td><td>4KB or 16KB</td><td>1</td><td>52 bits, 4PB</td></tr><tr><td><span class="binarynumber">0b011x</span></td><td>64KB</td><td>N/A</td><td>52 bits, 4PB</td></tr></tbody></table>
-<p><sup>1</sup> This column represents the value of <a href="AArch64-tcr_el2.html">TCR_EL2</a>.DS.</p>
+<p><sup>1</sup> This column represents the value of <a href="/latest_sysreg/AArch64-tcr_el2.html">TCR_EL2</a>.DS.</p>
 <p>The output address size represented by the value <span class="binarynumber">0b111</span> is the OA size represented by <span class="binarynumber">0b110</span>.</p>
 <p>If 52-bit PA is supported, and the translation table descriptors cannot express an OA larger than 48-bits, then bits[51:48] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by TCR_EL2.</p>
 <p>If 56-bit PA is supported, and the translation table descriptors cannot express an OA larger than 52-bits, then bits[55:52] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by TCR_EL2.</p>
-<p>If the output address size represented by this field is larger than the supported PA size expressed in <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange, then the output address size is treated as being the same as the supported PA size. Arm strongly recommends that software avoids configuring this field to a value representing an output address size larger than the supported PA size.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If the output address size represented by this field is larger than the supported PA size expressed in <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange, then the output address size is treated as being the same as the supported PA size. Arm strongly recommends that software avoids configuring this field to a value representing an output address size larger than the supported PA size.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-15_14">TG0, bits [15:14]:
       </h4><div class="field">
-      <p>Granule size for the <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Granule size for the <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>TG0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>4KB.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -252,7 +252,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-13_12">SH0, bits [13:12]:
       </h4><div class="field">
-      <p>Shareability attribute for memory associated with translation table walks using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Shareability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>SH0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Non-shareable.</p>
         </td></tr><tr><td class="bitfield">0b10</td><td>
@@ -265,7 +265,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-11_10">ORGN0, bits [11:10]:
       </h4><div class="field">
-      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>ORGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Outer Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -278,7 +278,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-9_8">IRGN0, bits [9:8]:
       </h4><div class="field">
-      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>IRGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Inner Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -293,7 +293,7 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-5_0">T0SZ, bits [5:0]:
-      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>. The region size is 2<sup>(64-T0SZ)</sup> bytes.</p>
+      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>. The region size is 2<sup>(64-T0SZ)</sup> bytes.</p>
 <p>The maximum and minimum possible values for T0SZ depend on the level of translation table and the memory translation granule size, as described in the AArch64 Virtual Memory System Architecture chapter. It has an effect on computation of PAC whether the EL2 translation regime is enabled or not.</p>
 <div class="note"><p>For the 4KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented, Effective value of TCR_EL2.DS is 1, and this field is less than 16, the translation table walk begins with a level -1 initial lookup.</p><p>For the 16KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented, Effective value of TCR_EL2.DS is 1, and this field is less than 17, the translation table walk begins with a level 0 initial lookup.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -304,7 +304,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-61_61-1">MTX1, bit [61] <span class="condition">when FEAT_MTE_NO_ADDRESS_TAGS is implemented or FEAT_MTE_CANONICAL_TAGS is implemented</span>:
       </h4><div class="field"><p>Extended memory tag checking.</p>
-<p>This field controls address generation and Canonical tagging when EL0 and EL2 are using AArch64 where the data address would be translated by tables pointed to by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+<p>This field controls address generation and Canonical tagging when EL0 and EL2 are using AArch64 where the data address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
 <p>This control has an effect regardless of whether stage 1 of the EL2&amp;0 translation regime is enabled or not.</p><table class="valuetable"><tr><th>MTX1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Canonical tagging is disabled.</p>
 <p>This control has no effect on address generation.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>Canonical tagging is enabled.</p>
 <p>Bits[59:56] of a 64-bit VA hold a Logical Address Tag, and all of the following apply:</p>
@@ -321,7 +321,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-60_60-1">MTX0, bit [60] <span class="condition">when FEAT_MTE_NO_ADDRESS_TAGS is implemented or FEAT_MTE_CANONICAL_TAGS is implemented</span>:
       </h4><div class="field"><p>Extended memory tag checking.</p>
-<p>This field controls address generation and Canonical tagging when EL0 and EL2 are using AArch64 where the data address would be translated by tables pointed to by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+<p>This field controls address generation and Canonical tagging when EL0 and EL2 are using AArch64 where the data address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
 <p>This control has an effect regardless of whether stage 1 of the EL2&amp;0 translation regime is enabled or not.</p><table class="valuetable"><tr><th>MTX0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Canonical tagging is disabled.</p>
 <p>This control has no effect on address generation.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>Canonical tagging is enabled.</p>
 <p>Bits[59:56] of a 64-bit VA hold a Logical Address Tag, and all of the following apply:</p>
@@ -349,12 +349,12 @@
 <p>Bits[9:8] of Translation table descriptors hold output address[51:50].</p>
 <p>The shareability information of Block and Page descriptors for cacheable locations is determined by:</p>
 <ul>
-<li>TCR_EL2.SH0 if the VA is an address that is translated using tables pointed to by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.
-</li><li>TCR_EL2.SH1 if the VA is an address that is translated using tables pointed to by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.
+<li>TCR_EL2.SH0 if the VA is an address that is translated using tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.
+</li><li>TCR_EL2.SH1 if the VA is an address that is translated using tables pointed to by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.
 </li></ul>
 <p>The minimum value of the TCR_EL2.{T0SZ, T1SZ} fields is 12. Any memory access using a smaller value generates a stage 1 level 0 translation table fault.</p>
 <p>All calculations of the stage 1 base address are modified for tables of fewer than 16 entries so that the table is aligned to 64 bytes.</p>
-<p>Bits[5:2] of <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> or <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> are used to hold bits[51:48] of the output address in all cases.</p>
+<p>Bits[5:2] of <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> or <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> are used to hold bits[51:48] of the output address in all cases.</p>
 <div class="note"><p>As <span class="xref">FEAT_LVA</span> must be implemented if Effective value of TCR_EL2.DS is 1, the minimum value of the TCR_EL2.{T0SZ, T1SZ} fields is 12, as determined by that extension.</p></div><p>For the TLBI Range instructions affecting VA, the format of the argument is changed so that bits[36:0] hold BaseADDR[52:16]. For the 4KB translation granule, bits[15:12] of BaseADDR are treated as <span class="binarynumber">0b0000</span>. For the 16KB translation granule, bits[15:14] of BaseADDR are treated as <span class="binarynumber">0b00</span>.</p>
 <div class="note"><p>This forces alignment of the ranges used by the TLBI range instructions.</p></div></td></tr></table>
       <p>This field is <span class="arm-defined-word">RES0</span> for a 64KB translation granule.</p>
@@ -365,7 +365,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>, and the Effective value of this bit is 0.</p>
     </div><h4 id="fieldset_1-58_58-1">TCMA1, bit [58] <span class="condition">when FEAT_MTE2 is implemented</span>:
       </h4><div class="field">
-      <p>Controls the generation of Unchecked accesses at EL2, and at EL0 if <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE=1, when address[59:55] = <span class="binarynumber">0b11111</span>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
+      <p>Controls the generation of Unchecked accesses at EL2, and at EL0 if <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE=1, when address[59:55] = <span class="binarynumber">0b11111</span>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
     <table class="valuetable"><tr><th>TCMA1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control has no effect on the generation of Unchecked accesses at EL2 or EL0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -381,7 +381,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-57_57-1">TCMA0, bit [57] <span class="condition">when FEAT_MTE2 is implemented</span>:
       </h4><div class="field">
-      <p>Controls the generation of Unchecked accesses at EL2, and at EL0 if <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE=1, when address[59:55] = <span class="binarynumber">0b00000</span>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
+      <p>Controls the generation of Unchecked accesses at EL2, and at EL0 if <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE=1, when address[59:55] = <span class="binarynumber">0b00000</span>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
     <table class="valuetable"><tr><th>TCMA0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control has no effect on the generation of Unchecked accesses at EL2 or EL0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -397,11 +397,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-56_56-1">E0PD1, bit [56] <span class="condition">when FEAT_E0PD is implemented</span>:
       </h4><div class="field">
-      <p>Faulting control for unprivileged access to any address translated by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Faulting control for unprivileged access to any address translated by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>E0PD1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Unprivileged access to any address translated by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> will not generate a fault by this mechanism.</p>
+          <p>Unprivileged access to any address translated by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> will not generate a fault by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Unprivileged access to any address translated by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> will generate a level 0 Translation fault.</p>
+          <p>Unprivileged access to any address translated by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> will generate a level 0 Translation fault.</p>
         </td></tr></table>
       <p>Level 0 Translation faults generated as a result of this field are not counted as TLB misses for performance monitoring. The fault should take the same time to generate, whether the address is present in the TLB or not, to mitigate attacks that use fault timing.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -411,11 +411,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-55_55-1">E0PD0, bit [55] <span class="condition">when FEAT_E0PD is implemented</span>:
       </h4><div class="field">
-      <p>Faulting control for unprivileged access to any address translated by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Faulting control for unprivileged access to any address translated by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>E0PD0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Unprivileged access to any address translated by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> will not generate a fault by this mechanism.</p>
+          <p>Unprivileged access to any address translated by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> will not generate a fault by this mechanism.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Unprivileged access to any address translated by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> will generate a level 0 Translation fault.</p>
+          <p>Unprivileged access to any address translated by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> will generate a level 0 Translation fault.</p>
         </td></tr></table>
       <p>Level 0 Translation faults generated as a result of this field are not counted as TLB misses for performance monitoring. The fault should take the same time to generate, whether the address is present in the TLB or not, to mitigate attacks that use fault timing.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -424,34 +424,34 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-54_54-1">NFD1, bit [54] <span class="condition">when FEAT_SVE is implemented</span>:
-      </h4><div class="field"><p>Non-Fault translation timing Disable when using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
-<p>Controls how a TLB miss is reported in response to a non-fault unprivileged access for a virtual address that is translated using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      </h4><div class="field"><p>Non-Fault translation timing Disable when using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+<p>Controls how a TLB miss is reported in response to a non-fault unprivileged access for a virtual address that is translated using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
 <p>If SVE is implemented, the affected access types include:</p>
 <ul>
 <li>All accesses due to an SVE non-fault contiguous load instruction.
 </li><li>Accesses due to an SVE first-fault gather load instruction that are not for the First active element. Accesses due to an SVE first-fault contiguous load instruction are not affected.
 </li><li>Accesses due to prefetch instructions might be affected, but the effect is not architecturally visible.
 </li></ul><table class="valuetable"><tr><th>NFD1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not affect the handling of a TLB miss on accesses translated using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+          <p>Does not affect the handling of a TLB miss on accesses translated using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>A TLB miss on a virtual address that is translated using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> due to the specified access types causes the access to fail without taking an exception. The amount of time that the failure takes to be handled should not predictively leak whether it was caused by a TLB miss or a Permission fault, to mitigate attacks that use fault timing.</p>
+          <p>A TLB miss on a virtual address that is translated using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> due to the specified access types causes the access to fail without taking an exception. The amount of time that the failure takes to be handled should not predictively leak whether it was caused by a TLB miss or a Permission fault, to mitigate attacks that use fault timing.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.NFD1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-54_54-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-53_53-1">NFD0, bit [53] <span class="condition">when FEAT_SVE is implemented</span>:
-      </h4><div class="field"><p>Non-Fault translation timing Disable when using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
-<p>Controls how a TLB miss is reported in response to a non-fault unprivileged access for a virtual address that is translated using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      </h4><div class="field"><p>Non-Fault translation timing Disable when using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+<p>Controls how a TLB miss is reported in response to a non-fault unprivileged access for a virtual address that is translated using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
 <p>If SVE is implemented, the affected access types include:</p>
 <ul>
 <li>All accesses due to an SVE non-fault contiguous load instruction.
 </li><li>Accesses due to an SVE first-fault gather load instruction that are not for the First active element. Accesses due to an SVE first-fault contiguous load instruction are not affected.
 </li><li>Accesses due to prefetch instructions might be affected, but the effect is not architecturally visible.
 </li></ul><table class="valuetable"><tr><th>NFD0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not affect the handling of a TLB miss on accesses translated using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+          <p>Does not affect the handling of a TLB miss on accesses translated using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>A TLB miss on a virtual address that is translated using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> due to the specified access types causes the access to fail without taking an exception. The amount of time that the failure takes to be handled should not predictively leak whether it was caused by a TLB miss or a Permission fault, to mitigate attacks that use fault timing.</p>
+          <p>A TLB miss on a virtual address that is translated using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> due to the specified access types causes the access to fail without taking an exception. The amount of time that the failure takes to be handled should not predictively leak whether it was caused by a TLB miss or a Permission fault, to mitigate attacks that use fault timing.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.NFD0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-53_53-2"> <span class="condition">Otherwise</span>:
@@ -465,7 +465,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>TCR_EL2.TBI1 applies to Data accesses only.</p>
         </td></tr></table>
-      <p>This affects addresses where the address would be translated by tables pointed to by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
+      <p>This affects addresses where the address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.TBID1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-52_52-2"> <span class="condition">Otherwise</span>:
@@ -478,7 +478,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>TCR_EL2.TBI0 applies to Data accesses only.</p>
         </td></tr></table>
-      <p>This affects addresses where the address would be translated by tables pointed to by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
+      <p>This affects addresses where the address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.TBID0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-51_51-2"> <span class="condition">Otherwise</span>:
@@ -486,11 +486,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-50_50-1">HWU162, bit [50] <span class="condition">when FEAT_HPDS2 is implemented</span>:
       </h4><div class="field">
-      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[62] of the stage 1 translation table Block or Page entry for translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[62] of the stage 1 translation table Block or Page entry for translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>HWU162</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>For translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[62] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[62] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>For translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[62] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD1 is 1.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[62] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD1 is 1.</p>
         </td></tr></table>
       <p>The Effective value of this field is 0 if the value of TCR_EL2.HPD1 is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -500,11 +500,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-49_49-1">HWU161, bit [49] <span class="condition">when FEAT_HPDS2 is implemented</span>:
       </h4><div class="field">
-      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[61] of the stage 1 translation table Block or Page entry for translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[61] of the stage 1 translation table Block or Page entry for translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>HWU161</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>For translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[61] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[61] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>For translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[61] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD1 is 1.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[61] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD1 is 1.</p>
         </td></tr></table>
       <p>The Effective value of this field is 0 if the value of TCR_EL2.HPD1 is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -514,11 +514,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-48_48-1">HWU160, bit [48] <span class="condition">when FEAT_HPDS2 is implemented</span>:
       </h4><div class="field">
-      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[60] of the stage 1 translation table Block or Page entry for translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[60] of the stage 1 translation table Block or Page entry for translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>HWU160</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>For translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[60] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[60] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>For translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[60] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD1 is 1.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[60] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD1 is 1.</p>
         </td></tr></table>
       <p>The Effective value of this field is 0 if the value of TCR_EL2.HPD1 is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -528,11 +528,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-47_47-1">HWU159, bit [47] <span class="condition">when FEAT_HPDS2 is implemented</span>:
       </h4><div class="field">
-      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[59] of the stage 1 translation table Block or Page entry for translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[59] of the stage 1 translation table Block or Page entry for translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>HWU159</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>For translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[59] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[59] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>For translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[59] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD1 is 1.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>, bit[59] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD1 is 1.</p>
         </td></tr></table>
       <p>The Effective value of this field is 0 if the value of TCR_EL2.HPD1 is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -542,11 +542,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-46_46-1">HWU062, bit [46] <span class="condition">when FEAT_HPDS2 is implemented</span>:
       </h4><div class="field">
-      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[62] of the stage 1 translation table Block or Page entry for translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[62] of the stage 1 translation table Block or Page entry for translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>HWU062</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[62] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[62] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[62] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD0 is 1.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[62] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD0 is 1.</p>
         </td></tr></table>
       <p>The Effective value of this field is 0 if the value of TCR_EL2.HPD0 is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -556,11 +556,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-45_45-1">HWU061, bit [45] <span class="condition">when FEAT_HPDS2 is implemented</span>:
       </h4><div class="field">
-      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[61] of the stage 1 translation table Block or Page entry for translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[61] of the stage 1 translation table Block or Page entry for translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>HWU061</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[61] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[61] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[61] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD0 is 1.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[61] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD0 is 1.</p>
         </td></tr></table>
       <p>The Effective value of this field is 0 if the value of TCR_EL2.HPD0 is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -570,11 +570,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-44_44-1">HWU060, bit [44] <span class="condition">when FEAT_HPDS2 is implemented</span>:
       </h4><div class="field">
-      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[60] of the stage 1 translation table Block or Page entry for translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[60] of the stage 1 translation table Block or Page entry for translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>HWU060</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[60] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[60] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[60] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD0 is 1.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[60] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD0 is 1.</p>
         </td></tr></table>
       <p>The Effective value of this field is 0 if the value of TCR_EL2.HPD0 is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -584,11 +584,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-43_43-1">HWU059, bit [43] <span class="condition">when FEAT_HPDS2 is implemented</span>:
       </h4><div class="field">
-      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[59] of the stage 1 translation table Block or Page entry for translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Hardware Use. Indicates <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> hardware use of bit[59] of the stage 1 translation table Block or Page entry for translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>HWU059</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[59] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[59] of each stage 1 translation table Block or Page entry cannot be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>For translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[59] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD0 is 1.</p>
+          <p>For translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>, bit[59] of each stage 1 translation table Block or Page entry can be used by hardware for an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> purpose if the value of TCR_EL2.HPD0 is 1.</p>
         </td></tr></table>
       <p>The Effective value of this field is 0 if the value of TCR_EL2.HPD0 is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -598,7 +598,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-42_42-1">HPD1, bit [42] <span class="condition">when FEAT_HPDS is implemented</span>:
       </h4><div class="field">
-      <p>Hierarchical Permission Disables. This affects the hierarchical control bits, APTable, PXNTable, and UXNTable, except NSTable, in the translation tables pointed to by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Hierarchical Permission Disables. This affects the hierarchical control bits, APTable, PXNTable, and UXNTable, except NSTable, in the translation tables pointed to by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>HPD1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Hierarchical permissions are enabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -612,7 +612,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-41_41-1">HPD0, bit [41] <span class="condition">when FEAT_HPDS is implemented</span>:
       </h4><div class="field">
-      <p>Hierarchical Permission Disables. This affects the hierarchical control bits, APTable, PXNTable, and UXNTable, except NSTable, in the translation tables pointed to by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Hierarchical Permission Disables. This affects the hierarchical control bits, APTable, PXNTable, and UXNTable, except NSTable, in the translation tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>HPD0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Hierarchical permissions are enabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -651,46 +651,46 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-38_38">TBI1, bit [38]:
-      </h4><div class="field"><p>Top Byte Ignored. Indicates whether the top byte of an address is used for address match for the <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> region, or ignored and used for tagged addresses.</p>
+      </h4><div class="field"><p>Top Byte Ignored. Indicates whether the top byte of an address is used for address match for the <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> region, or ignored and used for tagged addresses.</p>
 <p>For more information, see <span class="xref">'Address tagging'</span>.</p><table class="valuetable"><tr><th>TBI1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Top Byte used in the address calculation.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Top Byte ignored in the address calculation.</p>
-        </td></tr></table><p>This affects addresses generated at EL0 and EL2 using AArch64 where the address would be translated by tables pointed to by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
+        </td></tr></table><p>This affects addresses generated at EL0 and EL2 using AArch64 where the address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
 <p>If <span class="xref">FEAT_PAuth</span> is implemented and TCR_EL2.TBID1 is 1, then this field only applies to Data accesses.</p>
 <p>If the value of TBI1 is 1 and bit [55] of the target address to be stored to the PC is 1, then bits[63:56] of that target address are also set to 1 before the address is stored in the PC, in the following cases:</p>
 <ul>
 <li>A branch or procedure return within EL2
-</li><li>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1,1}, a branch or procedure return within EL0.
+</li><li>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1,1}, a branch or procedure return within EL0.
 </li><li>An exception taken to EL2.
 </li><li>An exception return to EL2.
-</li><li>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, then an exception return to EL0.
+</li><li>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, then an exception return to EL0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.TBI1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-37_37">TBI0, bit [37]:
-      </h4><div class="field"><p>Top Byte Ignored. Indicates whether the top byte of an address is used for address match for the <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> region, or ignored and used for tagged addresses.</p>
+      </h4><div class="field"><p>Top Byte Ignored. Indicates whether the top byte of an address is used for address match for the <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> region, or ignored and used for tagged addresses.</p>
 <p>For more information, see <span class="xref">'Address tagging'</span>.</p><table class="valuetable"><tr><th>TBI0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Top Byte used in the address calculation.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Top Byte ignored in the address calculation.</p>
-        </td></tr></table><p>This affects addresses generated at EL0 and EL2 using AArch64 where the address would be translated by tables pointed to by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
+        </td></tr></table><p>This affects addresses generated at EL0 and EL2 using AArch64 where the address would be translated by tables pointed to by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>. It has an effect whether the EL2&amp;0 translation regime is enabled or not.</p>
 <p>If <span class="xref">FEAT_PAuth</span> is implemented and TCR_EL2.TBID0 is 1, then this field only applies to Data accesses.</p>
 <p>If the value of TBI0 is 1 and bit [55] of the target address to be stored to the PC is 0, then bits[63:56] of that target address are also set to 0 before the address is stored in the PC, in the following cases:</p>
 <ul>
 <li>A branch or procedure return within EL2
-</li><li>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1,1}, a branch or procedure return within EL0.
+</li><li>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1,1}, a branch or procedure return within EL0.
 </li><li>An exception taken to EL2.
 </li><li>An exception return to EL2.
-</li><li>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, then an exception return to EL0.
+</li><li>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, then an exception return to EL0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.TBI0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-36_36-1">AS, bit [36] <span class="condition">when FEAT_ASID16 is implemented</span>:
       </h4><div class="field">
       <p>ASID Size.</p>
     <table class="valuetable"><tr><th>AS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>8 bit - the upper 8 bits of <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> and <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> are ignored by hardware for every purpose except reading back the register, and are treated as if they are all zeros for when used for allocation and matching entries in the TLB.</p>
+          <p>8 bit - the upper 8 bits of <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> and <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> are ignored by hardware for every purpose except reading back the register, and are treated as if they are all zeros for when used for allocation and matching entries in the TLB.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>16 bit - the upper 16 bits of <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> and <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> are used for allocation and matching in the TLB.</p>
+          <p>16 bit - the upper 16 bits of <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> and <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> are used for allocation and matching in the TLB.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.AS == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-36_36-2"> <span class="condition">Otherwise</span>:
@@ -721,16 +721,16 @@
         </td></tr></table><p>The values <span class="binarynumber">0b110</span> and <span class="binarynumber">0b111</span> represent different output address sizes depending on implementation choices and translation configuration.</p>
 <p>The following table captures the output address size represented by the value <span class="binarynumber">0b110</span>:</p>
 <table class="valuetable"><thead><tr><th>Descriptor Format</th><th>ID_AA64MMFR0_EL1.PARange</th><th>Translation Granule</th><th>DS<sup>1</sup></th><th>Represented OA size</th></tr></thead><tbody><tr><td>Any</td><td><span class="binarynumber">0b0101</span></td><td>Any</td><td>Any</td><td>48 bits, 256TB</td></tr><tr><td>VMSAv8-64</td><td><span class="binarynumber">0b011x</span></td><td>4KB or 16KB</td><td>0</td><td>48 bits, 256TB</td></tr><tr><td>VMSAv8-64</td><td><span class="binarynumber">0b011x</span></td><td>4KB or 16KB</td><td>1</td><td>52 bits, 4PB</td></tr><tr><td>VMSAv8-64</td><td><span class="binarynumber">0b011x</span></td><td>64KB</td><td>N/A</td><td>52 bits, 4PB</td></tr><tr><td>VMSAv9-128</td><td><span class="binarynumber">0b011x</span></td><td>Any</td><td>N/A</td><td>52 bits, 4PB</td></tr></tbody></table>
-<p><sup>1</sup> This column represents the Effective value of <a href="AArch64-tcr_el2.html">TCR_EL2</a>.DS.</p>
+<p><sup>1</sup> This column represents the Effective value of <a href="/latest_sysreg/AArch64-tcr_el2.html">TCR_EL2</a>.DS.</p>
 <p>The following table captures the output address size represented by the value <span class="binarynumber">0b111</span>:</p>
 <table class="valuetable"><thead><tr><th>Descriptor Format</th><th>ID_AA64MMFR0_EL1.PARange</th><th>Translation Granule</th><th>Represented OA size</th></tr></thead><tbody><tr><td>Any</td><td><span class="binarynumber">0b0110</span></td><td>Any</td><td>OA size represented by<span class="binarynumber">0b110</span></td></tr><tr><td>VMSAv8-64</td><td><span class="binarynumber">0b0111</span></td><td>Any</td><td>OA size represented by<span class="binarynumber">0b110</span></td></tr><tr><td>VMSAv9-128</td><td><span class="binarynumber">0b0111</span></td><td>Any</td><td>56 bits, 64PB</td></tr></tbody></table>
-<p>If 52-bit PA is supported, and the translation table descriptors cannot express an OA larger than 48-bits, then bits[51:48] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by <a href="AArch64-tcr_el2.html">TCR_EL2</a>.</p>
-<p>If 56-bit PA is supported, and the translation table descriptors cannot express an OA larger than 52-bits, then bits[55:52] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by <a href="AArch64-tcr_el2.html">TCR_EL2</a>.</p>
-<p>If the output address size represented by this field is larger than the supported PA size expressed in <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange, then the output address size is treated as being the same as the supported PA size. Arm strongly recommends that software avoids configuring this field to a value representing an output address size larger than the supported PA size.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If 52-bit PA is supported, and the translation table descriptors cannot express an OA larger than 48-bits, then bits[51:48] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by <a href="/latest_sysreg/AArch64-tcr_el2.html">TCR_EL2</a>.</p>
+<p>If 56-bit PA is supported, and the translation table descriptors cannot express an OA larger than 52-bits, then bits[55:52] of every translation table base address are treated as <span class="binarynumber">0b0000</span> for the stage of translation controlled by <a href="/latest_sysreg/AArch64-tcr_el2.html">TCR_EL2</a>.</p>
+<p>If the output address size represented by this field is larger than the supported PA size expressed in <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange, then the output address size is treated as being the same as the supported PA size. Arm strongly recommends that software avoids configuring this field to a value representing an output address size larger than the supported PA size.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.IPS == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-31_30">TG1, bits [31:30]:
       </h4><div class="field">
-      <p>Granule size for the <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Granule size for the <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>TG1</th><th>Meaning</th></tr><tr><td class="bitfield">0b01</td><td>
           <p>16KB.</p>
         </td></tr><tr><td class="bitfield">0b10</td><td>
@@ -743,7 +743,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.TG1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-29_28">SH1, bits [29:28]:
       </h4><div class="field">
-      <p>Shareability attribute for memory associated with translation table walks using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Shareability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>SH1</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Non-shareable.</p>
         </td></tr><tr><td class="bitfield">0b10</td><td>
@@ -756,7 +756,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.SH1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-27_26">ORGN1, bits [27:26]:
       </h4><div class="field">
-      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>ORGN1</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Outer Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -769,7 +769,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.ORGN1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-25_24">IRGN1, bits [25:24]:
       </h4><div class="field">
-      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
     <table class="valuetable"><tr><th>IRGN1</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Inner Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -782,30 +782,30 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.IRGN1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-23_23">EPD1, bit [23]:
       </h4><div class="field">
-      <p>Translation table walk disable for translations using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>. This bit controls whether a translation table walk is performed on a TLB miss, for an address that is translated using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>. The encoding of this bit is:</p>
+      <p>Translation table walk disable for translations using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>. This bit controls whether a translation table walk is performed on a TLB miss, for an address that is translated using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>. The encoding of this bit is:</p>
     <table class="valuetable"><tr><th>EPD1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Perform translation table walks using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
+          <p>Perform translation table walks using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>A TLB miss on an address that is translated using <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> generates a Translation fault. No translation table walk is performed.</p>
+          <p>A TLB miss on an address that is translated using <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> generates a Translation fault. No translation table walk is performed.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.EPD1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-22_22">A1, bit [22]:
       </h4><div class="field">
-      <p>Selects whether <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> or <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> defines the ASID. The encoding of this bit is:</p>
+      <p>Selects whether <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> or <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> defines the ASID. The encoding of this bit is:</p>
     <table class="valuetable"><tr><th>A1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.ASID defines the ASID.</p>
+          <p><a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.ASID defines the ASID.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>.ASID defines the ASID.</p>
+          <p><a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>.ASID defines the ASID.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.A1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-21_16">T1SZ, bits [21:16]:
-      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a>. The region size is 2<sup>(64-T1SZ)</sup> bytes.</p>
+      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a>. The region size is 2<sup>(64-T1SZ)</sup> bytes.</p>
 <p>The maximum and minimum possible values for T1SZ depend on the level of translation table and the memory translation granule size, as described in the AArch64 Virtual Memory System Architecture chapter. It has an effect on computation of PAC whether the EL2&amp;0 translation regime is enabled or not.</p>
 <div class="note"><p>For the 4KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented, Effective value of TCR_EL2.DS is 1, and this field is less than 16, the translation table walk begins with a level -1 initial lookup.</p><p>For the 16KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented, Effective value of TCR_EL2.DS is 1, and this field is less than 17, the translation table walk begins with a level 0 initial lookup.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.T1SZ == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-15_14">TG0, bits [15:14]:
       </h4><div class="field">
-      <p>Granule size for the <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Granule size for the <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>TG0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>4KB.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -818,7 +818,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.TG0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-13_12">SH0, bits [13:12]:
       </h4><div class="field">
-      <p>Shareability attribute for memory associated with translation table walks using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Shareability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>SH0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Non-shareable.</p>
         </td></tr><tr><td class="bitfield">0b10</td><td>
@@ -831,7 +831,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.SH0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-11_10">ORGN0, bits [11:10]:
       </h4><div class="field">
-      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>ORGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Outer Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -844,7 +844,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.ORGN0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-9_8">IRGN0, bits [9:8]:
       </h4><div class="field">
-      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
     <table class="valuetable"><tr><th>IRGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Inner Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -857,26 +857,26 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.IRGN0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-7_7">EPD0, bit [7]:
       </h4><div class="field">
-      <p>Translation table walk disable for translations using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>. This bit controls whether a translation table walk is performed on a TLB miss, for an address that is translated using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>. The encoding of this bit is:</p>
+      <p>Translation table walk disable for translations using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>. This bit controls whether a translation table walk is performed on a TLB miss, for an address that is translated using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>. The encoding of this bit is:</p>
     <table class="valuetable"><tr><th>EPD0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Perform translation table walks using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
+          <p>Perform translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>A TLB miss on an address that is translated using <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> generates a Translation fault. No translation table walk is performed.</p>
+          <p>A TLB miss on an address that is translated using <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> generates a Translation fault. No translation table walk is performed.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.EPD0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_1-6_6">Bit [6]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-5_0">T0SZ, bits [5:0]:
-      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a>. The region size is 2<sup>(64-T0SZ)</sup> bytes.</p>
+      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a>. The region size is 2<sup>(64-T0SZ)</sup> bytes.</p>
 <p>The maximum and minimum possible values for T0SZ depend on the level of translation table and the memory translation granule size, as described in the AArch64 Virtual Memory System Architecture chapter. It has an effect on computation of PAC whether the EL2&amp;0 translation regime is enabled or not.</p>
 <div class="note"><p>For the 4KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented, Effective value of TCR_EL2.DS is 1, and this field is less than 16, the translation table walk begins with a level -1 initial lookup.</p><p>For the 16KB translation granule, if <span class="xref">FEAT_LPA2</span> is implemented, Effective value of TCR_EL2.DS is 1, and this field is less than 17, the translation table walk begins with a level 0 initial lookup.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL2 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL2).</li><li>TCRMASK_EL2.T0SZ == '1'.</li></ul></li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name TCR_EL2 or TCR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name TCR_EL2 or TCR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
 
       
-        <p>If FEAT_SRMASK is implemented, accesses to TCR_EL2 are masked by <a href="AArch64-tcrmask_el2.html">TCRMASK_EL2</a>.</p>
+        <p>If FEAT_SRMASK is implemented, accesses to TCR_EL2 are masked by <a href="/latest_sysreg/AArch64-tcrmask_el2.html">TCRMASK_EL2</a>.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, TCR_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b0010, CRm = 0b0000, op2 = 0b010)
       </p><p class="pseudocode">

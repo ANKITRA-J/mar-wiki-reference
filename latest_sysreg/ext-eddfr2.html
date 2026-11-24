@@ -10,17 +10,17 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-27_24">TRBE_EXC, bits [27:24]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.TRBE_EXC or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.TRBE_EXC or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_20">SPE_nVM, bits [23:20]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.SPE_nVM or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.SPE_nVM or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-19_16">SPE_EXC, bits [19:16]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.SPE_EXC or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.SPE_EXC or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-15_8">Bits [15:8]:
@@ -30,18 +30,18 @@
       </h4><div class="field">
       <p>Breakpoints and watchpoint enhancements.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>BWE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>This field does not indicate whether <a href="AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.MASK and address mismatch breakpoints are implemented.</p>
+          <p>This field does not indicate whether <a href="/latest_sysreg/AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.MASK and address mismatch breakpoints are implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.MASK and address mismatch breakpoints are implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.MASK and address mismatch breakpoints are implemented.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
           <p>As <span class="binarynumber">0b0001</span>, and address mismatch watchpoints are implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_BWE</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p><span class="xref">FEAT_BWE2</span> implements the functionality identified by the value <span class="binarynumber">0b0010</span>.</p>
 <p>From Armv9.5, the value <span class="binarynumber">0b0001</span> is not permitted.</p>
-<p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.BWE.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">STEP, bits [3:0]:
+<p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.BWE.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">STEP, bits [3:0]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.STEP or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.STEP or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing EDDFR2</h2><h4>EDDFR2 can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>Debug</td><td><span class="hexnumber">0xD50</span></td><td>EDDFR2</td></tr></table><p>Accessible as follows:</p><ul><li>When IsCorePowered(), !DoubleLockStatus(), and (!IsZero(EDDFR2()) or !OSLockStatus()), accesses to this register are <span class="access_level">RO</span>.

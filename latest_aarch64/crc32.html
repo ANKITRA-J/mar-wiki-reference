@@ -30,12 +30,12 @@ indicates whether this instruction is supported.</p>
             </h4><a id="CRC32B_32C_dp_2src"></a><span class="bitdiff"> (sf == 0 &amp;&amp; sz == 00)</span></div><p class="asm-code">CRC32B  <a href="#WdOrWZR__2" title='Is the 32-bit name of the general-purpose accumulator output register, encoded in the "Rd" field.'>&lt;Wd&gt;</a>, <a href="#WnOrWZR__4" title='Is the 32-bit name of the general-purpose accumulator input register, encoded in the "Rn" field.'>&lt;Wn&gt;</a>, <a href="#WmOrWZR__5" title='Is the 32-bit name of the general-purpose data source register, encoded in the "Rm" field.'>&lt;Wm&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">CRC32H encoding
             </h4><a id="CRC32H_32C_dp_2src"></a><span class="bitdiff"> (sf == 0 &amp;&amp; sz == 01)</span></div><p class="asm-code">CRC32H  <a href="#WdOrWZR__2" title='Is the 32-bit name of the general-purpose accumulator output register, encoded in the "Rd" field.'>&lt;Wd&gt;</a>, <a href="#WnOrWZR__4" title='Is the 32-bit name of the general-purpose accumulator input register, encoded in the "Rn" field.'>&lt;Wn&gt;</a>, <a href="#WmOrWZR__5" title='Is the 32-bit name of the general-purpose data source register, encoded in the "Rm" field.'>&lt;Wm&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">CRC32W encoding
             </h4><a id="CRC32W_32C_dp_2src"></a><span class="bitdiff"> (sf == 0 &amp;&amp; sz == 10)</span></div><p class="asm-code">CRC32W  <a href="#WdOrWZR__2" title='Is the 32-bit name of the general-purpose accumulator output register, encoded in the "Rd" field.'>&lt;Wd&gt;</a>, <a href="#WnOrWZR__4" title='Is the 32-bit name of the general-purpose accumulator input register, encoded in the "Rn" field.'>&lt;Wn&gt;</a>, <a href="#WmOrWZR__5" title='Is the 32-bit name of the general-purpose data source register, encoded in the "Rm" field.'>&lt;Wm&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">CRC32X encoding
-            </h4><a id="CRC32X_64C_dp_2src"></a><span class="bitdiff"> (sf == 1 &amp;&amp; sz == 11)</span></div><p class="asm-code">CRC32X  <a href="#WdOrWZR__2" title='Is the 32-bit name of the general-purpose accumulator output register, encoded in the "Rd" field.'>&lt;Wd&gt;</a>, <a href="#WnOrWZR__4" title='Is the 32-bit name of the general-purpose accumulator input register, encoded in the "Rn" field.'>&lt;Wn&gt;</a>, <a href="#XmOrXZR__8" title='Is the 64-bit name of the general-purpose data source register, encoded in the "Rm" field.'>&lt;Xm&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_CRC32) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="CRC32X_64C_dp_2src"></a><span class="bitdiff"> (sf == 1 &amp;&amp; sz == 11)</span></div><p class="asm-code">CRC32X  <a href="#WdOrWZR__2" title='Is the 32-bit name of the general-purpose accumulator output register, encoded in the "Rd" field.'>&lt;Wd&gt;</a>, <a href="#WnOrWZR__4" title='Is the 32-bit name of the general-purpose accumulator input register, encoded in the "Rn" field.'>&lt;Wn&gt;</a>, <a href="#XmOrXZR__8" title='Is the 64-bit name of the general-purpose data source register, encoded in the "Rm" field.'>&lt;Xm&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_CRC32) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let d : integer{} = UInt(Rd);
 let n : integer{} = UInt(Rn);
 let m : integer{} = UInt(Rm);
-if sf == '1' &amp;&amp; sz != '11' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if sf == '0' &amp;&amp; sz == '11' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if sf == '1' &amp;&amp; sz != '11' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if sf == '0' &amp;&amp; sz == '11' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let size : integer{} = 8 &lt;&lt; UInt(sz);</p>
   <div class="encoding-notes"></div><h2 class="explanations">Assembler Symbols</h2><div class="explanations"><table><col class="asyn-l"></col><col class="asyn-r"></col><tr><td>&lt;Wd&gt;</td><td><a id="WdOrWZR__2"></a>
         
@@ -55,15 +55,15 @@ let size : integer{} = 8 &lt;&lt; UInt(sz);</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode">let acc : bits(32) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(n);       // accumulator
-let val : bits(size) = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{size}(m);   // input value
+      <p class="pseudocode">let acc : bits(32) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(n);       // accumulator
+let val : bits(size) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{size}(m);   // input value
 let poly : bits(32) = 0x4C11DB7[:32];
 
-let tempacc : bits(32+size) = <a href="shared_pseudocode.html#func_BitReverse_2" title="">BitReverse</a>{32}(acc)::Zeros{size};
-let tempval : bits(size+32) = <a href="shared_pseudocode.html#func_BitReverse_2" title="">BitReverse</a>{size}(val)::Zeros{32};
+let tempacc : bits(32+size) = <a href="/latest_aarch64/shared_pseudocode.html#func_BitReverse_2" title="">BitReverse</a>{32}(acc)::Zeros{size};
+let tempval : bits(size+32) = <a href="/latest_aarch64/shared_pseudocode.html#func_BitReverse_2" title="">BitReverse</a>{size}(val)::Zeros{32};
 
 // Poly32Mod2 on a bitstring does a polynomial Modulus over {0,1} operation
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(d) = <a href="shared_pseudocode.html#func_BitReverse_2" title="">BitReverse</a>{32}(<a href="shared_pseudocode.html#func_Poly32Mod2_3" title="">Poly32Mod2</a>{32+size}(tempacc XOR tempval, poly));</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(d) = <a href="/latest_aarch64/shared_pseudocode.html#func_BitReverse_2" title="">BitReverse</a>{32}(<a href="/latest_aarch64/shared_pseudocode.html#func_Poly32Mod2_3" title="">Poly32Mod2</a>{32+size}(tempacc XOR tempval, poly));</p></div>
   <h2>Operational information</h2>
     
       

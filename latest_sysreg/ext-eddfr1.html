@@ -12,22 +12,22 @@
           <p>Number of breakpoints that support address linking minus 1.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>The number of breakpoints that support address linking is never more than either the number of breakpoints or the number of watchpoints.</p>
-<p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.ABL_CMPs.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-63_56-2"> <span class="condition">Otherwise</span>:
+<p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.ABL_CMPs.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-63_56-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-55_52">DPFZS, bits [55:52]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.DPFZS or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.DPFZS or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-51_48">EBEP, bits [51:48]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.EBEP or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.EBEP or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-47_44">ITE, bits [47:44]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.ITE or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.ITE or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-43_40">ABLE, bits [43:40]:
@@ -39,44 +39,44 @@
           <p>Address Breakpoint Linking Extension implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_ABLE</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
-<p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.ABLE.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-39_36">PMICNTR, bits [39:36]:
+<p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.ABLE.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-39_36">PMICNTR, bits [39:36]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.PMICNTR or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.PMICNTR or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-35_32">SPMU, bits [35:32]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.SPMU or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.SPMU or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-31_24">CTX_CMPs, bits [31:24]:
       </h4><div class="field">
       <p>Context-aware breakpoints.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>CTX_CMPs</th><th>Meaning</th></tr><tr><td class="bitfield">0x00</td><td>
-          <p><a href="ext-eddfr.html">EDDFR</a>.CTX_CMPs is the number of context-aware breakpoints, minus 1.</p>
+          <p><a href="/latest_sysreg/ext-eddfr.html">EDDFR</a>.CTX_CMPs is the number of context-aware breakpoints, minus 1.</p>
         </td></tr><tr><td class="bitfield">0x01..0x3F</td><td>
           <p>Number of context-aware breakpoints minus 1.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>The value of this field is never greater than EDDFR1.BRPs.</p>
-<p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.CTX_CMPs.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_16">WRPs, bits [23:16]:
+<p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.CTX_CMPs.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_16">WRPs, bits [23:16]:
       </h4><div class="field">
       <p>Watchpoints.</p>
     <table class="valuetable"><tr><th>WRPs</th><th>Meaning</th></tr><tr><td class="bitfield">0x00</td><td>
-          <p><a href="ext-eddfr.html">EDDFR</a>.WRPs is the number of watchpoints, minus 1.</p>
+          <p><a href="/latest_sysreg/ext-eddfr.html">EDDFR</a>.WRPs is the number of watchpoints, minus 1.</p>
         </td></tr><tr><td class="bitfield">0x01..0x3F</td><td>
           <p>Number of watchpoints minus 1.</p>
         </td></tr></table><p>All other values are reserved.</p>
-<p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.WRPs.</p></div><h4 id="fieldset_0-15_8">BRPs, bits [15:8]:
+<p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.WRPs.</p></div><h4 id="fieldset_0-15_8">BRPs, bits [15:8]:
       </h4><div class="field">
       <p>Breakpoints.</p>
     <table class="valuetable"><tr><th>BRPs</th><th>Meaning</th></tr><tr><td class="bitfield">0x00</td><td>
-          <p><a href="ext-eddfr.html">EDDFR</a>.BRPs is the number of breakpoints, minus 1.</p>
+          <p><a href="/latest_sysreg/ext-eddfr.html">EDDFR</a>.BRPs is the number of breakpoints, minus 1.</p>
         </td></tr><tr><td class="bitfield">0x01..0x3F</td><td>
           <p>Number of breakpoints minus 1.</p>
         </td></tr></table><p>All other values are reserved.</p>
-<p>In an implementation that supports AArch64, this field has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.BRPs.</p></div><h4 id="fieldset_0-7_0">SYSPMUID, bits [7:0]:
+<p>In an implementation that supports AArch64, this field has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.BRPs.</p></div><h4 id="fieldset_0-7_0">SYSPMUID, bits [7:0]:
       </h4><div class="field">
-      <p>This field either has the same value as <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.SYSPMUID or reads as zero.</p>
+      <p>This field either has the same value as <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>.SYSPMUID or reads as zero.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing EDDFR1</h2><h4>EDDFR1 can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>Debug</td><td><span class="hexnumber">0xD48</span></td><td>EDDFR1</td></tr></table><p>Accessible as follows:</p><ul><li>When IsCorePowered(), !DoubleLockStatus(), and (!IsZero(EDDFR1()) or !OSLockStatus()), accesses to this register are <span class="access_level">RO</span>.

@@ -3,7 +3,7 @@
 <title>DBGAUTHSTATUS_EL1 | Jon's Arm Reference</title><meta name="description" content="Provides information about the state of the IMPLEMENTATION DEFINED authentication interface for debug."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">DBGAUTHSTATUS_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">Debug Authentication Status Register</p><div data-pagefind-body="1">
         <p>Provides information about the state of the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> authentication interface for debug.</p>
-      </div><h3>Configuration</h3><p>External register DBGAUTHSTATUS_EL1 bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-dbgauthstatus_el1.html">DBGAUTHSTATUS_EL1[31:0]</a>.</p><p>External register DBGAUTHSTATUS_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-dbgauthstatus.html">DBGAUTHSTATUS[31:0]</a>.</p><p>When FEAT_DoPD is implemented, DBGAUTHSTATUS_EL1 is in the Core power domain. Otherwise, DBGAUTHSTATUS_EL1 is in the Debug power domain.
+      </div><h3>Configuration</h3><p>External register DBGAUTHSTATUS_EL1 bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-dbgauthstatus_el1.html">DBGAUTHSTATUS_EL1[31:0]</a>.</p><p>External register DBGAUTHSTATUS_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-dbgauthstatus.html">DBGAUTHSTATUS[31:0]</a>.</p><p>When FEAT_DoPD is implemented, DBGAUTHSTATUS_EL1 is in the Core power domain. Otherwise, DBGAUTHSTATUS_EL1 is in the Debug power domain.
     </p><h3>Attributes</h3>
         <p>DBGAUTHSTATUS_EL1 is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="4"><a href="#fieldset_0-31_28">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-27_26">RTNID</a></td><td class="lr" colspan="2"><a href="#fieldset_0-25_24">RTID</a></td><td class="lr" colspan="8"><a href="#fieldset_0-23_16">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-15_14">RLNID</a></td><td class="lr" colspan="2"><a href="#fieldset_0-13_12">RLID</a></td><td class="lr" colspan="4"><a href="#fieldset_0-11_8">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_0-7_6-1">SNID</a></td><td class="lr" colspan="2"><a href="#fieldset_0-5_4">SID</a></td><td class="lr" colspan="2"><a href="#fieldset_0-3_2-1">NSNID</a></td><td class="lr" colspan="2"><a href="#fieldset_0-1_0">NSID</a></td></tr></tbody></table><h4 id="fieldset_0-31_28">Bits [31:28]:
@@ -11,7 +11,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-27_26">RTNID, bits [27:26]:
       </h4><div class="field"><p>Root non-invasive debug.</p>
-<p>This field has the same value as <a href="AArch64-dbgauthstatus_el1.html">DBGAUTHSTATUS_EL1</a>.RTID.</p></div><h4 id="fieldset_0-25_24">RTID, bits [25:24]:
+<p>This field has the same value as <a href="/latest_sysreg/AArch64-dbgauthstatus_el1.html">DBGAUTHSTATUS_EL1</a>.RTID.</p></div><h4 id="fieldset_0-25_24">RTID, bits [25:24]:
       </h4><div class="field">
       <p>Root invasive debug.</p>
     <table class="valuetable"><tr><th>RTID</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
@@ -24,7 +24,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_14">RLNID, bits [15:14]:
       </h4><div class="field"><p>Realm non-invasive debug.</p>
-<p>This field has the same value as <a href="AArch64-dbgauthstatus_el1.html">DBGAUTHSTATUS_EL1</a>.RLID.</p></div><h4 id="fieldset_0-13_12">RLID, bits [13:12]:
+<p>This field has the same value as <a href="/latest_sysreg/AArch64-dbgauthstatus_el1.html">DBGAUTHSTATUS_EL1</a>.RLID.</p></div><h4 id="fieldset_0-13_12">RLID, bits [13:12]:
       </h4><div class="field">
       <p>Realm invasive debug.</p>
     <table class="valuetable"><tr><th>RLID</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>

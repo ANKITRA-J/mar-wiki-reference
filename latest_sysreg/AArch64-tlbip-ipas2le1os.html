@@ -36,16 +36,16 @@
 </li><li>
 <p>If <span class="xref">FEAT_RME</span> is implemented, one of the following applies:</p>
 <ul>
-<li><a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 0} and the entry would be required to translate the specified IPA using the Secure EL1&amp;0 translation regime.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 1} and the entry would be required to translate the specified IPA using the Non-secure EL1&amp;0 translation regime.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {1, 1} and the entry would be required to translate the specified IPA using the Realm EL1&amp;0 translation regime.
+<li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 0} and the entry would be required to translate the specified IPA using the Secure EL1&amp;0 translation regime.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 1} and the entry would be required to translate the specified IPA using the Non-secure EL1&amp;0 translation regime.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {1, 1} and the entry would be required to translate the specified IPA using the Realm EL1&amp;0 translation regime.
 </li></ul>
 
 </li><li>
 <p>If <span class="xref">FEAT_RME</span> is not implemented, one of the following applies:</p>
 <ul>
-<li><a href="AArch64-scr_el3.html">SCR_EL3</a>.NS is 0 and the entry would be required to translate the specified IPA using the Secure EL1&amp;0 translation regime.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.NS is 1 and the entry would be required to translate the specified IPA using the Non-secure EL1&amp;0 translation regime.
+<li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS is 0 and the entry would be required to translate the specified IPA using the Secure EL1&amp;0 translation regime.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS is 1 and the entry would be required to translate the specified IPA using the Non-secure EL1&amp;0 translation regime.
 </li></ul>
 
 </li><li>
@@ -86,7 +86,7 @@
       <p>Bits[55:12] of the intermediate physical address to match.</p>
     </div><h4 id="fieldset_0-63_63-1">NS, bit [63] <span class="condition">when FEAT_RME is implemented</span>:
       </h4><div class="field">
-      <p>When the instruction is executed and <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} == {0, 0}, NS selects the IPA space.</p>
+      <p>When the instruction is executed and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} == {0, 0}, NS selects the IPA space.</p>
     <table class="valuetable"><tr><th>NS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>IPA is in the Secure IPA space.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>

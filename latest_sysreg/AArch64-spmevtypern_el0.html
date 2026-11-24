@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>SPMEVTYPER&lt;n&gt;_EL0 | Jon's Arm Reference</title><meta name="description" content="With SPMEVFILTR&lt;n&gt;_EL0 and SPMEVFILT2R&lt;n&gt;_EL0, configures when event counter SPMEVCNTR&lt;n&gt;_EL0 in System PMU &lt;s&gt; increments."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">SPMEVTYPER&lt;n&gt;_EL0, n = 0 - 63</h1><p class="insn_subtitle" data-pagefind-body="1">System Performance Monitors Event Type Register</p><div data-pagefind-body="1">
-        <p>With <a href="AArch64-spmevfiltrn_el0.html">SPMEVFILTR&lt;n&gt;_EL0</a> and <a href="AArch64-spmevfilt2rn_el0.html">SPMEVFILT2R&lt;n&gt;_EL0</a>, configures when event counter <a href="AArch64-spmevcntrn_el0.html">SPMEVCNTR&lt;n&gt;_EL0</a> in System PMU &lt;s&gt; increments.</p>
+        <p>With <a href="/latest_sysreg/AArch64-spmevfiltrn_el0.html">SPMEVFILTR&lt;n&gt;_EL0</a> and <a href="/latest_sysreg/AArch64-spmevfilt2rn_el0.html">SPMEVFILT2R&lt;n&gt;_EL0</a>, configures when event counter <a href="/latest_sysreg/AArch64-spmevcntrn_el0.html">SPMEVCNTR&lt;n&gt;_EL0</a> in System PMU &lt;s&gt; increments.</p>
 
       
         <p>The contents of this register are <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>. An Event Type Select Register typically contains:</p>
@@ -21,7 +21,7 @@
     <p>The reset behavior of this field is:</p><ul><li>On a System PMU reset, 
       this field resets
        to an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>To access SPMEVTYPER&lt;n&gt;_EL0 for System PMU &lt;s&gt;, set <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL to s and <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a>.BANK to n[5:4].</p>
+        <p>To access SPMEVTYPER&lt;n&gt;_EL0 for System PMU &lt;s&gt;, set <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL to s and <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a>.BANK to n[5:4].</p>
 
       
         <p>SPMEVTYPER&lt;n&gt;_EL0 reads-as-zero and ignores writes if any of the following are true:</p>

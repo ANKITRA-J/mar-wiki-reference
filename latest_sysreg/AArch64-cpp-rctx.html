@@ -40,12 +40,12 @@
       </h4><div class="field"><p>Only applies when bit[48] is 0 and the target execution context is either:</p>
 <ul>
 <li>EL1.
-</li><li>EL0 when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
+</li><li>EL0 when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}.
 </li></ul>
 <p>Otherwise this field is <span class="arm-defined-word">RES0</span>.</p>
 <p>When the instruction is executed at EL1, this field is treated as the current VMID.</p>
-<p>When the instruction is executed at EL0 and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, this field is treated as the current VMID.</p>
-<p>When the instruction is executed at EL0 and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this field is ignored.</p>
+<p>When the instruction is executed at EL0 and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, this field is treated as the current VMID.</p>
+<p>When the instruction is executed at EL0 and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this field is ignored.</p>
 <p>If EL2 is not implemented or not enabled for the target Security state, this field is <span class="arm-defined-word">RES0</span>.</p>
 <p>If the implementation supports 16 bits of VMID, then the upper 8 bits of the VMID must be written to 0 by software when the context being affected only uses 8 bits.</p></div><h4 id="fieldset_0-31_28">Bits [31:28]:
       </h4><div class="field">

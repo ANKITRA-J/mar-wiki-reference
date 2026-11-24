@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>CPTRMASK_EL2 | Jon's Arm Reference</title><meta name="description" content="Mask register to prevent updates of fields in CPTR_EL2 on writes."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">CPTRMASK_EL2</h1><p class="insn_subtitle" data-pagefind-body="1">Architectural Feature Trap Masking Register</p><div data-pagefind-body="1">
-        <p>Mask register to prevent updates of fields in <a href="AArch64-cptr_el2.html">CPTR_EL2</a> on writes.</p>
+        <p>Mask register to prevent updates of fields in <a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a> on writes.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_SRMASK is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to CPTRMASK_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
 
@@ -17,9 +17,9 @@
       </h4><div class="field">
       <p>Mask bit for TCPAC.</p>
     <table class="valuetable"><tr><th>TCPAC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TCPAC is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -33,9 +33,9 @@
       </h4><div class="field">
       <p>Mask bit for TAM.</p>
     <table class="valuetable"><tr><th>TAM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TAM is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TAM is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TAM is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TAM is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -52,9 +52,9 @@
       </h4><div class="field">
       <p>Mask bit for E0POE.</p>
     <table class="valuetable"><tr><th>E0POE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.E0POE is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.E0POE is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.E0POE is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.E0POE is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -71,9 +71,9 @@
       </h4><div class="field">
       <p>Mask bit for TTA.</p>
     <table class="valuetable"><tr><th>TTA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TTA is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TTA is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.TTA is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.TTA is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -93,9 +93,9 @@
       </h4><div class="field">
       <p>Mask bit for SMEN.</p>
     <table class="valuetable"><tr><th>SMEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.SMEN is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -115,9 +115,9 @@
       </h4><div class="field">
       <p>Mask bit for FPEN.</p>
     <table class="valuetable"><tr><th>FPEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.FPEN is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.FPEN is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.FPEN is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.FPEN is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -134,9 +134,9 @@
       </h4><div class="field">
       <p>Mask bit for ZEN.</p>
     <table class="valuetable"><tr><th>ZEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.ZEN is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.ZEN is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-cptr_el2.html">CPTR_EL2</a>.ZEN is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-cptr_el2.html">CPTR_EL2</a>.ZEN is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL2,
             this field resets to
@@ -153,7 +153,7 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name CPTRMASK_EL2 or CPACRMASK_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name CPTRMASK_EL2 or CPACRMASK_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, CPTRMASK_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b0001, CRm = 0b0100, op2 = 0b010)
       </p><p class="pseudocode">

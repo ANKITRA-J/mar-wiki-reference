@@ -42,16 +42,16 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>At least one unmapped MSIs have been received since GITS_STATUSR.UMSI set to 1.</p>
         </td></tr></table>
-      <p>If <a href="ext-gits_typer.html">GITS_TYPER</a>.UMSI is 0, this field is <span class="arm-defined-word">RES0</span>.</p>
+      <p>If <a href="/latest_sysreg/ext-gits_typer.html">GITS_TYPER</a>.UMSI is 0, this field is <span class="arm-defined-word">RES0</span>.</p>
     <p>Access to this field is <span class="access_level">W1C</span>.</p></div><h4 id="fieldset_0-4_4">UMSI, bit [4]:
       </h4><div class="field"><p>Reports whether an unmapped MSI has been received</p>
-<p>An unmapped MSI is defined as an MSI arriving at <a href="ext-gits_translater.html">GITS_TRANSLATER</a> for which there is insufficient mapping information for it to be forwarded to a Redistributor.</p>
+<p>An unmapped MSI is defined as an MSI arriving at <a href="/latest_sysreg/ext-gits_translater.html">GITS_TRANSLATER</a> for which there is insufficient mapping information for it to be forwarded to a Redistributor.</p>
 <p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether an INT command can be reported as an unmapped MSI.</p><table class="valuetable"><tr><th>UMSI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No unmapped MSIs have been received.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Unmapped MSI received.</p>
         </td></tr></table>
-      <p>If <a href="ext-gits_typer.html">GITS_TYPER</a>.UMSI is 0, this field is <span class="arm-defined-word">RES0</span>.</p>
+      <p>If <a href="/latest_sysreg/ext-gits_typer.html">GITS_TYPER</a>.UMSI is 0, this field is <span class="arm-defined-word">RES0</span>.</p>
     <p>Access to this field is <span class="access_level">W1C</span>.</p></div><h4 id="fieldset_0-3_3">WROD, bit [3]:
       </h4><div class="field">
       <p>Write to an RO location.</p>

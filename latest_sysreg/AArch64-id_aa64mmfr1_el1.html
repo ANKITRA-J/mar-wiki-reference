@@ -21,18 +21,18 @@
       </h4><div class="field">
       <p>Indicates support for cache maintenance instruction permission.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>CMOW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.CMOW, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.CMOW, and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.CMOW bits are not implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.CMOW, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.CMOW, and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.CMOW bits are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.CMOW is implemented. If EL2 is implemented, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.CMOW and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.CMOW bits are implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.CMOW is implemented. If EL2 is implemented, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.CMOW and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.CMOW bits are implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_CMOW</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p>From Armv8.8, the value <span class="binarynumber">0b0000</span> is not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-55_52">TIDCP1, bits [55:52]:
       </h4><div class="field">
-      <p>Indicates whether <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP and <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP are implemented in AArch64 state.</p>
+      <p>Indicates whether <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP and <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP are implemented in AArch64 state.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>TIDCP1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP and <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP bits are not implemented and are <span class="arm-defined-word">RES0</span>.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP and <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP bits are not implemented and are <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP bit is implemented. If EL2 is implemented, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP bit is implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.TIDCP bit is implemented. If EL2 is implemented, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.TIDCP bit is implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_TIDCP1</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p>From Armv8.8, the value <span class="binarynumber">0b0000</span> is not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-51_48">nTLBPA, bits [51:48]:
@@ -50,20 +50,20 @@
 <p>All other values are reserved.</p>
 <p><span class="xref">FEAT_nTLBPA</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-47_44">AFP, bits [47:44]:
       </h4><div class="field">
-      <p>Indicates support for <a href="AArch64-fpcr.html">FPCR</a>.{AH, FIZ, NEP}.</p>
+      <p>Indicates support for <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.{AH, FIZ, NEP}.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>AFP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>The <a href="AArch64-fpcr.html">FPCR</a>.{AH, FIZ, NEP} fields are not supported.</p>
+          <p>The <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.{AH, FIZ, NEP} fields are not supported.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>The <a href="AArch64-fpcr.html">FPCR</a>.{AH, FIZ, NEP} fields are supported.</p>
+          <p>The <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.{AH, FIZ, NEP} fields are supported.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_AFP</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p>From Armv8.7, if Advanced SIMD and floating-point is implemented, the value <span class="binarynumber">0b0000</span> is not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-43_40">HCX, bits [43:40]:
       </h4><div class="field">
-      <p>Indicates support for <a href="AArch64-hcrx_el2.html">HCRX_EL2</a> and its associated EL3 trap.</p>
+      <p>Indicates support for <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a> and its associated EL3 trap.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HCX</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p><a href="AArch64-hcrx_el2.html">HCRX_EL2</a> and its associated EL3 trap are not supported.</p>
+          <p><a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a> and its associated EL3 trap are not supported.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-hcrx_el2.html">HCRX_EL2</a> and its associated EL3 trap are supported.</p>
+          <p><a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a> and its associated EL3 trap are supported.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_HCX</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p>From Armv8.7, if EL2 is implemented, the value <span class="binarynumber">0b0000</span> is not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-39_36">ETS, bits [39:36]:
@@ -113,15 +113,15 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-23_20">PAN, bits [23:20]:
       </h4><div class="field">
-      <p>Privileged Access Never. Indicates support for the PAN bit in PSTATE, <a href="AArch64-spsr_el1.html">SPSR_EL1</a>, <a href="AArch64-spsr_el2.html">SPSR_EL2</a>, <a href="AArch64-spsr_el3.html">SPSR_EL3</a>, and <a href="AArch64-dspsr_el0.html">DSPSR_EL0</a>.</p>
+      <p>Privileged Access Never. Indicates support for the PAN bit in PSTATE, <a href="/latest_sysreg/AArch64-spsr_el1.html">SPSR_EL1</a>, <a href="/latest_sysreg/AArch64-spsr_el2.html">SPSR_EL2</a>, <a href="/latest_sysreg/AArch64-spsr_el3.html">SPSR_EL3</a>, and <a href="/latest_sysreg/AArch64-dspsr_el0.html">DSPSR_EL0</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>PAN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>PAN not supported.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p>PAN supported.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
-          <p>PAN supported and <a href="AArch64-at-s1e1rp.html">AT S1E1RP</a> and <a href="AArch64-at-s1e1wp.html">AT S1E1WP</a> instructions supported.</p>
+          <p>PAN supported and <a href="/latest_sysreg/AArch64-at-s1e1rp.html">AT S1E1RP</a> and <a href="/latest_sysreg/AArch64-at-s1e1wp.html">AT S1E1WP</a> instructions supported.</p>
         </td></tr><tr><td class="bitfield">0b0011</td><td>
-          <p>PAN supported, <a href="AArch64-at-s1e1rp.html">AT S1E1RP</a> and <a href="AArch64-at-s1e1wp.html">AT S1E1WP</a> instructions supported, and <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EPAN and <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.EPAN bits supported.</p>
+          <p>PAN supported, <a href="/latest_sysreg/AArch64-at-s1e1rp.html">AT S1E1RP</a> and <a href="/latest_sysreg/AArch64-at-s1e1wp.html">AT S1E1WP</a> instructions supported, and <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EPAN and <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.EPAN bits supported.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_PAN</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p><span class="xref">FEAT_PAN2</span> implements the functionality added by the value <span class="binarynumber">0b0010</span>.</p>
@@ -143,7 +143,7 @@
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HPDS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>Disabling of hierarchical controls not supported.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>Disabling of hierarchical controls supported with the <a href="AArch64-tcr_el1.html">TCR_EL1</a>.{HPD1, HPD0}, <a href="AArch64-tcr_el2.html">TCR_EL2</a>.HPD or <a href="AArch64-tcr_el2.html">TCR_EL2</a>.{HPD1, HPD0}, and <a href="AArch64-tcr_el3.html">TCR_EL3</a>.HPD bits.</p>
+          <p>Disabling of hierarchical controls supported with the <a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.{HPD1, HPD0}, <a href="/latest_sysreg/AArch64-tcr_el2.html">TCR_EL2</a>.HPD or <a href="/latest_sysreg/AArch64-tcr_el2.html">TCR_EL2</a>.{HPD1, HPD0}, and <a href="/latest_sysreg/AArch64-tcr_el3.html">TCR_EL3</a>.HPD bits.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
           <p>As for value <span class="binarynumber">0b0001</span>, and adds possible hardware allocation of bits[62:59] of the Translation table descriptors from the final lookup level for <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> use.</p>
         </td></tr></table><p>All other values are reserved.</p>

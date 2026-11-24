@@ -5,7 +5,7 @@
         <p>For additional information, see the CoreSight Architecture Specification.</p>
 
       
-        <p>Reads the same value as the <a href="AArch64-mpidr_el1.html">MPIDR_EL1</a> register for the PE that this trace buffer has affinity with.</p>
+        <p>Reads the same value as the <a href="/latest_sysreg/AArch64-mpidr_el1.html">MPIDR_EL1</a> register for the PE that this trace buffer has affinity with.</p>
 
       
         <p>Depending on the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> nature of the system, it might be possible that TRBDEVAFF is read before system firmware has configured the trace buffer and/or the PE or group of PEs that the trace buffer has affinity with. When this is the case, TRBDEVAFF reads as zero.</p>
@@ -56,7 +56,7 @@
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_0">Aff0, bits [7:0]:
       </h4><div class="field">
-      <p>Affinity level 0. The value of the <a href="AArch32-mpidr.html">MPIDR</a>.{Aff2, Aff1, Aff0} or <a href="AArch64-mpidr_el1.html">MPIDR_EL1</a>.{Aff3, Aff2, Aff1, Aff0} set of fields of each PE must be unique within the system as a whole.</p>
+      <p>Affinity level 0. The value of the <a href="/latest_sysreg/AArch32-mpidr.html">MPIDR</a>.{Aff2, Aff1, Aff0} or <a href="/latest_sysreg/AArch64-mpidr_el1.html">MPIDR_EL1</a>.{Aff3, Aff2, Aff1, Aff0} set of fields of each PE must be unique within the system as a whole.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing TRBDEVAFF</h2><h4>TRBDEVAFF can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>TRBE</td><td><span class="hexnumber">0xFA8</span></td><td>TRBDEVAFF</td></tr></table><p>Accessible as follows:</p><ul><li>When DoubleLockStatus() or !IsCorePowered(), accesses to this register generate an error response.

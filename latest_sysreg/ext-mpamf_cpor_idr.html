@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>MPAMF_CPOR_IDR | Jon's Arm Reference</title><meta name="description" content="Indicates the number of bits in MPAMCFG_CPBM&lt;n&gt;."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">MPAMF_CPOR_IDR</h1><p class="insn_subtitle" data-pagefind-body="1">MPAM Features Cache Portion Partitioning ID register</p><div data-pagefind-body="1">
-        <p>Indicates the number of bits in <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
+        <p>Indicates the number of bits in <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
       </div><h3>Configuration</h3><p>The power domain of MPAMF_CPOR_IDR is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.
     </p><p>This register is present only when (FEAT_MPAMv1p0 is implemented, or FEAT_MPAMv0p1 is implemented, or FEAT_MPAMv2_MSC is implemented) and MPAMF_IDR.HAS_CPOR_PART == '1'. Otherwise, direct accesses to MPAMF_CPOR_IDR are <span class="arm-defined-word">RES0</span>.</p>
-        <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, some fields in this register give information for the resource instance currently selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. The description of every field affected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS has information within the field description.</p>
+        <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, some fields in this register give information for the resource instance currently selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. The description of every field affected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS has information within the field description.</p>
 
       
         <p>If <span class="xref">FEAT_MPAMv1p0</span> or <span class="xref">FEAT_MPAMv0p1</span> is implemented, then the following statements apply:</p>
@@ -13,19 +13,19 @@
       
         <ul>
 <li>
-<p>MPAMF_CPOR_IDR_s indicates the number of bits in the Secure instance of <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
+<p>MPAMF_CPOR_IDR_s indicates the number of bits in the Secure instance of <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
 
 </li><li>
-<p>MPAMF_CPOR_IDR_ns indicates the number of bits in the Non-secure instance of <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
+<p>MPAMF_CPOR_IDR_ns indicates the number of bits in the Non-secure instance of <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
 
 </li><li>
 <p>If <span class="xref">FEAT_RME</span> is implemented, the following statements also apply:</p>
 <ul>
 <li>
-<p>MPAMF_CPOR_IDR_rt indicates the number of bits in the Root instance of <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
+<p>MPAMF_CPOR_IDR_rt indicates the number of bits in the Root instance of <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
 
 </li><li>
-<p>MPAMF_CPOR_IDR_rl indicates the number of bits in the Realm instance of <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
+<p>MPAMF_CPOR_IDR_rl indicates the number of bits in the Realm instance of <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
 
 </li></ul>
 
@@ -39,8 +39,8 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_0">CPBM_WD, bits [15:0]:
-      </h4><div class="field"><p>Number of bits in the cache portion partitioning bit map of this device. See <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
-<p>This field must contain a value from 1 to 32768, inclusive. Values greater than 32 require a group of 32-bit registers to access the CPBM, up to 1024 if CPBM_WD is the largest value.</p><p>If RIS is implemented, this field indicates the number bits in the cache portion bitmap for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      </h4><div class="field"><p>Number of bits in the cache portion partitioning bit map of this device. See <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a>.</p>
+<p>This field must contain a value from 1 to 32768, inclusive. Values greater than 32 require a group of 32-bit registers to access the CPBM, up to 1024 if CPBM_WD is the largest value.</p><p>If RIS is implemented, this field indicates the number bits in the cache portion bitmap for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing MPAMF_CPOR_IDR</h2>
         <p>If both <span class="xref">FEAT_MPAM</span> and <span class="xref">FEAT_RME</span> are implemented, the following statements apply:</p>
 
@@ -90,6 +90,6 @@
 
       
         <ul>
-<li>When <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, MPAMF_CPOR_IDR shows the configuration of cache portion partitioning for the cache resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. Fields that mention RIS in their field descriptions have values that track the implemented properties of the resource instance. Fields that do not mention RIS are constant across all resource instances.
+<li>When <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, MPAMF_CPOR_IDR shows the configuration of cache portion partitioning for the cache resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. Fields that mention RIS in their field descriptions have values that track the implemented properties of the resource instance. Fields that do not mention RIS are constant across all resource instances.
 </li></ul>
       <h4>MPAMF_CPOR_IDR can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th></tr><tr><td>MPAM</td><td><span class="hexnumber">0x0030</span></td></tr></table><p>When FEAT_MPAMv2_MSC is implemented, accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_s</td><td><span class="hexnumber">0x0030</span></td><td>MPAMF_CPOR_IDR_s</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_ns</td><td><span class="hexnumber">0x0030</span></td><td>MPAMF_CPOR_IDR_ns</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rt</td><td><span class="hexnumber">0x0030</span></td><td>MPAMF_CPOR_IDR_rt</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rl</td><td><span class="hexnumber">0x0030</span></td><td>MPAMF_CPOR_IDR_rl</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RO</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

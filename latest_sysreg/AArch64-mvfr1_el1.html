@@ -5,11 +5,11 @@
         <p>Describes the features provided by the AArch32 Advanced SIMD and floating-point implementation.</p>
 
       
-        <p>Must be interpreted with <a href="AArch64-mvfr0_el1.html">MVFR0_EL1</a> and <a href="AArch64-mvfr2_el1.html">MVFR2_EL1</a>.</p>
+        <p>Must be interpreted with <a href="/latest_sysreg/AArch64-mvfr0_el1.html">MVFR0_EL1</a> and <a href="/latest_sysreg/AArch64-mvfr2_el1.html">MVFR2_EL1</a>.</p>
 
       
         <p>For general information about the interpretation of the ID registers see <span class="xref">'Principles of the ID scheme for fields in ID registers'</span>.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register MVFR1_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-mvfr1.html">MVFR1[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to MVFR1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register MVFR1_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-mvfr1.html">MVFR1[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to MVFR1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>In an implementation where at least one Exception level supports execution in AArch32 state, but there is no support for Advanced SIMD and floating-point operation, this register is RAZ.</p>
       <h3>Attributes</h3>
         <p>MVFR1_EL1 is a 64-bit register.</p>

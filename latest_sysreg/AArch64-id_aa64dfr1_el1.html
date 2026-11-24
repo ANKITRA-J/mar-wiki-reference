@@ -18,9 +18,9 @@
       </h4><div class="field">
       <p>Behavior of the cycle counter when event counting is frozen by a Statistical Profiling management event.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>DPFZS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>The cycle counter <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is never affected by <a href="AArch64-pmcr_el0.html">PMCR_EL0</a>.FZS.</p>
+          <p>The cycle counter <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is never affected by <a href="/latest_sysreg/AArch64-pmcr_el0.html">PMCR_EL0</a>.FZS.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>The cycle counter <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> does not count when <a href="AArch64-pmcr_el0.html">PMCR_EL0</a>.DP is 1 and counting by event counters accessible to EL1 is frozen by the <a href="AArch64-pmcr_el0.html">PMCR_EL0</a>.FZS mechanism.</p>
+          <p>The cycle counter <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> does not count when <a href="/latest_sysreg/AArch64-pmcr_el0.html">PMCR_EL0</a>.DP is 1 and counting by event counters accessible to EL1 is frozen by the <a href="/latest_sysreg/AArch64-pmcr_el0.html">PMCR_EL0</a>.FZS mechanism.</p>
         </td></tr></table>
       <p><span class="xref">FEAT_SPE_DPFZS</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-51_48">EBEP, bits [51:48]:
@@ -72,16 +72,16 @@
       </h4><div class="field">
       <p>Context-aware breakpoints.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>CTX_CMPs</th><th>Meaning</th></tr><tr><td class="bitfield">0x00</td><td>
-          <p><a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.CTX_CMPs is the number of context-aware breakpoints, minus 1.</p>
+          <p><a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.CTX_CMPs is the number of context-aware breakpoints, minus 1.</p>
         </td></tr><tr><td class="bitfield">0x01..0x3F</td><td>
           <p>Number of context-aware breakpoints minus 1.</p>
         </td></tr></table><p>All other values are reserved.</p>
-<p>If 16 or fewer context-aware breakpoints are implemented, then the value of this field is either <span class="hexnumber">0x00</span> or the same as <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.CTX_CMPs. If more than 16 context-aware breakpoints are implemented, then the value <span class="hexnumber">0x00</span> is not permitted.</p>
+<p>If 16 or fewer context-aware breakpoints are implemented, then the value of this field is either <span class="hexnumber">0x00</span> or the same as <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.CTX_CMPs. If more than 16 context-aware breakpoints are implemented, then the value <span class="hexnumber">0x00</span> is not permitted.</p>
 <p>Values greater than ID_AA64DFR1_EL1.BRPs are not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_16">WRPs, bits [23:16]:
       </h4><div class="field">
       <p>Watchpoints.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>WRPs</th><th>Meaning</th></tr><tr><td class="bitfield">0x00</td><td>
-          <p><a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.WRPs is the number of watchpoints, minus 1.</p>
+          <p><a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.WRPs is the number of watchpoints, minus 1.</p>
         </td></tr><tr><td class="bitfield">0x01..0x3F</td><td>
           <p>Number of watchpoints minus 1.</p>
         </td></tr></table>
@@ -90,16 +90,16 @@
       </h4><div class="field">
       <p>Breakpoints.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>BRPs</th><th>Meaning</th></tr><tr><td class="bitfield">0x00</td><td>
-          <p><a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.BRPs is the number of breakpoints, minus 1.</p>
+          <p><a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.BRPs is the number of breakpoints, minus 1.</p>
         </td></tr><tr><td class="bitfield">0x01..0x3F</td><td>
           <p>Number of breakpoints minus 1.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>If more than 16 breakpoints are implemented, or the index of the highest numbered context-aware breakpoint is not the number of breakpoints minus 1, then the value <span class="hexnumber">0x00</span> is not permitted.</p>
-<p>Nonzero values less than <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.BRPs are not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_0-1">SYSPMUID, bits [7:0] <span class="condition">when FEAT_SPMU is implemented</span>:
+<p>Nonzero values less than <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>.BRPs are not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_0-1">SYSPMUID, bits [7:0] <span class="condition">when FEAT_SPMU is implemented</span>:
       </h4><div class="field">
-      <p>System PMU ID. Indicates the largest value that can be written to <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL.</p>
+      <p>System PMU ID. Indicates the largest value that can be written to <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>SYSPMUID</th><th>Meaning</th></tr><tr><td class="bitfield">0x00..0x1F</td><td>
-          <p>The largest supported value that can be written to <a href="AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL.</p>
+          <p>The largest supported value that can be written to <a href="/latest_sysreg/AArch64-spmselr_el0.html">SPMSELR_EL0</a>.SYSPMUSEL.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>Since System PMUs might not be contiguously accessible, this field does not necessarily indicate the total number of accessible System PMUs.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_0-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">

@@ -15,10 +15,10 @@ to number of bits per element. Inactive elements in the destination vector regis
     <h3 class="classheading"><a id="iclass_sve2"></a>SVE2 class
         <span style="font-size:smaller;"><br></br>(FEAT_SVE2 || FEAT_SME)
           </span></h3><p class="desc"></p><div class="regdiagram-32"><table class="regdiagram"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="l">0</td><td>0</td><td class="r">0</td><td class="l">0</td><td>0</td><td>1</td><td class="r">0</td><td class="lr">0</td><td colspan="2" class="lr">tszh</td><td class="lr">0</td><td class="lr">0</td><td class="l">1</td><td class="r">1</td><td class="lr">0</td><td class="lr">0</td><td class="l">1</td><td>0</td><td class="r">0</td><td colspan="3" class="lr">Pg</td><td colspan="2" class="lr">tszl</td><td colspan="3" class="lr">imm3</td><td colspan="5" class="lr">Zdn</td></tr><tr class="secondrow"><td colspan="3"></td><td colspan="4"></td><td></td><td colspan="2"></td><td></td><td></td><td colspan="2" class="droppedname">opc</td><td class="droppedname">L</td><td class="droppedname">U</td><td colspan="3"></td><td colspan="3"></td><td colspan="2"></td><td colspan="3"></td><td colspan="5"></td></tr></tbody></table></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Encoding</h4><a id="srshr_z_p_zi_"></a></div><p class="asm-code">SRSHR  <a href="#Zdn__2" title='Is the name of the source and destination scalable vector register, encoded in the "Zdn" field.'>&lt;Zdn&gt;</a>.<a href="#T__14" title="Is the size specifier, ">&lt;T&gt;</a>, <a href="#Pg" title='Is the name of the governing scalable predicate register P0-P7, encoded in the "Pg" field.'>&lt;Pg&gt;</a>/M, <a href="#Zdn__2" title='Is the name of the source and destination scalable vector register, encoded in the "Zdn" field.'>&lt;Zdn&gt;</a>.<a href="#T__14" title="Is the size specifier, ">&lt;T&gt;</a>, #<a href="#const__2" title='Is the immediate shift amount, in the range 1 to number of bits per element, encoded in "tszh:tszl:imm3".'>&lt;const&gt;</a></p></div><h4>Decode</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_SVE2) &amp;&amp; !IsFeatureImplemented(FEAT_SME) then
-    <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+    <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
 end;
 let tsize : bits(4) = tszh::tszl;
-if tsize == '0000' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if tsize == '0000' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let esize : integer{} = 8 &lt;&lt; HighestSetBitNZ(tsize);
 let g : integer = UInt(Pg);
 let dn : integer = UInt(Zdn);
@@ -80,8 +80,8 @@ let shift : integer = (2 * esize) - UInt(tsize::imm3);</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode"><a href="shared_pseudocode.html#func_CheckSVEEnabled_0" title="">CheckSVEEnabled</a>();
-let VL : integer{} = <a href="shared_pseudocode.html#func_CurrentVL_0" title="">CurrentVL</a>();
+      <p class="pseudocode"><a href="/latest_aarch64/shared_pseudocode.html#func_CheckSVEEnabled_0" title="">CheckSVEEnabled</a>();
+let VL : integer{} = <a href="/latest_aarch64/shared_pseudocode.html#func_CurrentVL_0" title="">CurrentVL</a>();
 let PL : integer{} = VL DIV 8;
 let elements : integer = VL DIV esize;
 let operand1 : bits(VL) = Z{}(dn);
@@ -90,7 +90,7 @@ var result : bits(VL);
 
 for e = 0 to elements-1 do
     let element1 : integer = SInt(operand1[e*:esize]);
-    if <a href="shared_pseudocode.html#func_ActivePredicateElement_4" title="">ActivePredicateElement</a>{PL}(mask, e, esize) then
+    if <a href="/latest_aarch64/shared_pseudocode.html#func_ActivePredicateElement_4" title="">ActivePredicateElement</a>{PL}(mask, e, esize) then
         let res : integer = (element1 + (1 &lt;&lt; (shift - 1))) &gt;&gt; shift;
         result[e*:esize] = res[esize-1:0];
     else
@@ -98,7 +98,7 @@ for e = 0 to elements-1 do
     end;
 end;
 
-<a href="shared_pseudocode.html#accessor_Z_2" title="">Z</a>{VL}(dn) = result;</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_Z_2" title="">Z</a>{VL}(dn) = result;</p></div>
   <h2>Operational information</h2>
     
       

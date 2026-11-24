@@ -6,7 +6,7 @@
 
       
         <p>The name TRCEXTINSELR is an alias of TRCEXTINSELR0.</p>
-      </div><h3>Configuration</h3><p>External register TRCEXTINSELR&lt;n&gt; bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-trcextinselrn.html">TRCEXTINSELR&lt;n&gt;[31:0]</a>.</p><p>This register is present only when FEAT_ETE is implemented and FEAT_TRC_EXT is implemented. Otherwise, direct accesses to TRCEXTINSELR&lt;n&gt; are <span class="arm-defined-word">RES0</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>External register TRCEXTINSELR&lt;n&gt; bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-trcextinselrn.html">TRCEXTINSELR&lt;n&gt;[31:0]</a>.</p><p>This register is present only when FEAT_ETE is implemented and FEAT_TRC_EXT is implemented. Otherwise, direct accesses to TRCEXTINSELR&lt;n&gt; are <span class="arm-defined-word">RES0</span>.</p><h3>Attributes</h3>
         <p>TRCEXTINSELR&lt;n&gt; is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_0-31_16">RES0</a></td><td class="lr" colspan="16"><a href="#fieldset_0-15_0">evtCount</a></td></tr></tbody></table><h4 id="fieldset_0-31_16">Bits [31:16]:
       </h4><div class="field">
@@ -24,7 +24,7 @@
 <p>Arm recommends that the behavior across a family of implementations is defined such that if a given implementation does not include a PMU event from a set of common <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> PMU events, then the External Input Selector is not active and the value read back on evtCount is the value written.</p><p>The reset behavior of this field is:</p><ul><li>On a Trace unit reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing TRCEXTINSELR&lt;n&gt;</h2>
-        <p>Must be programmed if any of the following is true: <a href="ext-trcrsctlrn.html">TRCRSCTLR&lt;a&gt;</a>.GROUP == <span class="binarynumber">0b0000</span> and <a href="ext-trcrsctlrn.html">TRCRSCTLR&lt;a&gt;</a>.EXTIN[n] == 1.</p>
+        <p>Must be programmed if any of the following is true: <a href="/latest_sysreg/ext-trcrsctlrn.html">TRCRSCTLR&lt;a&gt;</a>.GROUP == <span class="binarynumber">0b0000</span> and <a href="/latest_sysreg/ext-trcrsctlrn.html">TRCRSCTLR&lt;a&gt;</a>.EXTIN[n] == 1.</p>
 
       
         <p>If the trace unit is not in the Idle state it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether writes to this register are ignored.</p>

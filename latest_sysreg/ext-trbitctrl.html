@@ -29,8 +29,8 @@
 
       
         <ul>
-<li><a href="ext-trblimitr_el1.html">TRBLIMITR_EL1</a>.E == 1 and Trace Buffer Unit is using Self-hosted mode.
-</li><li><a href="ext-trblimitr_el1.html">TRBLIMITR_EL1</a>.XE == 1 and the Trace Buffer Unit is using External mode.
+<li><a href="/latest_sysreg/ext-trblimitr_el1.html">TRBLIMITR_EL1</a>.E == 1 and Trace Buffer Unit is using Self-hosted mode.
+</li><li><a href="/latest_sysreg/ext-trblimitr_el1.html">TRBLIMITR_EL1</a>.XE == 1 and the Trace Buffer Unit is using External mode.
 </li></ul>
       <h4>TRBITCTRL can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>TRBE</td><td><span class="hexnumber">0xF00</span></td><td>TRBITCTRL</td></tr></table><p>Accessible as follows:</p><ul><li>When DoubleLockStatus(), or !IsCorePowered(), or OSLockStatus(), or !AllowExternalTraceBufferAccess(addrdesc), accesses to this register generate an error response.
           </li><li>Otherwise, accesses to this register are <span class="access_level">RW</span>.

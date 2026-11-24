@@ -36,7 +36,7 @@
         </td></tr><tr><td class="bitfield">0b11</td><td>
           <p>Reserved for software use under virtualization, to show that only physical address mode is supported.</p>
         </td></tr></table><p>Other values are reserved.</p>
-<p>If the Effective value of <a href="AArch64-pmscr_el2.html">PMSCR_EL2</a>.EnVM is 1 and the value returned for PMBIDR_EL1.P is 0, then this field reads as <span class="binarynumber">0b01</span>. Otherwise, this field reads as <span class="binarynumber">0b00</span>.</p>
+<p>If the Effective value of <a href="/latest_sysreg/AArch64-pmscr_el2.html">PMSCR_EL2</a>.EnVM is 1 and the value returned for PMBIDR_EL1.P is 0, then this field reads as <span class="binarynumber">0b01</span>. Otherwise, this field reads as <span class="binarynumber">0b00</span>.</p>
 <div class="note"><p>A hypervisor might trap accesses to this register to describe limitations of its virtualization support to a guest operating system.</p></div></div><h4 id="fieldset_0-7_6-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -61,34 +61,34 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Programming not allowed.</p>
         </td></tr></table><p>The value read from this field depends on the current Exception level and the Effective values of 
-<a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPB, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPBE, and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB:</p>
+<a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPB, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPBE, and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB:</p>
 <ul>
-<li>If EL3 is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPB is <span class="binarynumber">0b0x</span>, and either <span class="xref">FEAT_RME</span> is not implemented, or Secure state is implemented and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPBE is 0, then this field reads as one from:<ul>
+<li>If EL3 is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPB is <span class="binarynumber">0b0x</span>, and either <span class="xref">FEAT_RME</span> is not implemented, or Secure state is implemented and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPBE is 0, then this field reads as one from:<ul>
 <li>Non-secure EL1 and Non-secure EL2.
 </li><li>If <span class="xref">FEAT_RME</span> is implemented, Realm EL1 and Realm EL2.
-</li><li>If Secure EL2 is implemented and enabled, and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB is <span class="binarynumber">0b00</span>, Secure EL1.
+</li><li>If Secure EL2 is implemented and enabled, and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB is <span class="binarynumber">0b00</span>, Secure EL1.
 </li></ul>
 
-</li><li>If EL3 is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPB is <span class="binarynumber">0b1x</span> and either <span class="xref">FEAT_RME</span> is not implemented or <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPBE is 0, then this field reads as one from:<ul>
+</li><li>If EL3 is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPB is <span class="binarynumber">0b1x</span> and either <span class="xref">FEAT_RME</span> is not implemented or <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.NSPBE is 0, then this field reads as one from:<ul>
 <li>If Secure state is implemented, Secure EL1.
 </li><li>If Secure EL2 is implemented, Secure EL2.
-</li><li>If EL2 is implemented and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB is <span class="binarynumber">0b00</span>, Non-secure EL1.
+</li><li>If EL2 is implemented and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB is <span class="binarynumber">0b00</span>, Non-secure EL1.
 </li><li>If <span class="xref">FEAT_RME</span> is implemented, Realm EL1 and Realm EL2.
 </li></ul>
 
-</li><li>If <span class="xref">FEAT_RME</span> is implemented, and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{NSPB, NSPBE} is {<span class="binarynumber">0b1x</span>, 1}, then this field reads as one from:<ul>
+</li><li>If <span class="xref">FEAT_RME</span> is implemented, and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{NSPB, NSPBE} is {<span class="binarynumber">0b1x</span>, 1}, then this field reads as one from:<ul>
 <li>Non-secure EL1 and Non-secure EL2.
 </li><li>If Secure state is implemented, Secure EL1 and Secure EL2.
-</li><li>If <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB is <span class="binarynumber">0b00</span>, Realm EL1.
+</li><li>If <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB is <span class="binarynumber">0b00</span>, Realm EL1.
 </li></ul>
 
-</li><li>If EL3 is not implemented, EL2 is implemented, and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB is <span class="binarynumber">0b00</span>, then this field reads as one from EL1.
+</li><li>If EL3 is not implemented, EL2 is implemented, and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.E2PB is <span class="binarynumber">0b00</span>, then this field reads as one from EL1.
 </li></ul>
-<p>If EL3 is implemented and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.{NSPB, NSPBE} has a reserved combination of values, then this field reads as an <span class="arm-defined-word">UNKNOWN</span> value from EL2 and EL1.</p>
+<p>If EL3 is implemented and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.{NSPB, NSPBE} has a reserved combination of values, then this field reads as an <span class="arm-defined-word">UNKNOWN</span> value from EL2 and EL1.</p>
 <p>If EL2 is implemented and enabled in the current Security state, and MDCR_EL2.E2PB has a reserved value, then this field reads as an <span class="arm-defined-word">UNKNOWN</span> value from EL1.</p>
 <p>Otherwise, this field reads as zero.</p></div><h4 id="fieldset_0-3_0">Align, bits [3:0]:
       </h4><div class="field">
-      <p>Defines the minimum alignment constraint for writes to <a href="AArch64-pmbptr_el1.html">PMBPTR_EL1</a>.</p>
+      <p>Defines the minimum alignment constraint for writes to <a href="/latest_sysreg/AArch64-pmbptr_el1.html">PMBPTR_EL1</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>Align</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>Byte.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>

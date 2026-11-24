@@ -4,16 +4,16 @@
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">GICD_ISPENDR&lt;n&gt;, n = 0 - 31</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Set-Pending Registers</p><div data-pagefind-body="1">
         <p>Adds the pending state to the corresponding interrupt.</p>
       </div><h3>Configuration</h3>
-        <p>These registers are available in all GIC configurations. If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, these registers are Common.</p>
+        <p>These registers are available in all GIC configurations. If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, these registers are Common.</p>
 
       
-        <p>The number of implemented <a href="ext-gicd_ispendrn.html">GICD_ISPENDR&lt;n&gt;</a> registers is (<a href="ext-gicd_typer.html">GICD_TYPER</a>.ITLinesNumber+1). Registers are numbered from 0.</p>
+        <p>The number of implemented <a href="/latest_sysreg/ext-gicd_ispendrn.html">GICD_ISPENDR&lt;n&gt;</a> registers is (<a href="/latest_sysreg/ext-gicd_typer.html">GICD_TYPER</a>.ITLinesNumber+1). Registers are numbered from 0.</p>
 
       
-        <p>GICD_ISPENDR0 is Banked for each connected PE with <a href="ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &lt; 8.</p>
+        <p>GICD_ISPENDR0 is Banked for each connected PE with <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &lt; 8.</p>
 
       
-        <p>Accessing GICD_ISPENDR0 from a PE with <a href="ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &gt; 7 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
+        <p>Accessing GICD_ISPENDR0 from a PE with <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number &gt; 7 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
 
       
         <ul>
@@ -29,14 +29,14 @@
 <p>If written, has no effect.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>If read, indicates that the corresponding interrupt is pending, or active and pending.</p>
 <p>If written, changes the state of the corresponding interrupt from inactive to pending, or from active to active and pending. This has no effect in the following cases:</p>
 <ul>
-<li>If the interrupt is an SGI. The pending state of an SGI can be set using <a href="ext-gicd_spendsgirn.html">GICD_SPENDSGIR&lt;n&gt;</a>.
+<li>If the interrupt is an SGI. The pending state of an SGI can be set using <a href="/latest_sysreg/ext-gicd_spendsgirn.html">GICD_SPENDSGIR&lt;n&gt;</a>.
 </li><li>If the interrupt is not inactive and is not active.
-</li><li>If the interrupt is already pending because of a write to <a href="ext-gicd_ispendrn.html">GICD_ISPENDR&lt;n&gt;</a>.
+</li><li>If the interrupt is already pending because of a write to <a href="/latest_sysreg/ext-gicd_ispendrn.html">GICD_ISPENDR&lt;n&gt;</a>.
 </li><li>If the interrupt is already pending because the corresponding interrupt signal is asserted. In this case, the interrupt remains pending if the interrupt signal is deasserted.
 </li></ul></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
       this field resets
        to the expression <span class="pseudocode">0x00000000</span>.</li></ul></div><h2>Accessing GICD_ISPENDR&lt;n&gt;</h2>
-        <p>Set-pending bits for SGIs are read-only and ignore writes. The Set-pending bits for SGIs are provided as <a href="ext-gicd_spendsgirn.html">GICD_SPENDSGIR&lt;n&gt;</a>.</p>
+        <p>Set-pending bits for SGIs are read-only and ignore writes. The Set-pending bits for SGIs are provided as <a href="/latest_sysreg/ext-gicd_spendsgirn.html">GICD_SPENDSGIR&lt;n&gt;</a>.</p>
 
       
         <p>When affinity routing is enabled for the Security state of an interrupt:</p>
@@ -51,5 +51,5 @@
         <p>Bits corresponding to unimplemented interrupts are RAZ/WI.</p>
 
       
-        <p>If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, unless the <a href="ext-gicd_nsacrn.html">GICD_NSACR&lt;n&gt;</a> registers permit Non-secure software to control Group 0 and Secure Group 1 interrupts, any bits that correspond to Group 0 or Secure Group 1 interrupts are accessible only by Secure accesses and are RAZ/WI to Non-secure accesses.</p>
+        <p>If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, unless the <a href="/latest_sysreg/ext-gicd_nsacrn.html">GICD_NSACR&lt;n&gt;</a> registers permit Non-secure software to control Group 0 and Secure Group 1 interrupts, any bits that correspond to Group 0 or Secure Group 1 interrupts are accessible only by Secure accesses and are RAZ/WI to Non-secure accesses.</p>
       <h4>GICD_ISPENDR&lt;n&gt; can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Distributor</td><td>Dist_base</td><td><span class="hexnumber">0x0200</span> + (4 * n)</td><td>GICD_ISPENDR&lt;n&gt;</td></tr></table><p>Accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

@@ -5,7 +5,7 @@
         <p>IRS MPAM Identification Register. Contains read-only fields with information about the IRS support for MPAM.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv5_EXT is implemented and (IRS_IDR0.MPAM == '1' or IRS_IDR0.MPAM2 == '1'). Otherwise, direct accesses to IRS_MPAM_IDR are <span class="arm-defined-word">RES0</span>.</p><h3>Attributes</h3>
         <p>IRS_MPAM_IDR is a 32-bit register.</p>
-      <p>This  register is part of the <a href="irs_config_frame.html">IRS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><h3>When IRS_IDR0.MPAM == '1':</h3><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="7"><a href="#fieldset_0-31_25">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_24">HAS_MPAM_SP</a></td><td class="lr" colspan="8"><a href="#fieldset_0-23_16">PMG_MAX</a></td><td class="lr" colspan="16"><a href="#fieldset_0-15_0">PARTID_MAX</a></td></tr></tbody></table><h4 id="fieldset_0-31_25">Bits [31:25]:
+      <p>This  register is part of the <a href="/latest_sysreg/irs_config_frame.html">IRS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><h3>When IRS_IDR0.MPAM == '1':</h3><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="7"><a href="#fieldset_0-31_25">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_24">HAS_MPAM_SP</a></td><td class="lr" colspan="8"><a href="#fieldset_0-23_16">PMG_MAX</a></td><td class="lr" colspan="16"><a href="#fieldset_0-15_0">PARTID_MAX</a></td></tr></tbody></table><h4 id="fieldset_0-31_25">Bits [31:25]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-24_24">HAS_MPAM_SP, bit [24]:
@@ -15,7 +15,7 @@
           <p>MPAM PARTID space selection is not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>MPAM PARTID space selection is implemented.</p>
-        </td></tr></table><p>If HAS_MPAM_SP is 1, the IRS uses the MPAM PARTID specified by <a href="irs_config_frame.irs_mpam_partid_r.html">IRS_MPAM_PARTID_R</a>.MPAM_SP.</p>
+        </td></tr></table><p>If HAS_MPAM_SP is 1, the IRS uses the MPAM PARTID specified by <a href="/latest_sysreg/irs_config_frame.irs_mpam_partid_r.html">IRS_MPAM_PARTID_R</a>.MPAM_SP.</p>
 <p>If HAS_MPAM_SP is 0, the following PARTID space is used for IRS accesses to memory:</p>
 <ul>
 <li>

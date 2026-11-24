@@ -3,14 +3,14 @@
 <title>PMCR_EL0 | Jon's Arm Reference</title><meta name="description" content="Provides details of the Performance Monitors implementation, including the number of counters implemented, and configures and controls the counters."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">PMCR_EL0</h1><p class="insn_subtitle" data-pagefind-body="1">Performance Monitors Control Register</p><div data-pagefind-body="1">
         <p>Provides details of the Performance Monitors implementation, including the number of counters implemented, and configures and controls the counters.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register PMCR_EL0 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-pmcr.html">PMCR[31:0]</a>.</p><p>AArch64 System register PMCR_EL0 bits [31:0] are architecturally mapped to External register <a href="pmu.pmcr_el0.html">PMCR_EL0[31:0]</a>.</p><p>AArch64 System register PMCR_EL0 bits [63:32] are architecturally mapped to External register <a href="pmu.pmcr_el0.html">PMCR_EL0[63:32]</a> when FEAT_PMUv3_EXT64 is implemented.</p><p>This register is present only when FEAT_PMUv3 is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to PMCR_EL0 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch64 System register PMCR_EL0 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-pmcr.html">PMCR[31:0]</a>.</p><p>AArch64 System register PMCR_EL0 bits [31:0] are architecturally mapped to External register <a href="/latest_sysreg/pmu.pmcr_el0.html">PMCR_EL0[31:0]</a>.</p><p>AArch64 System register PMCR_EL0 bits [63:32] are architecturally mapped to External register <a href="/latest_sysreg/pmu.pmcr_el0.html">PMCR_EL0[63:32]</a> when FEAT_PMUv3_EXT64 is implemented.</p><p>This register is present only when FEAT_PMUv3 is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to PMCR_EL0 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>PMCR_EL0 is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="31"><a href="#fieldset_0-63_33">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-32_32-1">FZS</a></td></tr><tr class="firstrow"><td class="lr" colspan="8"><a href="#fieldset_0-31_24-1">IMP</a></td><td class="lr" colspan="8"><a href="#fieldset_0-23_16-1">IDCODE</a></td><td class="lr" colspan="5"><a href="#fieldset_0-15_11">N</a></td><td class="lr" colspan="1"><a href="#fieldset_0-10_10">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-9_9-1">FZO</a></td><td class="lr" colspan="1"><a href="#fieldset_0-8_8">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-7_7-1">LP</a></td><td class="lr" colspan="1"><a href="#fieldset_0-6_6-1">LC</a></td><td class="lr" colspan="1"><a href="#fieldset_0-5_5-1">DP</a></td><td class="lr" colspan="1"><a href="#fieldset_0-4_4-1">X</a></td><td class="lr" colspan="1"><a href="#fieldset_0-3_3-1">D</a></td><td class="lr" colspan="1"><a href="#fieldset_0-2_2">C</a></td><td class="lr" colspan="1"><a href="#fieldset_0-1_1">P</a></td><td class="lr" colspan="1"><a href="#fieldset_0-0_0">E</a></td></tr></tbody></table><h4 id="fieldset_0-63_33">Bits [63:33]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-32_32-1">FZS, bit [32] <span class="condition">when FEAT_SPEv1p2 is implemented</span>:
       </h4><div class="field">
-      <p>Freeze-on-SPE event. Stop counters when <a href="AArch64-pmblimitr_el1.html">PMBLIMITR_EL1</a>.{PMFZ,E} is {1,1} and profiling is stopped.</p>
+      <p>Freeze-on-SPE event. Stop counters when <a href="/latest_sysreg/AArch64-pmblimitr_el1.html">PMBLIMITR_EL1</a>.{PMFZ,E} is {1,1} and profiling is stopped.</p>
     <table class="valuetable"><tr><th>FZS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Do not freeze on a Statistical Profiling Buffer Management event.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -19,12 +19,12 @@
 <p>The counters affected by this field are:</p>
 <ul>
 <li>The event counters in the first range.
-</li><li>If <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented, the instruction counter <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.
-</li><li>If <span class="xref">FEAT_SPE_DPFZS</span> is implemented and PMCR_EL0.DP is 1, the cycle counter <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>.
+</li><li>If <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented, the instruction counter <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.
+</li><li>If <span class="xref">FEAT_SPE_DPFZS</span> is implemented and PMCR_EL0.DP is 1, the cycle counter <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>.
 </li></ul>
 <p>Other event counters are not affected by this field.</p>
-<p>When <span class="xref">FEAT_SPE_DPFZS</span> is not implemented or PMCR_EL0.DP is 0, <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is not affected by this field.</p>
-<p>For more information about event counter ranges, see <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
+<p>When <span class="xref">FEAT_SPE_DPFZS</span> is not implemented or PMCR_EL0.DP is 0, <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is not affected by this field.</p>
+<p>For more information about event counter ranges, see <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When FEAT_AA32 is implemented,
             this field resets to
             <span class="binarynumber">'0'</span>.
@@ -38,8 +38,8 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-31_24-1">IMP, bits [31:24] <span class="condition">when FEAT_PMUv3p7 is not implemented</span>:
       </h4><div class="field"><p>Implementer code.</p>
-<p>If this field is zero, then PMCR_EL0.IDCODE is <span class="arm-defined-word">RES0</span> and software must use <a href="AArch64-midr_el1.html">MIDR_EL1</a> to identify the PE.</p>
-<p>Otherwise, this field and PMCR_EL0.IDCODE identify the PMU implementation to software. The implementer codes are allocated by Arm. A nonzero value has the same interpretation as <a href="AArch64-midr_el1.html">MIDR_EL1</a>.Implementer.</p>
+<p>If this field is zero, then PMCR_EL0.IDCODE is <span class="arm-defined-word">RES0</span> and software must use <a href="/latest_sysreg/AArch64-midr_el1.html">MIDR_EL1</a> to identify the PE.</p>
+<p>Otherwise, this field and PMCR_EL0.IDCODE identify the PMU implementation to software. The implementer codes are allocated by Arm. A nonzero value has the same interpretation as <a href="/latest_sysreg/AArch64-midr_el1.html">MIDR_EL1</a>.Implementer.</p>
 <p>Arm deprecates use of this field.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-31_24-2"> <span class="condition">Otherwise</span>:
@@ -53,8 +53,8 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_11">N, bits [15:11]:
-      </h4><div class="field"><p>Indicates the number of event counters implemented. This value is in the range of <span class="binarynumber">0b00000</span>-<span class="binarynumber">0b11111</span>. If the value is <span class="binarynumber">0b00000</span>, then only <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is implemented. If the value is <span class="binarynumber">0b11111</span>, then <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> and 31 event counters are implemented.</p>
-<p>When EL2 is implemented and enabled for the current Security state, reads of this field from EL1 and EL0 return the Effective value of <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p>
+      </h4><div class="field"><p>Indicates the number of event counters implemented. This value is in the range of <span class="binarynumber">0b00000</span>-<span class="binarynumber">0b11111</span>. If the value is <span class="binarynumber">0b00000</span>, then only <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is implemented. If the value is <span class="binarynumber">0b11111</span>, then <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> and 31 event counters are implemented.</p>
+<p>When EL2 is implemented and enabled for the current Security state, reads of this field from EL1 and EL0 return the Effective value of <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-10_10">Bit [10]:
       </h4><div class="field">
@@ -67,20 +67,20 @@
         </td></tr><tr><td class="bitfield">0b1</td><td><p>Affected counters do not count when any of the following applies:</p>
 <ul>
 <li>
-<p>For any event counter <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> in the first range, <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>[m] is 1.</p>
+<p>For any event counter <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;m&gt;_EL0</a> in the first range, <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>[m] is 1.</p>
 
 </li><li>
-<p><span class="xref">FEAT_PMUv3_ICNTR</span> is implemented and <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.F0 is 1.</p>
+<p><span class="xref">FEAT_PMUv3_ICNTR</span> is implemented and <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.F0 is 1.</p>
 
 </li></ul></td></tr></table><p>The counters affected by this field are:</p>
 <ul>
 <li>The event counters in the first range.
-</li><li>If <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented, the instruction counter <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.
-</li><li>If PMCR_EL0.DP is 1, the cycle counter <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>.
+</li><li>If <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented, the instruction counter <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.
+</li><li>If PMCR_EL0.DP is 1, the cycle counter <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>.
 </li></ul>
 <p>Other event counters are not affected by this field.</p>
-<p>When PMCR_EL0.DP is 0, <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is not affected by this field.</p>
-<p>For more information about event counter ranges, see <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>When PMCR_EL0.DP is 0, <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is not affected by this field.</p>
+<p>For more information about event counter ranges, see <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-9_9-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -90,27 +90,27 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-7_7-1">LP, bit [7] <span class="condition">when FEAT_PMUv3p5 is implemented</span>:
       </h4><div class="field">
-      <p>Long event counter enable. Determines when unsigned overflow is recorded by <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.P[n].</p>
+      <p>Long event counter enable. Determines when unsigned overflow is recorded by <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.P[n].</p>
     <table class="valuetable"><tr><th>LP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Event counter overflow on increment that causes unsigned overflow of <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;n&gt;_EL0</a>[31:0].</p>
+          <p>Event counter overflow on increment that causes unsigned overflow of <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;n&gt;_EL0</a>[31:0].</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Event counter overflow on increment that causes unsigned overflow of <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;n&gt;_EL0</a>[63:0].</p>
+          <p>Event counter overflow on increment that causes unsigned overflow of <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;n&gt;_EL0</a>[63:0].</p>
         </td></tr></table><p>When <span class="xref">FEAT_EBEP</span> is implemented and the PMU Profiling exception is enabled, the Effective value of this field is 1.</p>
 <p>The counters affected by this field are the event counters in the first range.
-For more information about event counter ranges, see <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p>
-<p>Other event counters and <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> are not affected by this field.</p>
-<p>When <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented, <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a> is not affected by this field.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+For more information about event counter ranges, see <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p>
+<p>Other event counters and <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> are not affected by this field.</p>
+<p>When <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented, <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a> is not affected by this field.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-7_7-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-6_6-1">LC, bit [6] <span class="condition">when FEAT_AA32 is implemented</span>:
       </h4><div class="field">
-      <p>Long cycle counter enable. Determines when unsigned overflow is recorded by <a href="AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.C.</p>
+      <p>Long cycle counter enable. Determines when unsigned overflow is recorded by <a href="/latest_sysreg/AArch64-pmovsclr_el0.html">PMOVSCLR_EL0</a>.C.</p>
     <table class="valuetable"><tr><th>LC</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Cycle counter overflow on increment that causes unsigned overflow of <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>[31:0].</p>
+          <p>Cycle counter overflow on increment that causes unsigned overflow of <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>[31:0].</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Cycle counter overflow on increment that causes unsigned overflow of <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>[63:0].</p>
+          <p>Cycle counter overflow on increment that causes unsigned overflow of <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>[63:0].</p>
         </td></tr></table><p>When <span class="xref">FEAT_EBEP</span> is implemented and the PMU Profiling exception is enabled, the Effective value of this field is 1.</p>
 <p>Arm deprecates use of PMCR_EL0.LC = 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -121,17 +121,17 @@ For more information about event counter ranges, see <a href="AArch64-mdcr_el2.h
       </h4><div class="field">
       <p>Disable cycle counter when event counting is prohibited.</p>
     <table class="valuetable"><tr><th>DP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Cycle counting by <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is not affected by this mechanism.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>Cycle counting by <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled in prohibited regions and when event counting is frozen:</p>
+          <p>Cycle counting by <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is not affected by this mechanism.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>Cycle counting by <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled in prohibited regions and when event counting is frozen:</p>
 <ul>
-<li>If <span class="xref">FEAT_PMUv3p1</span> is implemented, EL2 is implemented, and <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMD  is 1, then cycle counting by <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled at EL2.
-</li><li>If <span class="xref">FEAT_SPE_DPFZS</span> is implemented and event counting is frozen by PMCR_EL0.FZS, then cycle counting by <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled.
-</li><li>If <span class="xref">FEAT_PMUv3p7</span> is implemented and event counting is frozen by PMCR_EL0.FZO, then cycle counting by <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled.
-</li><li>If <span class="xref">FEAT_PMUv3p7</span> is implemented, EL3 is implemented, and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.MPMX is 1, then cycle counting by <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled at EL3.
-</li><li>If EL3 is implemented, <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.SPME  is 0, and either <span class="xref">FEAT_PMUv3p7</span> is not implemented or <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.MPMX is 0, then cycle counting by <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled at EL3 and in Secure state.
+<li>If <span class="xref">FEAT_PMUv3p1</span> is implemented, EL2 is implemented, and <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMD  is 1, then cycle counting by <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled at EL2.
+</li><li>If <span class="xref">FEAT_SPE_DPFZS</span> is implemented and event counting is frozen by PMCR_EL0.FZS, then cycle counting by <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled.
+</li><li>If <span class="xref">FEAT_PMUv3p7</span> is implemented and event counting is frozen by PMCR_EL0.FZO, then cycle counting by <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled.
+</li><li>If <span class="xref">FEAT_PMUv3p7</span> is implemented, EL3 is implemented, and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.MPMX is 1, then cycle counting by <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled at EL3.
+</li><li>If EL3 is implemented, <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.SPME  is 0, and either <span class="xref">FEAT_PMUv3p7</span> is not implemented or <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.MPMX is 0, then cycle counting by <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is disabled at EL3 and in Secure state.
 </li></ul></td></tr></table><p>The conditions when this field disables the cycle counter are the same as when event counting by an event counter  in the first range is prohibited or frozen.
-For more information about event counter ranges, see <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p>
-<p>If <span class="xref">FEAT_PMUv3p7</span> and <span class="xref">FEAT_SPEv1p2</span> are implemented, meaning PMCR_EL0.FZS is implemented, and <span class="xref">FEAT_SPE_DPFZS</span> is not implemented, then cycle counting by <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is not affected by PMCR_EL0.FZS.</p>
+For more information about event counter ranges, see <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p>
+<p>If <span class="xref">FEAT_PMUv3p7</span> and <span class="xref">FEAT_SPEv1p2</span> are implemented, meaning PMCR_EL0.FZS is implemented, and <span class="xref">FEAT_SPE_DPFZS</span> is not implemented, then cycle counting by <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> is not affected by PMCR_EL0.FZS.</p>
 <p>For more information, see <span class="xref">'Prohibiting event and cycle counting'</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-5_5-2"> <span class="condition">Otherwise</span>:
@@ -157,9 +157,9 @@ For more information about event counter ranges, see <a href="AArch64-mdcr_el2.h
       </h4><div class="field">
       <p>Clock divider.</p>
     <table class="valuetable"><tr><th>D</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>When enabled, <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> counts every clock cycle.</p>
+          <p>When enabled, <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> counts every clock cycle.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>When enabled, <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> counts once every 64 clock cycles.</p>
+          <p>When enabled, <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> counts once every 64 clock cycles.</p>
         </td></tr></table><p>If the Effective value of PMCR_EL0.LC is 1, then this field is ignored and the cycle counter counts every clock cycle.</p>
 <p>Arm deprecates use of PMCR_EL0.D = 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -172,10 +172,10 @@ For more information about event counter ranges, see <a href="AArch64-mdcr_el2.h
     <table class="valuetable"><tr><th>C</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No action.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Reset <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> to zero.</p>
+          <p>Reset <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> to zero.</p>
         </td></tr></table>
       <div class="note">
-        <p>Resetting <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> does not change the cycle counter overflow field. The value of PMCR_EL0.LC is ignored, and bits [63:0] of the cycle counter are reset.</p>
+        <p>Resetting <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a> does not change the cycle counter overflow field. The value of PMCR_EL0.LC is ignored, and bits [63:0] of the cycle counter are reset.</p>
       </div>
     <p>Access to this field is <span class="access_level">WO/RAZ</span>.</p></div><h4 id="fieldset_0-1_1">P, bit [1]:
       </h4><div class="field">
@@ -183,7 +183,7 @@ For more information about event counter ranges, see <a href="AArch64-mdcr_el2.h
     <table class="valuetable"><tr><th>P</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No action.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Reset all affected event counters <a href="AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;n&gt;_EL0</a> to zero.</p>
+          <p>Reset all affected event counters <a href="/latest_sysreg/AArch64-pmevcntrn_el0.html">PMEVCNTR&lt;n&gt;_EL0</a> to zero.</p>
         </td></tr></table><p>The event counters affected by this field are:</p>
 <ul>
 <li>All event counters in the first range.
@@ -193,21 +193,21 @@ For more information about event counter ranges, see <a href="AArch64-mdcr_el2.h
 </li></ul>
 
 </li></ul>
-<p>Writes to this field do not affect other event counters, the cycle counter <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>, or the instruction counter <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.</p>
-<p>For more information about event counter ranges, see <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p>
-<div class="note"><p>Resetting the event counters does not change the event counter overflow fields. If <span class="xref">FEAT_PMUv3p5</span> is implemented, the values of <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HLP  and PMCR_EL0.LP are ignored, and bits [63:0] of all affected event counters are reset.</p></div><p>Access to this field is <span class="access_level">WO/RAZ</span>.</p></div><h4 id="fieldset_0-0_0">E, bit [0]:
+<p>Writes to this field do not affect other event counters, the cycle counter <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>, or the instruction counter <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.</p>
+<p>For more information about event counter ranges, see <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.</p>
+<div class="note"><p>Resetting the event counters does not change the event counter overflow fields. If <span class="xref">FEAT_PMUv3p5</span> is implemented, the values of <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HLP  and PMCR_EL0.LP are ignored, and bits [63:0] of all affected event counters are reset.</p></div><p>Access to this field is <span class="access_level">WO/RAZ</span>.</p></div><h4 id="fieldset_0-0_0">E, bit [0]:
       </h4><div class="field">
       <p>Enable.</p>
     <table class="valuetable"><tr><th>E</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Affected counters are disabled and do not count.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Affected counters are enabled by <a href="AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.</p>
+          <p>Affected counters are enabled by <a href="/latest_sysreg/AArch64-pmcntenset_el0.html">PMCNTENSET_EL0</a>.</p>
         </td></tr></table><p>The counters affected by this field are:</p>
 <ul>
 <li>The event counters in the first range.
-For more information about event counter ranges, see <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.
-</li><li>If <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented, the instruction counter <a href="AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.
-</li><li>The cycle counter <a href="AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>.
+For more information about event counter ranges, see <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.HPMN.
+</li><li>If <span class="xref">FEAT_PMUv3_ICNTR</span> is implemented, the instruction counter <a href="/latest_sysreg/AArch64-pmicntr_el0.html">PMICNTR_EL0</a>.
+</li><li>The cycle counter <a href="/latest_sysreg/AArch64-pmccntr_el0.html">PMCCNTR_EL0</a>.
 </li></ul>
 <p>Other event counters are not affected by this field.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

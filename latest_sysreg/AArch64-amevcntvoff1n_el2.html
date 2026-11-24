@@ -16,7 +16,7 @@
         <p>If the virtual offset for auxiliary activity monitor event counter &lt;n&gt; is not implemented, then reads and writes of AMEVCNTVOFF1&lt;n&gt;_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
 
       
-        <div class="note"><p><a href="AArch64-amcg1idr_el0.html">AMCG1IDR_EL0</a> identifies which auxiliary activity monitor event counters have a corresponding virtual offset implemented.</p></div>
+        <div class="note"><p><a href="/latest_sysreg/AArch64-amcg1idr_el0.html">AMCG1IDR_EL0</a> identifies which auxiliary activity monitor event counters have a corresponding virtual offset implemented.</p></div>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, AMEVCNTVOFF1&lt;n&gt;_EL2
           ; Where n = 0-15</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b1101, CRm = 0b101:n[3], op2 = n[2:0])

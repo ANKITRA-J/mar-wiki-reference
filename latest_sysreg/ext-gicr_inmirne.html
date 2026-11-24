@@ -4,7 +4,7 @@
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">GICR_INMIR&lt;n&gt;E, n = 1 - 2</h1><p class="insn_subtitle" data-pagefind-body="1">Non-maskable Interrupt Registers for Extended PPIs</p><div data-pagefind-body="1">
         <p>Controls whether the corresponding Extended PPI has the non-maskable property.</p>
       </div><h3>Configuration</h3><p>This register is present only when GICv3.1 is implemented and GICD_TYPER.NMI == '1'. Otherwise, direct accesses to GICR_INMIR&lt;n&gt;E are <span class="arm-defined-word">RES0</span>.</p>
-        <p>When <a href="ext-gicr_typer.html">GICR_TYPER</a>.PPInum is <span class="binarynumber">0b0000</span>, these registers are <span class="arm-defined-word">RES0</span>.</p>
+        <p>When <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.PPInum is <span class="binarynumber">0b0000</span>, these registers are <span class="arm-defined-word">RES0</span>.</p>
 
       
         <p>A copy of this register is provided for each Redistributor.</p>
@@ -27,7 +27,7 @@
         <p>Bits corresponding to unimplemented interrupts are RAZ/WI.</p>
 
       
-        <p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, bits corresponding to Group 0 and Secure Group 1 interrupts are RAZ/WI to Non-secure accesses.</p>
+        <p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, bits corresponding to Group 0 and Secure Group 1 interrupts are RAZ/WI to Non-secure accesses.</p>
 
       
         <div class="note"><p>Implementations must ensure that an interrupt that is pending at the time of the write uses either the old value or the new value and must ensure that the interrupt is neither lost nor handled more than one time. The effect of the change must be visible in finite time.</p></div>

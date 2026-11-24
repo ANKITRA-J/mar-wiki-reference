@@ -14,7 +14,7 @@
           <p>The virtual LPI Pending table is valid. A vPE is scheduled.</p>
         </td></tr></table><p>Setting GICR_VPENDBASER.Valid == 1 when the associated CPU interface does not implement FEAT_GICv4 is <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
 <div class="note"><p>Software can determine whether a PE supports FEAT_GICv3 or FEAT_GICv4 by reading <span class="xref">ID_AA64PFR0_EL1</span>.</p></div><p>Writing a new value to any bit of GICR_VPENDBASER, other than GICR_VPENDBASER.Valid, when GICR_VPENDBASER.Valid==1 is <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
-<p>Setting GICR_VPENDBASER.Valid to 1 is <span class="arm-defined-word">UNPREDICTABLE</span> if <a href="ext-gicr_vpropbaser.html">GICR_VPROPBASER</a>.Valid == 0.</p><p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
+<p>Setting GICR_VPENDBASER.Valid to 1 is <span class="arm-defined-word">UNPREDICTABLE</span> if <a href="/latest_sysreg/ext-gicr_vpropbaser.html">GICR_VPROPBASER</a>.Valid == 0.</p><p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-62_62">Doorbell, bit [62]:
@@ -68,7 +68,7 @@
           <p>Forwarding of virtual Group 0 interrupts disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Forwarding of virtual Group 0 interrupts enabled.</p>
-        </td></tr></table><p>Writing a new value to VGrp0En while <a href="ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Valid==1 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
+        </td></tr></table><p>Writing a new value to VGrp0En while <a href="/latest_sysreg/ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Valid==1 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
 <ul>
 <li>
 <p>The update is ignored.</p>
@@ -88,7 +88,7 @@
           <p>Forwarding of virtual Group 1 interrupts disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Forwarding of virtual Group 1 interrupts enabled.</p>
-        </td></tr></table><p>Writing a new value to VGrp1En while <a href="ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Valid==1 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
+        </td></tr></table><p>Writing a new value to VGrp1En while <a href="/latest_sysreg/ext-gicr_vpendbaser.html">GICR_VPENDBASER</a>.Valid==1 is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>:</p>
 <ul>
 <li>
 <p>The update is ignored.</p>
@@ -128,7 +128,7 @@
 <p>The new value is used.</p>
 
 </li></ul>
-<p>The size of this field is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>, and is specified by the <a href="ext-gicd_typer2.html">GICD_TYPER2</a>.VIL and <a href="ext-gicd_typer2.html">GICD_TYPER2</a>.VID fields, unimplemented bits are <span class="arm-defined-word">RES0</span>.</p></div><h3>When GICv4 is implemented:</h3><table class="regdiagram" id="fieldset_1"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_1-63_63">Valid</a></td><td class="lr" colspan="1"><a href="#fieldset_1-62_62">IDAI</a></td><td class="lr" colspan="1"><a href="#fieldset_1-61_61">PendingLast</a></td><td class="lr" colspan="1"><a href="#fieldset_1-60_60-1">Dirty</a></td><td class="lr" colspan="1"><a href="#fieldset_1-59_59">RES0</a></td><td class="lr" colspan="3"><a href="#fieldset_1-58_56">OuterCache</a></td><td class="lr" colspan="4"><a href="#fieldset_1-55_52">RES0</a></td><td class="lr" colspan="20"><a href="#fieldset_1-51_16">Physical_Address</a></td></tr><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_1-51_16">Physical_Address</a></td><td class="lr" colspan="4"><a href="#fieldset_1-15_12">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_1-11_10">Shareability</a></td><td class="lr" colspan="3"><a href="#fieldset_1-9_7">InnerCache</a></td><td class="lr" colspan="7"><a href="#fieldset_1-6_0">RES0</a></td></tr></tbody></table><h4 id="fieldset_1-63_63">Valid, bit [63]:
+<p>The size of this field is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>, and is specified by the <a href="/latest_sysreg/ext-gicd_typer2.html">GICD_TYPER2</a>.VIL and <a href="/latest_sysreg/ext-gicd_typer2.html">GICD_TYPER2</a>.VID fields, unimplemented bits are <span class="arm-defined-word">RES0</span>.</p></div><h3>When GICv4 is implemented:</h3><table class="regdiagram" id="fieldset_1"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_1-63_63">Valid</a></td><td class="lr" colspan="1"><a href="#fieldset_1-62_62">IDAI</a></td><td class="lr" colspan="1"><a href="#fieldset_1-61_61">PendingLast</a></td><td class="lr" colspan="1"><a href="#fieldset_1-60_60-1">Dirty</a></td><td class="lr" colspan="1"><a href="#fieldset_1-59_59">RES0</a></td><td class="lr" colspan="3"><a href="#fieldset_1-58_56">OuterCache</a></td><td class="lr" colspan="4"><a href="#fieldset_1-55_52">RES0</a></td><td class="lr" colspan="20"><a href="#fieldset_1-51_16">Physical_Address</a></td></tr><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_1-51_16">Physical_Address</a></td><td class="lr" colspan="4"><a href="#fieldset_1-15_12">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_1-11_10">Shareability</a></td><td class="lr" colspan="3"><a href="#fieldset_1-9_7">InnerCache</a></td><td class="lr" colspan="7"><a href="#fieldset_1-6_0">RES0</a></td></tr></tbody></table><h4 id="fieldset_1-63_63">Valid, bit [63]:
       </h4><div class="field">
       <p>This bit controls whether the virtual LPI Pending table is valid.</p>
     <table class="valuetable"><tr><th>Valid</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
@@ -266,5 +266,5 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h2>Accessing GICR_VPENDBASER</h2>
-        <p>The effect of a write to this register is not guaranteed to be visible throughout the affinity hierarchy, as indicated by <a href="ext-gicr_ctlr.html">GICR_CTLR</a>.RWP == 0.</p>
+        <p>The effect of a write to this register is not guaranteed to be visible throughout the affinity hierarchy, as indicated by <a href="/latest_sysreg/ext-gicr_ctlr.html">GICR_CTLR</a>.RWP == 0.</p>
       <h4>GICR_VPENDBASER can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Redistributor</td><td>VLPI_base</td><td><span class="hexnumber">0x0078</span></td><td>GICR_VPENDBASER</td></tr></table><p>Accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

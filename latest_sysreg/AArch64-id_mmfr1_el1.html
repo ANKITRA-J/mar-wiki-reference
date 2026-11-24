@@ -6,7 +6,7 @@
 
       
         <p>For general information about the interpretation of the ID registers see <span class="xref">'Principles of the ID scheme for fields in ID registers'</span>.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register ID_MMFR1_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-id_mmfr1.html">ID_MMFR1[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to ID_MMFR1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch64 System register ID_MMFR1_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-id_mmfr1.html">ID_MMFR1[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to ID_MMFR1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>ID_MMFR1_EL1 is a 64-bit register.</p>
       <h2>Field descriptions</h2><h3>When FEAT_AA32 is implemented:</h3><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-63_32">RES0</a></td></tr><tr class="firstrow"><td class="lr" colspan="4"><a href="#fieldset_0-31_28">BPred</a></td><td class="lr" colspan="4"><a href="#fieldset_0-27_24">L1TstCln</a></td><td class="lr" colspan="4"><a href="#fieldset_0-23_20">L1Uni</a></td><td class="lr" colspan="4"><a href="#fieldset_0-19_16">L1Hvd</a></td><td class="lr" colspan="4"><a href="#fieldset_0-15_12">L1UniSW</a></td><td class="lr" colspan="4"><a href="#fieldset_0-11_8">L1HvdSW</a></td><td class="lr" colspan="4"><a href="#fieldset_0-7_4">L1UniVA</a></td><td class="lr" colspan="4"><a href="#fieldset_0-3_0">L1HvdVA</a></td></tr></tbody></table><h4 id="fieldset_0-63_32">Bits [63:32]:
       </h4><div class="field">
@@ -21,14 +21,14 @@
 <li>Enabling or disabling a stage of address translation.
 </li><li>Writing new data to instruction locations.
 </li><li>Writing new mappings to the translation tables.
-</li><li>Changes to the <a href="AArch32-ttbr0.html">TTBR0</a>, <a href="AArch32-ttbr1.html">TTBR1</a>, or <a href="AArch32-ttbcr.html">TTBCR</a> registers.
+</li><li>Changes to the <a href="/latest_sysreg/AArch32-ttbr0.html">TTBR0</a>, <a href="/latest_sysreg/AArch32-ttbr1.html">TTBR1</a>, or <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a> registers.
 </li><li>Changes to the ContextID or ASID, or to the FCSE ProcessID if this is supported.
 </li></ul></td></tr><tr><td class="bitfield">0b0010</td><td><p>Branch predictor requires flushing on:</p>
 <ul>
 <li>Enabling or disabling a stage of address translation.
 </li><li>Writing new data to instruction locations.
 </li><li>Writing new mappings to the translation tables.
-</li><li>Any change to the <a href="AArch32-ttbr0.html">TTBR0</a>, <a href="AArch32-ttbr1.html">TTBR1</a>, or <a href="AArch32-ttbcr.html">TTBCR</a> registers without a change to the corresponding ContextID or ASID, or FCSE ProcessID if this is supported.
+</li><li>Any change to the <a href="/latest_sysreg/AArch32-ttbr0.html">TTBR0</a>, <a href="/latest_sysreg/AArch32-ttbr1.html">TTBR1</a>, or <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a> registers without a change to the corresponding ContextID or ASID, or FCSE ProcessID if this is supported.
 </li></ul></td></tr><tr><td class="bitfield">0b0011</td><td>
           <p>Branch predictor requires flushing only on writing new data to instruction locations.</p>
         </td></tr><tr><td class="bitfield">0b0100</td><td>

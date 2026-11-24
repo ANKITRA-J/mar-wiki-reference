@@ -49,8 +49,8 @@
     </div><h4 id="fieldset_1-47_1">BADDR, bits [47:1]:
       </h4><div class="field"><p>The BADDR field represents a 52-bit address if any of the following apply:</p>
 <ul>
-<li>The value of <a href="AArch64-vtcr_el2.html">VTCR_EL2</a>.PS represents an OA size of 52 bits.
-</li><li>The Effective value of <a href="AArch64-vtcr_el2.html">VTCR_EL2</a>.DS is 1.
+<li>The value of <a href="/latest_sysreg/AArch64-vtcr_el2.html">VTCR_EL2</a>.PS represents an OA size of 52 bits.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-vtcr_el2.html">VTCR_EL2</a>.DS is 1.
 </li></ul>
 <p>When VSTTBR_EL2.BADDR represents a 52-bit addresses, all of the following apply:</p>
 <ul>
@@ -67,12 +67,12 @@
 </li><li>Register bits[(x-1):1] are <span class="arm-defined-word">RES0</span>.
 </li><li>If 52-bit PA is supported, then bits[51:48] of the stage 2 translation table base address are treated as <span class="binarynumber">0b0000</span>.
 </li></ul>
-<div class="note"><p>If BADDR represents a 52-bit address, and the translation table has fewer than eight entries, the table must be aligned to 64 bytes. Otherwise the translation table must be aligned to the size of the table.</p><p>For the 64KB granule, if 52-bit PA is not supported, and the value of <a href="AArch64-vtcr_el2.html">VTCR_EL2</a>.PS is <span class="binarynumber">0b110</span> or <span class="binarynumber">0b111</span>, one of the following <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> behaviors occur:</p><ul><li>BADDR uses the extended format to represent a 52-bit base address.</li><li>BADDR does not use the extended format.</li></ul><p>When the value of <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange indicates that the implementation supports a 56 bit PA size, bits [55:52] of the stage 2 translation table base address are zero.</p></div><p>If any VSTTBR_EL2[47:1] bit that is defined as <span class="arm-defined-word">RES0</span> has the value 1 when a translation table walk is performed using VSTTBR_EL2, then the translation table base address might be misaligned, with effects that are <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>, and must be one of the following:</p>
+<div class="note"><p>If BADDR represents a 52-bit address, and the translation table has fewer than eight entries, the table must be aligned to 64 bytes. Otherwise the translation table must be aligned to the size of the table.</p><p>For the 64KB granule, if 52-bit PA is not supported, and the value of <a href="/latest_sysreg/AArch64-vtcr_el2.html">VTCR_EL2</a>.PS is <span class="binarynumber">0b110</span> or <span class="binarynumber">0b111</span>, one of the following <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> behaviors occur:</p><ul><li>BADDR uses the extended format to represent a 52-bit base address.</li><li>BADDR does not use the extended format.</li></ul><p>When the value of <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange indicates that the implementation supports a 56 bit PA size, bits [55:52] of the stage 2 translation table base address are zero.</p></div><p>If any VSTTBR_EL2[47:1] bit that is defined as <span class="arm-defined-word">RES0</span> has the value 1 when a translation table walk is performed using VSTTBR_EL2, then the translation table base address might be misaligned, with effects that are <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>, and must be one of the following:</p>
 <ul>
 <li>Bits[x-1:0] of the translation table base address are treated as if all the bits are zero. The value read back from the corresponding register bits is either the value written to the register or zero.
 </li><li>The result of the calculation of an address for a translation table walk using this register can be corrupted in those bits that are nonzero.
 </li></ul>
-<p>The AArch64 Virtual Memory System Architecture chapter describes how x is calculated based on the value of <a href="AArch64-vstcr_el2.html">VSTCR_EL2</a>.T0SZ, the stage of translation, and the translation granule size.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>The AArch64 Virtual Memory System Architecture chapter describes how x is calculated based on the value of <a href="/latest_sysreg/AArch64-vstcr_el2.html">VSTCR_EL2</a>.T0SZ, the stage of translation, and the translation granule size.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-0_0">CnP, bit [0]:
       </h4><div class="field">

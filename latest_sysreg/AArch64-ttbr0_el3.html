@@ -20,7 +20,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-2_1">SKL, bits [2:1]:
       </h4><div class="field"><p>Skip Level associated with translation table walks using TTBR0_EL3.</p>
-<p>This determines the number of levels to be skipped from the regular start level of the stage 1 EL3 translation table walks using <a href="AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p><table class="valuetable"><tr><th>SKL</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
+<p>This determines the number of levels to be skipped from the regular start level of the stage 1 EL3 translation table walks using <a href="/latest_sysreg/AArch64-ttbr0_el3.html">TTBR0_EL3</a>.</p><table class="valuetable"><tr><th>SKL</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Skip 0 level from the regular start level.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
           <p>Skip 1 level from the regular start level.</p>
@@ -48,11 +48,11 @@
 <li>Bits A[47:x] of the stage 1 translation table base address bits are in register bits[47:x].
 </li><li>Bits A[(x-1):0] of the stage 1 translation table base address are zero.
 </li></ul>
-<p>Address bit x is the minimum address bit required to align the translation table to the size of the table. The AArch64 Virtual Memory System Architecture chapter describes how x is calculated based on the value of <a href="AArch64-tcr_el3.html">TCR_EL3</a>.T0SZ, the translation stage, and the translation granule size.</p>
+<p>Address bit x is the minimum address bit required to align the translation table to the size of the table. The AArch64 Virtual Memory System Architecture chapter describes how x is calculated based on the value of <a href="/latest_sysreg/AArch64-tcr_el3.html">TCR_EL3</a>.T0SZ, the translation stage, and the translation granule size.</p>
 <p>The BADDR field represents a 52-bit address if any of the following apply:</p>
 <ul>
-<li>The value of <a href="AArch64-tcr_el3.html">TCR_EL3</a>.PS represents an OA size of 52 bits.
-</li><li>The Effective value of <a href="AArch64-tcr_el3.html">TCR_EL3</a>.DS is 1.
+<li>The value of <a href="/latest_sysreg/AArch64-tcr_el3.html">TCR_EL3</a>.PS represents an OA size of 52 bits.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-tcr_el3.html">TCR_EL3</a>.DS is 1.
 </li></ul>
 <p>When TTBR0_EL3.BADDR represents a 52-bit addresses, all of the following apply:</p>
 <ul>
@@ -66,7 +66,7 @@
 <li>Register bits[(x-1):1] are <span class="arm-defined-word">RES0</span>.
 </li><li>If 52-bit PA is supported, then bits A[51:48] of the stage 1 translation table base address are treated as <span class="binarynumber">0b0000</span>.
 </li></ul>
-<div class="note"><p>If BADDR represents a 52-bit address, and the translation table has fewer than eight entries, the table must be aligned to 64 bytes. Otherwise the translation table must be aligned to the size of the table.</p><p>For the 64KB granule, if 52-bit PA is not supported, and the value of <a href="AArch64-tcr_el3.html">TCR_EL3</a>.PS is <span class="binarynumber">0b110</span> or <span class="binarynumber">0b111</span>, one of the following <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> behaviors occur:</p><ul><li>BADDR uses the extended format to represent a 52-bit base address.</li><li>BADDR does not use the extended format.</li></ul><p>When the value of <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange indicates that the implementation supports a 56 bit PA size, bits A[55:52] of the stage 1 translation table base address are zero.</p></div><p>If any register bit[47:1] that is defined as <span class="arm-defined-word">RES0</span> has the value 1 when a translation table walk is done using TTBR0_EL3, then the translation table base address might be misaligned, with effects that are <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>, and must be one of the following:</p>
+<div class="note"><p>If BADDR represents a 52-bit address, and the translation table has fewer than eight entries, the table must be aligned to 64 bytes. Otherwise the translation table must be aligned to the size of the table.</p><p>For the 64KB granule, if 52-bit PA is not supported, and the value of <a href="/latest_sysreg/AArch64-tcr_el3.html">TCR_EL3</a>.PS is <span class="binarynumber">0b110</span> or <span class="binarynumber">0b111</span>, one of the following <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> behaviors occur:</p><ul><li>BADDR uses the extended format to represent a 52-bit base address.</li><li>BADDR does not use the extended format.</li></ul><p>When the value of <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange indicates that the implementation supports a 56 bit PA size, bits A[55:52] of the stage 1 translation table base address are zero.</p></div><p>If any register bit[47:1] that is defined as <span class="arm-defined-word">RES0</span> has the value 1 when a translation table walk is done using TTBR0_EL3, then the translation table base address might be misaligned, with effects that are <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>, and must be one of the following:</p>
 <ul>
 <li>Bits A[(x-1):0] of the stage 1 translation table base address are treated as if all the bits are zero. The value read back from the corresponding register bits is either the value written to the register or zero.
 </li><li>The result of the calculation of an address for a translation table walk using this register can be corrupted in those bits that are nonzero.

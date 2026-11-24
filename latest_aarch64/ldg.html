@@ -14,10 +14,10 @@ Granule.</p>
     
     <h3 class="classheading"><a id="iclass_integer"></a>Integer class
         <span style="font-size:smaller;"><br></br>(FEAT_MTE)
-          </span></h3><p class="desc"></p><div class="regdiagram-32"><table class="regdiagram"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="l">1</td><td>1</td><td>0</td><td class="r">1</td><td class="lr">1</td><td class="lr">0</td><td class="lr">0</td><td class="lr">1</td><td class="l">0</td><td class="r">1</td><td class="lr">1</td><td colspan="9" class="lr">imm9</td><td class="l">0</td><td class="r">0</td><td colspan="5" class="lr">Rn</td><td colspan="5" class="lr">Rt</td></tr><tr class="secondrow"><td colspan="4"></td><td></td><td></td><td></td><td></td><td colspan="2" class="droppedname">opc</td><td></td><td colspan="9"></td><td colspan="2" class="droppedname">op2</td><td colspan="5"></td><td colspan="5"></td></tr></tbody></table></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Encoding</h4><a id="LDG_64Loffset_ldsttags"></a></div><p class="asm-code">LDG  <a href="#XtOrXZR__4" title='Is the 64-bit name of the general-purpose destination register, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #<a href="#simm__2" title='Is the optional signed immediate offset, a multiple of 16 in the range -4096 to 4080, defaulting to 0 and encoded in the "imm9" field.'>&lt;simm&gt;</a>}]</p></div><h4>Decode</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_MTE) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+          </span></h3><p class="desc"></p><div class="regdiagram-32"><table class="regdiagram"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="l">1</td><td>1</td><td>0</td><td class="r">1</td><td class="lr">1</td><td class="lr">0</td><td class="lr">0</td><td class="lr">1</td><td class="l">0</td><td class="r">1</td><td class="lr">1</td><td colspan="9" class="lr">imm9</td><td class="l">0</td><td class="r">0</td><td colspan="5" class="lr">Rn</td><td colspan="5" class="lr">Rt</td></tr><tr class="secondrow"><td colspan="4"></td><td></td><td></td><td></td><td></td><td colspan="2" class="droppedname">opc</td><td></td><td colspan="9"></td><td colspan="2" class="droppedname">op2</td><td colspan="5"></td><td colspan="5"></td></tr></tbody></table></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Encoding</h4><a id="LDG_64Loffset_ldsttags"></a></div><p class="asm-code">LDG  <a href="#XtOrXZR__4" title='Is the 64-bit name of the general-purpose destination register, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #<a href="#simm__2" title='Is the optional signed immediate offset, a multiple of 16 in the range -4096 to 4080, defaulting to 0 and encoded in the "imm9" field.'>&lt;simm&gt;</a>}]</p></div><h4>Decode</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_MTE) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let t : integer{} = UInt(Rt);
 let n : integer{} = UInt(Rn);
-let offset : bits(64) = LSL(SignExtend{64}(imm9), <a href="shared_pseudocode.html#global_LOG2_TAG_GRANULE" title="">LOG2_TAG_GRANULE</a>);</p>
+let offset : bits(64) = LSL(SignExtend{64}(imm9), <a href="/latest_aarch64/shared_pseudocode.html#global_LOG2_TAG_GRANULE" title="">LOG2_TAG_GRANULE</a>);</p>
   <div class="encoding-notes"></div><h2 class="explanations">Assembler Symbols</h2><div class="explanations"><table><col class="asyn-l"></col><col class="asyn-r"></col><tr><td>&lt;Xt&gt;</td><td><a id="XtOrXZR__4"></a>
         
           <p class="aml" data-pagefind-body="1">Is the 64-bit name of the general-purpose destination register, encoded in the "Rt" field.</p>
@@ -36,18 +36,18 @@ let offset : bits(64) = LSL(SignExtend{64}(imm9), <a href="shared_pseudocode.htm
 var tag : bits(4);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
 let stzgm : boolean = FALSE;
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescLDGSTG_3" title="">CreateAccDescLDGSTG</a>(<a href="shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, stzgm, t);
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescLDGSTG_3" title="">CreateAccDescLDGSTG</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, stzgm, t);
 
-address = <a href="shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
-address = AlignDownSize(address, <a href="shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>);
+address = <a href="/latest_aarch64/shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
+address = AlignDownSize(address, <a href="/latest_aarch64/shared_pseudocode.html#global_TAG_GRANULE" title="">TAG_GRANULE</a>);
 
-tag = <a href="shared_pseudocode.html#accessor_AArch64_MemTag_2" title="">AArch64_MemTag</a>(address, accdesc);
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = <a href="shared_pseudocode.html#func_AArch64_AddressWithAllocationTag_2" title="">AArch64_AddressWithAllocationTag</a>(<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t), tag);</p></div>
+tag = <a href="/latest_aarch64/shared_pseudocode.html#accessor_AArch64_MemTag_2" title="">AArch64_MemTag</a>(address, accdesc);
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_AddressWithAllocationTag_2" title="">AArch64_AddressWithAllocationTag</a>(<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t), tag);</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

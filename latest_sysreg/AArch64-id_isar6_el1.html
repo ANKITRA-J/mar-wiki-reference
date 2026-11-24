@@ -5,11 +5,11 @@
         <p>Provides information about the instruction sets implemented by the PE in AArch32 state.</p>
 
       
-        <p>Must be interpreted with <a href="AArch64-id_isar0_el1.html">ID_ISAR0_EL1</a>, <a href="AArch64-id_isar1_el1.html">ID_ISAR1_EL1</a>, <a href="AArch64-id_isar2_el1.html">ID_ISAR2_EL1</a>, <a href="AArch64-id_isar3_el1.html">ID_ISAR3_EL1</a>, <a href="AArch64-id_isar4_el1.html">ID_ISAR4_EL1</a> and <a href="AArch64-id_isar5_el1.html">ID_ISAR5_EL1</a>.</p>
+        <p>Must be interpreted with <a href="/latest_sysreg/AArch64-id_isar0_el1.html">ID_ISAR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar1_el1.html">ID_ISAR1_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar2_el1.html">ID_ISAR2_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar3_el1.html">ID_ISAR3_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar4_el1.html">ID_ISAR4_EL1</a> and <a href="/latest_sysreg/AArch64-id_isar5_el1.html">ID_ISAR5_EL1</a>.</p>
 
       
         <p>For general information about the interpretation of the ID registers see <span class="xref">'Principles of the ID scheme for fields in ID registers'</span>.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register ID_ISAR6_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-id_isar6.html">ID_ISAR6[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to ID_ISAR6_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register ID_ISAR6_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-id_isar6.html">ID_ISAR6[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to ID_ISAR6_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <div class="note"><p>Prior to the introduction of the features described by this register, this register was unnamed and reserved, <span class="arm-defined-word">RES0</span> from EL1, EL2, and EL3.</p></div>
       <h3>Attributes</h3>
         <p>ID_ISAR6_EL1 is a 64-bit register.</p>
@@ -47,9 +47,9 @@
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>SPECRES</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>Prediction invalidation instructions are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch32-cfprctx.html">CFPRCTX</a>, <a href="AArch32-dvprctx.html">DVPRCTX</a>, and <a href="AArch32-cpprctx.html">CPPRCTX</a> instructions are implemented.</p>
+          <p><a href="/latest_sysreg/AArch32-cfprctx.html">CFPRCTX</a>, <a href="/latest_sysreg/AArch32-dvprctx.html">DVPRCTX</a>, and <a href="/latest_sysreg/AArch32-cpprctx.html">CPPRCTX</a> instructions are implemented.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
-          <p>As <span class="binarynumber">0b0001</span>, and <a href="AArch32-cosprctx.html">COSPRCTX</a> instruction is implemented.</p>
+          <p>As <span class="binarynumber">0b0001</span>, and <a href="/latest_sysreg/AArch32-cosprctx.html">COSPRCTX</a> instruction is implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_SPECRES</span> implements the functionality identified by <span class="binarynumber">0b0001</span>.</p>
 <p><span class="xref">FEAT_SPECRES2</span> implements the functionality identified by <span class="binarynumber">0b0010</span>.</p>

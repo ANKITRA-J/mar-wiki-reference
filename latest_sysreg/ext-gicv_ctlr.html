@@ -5,7 +5,7 @@
         <p>Controls the behavior of virtual interrupts.</p>
 
       
-        <p>This register corresponds to the physical CPU interface register <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.</p>
+        <p>This register corresponds to the physical CPU interface register <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv3_LEGACY is implemented and EL2 is implemented. Otherwise, direct accesses to GICV_CTLR are <span class="arm-defined-word">RES0</span>.</p>
         <p>This register is available when a GIC implementation supports interrupt virtualization.</p>
       <h3>Attributes</h3>
@@ -15,21 +15,21 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-9_9">EOImode, bit [9]:
       </h4><div class="field">
-      <p>Controls the behavior associated with the <a href="ext-gicv_eoir.html">GICV_EOIR</a>, <a href="ext-gicv_aeoir.html">GICV_AEOIR</a>, and <a href="ext-gicv_dir.html">GICV_DIR</a> registers:</p>
-    <table class="valuetable"><tr><th>EOImode</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Writes to <a href="ext-gicv_eoir.html">GICV_EOIR</a> and <a href="ext-gicv_aeoir.html">GICV_AEOIR</a> perform priority drop and deactivate interrupt operations simultaneously. Behavior on a write to <a href="ext-gicv_dir.html">GICV_DIR</a> is unpredictable.</p>
-<p>When it has completed processing the interrupt, the virtual machine writes to <a href="ext-gicv_eoir.html">GICV_EOIR</a> or <a href="ext-gicv_aeoir.html">GICV_AEOIR</a> to deactivate the interrupt. The write updates the List registers and causes the virtual CPU interface to signal the interrupt completion to the physical Distributor.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>Writes to <a href="ext-gicv_eoir.html">GICV_EOIR</a> and <a href="ext-gicv_aeoir.html">GICV_AEOIR</a> perform priority drop operation only. Writes to <a href="ext-gicv_dir.html">GICV_DIR</a> perform deactivate interrupt operation only.</p>
-<p>When it has completed processing the interrupt, the virtual machine writes to <a href="ext-gicv_dir.html">GICV_DIR</a> to deactivate the interrupt. The write updates the List registers and causes the virtual CPU interface to signal the interrupt completion to the Distributor.</p></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+      <p>Controls the behavior associated with the <a href="/latest_sysreg/ext-gicv_eoir.html">GICV_EOIR</a>, <a href="/latest_sysreg/ext-gicv_aeoir.html">GICV_AEOIR</a>, and <a href="/latest_sysreg/ext-gicv_dir.html">GICV_DIR</a> registers:</p>
+    <table class="valuetable"><tr><th>EOImode</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>Writes to <a href="/latest_sysreg/ext-gicv_eoir.html">GICV_EOIR</a> and <a href="/latest_sysreg/ext-gicv_aeoir.html">GICV_AEOIR</a> perform priority drop and deactivate interrupt operations simultaneously. Behavior on a write to <a href="/latest_sysreg/ext-gicv_dir.html">GICV_DIR</a> is unpredictable.</p>
+<p>When it has completed processing the interrupt, the virtual machine writes to <a href="/latest_sysreg/ext-gicv_eoir.html">GICV_EOIR</a> or <a href="/latest_sysreg/ext-gicv_aeoir.html">GICV_AEOIR</a> to deactivate the interrupt. The write updates the List registers and causes the virtual CPU interface to signal the interrupt completion to the physical Distributor.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>Writes to <a href="/latest_sysreg/ext-gicv_eoir.html">GICV_EOIR</a> and <a href="/latest_sysreg/ext-gicv_aeoir.html">GICV_AEOIR</a> perform priority drop operation only. Writes to <a href="/latest_sysreg/ext-gicv_dir.html">GICV_DIR</a> perform deactivate interrupt operation only.</p>
+<p>When it has completed processing the interrupt, the virtual machine writes to <a href="/latest_sysreg/ext-gicv_dir.html">GICV_DIR</a> to deactivate the interrupt. The write updates the List registers and causes the virtual CPU interface to signal the interrupt completion to the Distributor.</p></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-8_5">Bits [8:5]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-4_4">CBPR, bit [4]:
       </h4><div class="field">
-      <p>Controls whether <a href="ext-gicv_bpr.html">GICV_BPR</a> affects both Group 0 and Group 1 interrupts:</p>
+      <p>Controls whether <a href="/latest_sysreg/ext-gicv_bpr.html">GICV_BPR</a> affects both Group 0 and Group 1 interrupts:</p>
     <table class="valuetable"><tr><th>CBPR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-gicv_bpr.html">GICV_BPR</a> affects Group 0 virtual interrupts only. <a href="ext-gicv_abpr.html">GICV_ABPR</a> affects Group 1 virtual interrupts only.</p>
+          <p><a href="/latest_sysreg/ext-gicv_bpr.html">GICV_BPR</a> affects Group 0 virtual interrupts only. <a href="/latest_sysreg/ext-gicv_abpr.html">GICV_ABPR</a> affects Group 1 virtual interrupts only.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-gicv_bpr.html">GICV_BPR</a> affects both Group 0 and Group 1 virtual interrupts.</p>
+          <p><a href="/latest_sysreg/ext-gicv_bpr.html">GICV_BPR</a> affects both Group 0 and Group 1 virtual interrupts.</p>
         </td></tr></table>
       <p>For more information, see <span class="xref">'Priority grouping' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -45,10 +45,10 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_2">AckCtl, bit [2]:
       </h4><div class="field"><p>Arm deprecates use of this bit. Arm strongly recommends that software is written to operate with this bit always cleared to 0.</p>
-<p>Acknowledge control. When the highest priority interrupt is Group 1, determines whether <a href="ext-gicv_iar.html">GICV_IAR</a> causes the CPU interface to acknowledge the interrupt or returns the spurious identifier 1022, and whether <a href="ext-gicv_hppir.html">GICV_HPPIR</a> returns the interrupt ID or the special identifier 1022.</p><table class="valuetable"><tr><th>AckCtl</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>If the highest priority pending interrupt is Group 1, a read of <a href="ext-gicv_iar.html">GICV_IAR</a> or <a href="ext-gicv_hppir.html">GICV_HPPIR</a> returns an interrupt ID of 1022.</p>
+<p>Acknowledge control. When the highest priority interrupt is Group 1, determines whether <a href="/latest_sysreg/ext-gicv_iar.html">GICV_IAR</a> causes the CPU interface to acknowledge the interrupt or returns the spurious identifier 1022, and whether <a href="/latest_sysreg/ext-gicv_hppir.html">GICV_HPPIR</a> returns the interrupt ID or the special identifier 1022.</p><table class="valuetable"><tr><th>AckCtl</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>If the highest priority pending interrupt is Group 1, a read of <a href="/latest_sysreg/ext-gicv_iar.html">GICV_IAR</a> or <a href="/latest_sysreg/ext-gicv_hppir.html">GICV_HPPIR</a> returns an interrupt ID of 1022.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>If the highest priority pending interrupt is Group 1, a read of <a href="ext-gicv_iar.html">GICV_IAR</a> or <a href="ext-gicv_hppir.html">GICV_HPPIR</a> returns the interrupt ID of the corresponding interrupt.</p>
+          <p>If the highest priority pending interrupt is Group 1, a read of <a href="/latest_sysreg/ext-gicv_iar.html">GICV_IAR</a> or <a href="/latest_sysreg/ext-gicv_hppir.html">GICV_HPPIR</a> returns the interrupt ID of the corresponding interrupt.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-1_1">EnableGrp1, bit [1]:
@@ -74,8 +74,8 @@
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-icc_ctlr.html">ICC_CTLR</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a> provides equivalent functionality.
 </li></ul>
       <h4>GICV_CTLR can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Virtual CPU interface</td><td><span class="hexnumber">0x0000</span></td><td>GICV_CTLR</td></tr></table><p>Accessible as follows:</p><ul><li>When GICD_CTLR.DS == '0', accesses to this register are <span class="access_level">RW</span>.
           </li><li>When an access is Secure, accesses to this register are <span class="access_level">RW</span>.

@@ -3,7 +3,7 @@
 <title>ICC_CTLR_EL1 | Jon's Arm Reference</title><meta name="description" content="Controls aspects of the behavior of the GIC CPU interface and provides information about the features implemented."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ICC_CTLR_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Controller Control Register (EL1)</p><div data-pagefind-body="1">
         <p>Controls aspects of the behavior of the GIC CPU interface and provides information about the features implemented.</p>
-      </div><h3>Configuration</h3><p>This register is banked between ICC_CTLR_EL1 and ICC_CTLR_EL1_S and ICC_CTLR_EL1_NS.<br></br></p><p>AArch64 System register ICC_CTLR_EL1 bits [31:0] (ICC_CTLR_EL1_S) are architecturally mapped to AArch32 System register <a href="AArch32-icc_ctlr.html">ICC_CTLR[31:0]</a> (ICC_CTLR_S).</p><p>AArch64 System register ICC_CTLR_EL1 bits [31:0] (ICC_CTLR_EL1_NS) are architecturally mapped to AArch32 System register <a href="AArch32-icc_ctlr.html">ICC_CTLR[31:0]</a> (ICC_CTLR_NS).</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented) and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_CTLR_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>This register is banked between ICC_CTLR_EL1 and ICC_CTLR_EL1_S and ICC_CTLR_EL1_NS.<br></br></p><p>AArch64 System register ICC_CTLR_EL1 bits [31:0] (ICC_CTLR_EL1_S) are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR[31:0]</a> (ICC_CTLR_S).</p><p>AArch64 System register ICC_CTLR_EL1 bits [31:0] (ICC_CTLR_EL1_NS) are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR[31:0]</a> (ICC_CTLR_NS).</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented) and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_CTLR_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>ICC_CTLR_EL1 is a 64-bit register.</p>
 
       
@@ -29,7 +29,7 @@
 <ul>
 <li>All INTIDs in the range 1024..8191 are treated as requiring deactivation.
 </li></ul></td></tr></table>
-      <p>If EL3 is implemented, ICC_CTLR_EL1.ExtRange is an alias of <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.ExtRange.</p>
+      <p>If EL3 is implemented, ICC_CTLR_EL1.ExtRange is an alias of <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.ExtRange.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-18_18">RSS, bit [18]:
       </h4><div class="field">
       <p>Range Selector Support.</p>
@@ -48,7 +48,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The CPU interface logic supports nonzero values of Affinity 3 in SGI generation System registers.</p>
         </td></tr></table>
-      <p>If EL3 is implemented, this bit is an alias of <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.A3V.</p>
+      <p>If EL3 is implemented, this bit is an alias of <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.A3V.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-14_14">SEIS, bit [14]:
       </h4><div class="field">
       <p>SEI Support. Indicates whether the CPU interface supports local generation of SEIs:</p>
@@ -57,7 +57,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The CPU interface logic supports local generation of SEIs.</p>
         </td></tr></table>
-      <p>If EL3 is implemented, this bit is an alias of <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.SEIS.</p>
+      <p>If EL3 is implemented, this bit is an alias of <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.SEIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-13_11">IDbits, bits [13:11]:
       </h4><div class="field">
       <p>Identifier bits. The number of physical interrupt identifier bits supported:</p>
@@ -66,12 +66,12 @@
         </td></tr><tr><td class="bitfield">0b001</td><td>
           <p>24 bits.</p>
         </td></tr></table><p>All other values are reserved.</p>
-<p>If EL3 is implemented, this field is an alias of <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.IDbits.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-10_8">PRIbits, bits [10:8]:
+<p>If EL3 is implemented, this field is an alias of <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.IDbits.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-10_8">PRIbits, bits [10:8]:
       </h4><div class="field"><p>Priority bits. The number of priority bits implemented, minus one.</p>
 <p>An implementation that supports two Security states must implement at least 32 levels of physical priority (5 priority bits).</p>
 <p>An implementation that supports only a single Security state must implement at least 16 levels of physical priority (4 priority bits).</p>
-<div class="note"><p>This field always returns the number of priority bits implemented, regardless of the Security state of the access or the value of <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS.</p></div><p>For physical accesses, this field determines the minimum value of <a href="AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a>.</p>
-<p>If EL3 is implemented, physical accesses return the value from <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.PRIbits.</p>
+<div class="note"><p>This field always returns the number of priority bits implemented, regardless of the Security state of the access or the value of <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS.</p></div><p>For physical accesses, this field determines the minimum value of <a href="/latest_sysreg/AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a>.</p>
+<p>If EL3 is implemented, physical accesses return the value from <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.PRIbits.</p>
 <p>If EL3 is not implemented, physical accesses return the value from this field.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_7">Bit [7]:
@@ -81,13 +81,13 @@
       </h4><div class="field">
       <p>Priority Mask Hint Enable. Controls whether the priority mask register is used as a hint for interrupt distribution:</p>
     <table class="valuetable"><tr><th>PMHE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Disables use of <a href="AArch64-icc_pmr_el1.html">ICC_PMR_EL1</a> as a hint for interrupt distribution.</p>
+          <p>Disables use of <a href="/latest_sysreg/AArch64-icc_pmr_el1.html">ICC_PMR_EL1</a> as a hint for interrupt distribution.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Enables use of <a href="AArch64-icc_pmr_el1.html">ICC_PMR_EL1</a> as a hint for interrupt distribution.</p>
-        </td></tr></table><p>If EL3 is implemented, this bit is an alias of <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.PMHE. Whether this bit can be written as part of an access to this register depends on the value of <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS:</p>
+          <p>Enables use of <a href="/latest_sysreg/AArch64-icc_pmr_el1.html">ICC_PMR_EL1</a> as a hint for interrupt distribution.</p>
+        </td></tr></table><p>If EL3 is implemented, this bit is an alias of <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.PMHE. Whether this bit can be written as part of an access to this register depends on the value of <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS:</p>
 <ul>
-<li>If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, this bit is read-only.
-</li><li>If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 1, this bit is read/write.
+<li>If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, this bit is read-only.
+</li><li>If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 1, this bit is read/write.
 </li></ul>
 <p>If EL3 is not implemented, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether this bit is read-only or read/write:</p>
 <ul>
@@ -100,21 +100,21 @@
       </h4><div class="field">
       <p>EOI mode for the current Security state. Controls whether a write to an End of Interrupt register also deactivates the interrupt:</p>
     <table class="valuetable"><tr><th>EOImode</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-icc_eoir0_el1.html">ICC_EOIR0_EL1</a> and <a href="AArch64-icc_eoir1_el1.html">ICC_EOIR1_EL1</a> provide both priority drop and interrupt deactivation functionality. Accesses to <a href="AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
+          <p><a href="/latest_sysreg/AArch64-icc_eoir0_el1.html">ICC_EOIR0_EL1</a> and <a href="/latest_sysreg/AArch64-icc_eoir1_el1.html">ICC_EOIR1_EL1</a> provide both priority drop and interrupt deactivation functionality. Accesses to <a href="/latest_sysreg/AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-icc_eoir0_el1.html">ICC_EOIR0_EL1</a> and <a href="AArch64-icc_eoir1_el1.html">ICC_EOIR1_EL1</a> provide priority drop functionality only. <a href="AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> provides interrupt deactivation functionality.</p>
-        </td></tr></table><p>The Secure <a href="AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.EOImode is an alias of <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.EOImode_EL1S.</p>
-<p>The Non-secure <a href="AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.EOImode is an alias of <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.EOImode_EL1NS</p></div><h4 id="fieldset_0-0_0">CBPR, bit [0]:
+          <p><a href="/latest_sysreg/AArch64-icc_eoir0_el1.html">ICC_EOIR0_EL1</a> and <a href="/latest_sysreg/AArch64-icc_eoir1_el1.html">ICC_EOIR1_EL1</a> provide priority drop functionality only. <a href="/latest_sysreg/AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> provides interrupt deactivation functionality.</p>
+        </td></tr></table><p>The Secure <a href="/latest_sysreg/AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.EOImode is an alias of <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.EOImode_EL1S.</p>
+<p>The Non-secure <a href="/latest_sysreg/AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.EOImode is an alias of <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.EOImode_EL1NS</p></div><h4 id="fieldset_0-0_0">CBPR, bit [0]:
       </h4><div class="field">
       <p>Common Binary Point Register. Controls whether the same register is used for interrupt preemption of both Group 0 and Group 1 interrupts:</p>
-    <table class="valuetable"><tr><th>CBPR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a> determines the preemption group for Group 0 interrupts only.</p>
-<p><a href="AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1</a> determines the preemption group for Group 1 interrupts.</p></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a> determines the preemption group for both Group 0 and Group 1 interrupts.</p>
+    <table class="valuetable"><tr><th>CBPR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="/latest_sysreg/AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a> determines the preemption group for Group 0 interrupts only.</p>
+<p><a href="/latest_sysreg/AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1</a> determines the preemption group for Group 1 interrupts.</p></td></tr><tr><td class="bitfield">0b1</td><td>
+          <p><a href="/latest_sysreg/AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a> determines the preemption group for both Group 0 and Group 1 interrupts.</p>
         </td></tr></table><p>If EL3 is implemented:</p>
 <ul>
-<li>This bit is an alias of <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.CBPR_EL1{S,NS} where S or NS corresponds to the current Security state.
-</li><li>If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, this bit is read-only.
-</li><li>If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 1, this bit is read/write.
+<li>This bit is an alias of <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.CBPR_EL1{S,NS} where S or NS corresponds to the current Security state.
+</li><li>If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, this bit is read-only.
+</li><li>If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 1, this bit is read/write.
 </li></ul>
 <p>If EL3 is not implemented, this bit is read/write.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

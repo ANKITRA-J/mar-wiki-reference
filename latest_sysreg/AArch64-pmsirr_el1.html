@@ -9,9 +9,9 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-31_8">INTERVAL, bits [31:8]:
-      </h4><div class="field"><p>Bits [31:8] of the <a href="AArch64-pmsicr_el1.html">PMSICR_EL1</a> interval counter reload value. Software must set this to a nonzero value.</p>
+      </h4><div class="field"><p>Bits [31:8] of the <a href="/latest_sysreg/AArch64-pmsicr_el1.html">PMSICR_EL1</a> interval counter reload value. Software must set this to a nonzero value.</p>
 <p>If this field is zero, then an <span class="arm-defined-word">UNKNOWN</span> sampling interval is used.</p>
-<p>If <a href="AArch64-pmsidr_el1.html">PMSIDR_EL1</a>.Interval is nonzero, then it provides guidance from the implementer to the smallest sampling interval that should be used.</p>
+<p>If <a href="/latest_sysreg/AArch64-pmsidr_el1.html">PMSIDR_EL1</a>.Interval is nonzero, then it provides guidance from the implementer to the smallest sampling interval that should be used.</p>
 <p>Setting this field to a nonzero value smaller than the indicated value is likely to cause a statistically significant number of sample collisions. See <span class="xref">Sample collisions</span>. Setting the sample interval to a value greater than or equal to the indicated value does not guarantee a statistically insignificant number of sample collisions, as this is typically dependent on the program being profiled.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-7_1">Bits [7:1]:

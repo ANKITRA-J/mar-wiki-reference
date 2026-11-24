@@ -3,7 +3,7 @@
 <title>CNTHCTL | Jon's Arm Reference</title><meta name="description" content="Controls the generation of an event stream from the physical counter, and access from Non-secure EL1 modes to the physical counter and the Non-secure EL1 physical timer."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">CNTHCTL</h1><p class="insn_subtitle" data-pagefind-body="1">Counter-timer Hyp Control register</p><div data-pagefind-body="1">
         <p>Controls the generation of an event stream from the physical counter, and access from Non-secure EL1 modes to the physical counter and the Non-secure EL1 physical timer.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register CNTHCTL bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-cnthctl_el2.html">CNTHCTL_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to CNTHCTL are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register CNTHCTL bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-cnthctl_el2.html">CNTHCTL_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to CNTHCTL are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>CNTHCTL is a 32-bit register.</p>
@@ -14,9 +14,9 @@
       </h4><div class="field">
       <p>Controls the scale of the generation of the event stream.</p>
     <table class="valuetable"><tr><th>EVNTIS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The CNTHCTL.EVNTI field applies to <a href="AArch32-cntpct.html">CNTPCT</a>[15:0].</p>
+          <p>The CNTHCTL.EVNTI field applies to <a href="/latest_sysreg/AArch32-cntpct.html">CNTPCT</a>[15:0].</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The CNTHCTL.EVNTI field applies to <a href="AArch32-cntpct.html">CNTPCT</a>[23:8].</p>
+          <p>The CNTHCTL.EVNTI field applies to <a href="/latest_sysreg/AArch32-cntpct.html">CNTPCT</a>[23:8].</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-17_17-2"> <span class="condition">Otherwise</span>:
@@ -26,13 +26,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-7_4">EVNTI, bits [7:4]:
-      </h4><div class="field"><p>Selects which bit of <a href="AArch32-cntpct.html">CNTPCT</a>, as seen from EL2, is the trigger for the event stream generated from that counter when that stream is enabled.</p>
-<p>If <span class="xref">FEAT_ECV</span> is implemented, and CNTHCTL.EVNTIS is 1, this field selects a trigger bit in the range 8 to 23 of <a href="AArch32-cntpct.html">CNTPCT</a>.</p>
-<p>Otherwise, this field selects a trigger bit in the range 0 to 15 of <a href="AArch32-cntpct.html">CNTPCT</a>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+      </h4><div class="field"><p>Selects which bit of <a href="/latest_sysreg/AArch32-cntpct.html">CNTPCT</a>, as seen from EL2, is the trigger for the event stream generated from that counter when that stream is enabled.</p>
+<p>If <span class="xref">FEAT_ECV</span> is implemented, and CNTHCTL.EVNTIS is 1, this field selects a trigger bit in the range 8 to 23 of <a href="/latest_sysreg/AArch32-cntpct.html">CNTPCT</a>.</p>
+<p>Otherwise, this field selects a trigger bit in the range 0 to 15 of <a href="/latest_sysreg/AArch32-cntpct.html">CNTPCT</a>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-3_3">EVNTDIR, bit [3]:
       </h4><div class="field">
-      <p>Controls which transition of the <a href="AArch32-cntpct.html">CNTPCT</a> trigger bit, as seen from EL2 and defined by EVNTI, generates an event when the event stream is enabled.</p>
+      <p>Controls which transition of the <a href="/latest_sysreg/AArch32-cntpct.html">CNTPCT</a> trigger bit, as seen from EL2 and defined by EVNTI, generates an event when the event stream is enabled.</p>
     <table class="valuetable"><tr><th>EVNTDIR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>A 0 to 1 transition of the trigger bit triggers an event.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -41,7 +41,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_2">EVNTEN, bit [2]:
       </h4><div class="field">
-      <p>Enables the generation of an event stream from <a href="AArch32-cntpct.html">CNTPCT</a> as seen from EL2.</p>
+      <p>Enables the generation of an event stream from <a href="/latest_sysreg/AArch32-cntpct.html">CNTPCT</a> as seen from EL2.</p>
     <table class="valuetable"><tr><th>EVNTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Disables the event stream.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -52,7 +52,7 @@
       </h4><div class="field">
       <p>Traps Non-secure EL0 and EL1 MRC or MCR accesses, reported using EC syndrome value <span class="hexnumber">0x03</span>, and MRRC or MCRR accesses, reported using EC syndrome value <span class="hexnumber">0x04</span>, to the physical timer registers to Hyp mode.</p>
     <table class="valuetable"><tr><th>PL1PCEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Non-secure EL0 and EL1 accesses to the <a href="AArch32-cntp_ctl.html">CNTP_CTL</a>, <a href="AArch32-cntp_cval.html">CNTP_CVAL</a>, and <a href="AArch32-cntp_tval.html">CNTP_TVAL</a> are trapped to Hyp mode, unless trapped by <a href="AArch32-cntkctl.html">CNTKCTL</a>.PL0PTEN.</p>
+          <p>Non-secure EL0 and EL1 accesses to the <a href="/latest_sysreg/AArch32-cntp_ctl.html">CNTP_CTL</a>, <a href="/latest_sysreg/AArch32-cntp_cval.html">CNTP_CVAL</a>, and <a href="/latest_sysreg/AArch32-cntp_tval.html">CNTP_TVAL</a> are trapped to Hyp mode, unless trapped by <a href="/latest_sysreg/AArch32-cntkctl.html">CNTKCTL</a>.PL0PTEN.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table>
@@ -63,7 +63,7 @@
       </h4><div class="field">
       <p>Traps Non-secure EL0 and EL1 MRRC or MCRR accesses, reported using EC syndrome value <span class="hexnumber">0x04</span>, to the physical counter register to Hyp mode.</p>
     <table class="valuetable"><tr><th>PL1PCTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Non-secure EL0 and EL1 accesses to the <a href="AArch32-cntpct.html">CNTPCT</a> are trapped to Hyp mode, unless it is trapped by <a href="AArch32-cntkctl.html">CNTKCTL</a>.PL0PCTEN.</p>
+          <p>Non-secure EL0 and EL1 accesses to the <a href="/latest_sysreg/AArch32-cntpct.html">CNTPCT</a> are trapped to Hyp mode, unless it is trapped by <a href="/latest_sysreg/AArch32-cntkctl.html">CNTKCTL</a>.PL0PCTEN.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table>

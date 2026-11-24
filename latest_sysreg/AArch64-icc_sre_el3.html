@@ -10,10 +10,10 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-3_3">Enable, bit [3]:
       </h4><div class="field">
-      <p>Enable. Enables lower Exception level access to <a href="AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> and <a href="AArch64-icc_sre_el2.html">ICC_SRE_EL2</a>.</p>
-    <table class="valuetable"><tr><th>Enable</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>EL1 accesses to <a href="AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> trap to EL3, unless these accesses are trapped to EL2 as a result of <a href="AArch64-icc_sre_el2.html">ICC_SRE_EL2</a>.Enable == 0.</p>
-<p>EL2 accesses to <a href="AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> and <a href="AArch64-icc_sre_el2.html">ICC_SRE_EL2</a> trap to EL3.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>EL1 accesses to <a href="AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> do not trap to EL3.</p>
-<p>EL2 accesses to <a href="AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> and <a href="AArch64-icc_sre_el2.html">ICC_SRE_EL2</a> do not trap to EL3.</p></td></tr></table><p>If ICC_SRE_EL3.SRE is RAO/WI, an implementation is permitted to make the Enable bit RAO/WI.</p>
+      <p>Enable. Enables lower Exception level access to <a href="/latest_sysreg/AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> and <a href="/latest_sysreg/AArch64-icc_sre_el2.html">ICC_SRE_EL2</a>.</p>
+    <table class="valuetable"><tr><th>Enable</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>EL1 accesses to <a href="/latest_sysreg/AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> trap to EL3, unless these accesses are trapped to EL2 as a result of <a href="/latest_sysreg/AArch64-icc_sre_el2.html">ICC_SRE_EL2</a>.Enable == 0.</p>
+<p>EL2 accesses to <a href="/latest_sysreg/AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> and <a href="/latest_sysreg/AArch64-icc_sre_el2.html">ICC_SRE_EL2</a> trap to EL3.</p></td></tr><tr><td class="bitfield">0b1</td><td><p>EL1 accesses to <a href="/latest_sysreg/AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> do not trap to EL3.</p>
+<p>EL2 accesses to <a href="/latest_sysreg/AArch64-icc_sre_el1.html">ICC_SRE_EL1</a> and <a href="/latest_sysreg/AArch64-icc_sre_el2.html">ICC_SRE_EL2</a> do not trap to EL3.</p></td></tr></table><p>If ICC_SRE_EL3.SRE is RAO/WI, an implementation is permitted to make the Enable bit RAO/WI.</p>
 <p>If ICC_SRE_EL3.SRE is 0, the Enable bit behaves as 1 for all purposes other than reading the value of the bit.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_2">DIB, bit [2]:
@@ -44,7 +44,7 @@
       </h4><div class="field">
       <p>System Register Enable.</p>
     <table class="valuetable"><tr><th>SRE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The memory-mapped interface must be used. Access at EL3 to any ICH_* or ICC_* register other than <a href="AArch64-icc_sre_el1.html">ICC_SRE_EL1</a>, <a href="AArch64-icc_sre_el2.html">ICC_SRE_EL2</a>, or ICC_SRE_EL3 is trapped to EL3</p>
+          <p>The memory-mapped interface must be used. Access at EL3 to any ICH_* or ICC_* register other than <a href="/latest_sysreg/AArch64-icc_sre_el1.html">ICC_SRE_EL1</a>, <a href="/latest_sysreg/AArch64-icc_sre_el2.html">ICC_SRE_EL2</a>, or ICC_SRE_EL3 is trapped to EL3</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The System register interface to the ICH_* registers and the EL1, EL2, and EL3 ICC_* registers is enabled for EL3.</p>
         </td></tr></table><p>If software changes this bit from 1 to 0, the results are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>

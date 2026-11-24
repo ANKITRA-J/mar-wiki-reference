@@ -57,7 +57,7 @@ The value initially loaded from memory is returned in the destination register.<
             </h4><a id="LDBFMAX_16"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 0)</span></div><p class="asm-code">LDBFMAX  <a href="#fpfar_hs" title='Is the 16-bit name of the SIMD&amp;FP register holding the data value to be operated on with the contents of the memory location, encoded in the "Rs" field.'>&lt;Hs&gt;</a>, <a href="#fpfar_ht" title='Is the 16-bit name of the SIMD&amp;FP register to be loaded, encoded in the "Rt" field.'>&lt;Ht&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Acquire encoding
             </h4><a id="LDBFMAXA_16"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 0)</span></div><p class="asm-code">LDBFMAXA  <a href="#fpfar_hs" title='Is the 16-bit name of the SIMD&amp;FP register holding the data value to be operated on with the contents of the memory location, encoded in the "Rs" field.'>&lt;Hs&gt;</a>, <a href="#fpfar_ht" title='Is the 16-bit name of the SIMD&amp;FP register to be loaded, encoded in the "Rt" field.'>&lt;Ht&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Acquire-release encoding
             </h4><a id="LDBFMAXAL_16"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 1)</span></div><p class="asm-code">LDBFMAXAL  <a href="#fpfar_hs" title='Is the 16-bit name of the SIMD&amp;FP register holding the data value to be operated on with the contents of the memory location, encoded in the "Rs" field.'>&lt;Hs&gt;</a>, <a href="#fpfar_ht" title='Is the 16-bit name of the SIMD&amp;FP register to be loaded, encoded in the "Rt" field.'>&lt;Ht&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Release encoding
-            </h4><a id="LDBFMAXL_16"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">LDBFMAXL  <a href="#fpfar_hs" title='Is the 16-bit name of the SIMD&amp;FP register holding the data value to be operated on with the contents of the memory location, encoded in the "Rs" field.'>&lt;Hs&gt;</a>, <a href="#fpfar_ht" title='Is the 16-bit name of the SIMD&amp;FP register to be loaded, encoded in the "Rt" field.'>&lt;Ht&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSFE) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="LDBFMAXL_16"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">LDBFMAXL  <a href="#fpfar_hs" title='Is the 16-bit name of the SIMD&amp;FP register holding the data value to be operated on with the contents of the memory location, encoded in the "Rs" field.'>&lt;Hs&gt;</a>, <a href="#fpfar_ht" title='Is the 16-bit name of the SIMD&amp;FP register to be loaded, encoded in the "Rt" field.'>&lt;Ht&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSFE) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 
 let t : integer = UInt(Rt);
 let n : integer = UInt(Rn);
@@ -81,24 +81,24 @@ let tagchecked : boolean = n != 31;</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode"><a href="shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
+      <p class="pseudocode"><a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
 var address : bits(64);
 var value : bits(datasize);
 var data : bits(datasize);
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescFPAtomicOp_4" title="">CreateAccDescFPAtomicOp</a>(<a href="shared_pseudocode.html#enum_MemAtomicOp_BFMAX" title="">MemAtomicOp_BFMAX</a>, acquire,
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescFPAtomicOp_4" title="">CreateAccDescFPAtomicOp</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemAtomicOp_BFMAX" title="">MemAtomicOp_BFMAX</a>, acquire,
                                                          release, tagchecked);
 
-value = <a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{datasize}(s);
+value = <a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{datasize}(s);
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
 // Irrelevant when not executing CAS
 let comparevalue : bits(datasize) = ARBITRARY : bits(datasize);
-data = <a href="shared_pseudocode.html#func_MemAtomic_5" title="">MemAtomic</a>{datasize}(address, comparevalue, value, accdesc);
+data = <a href="/latest_aarch64/shared_pseudocode.html#func_MemAtomic_5" title="">MemAtomic</a>{datasize}(address, comparevalue, value, accdesc);
 
-<a href="shared_pseudocode.html#accessor_V_2" title="">V</a>{datasize}(t) = data;</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_V_2" title="">V</a>{datasize}(t) = data;</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

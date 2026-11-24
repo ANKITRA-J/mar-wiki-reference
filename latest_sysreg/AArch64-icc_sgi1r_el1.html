@@ -3,7 +3,7 @@
 <title>ICC_SGI1R_EL1 | Jon's Arm Reference</title><meta name="description" content="Generates Group 1 SGIs for the current Security state."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ICC_SGI1R_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Controller Software Generated Interrupt Group 1 Register</p><div data-pagefind-body="1">
         <p>Generates Group 1 SGIs for the current Security state.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register ICC_SGI1R_EL1 performs the same function as AArch32 System register <a href="AArch32-icc_sgi1r.html">ICC_SGI1R</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented) and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_SGI1R_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register ICC_SGI1R_EL1 performs the same function as AArch32 System register <a href="/latest_sysreg/AArch32-icc_sgi1r.html">ICC_SGI1R</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented) and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_SGI1R_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>Under certain conditions a write to ICC_SGI1R_EL1 can generate Group 0 interrupts, see <span class="xref">'Forwarding an SGI to a target PE' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>.</p>
       <h3>Attributes</h3>
         <p>ICC_SGI1R_EL1 is a 64-bit register.</p>
@@ -16,8 +16,8 @@
       </h4><div class="field"><p>RangeSelector</p>
 <p>Controls which group of 16 values is represented by the TargetList field.</p>
 <p>TargetList[n] represents aff0 value ((RS * 16) + n).</p>
-<p>When <a href="AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.RSS==0, RS is <span class="arm-defined-word">RES0</span>.</p>
-<p>When <a href="AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.RSS==1 and <a href="ext-gicd_typer.html">GICD_TYPER</a>.RSS==0, writing this register with RS != 0 is a <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> choice of:</p>
+<p>When <a href="/latest_sysreg/AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.RSS==0, RS is <span class="arm-defined-word">RES0</span>.</p>
+<p>When <a href="/latest_sysreg/AArch64-icc_ctlr_el1.html">ICC_CTLR_EL1</a>.RSS==1 and <a href="/latest_sysreg/ext-gicd_typer.html">GICD_TYPER</a>.RSS==0, writing this register with RS != 0 is a <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> choice of:</p>
 <ul>
 <li>The write is ignored.
 </li><li>The RS field is treated as 0.

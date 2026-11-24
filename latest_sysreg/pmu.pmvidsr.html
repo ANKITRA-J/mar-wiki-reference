@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>PMVIDSR | Jon's Arm Reference</title><meta name="description" content="PC Sample-based Profiling Extension register that contains the sampled VMID value that is captured on reading PMPCSR[31:0]."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">PMVIDSR</h1><p class="insn_subtitle" data-pagefind-body="1">VMID Sample Register</p><div data-pagefind-body="1">
-        <p>PC Sample-based Profiling Extension register that contains the sampled VMID value that is captured on reading <a href="pmu.pmpcsr.html">PMPCSR</a>[31:0].</p>
+        <p>PC Sample-based Profiling Extension register that contains the sampled VMID value that is captured on reading <a href="/latest_sysreg/pmu.pmpcsr.html">PMPCSR</a>[31:0].</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_PMUv3_EXT32 is implemented, FEAT_PCSRv8p2 is implemented, and EL2 is implemented.</p>
         <p>PMVIDSR is in the Core power domain.</p>
       <h3>Attributes</h3>
         <p>PMVIDSR is a 32-bit register.</p>
-      <p>This  register is part of the <a href="pmu.html">PMU</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_0-31_16">RES0</a></td><td class="lr" colspan="8"><a href="#fieldset_0-15_8-1">VMID[15:8]</a></td><td class="lr" colspan="8"><a href="#fieldset_0-7_0">VMID</a></td></tr></tbody></table><h4 id="fieldset_0-31_16">Bits [31:16]:
+      <p>This  register is part of the <a href="/latest_sysreg/pmu.html">PMU</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="16"><a href="#fieldset_0-31_16">RES0</a></td><td class="lr" colspan="8"><a href="#fieldset_0-15_8-1">VMID[15:8]</a></td><td class="lr" colspan="8"><a href="#fieldset_0-7_0">VMID</a></td></tr></tbody></table><h4 id="fieldset_0-31_16">Bits [31:16]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_8-1">VMID[15:8], bits [15:8] <span class="condition">when FEAT_VMID16 is implemented</span>:
@@ -19,22 +19,22 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-7_0">VMID, bits [7:0]:
-      </h4><div class="field"><p>VMID sample. The VMID associated with the most recent <a href="pmu.pmpcsr.html">PMPCSR</a> sample. When the most recent <a href="pmu.pmpcsr.html">PMPCSR</a> sample was generated:</p>
+      </h4><div class="field"><p>VMID sample. The VMID associated with the most recent <a href="/latest_sysreg/pmu.pmpcsr.html">PMPCSR</a> sample. When the most recent <a href="/latest_sysreg/pmu.pmpcsr.html">PMPCSR</a> sample was generated:</p>
 <ul>
 <li>This field is set to an <span class="arm-defined-word">UNKNOWN</span> value if any of the following apply:<ul>
 <li>EL2 is disabled in the current Security state.
 </li><li>The PE is executing at EL2.
-</li><li>The PE is executing at EL0, and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
+</li><li>The PE is executing at EL0, and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}.
 </li></ul>
 
 </li><li>Otherwise:<ul>
-<li>If EL2 is using AArch64 and either <span class="xref">FEAT_VMID16</span> is not implemented or <a href="AArch64-vtcr_el2.html">VTCR_EL2</a>.VS is 1, this field is set to <a href="AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.
-</li><li>If EL2 is using AArch64, <span class="xref">FEAT_VMID16</span> is implemented, and <a href="AArch64-vtcr_el2.html">VTCR_EL2</a>.VS is 0, PMVIDSR.VMID[7:0] is set to <a href="AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID[7:0] and PMVIDSR.VMID[15:8] is <span class="arm-defined-word">RES0</span>.
-</li><li>If EL2 is using AArch32, this field is set to <a href="AArch32-vttbr.html">VTTBR</a>.VMID.
+<li>If EL2 is using AArch64 and either <span class="xref">FEAT_VMID16</span> is not implemented or <a href="/latest_sysreg/AArch64-vtcr_el2.html">VTCR_EL2</a>.VS is 1, this field is set to <a href="/latest_sysreg/AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID.
+</li><li>If EL2 is using AArch64, <span class="xref">FEAT_VMID16</span> is implemented, and <a href="/latest_sysreg/AArch64-vtcr_el2.html">VTCR_EL2</a>.VS is 0, PMVIDSR.VMID[7:0] is set to <a href="/latest_sysreg/AArch64-vttbr_el2.html">VTTBR_EL2</a>.VMID[7:0] and PMVIDSR.VMID[15:8] is <span class="arm-defined-word">RES0</span>.
+</li><li>If EL2 is using AArch32, this field is set to <a href="/latest_sysreg/AArch32-vttbr.html">VTTBR</a>.VMID.
 </li></ul>
 
 </li></ul>
-<p>Because the value written to PMVIDSR is an indirect read of the VMID value, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether PMVIDSR is set to the original or new value if <a href="pmu.pmpcsr.html">PMPCSR</a> samples:</p>
+<p>Because the value written to PMVIDSR is an indirect read of the VMID value, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether PMVIDSR is set to the original or new value if <a href="/latest_sysreg/pmu.pmpcsr.html">PMPCSR</a> samples:</p>
 <ul>
 <li>An instruction that writes to the VMID value.
 </li><li>The next Context synchronization event.

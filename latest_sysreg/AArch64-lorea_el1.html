@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>LOREA_EL1 | Jon's Arm Reference</title><meta name="description" content="Holds the physical address of the end of the LORegion described in the current LORegion descriptor selected by LORC_EL1.DS."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">LOREA_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">LORegion End Address (EL1)</p><div data-pagefind-body="1">
-        <p>Holds the physical address of the end of the LORegion described in the current LORegion descriptor selected by <a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
+        <p>Holds the physical address of the end of the LORegion described in the current LORegion descriptor selected by <a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_LOR is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to LOREA_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>This register is <span class="arm-defined-word">RES0</span> if any of the following apply:</p>
 
       
         <ul>
 <li>No LORegion descriptors are supported by the PE.
-</li><li><a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS points to a LORegion that is not supported by the PE.
+</li><li><a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS points to a LORegion that is not supported by the PE.
 </li></ul>
       <h3>Attributes</h3>
         <p>LOREA_EL1 is a 64-bit register.</p>
@@ -35,7 +35,7 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-47_16">EA[47:16], bits [47:16]:
-      </h4><div class="field"><p>Bits [47:16] of the end physical address of an LORegion described in the current LORegion descriptor selected by <a href="AArch64-lorc_el1.html">LORC_EL1</a>.DS. Bits[15:0] of this address are <span class="hexnumber">0xFFFF</span>. For implementations with fewer than 48 bits, the upper bits of this field are <span class="arm-defined-word">RES0</span>.</p>
+      </h4><div class="field"><p>Bits [47:16] of the end physical address of an LORegion described in the current LORegion descriptor selected by <a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>.DS. Bits[15:0] of this address are <span class="hexnumber">0xFFFF</span>. For implementations with fewer than 48 bits, the upper bits of this field are <span class="arm-defined-word">RES0</span>.</p>
 <p>When <span class="xref">FEAT_LPA</span> is implemented and 52-bit addresses are in use, EA[51:48] form bits [51:48] of the end physical address of the LORegion. Otherwise, when 52-bit addresses are not in use, EA[51:48] is <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-15_0">Bits [15:0]:

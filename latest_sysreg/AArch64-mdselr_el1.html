@@ -21,16 +21,16 @@
           <p>Select 48 to 63.</p>
         </td><td>When NUM_BREAKPOINTS &gt; 48 or NUM_WATCHPOINTS &gt; 48</td></tr></table><p>Each of the following register names accesses a register for breakpoint or watchpoint &lt;n&gt;, where n = UInt(MDSELR_EL1.BANK::m[3:0]):</p>
 <ul>
-<li><a href="AArch64-dbgbcrn_el1.html">DBGBCR&lt;m&gt;_EL1</a>.
-</li><li><a href="AArch64-dbgbvrn_el1.html">DBGBVR&lt;m&gt;_EL1</a>.
-</li><li><a href="AArch64-dbgwcrn_el1.html">DBGWCR&lt;m&gt;_EL1</a>.
-</li><li><a href="AArch64-dbgwvrn_el1.html">DBGWVR&lt;m&gt;_EL1</a>.
+<li><a href="/latest_sysreg/AArch64-dbgbcrn_el1.html">DBGBCR&lt;m&gt;_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-dbgbvrn_el1.html">DBGBVR&lt;m&gt;_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-dbgwcrn_el1.html">DBGWCR&lt;m&gt;_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-dbgwvrn_el1.html">DBGWVR&lt;m&gt;_EL1</a>.
 </li></ul>
 <p>This field is ignored by the PE and treated as zeros when any of the following are true:</p>
 <ul>
-<li>Executing at EL3 and <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.EBWE is 0.
-</li><li>Executing at EL2 and the Effective value of <a href="AArch64-mdcr_el2.html">MDCR_EL2</a>.EBWE is 0.
-</li><li>Executing at EL1 and the Effective value of <a href="AArch64-mdscr_el1.html">MDSCR_EL1</a>.EMBWE is 0.
+<li>Executing at EL3 and <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.EBWE is 0.
+</li><li>Executing at EL2 and the Effective value of <a href="/latest_sysreg/AArch64-mdcr_el2.html">MDCR_EL2</a>.EBWE is 0.
+</li><li>Executing at EL1 and the Effective value of <a href="/latest_sysreg/AArch64-mdscr_el1.html">MDSCR_EL1</a>.EMBWE is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">

@@ -179,9 +179,9 @@
               </td><td></td></tr><tr><td class="bitfield">0b000001</td><td>
                 <p>Trace buffer filled. Collection stopped because the current write pointer wrapped to the base pointer and the trace buffer mode is Fill mode.</p>
               </td><td></td></tr><tr><td class="bitfield">0b000010</td><td>
-                <p>Trigger Event. Collection stopped because of a Trigger Event. See <a href="AArch64-trbtrg_el1.html">TRBTRG_EL1</a> for more information.</p>
+                <p>Trigger Event. Collection stopped because of a Trigger Event. See <a href="/latest_sysreg/AArch64-trbtrg_el1.html">TRBTRG_EL1</a> for more information.</p>
               </td><td></td></tr><tr><td class="bitfield">0b000011</td><td>
-                <p>Manual Stop. Collection stopped because of a Manual Stop event. See <a href="ext-trbcr.html">TRBCR</a>.ManStop for more information.</p>
+                <p>Manual Stop. Collection stopped because of a Manual Stop event. See <a href="/latest_sysreg/ext-trbcr.html">TRBCR</a>.ManStop for more information.</p>
               </td><td>When FEAT_TRBE_EXT is implemented</td></tr><tr><td class="bitfield">0b000100</td><td>
                 <p>Buffer size. The requested trace buffer size was too large.</p>
               </td><td></td></tr></table>
@@ -301,15 +301,15 @@
       
         <ul>
 <li>
-<p><a href="AArch64-trblimitr_el1.html">TRBLIMITR_EL1</a>.E is 1, and either <span class="xref">FEAT_TRBE_EXT</span> is not implemented or the Trace Buffer Unit is using Self-hosted mode.</p>
+<p><a href="/latest_sysreg/AArch64-trblimitr_el1.html">TRBLIMITR_EL1</a>.E is 1, and either <span class="xref">FEAT_TRBE_EXT</span> is not implemented or the Trace Buffer Unit is using Self-hosted mode.</p>
 
 </li><li>
-<p><a href="AArch64-trblimitr_el1.html">TRBLIMITR_EL1</a>.XE is 1, <span class="xref">FEAT_TRBE_EXT</span> is implemented, and the Trace Buffer Unit is using External mode.</p>
+<p><a href="/latest_sysreg/AArch64-trblimitr_el1.html">TRBLIMITR_EL1</a>.XE is 1, <span class="xref">FEAT_TRBE_EXT</span> is implemented, and the Trace Buffer Unit is using External mode.</p>
 
 </li></ul>
 
       
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name TRBSR_EL2 or TRBSR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name TRBSR_EL2 or TRBSR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, TRBSR_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b1001, CRm = 0b1011, op2 = 0b011)
       </p><p class="pseudocode">

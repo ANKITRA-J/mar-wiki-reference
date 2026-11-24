@@ -21,7 +21,7 @@
         <p>Bits corresponding to unimplemented interrupts are RAZ/WI.</p>
 
       
-        <p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, bits corresponding to Group 0 and Secure Group 1 interrupts are RAZ/WI to Non-secure accesses.</p>
+        <p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, bits corresponding to Group 0 and Secure Group 1 interrupts are RAZ/WI to Non-secure accesses.</p>
 
       
         <div class="note"><p>Implementations must ensure that an interrupt that is pending at the time of the write uses either the old value or the new value and must ensure that the interrupt is neither lost nor handled more than one time. The effect of the change must be visible in finite time.</p></div>

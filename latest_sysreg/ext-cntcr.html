@@ -25,14 +25,14 @@
     <table class="valuetable"><tr><th>SCEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Scaling is not enabled. The counter value is incremented by <span class="hexnumber">0x1</span>.0000000 for each counter tick.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Scaling is enabled. The counter is incremented by <a href="ext-cntscr.html">CNTSCR</a>.ScaleVal for each counter tick.</p>
+          <p>Scaling is enabled. The counter is incremented by <a href="/latest_sysreg/ext-cntscr.html">CNTSCR</a>.ScaleVal for each counter tick.</p>
         </td></tr></table><p>The SCEN bit can only be changed when the counter is disabled, when CNTCR.EN == 0.</p>
 <p>If the value of CNTCR.SCEN changes when CNTCR.EN == 1, then:</p>
 <ul>
 <li>The counter value becomes <span class="arm-defined-word">UNKNOWN</span>.
 </li><li>The counter value remains <span class="arm-defined-word">UNKNOWN</span> on future ticks of the clock.
 </li></ul>
-<p>When the <a href="ext-cntcv.html">CNTCV</a> register in the CNTControlBase frame of the memory mapped counter module is written to, the accumulated fraction information is reset to zero.</p><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
+<p>When the <a href="/latest_sysreg/ext-cntcv.html">CNTCV</a> register in the CNTControlBase frame of the memory mapped counter module is written to, the accumulated fraction information is reset to zero.</p><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_2-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">

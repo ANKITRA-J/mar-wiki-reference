@@ -24,10 +24,10 @@
 <p>When EL2 is implemented and enabled in the current Security state:</p>
 <ul>
 <li>
-<p>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, the entry would be used with the current VMID and would be required to translate an address using the EL1&amp;0 translation regime for the Security state.</p>
+<p>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, the entry would be used with the current VMID and would be required to translate an address using the EL1&amp;0 translation regime for the Security state.</p>
 
 </li><li>
-<p>If the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, the entry would be required to translate an address using the EL2&amp;0 translation regime for the Security state.</p>
+<p>If the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, the entry would be required to translate an address using the EL2&amp;0 translation regime for the Security state.</p>
 
 </li></ul>
 
@@ -35,7 +35,7 @@
 <p>When EL2 is not implemented or is disabled in the current Security state, the entry would be required to translate an address using the EL1&amp;0 translation regime for the Security state.</p>
 
 </li><li>
-<p>The Security state is indicated by the value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.NS if <span class="xref">FEAT_RME</span> is not implemented, or <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} if <span class="xref">FEAT_RME</span> is implemented.</p>
+<p>The Security state is indicated by the value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS if <span class="xref">FEAT_RME</span> is not implemented, or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} if <span class="xref">FEAT_RME</span> is implemented.</p>
 
 </li></ul>
 

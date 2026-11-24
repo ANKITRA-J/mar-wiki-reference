@@ -26,11 +26,11 @@
 <p>Bits [x:0] of the base address are treated as zero, where:</p>
 <ul>
 <li>x = Max(pps - l0gptsz + 2, 11)
-</li><li>pps is derived from <a href="AArch64-gpccr_el3.html">GPCCR_EL3</a>.PPS as follows:
+</li><li>pps is derived from <a href="/latest_sysreg/AArch64-gpccr_el3.html">GPCCR_EL3</a>.PPS as follows:
 </li></ul>
 <table class="valuetable"><thead><tr><th>GPCCR_EL3.PPS</th><th>pps</th></tr></thead><tbody><tr><td><span class="binarynumber">0b000</span></td><td>32</td></tr><tr><td><span class="binarynumber">0b001</span></td><td>36</td></tr><tr><td><span class="binarynumber">0b010</span></td><td>40</td></tr><tr><td><span class="binarynumber">0b011</span></td><td>42</td></tr><tr><td><span class="binarynumber">0b100</span></td><td>44</td></tr><tr><td><span class="binarynumber">0b101</span></td><td>48</td></tr><tr><td><span class="binarynumber">0b110</span></td><td>52</td></tr></tbody></table>
 <ul>
-<li>l0gptsz is derived from <a href="AArch64-gpccr_el3.html">GPCCR_EL3</a>.L0GPTSZ as follows:
+<li>l0gptsz is derived from <a href="/latest_sysreg/AArch64-gpccr_el3.html">GPCCR_EL3</a>.L0GPTSZ as follows:
 </li></ul>
 <table class="valuetable"><thead><tr><th>GPCCR_EL3.L0GPTSZ</th><th>l0gptsz</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0000</span></td><td>30</td></tr><tr><td><span class="binarynumber">0b0100</span></td><td>34</td></tr><tr><td><span class="binarynumber">0b0110</span></td><td>36</td></tr><tr><td><span class="binarynumber">0b1001</span></td><td>39</td></tr></tbody></table>
 <p>If x is greater than 11, then BADDR[x - 12:0] are <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 

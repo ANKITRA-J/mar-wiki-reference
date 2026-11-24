@@ -17,7 +17,7 @@
       </h4><div class="field">
       <p>Tag Check Fault. Asynchronously set to 1 when a Tag Check Fault using a virtual address with bit[55] == '1' occurs.</p>
     
-      <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is not 1, this field is <span class="arm-defined-word">RES0</span>.</p>
+      <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is not 1, this field is <span class="arm-defined-word">RES0</span>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-0_0">TF0, bit [0]:
@@ -26,7 +26,7 @@
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name TFSR_EL2 or TFSR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name TFSR_EL2 or TFSR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, TFSR_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b0101, CRm = 0b0110, op2 = 0b000)
       </p><p class="pseudocode">

@@ -30,7 +30,7 @@
           <span class="arm-defined-word">RES0</span>
         </span>.</p></div><h4 id="fieldset_0-61_61-1">HACDBSEn, bit [61] <span class="condition">when FEAT_HACDBS is implemented</span>:
       </h4><div class="field">
-      <p>Enables access to the <a href="AArch64-hacdbsbr_el2.html">HACDBSBR_EL2</a> and <a href="AArch64-hacdbscons_el2.html">HACDBSCONS_EL2</a> registers at EL2.</p>
+      <p>Enables access to the <a href="/latest_sysreg/AArch64-hacdbsbr_el2.html">HACDBSBR_EL2</a> and <a href="/latest_sysreg/AArch64-hacdbscons_el2.html">HACDBSCONS_EL2</a> registers at EL2.</p>
     <table class="valuetable"><tr><th>HACDBSEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL2 accesses to the specified registers are trapped to EL3.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -44,7 +44,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-60_60-1">HDBSSEn, bit [60] <span class="condition">when FEAT_HDBSS is implemented</span>:
       </h4><div class="field">
-      <p>Enables access to <a href="AArch64-hdbssbr_el2.html">HDBSSBR_EL2</a> and <a href="AArch64-hdbssprod_el2.html">HDBSSPROD_EL2</a> registers at EL2.</p>
+      <p>Enables access to <a href="/latest_sysreg/AArch64-hdbssbr_el2.html">HDBSSBR_EL2</a> and <a href="/latest_sysreg/AArch64-hdbssprod_el2.html">HDBSSPROD_EL2</a> registers at EL2.</p>
     <table class="valuetable"><tr><th>HDBSSEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL2 accesses to the specified registers are trapped to EL3.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -58,7 +58,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-59_59-1">FGTEn2, bit [59] <span class="condition">when FEAT_FGT2 is implemented</span>:
       </h4><div class="field"><p>Fine-Grained Traps Enable 2.</p>
-<p>When EL2 is implemented, enables the traps to EL2 controlled by <a href="AArch64-hdfgrtr2_el2.html">HDFGRTR2_EL2</a>, <a href="AArch64-hdfgwtr2_el2.html">HDFGWTR2_EL2</a>, <a href="AArch64-hfgitr2_el2.html">HFGITR2_EL2</a>, <a href="AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a>, and <a href="AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a>, and controls access to those registers.</p><table class="valuetable"><tr><th>FGTEn2</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p>When EL2 is implemented, enables the traps to EL2 controlled by <a href="/latest_sysreg/AArch64-hdfgrtr2_el2.html">HDFGRTR2_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgwtr2_el2.html">HDFGWTR2_EL2</a>, <a href="/latest_sysreg/AArch64-hfgitr2_el2.html">HFGITR2_EL2</a>, <a href="/latest_sysreg/AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a>, and <a href="/latest_sysreg/AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a>, and controls access to those registers.</p><table class="valuetable"><tr><th>FGTEn2</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL2 accesses to the specified registers are trapped to EL3. The values in these registers are treated as 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>EL2 accesses to the specified registers are not trapped to EL3 by this mechanism.</p>
@@ -90,8 +90,8 @@
           <p>This mechanism is not making a delegated SError exception pending.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>A delegated SError exception for EL2, EL1, and EL0 is pending because of this mechanism.</p>
-        </td></tr></table><p>When EL2 is implemented and enabled in the current Security state, delegated SError exceptions pended by this field are affected by <a href="AArch64-hcr_el2.html">HCR_EL2</a>.AMO and <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TMEA.</p>
-<p>Virtual SError exceptions pended by <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VSE have priority over delegated SError exceptions pended by this field.</p>
+        </td></tr></table><p>When EL2 is implemented and enabled in the current Security state, delegated SError exceptions pended by this field are affected by <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.AMO and <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TMEA.</p>
+<p>Virtual SError exceptions pended by <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VSE have priority over delegated SError exceptions pended by this field.</p>
 <p>This field is ignored by the PE and treated as zero when SCR_EL3.EnDSE == 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-57_57-2"> <span class="condition">Otherwise</span>:
@@ -99,11 +99,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-56_56-1">VTLBIDEn, bit [56] <span class="condition">when FEAT_TLBID is implemented</span>:
       </h4><div class="field">
-      <p>Enable EL2 access to <a href="AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a> and <a href="AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a> registers.</p>
+      <p>Enable EL2 access to <a href="/latest_sysreg/AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a> and <a href="/latest_sysreg/AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a> registers.</p>
     <table class="valuetable"><tr><th>VTLBIDEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>EL2 accesses to <a href="AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a> and <a href="AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a> are trapped to EL3 using EC syndrome value <span class="hexnumber">0x18</span>. The Effective values of <a href="AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a> and <a href="AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a> are zero. EL1 and EL2 accesses to <a href="AArch64-tlbididr_el1.html">TLBIDIDR_EL1</a> are trapped to EL3 using EC syndrome value <span class="hexnumber">0x18</span>.</p>
+          <p>EL2 accesses to <a href="/latest_sysreg/AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a> and <a href="/latest_sysreg/AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a> are trapped to EL3 using EC syndrome value <span class="hexnumber">0x18</span>. The Effective values of <a href="/latest_sysreg/AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a> and <a href="/latest_sysreg/AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a> are zero. EL1 and EL2 accesses to <a href="/latest_sysreg/AArch64-tlbididr_el1.html">TLBIDIDR_EL1</a> are trapped to EL3 using EC syndrome value <span class="hexnumber">0x18</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>EL2 accesses to <a href="AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a> and <a href="AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a> are not prevented by this control.</p>
+          <p>EL2 accesses to <a href="/latest_sysreg/AArch64-vtlbidn_el2.html">VTLBID&lt;n&gt;_EL2</a> and <a href="/latest_sysreg/AArch64-vtlbidosn_el2.html">VTLBIDOS&lt;n&gt;_EL2</a> are not prevented by this control.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-56_56-2"> <span class="condition">Otherwise</span>:
@@ -123,23 +123,23 @@
     </div><h4 id="fieldset_0-54_54-1">SRMASKEn, bit [54] <span class="condition">when FEAT_SRMASK is implemented</span>:
       </h4><div class="field"><p>Enables access to the following MASK registers:</p>
 <ul>
-<li><a href="AArch64-cpacrmask_el1.html">CPACRMASK_EL1</a>, and CPACRMASK_EL12.
-</li><li><a href="AArch64-sctlrmask_el1.html">SCTLRMASK_EL1</a>, and SCTLRMASK_EL12.
-</li><li><a href="AArch64-sctlr2mask_el1.html">SCTLR2MASK_EL1</a>, and SCTLR2MASK_EL12.
-</li><li><a href="AArch64-tcrmask_el1.html">TCRMASK_EL1</a>, and TCRMASK_EL12.
-</li><li><a href="AArch64-tcr2mask_el1.html">TCR2MASK_EL1</a>, and TCR2MASK_EL12.
-</li><li><a href="AArch64-actlrmask_el1.html">ACTLRMASK_EL1</a> and ACTLRMASK_EL12, if they are implemented.
-</li><li><a href="AArch64-cptrmask_el2.html">CPTRMASK_EL2</a>.
-</li><li><a href="AArch64-sctlrmask_el2.html">SCTLRMASK_EL2</a>.
-</li><li><a href="AArch64-sctlr2mask_el2.html">SCTLR2MASK_EL2</a>.
-</li><li><a href="AArch64-tcrmask_el2.html">TCRMASK_EL2</a>.
-</li><li><a href="AArch64-tcr2mask_el2.html">TCR2MASK_EL2</a>.
-</li><li><a href="AArch64-actlrmask_el2.html">ACTLRMASK_EL2</a>, if it is implemented.
+<li><a href="/latest_sysreg/AArch64-cpacrmask_el1.html">CPACRMASK_EL1</a>, and CPACRMASK_EL12.
+</li><li><a href="/latest_sysreg/AArch64-sctlrmask_el1.html">SCTLRMASK_EL1</a>, and SCTLRMASK_EL12.
+</li><li><a href="/latest_sysreg/AArch64-sctlr2mask_el1.html">SCTLR2MASK_EL1</a>, and SCTLR2MASK_EL12.
+</li><li><a href="/latest_sysreg/AArch64-tcrmask_el1.html">TCRMASK_EL1</a>, and TCRMASK_EL12.
+</li><li><a href="/latest_sysreg/AArch64-tcr2mask_el1.html">TCR2MASK_EL1</a>, and TCR2MASK_EL12.
+</li><li><a href="/latest_sysreg/AArch64-actlrmask_el1.html">ACTLRMASK_EL1</a> and ACTLRMASK_EL12, if they are implemented.
+</li><li><a href="/latest_sysreg/AArch64-cptrmask_el2.html">CPTRMASK_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-sctlrmask_el2.html">SCTLRMASK_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-sctlr2mask_el2.html">SCTLR2MASK_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-tcrmask_el2.html">TCRMASK_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-tcr2mask_el2.html">TCR2MASK_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-actlrmask_el2.html">ACTLRMASK_EL2</a>, if it is implemented.
 </li></ul><table class="valuetable"><tr><th>SRMASKEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>EL2 accesses to the specified registers are trapped to EL3. EL1 accesses to the specified EL1 registers are trapped to EL3.</p>
 <p>The values in the registers are treated as 0.</p></td></tr><tr><td class="bitfield">0b1</td><td>
           <p>No accesses are trapped by this control.</p>
         </td></tr></table><p>Traps are reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
-<p>Traps generated by this control have a lower priority than traps generated by the <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SRMASKEn, <a href="AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a> and <a href="AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a> controls.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>Traps generated by this control have a lower priority than traps generated by the <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SRMASKEn, <a href="/latest_sysreg/AArch64-hfgrtr2_el2.html">HFGRTR2_EL2</a> and <a href="/latest_sysreg/AArch64-hfgwtr2_el2.html">HFGWTR2_EL2</a> controls.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-54_54-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -151,7 +151,7 @@
           <p>Accesses of the specified Physical Fault Address Registers at EL2 and EL1 are trapped to EL3, unless the instruction generates a higher priority exception.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
-        </td></tr></table><p>In AArch64 state, the instructions affected by this control are: <span class="instruction">MRS</span> and <span class="instruction">MSR</span> accesses to <a href="AArch64-pfar_el1.html">PFAR_EL1</a>, <a href="AArch64-pfar_el2.html">PFAR_EL2</a>, and PFAR_EL12.</p>
+        </td></tr></table><p>In AArch64 state, the instructions affected by this control are: <span class="instruction">MRS</span> and <span class="instruction">MSR</span> accesses to <a href="/latest_sysreg/AArch64-pfar_el1.html">PFAR_EL1</a>, <a href="/latest_sysreg/AArch64-pfar_el2.html">PFAR_EL2</a>, and PFAR_EL12.</p>
 <p>Unless the instruction generates a higher priority exception, trapped instructions generate an exception to EL3.</p>
 <p>Trapped instructions are reported using EC syndrome value <span class="hexnumber">0x18</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -165,16 +165,16 @@
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Writes of the specified Error Record registers at EL2 and EL1 are trapped to EL3, unless the instruction generates a higher priority exception.</p>
-        </td></tr></table><p>In AArch64 state, the instructions affected by this control are: <span class="instruction">MSR</span> accesses to <a href="AArch64-errselr_el1.html">ERRSELR_EL1</a>, <a href="AArch64-erxaddr_el1.html">ERXADDR_EL1</a>, <a href="AArch64-erxctlr_el1.html">ERXCTLR_EL1</a>, <a href="AArch64-erxmisc0_el1.html">ERXMISC0_EL1</a>, <a href="AArch64-erxmisc1_el1.html">ERXMISC1_EL1</a>, <a href="AArch64-erxmisc2_el1.html">ERXMISC2_EL1</a>, <a href="AArch64-erxmisc3_el1.html">ERXMISC3_EL1</a>, and <a href="AArch64-erxstatus_el1.html">ERXSTATUS_EL1</a>.</p>
-<p>In AArch32 state, the instructions affected by this control are: <span class="instruction">MCR</span> accesses to <a href="AArch32-errselr.html">ERRSELR</a>, <a href="AArch32-erxaddr.html">ERXADDR</a>, <a href="AArch32-erxaddr2.html">ERXADDR2</a>, <a href="AArch32-erxctlr.html">ERXCTLR</a>, <a href="AArch32-erxctlr2.html">ERXCTLR2</a>, <a href="AArch32-erxmisc0.html">ERXMISC0</a>, <a href="AArch32-erxmisc1.html">ERXMISC1</a>, <a href="AArch32-erxmisc2.html">ERXMISC2</a>, <a href="AArch32-erxmisc3.html">ERXMISC3</a>, <a href="AArch32-erxmisc4.html">ERXMISC4</a>, <a href="AArch32-erxmisc5.html">ERXMISC5</a>, <a href="AArch32-erxmisc6.html">ERXMISC6</a>, <a href="AArch32-erxmisc7.html">ERXMISC7</a>, and <a href="AArch32-erxstatus.html">ERXSTATUS</a>.</p>
+        </td></tr></table><p>In AArch64 state, the instructions affected by this control are: <span class="instruction">MSR</span> accesses to <a href="/latest_sysreg/AArch64-errselr_el1.html">ERRSELR_EL1</a>, <a href="/latest_sysreg/AArch64-erxaddr_el1.html">ERXADDR_EL1</a>, <a href="/latest_sysreg/AArch64-erxctlr_el1.html">ERXCTLR_EL1</a>, <a href="/latest_sysreg/AArch64-erxmisc0_el1.html">ERXMISC0_EL1</a>, <a href="/latest_sysreg/AArch64-erxmisc1_el1.html">ERXMISC1_EL1</a>, <a href="/latest_sysreg/AArch64-erxmisc2_el1.html">ERXMISC2_EL1</a>, <a href="/latest_sysreg/AArch64-erxmisc3_el1.html">ERXMISC3_EL1</a>, and <a href="/latest_sysreg/AArch64-erxstatus_el1.html">ERXSTATUS_EL1</a>.</p>
+<p>In AArch32 state, the instructions affected by this control are: <span class="instruction">MCR</span> accesses to <a href="/latest_sysreg/AArch32-errselr.html">ERRSELR</a>, <a href="/latest_sysreg/AArch32-erxaddr.html">ERXADDR</a>, <a href="/latest_sysreg/AArch32-erxaddr2.html">ERXADDR2</a>, <a href="/latest_sysreg/AArch32-erxctlr.html">ERXCTLR</a>, <a href="/latest_sysreg/AArch32-erxctlr2.html">ERXCTLR2</a>, <a href="/latest_sysreg/AArch32-erxmisc0.html">ERXMISC0</a>, <a href="/latest_sysreg/AArch32-erxmisc1.html">ERXMISC1</a>, <a href="/latest_sysreg/AArch32-erxmisc2.html">ERXMISC2</a>, <a href="/latest_sysreg/AArch32-erxmisc3.html">ERXMISC3</a>, <a href="/latest_sysreg/AArch32-erxmisc4.html">ERXMISC4</a>, <a href="/latest_sysreg/AArch32-erxmisc5.html">ERXMISC5</a>, <a href="/latest_sysreg/AArch32-erxmisc6.html">ERXMISC6</a>, <a href="/latest_sysreg/AArch32-erxmisc7.html">ERXMISC7</a>, and <a href="/latest_sysreg/AArch32-erxstatus.html">ERXSTATUS</a>.</p>
 <p>Unless the instruction generates a higher priority exception, trapped instructions generate an exception to EL3.</p>
 <p>Trapped AArch64 instructions are reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
 <p>Trapped AArch32 instructions are reported using EC syndrome value <span class="hexnumber">0x03</span>.</p>
 <p>Accessing this field has the following behavior:</p>
 <ul>
 <li>This field is permitted to be <span class="arm-defined-word">RES0</span> if all of the following are true:<ul>
-<li><a href="AArch64-errselr_el1.html">ERRSELR_EL1</a> and all ERX* registers are implemented as <span class="arm-defined-word">UNDEFINED</span> or RAZ/WI.
-</li><li><a href="AArch64-erridr_el1.html">ERRIDR_EL1</a>.NUM is zero.
+<li><a href="/latest_sysreg/AArch64-errselr_el1.html">ERRSELR_EL1</a> and all ERX* registers are implemented as <span class="arm-defined-word">UNDEFINED</span> or RAZ/WI.
+</li><li><a href="/latest_sysreg/AArch64-erridr_el1.html">ERRIDR_EL1</a>.NUM is zero.
 </li></ul>
 
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -203,13 +203,13 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-50_50-1">EnFPM, bit [50] <span class="condition">when FEAT_FPMR is implemented</span>:
-      </h4><div class="field"><p>Enables direct and indirect accesses to <a href="AArch64-fpmr.html">FPMR</a> from EL2, EL1, and EL0.</p>
-<p>When accesses to <a href="AArch64-fpmr.html">FPMR</a> are disabled by this control:</p>
+      </h4><div class="field"><p>Enables direct and indirect accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> from EL2, EL1, and EL0.</p>
+<p>When accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> are disabled by this control:</p>
 <ul>
-<li>Direct accesses to <a href="AArch64-fpmr.html">FPMR</a> from EL2, EL1, and EL0 are trapped to EL3 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
-</li><li>Execution of FP8 data-processing instructions that indirectly access <a href="AArch64-fpmr.html">FPMR</a> is <span class="arm-defined-word">UNDEFINED</span> at EL2, EL1 and EL0.
+<li>Direct accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> from EL2, EL1, and EL0 are trapped to EL3 and reported with EC syndrome value <span class="hexnumber">0x18</span>.
+</li><li>Execution of FP8 data-processing instructions that indirectly access <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> is <span class="arm-defined-word">UNDEFINED</span> at EL2, EL1 and EL0.
 </li></ul><table class="valuetable"><tr><th>EnFPM</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Direct and indirect accesses to <a href="AArch64-fpmr.html">FPMR</a> are disabled at EL2, EL1 and EL0.</p>
+          <p>Direct and indirect accesses to <a href="/latest_sysreg/AArch64-fpmr.html">FPMR</a> are disabled at EL2, EL1 and EL0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>Traps are not taken if there is a higher priority exception generated by the access.</p>
@@ -221,12 +221,12 @@
     </div><h4 id="fieldset_0-49_49-1">MECEn, bit [49] <span class="condition">when FEAT_MEC is implemented</span>:
       </h4><div class="field"><p>Enables access to the following EL2 MECID registers, from EL2:</p>
 <ul>
-<li><a href="AArch64-mecid_p0_el2.html">MECID_P0_EL2</a>.
-</li><li><a href="AArch64-mecid_a0_el2.html">MECID_A0_EL2</a>
-</li><li><a href="AArch64-mecid_p1_el2.html">MECID_P1_EL2</a>
-</li><li><a href="AArch64-mecid_a1_el2.html">MECID_A1_EL2</a>
-</li><li><a href="AArch64-vmecid_p_el2.html">VMECID_P_EL2</a>
-</li><li><a href="AArch64-vmecid_a_el2.html">VMECID_A_EL2</a>
+<li><a href="/latest_sysreg/AArch64-mecid_p0_el2.html">MECID_P0_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-mecid_a0_el2.html">MECID_A0_EL2</a>
+</li><li><a href="/latest_sysreg/AArch64-mecid_p1_el2.html">MECID_P1_EL2</a>
+</li><li><a href="/latest_sysreg/AArch64-mecid_a1_el2.html">MECID_A1_EL2</a>
+</li><li><a href="/latest_sysreg/AArch64-vmecid_p_el2.html">VMECID_P_EL2</a>
+</li><li><a href="/latest_sysreg/AArch64-vmecid_a_el2.html">VMECID_A_EL2</a>
 </li></ul>
 <p>Accesses to these registers are trapped and reported using EC syndrome value <span class="hexnumber">0x18</span>.</p><table class="valuetable"><tr><th>MECEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL2 accesses to any of the specified registers are trapped to EL3. The values of the specified registers are treated as 0 for all purposes other than direct reads or writes to the register from EL3.</p>
@@ -253,16 +253,16 @@
       </h4><div class="field"><p>128-bit System Register trap control. Enables access to 128-bit System Registers using <span class="instruction">MRRS</span>, <span class="instruction">MSRR</span> instructions.</p>
 <p>MRRS and MSRR accesses from EL1 and EL2 using AArch64 to the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x14</span>:</p>
 <ul>
-<li><a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a>.
-</li><li><a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a>.
-</li><li><a href="AArch64-rcwmask_el1.html">RCWMASK_EL1</a>, <a href="AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>.
-</li><li><a href="AArch64-par_el1.html">PAR_EL1</a>.
+<li><a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-rcwmask_el1.html">RCWMASK_EL1</a>, <a href="/latest_sysreg/AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-par_el1.html">PAR_EL1</a>.
 </li></ul>
 <p>MRRS and MSRR accesses from EL2 using AArch64 to the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x14</span>:</p>
 <ul>
-<li><a href="AArch64-ttbr1_el2.html">TTBR1_EL2</a> and accesses using the register name TTBR1_EL12.
-</li><li><a href="AArch64-ttbr0_el2.html">TTBR0_EL2</a> and accesses using the register name TTBR0_EL12.
-</li><li><a href="AArch64-vttbr_el2.html">VTTBR_EL2</a>.
+<li><a href="/latest_sysreg/AArch64-ttbr1_el2.html">TTBR1_EL2</a> and accesses using the register name TTBR1_EL12.
+</li><li><a href="/latest_sysreg/AArch64-ttbr0_el2.html">TTBR0_EL2</a> and accesses using the register name TTBR0_EL12.
+</li><li><a href="/latest_sysreg/AArch64-vttbr_el2.html">VTTBR_EL2</a>.
 </li></ul><table class="valuetable"><tr><th>D128En</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL1 and EL2 accesses to the specified registers are disabled, and trapped to EL3.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -278,13 +278,13 @@
       </h4><div class="field"><p>MAIR2_ELx, AMAIR2_ELx Register access trap control.</p>
 <p>Accesses from EL1 and EL2 using AArch64 to the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x18</span>:</p>
 <ul>
-<li><a href="AArch64-amair2_el1.html">AMAIR2_EL1</a>.
-</li><li><a href="AArch64-mair2_el1.html">MAIR2_EL1</a>.
+<li><a href="/latest_sysreg/AArch64-amair2_el1.html">AMAIR2_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-mair2_el1.html">MAIR2_EL1</a>.
 </li></ul>
 <p>Accesses from EL2 using AArch64 to the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x18</span>:</p>
 <ul>
-<li><a href="AArch64-amair2_el2.html">AMAIR2_EL2</a> and accesses using the register name AMAIR2_EL12.
-</li><li><a href="AArch64-mair2_el2.html">MAIR2_EL2</a> and accesses using the register name MAIR2_EL12.
+<li><a href="/latest_sysreg/AArch64-amair2_el2.html">AMAIR2_EL2</a> and accesses using the register name AMAIR2_EL12.
+</li><li><a href="/latest_sysreg/AArch64-mair2_el2.html">MAIR2_EL2</a> and accesses using the register name MAIR2_EL12.
 </li></ul><table class="valuetable"><tr><th>AIEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL1 and EL2 accesses to the specified registers are disabled, and trapped to EL3. The values in these registers are treated as 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -300,21 +300,21 @@
       </h4><div class="field"><p>Permission Indirection, Overlay Register access trap control. Enables access to Permission Indirection and Overlay registers.</p>
 <p>Accesses from EL0, EL1 and EL2 using AArch64 to the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x18</span>:</p>
 <ul>
-<li><a href="AArch64-por_el0.html">POR_EL0</a>.
+<li><a href="/latest_sysreg/AArch64-por_el0.html">POR_EL0</a>.
 </li></ul>
 <p>Accesses from EL1 and EL2 using AArch64 to the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x18</span>:</p>
 <ul>
-<li><a href="AArch64-pire0_el1.html">PIRE0_EL1</a>.
-</li><li><a href="AArch64-pir_el1.html">PIR_EL1</a>.
-</li><li><a href="AArch64-por_el1.html">POR_EL1</a>.
-</li><li><a href="AArch64-s2por_el1.html">S2POR_EL1</a>.
+<li><a href="/latest_sysreg/AArch64-pire0_el1.html">PIRE0_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-pir_el1.html">PIR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-por_el1.html">POR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-s2por_el1.html">S2POR_EL1</a>.
 </li></ul>
 <p>Accesses from EL2 using AArch64 to the following registers are trapped and reported using EC syndrome value <span class="hexnumber">0x18</span>:</p>
 <ul>
-<li><a href="AArch64-pire0_el2.html">PIRE0_EL2</a> and accesses using the register name PIRE0_EL12.
-</li><li><a href="AArch64-pir_el2.html">PIR_EL2</a> and accesses using the register name PIR_EL12.
-</li><li><a href="AArch64-por_el2.html">POR_EL2</a> and accesses using the register name POR_EL12.
-</li><li><a href="AArch64-s2pir_el2.html">S2PIR_EL2</a>.
+<li><a href="/latest_sysreg/AArch64-pire0_el2.html">PIRE0_EL2</a> and accesses using the register name PIRE0_EL12.
+</li><li><a href="/latest_sysreg/AArch64-pir_el2.html">PIR_EL2</a> and accesses using the register name PIR_EL12.
+</li><li><a href="/latest_sysreg/AArch64-por_el2.html">POR_EL2</a> and accesses using the register name POR_EL12.
+</li><li><a href="/latest_sysreg/AArch64-s2pir_el2.html">S2PIR_EL2</a>.
 </li></ul><table class="valuetable"><tr><th>PIEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>EL0, EL1 and EL2 accesses to the specified registers are disabled, and trapped to EL3.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -327,9 +327,9 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-44_44-1">SCTLR2En, bit [44] <span class="condition">when FEAT_SCTLR2 is implemented</span>:
       </h4><div class="field">
-      <p>SCTLR2_ELx register trap control. Enables access to <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a> and <a href="AArch64-sctlr2_el2.html">SCTLR2_EL2</a> registers.</p>
+      <p>SCTLR2_ELx register trap control. Enables access to <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a> and <a href="/latest_sysreg/AArch64-sctlr2_el2.html">SCTLR2_EL2</a> registers.</p>
     <table class="valuetable"><tr><th>SCTLR2En</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>EL1 and EL2 accesses to <a href="AArch64-sctlr2_el1.html">SCTLR2_EL1</a> and <a href="AArch64-sctlr2_el2.html">SCTLR2_EL2</a> registers are disabled, and trapped to EL3. The values in these registers are treated as 0.</p>
+          <p>EL1 and EL2 accesses to <a href="/latest_sysreg/AArch64-sctlr2_el1.html">SCTLR2_EL1</a> and <a href="/latest_sysreg/AArch64-sctlr2_el2.html">SCTLR2_EL2</a> registers are disabled, and trapped to EL3. The values in these registers are treated as 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>Traps are reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
@@ -340,9 +340,9 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-43_43-1">TCR2En, bit [43] <span class="condition">when FEAT_TCR2 is implemented</span>:
       </h4><div class="field">
-      <p>TCR2_ELx register trap control. Enables access to <a href="AArch64-tcr2_el1.html">TCR2_EL1</a> and <a href="AArch64-tcr2_el2.html">TCR2_EL2</a> registers.</p>
+      <p>TCR2_ELx register trap control. Enables access to <a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a> and <a href="/latest_sysreg/AArch64-tcr2_el2.html">TCR2_EL2</a> registers.</p>
     <table class="valuetable"><tr><th>TCR2En</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>EL1 and EL2 accesses to <a href="AArch64-tcr2_el1.html">TCR2_EL1</a> and <a href="AArch64-tcr2_el2.html">TCR2_EL2</a> registers are disabled, and trapped to EL3. The values in these registers are treated as 0.</p>
+          <p>EL1 and EL2 accesses to <a href="/latest_sysreg/AArch64-tcr2_el1.html">TCR2_EL1</a> and <a href="/latest_sysreg/AArch64-tcr2_el2.html">TCR2_EL2</a> registers are disabled, and trapped to EL3. The values in these registers are treated as 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>Traps are reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
@@ -353,9 +353,9 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-42_42-1">RCWMASKEn, bit [42] <span class="condition">when FEAT_THE is implemented</span>:
       </h4><div class="field">
-      <p>RCW and RCWS Mask register trap control. Enables access to <a href="AArch64-rcwmask_el1.html">RCWMASK_EL1</a>, <a href="AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>.</p>
+      <p>RCW and RCWS Mask register trap control. Enables access to <a href="/latest_sysreg/AArch64-rcwmask_el1.html">RCWMASK_EL1</a>, <a href="/latest_sysreg/AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a>.</p>
     <table class="valuetable"><tr><th>RCWMASKEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>EL1 and EL2 accesses to <a href="AArch64-rcwmask_el1.html">RCWMASK_EL1</a> and <a href="AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a> registers are disabled, and trapped to EL3.</p>
+          <p>EL1 and EL2 accesses to <a href="/latest_sysreg/AArch64-rcwmask_el1.html">RCWMASK_EL1</a> and <a href="/latest_sysreg/AArch64-rcwsmask_el1.html">RCWSMASK_EL1</a> registers are disabled, and trapped to EL3.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>Traps for <span class="instruction">MRS</span>, <span class="instruction">MSR</span> access are reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
@@ -367,7 +367,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-41_41-1">EnTP2, bit [41] <span class="condition">when FEAT_SME is implemented</span>:
       </h4><div class="field">
-      <p>Traps instructions executed at EL2, EL1, and EL0 that access <a href="AArch64-tpidr2_el0.html">TPIDR2_EL0</a> to EL3. The exception is reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
+      <p>Traps instructions executed at EL2, EL1, and EL0 that access <a href="/latest_sysreg/AArch64-tpidr2_el0.html">TPIDR2_EL0</a> to EL3. The exception is reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
     <table class="valuetable"><tr><th>EnTP2</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control causes execution of these instructions at EL2, EL1, and EL0 to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -379,22 +379,22 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-40_40-1">TRNDR, bit [40] <span class="condition">when FEAT_RNG_TRAP is implemented</span>:
       </h4><div class="field">
-      <p>Controls trapping of reads of <a href="AArch64-rndr.html">RNDR</a> and <a href="AArch64-rndrrs.html">RNDRRS</a>. The exception is reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
-    <table class="valuetable"><tr><th>TRNDR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>This control does not cause <a href="AArch64-rndr.html">RNDR</a> and <a href="AArch64-rndrrs.html">RNDRRS</a> to be trapped.</p>
+      <p>Controls trapping of reads of <a href="/latest_sysreg/AArch64-rndr.html">RNDR</a> and <a href="/latest_sysreg/AArch64-rndrrs.html">RNDRRS</a>. The exception is reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
+    <table class="valuetable"><tr><th>TRNDR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>This control does not cause <a href="/latest_sysreg/AArch64-rndr.html">RNDR</a> and <a href="/latest_sysreg/AArch64-rndrrs.html">RNDRRS</a> to be trapped.</p>
 <p>When FEAT_RNG is implemented:</p>
 <ul>
-<li><a href="AArch64-id_aa64isar0_el1.html">ID_AA64ISAR0_EL1</a>.RNDR returns the value <span class="binarynumber">0b0001</span>.
+<li><a href="/latest_sysreg/AArch64-id_aa64isar0_el1.html">ID_AA64ISAR0_EL1</a>.RNDR returns the value <span class="binarynumber">0b0001</span>.
 </li></ul>
 <p>When FEAT_RNG is not implemented:</p>
 <ul>
 <li>
-<p><a href="AArch64-id_aa64isar0_el1.html">ID_AA64ISAR0_EL1</a>.RNDR returns the value <span class="binarynumber">0b0000</span>.</p>
+<p><a href="/latest_sysreg/AArch64-id_aa64isar0_el1.html">ID_AA64ISAR0_EL1</a>.RNDR returns the value <span class="binarynumber">0b0000</span>.</p>
 
 </li><li>
-<p>MRS reads of <a href="AArch64-rndr.html">RNDR</a> and <a href="AArch64-rndrrs.html">RNDRRS</a> are <span class="arm-defined-word">UNDEFINED</span>.</p>
+<p>MRS reads of <a href="/latest_sysreg/AArch64-rndr.html">RNDR</a> and <a href="/latest_sysreg/AArch64-rndrrs.html">RNDRRS</a> are <span class="arm-defined-word">UNDEFINED</span>.</p>
 
-</li></ul></td></tr><tr><td class="bitfield">0b1</td><td><p><a href="AArch64-id_aa64isar0_el1.html">ID_AA64ISAR0_EL1</a>.RNDR returns the value <span class="binarynumber">0b0001</span>.</p>
-<p>Any attempt to read <a href="AArch64-rndr.html">RNDR</a> or <a href="AArch64-rndrrs.html">RNDRRS</a> is trapped to EL3.</p></td></tr></table>
+</li></ul></td></tr><tr><td class="bitfield">0b1</td><td><p><a href="/latest_sysreg/AArch64-id_aa64isar0_el1.html">ID_AA64ISAR0_EL1</a>.RNDR returns the value <span class="binarynumber">0b0001</span>.</p>
+<p>Any attempt to read <a href="/latest_sysreg/AArch64-rndr.html">RNDR</a> or <a href="/latest_sysreg/AArch64-rndrrs.html">RNDRRS</a> is trapped to EL3.</p></td></tr></table>
       <p>When FEAT_RNG is not implemented, Arm recommends that SCR_EL3.TRNDR is initialized before entering Exception levels below EL3 and not subsequently changed.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -406,13 +406,13 @@
       </h4><div class="field"><p>Guarded Control Stack enable. Controls access to the Guarded Control Stack registers from EL2, EL1, and EL0, and controls whether the Guarded Control Stack is enabled.</p>
 <p>The Guarded Control Stack registers trapped by this mechanism are:</p>
 <ul>
-<li><a href="AArch64-gcscre0_el1.html">GCSCRE0_EL1</a>.
-</li><li><a href="AArch64-gcscr_el1.html">GCSCR_EL1</a>.
-</li><li><a href="AArch64-gcscr_el2.html">GCSCR_EL2</a>.
+<li><a href="/latest_sysreg/AArch64-gcscre0_el1.html">GCSCRE0_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-gcscr_el1.html">GCSCR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-gcscr_el2.html">GCSCR_EL2</a>.
 </li><li>GCSCR_EL12.
-</li><li><a href="AArch64-gcspr_el0.html">GCSPR_EL0</a>.
-</li><li><a href="AArch64-gcspr_el1.html">GCSPR_EL1</a>.
-</li><li><a href="AArch64-gcspr_el2.html">GCSPR_EL2</a>.
+</li><li><a href="/latest_sysreg/AArch64-gcspr_el0.html">GCSPR_EL0</a>.
+</li><li><a href="/latest_sysreg/AArch64-gcspr_el1.html">GCSPR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-gcspr_el2.html">GCSPR_EL2</a>.
 </li><li>GCSPR_EL12.
 </li></ul><table class="valuetable"><tr><th>GCSEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Trap read and write accesses to all Guarded Control Stack registers to EL3. All Guarded Control Stack behavior is disabled at EL2, EL1, and EL0.</p>
@@ -426,9 +426,9 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-38_38-1">HXEn, bit [38] <span class="condition">when FEAT_HCX is implemented</span>:
       </h4><div class="field">
-      <p>Enables access to the <a href="AArch64-hcrx_el2.html">HCRX_EL2</a> register at EL2 from EL3.</p>
+      <p>Enables access to the <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a> register at EL2 from EL3.</p>
     <table class="valuetable"><tr><th>HXEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Accesses at EL2 to <a href="AArch64-hcrx_el2.html">HCRX_EL2</a> are trapped to EL3.</p>
+          <p>Accesses at EL2 to <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a> are trapped to EL3.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table>
@@ -440,13 +440,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-37_37-1">ADEn, bit [37] <span class="condition">when FEAT_LS64_ACCDATA is implemented</span>:
       </h4><div class="field">
-      <p>Enables access to the <a href="AArch64-accdata_el1.html">ACCDATA_EL1</a> register at EL1 and EL2.</p>
+      <p>Enables access to the <a href="/latest_sysreg/AArch64-accdata_el1.html">ACCDATA_EL1</a> register at EL1 and EL2.</p>
     <table class="valuetable"><tr><th>ADEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Accesses to <a href="AArch64-accdata_el1.html">ACCDATA_EL1</a> at EL1 and EL2 are trapped to EL3, unless the accesses are trapped to EL2 by the EL2 fine-grained trap.</p>
+          <p>Accesses to <a href="/latest_sysreg/AArch64-accdata_el1.html">ACCDATA_EL1</a> at EL1 and EL2 are trapped to EL3, unless the accesses are trapped to EL2 by the EL2 fine-grained trap.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>This control does not cause accesses to <a href="AArch64-accdata_el1.html">ACCDATA_EL1</a> to be trapped.</p>
+          <p>This control does not cause accesses to <a href="/latest_sysreg/AArch64-accdata_el1.html">ACCDATA_EL1</a> to be trapped.</p>
         </td></tr></table>
-      <p>If the <a href="AArch64-hfgwtr_el2.html">HFGWTR_EL2</a>.nACCDATA_EL1 or <a href="AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>.nACCDATA_EL1 traps are enabled, they take priority over this trap.</p>
+      <p>If the <a href="/latest_sysreg/AArch64-hfgwtr_el2.html">HFGWTR_EL2</a>.nACCDATA_EL1 or <a href="/latest_sysreg/AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>.nACCDATA_EL1 traps are enabled, they take priority over this trap.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-37_37-2"> <span class="condition">Otherwise</span>:
@@ -457,8 +457,8 @@
 <ul>
 <li><span class="instruction">ST64BV0</span>.
 </li><li>If <span class="xref">FEAT_LSC64B</span> is implemented, <span class="instruction">STL64BV0</span>.
-</li></ul><table class="valuetable"><tr><th>EnAS0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>EL0 execution of the specified instructions are trapped to EL3, unless they are trapped to EL1 by <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnAS0, or to EL2 by either <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnAS0 or <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.EnAS0.</p>
-<p>EL1 execution of the specified instructions are trapped to EL3, unless they are trapped to EL2 by <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnAS0.</p>
+</li></ul><table class="valuetable"><tr><th>EnAS0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>EL0 execution of the specified instructions are trapped to EL3, unless they are trapped to EL1 by <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnAS0, or to EL2 by either <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnAS0 or <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.EnAS0.</p>
+<p>EL1 execution of the specified instructions are trapped to EL3, unless they are trapped to EL2 by <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnAS0.</p>
 <p>EL2 execution of the specified instructions are trapped to EL3.</p></td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>A trap of an <span class="instruction">ST64BV0</span> instruction is reported using EC syndrome value <span class="hexnumber">0x0A</span>, with an ISS code of <span class="hexnumber">0x0000001</span>.</p>
@@ -471,9 +471,9 @@
       </h4><div class="field">
       <p>Activity Monitors Virtual Offsets Enable.</p>
     <table class="valuetable"><tr><th>AMVOFFEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Accesses to <a href="AArch64-amevcntvoff0n_el2.html">AMEVCNTVOFF0&lt;n&gt;_EL2</a> and <a href="AArch64-amevcntvoff1n_el2.html">AMEVCNTVOFF1&lt;n&gt;_EL2</a> at EL2 are trapped to EL3. Indirect reads of the virtual offset registers are zero.</p>
+          <p>Accesses to <a href="/latest_sysreg/AArch64-amevcntvoff0n_el2.html">AMEVCNTVOFF0&lt;n&gt;_EL2</a> and <a href="/latest_sysreg/AArch64-amevcntvoff1n_el2.html">AMEVCNTVOFF1&lt;n&gt;_EL2</a> at EL2 are trapped to EL3. Indirect reads of the virtual offset registers are zero.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Accesses to <a href="AArch64-amevcntvoff0n_el2.html">AMEVCNTVOFF0&lt;n&gt;_EL2</a> and <a href="AArch64-amevcntvoff1n_el2.html">AMEVCNTVOFF1&lt;n&gt;_EL2</a> are not affected by this field.</p>
+          <p>Accesses to <a href="/latest_sysreg/AArch64-amevcntvoff0n_el2.html">AMEVCNTVOFF0&lt;n&gt;_EL2</a> and <a href="/latest_sysreg/AArch64-amevcntvoff1n_el2.html">AMEVCNTVOFF1&lt;n&gt;_EL2</a> are not affected by this field.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-35_35-2"> <span class="condition">Otherwise</span>:
@@ -503,11 +503,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-28_28-1">ECVEn, bit [28] <span class="condition">when FEAT_ECV_POFF is implemented</span>:
       </h4><div class="field">
-      <p>ECV Enable. Enables access to the <a href="AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> register.</p>
+      <p>ECV Enable. Enables access to the <a href="/latest_sysreg/AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> register.</p>
     <table class="valuetable"><tr><th>ECVEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>EL2 accesses to <a href="AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> are trapped to EL3, and the value of <a href="AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> is treated as 0 for all purposes other than direct reads or writes to the register from EL3.</p>
+          <p>EL2 accesses to <a href="/latest_sysreg/AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> are trapped to EL3, and the value of <a href="/latest_sysreg/AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> is treated as 0 for all purposes other than direct reads or writes to the register from EL3.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>EL2 accesses to <a href="AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> are not trapped to EL3 by this mechanism.</p>
+          <p>EL2 accesses to <a href="/latest_sysreg/AArch64-cntpoff_el2.html">CNTPOFF_EL2</a> are not trapped to EL3 by this mechanism.</p>
         </td></tr></table>
       <p>When <span class="xref">FEAT_ECV_POFF</span> is not implemented, the Effective value of this field is 0.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -516,11 +516,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-27_27-1">FGTEn, bit [27] <span class="condition">when FEAT_FGT is implemented</span>:
-      </h4><div class="field"><p>Fine-Grained Traps Enable. When EL2 is implemented, enables the traps to EL2 controlled by <a href="AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a>, <a href="AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>, <a href="AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>, <a href="AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>, <a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a>, and <a href="AArch64-hfgwtr_el2.html">HFGWTR_EL2</a>, and controls access to those registers.</p>
-<div class="note"><p>If EL2 is not implemented but EL3 is implemented, <span class="xref">FEAT_FGT</span> implements the <a href="AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC traps.</p></div><table class="valuetable"><tr><th>FGTEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>EL2 accesses to <a href="AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a>, <a href="AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>, <a href="AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>, <a href="AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>, <a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a> and <a href="AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> registers are trapped to EL3, and the traps to EL2 controlled by those registers are disabled.</p>
+      </h4><div class="field"><p>Fine-Grained Traps Enable. When EL2 is implemented, enables the traps to EL2 controlled by <a href="/latest_sysreg/AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>, <a href="/latest_sysreg/AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a>, and <a href="/latest_sysreg/AArch64-hfgwtr_el2.html">HFGWTR_EL2</a>, and controls access to those registers.</p>
+<div class="note"><p>If EL2 is not implemented but EL3 is implemented, <span class="xref">FEAT_FGT</span> implements the <a href="/latest_sysreg/AArch64-mdcr_el3.html">MDCR_EL3</a>.TDCC traps.</p></div><table class="valuetable"><tr><th>FGTEn</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>EL2 accesses to <a href="/latest_sysreg/AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>, <a href="/latest_sysreg/AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a> and <a href="/latest_sysreg/AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> registers are trapped to EL3, and the traps to EL2 controlled by those registers are disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>EL2 accesses to <a href="AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a>, <a href="AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>, <a href="AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>, <a href="AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>, <a href="AArch64-hfgitr_el2.html">HFGITR_EL2</a> and <a href="AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> registers are not trapped to EL3 by this mechanism.</p>
+          <p>EL2 accesses to <a href="/latest_sysreg/AArch64-hafgrtr_el2.html">HAFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgrtr_el2.html">HDFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hdfgwtr_el2.html">HDFGWTR_EL2</a>, <a href="/latest_sysreg/AArch64-hfgrtr_el2.html">HFGRTR_EL2</a>, <a href="/latest_sysreg/AArch64-hfgitr_el2.html">HFGITR_EL2</a> and <a href="/latest_sysreg/AArch64-hfgwtr_el2.html">HFGWTR_EL2</a> registers are not trapped to EL3 by this mechanism.</p>
         </td></tr></table>
       <p>Traps caused by accesses to the fine-grained trap registers are reported using EC syndrome value <span class="hexnumber">0x18</span> and its associated ISS.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -533,11 +533,11 @@
 <ul>
 <li>Overrides enabling of Memory tagging at EL2, EL1 and EL0.
 </li><li>If disabled by this control and not trapped to EL2, accesses to the following registers at EL1 and EL2 are trapped to EL3 and reported using EC syndrome value <span class="hexnumber">0x18</span>:<ul>
-<li><a href="AArch64-gcr_el1.html">GCR_EL1</a>.
-</li><li><a href="AArch64-rgsr_el1.html">RGSR_EL1</a>.
-</li><li><a href="AArch64-tfsre0_el1.html">TFSRE0_EL1</a>.
-</li><li><a href="AArch64-tfsr_el1.html">TFSR_EL1</a>.
-</li><li><a href="AArch64-tfsr_el2.html">TFSR_EL2</a>.
+<li><a href="/latest_sysreg/AArch64-gcr_el1.html">GCR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-rgsr_el1.html">RGSR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-tfsre0_el1.html">TFSRE0_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-tfsr_el1.html">TFSR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-tfsr_el2.html">TFSR_EL2</a>.
 </li><li>Accesses with the register name TFSR_EL12 that are not <span class="arm-defined-word">UNDEFINED</span>.
 </li></ul>
 
@@ -552,9 +552,9 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-25_25-1">EnSCXT, bit [25] <span class="condition">when FEAT_CSV2_2 is implemented or FEAT_CSV2_1p2 is implemented</span>:
       </h4><div class="field">
-      <p>Enables access to the <a href="AArch64-scxtnum_el2.html">SCXTNUM_EL2</a>, <a href="AArch64-scxtnum_el1.html">SCXTNUM_EL1</a>, and <a href="AArch64-scxtnum_el0.html">SCXTNUM_EL0</a> registers.</p>
+      <p>Enables access to the <a href="/latest_sysreg/AArch64-scxtnum_el2.html">SCXTNUM_EL2</a>, <a href="/latest_sysreg/AArch64-scxtnum_el1.html">SCXTNUM_EL1</a>, and <a href="/latest_sysreg/AArch64-scxtnum_el0.html">SCXTNUM_EL0</a> registers.</p>
     <table class="valuetable"><tr><th>EnSCXT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Accesses at EL0, EL1 and EL2 to <a href="AArch64-scxtnum_el0.html">SCXTNUM_EL0</a>, <a href="AArch64-scxtnum_el1.html">SCXTNUM_EL1</a>, or <a href="AArch64-scxtnum_el2.html">SCXTNUM_EL2</a> registers are trapped to EL3 if they are not trapped by a higher priority exception, and the values of these registers are treated as 0.</p>
+          <p>Accesses at EL0, EL1 and EL2 to <a href="/latest_sysreg/AArch64-scxtnum_el0.html">SCXTNUM_EL0</a>, <a href="/latest_sysreg/AArch64-scxtnum_el1.html">SCXTNUM_EL1</a>, or <a href="/latest_sysreg/AArch64-scxtnum_el2.html">SCXTNUM_EL2</a> registers are trapped to EL3 if they are not trapped by a higher priority exception, and the values of these registers are treated as 0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any accesses to be trapped, or register values to be treated as 0.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -567,11 +567,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-23_23-1">TID5, bit [23] <span class="condition">when FEAT_IDTE3 is implemented and FEAT_MTE2 is implemented</span>:
       </h4><div class="field">
-      <p>Trap ID group 5. EL2 and EL1 reads of the group 5 ID register <a href="AArch64-gmid_el1.html">GMID_EL1</a> are trapped to EL3, reported using EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
+      <p>Trap ID group 5. EL2 and EL1 reads of the group 5 ID register <a href="/latest_sysreg/AArch64-gmid_el1.html">GMID_EL1</a> are trapped to EL3, reported using EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception.</p>
     <table class="valuetable"><tr><th>TID5</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The specified EL2 accesses to ID group 5 registers are trapped to EL3. When EL2 is not enabled in the current Security state, or when <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TID5 is 0, EL1 read accesses to the specified registers are trapped to EL3.</p>
+          <p>The specified EL2 accesses to ID group 5 registers are trapped to EL3. When EL2 is not enabled in the current Security state, or when <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TID5 is 0, EL1 read accesses to the specified registers are trapped to EL3.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-23_23-2"> <span class="condition">Otherwise</span>:
@@ -580,26 +580,26 @@
     </div><h4 id="fieldset_0-22_22-1">TID3, bit [22] <span class="condition">when FEAT_IDTE3 is implemented</span>:
       </h4><div class="field"><p>Trap ID group 3. EL2 and EL1 reads of the following group 3 registers are trapped to EL3, reported using EC syndrome value <span class="hexnumber">0x18</span>, unless the instruction generates a higher priority exception:</p>
 <ul>
-<li><a href="AArch64-id_pfr0_el1.html">ID_PFR0_EL1</a>, <a href="AArch64-id_pfr1_el1.html">ID_PFR1_EL1</a>, <a href="AArch64-id_dfr0_el1.html">ID_DFR0_EL1</a>, <a href="AArch64-id_afr0_el1.html">ID_AFR0_EL1</a>, <a href="AArch64-id_mmfr0_el1.html">ID_MMFR0_EL1</a>, <a href="AArch64-id_mmfr1_el1.html">ID_MMFR1_EL1</a>, <a href="AArch64-id_mmfr2_el1.html">ID_MMFR2_EL1</a>, <a href="AArch64-id_mmfr3_el1.html">ID_MMFR3_EL1</a>, <a href="AArch64-id_isar0_el1.html">ID_ISAR0_EL1</a>, <a href="AArch64-id_isar1_el1.html">ID_ISAR1_EL1</a>, <a href="AArch64-id_isar2_el1.html">ID_ISAR2_EL1</a>, <a href="AArch64-id_isar3_el1.html">ID_ISAR3_EL1</a>, <a href="AArch64-id_isar4_el1.html">ID_ISAR4_EL1</a>, <a href="AArch64-id_isar5_el1.html">ID_ISAR5_EL1</a>, <a href="AArch64-mvfr0_el1.html">MVFR0_EL1</a>, <a href="AArch64-mvfr1_el1.html">MVFR1_EL1</a>, and <a href="AArch64-mvfr2_el1.html">MVFR2_EL1</a>.
-</li><li><a href="AArch64-id_aa64pfr0_el1.html">ID_AA64PFR0_EL1</a>, <a href="AArch64-id_aa64pfr1_el1.html">ID_AA64PFR1_EL1</a>, <a href="AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>, <a href="AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>, <a href="AArch64-id_aa64isar0_el1.html">ID_AA64ISAR0_EL1</a>, <a href="AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>, <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>, <a href="AArch64-id_aa64mmfr1_el1.html">ID_AA64MMFR1_EL1</a>, <a href="AArch64-id_aa64afr0_el1.html">ID_AA64AFR0_EL1</a>, and <a href="AArch64-id_aa64afr1_el1.html">ID_AA64AFR1_EL1</a>.
-</li><li><a href="AArch64-id_pfr2_el1.html">ID_PFR2_EL1</a>, and <a href="AArch64-id_mmfr4_el1.html">ID_MMFR4_EL1</a>.
-</li><li><a href="AArch64-id_mmfr5_el1.html">ID_MMFR5_EL1</a>.
-</li><li><a href="AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.
-</li><li><a href="AArch64-id_aa64mmfr4_el1.html">ID_AA64MMFR4_EL1</a>.
-</li><li><a href="AArch64-id_aa64pfr2_el1.html">ID_AA64PFR2_EL1</a>.
-</li><li><a href="AArch64-id_aa64mmfr2_el1.html">ID_AA64MMFR2_EL1</a> and <a href="AArch64-id_isar6_el1.html">ID_ISAR6_EL1</a>.
-</li><li><a href="AArch64-id_dfr1_el1.html">ID_DFR1_EL1</a>.
-</li><li><a href="AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.
-</li><li><a href="AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.
-</li><li><a href="AArch64-id_aa64smfr0_el1.html">ID_AA64SMFR0_EL1</a>.
-</li><li><a href="AArch64-id_aa64fpfr0_el1.html">ID_AA64FPFR0_EL1</a>.
-</li><li><a href="AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.
-</li><li><a href="AArch64-id_aa64isar3_el1.html">ID_AA64ISAR3_EL1</a>.
+<li><a href="/latest_sysreg/AArch64-id_pfr0_el1.html">ID_PFR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_pfr1_el1.html">ID_PFR1_EL1</a>, <a href="/latest_sysreg/AArch64-id_dfr0_el1.html">ID_DFR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_afr0_el1.html">ID_AFR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_mmfr0_el1.html">ID_MMFR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_mmfr1_el1.html">ID_MMFR1_EL1</a>, <a href="/latest_sysreg/AArch64-id_mmfr2_el1.html">ID_MMFR2_EL1</a>, <a href="/latest_sysreg/AArch64-id_mmfr3_el1.html">ID_MMFR3_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar0_el1.html">ID_ISAR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar1_el1.html">ID_ISAR1_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar2_el1.html">ID_ISAR2_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar3_el1.html">ID_ISAR3_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar4_el1.html">ID_ISAR4_EL1</a>, <a href="/latest_sysreg/AArch64-id_isar5_el1.html">ID_ISAR5_EL1</a>, <a href="/latest_sysreg/AArch64-mvfr0_el1.html">MVFR0_EL1</a>, <a href="/latest_sysreg/AArch64-mvfr1_el1.html">MVFR1_EL1</a>, and <a href="/latest_sysreg/AArch64-mvfr2_el1.html">MVFR2_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64pfr0_el1.html">ID_AA64PFR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_aa64pfr1_el1.html">ID_AA64PFR1_EL1</a>, <a href="/latest_sysreg/AArch64-id_aa64dfr0_el1.html">ID_AA64DFR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_aa64dfr1_el1.html">ID_AA64DFR1_EL1</a>, <a href="/latest_sysreg/AArch64-id_aa64isar0_el1.html">ID_AA64ISAR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>, <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>, <a href="/latest_sysreg/AArch64-id_aa64mmfr1_el1.html">ID_AA64MMFR1_EL1</a>, <a href="/latest_sysreg/AArch64-id_aa64afr0_el1.html">ID_AA64AFR0_EL1</a>, and <a href="/latest_sysreg/AArch64-id_aa64afr1_el1.html">ID_AA64AFR1_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_pfr2_el1.html">ID_PFR2_EL1</a>, and <a href="/latest_sysreg/AArch64-id_mmfr4_el1.html">ID_MMFR4_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_mmfr5_el1.html">ID_MMFR5_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64mmfr4_el1.html">ID_AA64MMFR4_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64pfr2_el1.html">ID_AA64PFR2_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64mmfr2_el1.html">ID_AA64MMFR2_EL1</a> and <a href="/latest_sysreg/AArch64-id_isar6_el1.html">ID_ISAR6_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_dfr1_el1.html">ID_DFR1_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64dfr2_el1.html">ID_AA64DFR2_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64zfr0_el1.html">ID_AA64ZFR0_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64smfr0_el1.html">ID_AA64SMFR0_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64fpfr0_el1.html">ID_AA64FPFR0_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64isar2_el1.html">ID_AA64ISAR2_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64isar3_el1.html">ID_AA64ISAR3_EL1</a>.
 </li><li>This field traps all MRS accesses to registers in the following range that are not already mentioned in this field description: op0 == 3, op1 == 0, CRn == 0, CRm == {2-7}, op2 == {0-7}.
 </li></ul><table class="valuetable"><tr><th>TID3</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The specified EL2 read accesses to ID group 3 registers are trapped to EL3. When EL2 is not enabled in the current Security state, or when <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TID3 is 0, EL1 read accesses to the specified registers are trapped to EL3.</p>
+          <p>The specified EL2 read accesses to ID group 3 registers are trapped to EL3. When EL2 is not enabled in the current Security state, or when <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TID3 is 0, EL1 read accesses to the specified registers are trapped to EL3.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-22_22-2"> <span class="condition">Otherwise</span>:
@@ -607,13 +607,13 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-21_21-1">FIEN, bit [21] <span class="condition">when FEAT_RASv1p1 is implemented</span>:
       </h4><div class="field">
-      <p>Fault Injection enable. Trap accesses to the registers <a href="AArch64-erxpfgcdn_el1.html">ERXPFGCDN_EL1</a>, <a href="AArch64-erxpfgctl_el1.html">ERXPFGCTL_EL1</a>, and <a href="AArch64-erxpfgf_el1.html">ERXPFGF_EL1</a> from EL1 and EL2 to EL3, reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
+      <p>Fault Injection enable. Trap accesses to the registers <a href="/latest_sysreg/AArch64-erxpfgcdn_el1.html">ERXPFGCDN_EL1</a>, <a href="/latest_sysreg/AArch64-erxpfgctl_el1.html">ERXPFGCTL_EL1</a>, and <a href="/latest_sysreg/AArch64-erxpfgf_el1.html">ERXPFGF_EL1</a> from EL1 and EL2 to EL3, reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
     <table class="valuetable"><tr><th>FIEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Accesses to the specified registers from EL1 and EL2 generate a Trap exception to EL3.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>If EL3 is not implemented, the Effective value of SCR_EL3.FIEN is 1.</p>
-<p>If <a href="AArch64-erridr_el1.html">ERRIDR_EL1</a>.NUM is zero, meaning no error records are implemented, or no error record accessible using System registers is owned by a node that implements the RAS Common Fault Injection Model Extension, then this bit might be <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If <a href="/latest_sysreg/AArch64-erridr_el1.html">ERRIDR_EL1</a>.NUM is zero, meaning no error records are implemented, or no error record accessible using System registers is owned by a node that implements the RAS Common Fault Injection Model Extension, then this bit might be <span class="arm-defined-word">RES0</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-21_21-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -639,9 +639,9 @@
       </h4><div class="field">
       <p>External aborts to SError exception vector.</p>
     <table class="valuetable"><tr><th>EASE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Synchronous External abort exceptions taken to EL3 are taken to the appropriate synchronous exception vector offset from <a href="AArch64-vbar_el3.html">VBAR_EL3</a>.</p>
+          <p>Synchronous External abort exceptions taken to EL3 are taken to the appropriate synchronous exception vector offset from <a href="/latest_sysreg/AArch64-vbar_el3.html">VBAR_EL3</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Synchronous External abort exceptions taken to EL3 are taken to the appropriate SError exception vector offset from <a href="AArch64-vbar_el3.html">VBAR_EL3</a>.</p>
+          <p>Synchronous External abort exceptions taken to EL3 are taken to the appropriate SError exception vector offset from <a href="/latest_sysreg/AArch64-vbar_el3.html">VBAR_EL3</a>.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
@@ -659,16 +659,16 @@
 <ul>
 <li>When SCR_EL3.NS == 0, the SCR_EL3.RW bit is treated as 1 for all purposes other than reading or writing the register.
 </li><li>If Secure EL1 is using AArch32, then any of the following operations, executed in Secure EL1, is trapped to Secure EL2, using EC syndrome value <span class="hexnumber">0x03</span> :<ul>
-<li>A read or write of the <a href="AArch32-scr.html">SCR</a>.
-</li><li>A read or write of the <a href="AArch32-nsacr.html">NSACR</a>.
-</li><li>A read or write of the <a href="AArch32-mvbar.html">MVBAR</a>.
-</li><li>A read or write of the <a href="AArch32-sdcr.html">SDCR</a>.
+<li>A read or write of the <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.
+</li><li>A read or write of the <a href="/latest_sysreg/AArch32-nsacr.html">NSACR</a>.
+</li><li>A read or write of the <a href="/latest_sysreg/AArch32-mvbar.html">MVBAR</a>.
+</li><li>A read or write of the <a href="/latest_sysreg/AArch32-sdcr.html">SDCR</a>.
 </li><li>Execution of an ATS12NSO** instruction.
 </li></ul>
 
 </li><li>If Secure EL1 is using AArch32, then any of the following operations, executed in Secure EL1, is trapped to Secure EL2 using EC syndrome value <span class="hexnumber">0x00</span> :<ul>
 <li>Execution of an SRS instruction that uses R13_mon.
-</li><li>Execution of an MRS (Banked register) or MSR (Banked register) instruction that would access <a href="AArch32-spsr_mon.html">SPSR_mon</a>, R13_mon, or R14_mon.
+</li><li>Execution of an MRS (Banked register) or MSR (Banked register) instruction that would access <a href="/latest_sysreg/AArch32-spsr_mon.html">SPSR_mon</a>, R13_mon, or R14_mon.
 </li></ul>
 
 </li></ul>
@@ -683,21 +683,21 @@
 <ul>
 <li>PACGA.
 </li><li>AUTDA, AUTDB, AUTDZA, AUTDZB, AUTIA, AUTIA1716, AUTIASP, AUTIAZ, AUTIB, AUTIB1716, AUTIBSP, AUTIBZ, AUTIZA, AUTIZB, PACDA, PACDB, PACDZA, PACDZB, PACIA, PACIA1716, PACIASP, PACIAZ, PACIB, PACIB1716, PACIBSP, PACIBZ, PACIZA, PACIZB, RETAA, RETAB, BRAA, BRAB, BLRAA, BLRAB, BRAAZ, BRABZ, BLRAAZ, BLRABZ, ERETAA, ERETAB, LDRAA and LDRAB, when any of the following are true:<ul>
-<li>In EL0, when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and the associated <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.En&lt;N&gt;&lt;M&gt; == 1.
-</li><li>In EL0, when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, and the associated <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.En&lt;N&gt;&lt;M&gt; == 1.
-</li><li>In EL1, when the associated <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.En&lt;N&gt;&lt;M&gt; == 1.
-</li><li>In EL2, when the associated <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.En&lt;N&gt;&lt;M&gt; == 1.
+<li>In EL0, when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and the associated <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.En&lt;N&gt;&lt;M&gt; == 1.
+</li><li>In EL0, when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, and the associated <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.En&lt;N&gt;&lt;M&gt; == 1.
+</li><li>In EL1, when the associated <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.En&lt;N&gt;&lt;M&gt; == 1.
+</li><li>In EL2, when the associated <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.En&lt;N&gt;&lt;M&gt; == 1.
 </li></ul>
 
 </li><li>When <span class="xref">FEAT_PAuth_LR</span> is implemented, AUTIASPPC, AUTIASPPCR, AUTIA171615, AUTIBSPPC, AUTIBSPPCR, AUTIB171615, PACIASPPC, PACNBIASPPC, PACIA171615, PACIBSPPC, PACNBIBSPPC, PACIB171615, RETAASPPC, RETAASPPCR, RETABSPPC, RETABSPPCR, when any of the following are true:<ul>
-<li>In EL0, when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and the associated <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.En&lt;N&gt;&lt;M&gt; == 1.
-</li><li>In EL0, when the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, and the associated <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.En&lt;N&gt;&lt;M&gt; == 1.
-</li><li>In EL1, when the associated <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.En&lt;N&gt;&lt;M&gt; == 1.
-</li><li>In EL2, when the associated <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.En&lt;N&gt;&lt;M&gt; == 1.
+<li>In EL0, when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is not {1, 1}, and the associated <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.En&lt;N&gt;&lt;M&gt; == 1.
+</li><li>In EL0, when the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, and the associated <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.En&lt;N&gt;&lt;M&gt; == 1.
+</li><li>In EL1, when the associated <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.En&lt;N&gt;&lt;M&gt; == 1.
+</li><li>In EL2, when the associated <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.En&lt;N&gt;&lt;M&gt; == 1.
 </li></ul>
 
 </li></ul><table class="valuetable"><tr><th>API</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The specified instructions are trapped to EL3, when the instructions are enabled, unless they are trapped to EL2 as a result of the higher priority <a href="AArch64-hcr_el2.html">HCR_EL2</a>.API trap.</p>
+          <p>The specified instructions are trapped to EL3, when the instructions are enabled, unless they are trapped to EL2 as a result of the higher priority <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.API trap.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>Traps are reported using EC syndrome value <span class="hexnumber">0x09</span>.</p>
@@ -710,11 +710,11 @@
     </div><h4 id="fieldset_0-16_16-1">APK, bit [16] <span class="condition">when FEAT_PAuth is implemented</span>:
       </h4><div class="field"><p>Trap registers holding "key" values for Pointer Authentication. Traps accesses to the following registers, using EC syndrome value <span class="hexnumber">0x18</span>, from EL1 or EL2 to EL3 unless they are trapped to EL2 as a result of the HCR_EL2.APK bit or other traps:</p>
 <ul>
-<li><a href="AArch64-apiakeylo_el1.html">APIAKeyLo_EL1</a>, <a href="AArch64-apiakeyhi_el1.html">APIAKeyHi_EL1</a>, <a href="AArch64-apibkeylo_el1.html">APIBKeyLo_EL1</a>, <a href="AArch64-apibkeyhi_el1.html">APIBKeyHi_EL1</a>.
-</li><li><a href="AArch64-apdakeylo_el1.html">APDAKeyLo_EL1</a>, <a href="AArch64-apdakeyhi_el1.html">APDAKeyHi_EL1</a>, <a href="AArch64-apdbkeylo_el1.html">APDBKeyLo_EL1</a>, <a href="AArch64-apdbkeyhi_el1.html">APDBKeyHi_EL1</a>.
-</li><li><a href="AArch64-apgakeylo_el1.html">APGAKeyLo_EL1</a>, and <a href="AArch64-apgakeyhi_el1.html">APGAKeyHi_EL1</a>.
+<li><a href="/latest_sysreg/AArch64-apiakeylo_el1.html">APIAKeyLo_EL1</a>, <a href="/latest_sysreg/AArch64-apiakeyhi_el1.html">APIAKeyHi_EL1</a>, <a href="/latest_sysreg/AArch64-apibkeylo_el1.html">APIBKeyLo_EL1</a>, <a href="/latest_sysreg/AArch64-apibkeyhi_el1.html">APIBKeyHi_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-apdakeylo_el1.html">APDAKeyLo_EL1</a>, <a href="/latest_sysreg/AArch64-apdakeyhi_el1.html">APDAKeyHi_EL1</a>, <a href="/latest_sysreg/AArch64-apdbkeylo_el1.html">APDBKeyLo_EL1</a>, <a href="/latest_sysreg/AArch64-apdbkeyhi_el1.html">APDBKeyHi_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch64-apgakeylo_el1.html">APGAKeyLo_EL1</a>, and <a href="/latest_sysreg/AArch64-apgakeyhi_el1.html">APGAKeyHi_EL1</a>.
 </li></ul><table class="valuetable"><tr><th>APK</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Access to the registers holding "key" values for pointer authentication from EL1 or EL2 are trapped to EL3 unless they are trapped to EL2 as a result of the <a href="AArch64-hcr_el2.html">HCR_EL2</a>.APK bit or other traps.</p>
+          <p>Access to the registers holding "key" values for pointer authentication from EL1 or EL2 are trapped to EL3 unless they are trapped to EL2 as a result of the <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.APK bit or other traps.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table><p>For more information, see <span class="xref">'PAC generation and verification keys'</span>.</p>
@@ -732,16 +732,16 @@
           <p>Accesses of the specified Error Record registers at EL2 and EL1 are trapped to EL3, unless the instruction generates a higher priority exception.</p>
         </td></tr></table><p>In AArch64 state, the instructions affected by this control are:</p>
 <ul>
-<li><span class="instruction">MRS</span> and <span class="instruction">MSR</span> accesses to <a href="AArch64-errselr_el1.html">ERRSELR_EL1</a>, <a href="AArch64-erxaddr_el1.html">ERXADDR_EL1</a>, <a href="AArch64-erxctlr_el1.html">ERXCTLR_EL1</a>, <a href="AArch64-erxmisc0_el1.html">ERXMISC0_EL1</a>, <a href="AArch64-erxmisc1_el1.html">ERXMISC1_EL1</a>, and <a href="AArch64-erxstatus_el1.html">ERXSTATUS_EL1</a>.
-</li><li><span class="instruction">MRS</span> accesses to <a href="AArch64-erridr_el1.html">ERRIDR_EL1</a> and <a href="AArch64-erxfr_el1.html">ERXFR_EL1</a>.
-</li><li>If <span class="xref">FEAT_RASv1p1</span> is implemented, <span class="instruction">MRS</span> and <span class="instruction">MSR</span> accesses to <a href="AArch64-erxmisc2_el1.html">ERXMISC2_EL1</a> and <a href="AArch64-erxmisc3_el1.html">ERXMISC3_EL1</a>.
-</li><li>If <span class="xref">FEAT_RASv2</span> is implemented, <span class="instruction">MRS</span> accesses to <a href="AArch64-erxgsr_el1.html">ERXGSR_EL1</a>.
+<li><span class="instruction">MRS</span> and <span class="instruction">MSR</span> accesses to <a href="/latest_sysreg/AArch64-errselr_el1.html">ERRSELR_EL1</a>, <a href="/latest_sysreg/AArch64-erxaddr_el1.html">ERXADDR_EL1</a>, <a href="/latest_sysreg/AArch64-erxctlr_el1.html">ERXCTLR_EL1</a>, <a href="/latest_sysreg/AArch64-erxmisc0_el1.html">ERXMISC0_EL1</a>, <a href="/latest_sysreg/AArch64-erxmisc1_el1.html">ERXMISC1_EL1</a>, and <a href="/latest_sysreg/AArch64-erxstatus_el1.html">ERXSTATUS_EL1</a>.
+</li><li><span class="instruction">MRS</span> accesses to <a href="/latest_sysreg/AArch64-erridr_el1.html">ERRIDR_EL1</a> and <a href="/latest_sysreg/AArch64-erxfr_el1.html">ERXFR_EL1</a>.
+</li><li>If <span class="xref">FEAT_RASv1p1</span> is implemented, <span class="instruction">MRS</span> and <span class="instruction">MSR</span> accesses to <a href="/latest_sysreg/AArch64-erxmisc2_el1.html">ERXMISC2_EL1</a> and <a href="/latest_sysreg/AArch64-erxmisc3_el1.html">ERXMISC3_EL1</a>.
+</li><li>If <span class="xref">FEAT_RASv2</span> is implemented, <span class="instruction">MRS</span> accesses to <a href="/latest_sysreg/AArch64-erxgsr_el1.html">ERXGSR_EL1</a>.
 </li></ul>
 <p>In AArch32 state, the instructions affected by this control are:</p>
 <ul>
-<li><span class="instruction">MRC</span> and <span class="instruction">MCR</span> accesses to <a href="AArch32-errselr.html">ERRSELR</a>, <a href="AArch32-erxaddr.html">ERXADDR</a>, <a href="AArch32-erxaddr2.html">ERXADDR2</a>, <a href="AArch32-erxctlr.html">ERXCTLR</a>, <a href="AArch32-erxctlr2.html">ERXCTLR2</a>, <a href="AArch32-erxmisc0.html">ERXMISC0</a>, <a href="AArch32-erxmisc1.html">ERXMISC1</a>, <a href="AArch32-erxmisc2.html">ERXMISC2</a>, <a href="AArch32-erxmisc3.html">ERXMISC3</a>, and <a href="AArch32-erxstatus.html">ERXSTATUS</a>.
-</li><li><span class="instruction">MRC</span> accesses to <a href="AArch32-erridr.html">ERRIDR</a>, <a href="AArch32-erxfr.html">ERXFR</a>, and <a href="AArch32-erxfr2.html">ERXFR2</a>.
-</li><li>If <span class="xref">FEAT_RASv1p1</span> is implemented, <span class="instruction">MRC</span> and <span class="instruction">MCR</span> accesses to <a href="AArch32-erxmisc4.html">ERXMISC4</a>, <a href="AArch32-erxmisc5.html">ERXMISC5</a>, <a href="AArch32-erxmisc6.html">ERXMISC6</a>, and <a href="AArch32-erxmisc7.html">ERXMISC7</a>.
+<li><span class="instruction">MRC</span> and <span class="instruction">MCR</span> accesses to <a href="/latest_sysreg/AArch32-errselr.html">ERRSELR</a>, <a href="/latest_sysreg/AArch32-erxaddr.html">ERXADDR</a>, <a href="/latest_sysreg/AArch32-erxaddr2.html">ERXADDR2</a>, <a href="/latest_sysreg/AArch32-erxctlr.html">ERXCTLR</a>, <a href="/latest_sysreg/AArch32-erxctlr2.html">ERXCTLR2</a>, <a href="/latest_sysreg/AArch32-erxmisc0.html">ERXMISC0</a>, <a href="/latest_sysreg/AArch32-erxmisc1.html">ERXMISC1</a>, <a href="/latest_sysreg/AArch32-erxmisc2.html">ERXMISC2</a>, <a href="/latest_sysreg/AArch32-erxmisc3.html">ERXMISC3</a>, and <a href="/latest_sysreg/AArch32-erxstatus.html">ERXSTATUS</a>.
+</li><li><span class="instruction">MRC</span> accesses to <a href="/latest_sysreg/AArch32-erridr.html">ERRIDR</a>, <a href="/latest_sysreg/AArch32-erxfr.html">ERXFR</a>, and <a href="/latest_sysreg/AArch32-erxfr2.html">ERXFR2</a>.
+</li><li>If <span class="xref">FEAT_RASv1p1</span> is implemented, <span class="instruction">MRC</span> and <span class="instruction">MCR</span> accesses to <a href="/latest_sysreg/AArch32-erxmisc4.html">ERXMISC4</a>, <a href="/latest_sysreg/AArch32-erxmisc5.html">ERXMISC5</a>, <a href="/latest_sysreg/AArch32-erxmisc6.html">ERXMISC6</a>, and <a href="/latest_sysreg/AArch32-erxmisc7.html">ERXMISC7</a>.
 </li></ul>
 <p>Unless the instruction generates a higher priority exception, trapped instructions generate an exception to EL3.</p>
 <p>Trapped AArch64 instructions are reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
@@ -749,8 +749,8 @@
 <p>Accessing this field has the following behavior:</p>
 <ul>
 <li>This field is permitted to be <span class="arm-defined-word">RES0</span> if all of the following are true:<ul>
-<li><a href="AArch64-errselr_el1.html">ERRSELR_EL1</a> and all ERX* registers are implemented as <span class="arm-defined-word">UNDEFINED</span> or RAZ/WI.
-</li><li><a href="AArch64-erridr_el1.html">ERRIDR_EL1</a>.NUM is zero.
+<li><a href="/latest_sysreg/AArch64-errselr_el1.html">ERRSELR_EL1</a> and all ERX* registers are implemented as <span class="arm-defined-word">UNDEFINED</span> or RAZ/WI.
+</li><li><a href="/latest_sysreg/AArch64-erridr_el1.html">ERRIDR_EL1</a>.NUM is zero.
 </li></ul>
 
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -760,11 +760,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-14_14-1">TLOR, bit [14] <span class="condition">when FEAT_LOR is implemented</span>:
       </h4><div class="field">
-      <p>Trap LOR registers. Traps Non-secure and Realm accesses to the <a href="AArch64-lorsa_el1.html">LORSA_EL1</a>, <a href="AArch64-lorea_el1.html">LOREA_EL1</a>, <a href="AArch64-lorn_el1.html">LORN_EL1</a>, <a href="AArch64-lorc_el1.html">LORC_EL1</a>, and <a href="AArch64-lorid_el1.html">LORID_EL1</a> registers from EL1 and EL2 to EL3, unless the access has been trapped to EL2.</p>
+      <p>Trap LOR registers. Traps Non-secure and Realm accesses to the <a href="/latest_sysreg/AArch64-lorsa_el1.html">LORSA_EL1</a>, <a href="/latest_sysreg/AArch64-lorea_el1.html">LOREA_EL1</a>, <a href="/latest_sysreg/AArch64-lorn_el1.html">LORN_EL1</a>, <a href="/latest_sysreg/AArch64-lorc_el1.html">LORC_EL1</a>, and <a href="/latest_sysreg/AArch64-lorid_el1.html">LORID_EL1</a> registers from EL1 and EL2 to EL3, unless the access has been trapped to EL2.</p>
     <table class="valuetable"><tr><th>TLOR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Non-secure and Realm EL1 and EL2 accesses to the LOR registers that are not <span class="arm-defined-word">UNDEFINED</span> are trapped to EL3, unless it is trapped by <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TLOR.</p>
+          <p>Non-secure and Realm EL1 and EL2 accesses to the LOR registers that are not <span class="arm-defined-word">UNDEFINED</span> are trapped to EL3, unless it is trapped by <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TLOR.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-14_14-2"> <span class="condition">Otherwise</span>:
@@ -775,7 +775,7 @@
 <p>When <span class="xref">FEAT_WFxT</span> is implemented, this trap also applies to the WFET instruction.</p><table class="valuetable"><tr><th>TWE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Any attempt to execute a WFE instruction at any Exception level lower than EL3 is trapped to EL3, if the instruction would otherwise have caused the PE to enter a low-power state and it is not trapped by <a href="AArch32-sctlr.html">SCTLR</a>.nTWE, <a href="AArch32-hcr.html">HCR</a>.TWE, <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.nTWE, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.nTWE, or <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TWE.</p>
+          <p>Any attempt to execute a WFE instruction at any Exception level lower than EL3 is trapped to EL3, if the instruction would otherwise have caused the PE to enter a low-power state and it is not trapped by <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.nTWE, <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TWE, <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.nTWE, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.nTWE, or <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TWE.</p>
         </td></tr></table><p>In AArch32 state, the attempted execution of a conditional WFE instruction is only trapped if the instruction passes its condition code check.</p>
 <div class="note"><p>Since a WFE or WFI can complete at any time, even without a Wakeup event, the traps on WFE of WFI are not guaranteed to be taken, even if the WFE or WFI is executed when there is no Wakeup event. The only guarantee is that if the instruction does not complete in finite time in the absence of a Wakeup event, the trap will be taken.</p></div><p>For more information about when WFE instructions can cause the PE to enter a low-power state, see <span class="xref">'Wait for Event mechanism and Send event'</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -784,7 +784,7 @@
 <p>When <span class="xref">FEAT_WFxT</span> is implemented, this trap also applies to the WFIT instruction.</p><table class="valuetable"><tr><th>TWI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Any attempt to execute a WFI instruction at any Exception level lower than EL3 is trapped to EL3, if the instruction would otherwise have caused the PE to enter a low-power state and it is not trapped by <a href="AArch32-sctlr.html">SCTLR</a>.nTWI, <a href="AArch32-hcr.html">HCR</a>.TWI, <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.nTWI, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>.nTWI, or <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TWI.</p>
+          <p>Any attempt to execute a WFI instruction at any Exception level lower than EL3 is trapped to EL3, if the instruction would otherwise have caused the PE to enter a low-power state and it is not trapped by <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.nTWI, <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TWI, <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.nTWI, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>.nTWI, or <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TWI.</p>
         </td></tr></table><p>In AArch32 state, the attempted execution of a conditional WFI instruction is only trapped if the instruction passes its condition code check.</p>
 <div class="note"><p>Since a WFE or WFI can complete at any time, even without a Wakeup event, the traps on WFE of WFI are not guaranteed to be taken, even if the WFE or WFI is executed when there is no Wakeup event. The only guarantee is that if the instruction does not complete in finite time in the absence of a Wakeup event, the trap will be taken.</p></div><p>For more information about when WFI instructions can cause the PE to enter a low-power state, see <span class="xref">'Wait for Interrupt'</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -792,7 +792,7 @@
       </h4><div class="field">
       <p>Traps Secure EL1 accesses to the Counter-timer Physical Secure timer registers to EL3, from AArch64 state only, reported using EC syndrome value <span class="hexnumber">0x18</span>.</p>
     <table class="valuetable"><tr><th>ST</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Secure EL1 using AArch64 accesses to the <a href="AArch64-cntps_tval_el1.html">CNTPS_TVAL_EL1</a>, <a href="AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>, and <a href="AArch64-cntps_cval_el1.html">CNTPS_CVAL_EL1</a> are trapped to EL3 when Secure EL2 is disabled. If Secure EL2 is enabled, the behavior is as if the value of this field was 1.</p>
+          <p>Secure EL1 using AArch64 accesses to the <a href="/latest_sysreg/AArch64-cntps_tval_el1.html">CNTPS_TVAL_EL1</a>, <a href="/latest_sysreg/AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>, and <a href="/latest_sysreg/AArch64-cntps_cval_el1.html">CNTPS_CVAL_EL1</a> are trapped to EL3 when Secure EL2 is disabled. If Secure EL2 is enabled, the behavior is as if the value of this field was 1.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This control does not cause any instructions to be trapped.</p>
         </td></tr></table>
@@ -861,7 +861,7 @@
         </td></tr></table>
       <div class="note">
         <p><span class="instruction">SMC</span> instructions are always <span class="arm-defined-word">UNDEFINED</span> at EL0. Any resulting exception is taken from the current Exception level to the current Exception level.</p>
-        <p>If <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TSC or <a href="AArch32-hcr.html">HCR</a>.TSC traps attempted EL1 execution of <span class="instruction">SMC</span> instructions to EL2, that trap has priority over this disable.</p>
+        <p>If <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TSC or <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TSC traps attempted EL1 execution of <span class="instruction">SMC</span> instructions to EL2, that trap has priority over this disable.</p>
       </div>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

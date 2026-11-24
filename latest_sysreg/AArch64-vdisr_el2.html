@@ -9,10 +9,10 @@
 
       
         <ul>
-<li><a href="AArch64-disr_el1.html">DISR_EL1</a>.
-</li><li><a href="AArch32-disr.html">DISR</a>.
+<li><a href="/latest_sysreg/AArch64-disr_el1.html">DISR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch32-disr.html">DISR</a>.
 </li></ul>
-      </div><h3>Configuration</h3><p>AArch64 System register VDISR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-vdisr.html">VDISR[31:0]</a>.</p><p>This register is present only when FEAT_RAS is implemented. Otherwise, direct accesses to VDISR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register VDISR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-vdisr.html">VDISR[31:0]</a>.</p><p>This register is present only when FEAT_RAS is implemented. Otherwise, direct accesses to VDISR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
 
       
@@ -32,12 +32,12 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-24_24">IDS, bit [24]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch64-vsesr_el2.html">VSESR_EL2</a>.IDS.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch64-vsesr_el2.html">VSESR_EL2</a>.IDS.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-23_0">ISS, bits [23:0]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch64-vsesr_el2.html">VSESR_EL2</a>.ISS.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch64-vsesr_el2.html">VSESR_EL2</a>.ISS.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h3>When EL1 is using AArch32 and VDISR_EL2.LPAE == '0':</h3><table class="regdiagram" id="fieldset_1"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_1-63_32">RES0</a></td></tr><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_1-31_31">A</a></td><td class="lr" colspan="15"><a href="#fieldset_1-30_16">RES0</a></td><td class="lr" colspan="2"><a href="#fieldset_1-15_14">AET</a></td><td class="lr" colspan="1"><a href="#fieldset_1-13_13">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_1-12_12">ExT</a></td><td class="lr" colspan="1"><a href="#fieldset_1-11_11">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_1-10_10">FS[4]</a></td><td class="lr" colspan="1"><a href="#fieldset_1-9_9">LPAE</a></td><td class="lr" colspan="5"><a href="#fieldset_1-8_4">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_1-10_10">FS[3:0]</a></td></tr></tbody></table><h4 id="fieldset_1-63_32">Bits [63:32]:
@@ -53,7 +53,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-15_14">AET, bits [15:14]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch64-vsesr_el2.html">VSESR_EL2</a>.AET.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch64-vsesr_el2.html">VSESR_EL2</a>.AET.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-13_13">Bit [13]:
@@ -61,7 +61,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-12_12">ExT, bit [12]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch64-vsesr_el2.html">VSESR_EL2</a>.ExT.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch64-vsesr_el2.html">VSESR_EL2</a>.ExT.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-11_11">Bit [11]:
@@ -81,7 +81,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-9_9">LPAE, bit [9]:
       </h4><div class="field"><p>Format.</p>
-<p>Set to <a href="AArch32-ttbcr.html">TTBCR</a>.EAE when an <span class="instruction">ESB</span> instruction defers a virtual SError exception.</p><table class="valuetable"><tr><th>LPAE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p>Set to <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE when an <span class="instruction">ESB</span> instruction defers a virtual SError exception.</p><table class="valuetable"><tr><th>LPAE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Using the Short-descriptor translation table format.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -101,7 +101,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_2-15_14">AET, bits [15:14]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch64-vsesr_el2.html">VSESR_EL2</a>.AET.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch64-vsesr_el2.html">VSESR_EL2</a>.AET.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_2-13_13">Bit [13]:
@@ -109,7 +109,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_2-12_12">ExT, bit [12]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch64-vsesr_el2.html">VSESR_EL2</a>.ExT.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch64-vsesr_el2.html">VSESR_EL2</a>.ExT.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_2-11_10">Bits [11:10]:
@@ -117,7 +117,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_2-9_9">LPAE, bit [9]:
       </h4><div class="field"><p>Format.</p>
-<p>Set to <a href="AArch32-ttbcr.html">TTBCR</a>.EAE when an <span class="instruction">ESB</span> instruction defers a virtual SError exception.</p><table class="valuetable"><tr><th>LPAE</th><th>Meaning</th></tr><tr><td class="bitfield">0b1</td><td>
+<p>Set to <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE when an <span class="instruction">ESB</span> instruction defers a virtual SError exception.</p><table class="valuetable"><tr><th>LPAE</th><th>Meaning</th></tr><tr><td class="bitfield">0b1</td><td>
           <p>Using the Long-descriptor translation table format.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -138,8 +138,8 @@
 
       
         <ul>
-<li><a href="AArch64-disr_el1.html">DISR_EL1</a>.
-</li><li><a href="AArch32-disr.html">DISR</a>.
+<li><a href="/latest_sysreg/AArch64-disr_el1.html">DISR_EL1</a>.
+</li><li><a href="/latest_sysreg/AArch32-disr.html">DISR</a>.
 </li></ul>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, VDISR_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b1100, CRm = 0b0001, op2 = 0b001)

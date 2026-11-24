@@ -12,16 +12,16 @@
       </h4><div class="field"><p>The TimerValue view of the secure physical timer.</p>
 <p>On a read of this register:</p>
 <ul>
-<li>If <a href="AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ENABLE is 0, the value returned is <span class="arm-defined-word">UNKNOWN</span>.
-</li><li>If <a href="AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ENABLE is 1, the value returned is (<a href="AArch64-cntps_cval_el1.html">CNTPS_CVAL_EL1</a> - <a href="AArch64-cntpct_el0.html">CNTPCT_EL0</a>).
+<li>If <a href="/latest_sysreg/AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ENABLE is 0, the value returned is <span class="arm-defined-word">UNKNOWN</span>.
+</li><li>If <a href="/latest_sysreg/AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ENABLE is 1, the value returned is (<a href="/latest_sysreg/AArch64-cntps_cval_el1.html">CNTPS_CVAL_EL1</a> - <a href="/latest_sysreg/AArch64-cntpct_el0.html">CNTPCT_EL0</a>).
 </li></ul>
-<p>On a write of this register, <a href="AArch64-cntps_cval_el1.html">CNTPS_CVAL_EL1</a> is set to (<a href="AArch64-cntpct_el0.html">CNTPCT_EL0</a> + TimerValue), where TimerValue is treated as a signed 32-bit integer.</p>
-<p>When <a href="AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ENABLE is 1, the timer condition is met when (<a href="AArch64-cntpct_el0.html">CNTPCT_EL0</a> - <a href="AArch64-cntps_cval_el1.html">CNTPS_CVAL_EL1</a>) is greater than or equal to zero. This means that TimerValue acts like a 32-bit downcounter timer. When the timer condition is met:</p>
+<p>On a write of this register, <a href="/latest_sysreg/AArch64-cntps_cval_el1.html">CNTPS_CVAL_EL1</a> is set to (<a href="/latest_sysreg/AArch64-cntpct_el0.html">CNTPCT_EL0</a> + TimerValue), where TimerValue is treated as a signed 32-bit integer.</p>
+<p>When <a href="/latest_sysreg/AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ENABLE is 1, the timer condition is met when (<a href="/latest_sysreg/AArch64-cntpct_el0.html">CNTPCT_EL0</a> - <a href="/latest_sysreg/AArch64-cntps_cval_el1.html">CNTPS_CVAL_EL1</a>) is greater than or equal to zero. This means that TimerValue acts like a 32-bit downcounter timer. When the timer condition is met:</p>
 <ul>
-<li><a href="AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ISTATUS is set to 1.
-</li><li>If <a href="AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.IMASK is 0, an interrupt is generated.
+<li><a href="/latest_sysreg/AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ISTATUS is set to 1.
+</li><li>If <a href="/latest_sysreg/AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.IMASK is 0, an interrupt is generated.
 </li></ul>
-<p>When <a href="AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ENABLE is 0, the TimerValue cannot be read but continues to decrement. When the timer is enabled, the TimerValue represents the elapsed time whether that time was spent enabled or disabled.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>When <a href="/latest_sysreg/AArch64-cntps_ctl_el1.html">CNTPS_CTL_EL1</a>.ENABLE is 0, the TimerValue cannot be read but continues to decrement. When the timer is enabled, the TimerValue represents the elapsed time whether that time was spent enabled or disabled.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, CNTPS_TVAL_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b111, CRn = 0b1110, CRm = 0b0010, op2 = 0b000)

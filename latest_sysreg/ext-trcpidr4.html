@@ -19,15 +19,15 @@
 <li>The component uses a single 4KB block.
 </li><li>The component uses an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> number of 4KB blocks.
 </li></ul></td></tr><tr><td class="bitfield">0b0001..0b1111</td><td>
-          <p>The component occupies 2<sup><a href="ext-trcpidr4.html">TRCPIDR4</a>.SIZE</sup> 4KB blocks.</p>
+          <p>The component occupies 2<sup><a href="/latest_sysreg/ext-trcpidr4.html">TRCPIDR4</a>.SIZE</sup> 4KB blocks.</p>
         </td></tr></table><p>Using this field to indicate the size of the component is deprecated. This field might not correctly indicate the size of the component. Arm recommends that software determine the size of the component from the Unique Component Identifier fields, and other <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> registers in the component.</p>
 <p>This field has the value <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">DES_2, bits [3:0]:
       </h4><div class="field"><p>Designer, JEP106 continuation code.</p>
 <p>The JEP106 identification and continuation codes are stored as follows:</p>
 <ul>
-<li><a href="ext-trcpidr1.html">TRCPIDR1</a>.DES_0: JEP106 identification code bits[3:0].
-</li><li><a href="ext-trcpidr2.html">TRCPIDR2</a>.DES_1: JEP106 identification code bits[6:4].
-</li><li><a href="ext-trcpidr4.html">TRCPIDR4</a>.DES_2: JEP106 continuation code.
+<li><a href="/latest_sysreg/ext-trcpidr1.html">TRCPIDR1</a>.DES_0: JEP106 identification code bits[3:0].
+</li><li><a href="/latest_sysreg/ext-trcpidr2.html">TRCPIDR2</a>.DES_1: JEP106 identification code bits[6:4].
+</li><li><a href="/latest_sysreg/ext-trcpidr4.html">TRCPIDR4</a>.DES_2: JEP106 continuation code.
 </li></ul>
 <p>These codes indicate the designer of the component and not the implementer, except where the two are the same. To obtain a number, or to see the assignment of these codes, contact JEDEC http://www.jedec.org.</p>
 <p>A JEP106 identification and continuation code takes the following form:</p>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>CNTEL0ACR | Jon's Arm Reference</title><meta name="description" content="An implementation of CNTEL0ACR in the frame at CNTBaseN controls whether the CNTPCT, CNTVCT, CNTFRQ, EL1 Physical Timer, and Virtual Timer registers are visible in the frame at CNTEL0BaseN."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">CNTEL0ACR</h1><p class="insn_subtitle" data-pagefind-body="1">Counter-timer EL0 Access Control Register</p><div data-pagefind-body="1">
-        <p>An implementation of CNTEL0ACR in the frame at CNTBaseN controls whether the <a href="ext-cntpct.html">CNTPCT</a>, <a href="ext-cntvct.html">CNTVCT</a>, <a href="ext-cntfrq.html">CNTFRQ</a>, EL1 Physical Timer, and Virtual Timer registers are visible in the frame at CNTEL0BaseN.</p>
+        <p>An implementation of CNTEL0ACR in the frame at CNTBaseN controls whether the <a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a>, <a href="/latest_sysreg/ext-cntvct.html">CNTVCT</a>, <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a>, EL1 Physical Timer, and Virtual Timer registers are visible in the frame at CNTEL0BaseN.</p>
       </div><h3>Configuration</h3><p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether CNTEL0ACR is implemented in the Core power domain or in the Debug power domain.
     </p><p>Implementation of this register is <span class="arm-defined-word">OPTIONAL</span>.</p>
         <p>For more information, see <span class="xref">'Power and reset domains for the system level implementation of the Generic Timer'</span>.</p>
@@ -13,7 +13,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-9_9">EL0PTEN, bit [9]:
       </h4><div class="field">
-      <p>Second view read/write access control for the EL1 Physical Timer registers. This bit controls whether the <a href="ext-cntp_cval.html">CNTP_CVAL</a>, <a href="ext-cntp_tval.html">CNTP_TVAL</a>, and <a href="ext-cntp_ctl.html">CNTP_CTL</a> registers in the current CNTBaseN frame are also accessible in the corresponding CNTEL0BaseN frame.</p>
+      <p>Second view read/write access control for the EL1 Physical Timer registers. This bit controls whether the <a href="/latest_sysreg/ext-cntp_cval.html">CNTP_CVAL</a>, <a href="/latest_sysreg/ext-cntp_tval.html">CNTP_TVAL</a>, and <a href="/latest_sysreg/ext-cntp_ctl.html">CNTP_CTL</a> registers in the current CNTBaseN frame are also accessible in the corresponding CNTEL0BaseN frame.</p>
     <table class="valuetable"><tr><th>EL0PTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No access. Registers are <span class="arm-defined-word">RES0</span> in the second view.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -22,7 +22,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-8_8">EL0VTEN, bit [8]:
       </h4><div class="field">
-      <p>Second view read/write access control for the Virtual Timer registers. This bit controls whether the <a href="ext-cntv_cval.html">CNTV_CVAL</a>, <a href="ext-cntv_tval.html">CNTV_TVAL</a>, and <a href="ext-cntv_ctl.html">CNTV_CTL</a> registers in the current CNTBaseN frame are also accessible in the corresponding CNTEL0BaseN frame.</p>
+      <p>Second view read/write access control for the Virtual Timer registers. This bit controls whether the <a href="/latest_sysreg/ext-cntv_cval.html">CNTV_CVAL</a>, <a href="/latest_sysreg/ext-cntv_tval.html">CNTV_TVAL</a>, and <a href="/latest_sysreg/ext-cntv_ctl.html">CNTV_CTL</a> registers in the current CNTBaseN frame are also accessible in the corresponding CNTEL0BaseN frame.</p>
     <table class="valuetable"><tr><th>EL0VTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No access. Registers are <span class="arm-defined-word">RES0</span> in the second view.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -36,18 +36,18 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-1_1">EL0VCTEN, bit [1]:
       </h4><div class="field">
-      <p>Second view read access control for <a href="ext-cntvct.html">CNTVCT</a> and <a href="ext-cntfrq.html">CNTFRQ</a>.</p>
-    <table class="valuetable"><tr><th>EL0VCTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="ext-cntvct.html">CNTVCT</a> is not visible in the second view.</p>
-<p>If EL0PCTEN is set to 0, <a href="ext-cntfrq.html">CNTFRQ</a> is not visible in the second view.</p></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Access permitted. If <a href="ext-cntvct.html">CNTVCT</a> and <a href="ext-cntfrq.html">CNTFRQ</a> are visible in the current frame, then they are visible in the second view.</p>
+      <p>Second view read access control for <a href="/latest_sysreg/ext-cntvct.html">CNTVCT</a> and <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a>.</p>
+    <table class="valuetable"><tr><th>EL0VCTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="/latest_sysreg/ext-cntvct.html">CNTVCT</a> is not visible in the second view.</p>
+<p>If EL0PCTEN is set to 0, <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a> is not visible in the second view.</p></td></tr><tr><td class="bitfield">0b1</td><td>
+          <p>Access permitted. If <a href="/latest_sysreg/ext-cntvct.html">CNTVCT</a> and <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a> are visible in the current frame, then they are visible in the second view.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-0_0">EL0PCTEN, bit [0]:
       </h4><div class="field">
-      <p>Second view read access control for <a href="ext-cntpct.html">CNTPCT</a> and <a href="ext-cntfrq.html">CNTFRQ</a>.</p>
-    <table class="valuetable"><tr><th>EL0PCTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="ext-cntpct.html">CNTPCT</a> is not visible in the second view.</p>
-<p>If EL0VCTEN is set to 0, <a href="ext-cntfrq.html">CNTFRQ</a> is not visible in the second view.</p></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Access permitted. If <a href="ext-cntpct.html">CNTPCT</a> and <a href="ext-cntfrq.html">CNTFRQ</a> are visible in the current frame, then they are visible in the second view.</p>
+      <p>Second view read access control for <a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a> and <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a>.</p>
+    <table class="valuetable"><tr><th>EL0PCTEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a> is not visible in the second view.</p>
+<p>If EL0VCTEN is set to 0, <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a> is not visible in the second view.</p></td></tr><tr><td class="bitfield">0b1</td><td>
+          <p>Access permitted. If <a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a> and <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a> are visible in the current frame, then they are visible in the second view.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing CNTEL0ACR</h2>
@@ -70,6 +70,6 @@
       
         <ul>
 <li>The register location in that frame is RAZ/WI.
-</li><li>If the corresponding CNTEL0BaseN frame is implemented, the registers <a href="ext-cntfrq.html">CNTFRQ</a>, <a href="ext-cntp_ctl.html">CNTP_CTL</a>, <a href="ext-cntp_cval.html">CNTP_CVAL</a>, <a href="ext-cntp_tval.html">CNTP_TVAL</a>, <a href="ext-cntpct.html">CNTPCT</a>, <a href="ext-cntv_ctl.html">CNTV_CTL</a>, <a href="ext-cntv_cval.html">CNTV_CVAL</a>, <a href="ext-cntv_tval.html">CNTV_TVAL</a>, and <a href="ext-cntvct.html">CNTVCT</a> are not visible and accesses are RAZ/WI in that frame.
+</li><li>If the corresponding CNTEL0BaseN frame is implemented, the registers <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a>, <a href="/latest_sysreg/ext-cntp_ctl.html">CNTP_CTL</a>, <a href="/latest_sysreg/ext-cntp_cval.html">CNTP_CVAL</a>, <a href="/latest_sysreg/ext-cntp_tval.html">CNTP_TVAL</a>, <a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a>, <a href="/latest_sysreg/ext-cntv_ctl.html">CNTV_CTL</a>, <a href="/latest_sysreg/ext-cntv_cval.html">CNTV_CVAL</a>, <a href="/latest_sysreg/ext-cntv_tval.html">CNTV_TVAL</a>, and <a href="/latest_sysreg/ext-cntvct.html">CNTVCT</a> are not visible and accesses are RAZ/WI in that frame.
 </li></ul>
       <h4>CNTEL0ACR can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>Timer</td><td>CNTBaseN</td><td><span class="hexnumber">0x014</span></td><td>CNTEL0ACR</td></tr></table><p>Accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

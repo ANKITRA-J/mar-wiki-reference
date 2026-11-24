@@ -8,9 +8,9 @@
 
       
         <ul>
-<li>This register is an alias of the Non-secure copy of <a href="ext-gicc_bpr.html">GICC_BPR</a>.
+<li>This register is an alias of the Non-secure copy of <a href="/latest_sysreg/ext-gicc_bpr.html">GICC_BPR</a>.
 </li><li>Non-secure accesses to this register return a shifted value of the binary point.
-</li><li>If <a href="AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.CBPR_EL1NS == 1, Secure accesses to this register access <a href="AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a>.
+</li><li>If <a href="/latest_sysreg/AArch64-icc_ctlr_el3.html">ICC_CTLR_EL3</a>.CBPR_EL1NS == 1, Secure accesses to this register access <a href="/latest_sysreg/AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a>.
 </li></ul>
       <h3>Attributes</h3>
         <p>GICC_ABPR is a 32-bit register.</p>
@@ -20,12 +20,12 @@
     </div><h4 id="fieldset_0-2_0">Binary_Point, bits [2:0]:
       </h4><div class="field"><p>Controls how the 8-bit interrupt priority field is split into a group priority field, that determines interrupt preemption, and a subpriority field. The following list describes how this field determines the interrupt priority bits assigned to the group priority field:</p>
 <ul>
-<li><span class="xref">'Secure ICC_BPR1_EL1 Binary Point when CBPR == 0' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>, for the processing of Group 1 interrupts in a GIC implementation that supports interrupt grouping, when <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.CBPR == 0.
+<li><span class="xref">'Secure ICC_BPR1_EL1 Binary Point when CBPR == 0' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>, for the processing of Group 1 interrupts in a GIC implementation that supports interrupt grouping, when <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.CBPR == 0.
 </li><li><span class="xref">'Non-secure ICC_BPR1_EL1 Binary Point when CBPR == 0' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>, for all other cases.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing GICC_ABPR</h2>
-        <p>This register is used only when System register access is not enabled. When System register access is enabled, the System registers <a href="AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a> and <a href="AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1</a> provide equivalent functionality.</p>
+        <p>This register is used only when System register access is not enabled. When System register access is enabled, the System registers <a href="/latest_sysreg/AArch64-icc_bpr0_el1.html">ICC_BPR0_EL1</a> and <a href="/latest_sysreg/AArch64-icc_bpr1_el1.html">ICC_BPR1_EL1</a> provide equivalent functionality.</p>
       <h4>GICC_ABPR can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC CPU interface</td><td><span class="hexnumber">0x001C</span></td><td>GICC_ABPR</td></tr></table><p>Accessible as follows:</p><ul><li>When GICD_CTLR.DS == '0', accesses to this register are <span class="access_level">RW</span>.
           </li><li>When an access is Secure, accesses to this register are <span class="access_level">RW</span>.
           </li><li>When an access is Non-secure, accesses to this register are <span class="access_level">RW</span>.

@@ -48,7 +48,7 @@
           <p>The specified instructions are implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_I8MM</span> implements the functionality identified by <span class="binarynumber">0b0001</span>.</p>
-<p>When Advanced SIMD and SVE are both implemented, this field must return the same value as <a href="AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.I8MM.</p>
+<p>When Advanced SIMD and SVE are both implemented, this field must return the same value as <a href="/latest_sysreg/AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.I8MM.</p>
 <p>From Armv8.6, if SVE is implemented, the value <span class="binarynumber">0b0000</span> is not permitted.</p>
 <p>SVE <span class="instruction">SMMLA</span>, <span class="instruction">UMMLA</span>, and <span class="instruction">USMMLA</span> instructions might not be legal when the PE is in Streaming SVE mode.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-43_40">SM4, bits [43:40]:
       </h4><div class="field">
@@ -104,11 +104,11 @@
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p>SVE <span class="instruction">BFCVT</span>, <span class="instruction">BFCVTNT</span>, <span class="instruction">BFDOT</span>, <span class="instruction">BFMLALB</span>, <span class="instruction">BFMLALT</span>, and <span class="instruction">BFMMLA</span> instructions are implemented.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
-          <p>As <span class="binarynumber">0b0001</span>, but the <a href="AArch64-fpcr.html">FPCR</a>.EBF field is also supported.</p>
+          <p>As <span class="binarynumber">0b0001</span>, but the <a href="/latest_sysreg/AArch64-fpcr.html">FPCR</a>.EBF field is also supported.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_BF16</span> implements the functionality identified by <span class="binarynumber">0b0001</span>.</p>
 <p><span class="xref">FEAT_EBF16</span> implements the functionality identified by <span class="binarynumber">0b0010</span>.</p>
-<p>This field must return the same value as <a href="AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.BF16.</p>
+<p>This field must return the same value as <a href="/latest_sysreg/AArch64-id_aa64isar1_el1.html">ID_AA64ISAR1_EL1</a>.BF16.</p>
 <p>SVE <span class="instruction">BFMMLA</span> instructions might not be legal when the PE is in Streaming SVE mode.</p>
 <p>From Armv8.6 and Armv9.1, the value <span class="binarynumber">0b0000</span> is not permitted.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-19_16">BitPerm, bits [19:16]:
       </h4><div class="field">
@@ -119,7 +119,7 @@
           <p>The specified instructions are implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_SVE_BitPerm</span> implements the functionality identified by <span class="binarynumber">0b0001</span> when the PE is not in Streaming SVE mode.</p>
-<p><span class="xref">FEAT_SSVE_BitPerm</span> which is identified in <a href="AArch64-id_aa64smfr0_el1.html">ID_AA64SMFR0_EL1</a>.SBitPerm, indicates whether the FEAT_SVE_BitPerm functionality is implemented when the PE is in Streaming SVE mode.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-15_12-1">EltPerm, bits [15:12] <span class="condition">when FEAT_SVE2p2 is implemented or FEAT_SME2p2 is implemented</span>:
+<p><span class="xref">FEAT_SSVE_BitPerm</span> which is identified in <a href="/latest_sysreg/AArch64-id_aa64smfr0_el1.html">ID_AA64SMFR0_EL1</a>.SBitPerm, indicates whether the FEAT_SVE_BitPerm functionality is implemented when the PE is in Streaming SVE mode.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-15_12-1">EltPerm, bits [15:12] <span class="condition">when FEAT_SVE2p2 is implemented or FEAT_SME2p2 is implemented</span>:
       </h4><div class="field">
       <p>Indicates support for the SVE element permute instructions.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>EltPerm</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>

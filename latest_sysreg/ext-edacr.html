@@ -5,13 +5,13 @@
         <p>Allows implementations to support <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> controls.</p>
       </div><h3>Configuration</h3><p>When FEAT_DoPD is implemented, EDACR is in the Core power domain. Otherwise, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether EDACR is implemented in the Core power domain or in the Debug power domain.
     </p><p>Implementation of this register is <span class="arm-defined-word">OPTIONAL</span>.</p>
-        <p>If this register is implemented, <a href="ext-eddevid.html">EDDEVID</a>.AuxRegs == <span class="binarynumber">0b0001</span>.</p>
+        <p>If this register is implemented, <a href="/latest_sysreg/ext-eddevid.html">EDDEVID</a>.AuxRegs == <span class="binarynumber">0b0001</span>.</p>
 
       
         <p>If <span class="xref">FEAT_DoPD</span> is implemented, any mechanism to preserve control bits in EDACR over power down is optional and <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.</p>
 
       
-        <p>If <span class="xref">FEAT_DoPD</span> is not implemented and EDACR contains any control bits that must be preserved over power down, then these bits must be accessible by the external debug interface when the OS Lock is locked, <a href="AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK == 1, and when the Core is powered off.</p>
+        <p>If <span class="xref">FEAT_DoPD</span> is not implemented and EDACR contains any control bits that must be preserved over power down, then these bits must be accessible by the external debug interface when the OS Lock is locked, <a href="/latest_sysreg/AArch64-oslsr_el1.html">OSLSR_EL1</a>.OSLK == 1, and when the Core is powered off.</p>
 
       
         <p>Changing this register from its reset value causes <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> behavior, including possible deviation from the architecturally-defined behavior.</p>

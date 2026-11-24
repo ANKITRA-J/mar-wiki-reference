@@ -5,11 +5,11 @@
         <p>Describes the features provided by the AArch32 Advanced SIMD and floating-point implementation.</p>
 
       
-        <p>Must be interpreted with <a href="AArch32-mvfr1.html">MVFR1</a> and <a href="AArch32-mvfr2.html">MVFR2</a>.</p>
+        <p>Must be interpreted with <a href="/latest_sysreg/AArch32-mvfr1.html">MVFR1</a> and <a href="/latest_sysreg/AArch32-mvfr2.html">MVFR2</a>.</p>
 
       
         <p>For general information about the interpretation of the ID registers see <span class="xref">'Principles of the ID scheme for fields in ID registers'</span>.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register MVFR0 bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-mvfr0_el1.html">MVFR0_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to MVFR0 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register MVFR0 bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-mvfr0_el1.html">MVFR0_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to MVFR0 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>Implemented only if the implementation includes Advanced SIMD and floating-point instructions.</p>
       <h3>Attributes</h3>
         <p>MVFR0 is a 32-bit register.</p>
@@ -17,7 +17,7 @@
       </h4><div class="field">
       <p>Floating-Point Rounding modes. Indicates whether the floating-point implementation provides support for rounding modes.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>FPRound</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>Not implemented, or only Round to Nearest mode supported, except that Round towards Zero mode is supported for VCVT instructions that always use that rounding mode regardless of the <a href="AArch32-fpscr.html">FPSCR</a> setting.</p>
+          <p>Not implemented, or only Round to Nearest mode supported, except that Round towards Zero mode is supported for VCVT instructions that always use that rounding mode regardless of the <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR</a> setting.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p>All rounding modes supported.</p>
         </td></tr></table><p>All other values are reserved.</p>

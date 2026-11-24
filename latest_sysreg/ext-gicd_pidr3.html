@@ -18,24 +18,24 @@ For each minor revision of the component, the minor revision number increments m
 For each major revision of the component, the major revision number increments monotonically and the minor revision begins again at zero.</p>
 <p>For a component with a 12-bit part number with a single 4-bit revision number:</p>
 <ul>
-<li><a href="ext-gicd_pidr2.html">GICD_PIDR2</a>.REVISION indicates the 4-bit revision number.
-</li><li><a href="ext-gicd_pidr3.html">GICD_PIDR3</a>.REVAND indicates component modifications.
+<li><a href="/latest_sysreg/ext-gicd_pidr2.html">GICD_PIDR2</a>.REVISION indicates the 4-bit revision number.
+</li><li><a href="/latest_sysreg/ext-gicd_pidr3.html">GICD_PIDR3</a>.REVAND indicates component modifications.
 </li></ul>
 <p>For a component with a 12-bit part number with separate major and minor revision numbers:</p>
 <ul>
-<li><a href="ext-gicd_pidr2.html">GICD_PIDR2</a>.REVISION indicates the 4-bit major revision number.
-</li><li><a href="ext-gicd_pidr3.html">GICD_PIDR3</a>.REVAND indicates the 4-bit minor revision number.
+<li><a href="/latest_sysreg/ext-gicd_pidr2.html">GICD_PIDR2</a>.REVISION indicates the 4-bit major revision number.
+</li><li><a href="/latest_sysreg/ext-gicd_pidr3.html">GICD_PIDR3</a>.REVAND indicates the 4-bit minor revision number.
 </li></ul>
 <p>For a component with a 16-bit part number:</p>
 <ul>
-<li><a href="ext-gicd_pidr2.html">GICD_PIDR2</a>.REVISION contains part number bits [3:0].
-</li><li><a href="ext-gicd_pidr3.html">GICD_PIDR3</a>.REVAND indicates the 4-bit revision number.
+<li><a href="/latest_sysreg/ext-gicd_pidr2.html">GICD_PIDR2</a>.REVISION contains part number bits [3:0].
+</li><li><a href="/latest_sysreg/ext-gicd_pidr3.html">GICD_PIDR3</a>.REVAND indicates the 4-bit revision number.
 </li></ul>
 <p>The choice of which style of revision information is used is specific to the designer of the component, and might also be specific to each individual component with a different part number.</p>
 <p>Where REVAND indicates component modifications, this indicates modifications such as errata fixes or metal fixes after implementation.
 Usually this value would be zero unless a modification has been performed.
 If the field is required for indicating component modifications, Arm recommends that component designers ensure that it can be changed by a metal fix, for example by driving it from registers that reset to zero.</p>
-<p><a href="ext-gicd_pidr3.html">GICD_PIDR3</a>.CMOD might also indicate component modifications.</p>
+<p><a href="/latest_sysreg/ext-gicd_pidr3.html">GICD_PIDR3</a>.CMOD might also indicate component modifications.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-3_0">CMOD, bits [3:0]:
       </h4><div class="field"><p>Indicates whether the component has been modified from its original behavior.
@@ -50,6 +50,6 @@ If the field is required for indicating component modifications, Arm recommends 
 </li><li>If the CMOD fields of both components have the same nonzero value, it does not necessarily mean that they have the same modifications.
 </li><li>If the value of the CMOD field of either of the two components is nonzero, they might not be identical, even though they have the same Unique Component Identifier.
 </li></ul>
-<p><a href="ext-gicd_pidr3.html">GICD_PIDR3</a>.REVAND might also indicate component modifications.</p>
+<p><a href="/latest_sysreg/ext-gicd_pidr3.html">GICD_PIDR3</a>.REVAND might also indicate component modifications.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing GICD_PIDR3</h2><h4>GICD_PIDR3 can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Distributor</td><td>Dist_base</td><td><span class="hexnumber">0xFFEC</span></td><td>GICD_PIDR3</td></tr></table><p>Accesses to this register are <span class="access_level">RO</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

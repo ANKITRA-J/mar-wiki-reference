@@ -6,7 +6,7 @@
 
       
         <div class="note"><p>This stage of translation always uses the Long-descriptor translation table format.</p></div>
-      </div><h3>Configuration</h3><p>AArch32 System register VTCR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-vtcr_el2.html">VTCR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to VTCR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register VTCR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-vtcr_el2.html">VTCR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to VTCR are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>VTCR is a 32-bit register.</p>
@@ -69,7 +69,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-13_12">SH0, bits [13:12]:
       </h4><div class="field">
-      <p>Shareability attribute for memory associated with translation table walks using <a href="AArch32-vttbr.html">VTTBR</a>.</p>
+      <p>Shareability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch32-vttbr.html">VTTBR</a>.</p>
     <table class="valuetable"><tr><th>SH0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Non-shareable.</p>
         </td></tr><tr><td class="bitfield">0b10</td><td>
@@ -82,7 +82,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-11_10">ORGN0, bits [11:10]:
       </h4><div class="field">
-      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="AArch32-vttbr.html">VTTBR</a>.</p>
+      <p>Outer Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch32-vttbr.html">VTTBR</a>.</p>
     <table class="valuetable"><tr><th>ORGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Outer Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -95,7 +95,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-9_8">IRGN0, bits [9:8]:
       </h4><div class="field">
-      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="AArch32-vttbr.html">VTTBR</a>.</p>
+      <p>Inner Cacheability attribute for memory associated with translation table walks using <a href="/latest_sysreg/AArch32-vttbr.html">VTTBR</a>.</p>
     <table class="valuetable"><tr><th>IRGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Normal memory, Inner Non-cacheable.</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -108,7 +108,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-7_6">SL0, bits [7:6]:
       </h4><div class="field">
-      <p>Starting level for translation table walks using <a href="AArch32-vttbr.html">VTTBR</a>.</p>
+      <p>Starting level for translation table walks using <a href="/latest_sysreg/AArch32-vttbr.html">VTTBR</a>.</p>
     <table class="valuetable"><tr><th>SL0</th><th>Meaning</th></tr><tr><td class="bitfield">0b00</td><td>
           <p>Start at level 2</p>
         </td></tr><tr><td class="bitfield">0b01</td><td>
@@ -126,7 +126,7 @@
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-3_0">T0SZ, bits [3:0]:
-      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="AArch32-vttbr.html">VTTBR</a>. The region size is 2<sup>(32-T0SZ)</sup> bytes.</p>
+      </h4><div class="field"><p>The size offset of the memory region addressed by <a href="/latest_sysreg/AArch32-vttbr.html">VTTBR</a>. The region size is 2<sup>(32-T0SZ)</sup> bytes.</p>
 <p>This field holds a four-bit signed integer value, meaning it supports values from -8 to 7.</p>
 <div class="note"><p>This is different from the other translation control registers, where TnSZ holds a three-bit unsigned integer, supporting values from 0 to 7.</p></div><p>If this field is programmed to a value that is not consistent with the programming of SL0 then a stage 2 level 1 Translation fault is generated.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

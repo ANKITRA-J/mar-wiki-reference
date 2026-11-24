@@ -109,9 +109,9 @@
       </h4><div class="field">
       <p>Partial record lost. Following a buffer management event, indicates whether the last record written to the Profiling Buffer is complete. PMBSR_EL3.DL is also set to 1 when an asynchronous External abort is reported to the SPU.</p>
     <table class="valuetable"><tr><th>DL</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-pmbptr_el1.html">PMBPTR_EL1</a> points to the first byte after the last complete record written to the Profiling Buffer by the SPU, and no asynchronous External abort has been reported to the SPU.</p>
+          <p><a href="/latest_sysreg/AArch64-pmbptr_el1.html">PMBPTR_EL1</a> points to the first byte after the last complete record written to the Profiling Buffer by the SPU, and no asynchronous External abort has been reported to the SPU.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Part of a record was lost because of a Profiling Buffer management event, or an asynchronous External abort has been reported to the SPU. <a href="AArch64-pmbptr_el1.html">PMBPTR_EL1</a> might not be the address of the first byte after the last complete sample record written to the Profiling Buffer by the SPU.</p>
+          <p>Part of a record was lost because of a Profiling Buffer management event, or an asynchronous External abort has been reported to the SPU. <a href="/latest_sysreg/AArch64-pmbptr_el1.html">PMBPTR_EL1</a> might not be the address of the first byte after the last complete sample record written to the Profiling Buffer by the SPU.</p>
         </td></tr></table><p>When the SPU sets this bit to 1, software must not assume that there is any valid data between the end of the last complete record and PMBPTR_EL1. If software restarts profiling from the saved PMBPTR_EL1 value, then this might result in buffer contents that software cannot parse. If PMBSR_EL3.EA is also set to 1 by the SPU, then software must not assume that any valid data has been written to the Profiling Buffer.</p>
 <p>This bit is <span class="arm-defined-word">RES0</span> if there are no circumstances when the PE would ever set this bit to 1 as a result of a Profiling Buffer management event.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

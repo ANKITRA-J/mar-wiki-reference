@@ -19,8 +19,8 @@
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-icc_dir.html">ICC_DIR</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-icc_dir.html">ICC_DIR</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-icc_dir_el1.html">ICC_DIR_EL1</a> provides equivalent functionality.
 </li></ul>
 
       
@@ -28,10 +28,10 @@
 
       
         <ul>
-<li>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 1, if <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS1.EOImode == 1.
+<li>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 1, if <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS1.EOImode == 1.
 </li><li>In GIC implementations that support two Security states:<ul>
-<li>If the access is Secure and <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS == 1.
-</li><li>If the access is Non-secure and <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS == 1.
+<li>If the access is Secure and <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS == 1.
+</li><li>If the access is Non-secure and <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS == 1.
 </li></ul>
 
 </li></ul>
@@ -41,12 +41,12 @@
 
       
         <ul>
-<li>Writes to this register when the corresponding <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS1.EOImode, <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS, or <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS field is 0. In systems that support system error generation, an implementation might generate a system error.
-</li><li>Writes to this register when the corresponding <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS1.EOImode, <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS, or <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS field is 0 and the corresponding interrupt is not active. In systems that support system error generation, an implementation might generate a system error. In implementations using the GIC Stream Protocol Interface, these writes correspond to a Deactivate packet for an interrupt that is not active. For more information, see <span class="xref">'Deactivate (ICC)' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>.
+<li>Writes to this register when the corresponding <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS1.EOImode, <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS, or <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS field is 0. In systems that support system error generation, an implementation might generate a system error.
+</li><li>Writes to this register when the corresponding <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS1.EOImode, <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS, or <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS field is 0 and the corresponding interrupt is not active. In systems that support system error generation, an implementation might generate a system error. In implementations using the GIC Stream Protocol Interface, these writes correspond to a Deactivate packet for an interrupt that is not active. For more information, see <span class="xref">'Deactivate (ICC)' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>.
 </li></ul>
 
       
-        <p>If the corresponding <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS1.EOImode, <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS, or <a href="ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS field is 1 and this register is written to without a corresponding write to <a href="ext-gicc_eoir.html">GICC_EOIR</a> or <a href="ext-gicc_aeoir.html">GICC_AEOIR</a>, the interrupt is deactivated but the bit corresponding to it in the active priorities registers remains set.</p>
+        <p>If the corresponding <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS1.EOImode, <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_S.EOImodeS, or <a href="/latest_sysreg/ext-gicc_ctlr.html">GICC_CTLR</a>.DS0_NS.EOImodeNS field is 1 and this register is written to without a corresponding write to <a href="/latest_sysreg/ext-gicc_eoir.html">GICC_EOIR</a> or <a href="/latest_sysreg/ext-gicc_aeoir.html">GICC_AEOIR</a>, the interrupt is deactivated but the bit corresponding to it in the active priorities registers remains set.</p>
 
       
         <p>When affinity routing is enabled for a Security state, it is a programming error to use memory-mapped registers to access the GIC.</p>

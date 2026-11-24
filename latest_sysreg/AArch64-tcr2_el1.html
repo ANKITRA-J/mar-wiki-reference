@@ -12,10 +12,10 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-21_21-1">FNGNA1, bit [21] <span class="condition">when FEAT_THE is implemented</span>:
       </h4><div class="field">
-      <p>Force non-global for unassured translations using <a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a>.</p>
+      <p>Force non-global for unassured translations using <a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a>.</p>
     <table class="valuetable"><tr><th>FNGNA1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This bit has no effect on the interpretation of the nG bit.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>Translations using <a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a> are treated as non-global regardless of the value of the nG bit if all of the following is true:</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>Translations using <a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a> are treated as non-global regardless of the value of the nG bit if all of the following is true:</p>
 <ul>
 <li>
 <p>The translation is for the EL1&amp;0 translation regime.</p>
@@ -34,10 +34,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL1 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL1).</li><li>TCR2MASK_EL1.FNGNA1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_0-21_21-2"> <span class="condition">Otherwise</span>:
@@ -45,10 +45,10 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-20_20-1">FNGNA0, bit [20] <span class="condition">when FEAT_THE is implemented</span>:
       </h4><div class="field">
-      <p>Force non-global for unassured translations using <a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a>.</p>
+      <p>Force non-global for unassured translations using <a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a>.</p>
     <table class="valuetable"><tr><th>FNGNA0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This bit has no effect on the interpretation of the nG bit.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>Translations using <a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a> are treated as non-global regardless of the value of the nG bit if all of the following is true:</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>Translations using <a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a> are treated as non-global regardless of the value of the nG bit if all of the following is true:</p>
 <ul>
 <li>
 <p>The translation is for the EL1&amp;0 translation regime.</p>
@@ -67,10 +67,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL1 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL1).</li><li>TCR2MASK_EL1.FNGNA0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_0-20_20-2"> <span class="condition">Otherwise</span>:
@@ -81,20 +81,20 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-18_18-1">FNG1, bit [18] <span class="condition">when FEAT_ASID2 is implemented</span>:
       </h4><div class="field">
-      <p>Force non-global translations for <a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a>.</p>
+      <p>Force non-global translations for <a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a>.</p>
     <table class="valuetable"><tr><th>FNG1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This bit has no effect on the interpretation of the nG bit.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Translations using <a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a> are treated as non-global regardless of the value of the nG bit.</p>
+          <p>Translations using <a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a> are treated as non-global regardless of the value of the nG bit.</p>
         </td></tr></table><p>This bit is permitted to be cached in a TLB.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL1 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL1).</li><li>TCR2MASK_EL1.FNG1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_0-18_18-2"> <span class="condition">Otherwise</span>:
@@ -102,20 +102,20 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-17_17-1">FNG0, bit [17] <span class="condition">when FEAT_ASID2 is implemented</span>:
       </h4><div class="field">
-      <p>Force non-global translations for <a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a>.</p>
+      <p>Force non-global translations for <a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a>.</p>
     <table class="valuetable"><tr><th>FNG0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>This bit has no effect on the interpretation of the nG bit.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Translations using <a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a> are treated as non-global regardless of the value of the nG bit.</p>
+          <p>Translations using <a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a> are treated as non-global regardless of the value of the nG bit.</p>
         </td></tr></table><p>This bit is permitted to be cached in a TLB.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL1 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL1).</li><li>TCR2MASK_EL1.FNG0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_0-17_17-2"> <span class="condition">Otherwise</span>:
@@ -133,10 +133,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL1 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL1).</li><li>TCR2MASK_EL1.A2 == '1'.</li></ul></li></ul></div><h4 id="fieldset_0-16_16-2"> <span class="condition">Otherwise</span>:
@@ -144,19 +144,19 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_15-1">DisCH1, bit [15] <span class="condition">when FEAT_D128 is implemented and TCR2_EL1.D128 == '1'</span>:
       </h4><div class="field">
-      <p>Disable the Contiguous bit for the Start Table for <a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a>.</p>
+      <p>Disable the Contiguous bit for the Start Table for <a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a>.</p>
     <table class="valuetable"><tr><th>DisCH1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The Contiguous bit of Block or Page descriptors of the Start Table for <a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a> is not affected by this field.</p>
+          <p>The Contiguous bit of Block or Page descriptors of the Start Table for <a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a> is not affected by this field.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The Contiguous bit of Block or Page descriptors of the Start Table for <a href="AArch64-ttbr1_el1.html">TTBR1_EL1</a> is treated as 0.</p>
+          <p>The Contiguous bit of Block or Page descriptors of the Start Table for <a href="/latest_sysreg/AArch64-ttbr1_el1.html">TTBR1_EL1</a> is treated as 0.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL1 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL1).</li><li>TCR2MASK_EL1.DisCH1 == '1'.</li></ul></li></ul></div><h4 id="fieldset_0-15_15-2"> <span class="condition">Otherwise</span>:
@@ -164,19 +164,19 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-14_14-1">DisCH0, bit [14] <span class="condition">when FEAT_D128 is implemented and TCR2_EL1.D128 == '1'</span>:
       </h4><div class="field">
-      <p>Disable the Contiguous bit for the Start Table for <a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a>.</p>
+      <p>Disable the Contiguous bit for the Start Table for <a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a>.</p>
     <table class="valuetable"><tr><th>DisCH0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The Contiguous bit of Block or Page descriptors of the Start Table for <a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a> is not affected by this field.</p>
+          <p>The Contiguous bit of Block or Page descriptors of the Start Table for <a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a> is not affected by this field.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The Contiguous bit of Block or Page descriptors of the Start Table for <a href="AArch64-ttbr0_el1.html">TTBR0_EL1</a> is treated as 0.</p>
+          <p>The Contiguous bit of Block or Page descriptors of the Start Table for <a href="/latest_sysreg/AArch64-ttbr0_el1.html">TTBR0_EL1</a> is treated as 0.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>Access to this field is <span class="access_level">RO</span> if all the following are true:<ul><li>FEAT_SRMASK is implemented.</li><li>EL1 is the current Exception level.</li><li>IsSystemRegisterMaskingEnabled(EL1).</li><li>TCR2MASK_EL1.DisCH0 == '1'.</li></ul></li></ul></div><h4 id="fieldset_0-14_14-2"> <span class="condition">Otherwise</span>:
@@ -195,10 +195,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -216,16 +216,16 @@
 <p>Permits RCWS instructions to generate writes that have the Reduced Coherence property.</p><table class="valuetable"><tr><th>PTTWI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Write accesses generated by RCWS at EL1&amp;0 do not have the Reduced Coherence property.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Write accesses generated by RCWS at EL1&amp;0 have the Reduced Coherence property if <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.PTTWI is 1.</p>
+          <p>Write accesses generated by RCWS at EL1&amp;0 have the Reduced Coherence property if <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.PTTWI is 1.</p>
         </td></tr></table><p>This bit is permitted to be implemented as a read-only bit with a fixed value of 0.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -252,10 +252,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -280,10 +280,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -308,10 +308,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -336,10 +336,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -364,10 +364,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -393,10 +393,10 @@
 <ul>
 <li>All of the following are true:<ul>
 <li>EL2 is implemented and enabled in the current Security state.
-</li><li>The Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
+</li><li>The Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.TCR2En is 0.
 </li></ul>
 
-</li><li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
+</li><li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.TCR2En == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -410,10 +410,10 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name TCR2_EL1 or TCR2_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name TCR2_EL1 or TCR2_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
 
       
-        <p>If FEAT_SRMASK is implemented, accesses to TCR2_EL1 are masked by <a href="AArch64-tcr2mask_el1.html">TCR2MASK_EL1</a>.</p>
+        <p>If FEAT_SRMASK is implemented, accesses to TCR2_EL1 are masked by <a href="/latest_sysreg/AArch64-tcr2mask_el1.html">TCR2MASK_EL1</a>.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, TCR2_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b000, CRn = 0b0010, CRm = 0b0000, op2 = 0b011)
       </p><p class="pseudocode">

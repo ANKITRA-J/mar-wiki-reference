@@ -26,7 +26,7 @@ include the pointer authentication code.</p>
             </h4><a id="LDRAA_64_ldst_pac"></a><span class="bitdiff"> (M == 0 &amp;&amp; W == 0)</span></div><p class="asm-code">LDRAA  <a href="#XtOrXZR__11" title='Is the 64-bit name of the general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #<a href="#S_imm9" title='Is the optional signed immediate byte offset, a multiple of 8 in the range -4096 to 4088, defaulting to 0 and encoded in the "S:imm9" field as &lt;simm&gt;/8.'>&lt;simm&gt;</a>}]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Key A, pre-indexed encoding
             </h4><a id="LDRAA_64W_ldst_pac"></a><span class="bitdiff"> (M == 0 &amp;&amp; W == 1)</span></div><p class="asm-code">LDRAA  <a href="#XtOrXZR__11" title='Is the 64-bit name of the general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #<a href="#S_imm9" title='Is the optional signed immediate byte offset, a multiple of 8 in the range -4096 to 4088, defaulting to 0 and encoded in the "S:imm9" field as &lt;simm&gt;/8.'>&lt;simm&gt;</a>}]!</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Key B, offset encoding
             </h4><a id="LDRAB_64_ldst_pac"></a><span class="bitdiff"> (M == 1 &amp;&amp; W == 0)</span></div><p class="asm-code">LDRAB  <a href="#XtOrXZR__11" title='Is the 64-bit name of the general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #<a href="#S_imm9" title='Is the optional signed immediate byte offset, a multiple of 8 in the range -4096 to 4088, defaulting to 0 and encoded in the "S:imm9" field as &lt;simm&gt;/8.'>&lt;simm&gt;</a>}]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Key B, pre-indexed encoding
-            </h4><a id="LDRAB_64W_ldst_pac"></a><span class="bitdiff"> (M == 1 &amp;&amp; W == 1)</span></div><p class="asm-code">LDRAB  <a href="#XtOrXZR__11" title='Is the 64-bit name of the general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #<a href="#S_imm9" title='Is the optional signed immediate byte offset, a multiple of 8 in the range -4096 to 4088, defaulting to 0 and encoded in the "S:imm9" field as &lt;simm&gt;/8.'>&lt;simm&gt;</a>}]!</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_PAuth) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="LDRAB_64W_ldst_pac"></a><span class="bitdiff"> (M == 1 &amp;&amp; W == 1)</span></div><p class="asm-code">LDRAB  <a href="#XtOrXZR__11" title='Is the 64-bit name of the general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #<a href="#S_imm9" title='Is the optional signed immediate byte offset, a multiple of 8 in the range -4096 to 4088, defaulting to 0 and encoded in the "S:imm9" field as &lt;simm&gt;/8.'>&lt;simm&gt;</a>}]!</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_PAuth) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let t : integer = UInt(Rt);
 let n : integer = UInt(Rn);
 var wback : boolean = W == '1';
@@ -38,13 +38,13 @@ let tagchecked : boolean = wback || n != 31;
 
 var wb_unknown : boolean = FALSE;
 if wback &amp;&amp; n == t &amp;&amp; n != 31 then
-    let c : <a href="shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="shared_pseudocode.html#enum_Unpredictable_WBOVERLAPLD" title="">Unpredictable_WBOVERLAPLD</a>);
-    assert c IN {<a href="shared_pseudocode.html#enum_Constraint_WBSUPPRESS" title="">Constraint_WBSUPPRESS</a>, <a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
+    let c : <a href="/latest_aarch64/shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="/latest_aarch64/shared_pseudocode.html#enum_Unpredictable_WBOVERLAPLD" title="">Unpredictable_WBOVERLAPLD</a>);
+    assert c IN {<a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_WBSUPPRESS" title="">Constraint_WBSUPPRESS</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
     case c of
-        when <a href="shared_pseudocode.html#enum_Constraint_WBSUPPRESS" title="">Constraint_WBSUPPRESS</a> =&gt; wback = FALSE;       // writeback is suppressed
-        when <a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    wb_unknown = TRUE;   // writeback is UNKNOWN
-        when <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
-        when <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_WBSUPPRESS" title="">Constraint_WBSUPPRESS</a> =&gt; wback = FALSE;       // writeback is suppressed
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    wb_unknown = TRUE;   // writeback is UNKNOWN
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
     end;
 end;</p>
   <div class="encoding-notes"></div><h2 class="explanations">Assembler Symbols</h2><div class="explanations"><table><col class="asyn-l"></col><col class="asyn-r"></col><tr><td>&lt;Xt&gt;</td><td><a id="XtOrXZR__11"></a>
@@ -62,38 +62,38 @@ end;</p>
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
       <p class="pseudocode">var address : bits(64);
-let privileged : boolean = <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="shared_pseudocode.html#global_EL0" title="">EL0</a>;
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="/latest_aarch64/shared_pseudocode.html#global_EL0" title="">EL0</a>;
 let auth_then_branch : boolean = TRUE;
 
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescGPR_5" title="">CreateAccDescGPR</a>(<a href="shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, nontemporal, privileged,
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescGPR_5" title="">CreateAccDescGPR</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, nontemporal, privileged,
                                                   tagchecked, t);
 if n == 31 then
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
 if use_key_a then
-    address = <a href="shared_pseudocode.html#func_AuthDA_3" title="">AuthDA</a>(address, <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(31), auth_then_branch);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#func_AuthDA_3" title="">AuthDA</a>(address, <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(31), auth_then_branch);
 else
-    address = <a href="shared_pseudocode.html#func_AuthDB_3" title="">AuthDB</a>(address, <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(31), auth_then_branch);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#func_AuthDB_3" title="">AuthDB</a>(address, <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(31), auth_then_branch);
 end;
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
 end;
 
-address = <a href="shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = <a href="shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{64}(address, accdesc);
+address = <a href="/latest_aarch64/shared_pseudocode.html#func_AddressAdd_3" title="">AddressAdd</a>(address, offset, accdesc);
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t) = <a href="/latest_aarch64/shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{64}(address, accdesc);
 
 if wback then
     if wb_unknown then
         address = ARBITRARY : bits(64);
     end;
     if n == 31 then
-        <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}() = address;
+        <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}() = address;
     else
-        <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n) = address;
+        <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n) = address;
     end;
 end;</p></div>
   <h2>Operational information</h2>

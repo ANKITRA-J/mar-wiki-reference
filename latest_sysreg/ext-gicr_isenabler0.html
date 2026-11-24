@@ -16,11 +16,11 @@
 <p>After a write of 1 to this bit, a subsequent read of this bit returns 1.</p></td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
       this field resets
        to the expression <span class="pseudocode">0x00000000</span>.</li></ul></div><h2>Accessing GICR_ISENABLER0</h2>
-        <p>When affinity routing is not enabled for the Security state of an interrupt in GICR_ISENABLER0, the corresponding bit is RAZ/WI and equivalent functionality is provided by <a href="ext-gicd_isenablern.html">GICD_ISENABLER&lt;n&gt;</a> with n=0.</p>
+        <p>When affinity routing is not enabled for the Security state of an interrupt in GICR_ISENABLER0, the corresponding bit is RAZ/WI and equivalent functionality is provided by <a href="/latest_sysreg/ext-gicd_isenablern.html">GICD_ISENABLER&lt;n&gt;</a> with n=0.</p>
 
       
-        <p>This register only applies to SGIs (bits [15:0]) and PPIs (bits [31:16]). For SPIs, this functionality is provided by <a href="ext-gicd_isenablern.html">GICD_ISENABLER&lt;n&gt;</a>.</p>
+        <p>This register only applies to SGIs (bits [15:0]) and PPIs (bits [31:16]). For SPIs, this functionality is provided by <a href="/latest_sysreg/ext-gicd_isenablern.html">GICD_ISENABLER&lt;n&gt;</a>.</p>
 
       
-        <p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, bits corresponding to Secure SGIs and PPIs are RAZ/WI to Non-secure accesses.</p>
+        <p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 0, bits corresponding to Secure SGIs and PPIs are RAZ/WI to Non-secure accesses.</p>
       <h4>GICR_ISENABLER0 can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Redistributor</td><td>SGI_base</td><td><span class="hexnumber">0x0100</span></td><td>GICR_ISENABLER0</td></tr></table><p>Accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

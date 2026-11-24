@@ -3,7 +3,7 @@
 <title>CNTHP_TVAL_EL2 | Jon's Arm Reference</title><meta name="description" content="Holds the timer value for the EL2 physical timer."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">CNTHP_TVAL_EL2</h1><p class="insn_subtitle" data-pagefind-body="1">Counter-timer Physical Timer TimerValue Register (EL2)</p><div data-pagefind-body="1">
         <p>Holds the timer value for the EL2 physical timer.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register CNTHP_TVAL_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-cnthp_tval.html">CNTHP_TVAL[31:0]</a>.</p><p>This register is present only when (EL3 is implemented or (EL3 is not implemented, EL2 is implemented, and FEAT_SEL2 is not implemented)) and FEAT_AA64 is implemented. Otherwise, direct accesses to CNTHP_TVAL_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register CNTHP_TVAL_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-cnthp_tval.html">CNTHP_TVAL[31:0]</a>.</p><p>This register is present only when (EL3 is implemented or (EL3 is not implemented, EL2 is implemented, and FEAT_SEL2 is not implemented)) and FEAT_AA64 is implemented. Otherwise, direct accesses to CNTHP_TVAL_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>CNTHP_TVAL_EL2 is a 64-bit register.</p>
@@ -14,19 +14,19 @@
       </h4><div class="field"><p>The TimerValue view of the EL2 physical timer.</p>
 <p>On a read of this register:</p>
 <ul>
-<li>If <a href="AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ENABLE is 0, the value returned is <span class="arm-defined-word">UNKNOWN</span>.
-</li><li>If <a href="AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ENABLE is 1, the value returned is (<a href="AArch64-cnthp_cval_el2.html">CNTHP_CVAL_EL2</a> - <a href="AArch64-cntpct_el0.html">CNTPCT_EL0</a>).
+<li>If <a href="/latest_sysreg/AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ENABLE is 0, the value returned is <span class="arm-defined-word">UNKNOWN</span>.
+</li><li>If <a href="/latest_sysreg/AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ENABLE is 1, the value returned is (<a href="/latest_sysreg/AArch64-cnthp_cval_el2.html">CNTHP_CVAL_EL2</a> - <a href="/latest_sysreg/AArch64-cntpct_el0.html">CNTPCT_EL0</a>).
 </li></ul>
-<p>On a write of this register, <a href="AArch64-cnthp_cval_el2.html">CNTHP_CVAL_EL2</a> is set to (<a href="AArch64-cntpct_el0.html">CNTPCT_EL0</a> + TimerValue), where TimerValue is treated as a signed 32-bit integer.</p>
-<p>When <a href="AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ENABLE is 1, the timer condition is met when (<a href="AArch64-cntpct_el0.html">CNTPCT_EL0</a> - <a href="AArch64-cnthp_cval_el2.html">CNTHP_CVAL_EL2</a>) is greater than or equal to zero. This means that TimerValue acts like a 32-bit downcounter timer. When the timer condition is met:</p>
+<p>On a write of this register, <a href="/latest_sysreg/AArch64-cnthp_cval_el2.html">CNTHP_CVAL_EL2</a> is set to (<a href="/latest_sysreg/AArch64-cntpct_el0.html">CNTPCT_EL0</a> + TimerValue), where TimerValue is treated as a signed 32-bit integer.</p>
+<p>When <a href="/latest_sysreg/AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ENABLE is 1, the timer condition is met when (<a href="/latest_sysreg/AArch64-cntpct_el0.html">CNTPCT_EL0</a> - <a href="/latest_sysreg/AArch64-cnthp_cval_el2.html">CNTHP_CVAL_EL2</a>) is greater than or equal to zero. This means that TimerValue acts like a 32-bit downcounter timer. When the timer condition is met:</p>
 <ul>
-<li><a href="AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ISTATUS is set to 1.
-</li><li>If <a href="AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.IMASK is 0, an interrupt is generated.
+<li><a href="/latest_sysreg/AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ISTATUS is set to 1.
+</li><li>If <a href="/latest_sysreg/AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.IMASK is 0, an interrupt is generated.
 </li></ul>
-<p>When <a href="AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ENABLE is 0, the TimerValue cannot be read but continues to decrement. When the timer is enabled, the TimerValue represents the elapsed time whether that time was spent enabled or disabled.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>When <a href="/latest_sysreg/AArch64-cnthp_ctl_el2.html">CNTHP_CTL_EL2</a>.ENABLE is 0, the TimerValue cannot be read but continues to decrement. When the timer is enabled, the TimerValue represents the elapsed time whether that time was spent enabled or disabled.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name CNTHP_TVAL_EL2 or CNTP_TVAL_EL0 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name CNTHP_TVAL_EL2 or CNTP_TVAL_EL0 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, CNTHP_TVAL_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b1110, CRm = 0b0010, op2 = 0b000)
       </p><p class="pseudocode">

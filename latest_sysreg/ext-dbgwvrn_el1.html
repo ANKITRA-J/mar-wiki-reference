@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>DBGWVR&lt;n&gt;_EL1 | Jon's Arm Reference</title><meta name="description" content="Holds a data address value for use in watchpoint matching. Forms watchpoint n together with control register DBGWCR&lt;n&gt;_EL1."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">DBGWVR&lt;n&gt;_EL1, n = 0 - 63</h1><p class="insn_subtitle" data-pagefind-body="1">Debug Watchpoint Value Registers</p><div data-pagefind-body="1">
-        <p>Holds a data address value for use in watchpoint matching. Forms watchpoint n together with control register <a href="ext-dbgwcrn_el1.html">DBGWCR&lt;n&gt;_EL1</a>.</p>
-      </div><h3>Configuration</h3><p>External register DBGWVR&lt;n&gt;_EL1 bits [63:0] are architecturally mapped to AArch64 System register <a href="AArch64-dbgwvrn_el1.html">DBGWVR&lt;n&gt;_EL1[63:0]</a>.</p><p>External register DBGWVR&lt;n&gt;_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-dbgwvrn.html">DBGWVR&lt;n&gt;[31:0]</a>.</p><p>DBGWVR&lt;n&gt;_EL1 is in the Core power domain.
+        <p>Holds a data address value for use in watchpoint matching. Forms watchpoint n together with control register <a href="/latest_sysreg/ext-dbgwcrn_el1.html">DBGWCR&lt;n&gt;_EL1</a>.</p>
+      </div><h3>Configuration</h3><p>External register DBGWVR&lt;n&gt;_EL1 bits [63:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-dbgwvrn_el1.html">DBGWVR&lt;n&gt;_EL1[63:0]</a>.</p><p>External register DBGWVR&lt;n&gt;_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-dbgwvrn.html">DBGWVR&lt;n&gt;[31:0]</a>.</p><p>DBGWVR&lt;n&gt;_EL1 is in the Core power domain.
     </p>
         <p>If watchpoint n is not implemented, then accesses to this register are:</p>
 
@@ -48,7 +48,7 @@
       </h4><div class="field"><p>Bits[48:2] of the address value for comparison.</p>
 <p>When <span class="xref">FEAT_LVA3</span> is implemented, (VA[56:53]:VA[52:49]) forms the upper part of the address value. If FEAT_LVA3 is not implemented, bits VA[56:53] are part of the RESS field.</p>
 <p>When <span class="xref">FEAT_LVA</span> is implemented, VA[52:49] forms the upper part of the address value. If FEAT_LVA is not implemented, bits [52:49] are part of the RESS field.</p>
-<p>Arm deprecates setting <a href="ext-dbgwvrn_el1.html">DBGWVR&lt;n&gt;_EL1</a>[2] == 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
+<p>Arm deprecates setting <a href="/latest_sysreg/ext-dbgwvrn_el1.html">DBGWVR&lt;n&gt;_EL1</a>[2] == 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Cold reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-1_0">Bits [1:0]:
       </h4><div class="field">

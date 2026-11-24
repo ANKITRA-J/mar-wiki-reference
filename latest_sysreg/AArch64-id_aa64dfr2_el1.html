@@ -44,9 +44,9 @@
       </h4><div class="field">
       <p>Breakpoints and watchpoint enhancements.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>BWE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>This field does not indicate whether <a href="AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.MASK and address mismatch breakpoints are implemented.</p>
+          <p>This field does not indicate whether <a href="/latest_sysreg/AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.MASK and address mismatch breakpoints are implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><a href="AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.MASK and address mismatch breakpoints are implemented.</p>
+          <p><a href="/latest_sysreg/AArch64-dbgbcrn_el1.html">DBGBCR&lt;n&gt;_EL1</a>.MASK and address mismatch breakpoints are implemented.</p>
         </td></tr><tr><td class="bitfield">0b0010</td><td>
           <p>As <span class="binarynumber">0b0001</span>, and address mismatch watchpoints are implemented.</p>
         </td></tr></table><p>All other values are reserved.</p>
@@ -56,9 +56,9 @@
       </h4><div class="field">
       <p>Enhanced Software Step Extension.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>STEP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>Execution from <a href="AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> is not supported for Software Step.</p>
+          <p>Execution from <a href="/latest_sysreg/AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> is not supported for Software Step.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>Execution from <a href="AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> is supported for Software Step.</p>
+          <p>Execution from <a href="/latest_sysreg/AArch64-mdstepop_el1.html">MDSTEPOP_EL1</a> is supported for Software Step.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_STEP2</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, ID_AA64DFR2_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b000, CRn = 0b0000, CRm = 0b0101, op2 = 0b010)

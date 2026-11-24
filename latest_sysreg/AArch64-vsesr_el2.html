@@ -5,14 +5,14 @@
         <p>Provides the syndrome value reported to software on taking a virtual SError exception to EL1, or on executing an <span class="instruction">ESB</span> instruction at EL1.</p>
 
       
-        <p>When the virtual SError exception injected using <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VSE is taken to EL1 using AArch64, then the syndrome value is reported in <a href="AArch64-esr_el1.html">ESR_EL1</a>.</p>
+        <p>When the virtual SError exception injected using <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VSE is taken to EL1 using AArch64, then the syndrome value is reported in <a href="/latest_sysreg/AArch64-esr_el1.html">ESR_EL1</a>.</p>
 
       
-        <p>When the virtual SError exception injected using <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VSE is taken to EL1 using AArch32, then the syndrome value is reported in <a href="AArch32-dfsr.html">DFSR</a>.{AET, ExT} and the remainder of <a href="AArch32-dfsr.html">DFSR</a> is set as defined by VMSAv8-32. For more information, see <span class="xref">The AArch32 Virtual Memory System Architecture</span>.</p>
+        <p>When the virtual SError exception injected using <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VSE is taken to EL1 using AArch32, then the syndrome value is reported in <a href="/latest_sysreg/AArch32-dfsr.html">DFSR</a>.{AET, ExT} and the remainder of <a href="/latest_sysreg/AArch32-dfsr.html">DFSR</a> is set as defined by VMSAv8-32. For more information, see <span class="xref">The AArch32 Virtual Memory System Architecture</span>.</p>
 
       
-        <p>When the virtual SError exception injected using <a href="AArch64-hcr_el2.html">HCR_EL2</a>.VSE is deferred by an <span class="instruction">ESB</span> instruction, then the syndrome value is written to <a href="AArch64-vdisr_el2.html">VDISR_EL2</a>.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register VSESR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-vdfsr.html">VDFSR[31:0]</a>.</p><p>This register is present only when FEAT_RAS is implemented. Otherwise, direct accesses to VSESR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+        <p>When the virtual SError exception injected using <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.VSE is deferred by an <span class="instruction">ESB</span> instruction, then the syndrome value is written to <a href="/latest_sysreg/AArch64-vdisr_el2.html">VDISR_EL2</a>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register VSESR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-vdfsr.html">VDFSR[31:0]</a>.</p><p>This register is present only when FEAT_RAS is implemented. Otherwise, direct accesses to VSESR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
 
       
@@ -23,15 +23,15 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_14">AET, bits [15:14]:
-      </h4><div class="field"><p>When a virtual SError exception is taken to EL1 using AArch32, <a href="AArch32-dfsr.html">DFSR</a>[15:14] is set to VSESR_EL2.AET.</p>
-<p>When a virtual SError exception is deferred by an <span class="instruction">ESB</span> instruction, <a href="AArch64-vdisr_el2.html">VDISR_EL2</a>[15:14] is set to VSESR_EL2.AET.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+      </h4><div class="field"><p>When a virtual SError exception is taken to EL1 using AArch32, <a href="/latest_sysreg/AArch32-dfsr.html">DFSR</a>[15:14] is set to VSESR_EL2.AET.</p>
+<p>When a virtual SError exception is deferred by an <span class="instruction">ESB</span> instruction, <a href="/latest_sysreg/AArch64-vdisr_el2.html">VDISR_EL2</a>[15:14] is set to VSESR_EL2.AET.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-13_13">Bit [13]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-12_12">ExT, bit [12]:
-      </h4><div class="field"><p>When a virtual SError exception is taken to EL1 using AArch32, <a href="AArch32-dfsr.html">DFSR</a>[12] is set to VSESR_EL2.ExT.</p>
-<p>When a virtual SError exception is deferred by an <span class="instruction">ESB</span> instruction, <a href="AArch64-vdisr_el2.html">VDISR_EL2</a>[12] is set to VSESR_EL2.ExT.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+      </h4><div class="field"><p>When a virtual SError exception is taken to EL1 using AArch32, <a href="/latest_sysreg/AArch32-dfsr.html">DFSR</a>[12] is set to VSESR_EL2.ExT.</p>
+<p>When a virtual SError exception is deferred by an <span class="instruction">ESB</span> instruction, <a href="/latest_sysreg/AArch64-vdisr_el2.html">VDISR_EL2</a>[12] is set to VSESR_EL2.ExT.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-11_0">Bits [11:0]:
       </h4><div class="field">
@@ -40,12 +40,12 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-24_24">IDS, bit [24]:
-      </h4><div class="field"><p>When a virtual SError exception is taken to EL1 using AArch64, <a href="AArch64-esr_el1.html">ESR_EL1</a>[24] is set to VSESR_EL2.IDS.</p>
-<p>When a virtual SError exception is deferred by an <span class="instruction">ESB</span> instruction, <a href="AArch64-vdisr_el2.html">VDISR_EL2</a>[24] is set to VSESR_EL2.IDS.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+      </h4><div class="field"><p>When a virtual SError exception is taken to EL1 using AArch64, <a href="/latest_sysreg/AArch64-esr_el1.html">ESR_EL1</a>[24] is set to VSESR_EL2.IDS.</p>
+<p>When a virtual SError exception is deferred by an <span class="instruction">ESB</span> instruction, <a href="/latest_sysreg/AArch64-vdisr_el2.html">VDISR_EL2</a>[24] is set to VSESR_EL2.IDS.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-23_0">ISS, bits [23:0]:
-      </h4><div class="field"><p>When a virtual SError exception is taken to EL1 using AArch64, <a href="AArch64-esr_el1.html">ESR_EL1</a>[23:0] is set to VSESR_EL2.ISS.</p>
-<p>When a virtual SError exception is deferred by an <span class="instruction">ESB</span> instruction, <a href="AArch64-vdisr_el2.html">VDISR_EL2</a>[23:0] is set to VSESR_EL2.ISS.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+      </h4><div class="field"><p>When a virtual SError exception is taken to EL1 using AArch64, <a href="/latest_sysreg/AArch64-esr_el1.html">ESR_EL1</a>[23:0] is set to VSESR_EL2.ISS.</p>
+<p>When a virtual SError exception is deferred by an <span class="instruction">ESB</span> instruction, <a href="/latest_sysreg/AArch64-vdisr_el2.html">VDISR_EL2</a>[23:0] is set to VSESR_EL2.ISS.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, VSESR_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b0101, CRm = 0b0010, op2 = 0b011)

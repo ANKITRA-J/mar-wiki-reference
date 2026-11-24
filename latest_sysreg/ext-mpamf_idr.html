@@ -51,7 +51,7 @@
 
       
         <ul>
-<li>When MPAMF_IDR.HAS_RIS is 1, some fields in this register give information for the resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. The description of every field that is affected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS has that information within the field description.
+<li>When MPAMF_IDR.HAS_RIS is 1, some fields in this register give information for the resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. The description of every field that is affected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS has that information within the field description.
 </li></ul>
 
       
@@ -70,7 +70,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-59_56-1">RIS_MAX, bits [59:56] <span class="condition">when MPAMF_IDR.HAS_RIS == '1'</span>:
       </h4><div class="field">
-      <p>Maximum RIS value supported in <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>. Must be <span class="binarynumber">0b0000</span> if <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS == 0.</p>
+      <p>Maximum RIS value supported in <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>. Must be <span class="binarynumber">0b0000</span> if <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS == 0.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-59_56-2"> <span class="condition">Otherwise</span>:
@@ -90,51 +90,51 @@
       </h4><div class="field">
       <p>Has PARTID Narrowing.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_PARTID_NRW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not have <a href="ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, or intPARTID mapping support.</p>
+          <p>Does not have <a href="/latest_sysreg/ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, or intPARTID mapping support.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports the <a href="ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> registers.</p>
+          <p>Supports the <a href="/latest_sysreg/ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> registers.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-53_53">HAS_MSMON, bit [53] (MPAMv2 variant):
       </h4><div class="field">
       <p>Has resource Monitors. Indicates whether this MSC has MPAM resource monitors.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_MSMON</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support MPAM resource monitoring by groups or <a href="ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
+          <p>Does not support MPAM resource monitoring by groups or <a href="/latest_sysreg/ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports resource monitoring by matching a combination of PARTID and PMG. See <a href="ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
+          <p>Supports resource monitoring by matching a combination of PARTID and PMG. See <a href="/latest_sysreg/ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-52_52">HAS_IMPL_IDR, bit [52] (MPAMv2 variant):
       </h4><div class="field">
-      <p>Has <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>. Indicates whether this MSC has the <span class="arm-defined-word">IMPLEMENTATION SPECIFIC</span> MPAM features register, <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
+      <p>Has <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>. Indicates whether this MSC has the <span class="arm-defined-word">IMPLEMENTATION SPECIFIC</span> MPAM features register, <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_IMPL_IDR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not have <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
+          <p>Does not have <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-51_51">HAS_PRI_PART, bit [51] (MPAMv2 variant):
       </h4><div class="field">
-      <p>Has Priority Partitioning. Indicates that MPAM priority partitioning is implemented and <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a> exists.</p>
+      <p>Has Priority Partitioning. Indicates that MPAM priority partitioning is implemented and <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a> exists.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_PRI_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support priority partitioning or have <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
+          <p>Does not support priority partitioning or have <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has priority partitioning and <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
+          <p>Has priority partitioning and <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-50_50">HAS_MBW_PART, bit [50] (MPAMv2 variant):
       </h4><div class="field">
-      <p>Has Memory Bandwidth Partitioning. Indicates whether this MSC implements MPAM memory bandwidth partitioning and <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a>.</p>
+      <p>Has Memory Bandwidth Partitioning. Indicates whether this MSC implements MPAM memory bandwidth partitioning and <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_MBW_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support memory bandwidth partitioning or have <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
+          <p>Does not support memory bandwidth partitioning or have <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-49_49">HAS_CPOR_PART, bit [49] (MPAMv2 variant):
       </h4><div class="field">
-      <p>Has Cache Portion Partitioning. Indicates whether this MSC implements MPAM cache portion partitioning and <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a>.</p>
+      <p>Has Cache Portion Partitioning. Indicates whether this MSC implements MPAM cache portion partitioning and <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CPOR_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support cache portion partitioning or have <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> or <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
+          <p>Does not support cache portion partitioning or have <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> or <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> and <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-48_48">HAS_CCAP_PART, bit [48] (MPAMv2 variant):
       </h4><div class="field">
-      <p>Has Cache Capacity Partitioning. Indicates whether this MSC implements MPAM cache capacity partitioning and the <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
+      <p>Has Cache Capacity Partitioning. Indicates whether this MSC implements MPAM cache capacity partitioning and the <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CCAP_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support cache capacity partitioning or have <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
+          <p>Does not support cache capacity partitioning or have <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-47_47">Bit [47]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -163,65 +163,65 @@
           <p>MPAM information bundle manipulation for ingress translation is supported.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-43_43">HAS_NFU, bit [43]:
       </h4><div class="field">
-      <p>Has No Future Use field in <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>. Indicates that <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU is implemented.</p>
+      <p>Has No Future Use field in <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>. Indicates that <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU is implemented.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_NFU</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU is not implemented. A PARTID disabled through access to MPAMCFG_DIS must preserve the control settings of the disabled PARTID.</p>
+          <p><a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU is not implemented. A PARTID disabled through access to MPAMCFG_DIS must preserve the control settings of the disabled PARTID.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Implements <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU. A PARTID disabled with NFU as 1 may have its control settings forgotten.</p>
-        </td></tr></table><p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ENDIS is 0, this field must also be 0.</p>
-<p>This field must be the same in each instance of this register and for any value in <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-42_42">HAS_ENDIS, bit [42]:
+          <p>Implements <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU. A PARTID disabled with NFU as 1 may have its control settings forgotten.</p>
+        </td></tr></table><p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ENDIS is 0, this field must also be 0.</p>
+<p>This field must be the same in each instance of this register and for any value in <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-42_42">HAS_ENDIS, bit [42]:
       </h4><div class="field">
-      <p>Has PARTID enable and disable. Indicates that this MSC supports PARTID disable and enable using <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>, <a href="ext-mpamcfg_en.html">MPAMCFG_EN</a> and <a href="ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers.</p>
+      <p>Has PARTID enable and disable. Indicates that this MSC supports PARTID disable and enable using <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>, <a href="/latest_sysreg/ext-mpamcfg_en.html">MPAMCFG_EN</a> and <a href="/latest_sysreg/ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_ENDIS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support PARTID enable and disable functionality, and <a href="ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a> and <a href="ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers are not implemented.</p>
+          <p>Does not support PARTID enable and disable functionality, and <a href="/latest_sysreg/ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a> and <a href="/latest_sysreg/ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports PARTID enable and disable through the <a href="ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a> and <a href="ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers.</p>
-        </td></tr></table><p>All three registers must be implemented when this field is 1, <a href="ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>, and <a href="ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a>.</p>
-<p>This field must be the same in each instance of this register and for any value in <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-41_41">Bit [41]:
+          <p>Supports PARTID enable and disable through the <a href="/latest_sysreg/ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a> and <a href="/latest_sysreg/ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers.</p>
+        </td></tr></table><p>All three registers must be implemented when this field is 1, <a href="/latest_sysreg/ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>, and <a href="/latest_sysreg/ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a>.</p>
+<p>This field must be the same in each instance of this register and for any value in <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-41_41">Bit [41]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-40_40">HAS_ERR_MSI, bit [40]:
       </h4><div class="field">
-      <p>Has support for MSI writes to signal MPAM error interrupts. These registers are implemented: <a href="ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a>.</p>
+      <p>Has support for MSI writes to signal MPAM error interrupts. These registers are implemented: <a href="/latest_sysreg/ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="/latest_sysreg/ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_ERR_MSI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a> registers are not implemented.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="/latest_sysreg/ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a> registers are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a> are implemented and can be used to generate writes to signal error interrupts.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="/latest_sysreg/ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a> are implemented and can be used to generate writes to signal error interrupts.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ESR is 0, this bit must also be 0.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ESR is 0, this bit must also be 0.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-39_39">HAS_ESR, bit [39]:
       </h4><div class="field">
-      <p><a href="ext-mpamf_esr.html">MPAMF_ESR</a> is implemented.</p>
+      <p><a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a> is implemented.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_ESR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamf_esr.html">MPAMF_ESR</a>, <a href="ext-mpamf_ecr.html">MPAMF_ECR</a>, and MPAM error handling are not implemented.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a>, <a href="/latest_sysreg/ext-mpamf_ecr.html">MPAMF_ECR</a>, and MPAM error handling are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamf_esr.html">MPAMF_ESR</a>, <a href="ext-mpamf_ecr.html">MPAMF_ECR</a>, and MPAM error handling are implemented.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a>, <a href="/latest_sysreg/ext-mpamf_ecr.html">MPAMF_ECR</a>, and MPAM error handling are implemented.</p>
         </td></tr></table>
-      <p>If an MSC cannot encounter any of the error conditions listed in <span class="xref">MPAM MSC Errors</span> of Arm®  Memory System Resource Partitioning and Monitoring (MPAM) System Component Specification (ARM IHI 0099), both the MPAMF_ESR and <a href="ext-mpamf_ecr.html">MPAMF_ECR</a> must be RAZ/WI.</p>
+      <p>If an MSC cannot encounter any of the error conditions listed in <span class="xref">MPAM MSC Errors</span> of Arm®  Memory System Resource Partitioning and Monitoring (MPAM) System Component Specification (ARM IHI 0099), both the MPAMF_ESR and <a href="/latest_sysreg/ext-mpamf_ecr.html">MPAMF_ECR</a> must be RAZ/WI.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-38_38">Bit [38]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-37_37-1">NO_IMPL_MSMON, bit [37] <span class="condition">when MPAMF_IDR.HAS_IMPL_IDR == '1'</span>:
       </h4><div class="field">
-      <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines no <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors.</p>
+      <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines no <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>NO_IMPL_MSMON</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines at least one <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitor.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines at least one <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitor.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> does not define any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> does not define any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors.</p>
         </td></tr></table>
-      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors described in <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> for the selected resource instance.</p>
+      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors described in <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> for the selected resource instance.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-37_37-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-36_36-1">NO_IMPL_PART, bit [36] <span class="condition">when MPAMF_IDR.HAS_IMPL_IDR == '1'</span>:
       </h4><div class="field">
-      <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines no <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls.</p>
+      <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines no <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>NO_IMPL_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines at least one <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource control.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines at least one <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource control.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> does not define any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> does not define any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls.</p>
         </td></tr></table>
-      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls described in <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> for the selected resource instance.</p>
+      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls described in <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> for the selected resource instance.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-36_36-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -230,11 +230,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-32_32">HAS_RIS, bit [32]:
       </h4><div class="field">
-      <p>Has resource instance selector. Indicates that <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> contains the RIS field that selects a resource instance to control.</p>
+      <p>Has resource instance selector. Indicates that <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> contains the RIS field that selects a resource instance to control.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_RIS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> does not implement the <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS field or multiple resource instance support.</p>
+          <p><a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> does not implement the <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS field or multiple resource instance support.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> implements the <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS field and MPAM resource instance numbers up to and including MPAMF_IDR.RIS_MAX.</p>
+          <p><a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> implements the <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS field and MPAM resource instance numbers up to and including MPAMF_IDR.RIS_MAX.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-31_16">PMG_MAX, bits [31:16] (MPAMv2 variant):
       </h4><div class="field">
       <p>Maximum supported value of PMG.</p>
@@ -250,7 +250,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-59_56-1">RIS_MAX, bits [59:56] <span class="condition">when MPAMF_IDR.EXT == '1' and MPAMF_IDR.HAS_RIS == '1'</span>:
       </h4><div class="field">
-      <p>Maximum RIS value supported in <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>. Must be <span class="binarynumber">0b0000</span> if <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS == 0.</p>
+      <p>Maximum RIS value supported in <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>. Must be <span class="binarynumber">0b0000</span> if <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS == 0.</p>
     
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-59_56-2"> <span class="condition">Otherwise</span>:
@@ -293,24 +293,24 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-43_43-1">HAS_NFU, bit [43] <span class="condition">when MPAMF_IDR.EXT == '1'</span>:
       </h4><div class="field">
-      <p>Has No Future Use field in <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>. Indicates that <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU is implemented.</p>
+      <p>Has No Future Use field in <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>. Indicates that <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU is implemented.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_NFU</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU is not implemented. A PARTID disabled through access to MPAMCFG_DIS must preserve the control settings of the disabled PARTID.</p>
+          <p><a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU is not implemented. A PARTID disabled through access to MPAMCFG_DIS must preserve the control settings of the disabled PARTID.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Implements <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU. A PARTID disabled with NFU as 1 may have its control settings forgotten.</p>
-        </td></tr></table><p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ENDIS is 0, this field must also be 0.</p>
-<p>This field must be the same in each instance of this register and for any value in <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-43_43-2"> <span class="condition">Otherwise</span>:
+          <p>Implements <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>.NFU. A PARTID disabled with NFU as 1 may have its control settings forgotten.</p>
+        </td></tr></table><p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ENDIS is 0, this field must also be 0.</p>
+<p>This field must be the same in each instance of this register and for any value in <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-43_43-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-42_42-1">HAS_ENDIS, bit [42] <span class="condition">when MPAMF_IDR.EXT == '1'</span>:
       </h4><div class="field">
-      <p>Has PARTID enable and disable. Indicates that this MSC supports PARTID disable and enable using <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>, <a href="ext-mpamcfg_en.html">MPAMCFG_EN</a> and <a href="ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers.</p>
+      <p>Has PARTID enable and disable. Indicates that this MSC supports PARTID disable and enable using <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>, <a href="/latest_sysreg/ext-mpamcfg_en.html">MPAMCFG_EN</a> and <a href="/latest_sysreg/ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_ENDIS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support PARTID enable and disable functionality, and <a href="ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a> and <a href="ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers are not implemented.</p>
+          <p>Does not support PARTID enable and disable functionality, and <a href="/latest_sysreg/ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a> and <a href="/latest_sysreg/ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports PARTID enable and disable through the <a href="ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a> and <a href="ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers.</p>
-        </td></tr></table><p>All three registers must be implemented when this field is 1, <a href="ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="ext-mpamcfg_dis.html">MPAMCFG_DIS</a>, and <a href="ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a>.</p>
-<p>This field must be the same in each instance of this register and for any value in <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-42_42-2"> <span class="condition">Otherwise</span>:
+          <p>Supports PARTID enable and disable through the <a href="/latest_sysreg/ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a> and <a href="/latest_sysreg/ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a> registers.</p>
+        </td></tr></table><p>All three registers must be implemented when this field is 1, <a href="/latest_sysreg/ext-mpamcfg_en.html">MPAMCFG_EN</a>, <a href="/latest_sysreg/ext-mpamcfg_dis.html">MPAMCFG_DIS</a>, and <a href="/latest_sysreg/ext-mpamcfg_en_flags.html">MPAMCFG_EN_FLAGS</a>.</p>
+<p>This field must be the same in each instance of this register and for any value in <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-42_42-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-41_41-1">SP4, bit [41] <span class="condition">when MPAMF_IDR.EXT == '1' and FEAT_RME is implemented</span>:
@@ -321,67 +321,67 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>This MSC supports four PARTID spaces.</p>
         </td></tr></table>
-      <p>This field must read the same in each instance of this register and for any value in <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
+      <p>This field must read the same in each instance of this register and for any value in <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-41_41-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-40_40-1">HAS_ERR_MSI, bit [40] <span class="condition">when MPAMF_IDR.EXT == '1'</span>:
       </h4><div class="field">
-      <p>Has support for MSI writes to signal MPAM error interrupts. These registers are implemented: <a href="ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a>.</p>
+      <p>Has support for MSI writes to signal MPAM error interrupts. These registers are implemented: <a href="/latest_sysreg/ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="/latest_sysreg/ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_ERR_MSI</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a> registers are not implemented.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="/latest_sysreg/ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a> registers are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a> are implemented and can be used to generate writes to signal error interrupts.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_err_msi_addr_l.html">MPAMF_ERR_MSI_ADDR_L</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_addr_h.html">MPAMF_ERR_MSI_ADDR_H</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_attr.html">MPAMF_ERR_MSI_ATTR</a>, <a href="/latest_sysreg/ext-mpamf_err_msi_data.html">MPAMF_ERR_MSI_DATA</a>, and <a href="/latest_sysreg/ext-mpamf_err_msi_mpam.html">MPAMF_ERR_MSI_MPAM</a> are implemented and can be used to generate writes to signal error interrupts.</p>
         </td></tr></table>
-      <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ESR is 0, this bit must also be 0.</p>
+      <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ESR is 0, this bit must also be 0.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-40_40-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-39_39-1">HAS_ESR, bit [39] <span class="condition">when MPAMF_IDR.EXT == '1'</span>:
       </h4><div class="field">
-      <p><a href="ext-mpamf_esr.html">MPAMF_ESR</a> is implemented.</p>
+      <p><a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a> is implemented.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_ESR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamf_esr.html">MPAMF_ESR</a>, <a href="ext-mpamf_ecr.html">MPAMF_ECR</a>, and MPAM error handling are not implemented.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a>, <a href="/latest_sysreg/ext-mpamf_ecr.html">MPAMF_ECR</a>, and MPAM error handling are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamf_esr.html">MPAMF_ESR</a>, <a href="ext-mpamf_ecr.html">MPAMF_ECR</a>, and MPAM error handling are implemented.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a>, <a href="/latest_sysreg/ext-mpamf_ecr.html">MPAMF_ECR</a>, and MPAM error handling are implemented.</p>
         </td></tr></table>
-      <p>If an MSC cannot encounter any of the error conditions listed in <span class="xref">MPAM MSC Errors</span> of Arm®  Memory System Resource Partitioning and Monitoring (MPAM) System Component Specification (ARM IHI 0099), both the MPAMF_ESR and <a href="ext-mpamf_ecr.html">MPAMF_ECR</a> must be RAZ/WI.</p>
+      <p>If an MSC cannot encounter any of the error conditions listed in <span class="xref">MPAM MSC Errors</span> of Arm®  Memory System Resource Partitioning and Monitoring (MPAM) System Component Specification (ARM IHI 0099), both the MPAMF_ESR and <a href="/latest_sysreg/ext-mpamf_ecr.html">MPAMF_ECR</a> must be RAZ/WI.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-39_39-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-38_38-1">HAS_EXTD_ESR, bit [38] <span class="condition">when MPAMF_IDR.EXT == '1'</span>:
       </h4><div class="field">
-      <p><a href="ext-mpamf_esr.html">MPAMF_ESR</a> is 64 bits.</p>
+      <p><a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a> is 64 bits.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_EXTD_ESR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamf_esr.html">MPAMF_ESR</a> is 32 bits.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a> is 32 bits.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamf_esr.html">MPAMF_ESR</a> is 64 bits.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_esr.html">MPAMF_ESR</a> is 64 bits.</p>
         </td></tr></table>
-      <p>When <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS and <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ESR, this field must be 1.</p>
+      <p>When <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS and <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_ESR, this field must be 1.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-38_38-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-37_37-1">NO_IMPL_MSMON, bit [37] <span class="condition">when MPAMF_IDR.EXT == '1' and MPAMF_IDR.HAS_IMPL_IDR == '1'</span>:
       </h4><div class="field">
-      <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines no <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors.</p>
+      <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines no <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>NO_IMPL_MSMON</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines at least one <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitor.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines at least one <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitor.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> does not define any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> does not define any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors.</p>
         </td></tr></table>
-      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors described in <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> for the selected resource instance.</p>
+      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource monitors described in <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> for the selected resource instance.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-37_37-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-36_36-1">NO_IMPL_PART, bit [36] <span class="condition">when MPAMF_IDR.EXT == '1' and MPAMF_IDR.HAS_IMPL_IDR == '1'</span>:
       </h4><div class="field">
-      <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines no <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls.</p>
+      <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines no <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>NO_IMPL_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines at least one <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource control.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> defines at least one <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource control.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> does not define any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls.</p>
+          <p><a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> does not define any <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls.</p>
         </td></tr></table>
-      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls described in <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> for the selected resource instance.</p>
+      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> resource controls described in <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a> for the selected resource instance.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-36_36-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -390,11 +390,11 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-32_32-1">HAS_RIS, bit [32] <span class="condition">when MPAMF_IDR.EXT == '1'</span>:
       </h4><div class="field">
-      <p>Has resource instance selector. Indicates that <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> contains the RIS field that selects a resource instance to control.</p>
+      <p>Has resource instance selector. Indicates that <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> contains the RIS field that selects a resource instance to control.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_RIS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> does not implement the <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS field or multiple resource instance support.</p>
+          <p><a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> does not implement the <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS field or multiple resource instance support.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> implements the <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS field and MPAM resource instance numbers up to and including MPAMF_IDR.RIS_MAX.</p>
+          <p><a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a> implements the <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS field and MPAM resource instance numbers up to and including MPAMF_IDR.RIS_MAX.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-32_32-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -402,23 +402,23 @@
       </h4><div class="field">
       <p>Has PARTID Narrowing.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_PARTID_NRW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not have <a href="ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, or intPARTID mapping support.</p>
+          <p>Does not have <a href="/latest_sysreg/ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, or intPARTID mapping support.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports the <a href="ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> registers.</p>
+          <p>Supports the <a href="/latest_sysreg/ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> registers.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-30_30">HAS_MSMON, bit [30] (MPAMv0or1p1 variant):
       </h4><div class="field">
       <p>Has resource Monitors. Indicates whether this MSC has MPAM resource monitors.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_MSMON</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support MPAM resource monitoring by groups or <a href="ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
+          <p>Does not support MPAM resource monitoring by groups or <a href="/latest_sysreg/ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports resource monitoring by matching a combination of PARTID and PMG. See <a href="ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
+          <p>Supports resource monitoring by matching a combination of PARTID and PMG. See <a href="/latest_sysreg/ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-29_29">HAS_IMPL_IDR, bit [29] (MPAMv0or1p1 variant):
       </h4><div class="field">
-      <p>Has <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>. Indicates whether this MSC has the <span class="arm-defined-word">IMPLEMENTATION SPECIFIC</span> MPAM features register, <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
+      <p>Has <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>. Indicates whether this MSC has the <span class="arm-defined-word">IMPLEMENTATION SPECIFIC</span> MPAM features register, <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_IMPL_IDR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not have <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
+          <p>Does not have <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-28_28">EXT, bit [28]:
       </h4><div class="field">
       <p>Extended MPAMF_IDR.</p>
@@ -428,112 +428,112 @@
           <p>MPAMF_IDR has bits defined in [63:32]. The register is 64 bits.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-27_27">HAS_PRI_PART, bit [27] (MPAMv0or1p1 variant):
       </h4><div class="field">
-      <p>Has Priority Partitioning. Indicates that MPAM priority partitioning is implemented and <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a> exists.</p>
+      <p>Has Priority Partitioning. Indicates that MPAM priority partitioning is implemented and <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a> exists.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_PRI_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support priority partitioning or have <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
+          <p>Does not support priority partitioning or have <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has priority partitioning and <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
+          <p>Has priority partitioning and <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
         </td></tr></table>
-      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of priority partitioning resource controls as described in <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a> for the selected resource instance.</p>
+      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of priority partitioning resource controls as described in <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a> for the selected resource instance.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-26_26">HAS_MBW_PART, bit [26] (MPAMv0or1p1 variant):
       </h4><div class="field">
-      <p>Has Memory Bandwidth Partitioning. Indicates whether this MSC implements MPAM memory bandwidth partitioning and <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a>.</p>
+      <p>Has Memory Bandwidth Partitioning. Indicates whether this MSC implements MPAM memory bandwidth partitioning and <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_MBW_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support memory bandwidth partitioning or have <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
+          <p>Does not support memory bandwidth partitioning or have <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
         </td></tr></table>
-      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of memory bandwidth partitioning resource controls as described in <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> for the selected resource instance.</p>
+      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of memory bandwidth partitioning resource controls as described in <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> for the selected resource instance.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-25_25">HAS_CPOR_PART, bit [25] (MPAMv0or1p1 variant):
       </h4><div class="field">
-      <p>Has Cache Portion Partitioning. Indicates whether this MSC implements MPAM cache portion partitioning and <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a>.</p>
+      <p>Has Cache Portion Partitioning. Indicates whether this MSC implements MPAM cache portion partitioning and <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CPOR_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support cache portion partitioning or have <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> or <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
+          <p>Does not support cache portion partitioning or have <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> or <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> and <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
         </td></tr></table>
-      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of cache portion partitioning resource controls as described in <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> for the selected resource instance.</p>
+      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of cache portion partitioning resource controls as described in <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> for the selected resource instance.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-24_24">HAS_CCAP_PART, bit [24] (MPAMv0or1p1 variant):
       </h4><div class="field">
-      <p>Has Cache Capacity Partitioning. Indicates whether this MSC implements MPAM cache capacity partitioning and the <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
+      <p>Has Cache Capacity Partitioning. Indicates whether this MSC implements MPAM cache capacity partitioning and the <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CCAP_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support cache capacity partitioning or have <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
+          <p>Does not support cache capacity partitioning or have <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
         </td></tr></table>
-      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of cache capacity partitioning resource controls as described in <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> for the selected resource instance.</p>
+      <p>If MPAMF_IDR.RIS is 1, this field indicates the presence of cache capacity partitioning resource controls as described in <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> for the selected resource instance.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-23_16">PMG_MAX, bits [23:16] (MPAMv0or1p1 variant):
       </h4><div class="field">
       <p>Maximum supported value of PMG.</p>
-    <p>The value of this field is permitted to vary between the instances of <a href="ext-mpamf_idr.html">MPAMF_IDR</a>, each reporting the maximum supported PMG value in the PARTID space associated with that instance.</p>
-<p>In MPAMF_IDR_s, this field is permitted to report the maximum PMG value for the Non-secure PARTID space or for the Secure PARTID space. The maximum PMG value for the Secure PARTID space can be read from <a href="ext-mpamf_sidr.html">MPAMF_SIDR</a>.PMG_MAX.</p>
+    <p>The value of this field is permitted to vary between the instances of <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>, each reporting the maximum supported PMG value in the PARTID space associated with that instance.</p>
+<p>In MPAMF_IDR_s, this field is permitted to report the maximum PMG value for the Non-secure PARTID space or for the Secure PARTID space. The maximum PMG value for the Secure PARTID space can be read from <a href="/latest_sysreg/ext-mpamf_sidr.html">MPAMF_SIDR</a>.PMG_MAX.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-15_0">PARTID_MAX, bits [15:0]:
       </h4><div class="field">
       <p>Maximum supported value of PARTID.</p>
-    <p>The value of this field is permitted to vary between the instances of <a href="ext-mpamf_idr.html">MPAMF_IDR</a>, each reporting the maximum supported PARTID value in the PARTID space associated with that instance.</p>
-<p>In MPAMF_IDR_s, this field is permitted to report the maximum PARTID value for the Non-secure PARTID space or for the Secure PARTID space. The maximum PARTID value for the Secure PARTID space can be read from <a href="ext-mpamf_sidr.html">MPAMF_SIDR</a>.PARTID_MAX.</p>
+    <p>The value of this field is permitted to vary between the instances of <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>, each reporting the maximum supported PARTID value in the PARTID space associated with that instance.</p>
+<p>In MPAMF_IDR_s, this field is permitted to report the maximum PARTID value for the Non-secure PARTID space or for the Secure PARTID space. The maximum PARTID value for the Secure PARTID space can be read from <a href="/latest_sysreg/ext-mpamf_sidr.html">MPAMF_SIDR</a>.PARTID_MAX.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h3>MPAMv0or1px variant otherwise:</h3><table class="regdiagram" id="fieldset_2"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_2-31_31">HAS_PARTID_NRW</a></td><td class="lr" colspan="1"><a href="#fieldset_2-30_30">HAS_MSMON</a></td><td class="lr" colspan="1"><a href="#fieldset_2-29_29">HAS_IMPL_IDR</a></td><td class="lr" colspan="1"><a href="#fieldset_2-28_28">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_2-27_27">HAS_PRI_PART</a></td><td class="lr" colspan="1"><a href="#fieldset_2-26_26">HAS_MBW_PART</a></td><td class="lr" colspan="1"><a href="#fieldset_2-25_25">HAS_CPOR_PART</a></td><td class="lr" colspan="1"><a href="#fieldset_2-24_24">HAS_CCAP_PART</a></td><td class="lr" colspan="8"><a href="#fieldset_2-23_16">PMG_MAX</a></td><td class="lr" colspan="16"><a href="#fieldset_2-15_0">PARTID_MAX</a></td></tr></tbody></table><h4 id="fieldset_2-31_31">HAS_PARTID_NRW, bit [31] (MPAMv0or1px variant):
       </h4><div class="field">
       <p>Has PARTID Narrowing.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_PARTID_NRW</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not have <a href="ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, or intPARTID mapping support.</p>
+          <p>Does not have <a href="/latest_sysreg/ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a>, or intPARTID mapping support.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports the <a href="ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> registers.</p>
+          <p>Supports the <a href="/latest_sysreg/ext-mpamf_partid_nrw_idr.html">MPAMF_PARTID_NRW_IDR</a>, <a href="/latest_sysreg/ext-mpamcfg_intpartid.html">MPAMCFG_INTPARTID</a> registers.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_2-30_30">HAS_MSMON, bit [30] (MPAMv0or1px variant):
       </h4><div class="field">
       <p>Has resource Monitors. Indicates whether this MSC has MPAM resource monitors.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_MSMON</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support MPAM resource monitoring by groups or <a href="ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
+          <p>Does not support MPAM resource monitoring by groups or <a href="/latest_sysreg/ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Supports resource monitoring by matching a combination of PARTID and PMG. See <a href="ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
+          <p>Supports resource monitoring by matching a combination of PARTID and PMG. See <a href="/latest_sysreg/ext-mpamf_msmon_idr.html">MPAMF_MSMON_IDR</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_2-29_29">HAS_IMPL_IDR, bit [29] (MPAMv0or1px variant):
       </h4><div class="field">
-      <p>Has <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>. Indicates whether this MSC has the <span class="arm-defined-word">IMPLEMENTATION SPECIFIC</span> MPAM features register, <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
+      <p>Has <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>. Indicates whether this MSC has the <span class="arm-defined-word">IMPLEMENTATION SPECIFIC</span> MPAM features register, <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_IMPL_IDR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not have <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
+          <p>Does not have <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_impl_idr.html">MPAMF_IMPL_IDR</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_2-28_28">Bit [28]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_2-27_27">HAS_PRI_PART, bit [27] (MPAMv0or1px variant):
       </h4><div class="field">
-      <p>Has Priority Partitioning. Indicates that MPAM priority partitioning is implemented and <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a> exists.</p>
+      <p>Has Priority Partitioning. Indicates that MPAM priority partitioning is implemented and <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a> exists.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_PRI_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support priority partitioning or have <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
+          <p>Does not support priority partitioning or have <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has priority partitioning and <a href="ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
+          <p>Has priority partitioning and <a href="/latest_sysreg/ext-mpamf_pri_idr.html">MPAMF_PRI_IDR</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_2-26_26">HAS_MBW_PART, bit [26] (MPAMv0or1px variant):
       </h4><div class="field">
-      <p>Has Memory Bandwidth Partitioning. Indicates whether this MSC implements MPAM memory bandwidth partitioning and <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a>.</p>
+      <p>Has Memory Bandwidth Partitioning. Indicates whether this MSC implements MPAM memory bandwidth partitioning and <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_MBW_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support memory bandwidth partitioning or have <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
+          <p>Does not support memory bandwidth partitioning or have <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_mbw_idr.html">MPAMF_MBW_IDR</a> register.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_2-25_25">HAS_CPOR_PART, bit [25] (MPAMv0or1px variant):
       </h4><div class="field">
-      <p>Has Cache Portion Partitioning. Indicates whether this MSC implements MPAM cache portion partitioning and <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a>.</p>
+      <p>Has Cache Portion Partitioning. Indicates whether this MSC implements MPAM cache portion partitioning and <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a>.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CPOR_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support cache portion partitioning or have <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> or <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
+          <p>Does not support cache portion partitioning or have <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> or <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> and <a href="ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_cpor_idr.html">MPAMF_CPOR_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cpbmn.html">MPAMCFG_CPBM&lt;n&gt;</a> registers.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_2-24_24">HAS_CCAP_PART, bit [24] (MPAMv0or1px variant):
       </h4><div class="field">
-      <p>Has Cache Capacity Partitioning. Indicates whether this MSC implements MPAM cache capacity partitioning and the <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
+      <p>Has Cache Capacity Partitioning. Indicates whether this MSC implements MPAM cache capacity partitioning and the <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_CCAP_PART</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Does not support cache capacity partitioning or have <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
+          <p>Does not support cache capacity partitioning or have <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Has <a href="ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
+          <p>Has <a href="/latest_sysreg/ext-mpamf_ccap_idr.html">MPAMF_CCAP_IDR</a> and <a href="/latest_sysreg/ext-mpamcfg_cmax.html">MPAMCFG_CMAX</a> registers.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_2-23_16">PMG_MAX, bits [23:16] (MPAMv0or1px variant):
       </h4><div class="field">
       <p>Maximum supported value of PMG.</p>
-    <p>The value of this field is permitted to vary between the instances of <a href="ext-mpamf_idr.html">MPAMF_IDR</a>, each reporting the maximum supported PMG value in the PARTID space associated with that instance.</p>
-<p>In MPAMF_IDR_s, this field is permitted to report the maximum PMG value for the Non-secure PARTID space or for the Secure PARTID space. The maximum PMG value for the Secure PARTID space can be read from <a href="ext-mpamf_sidr.html">MPAMF_SIDR</a>.PMG_MAX.</p>
+    <p>The value of this field is permitted to vary between the instances of <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>, each reporting the maximum supported PMG value in the PARTID space associated with that instance.</p>
+<p>In MPAMF_IDR_s, this field is permitted to report the maximum PMG value for the Non-secure PARTID space or for the Secure PARTID space. The maximum PMG value for the Secure PARTID space can be read from <a href="/latest_sysreg/ext-mpamf_sidr.html">MPAMF_SIDR</a>.PMG_MAX.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_2-15_0">PARTID_MAX, bits [15:0]:
       </h4><div class="field">
       <p>Maximum supported value of PARTID.</p>
-    <p>The value of this field is permitted to vary between the instances of <a href="ext-mpamf_idr.html">MPAMF_IDR</a>, each reporting the maximum supported PARTID value in the PARTID space associated with that instance.</p>
-<p>In MPAMF_IDR_s, this field is permitted to report the maximum PARTID value for the Non-secure PARTID space or for the Secure PARTID space. The maximum PARTID value for the Secure PARTID space can be read from <a href="ext-mpamf_sidr.html">MPAMF_SIDR</a>.PARTID_MAX.</p>
+    <p>The value of this field is permitted to vary between the instances of <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>, each reporting the maximum supported PARTID value in the PARTID space associated with that instance.</p>
+<p>In MPAMF_IDR_s, this field is permitted to report the maximum PARTID value for the Non-secure PARTID space or for the Secure PARTID space. The maximum PARTID value for the Secure PARTID space can be read from <a href="/latest_sysreg/ext-mpamf_sidr.html">MPAMF_SIDR</a>.PARTID_MAX.</p>
 <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing MPAMF_IDR</h2>
         <p>This register is within the MPAM feature page memory frames.</p>
 
@@ -605,6 +605,6 @@
 
       
         <ul>
-<li>When <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, MPAMF_IDR shows the configuration of MSC MPAM for the  resource instance selected by <a href="ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. Fields that mention RIS in their field descriptions have values that track the implemented properties of the resource instance. Fields that do not mention RIS are constant across all resource instances.
+<li>When <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, MPAMF_IDR shows the configuration of MSC MPAM for the  resource instance selected by <a href="/latest_sysreg/ext-mpamcfg_part_sel.html">MPAMCFG_PART_SEL</a>.RIS. Fields that mention RIS in their field descriptions have values that track the implemented properties of the resource instance. Fields that do not mention RIS are constant across all resource instances.
 </li></ul>
       <h4>MPAMF_IDR can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th></tr><tr><td>MPAM</td><td><span class="hexnumber">0x0000</span></td></tr></table><p>When FEAT_MPAMv2_MSC is implemented, accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_s</td><td><span class="hexnumber">0x0000</span></td><td>MPAMF_IDR_s</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_ns</td><td><span class="hexnumber">0x0000</span></td><td>MPAMF_IDR_ns</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rt</td><td><span class="hexnumber">0x0000</span></td><td>MPAMF_IDR_rt</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RO</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rl</td><td><span class="hexnumber">0x0000</span></td><td>MPAMF_IDR_rl</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RO</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

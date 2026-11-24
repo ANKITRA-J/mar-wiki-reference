@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>TCRMASK_EL1 | Jon's Arm Reference</title><meta name="description" content="Mask register to prevent updates of fields in TCR_EL1 on writes to TCR_EL1 or TCRALIAS_EL1."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">TCRMASK_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">Translation Control Masking Register (EL1)</p><div data-pagefind-body="1">
-        <p>Mask register to prevent updates of fields in <a href="AArch64-tcr_el1.html">TCR_EL1</a> on writes to <a href="AArch64-tcr_el1.html">TCR_EL1</a> or TCRALIAS_EL1.</p>
+        <p>Mask register to prevent updates of fields in <a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a> on writes to <a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a> or TCRALIAS_EL1.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_SRMASK is implemented and FEAT_AA64 is implemented. Otherwise, direct accesses to TCRMASK_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>TCRMASK_EL1 is a 64-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="2"><a href="#fieldset_0-63_62">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-61_61-1">MTX1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-60_60-1">MTX0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-59_59-1">DS</a></td><td class="lr" colspan="1"><a href="#fieldset_0-58_58-1">TCMA1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-57_57-1">TCMA0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-56_56-1">E0PD1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-55_55-1">E0PD0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-54_54-1">NFD1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-53_53-1">NFD0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-52_52-1">TBID1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-51_51-1">TBID0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-50_50-1">HWU162</a></td><td class="lr" colspan="1"><a href="#fieldset_0-49_49-1">HWU161</a></td><td class="lr" colspan="1"><a href="#fieldset_0-48_48-1">HWU160</a></td><td class="lr" colspan="1"><a href="#fieldset_0-47_47-1">HWU159</a></td><td class="lr" colspan="1"><a href="#fieldset_0-46_46-1">HWU062</a></td><td class="lr" colspan="1"><a href="#fieldset_0-45_45-1">HWU061</a></td><td class="lr" colspan="1"><a href="#fieldset_0-44_44-1">HWU060</a></td><td class="lr" colspan="1"><a href="#fieldset_0-43_43-1">HWU059</a></td><td class="lr" colspan="1"><a href="#fieldset_0-42_42-1">HPD1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-41_41-1">HPD0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-40_40-1">HD</a></td><td class="lr" colspan="1"><a href="#fieldset_0-39_39-1">HA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-38_38">TBI1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-37_37">TBI0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-36_36">AS</a></td><td class="lr" colspan="3"><a href="#fieldset_0-35_33">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-32_32">IPS</a></td></tr><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-31_31">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-30_30">TG1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-29_29">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-28_28">SH1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-27_27">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-26_26">ORGN1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-25_25">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_24">IRGN1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-23_23">EPD1</a></td><td class="lr" colspan="1"><a href="#fieldset_0-22_22">A1</a></td><td class="lr" colspan="5"><a href="#fieldset_0-21_17">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-16_16">T1SZ</a></td><td class="lr" colspan="1"><a href="#fieldset_0-15_15">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-14_14">TG0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-13_13">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-12_12">SH0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-11_11">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-10_10">ORGN0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-9_9">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-8_8">IRGN0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-7_7">EPD0</a></td><td class="lr" colspan="6"><a href="#fieldset_0-6_1">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-0_0">T0SZ</a></td></tr></tbody></table><h4 id="fieldset_0-63_62">Bits [63:62]:
@@ -12,9 +12,9 @@
       </h4><div class="field">
       <p>Mask bit for MTX1.</p>
     <table class="valuetable"><tr><th>MTX1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.MTX1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.MTX1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.MTX1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.MTX1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -31,9 +31,9 @@
       </h4><div class="field">
       <p>Mask bit for MTX0.</p>
     <table class="valuetable"><tr><th>MTX0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.MTX0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.MTX0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.MTX0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.MTX0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -50,9 +50,9 @@
       </h4><div class="field">
       <p>Mask bit for DS.</p>
     <table class="valuetable"><tr><th>DS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.DS is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.DS is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.DS is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.DS is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -69,9 +69,9 @@
       </h4><div class="field">
       <p>Mask bit for TCMA1.</p>
     <table class="valuetable"><tr><th>TCMA1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TCMA1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TCMA1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TCMA1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TCMA1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -88,9 +88,9 @@
       </h4><div class="field">
       <p>Mask bit for TCMA0.</p>
     <table class="valuetable"><tr><th>TCMA0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TCMA0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TCMA0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TCMA0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TCMA0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -107,9 +107,9 @@
       </h4><div class="field">
       <p>Mask bit for E0PD1.</p>
     <table class="valuetable"><tr><th>E0PD1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.E0PD1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.E0PD1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.E0PD1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.E0PD1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -126,9 +126,9 @@
       </h4><div class="field">
       <p>Mask bit for E0PD0.</p>
     <table class="valuetable"><tr><th>E0PD0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.E0PD0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.E0PD0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.E0PD0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.E0PD0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -145,9 +145,9 @@
       </h4><div class="field">
       <p>Mask bit for NFD1.</p>
     <table class="valuetable"><tr><th>NFD1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.NFD1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.NFD1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.NFD1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.NFD1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -164,9 +164,9 @@
       </h4><div class="field">
       <p>Mask bit for NFD0.</p>
     <table class="valuetable"><tr><th>NFD0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.NFD0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.NFD0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.NFD0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.NFD0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -183,9 +183,9 @@
       </h4><div class="field">
       <p>Mask bit for TBID1.</p>
     <table class="valuetable"><tr><th>TBID1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TBID1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TBID1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TBID1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TBID1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -202,9 +202,9 @@
       </h4><div class="field">
       <p>Mask bit for TBID0.</p>
     <table class="valuetable"><tr><th>TBID0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TBID0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TBID0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TBID0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TBID0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -221,9 +221,9 @@
       </h4><div class="field">
       <p>Mask bit for HWU162.</p>
     <table class="valuetable"><tr><th>HWU162</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU162 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU162 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU162 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU162 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -240,9 +240,9 @@
       </h4><div class="field">
       <p>Mask bit for HWU161.</p>
     <table class="valuetable"><tr><th>HWU161</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU161 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU161 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU161 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU161 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -259,9 +259,9 @@
       </h4><div class="field">
       <p>Mask bit for HWU160.</p>
     <table class="valuetable"><tr><th>HWU160</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU160 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU160 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU160 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU160 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -278,9 +278,9 @@
       </h4><div class="field">
       <p>Mask bit for HWU159.</p>
     <table class="valuetable"><tr><th>HWU159</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU159 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU159 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU159 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU159 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -297,9 +297,9 @@
       </h4><div class="field">
       <p>Mask bit for HWU062.</p>
     <table class="valuetable"><tr><th>HWU062</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU062 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU062 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU062 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU062 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -316,9 +316,9 @@
       </h4><div class="field">
       <p>Mask bit for HWU061.</p>
     <table class="valuetable"><tr><th>HWU061</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU061 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU061 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU061 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU061 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -335,9 +335,9 @@
       </h4><div class="field">
       <p>Mask bit for HWU060.</p>
     <table class="valuetable"><tr><th>HWU060</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU060 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU060 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU060 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU060 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -354,9 +354,9 @@
       </h4><div class="field">
       <p>Mask bit for HWU059.</p>
     <table class="valuetable"><tr><th>HWU059</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU059 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU059 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HWU059 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HWU059 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -373,9 +373,9 @@
       </h4><div class="field">
       <p>Mask bit for HPD1.</p>
     <table class="valuetable"><tr><th>HPD1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HPD1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HPD1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HPD1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HPD1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -392,9 +392,9 @@
       </h4><div class="field">
       <p>Mask bit for HPD0.</p>
     <table class="valuetable"><tr><th>HPD0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HPD0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HPD0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HPD0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HPD0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -411,9 +411,9 @@
       </h4><div class="field">
       <p>Mask bit for HD.</p>
     <table class="valuetable"><tr><th>HD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HD is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HD is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HD is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HD is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -430,9 +430,9 @@
       </h4><div class="field">
       <p>Mask bit for HA.</p>
     <table class="valuetable"><tr><th>HA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HA is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HA is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.HA is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.HA is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -449,9 +449,9 @@
       </h4><div class="field">
       <p>Mask bit for TBI1.</p>
     <table class="valuetable"><tr><th>TBI1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TBI1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TBI1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TBI1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TBI1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -465,9 +465,9 @@
       </h4><div class="field">
       <p>Mask bit for TBI0.</p>
     <table class="valuetable"><tr><th>TBI0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TBI0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TBI0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TBI0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TBI0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -481,9 +481,9 @@
       </h4><div class="field">
       <p>Mask bit for AS.</p>
     <table class="valuetable"><tr><th>AS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.AS is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.AS is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.AS is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.AS is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -500,9 +500,9 @@
       </h4><div class="field">
       <p>Mask bit for IPS.</p>
     <table class="valuetable"><tr><th>IPS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.IPS is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.IPS is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.IPS is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.IPS is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -519,9 +519,9 @@
       </h4><div class="field">
       <p>Mask bit for TG1.</p>
     <table class="valuetable"><tr><th>TG1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TG1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TG1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TG1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TG1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -538,9 +538,9 @@
       </h4><div class="field">
       <p>Mask bit for SH1.</p>
     <table class="valuetable"><tr><th>SH1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.SH1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.SH1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.SH1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.SH1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -557,9 +557,9 @@
       </h4><div class="field">
       <p>Mask bit for ORGN1.</p>
     <table class="valuetable"><tr><th>ORGN1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.ORGN1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.ORGN1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.ORGN1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.ORGN1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -576,9 +576,9 @@
       </h4><div class="field">
       <p>Mask bit for IRGN1.</p>
     <table class="valuetable"><tr><th>IRGN1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.IRGN1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.IRGN1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.IRGN1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.IRGN1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -592,9 +592,9 @@
       </h4><div class="field">
       <p>Mask bit for EPD1.</p>
     <table class="valuetable"><tr><th>EPD1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.EPD1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.EPD1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.EPD1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.EPD1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -608,9 +608,9 @@
       </h4><div class="field">
       <p>Mask bit for A1.</p>
     <table class="valuetable"><tr><th>A1</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.A1 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.A1 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.A1 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.A1 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -627,9 +627,9 @@
       </h4><div class="field">
       <p>Mask bit for T1SZ.</p>
     <table class="valuetable"><tr><th>T1SZ</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.T1SZ is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.T1SZ is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.T1SZ is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.T1SZ is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -646,9 +646,9 @@
       </h4><div class="field">
       <p>Mask bit for TG0.</p>
     <table class="valuetable"><tr><th>TG0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TG0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TG0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.TG0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.TG0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -665,9 +665,9 @@
       </h4><div class="field">
       <p>Mask bit for SH0.</p>
     <table class="valuetable"><tr><th>SH0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.SH0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.SH0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.SH0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.SH0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -684,9 +684,9 @@
       </h4><div class="field">
       <p>Mask bit for ORGN0.</p>
     <table class="valuetable"><tr><th>ORGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.ORGN0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.ORGN0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.ORGN0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.ORGN0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -703,9 +703,9 @@
       </h4><div class="field">
       <p>Mask bit for IRGN0.</p>
     <table class="valuetable"><tr><th>IRGN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.IRGN0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.IRGN0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.IRGN0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.IRGN0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -719,9 +719,9 @@
       </h4><div class="field">
       <p>Mask bit for EPD0.</p>
     <table class="valuetable"><tr><th>EPD0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.EPD0 is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.EPD0 is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.EPD0 is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.EPD0 is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -738,9 +738,9 @@
       </h4><div class="field">
       <p>Mask bit for T0SZ.</p>
     <table class="valuetable"><tr><th>T0SZ</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.T0SZ is writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.T0SZ is writable.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch64-tcr_el1.html">TCR_EL1</a>.T0SZ is not writable.</p>
+          <p><a href="/latest_sysreg/AArch64-tcr_el1.html">TCR_EL1</a>.T0SZ is not writable.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -751,7 +751,7 @@
             this field resets to
             an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li>
           </ul></li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name TCRMASK_EL1 or TCRMASK_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name TCRMASK_EL1 or TCRMASK_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, TCRMASK_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b000, CRn = 0b0010, CRm = 0b0111, op2 = 0b010)
       </p><p class="pseudocode">

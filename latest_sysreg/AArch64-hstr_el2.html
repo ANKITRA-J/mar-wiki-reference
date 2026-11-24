@@ -3,7 +3,7 @@
 <title>HSTR_EL2 | Jon's Arm Reference</title><meta name="description" content="Controls trapping to EL2 of EL1 or lower AArch32 accesses to the System register in the coproc == 0b1111 encoding space, by the CRn value used to access the register using MCR or MRC instruction. When the register is accessible using an MCRR or MRRC instruction, this is the CRm value used to access the register."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">HSTR_EL2</h1><p class="insn_subtitle" data-pagefind-body="1">Hypervisor System Trap Register</p><div data-pagefind-body="1">
         <p>Controls trapping to EL2 of EL1 or lower AArch32 accesses to the System register in the coproc == <span class="binarynumber">0b1111</span> encoding space, by the CRn value used to access the register using MCR or MRC instruction. When the register is accessible using an MCRR or MRRC instruction, this is the CRm value used to access the register.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register HSTR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-hstr.html">HSTR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to HSTR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register HSTR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-hstr.html">HSTR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to HSTR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
 
       
@@ -42,7 +42,7 @@
 <li>An MCR or MRC instruction with coproc set to <span class="binarynumber">0b1111</span> and &lt;CRn&gt; set to c7 is trapped to EL2.
 </li><li>An MCRR or MRRC instruction with coproc set to <span class="binarynumber">0b1111</span> and &lt;CRm&gt; set to c7 is trapped to EL2.
 </li></ul>
-<p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this field behaves as 0 for all purposes other than a direct read of the value of this bit.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this field behaves as 0 for all purposes other than a direct read of the value of this bit.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-14_14">Bits [14, 4]:
       </h4><div class="field">

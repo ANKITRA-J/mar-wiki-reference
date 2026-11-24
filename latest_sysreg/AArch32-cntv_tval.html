@@ -3,22 +3,22 @@
 <title>CNTV_TVAL | Jon's Arm Reference</title><meta name="description" content="Holds the timer value for the virtual timer."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">CNTV_TVAL</h1><p class="insn_subtitle" data-pagefind-body="1">Counter-timer Virtual Timer TimerValue register</p><div data-pagefind-body="1">
         <p>Holds the timer value for the virtual timer.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register CNTV_TVAL bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-cntv_tval_el0.html">CNTV_TVAL_EL0[31:0]</a>.</p><p>This register is present only when FEAT_AA32 is implemented. Otherwise, direct accesses to CNTV_TVAL are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch32 System register CNTV_TVAL bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-cntv_tval_el0.html">CNTV_TVAL_EL0[31:0]</a>.</p><p>This register is present only when FEAT_AA32 is implemented. Otherwise, direct accesses to CNTV_TVAL are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>CNTV_TVAL is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-31_0">TimerValue</a></td></tr></tbody></table><h4 id="fieldset_0-31_0">TimerValue, bits [31:0]:
       </h4><div class="field"><p>The TimerValue view of the virtual timer.</p>
 <p>On a read of this register:</p>
 <ul>
-<li>If <a href="AArch32-cntv_ctl.html">CNTV_CTL</a>.ENABLE is 0, the value returned is <span class="arm-defined-word">UNKNOWN</span>.
-</li><li>If <a href="AArch32-cntv_ctl.html">CNTV_CTL</a>.ENABLE is 1, the value returned is (<a href="AArch32-cntv_cval.html">CNTV_CVAL</a> - <a href="AArch32-cntvct.html">CNTVCT</a>).
+<li>If <a href="/latest_sysreg/AArch32-cntv_ctl.html">CNTV_CTL</a>.ENABLE is 0, the value returned is <span class="arm-defined-word">UNKNOWN</span>.
+</li><li>If <a href="/latest_sysreg/AArch32-cntv_ctl.html">CNTV_CTL</a>.ENABLE is 1, the value returned is (<a href="/latest_sysreg/AArch32-cntv_cval.html">CNTV_CVAL</a> - <a href="/latest_sysreg/AArch32-cntvct.html">CNTVCT</a>).
 </li></ul>
-<p>On a write of this register, <a href="AArch32-cntv_cval.html">CNTV_CVAL</a> is set to (<a href="AArch32-cntvct.html">CNTVCT</a> + TimerValue), where TimerValue is treated as a signed 32-bit integer.</p>
-<p>When <a href="AArch32-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 1, the timer condition is met when (<a href="AArch32-cntvct.html">CNTVCT</a> - <a href="AArch32-cntp_cval.html">CNTP_CVAL</a>) is greater than or equal to zero. This means that TimerValue acts like a 32-bit downcounter timer. When the timer condition is met:</p>
+<p>On a write of this register, <a href="/latest_sysreg/AArch32-cntv_cval.html">CNTV_CVAL</a> is set to (<a href="/latest_sysreg/AArch32-cntvct.html">CNTVCT</a> + TimerValue), where TimerValue is treated as a signed 32-bit integer.</p>
+<p>When <a href="/latest_sysreg/AArch32-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 1, the timer condition is met when (<a href="/latest_sysreg/AArch32-cntvct.html">CNTVCT</a> - <a href="/latest_sysreg/AArch32-cntp_cval.html">CNTP_CVAL</a>) is greater than or equal to zero. This means that TimerValue acts like a 32-bit downcounter timer. When the timer condition is met:</p>
 <ul>
-<li><a href="AArch32-cntv_ctl.html">CNTV_CTL</a>.ISTATUS is set to 1.
-</li><li>If <a href="AArch32-cntv_ctl.html">CNTV_CTL</a>.IMASK is 0, an interrupt is generated.
+<li><a href="/latest_sysreg/AArch32-cntv_ctl.html">CNTV_CTL</a>.ISTATUS is set to 1.
+</li><li>If <a href="/latest_sysreg/AArch32-cntv_ctl.html">CNTV_CTL</a>.IMASK is 0, an interrupt is generated.
 </li></ul>
-<p>When <a href="AArch32-cntv_ctl.html">CNTV_CTL</a>.ENABLE is 0, the TimerValue cannot be read but continues to decrement. When the timer is enabled, the TimerValue represents the elapsed time whether that time was spent enabled or disabled.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>When <a href="/latest_sysreg/AArch32-cntv_ctl.html">CNTV_CTL</a>.ENABLE is 0, the TimerValue cannot be read but continues to decrement. When the timer is enabled, the TimerValue represents the elapsed time whether that time was spent enabled or disabled.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRC{&lt;c&gt;}{&lt;q&gt;} &lt;coproc&gt;, {#}&lt;opc1&gt;, &lt;Rt&gt;, &lt;CRn&gt;, &lt;CRm&gt;{, {#}&lt;opc2&gt;}</p></div></div><p style="text-align: right">
       (coproc = 0b1111, opc1 = 0b000, CRn = 0b1110, CRm = 0b0011, opc2 = 0b000)

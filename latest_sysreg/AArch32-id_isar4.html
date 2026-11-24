@@ -5,11 +5,11 @@
         <p>Provides information about the instruction sets implemented by the PE in AArch32 state.</p>
 
       
-        <p>Must be interpreted with <a href="AArch32-id_isar0.html">ID_ISAR0</a>, <a href="AArch32-id_isar1.html">ID_ISAR1</a>, <a href="AArch32-id_isar2.html">ID_ISAR2</a>, <a href="AArch32-id_isar3.html">ID_ISAR3</a>, and <a href="AArch32-id_isar5.html">ID_ISAR5</a>.</p>
+        <p>Must be interpreted with <a href="/latest_sysreg/AArch32-id_isar0.html">ID_ISAR0</a>, <a href="/latest_sysreg/AArch32-id_isar1.html">ID_ISAR1</a>, <a href="/latest_sysreg/AArch32-id_isar2.html">ID_ISAR2</a>, <a href="/latest_sysreg/AArch32-id_isar3.html">ID_ISAR3</a>, and <a href="/latest_sysreg/AArch32-id_isar5.html">ID_ISAR5</a>.</p>
 
       
         <p>For general information about the interpretation of the ID registers, see <span class="xref">'Principles of the ID scheme for fields in ID registers'</span>.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register ID_ISAR4 bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-id_isar4_el1.html">ID_ISAR4_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to ID_ISAR4 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch32 System register ID_ISAR4 bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-id_isar4_el1.html">ID_ISAR4_EL1[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented. Otherwise, direct accesses to ID_ISAR4 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>ID_ISAR4 is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="4"><a href="#fieldset_0-31_28">SWP_frac</a></td><td class="lr" colspan="4"><a href="#fieldset_0-27_24">PSR_M</a></td><td class="lr" colspan="4"><a href="#fieldset_0-23_20">SynchPrim_frac</a></td><td class="lr" colspan="4"><a href="#fieldset_0-19_16">Barrier</a></td><td class="lr" colspan="4"><a href="#fieldset_0-15_12">SMC</a></td><td class="lr" colspan="4"><a href="#fieldset_0-11_8">Writeback</a></td><td class="lr" colspan="4"><a href="#fieldset_0-7_4">WithShifts</a></td><td class="lr" colspan="4"><a href="#fieldset_0-3_0">Unpriv</a></td></tr></tbody></table><h4 id="fieldset_0-31_28">SWP_frac, bits [31:28]:
       </h4><div class="field">
@@ -18,7 +18,7 @@
           <p><span class="instruction">SWP</span> or <span class="instruction">SWPB</span> instructions not implemented.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
           <p><span class="instruction">SWP</span> or <span class="instruction">SWPB</span> implemented but only in a uniprocessor context. <span class="instruction">SWP</span> and <span class="instruction">SWPB</span> do not guarantee whether memory accesses from other Requesters can come between the load memory access and the store memory access of the <span class="instruction">SWP</span> or <span class="instruction">SWPB</span>.</p>
-        </td></tr></table><p>All other values are reserved. This field is valid only if <a href="AArch32-id_isar0.html">ID_ISAR0</a>.Swap is <span class="binarynumber">0b0000</span>.</p>
+        </td></tr></table><p>All other values are reserved. This field is valid only if <a href="/latest_sysreg/AArch32-id_isar0.html">ID_ISAR0</a>.Swap is <span class="binarynumber">0b0000</span>.</p>
 <p>In Armv8, the only permitted value is <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-27_24">PSR_M, bits [27:24]:
       </h4><div class="field">
       <p>Indicates the implemented M-profile instructions to modify the PSRs.</p>
@@ -29,7 +29,7 @@
         </td></tr></table><p>All other values are reserved.</p>
 <p>In Armv8, the only permitted value is <span class="binarynumber">0b0000</span>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-23_20">SynchPrim_frac, bits [23:20]:
       </h4><div class="field">
-      <p>Used in conjunction with <a href="AArch32-id_isar3.html">ID_ISAR3</a>.SynchPrim to indicate the implemented Synchronization Primitive instructions.</p>
+      <p>Used in conjunction with <a href="/latest_sysreg/AArch32-id_isar3.html">ID_ISAR3</a>.SynchPrim to indicate the implemented Synchronization Primitive instructions.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>SynchPrim_frac</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
           <p>If SynchPrim == <span class="binarynumber">0b0000</span>, no Synchronization Primitives implemented. If SynchPrim == <span class="binarynumber">0b0001</span>, adds the <span class="instruction">LDREX</span> and <span class="instruction">STREX</span> instructions. If SynchPrim == <span class="binarynumber">0b0010</span>, also adds the <span class="instruction">CLREX</span>, <span class="instruction">LDREXB</span>, <span class="instruction">LDREXH</span>, <span class="instruction">STREXB</span>, <span class="instruction">STREXH</span>, <span class="instruction">LDREXD</span>, and <span class="instruction">STREXD</span> instructions.</p>
         </td></tr><tr><td class="bitfield">0b0011</td><td>

@@ -66,14 +66,14 @@
     <p>For implementations with fewer than 48 physical address bits, the corresponding upper bits in this field are <span class="arm-defined-word">RES0</span>.</p>
 <p>The recorded address can be any address within the same naturally-aligned fault granule as the faulting physical address, where the size of the fault granule is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> and no larger than the larger than:</p>
 <ul>
-<li>The size of the range of values permitted to be recorded in <a href="AArch64-far_el2.html">FAR_EL2</a>.
+<li>The size of the range of values permitted to be recorded in <a href="/latest_sysreg/AArch64-far_el2.html">FAR_EL2</a>.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name PFAR_EL2 or PFAR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL2 using the accessor name PFAR_EL2 or PFAR_EL1 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
 
       
-        <p>PFAR_EL2 is not valid and reads <span class="arm-defined-word">UNKNOWN</span> if <a href="AArch64-esr_el2.html">ESR_EL2</a>.PFV is recorded as 0.</p>
+        <p>PFAR_EL2 is not valid and reads <span class="arm-defined-word">UNKNOWN</span> if <a href="/latest_sysreg/AArch64-esr_el2.html">ESR_EL2</a>.PFV is recorded as 0.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, PFAR_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b0110, CRm = 0b0000, op2 = 0b101)
       </p><p class="pseudocode">

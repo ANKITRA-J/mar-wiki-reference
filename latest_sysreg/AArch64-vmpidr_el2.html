@@ -3,8 +3,8 @@
 <title>VMPIDR_EL2 | Jon's Arm Reference</title><meta name="description" content="Holds the value of the Virtualization Multiprocessor ID. This is the value returned by EL1 reads of MPIDR_EL1, which in a multiprocessor system, provides an additional PE identification system."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">VMPIDR_EL2</h1><p class="insn_subtitle" data-pagefind-body="1">Virtualization Multiprocessor ID Register</p><div data-pagefind-body="1">
         <p>Holds the value of the Virtualization Multiprocessor ID. This is the value returned by EL1 reads of MPIDR_EL1, which in a multiprocessor system, provides an additional PE identification system.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register VMPIDR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-vmpidr.html">VMPIDR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to VMPIDR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
-        <p>If EL2 is not implemented, reads of this register return the value of the <a href="AArch64-mpidr_el1.html">MPIDR_EL1</a> and writes to the register are ignored.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register VMPIDR_EL2 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-vmpidr.html">VMPIDR[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to VMPIDR_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+        <p>If EL2 is not implemented, reads of this register return the value of the <a href="/latest_sysreg/AArch64-mpidr_el1.html">MPIDR_EL1</a> and writes to the register are ignored.</p>
 
       
         <p>This register has no effect if EL2 is not enabled in the current Security state.</p>
@@ -53,7 +53,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-7_0">Aff0, bits [7:0]:
       </h4><div class="field"><p>Affinity level 0.</p>
-<p>The value of the <a href="AArch32-mpidr.html">MPIDR</a>.{Aff2, Aff1, Aff0} or <a href="AArch64-mpidr_el1.html">MPIDR_EL1</a>.{Aff3, Aff2, Aff1, Aff0} set of fields of each PE must be unique within the system as a whole.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>The value of the <a href="/latest_sysreg/AArch32-mpidr.html">MPIDR</a>.{Aff2, Aff1, Aff0} or <a href="/latest_sysreg/AArch64-mpidr_el1.html">MPIDR_EL1</a>.{Aff3, Aff2, Aff1, Aff0} set of fields of each PE must be unique within the system as a whole.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2><p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, VMPIDR_EL2</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b100, CRn = 0b0000, CRm = 0b0000, op2 = 0b101)

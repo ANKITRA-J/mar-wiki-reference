@@ -3,7 +3,7 @@
 <title>PMUSERENR | Jon's Arm Reference</title><meta name="description" content="Enables or disables EL0 access to the Performance Monitors."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">PMUSERENR</h1><p class="insn_subtitle" data-pagefind-body="1">Performance Monitors User Enable Register</p><div data-pagefind-body="1">
         <p>Enables or disables EL0 access to the Performance Monitors.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register PMUSERENR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0[31:0]</a>.</p><p>This register is present only when FEAT_AA32 is implemented and FEAT_PMUv3 is implemented. Otherwise, direct accesses to PMUSERENR are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>AArch32 System register PMUSERENR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0[31:0]</a>.</p><p>This register is present only when FEAT_AA32 is implemented and FEAT_PMUv3 is implemented. Otherwise, direct accesses to PMUSERENR are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>PMUSERENR is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="25"><a href="#fieldset_0-31_7">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-6_6-1">TID</a></td><td class="lr" colspan="2"><a href="#fieldset_0-5_4">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-3_3">ER</a></td><td class="lr" colspan="1"><a href="#fieldset_0-2_2">CR</a></td><td class="lr" colspan="1"><a href="#fieldset_0-1_1">SW</a></td><td class="lr" colspan="1"><a href="#fieldset_0-0_0">EN</a></td></tr></tbody></table><h4 id="fieldset_0-31_7">Bits [31:7]:
       </h4><div class="field">
@@ -17,7 +17,7 @@
           <p>EL0 read accesses to PMCEID&lt;n&gt; are trapped.</p>
         </td></tr></table><p>The register accesses affected by this control are:</p>
 <ul>
-<li><span class="instruction">MRC</span> reads of <a href="AArch32-pmceid0.html">PMCEID0</a>, <a href="AArch32-pmceid1.html">PMCEID1</a>, <a href="AArch32-pmceid2.html">PMCEID2</a>, and <a href="AArch32-pmceid3.html">PMCEID3</a>.
+<li><span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-pmceid0.html">PMCEID0</a>, <a href="/latest_sysreg/AArch32-pmceid1.html">PMCEID1</a>, <a href="/latest_sysreg/AArch32-pmceid2.html">PMCEID2</a>, and <a href="/latest_sysreg/AArch32-pmceid3.html">PMCEID3</a>.
 </li></ul>
 <p>When trapped, reads are <span class="arm-defined-word">UNDEFINED</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -35,8 +35,8 @@
           <p>EL0 reads of the event counters and EL0 reads and writes of the select register are enabled, unless trapped by another control.</p>
         </td></tr></table><p>The register accesses affected by this control are:</p>
 <ul>
-<li><span class="instruction">MRC</span> reads of <a href="AArch32-pmevcntrn.html">PMEVCNTR&lt;n&gt;</a> and <a href="AArch32-pmxevcntr.html">PMXEVCNTR</a>.
-</li><li><span class="instruction">MRC</span> and <span class="instruction">MCR</span> accesses to <a href="AArch32-pmselr.html">PMSELR</a>.
+<li><span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-pmevcntrn.html">PMEVCNTR&lt;n&gt;</a> and <a href="/latest_sysreg/AArch32-pmxevcntr.html">PMXEVCNTR</a>.
+</li><li><span class="instruction">MRC</span> and <span class="instruction">MCR</span> accesses to <a href="/latest_sysreg/AArch32-pmselr.html">PMSELR</a>.
 </li></ul>
 <p>When disabled, reads and writes are <span class="arm-defined-word">UNDEFINED</span>.</p>
 <p>This field is ignored by the PE when PMUSERENR.EN == 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -49,8 +49,8 @@
           <p>EL0 reads of the cycle counter are enabled, unless trapped by another control.</p>
         </td></tr></table><p>The register accesses affected by this control are:</p>
 <ul>
-<li><span class="instruction">MRC</span> reads of <a href="AArch32-pmccntr.html">PMCCNTR</a>.
-</li><li><span class="instruction">MRRC</span> reads of <a href="AArch32-pmccntr.html">PMCCNTR</a>.
+<li><span class="instruction">MRC</span> reads of <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a>.
+</li><li><span class="instruction">MRRC</span> reads of <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a>.
 </li></ul>
 <p>When disabled, reads are <span class="arm-defined-word">UNDEFINED</span>.</p>
 <p>This field is ignored by the PE when PMUSERENR.EN == 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -63,7 +63,7 @@
           <p>EL0 writes to the Software increment register are enabled, unless trapped by another control.</p>
         </td></tr></table><p>The register accesses affected by this control are:</p>
 <ul>
-<li><span class="instruction">MCR</span> writes to <a href="AArch32-pmswinc.html">PMSWINC</a>.
+<li><span class="instruction">MCR</span> writes to <a href="/latest_sysreg/AArch32-pmswinc.html">PMSWINC</a>.
 </li></ul>
 <p>When disabled, writes are <span class="arm-defined-word">UNDEFINED</span>.</p>
 <p>This field is ignored by the PE when PMUSERENR.EN == 1.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -77,19 +77,19 @@
           <p>EL0 accesses to the specified PMU System registers are enabled, unless trapped by another control.</p>
         </td></tr></table><p>The register accesses affected by this control are:</p>
 <ul>
-<li><span class="instruction">MRC</span> or <span class="instruction">MCR</span> accesses to <a href="AArch32-pmccfiltr.html">PMCCFILTR</a>, <a href="AArch32-pmccntr.html">PMCCNTR</a>, <a href="AArch32-pmcntenclr.html">PMCNTENCLR</a>, <a href="AArch32-pmcntenset.html">PMCNTENSET</a>, <a href="AArch32-pmcr.html">PMCR</a>, <a href="AArch32-pmevcntrn.html">PMEVCNTR&lt;n&gt;</a>, <a href="AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>, <a href="AArch32-pmovsr.html">PMOVSR</a>, <a href="AArch32-pmovsset.html">PMOVSSET</a>, <a href="AArch32-pmselr.html">PMSELR</a>, <a href="AArch32-pmxevcntr.html">PMXEVCNTR</a>, and <a href="AArch32-pmxevtyper.html">PMXEVTYPER</a>.
+<li><span class="instruction">MRC</span> or <span class="instruction">MCR</span> accesses to <a href="/latest_sysreg/AArch32-pmccfiltr.html">PMCCFILTR</a>, <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a>, <a href="/latest_sysreg/AArch32-pmcntenclr.html">PMCNTENCLR</a>, <a href="/latest_sysreg/AArch32-pmcntenset.html">PMCNTENSET</a>, <a href="/latest_sysreg/AArch32-pmcr.html">PMCR</a>, <a href="/latest_sysreg/AArch32-pmevcntrn.html">PMEVCNTR&lt;n&gt;</a>, <a href="/latest_sysreg/AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>, <a href="/latest_sysreg/AArch32-pmovsr.html">PMOVSR</a>, <a href="/latest_sysreg/AArch32-pmovsset.html">PMOVSSET</a>, <a href="/latest_sysreg/AArch32-pmselr.html">PMSELR</a>, <a href="/latest_sysreg/AArch32-pmxevcntr.html">PMXEVCNTR</a>, and <a href="/latest_sysreg/AArch32-pmxevtyper.html">PMXEVTYPER</a>.
 </li><li><span class="instruction">MRC</span> reads of the following registers:<ul>
-<li><a href="AArch32-pmceid0.html">PMCEID0</a> and <a href="AArch32-pmceid1.html">PMCEID1</a>.
-</li><li>If <span class="xref">FEAT_PMUv3p1</span> is implemented, <a href="AArch32-pmceid2.html">PMCEID2</a> and <a href="AArch32-pmceid3.html">PMCEID3</a>.
+<li><a href="/latest_sysreg/AArch32-pmceid0.html">PMCEID0</a> and <a href="/latest_sysreg/AArch32-pmceid1.html">PMCEID1</a>.
+</li><li>If <span class="xref">FEAT_PMUv3p1</span> is implemented, <a href="/latest_sysreg/AArch32-pmceid2.html">PMCEID2</a> and <a href="/latest_sysreg/AArch32-pmceid3.html">PMCEID3</a>.
 </li></ul>
 
-</li><li><span class="instruction">MCR</span> writes to <a href="AArch32-pmswinc.html">PMSWINC</a>.
-</li><li><span class="instruction">MRRC</span> or <span class="instruction">MCRR</span> accesses to <a href="AArch32-pmccntr.html">PMCCNTR</a>.
+</li><li><span class="instruction">MCR</span> writes to <a href="/latest_sysreg/AArch32-pmswinc.html">PMSWINC</a>.
+</li><li><span class="instruction">MRRC</span> or <span class="instruction">MCRR</span> accesses to <a href="/latest_sysreg/AArch32-pmccntr.html">PMCCNTR</a>.
 </li></ul>
 <p>When trapped, reads and writes are <span class="arm-defined-word">UNDEFINED</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When <span class="xref">FEAT_PMUv3p9</span> is implemented and EL1 is using AArch64, <a href="AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a> contains additional controls that affect the behavior of this register.</p>
+        <p>When <span class="xref">FEAT_PMUv3p9</span> is implemented and EL1 is using AArch64, <a href="/latest_sysreg/AArch64-pmuserenr_el0.html">PMUSERENR_EL0</a> contains additional controls that affect the behavior of this register.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRC{&lt;c&gt;}{&lt;q&gt;} &lt;coproc&gt;, {#}&lt;opc1&gt;, &lt;Rt&gt;, &lt;CRn&gt;, &lt;CRm&gt;{, {#}&lt;opc2&gt;}</p></div></div><p style="text-align: right">
       (coproc = 0b1111, opc1 = 0b000, CRn = 0b1001, CRm = 0b1110, opc2 = 0b000)
       </p><p class="pseudocode">

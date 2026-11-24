@@ -30,9 +30,9 @@ registers.</p>
             </h4><a id="LDSETP_128_memop_128"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 0)</span></div><p class="asm-code">LDSETP  <a href="#Xt1OrXZR" title='Is the 64-bit name of the first general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt1&gt;</a>, <a href="#Xt2OrXZR" title='Is the 64-bit name of the second general-purpose register to be transferred, encoded in the "Rt2" field.'>&lt;Xt2&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">LDSETPA encoding
             </h4><a id="LDSETPA_128_memop_128"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 0)</span></div><p class="asm-code">LDSETPA  <a href="#Xt1OrXZR" title='Is the 64-bit name of the first general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt1&gt;</a>, <a href="#Xt2OrXZR" title='Is the 64-bit name of the second general-purpose register to be transferred, encoded in the "Rt2" field.'>&lt;Xt2&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">LDSETPAL encoding
             </h4><a id="LDSETPAL_128_memop_128"></a><span class="bitdiff"> (A == 1 &amp;&amp; R == 1)</span></div><p class="asm-code">LDSETPAL  <a href="#Xt1OrXZR" title='Is the 64-bit name of the first general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt1&gt;</a>, <a href="#Xt2OrXZR" title='Is the 64-bit name of the second general-purpose register to be transferred, encoded in the "Rt2" field.'>&lt;Xt2&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">LDSETPL encoding
-            </h4><a id="LDSETPL_128_memop_128"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">LDSETPL  <a href="#Xt1OrXZR" title='Is the 64-bit name of the first general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt1&gt;</a>, <a href="#Xt2OrXZR" title='Is the 64-bit name of the second general-purpose register to be transferred, encoded in the "Rt2" field.'>&lt;Xt2&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSE128) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if Rt  == '11111' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if Rt2 == '11111' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="LDSETPL_128_memop_128"></a><span class="bitdiff"> (A == 0 &amp;&amp; R == 1)</span></div><p class="asm-code">LDSETPL  <a href="#Xt1OrXZR" title='Is the 64-bit name of the first general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt1&gt;</a>, <a href="#Xt2OrXZR" title='Is the 64-bit name of the second general-purpose register to be transferred, encoded in the "Rt2" field.'>&lt;Xt2&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSE128) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if Rt  == '11111' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if Rt2 == '11111' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 
 let t : integer{} = UInt(Rt);
 let t2 : integer{} = UInt(Rt2);
@@ -44,12 +44,12 @@ let tagchecked : boolean = n != 31;
 var rt_unknown : boolean = FALSE;
 
 if t == t2 then
-    let c : <a href="shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="shared_pseudocode.html#enum_Unpredictable_LSE128OVERLAP" title="">Unpredictable_LSE128OVERLAP</a>);
-    assert c IN {<a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
+    let c : <a href="/latest_aarch64/shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="/latest_aarch64/shared_pseudocode.html#enum_Unpredictable_LSE128OVERLAP" title="">Unpredictable_LSE128OVERLAP</a>);
+    assert c IN {<a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
     case c of
-        when <a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    rt_unknown = TRUE;    // result is UNKNOWN
-        when <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
-        when <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    rt_unknown = TRUE;    // result is UNKNOWN
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
     end;
 end;</p>
   <div class="encoding-notes">
@@ -74,31 +74,31 @@ let value2 : bits(64) = X{}(t2);
 var data : bits(128);
 var store_value : bits(128);
 
-let privileged : boolean = <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="shared_pseudocode.html#global_EL0" title="">EL0</a>;
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescAtomicOp_9" title="">CreateAccDescAtomicOp</a>(<a href="shared_pseudocode.html#enum_MemAtomicOp_ORR" title="">MemAtomicOp_ORR</a>, acquire, release,
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="/latest_aarch64/shared_pseudocode.html#global_EL0" title="">EL0</a>;
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescAtomicOp_9" title="">CreateAccDescAtomicOp</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemAtomicOp_ORR" title="">MemAtomicOp_ORR</a>, acquire, release,
                                                        tagchecked, privileged, t, t2, t, t2);
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
-store_value = if <a href="shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then value1::value2 else value2::value1;
+store_value = if <a href="/latest_aarch64/shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then value1::value2 else value2::value1;
 
 let comparevalue : bits(128) = ARBITRARY : bits(128); // Irrelevant when not executing CAS
-data = <a href="shared_pseudocode.html#func_MemAtomic_5" title="">MemAtomic</a>{128}(address, comparevalue, store_value, accdesc);
+data = <a href="/latest_aarch64/shared_pseudocode.html#func_MemAtomic_5" title="">MemAtomic</a>{128}(address, comparevalue, store_value, accdesc);
 
 if rt_unknown then
     data = ARBITRARY : bits(128);
 end;
 
-if <a href="shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t)  = data[127:64];
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2) = data[63:0];
+if <a href="/latest_aarch64/shared_pseudocode.html#func_BigEndian_1" title="">BigEndian</a>(accdesc.acctype) then
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t)  = data[127:64];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2) = data[63:0];
 else
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t)  = data[63:0];
-    <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2) = data[127:64];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t)  = data[63:0];
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(t2) = data[127:64];
 end;</p></div>
   <h2>Operational information</h2>
     

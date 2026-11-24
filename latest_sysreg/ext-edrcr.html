@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>EDRCR | Jon's Arm Reference</title><meta name="description" content="This register is used to allow imprecise entry to Debug state and clear sticky bits in EDSCR."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">EDRCR</h1><p class="insn_subtitle" data-pagefind-body="1">External Debug Reserve Control Register</p><div data-pagefind-body="1">
-        <p>This register is used to allow imprecise entry to Debug state and clear sticky bits in <a href="ext-edscr.html">EDSCR</a>.</p>
+        <p>This register is used to allow imprecise entry to Debug state and clear sticky bits in <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.</p>
       </div><h3>Configuration</h3><p>EDRCR is in the Core power domain.
     </p><h3>Attributes</h3>
         <p>EDRCR is a 32-bit register.</p>
@@ -19,18 +19,18 @@
         </td></tr></table><p>Setting this bit to 1 allows a debugger to request imprecise entry to Debug state. An External Debug Request debug event must be pending before the debugger sets this bit to 1.</p>
 <p>This feature is optional. If this feature is not implemented, writes to this bit are ignored.</p></div><h4 id="fieldset_0-3_3">CSPA, bit [3]:
       </h4><div class="field">
-      <p>Clear Sticky Pipeline Advance. This bit is used to clear the <a href="ext-edscr.html">EDSCR</a>.PipeAdv bit to 0. The actions on writing to this bit are:</p>
+      <p>Clear Sticky Pipeline Advance. This bit is used to clear the <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.PipeAdv bit to 0. The actions on writing to this bit are:</p>
     <table class="valuetable"><tr><th>CSPA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No action.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Clear the <a href="ext-edscr.html">EDSCR</a>.PipeAdv bit to 0.</p>
+          <p>Clear the <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.PipeAdv bit to 0.</p>
         </td></tr></table></div><h4 id="fieldset_0-2_2">CSE, bit [2]:
       </h4><div class="field">
-      <p>Clear Sticky Error. Used to clear the <a href="ext-edscr.html">EDSCR</a> cumulative error bits to 0. The actions on writing to this bit are:</p>
+      <p>Clear Sticky Error. Used to clear the <a href="/latest_sysreg/ext-edscr.html">EDSCR</a> cumulative error bits to 0. The actions on writing to this bit are:</p>
     <table class="valuetable"><tr><th>CSE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>No action.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Clear the <a href="ext-edscr.html">EDSCR</a>.{TXU, RXO, ERR} bits, and, if the PE is in Debug state, the <a href="ext-edscr.html">EDSCR</a>.ITO bit, to 0.</p>
+          <p>Clear the <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.{TXU, RXO, ERR} bits, and, if the PE is in Debug state, the <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.ITO bit, to 0.</p>
         </td></tr></table></div><h4 id="fieldset_0-1_0">Bits [1:0]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>

@@ -15,11 +15,11 @@
           <p>Conditional fault instructions are <span class="arm-defined-word">UNDEFINED</span> at EL0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Conditional fault instructions are not <span class="arm-defined-word">UNDEFINED</span> at EL0.</p>
-        </td></tr></table><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
+        </td></tr></table><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -42,11 +42,11 @@
           <p>LDGM, STGM and STZGM are <span class="arm-defined-word">UNDEFINED</span> at EL0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>LDGM, STGM and STZGM are not <span class="arm-defined-word">UNDEFINED</span> at EL0.</p>
-        </td></tr></table><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
+        </td></tr></table><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -67,8 +67,8 @@
           <p>TLBI OS instructions affect TLBs in the Outer shareability domain, but not in the Inner shareability domain.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -88,11 +88,11 @@
           <p>This control does not affect data-independent timing of execution.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Data-independent timing of execution is enforced.</p>
-        </td></tr></table><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
+        </td></tr></table><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -115,8 +115,8 @@
           <p>When the instructions are executed, they have no implicit BTI behavior.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -139,8 +139,8 @@
           <p>When the instructions are executed, they have no implicit BTI behavior.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -154,11 +154,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-22_22-1">EnIA2, bit [22] <span class="condition">when FEAT_PAuth_EnhCtl is implemented</span>:
-      </h4><div class="field"><p>Controls enabling of pointer authentication of instruction addresses using the APIAKey_EL1 key, at EL0 in the EL1&amp;0 translation regime. This field is used in conjunction with <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnIA as follows:</p>
+      </h4><div class="field"><p>Controls enabling of pointer authentication of instruction addresses using the APIAKey_EL1 key, at EL0 in the EL1&amp;0 translation regime. This field is used in conjunction with <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnIA as follows:</p>
 <table class="valuetable"><thead><tr><th>EnIA2</th><th>EnIA</th><th>Behavior at EL0</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>Disabled</td></tr><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b1</span></td><td>Enabled</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b0</span></td><td>Enabled</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b1</span></td><td>Disabled</td></tr></tbody></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -172,11 +172,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-21_21-1">EnIB2, bit [21] <span class="condition">when FEAT_PAuth_EnhCtl is implemented</span>:
-      </h4><div class="field"><p>Controls enabling of pointer authentication of instruction addresses using the APIBKey_EL1 key, at EL0 in the EL1&amp;0 translation regime. This field is used in conjunction with <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnIB as follows:</p>
+      </h4><div class="field"><p>Controls enabling of pointer authentication of instruction addresses using the APIBKey_EL1 key, at EL0 in the EL1&amp;0 translation regime. This field is used in conjunction with <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnIB as follows:</p>
 <table class="valuetable"><thead><tr><th>EnIB2</th><th>EnIB</th><th>Behavior at EL0</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>Disabled</td></tr><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b1</span></td><td>Enabled</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b0</span></td><td>Enabled</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b1</span></td><td>Disabled</td></tr></tbody></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -190,11 +190,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-20_20-1">EnDA2, bit [20] <span class="condition">when FEAT_PAuth_EnhCtl is implemented</span>:
-      </h4><div class="field"><p>Controls enabling of pointer authentication of data addresses using the APDAKey_EL1 key, at EL0 in the EL1&amp;0 translation regime. This field is used in conjunction with <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnDA as follows:</p>
+      </h4><div class="field"><p>Controls enabling of pointer authentication of data addresses using the APDAKey_EL1 key, at EL0 in the EL1&amp;0 translation regime. This field is used in conjunction with <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnDA as follows:</p>
 <table class="valuetable"><thead><tr><th>EnDA2</th><th>EnDA</th><th>Behavior at EL0</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>Disabled</td></tr><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b1</span></td><td>Enabled</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b0</span></td><td>Enabled</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b1</span></td><td>Disabled</td></tr></tbody></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -208,11 +208,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-19_19-1">EnDB2, bit [19] <span class="condition">when FEAT_PAuth_EnhCtl is implemented</span>:
-      </h4><div class="field"><p>Controls enabling of pointer authentication of data addresses using the APDBKey_EL1 key, at EL0 in the EL1&amp;0 translation regime. This field is used in conjunction with <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnDB as follows:</p>
+      </h4><div class="field"><p>Controls enabling of pointer authentication of data addresses using the APDBKey_EL1 key, at EL0 in the EL1&amp;0 translation regime. This field is used in conjunction with <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>.EnDB as follows:</p>
 <table class="valuetable"><thead><tr><th>EnDB2</th><th>EnDB</th><th>Behavior at EL0</th></tr></thead><tbody><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b0</span></td><td>Disabled</td></tr><tr><td><span class="binarynumber">0b0</span></td><td><span class="binarynumber">0b1</span></td><td>Enabled</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b0</span></td><td>Enabled</td></tr><tr><td><span class="binarynumber">0b1</span></td><td><span class="binarynumber">0b1</span></td><td>Disabled</td></tr></tbody></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -235,11 +235,11 @@
           <p>Pointer Arithmetic for Multiplication is not checked.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Pointer Arithmetic for Multiplication is checked.</p>
-        </td></tr></table><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
+        </td></tr></table><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul>
 <p>If the Effective value of SCTLR2_EL1.CPTA0 is 0, then the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
@@ -262,8 +262,8 @@
           <p>Pointer Arithmetic for Multiplication is checked.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul>
 <p>If the Effective value of SCTLR2_EL1.CPTA is 0, then the Effective value of this field is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
@@ -284,11 +284,11 @@
           <p>Pointer Arithmetic for Addition is not checked.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Pointer Arithmetic for Addition is checked.</p>
-        </td></tr></table><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
+        </td></tr></table><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -310,8 +310,8 @@
           <p>Pointer Arithmetic for Addition is checked.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -331,12 +331,12 @@
           <p>The effects of PACM are disabled at EL0.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>A PACM instruction at EL0 causes PSTATE.PACM to be set to 1.</p>
-        </td></tr></table><p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution at EL0.</p>
+        </td></tr></table><p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.{E2H, TGE} is {1, 1}, this bit has no effect on execution at EL0.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.PACMEn == 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.PACMEn == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -358,9 +358,9 @@
           <p>A PACM instruction at EL1 causes PSTATE.PACM to be set to 1.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.PACMEn == 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.PACMEn == 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -381,8 +381,8 @@
           <p>No accesses are trapped by this control.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -399,13 +399,13 @@
       </h4><div class="field">
       <p>External Aborts to SError exception vector.</p>
     <table class="valuetable"><tr><th>EASE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Synchronous External abort exceptions taken to EL1 are taken to the appropriate synchronous exception vector offset from <a href="AArch64-vbar_el1.html">VBAR_EL1</a>.</p>
+          <p>Synchronous External abort exceptions taken to EL1 are taken to the appropriate synchronous exception vector offset from <a href="/latest_sysreg/AArch64-vbar_el1.html">VBAR_EL1</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Synchronous External abort exceptions taken to EL1 are taken to the appropriate SError exception vector offset from <a href="AArch64-vbar_el1.html">VBAR_EL1</a>.</p>
+          <p>Synchronous External abort exceptions taken to EL1 are taken to the appropriate SError exception vector offset from <a href="/latest_sysreg/AArch64-vbar_el1.html">VBAR_EL1</a>.</p>
         </td></tr></table><p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -429,21 +429,21 @@
 <p>Setting this field to 0 does not guarantee that the PE is able to take a synchronous Data Abort exception for an External abort on a Normal memory read in every case. There might be implementation-specific circumstances when an error on a load cannot be taken synchronously. These circumstances should be rare enough that treating such occurrences as fatal does not cause a significant increase in failure rate.</p>
 <p>If FEAT_SVE is implemented, SCTLR2_EL1.EnANERR is 0, and the access generating the External abort is due to any Active element of an SVE Non-fault vector load instruction or an Active element that is not the First active element of an SVE First-fault vector load instruction, then no exception is generated and the External abort is reported in the FFR.</p>
 <p>Setting this field to 0 might have a performance impact for Normal memory reads.</p>
-<p>This field is ignored by the PE and treated as zero when EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR is 1.</p>
+<p>This field is ignored by the PE and treated as zero when EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSNERR is 1.</p>
 <p>This field is ignored by the PE and treated as an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul>
 <p>This <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value is:</p>
 <ul>
-<li>If EL3 is implemented, the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> reset value of <a href="AArch64-sctlr2_el3.html">SCTLR2_EL3</a>.EnANERR.
-</li><li>Otherwise, the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> reset value of <a href="AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.EnANERR.
+<li>If EL3 is implemented, the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> reset value of <a href="/latest_sysreg/AArch64-sctlr2_el3.html">SCTLR2_EL3</a>.EnANERR.
+</li><li>Otherwise, the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> reset value of <a href="/latest_sysreg/AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.EnANERR.
 </li></ul>
 <p>Otherwise, this field is ignored by the PE and treated as one when all of the following are true:</p>
 <ul>
 <li><span class="xref">FEAT_ADERR</span> is implemented.
-</li><li><a href="AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ANERR reads as <span class="binarynumber">0b0010</span>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ANERR reads as <span class="binarynumber">0b0010</span>.
 </li><li>SCTLR2_EL1.EnADERR is 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
@@ -467,21 +467,21 @@
 <p>Setting this field to 0 does not guarantee that the PE is able to take a synchronous Data Abort exception for an External abort on a Device memory read in every case. There might be implementation-specific circumstances when an error on a load cannot be taken synchronously. These circumstances should be rare enough that treating such occurrences as fatal does not cause a significant increase in failure rate.</p>
 <p>If FEAT_SVE is implemented, SCTLR2_EL1.EnADERR is 0, and the access generating the External abort is due to any Active element of an SVE Non-fault vector load instruction or an Active element that is not the First active element of an SVE First-fault vector load instruction, then no exception is generated and the External abort is reported in the FFR.</p>
 <p>Setting this field to 0 might have a performance impact for Device memory reads.</p>
-<p>This field is ignored by the PE and treated as zero when EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR is 1.</p>
+<p>This field is ignored by the PE and treated as zero when EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.EnSDERR is 1.</p>
 <p>This field is ignored by the PE and treated as an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul>
 <p>This <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value is:</p>
 <ul>
-<li>If EL3 is implemented, the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> reset value of <a href="AArch64-sctlr2_el3.html">SCTLR2_EL3</a>.EnADERR.
-</li><li>Otherwise, the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> reset value of <a href="AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.EnADERR.
+<li>If EL3 is implemented, the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> reset value of <a href="/latest_sysreg/AArch64-sctlr2_el3.html">SCTLR2_EL3</a>.EnADERR.
+</li><li>Otherwise, the <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> reset value of <a href="/latest_sysreg/AArch64-sctlr2_el2.html">SCTLR2_EL2</a>.EnADERR.
 </li></ul>
 <p>Otherwise, this field is ignored by the PE and treated as one when all of the following are true:</p>
 <ul>
 <li><span class="xref">FEAT_ANERR</span> is implemented.
-</li><li><a href="AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ADERR reads as <span class="binarynumber">0b0010</span>.
+</li><li><a href="/latest_sysreg/AArch64-id_aa64mmfr3_el1.html">ID_AA64MMFR3_EL1</a>.ADERR reads as <span class="binarynumber">0b0010</span>.
 </li><li>SCTLR2_EL1.EnANERR is 1.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
@@ -504,8 +504,8 @@
         </td></tr></table><p>This field has no effect on the masking of virtual and delegated SError interrupts.</p>
 <p>This field is ignored by the PE and treated as zero when any of the following are true:</p>
 <ul>
-<li>EL3 is implemented and <a href="AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
-</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
+<li>EL3 is implemented and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SCTLR2En == 0.
+</li><li>EL2 is implemented and enabled in the current Security state and the Effective value of <a href="/latest_sysreg/AArch64-hcrx_el2.html">HCRX_EL2</a>.SCTLR2En is 0.
 </li></ul><p>The reset behavior of this field is:</p><ul><li>On a Warm reset:<ul>
             <li>When the highest implemented Exception level is EL1,
             this field resets to
@@ -522,10 +522,10 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name SCTLR2_EL1 or SCTLR2_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name SCTLR2_EL1 or SCTLR2_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
 
       
-        <p>If FEAT_SRMASK is implemented, accesses to SCTLR2_EL1 are masked by <a href="AArch64-sctlr2mask_el1.html">SCTLR2MASK_EL1</a>.</p>
+        <p>If FEAT_SRMASK is implemented, accesses to SCTLR2_EL1 are masked by <a href="/latest_sysreg/AArch64-sctlr2mask_el1.html">SCTLR2MASK_EL1</a>.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRS &lt;Xt&gt;, SCTLR2_EL1</p></div></div><p style="text-align: right">
       (op0 = 0b11, op1 = 0b000, CRn = 0b0001, CRm = 0b0000, op2 = 0b011)
       </p><p class="pseudocode">

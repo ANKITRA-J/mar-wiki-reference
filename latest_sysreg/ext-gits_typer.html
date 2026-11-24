@@ -12,16 +12,16 @@
       </h4><div class="field">
       <p>ITS cache invalidation behavior on disable.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>INV</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether ITS caches are invalidated on clearing <a href="ext-gits_ctlr.html">GITS_CTLR</a>.Enabled and <a href="ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.Valid.</p>
+          <p>It is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether ITS caches are invalidated on clearing <a href="/latest_sysreg/ext-gits_ctlr.html">GITS_CTLR</a>.Enabled and <a href="/latest_sysreg/ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.Valid.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>ITS caches are invalidated on clearing <a href="ext-gits_ctlr.html">GITS_CTLR</a>.Enabled and <a href="ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.Valid.</p>
+          <p>ITS caches are invalidated on clearing <a href="/latest_sysreg/ext-gits_ctlr.html">GITS_CTLR</a>.Enabled and <a href="/latest_sysreg/ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.Valid.</p>
         </td></tr></table><p>If GITS_TYPER.INV is 1, after the following sequence:</p>
 <ul>
-<li><a href="ext-gits_ctlr.html">GITS_CTLR</a>.Enabled written to 0.
-</li><li>A read of <a href="ext-gits_ctlr.html">GITS_CTLR</a>.Quiescent returns 1.
-</li><li><a href="ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.Valid written to 0.
+<li><a href="/latest_sysreg/ext-gits_ctlr.html">GITS_CTLR</a>.Enabled written to 0.
+</li><li>A read of <a href="/latest_sysreg/ext-gits_ctlr.html">GITS_CTLR</a>.Quiescent returns 1.
+</li><li><a href="/latest_sysreg/ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.Valid written to 0.
 </li></ul>
-<p>There is no cached information from the ITS memory structure pointed to by <a href="ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-45_45">UMSIirq, bit [45]:
+<p>There is no cached information from the ITS memory structure pointed to by <a href="/latest_sysreg/ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-45_45">UMSIirq, bit [45]:
       </h4><div class="field">
       <p>Indicates support for generating an interrupt on receiving unmapped MSI.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>UMSIirq</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
@@ -105,16 +105,16 @@
       </h4><div class="field">
       <p>Collection ID Limit.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>CIL</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>ITS supports 16-bit Collection ID, <a href="ext-gits_typer.html">GITS_TYPER</a>.CIDbits is <span class="arm-defined-word">RES0</span>.</p>
+          <p>ITS supports 16-bit Collection ID, <a href="/latest_sysreg/ext-gits_typer.html">GITS_TYPER</a>.CIDbits is <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-gits_typer.html">GITS_TYPER</a>.CIDbits indicates supported Collection ID size</p>
+          <p><a href="/latest_sysreg/ext-gits_typer.html">GITS_TYPER</a>.CIDbits indicates supported Collection ID size</p>
         </td></tr></table>
-      <p>In implementations that do not support Collections in external memory, this bit is <span class="arm-defined-word">RES0</span> and the number of Collections supported is reported by <a href="ext-gits_typer.html">GITS_TYPER</a>.HCC.</p>
+      <p>In implementations that do not support Collections in external memory, this bit is <span class="arm-defined-word">RES0</span> and the number of Collections supported is reported by <a href="/latest_sysreg/ext-gits_typer.html">GITS_TYPER</a>.HCC.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-35_32">CIDbits, bits [35:32]:
       </h4><div class="field"><p>Number of Collection ID bits.</p>
 <ul>
 <li>The number of bits of Collection ID minus one.
-</li><li>When <a href="ext-gits_typer.html">GITS_TYPER</a>.CIL == 0, this field is <span class="arm-defined-word">RES0</span>.
+</li><li>When <a href="/latest_sysreg/ext-gits_typer.html">GITS_TYPER</a>.CIL == 0, this field is <span class="arm-defined-word">RES0</span>.
 </li></ul>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-31_24">HCC, bits [31:24]:
@@ -128,7 +128,7 @@
       </h4><div class="field">
       <p>Physical Target Addresses. Indicates the format of the target address:</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>PTA</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The target address corresponds to the PE number specified by <a href="ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number.</p>
+          <p>The target address corresponds to the PE number specified by <a href="/latest_sysreg/ext-gicr_typer.html">GICR_TYPER</a>.Processor_Number.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The target address corresponds to the base physical address of the required Redistributor.</p>
         </td></tr></table>
@@ -165,7 +165,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The total number of supported collections is determined by number of collections that are held in memory and the number indicated by GITS_TYPER.HCC.</p>
         </td></tr></table>
-      <p>If GITS_TYPER.HCC == 0, or if memory backed collections are not supported (all <a href="ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.Type != 100), this bit is <span class="arm-defined-word">RES0</span>.</p>
+      <p>If GITS_TYPER.HCC == 0, or if memory backed collections are not supported (all <a href="/latest_sysreg/ext-gits_basern.html">GITS_BASER&lt;n&gt;</a>.Type != 100), this bit is <span class="arm-defined-word">RES0</span>.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-1_1-1">Virtual, bit [1] <span class="condition">when GICv4 is implemented</span>:
       </h4><div class="field">
       <p>Indicates whether the ITS supports virtual LPIs and direct injection of virtual LPIs:</p>

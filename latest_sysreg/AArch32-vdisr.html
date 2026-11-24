@@ -3,7 +3,7 @@
 <title>VDISR | Jon's Arm Reference</title><meta name="description" content="Records that an SError exception has been consumed by an ESB instruction."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">VDISR</h1><p class="insn_subtitle" data-pagefind-body="1">Virtual Deferred Interrupt Status Register</p><div data-pagefind-body="1">
         <p>Records that an SError exception has been consumed by an <span class="instruction">ESB</span> instruction.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register VDISR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-vdisr_el2.html">VDISR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented and FEAT_RAS is implemented. Otherwise, direct accesses to VDISR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register VDISR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-vdisr_el2.html">VDISR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL1 is implemented and FEAT_RAS is implemented. Otherwise, direct accesses to VDISR are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, then VDISR is <span class="arm-defined-word">RES0</span> from Monitor mode when SCR.NS == 1.</p>
       <h3>Attributes</h3>
         <p>VDISR is a 32-bit register.</p>
@@ -17,7 +17,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_14">AET, bits [15:14]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch32-vdfsr.html">VDFSR</a>.AET.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch32-vdfsr.html">VDFSR</a>.AET.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-13_13">Bit [13]:
@@ -25,7 +25,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-12_12">ExT, bit [12]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch32-vdfsr.html">VDFSR</a>.ExT.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch32-vdfsr.html">VDFSR</a>.ExT.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-11_11">Bit [11]:
@@ -45,7 +45,7 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-9_9">LPAE, bit [9]:
       </h4><div class="field"><p>Format.</p>
-<p>Set to <a href="AArch32-ttbcr.html">TTBCR</a>.EAE when an <span class="instruction">ESB</span> instruction defers a virtual SError exception.</p><table class="valuetable"><tr><th>LPAE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+<p>Set to <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE when an <span class="instruction">ESB</span> instruction defers a virtual SError exception.</p><table class="valuetable"><tr><th>LPAE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Using the Short-descriptor translation table format.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -62,7 +62,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-15_14">AET, bits [15:14]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch32-vdfsr.html">VDFSR</a>.AET.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch32-vdfsr.html">VDFSR</a>.AET.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-13_13">Bit [13]:
@@ -70,7 +70,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-12_12">ExT, bit [12]:
       </h4><div class="field">
-      <p>The value copied from <a href="AArch32-vdfsr.html">VDFSR</a>.ExT.</p>
+      <p>The value copied from <a href="/latest_sysreg/AArch32-vdfsr.html">VDFSR</a>.ExT.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_1-11_10">Bits [11:10]:
@@ -78,7 +78,7 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-9_9">LPAE, bit [9]:
       </h4><div class="field"><p>Format.</p>
-<p>Set to <a href="AArch32-ttbcr.html">TTBCR</a>.EAE when an <span class="instruction">ESB</span> instruction defers a virtual SError exception.</p><table class="valuetable"><tr><th>LPAE</th><th>Meaning</th></tr><tr><td class="bitfield">0b1</td><td>
+<p>Set to <a href="/latest_sysreg/AArch32-ttbcr.html">TTBCR</a>.EAE when an <span class="instruction">ESB</span> instruction defers a virtual SError exception.</p><table class="valuetable"><tr><th>LPAE</th><th>Meaning</th></tr><tr><td class="bitfield">0b1</td><td>
           <p>Using the Long-descriptor translation table format.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
@@ -98,10 +98,10 @@
         <p>Direct reads and writes of VDFSR are <span class="arm-defined-word">UNDEFINED</span> if EL3 is implemented and using AArch32 in all Secure privileged modes other than Monitor mode.</p>
 
       
-        <p>An indirect write to VDISR made by an <span class="instruction">ESB</span> instruction does not require an explicit synchronization operation for the value that is written to be observed by a direct read of <a href="AArch32-disr.html">DISR</a> occurring in program order after the <span class="instruction">ESB</span> instruction.</p>
+        <p>An indirect write to VDISR made by an <span class="instruction">ESB</span> instruction does not require an explicit synchronization operation for the value that is written to be observed by a direct read of <a href="/latest_sysreg/AArch32-disr.html">DISR</a> occurring in program order after the <span class="instruction">ESB</span> instruction.</p>
 
       
-        <p>If EL2 is not implemented, then VDISR is <span class="arm-defined-word">RES0</span> from Monitor mode when <a href="AArch32-scr.html">SCR</a>.NS == 1.</p>
+        <p>If EL2 is not implemented, then VDISR is <span class="arm-defined-word">RES0</span> from Monitor mode when <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS == 1.</p>
       <p>Accesses to this register use the following encodings in the System register encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">MRC{&lt;c&gt;}{&lt;q&gt;} &lt;coproc&gt;, {#}&lt;opc1&gt;, &lt;Rt&gt;, &lt;CRn&gt;, &lt;CRm&gt;{, {#}&lt;opc2&gt;}</p></div></div><p style="text-align: right">
       (coproc = 0b1111, opc1 = 0b100, CRn = 0b1100, CRm = 0b0001, opc2 = 0b001)
       </p><p class="pseudocode">

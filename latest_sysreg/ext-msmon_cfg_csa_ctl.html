@@ -2,17 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>MSMON_CFG_CSA_CTL | Jon's Arm Reference</title><meta name="description" content="Controls the CSA monitor selected by MSMON_CFG_MON_SEL."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">MSMON_CFG_CSA_CTL</h1><p class="insn_subtitle" data-pagefind-body="1">MPAM Memory System Monitor Configure Cache Storage Allocation Monitor Control Register</p><div data-pagefind-body="1">
-        <p>Controls the CSA monitor selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+        <p>Controls the CSA monitor selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
       </div><h3>Configuration</h3><p>The power domain of MSMON_CFG_CSA_CTL is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.
     </p><p>This register is present only when FEAT_MPAM_CSA is implemented. Otherwise, direct accesses to MSMON_CFG_CSA_CTL are <span class="arm-defined-word">RES0</span>.</p>
-        <p>If <a href="ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, the monitor instance configuration accessed is for the resource instance currently selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the monitor instance of that resource instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
+        <p>If <a href="/latest_sysreg/ext-mpamf_idr.html">MPAMF_IDR</a>.HAS_RIS is 1, the monitor instance configuration accessed is for the resource instance currently selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the monitor instance of that resource instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
 
       
         <p>If FEAT_MPAMv2_MSC_MON_SEC is implemented, the following statement applies:</p>
 
       
         <ul>
-<li><a href="ext-msmon_csa_rootcr.html">MSMON_CSA_ROOTCR</a>.PAS controls the PAS this register applies to.
+<li><a href="/latest_sysreg/ext-msmon_csa_rootcr.html">MSMON_CSA_ROOTCR</a>.PAS controls the PAS this register applies to.
 </li></ul>
 
       
@@ -21,19 +21,19 @@
       
         <ul>
 <li>
-<p>MSMON_CFG_CSA_CTL_s controls the Secure cache storage allocation monitor instance selected by the Secure instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+<p>MSMON_CFG_CSA_CTL_s controls the Secure cache storage allocation monitor instance selected by the Secure instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
 
 </li><li>
-<p>MSMON_CFG_CSA_CTL_ns controls Non-secure cache storage allocation monitor instance selected by the Non-secure instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+<p>MSMON_CFG_CSA_CTL_ns controls Non-secure cache storage allocation monitor instance selected by the Non-secure instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
 
 </li><li>
 <p>If FEAT_RME is implemented, the following statements also apply:</p>
 <ul>
 <li>
-<p>MSMON_CFG_CSA_CTL_rt controls the monitor configuration for the Root PARTID selected by the Root instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+<p>MSMON_CFG_CSA_CTL_rt controls the monitor configuration for the Root PARTID selected by the Root instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
 
 </li><li>
-<p>MSMON_CFG_CSA_CTL_rl controls the monitor configuration for the Realm PARTID selected by the Realm instance of <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
+<p>MSMON_CFG_CSA_CTL_rl controls the monitor configuration for the Realm PARTID selected by the Realm instance of <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.</p>
 
 </li></ul>
 
@@ -52,7 +52,7 @@
           <p>The monitor instance is enabled to collect information according to the configuration of the instance.</p>
         </td></tr></table></div><h4 id="fieldset_0-30_28">CAPT_EVNT, bits [30:28]:
       </h4><div class="field"><p>Capture event selector.</p>
-<p>When the selected capture event occurs, <a href="ext-msmon_csa.html">MSMON_CSA</a> of the monitor instance is copied to <a href="ext-msmon_csa_capture.html">MSMON_CSA_CAPTURE</a> of the same instance. If the long counter is also implemented, <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a> is also copied to <a href="ext-msmon_csa_l_capture.html">MSMON_CSA_L_CAPTURE</a>.</p>
+<p>When the selected capture event occurs, <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a> of the monitor instance is copied to <a href="/latest_sysreg/ext-msmon_csa_capture.html">MSMON_CSA_CAPTURE</a> of the same instance. If the long counter is also implemented, <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a> is also copied to <a href="/latest_sysreg/ext-msmon_csa_l_capture.html">MSMON_CSA_L_CAPTURE</a>.</p>
 <p>Select the event that triggers capture from the following:</p><table class="valuetable"><tr><th>CAPT_EVNT</th><th>Meaning</th></tr><tr><td class="bitfield">0b000</td><td>
           <p>No capture event is triggered.</p>
         </td></tr><tr><td class="bitfield">0b001</td><td>
@@ -68,48 +68,48 @@
         </td></tr><tr><td class="bitfield">0b110</td><td>
           <p>External capture event 6 (optional)</p>
         </td></tr><tr><td class="bitfield">0b111</td><td>
-          <p>Capture occurs when a <a href="ext-msmon_capt_evnt.html">MSMON_CAPT_EVNT</a> register in this MSC is written and causes a capture event for the Security state of this monitor. (optional)</p>
+          <p>Capture occurs when a <a href="/latest_sysreg/ext-msmon_capt_evnt.html">MSMON_CAPT_EVNT</a> register in this MSC is written and causes a capture event for the Security state of this monitor. (optional)</p>
         </td></tr></table>
       <p>The values marked as optional indicate capture event sources that can be omitted in an implementation. Those values representing non-implemented event sources must not trigger a capture event.</p>
     <p>When MPAMF_CSAMON_IDR.HAS_CAPTURE == '0', access to this field is <span class="access_level">RAZ/WI</span>.</p></div><h4 id="fieldset_0-27_27">CAPT_RESET, bit [27]:
-      </h4><div class="field"><p>Reset <a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE after capture.</p>
+      </h4><div class="field"><p>Reset <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE after capture.</p>
 <p>Controls whether the VALUE field of the monitor instance is reset to zero immediately after being copied to the corresponding capture register.</p><table class="valuetable"><tr><th>CAPT_RESET</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance is not reset on capture.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance is not reset on capture.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance is reset on capture.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance is reset on capture.</p>
         </td></tr></table>
-      <p>This control bit affects both <a href="ext-msmon_csa.html">MSMON_CSA</a> and <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a> in implementations that include <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.</p>
+      <p>This control bit affects both <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a> and <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a> in implementations that include <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.</p>
     <p>When MPAMF_CSAMON_IDR.HAS_CAPTURE == '0', access to this field is <span class="access_level">RAZ/WI</span>.</p></div><h4 id="fieldset_0-26_26">OFLOW_STATUS, bit [26]:
       </h4><div class="field"><p>Overflow status.</p>
-<p>Indicates whether the value of <a href="ext-msmon_csa.html">MSMON_CSA</a> has overflowed.</p><table class="valuetable"><tr><th>OFLOW_STATUS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE has not overflowed.</p>
+<p>Indicates whether the value of <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a> has overflowed.</p><table class="valuetable"><tr><th>OFLOW_STATUS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p><a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE has not overflowed.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE has overflowed at least once since this bit was last written to zero.</p>
-        </td></tr></table><p>Overflow status for <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE is reported in <a href="ext-msmon_cfg_csa_ctl.html">MSMON_CFG_CSA_CTL</a>.OFLOW_STATUS_L.</p>
-<p>If <a href="ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.HAS_CEVNT_OFLW is 1 or <a href="ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.HAS_OFLOW_LNKG is 1, then a store to <a href="ext-msmon_csa.html">MSMON_CSA</a> when this field is 1 resets this field to 0.</p></div><h4 id="fieldset_0-25_25">OFLOW_INTR, bit [25]:
+          <p><a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE has overflowed at least once since this bit was last written to zero.</p>
+        </td></tr></table><p>Overflow status for <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE is reported in <a href="/latest_sysreg/ext-msmon_cfg_csa_ctl.html">MSMON_CFG_CSA_CTL</a>.OFLOW_STATUS_L.</p>
+<p>If <a href="/latest_sysreg/ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.HAS_CEVNT_OFLW is 1 or <a href="/latest_sysreg/ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.HAS_OFLOW_LNKG is 1, then a store to <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a> when this field is 1 resets this field to 0.</p></div><h4 id="fieldset_0-25_25">OFLOW_INTR, bit [25]:
       </h4><div class="field">
-      <p>Enable interrupt on overflow of <a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE.</p>
+      <p>Enable interrupt on overflow of <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE.</p>
     <table class="valuetable"><tr><th>OFLOW_INTR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>No interrupt is signaled on an overflow of <a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE.</p>
+          <p>No interrupt is signaled on an overflow of <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>An implementation-specific interrupt is signaled on an overflow of <a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE.</p>
+          <p>An implementation-specific interrupt is signaled on an overflow of <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE.</p>
         </td></tr></table>
-      <p>Interrupt enable for overflow of <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE is controlled by MSMON_CFG_CSA_CTL.OFLOW_INTR_L.</p>
+      <p>Interrupt enable for overflow of <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE is controlled by MSMON_CFG_CSA_CTL.OFLOW_INTR_L.</p>
     <p>When MSMON_CFG_CSA_CTL.OFLOW_INTR == '0', access to this field is <span class="access_level">RAZ/WI</span>.</p></div><h4 id="fieldset_0-24_24">OFLOW_FRZ, bit [24]:
       </h4><div class="field"><p>Freeze monitor instance on overflow.</p>
-<p>Controls whether <a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance freezes on an overflow.</p><table class="valuetable"><tr><th>OFLOW_FRZ</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance wraps on overflow.</p>
+<p>Controls whether <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance freezes on an overflow.</p><table class="valuetable"><tr><th>OFLOW_FRZ</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p><a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance wraps on overflow.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance freezes on overflow. If the increment that caused the overflow was 1, the frozen value is the post-increment value of 0. If the increment that caused the overflow was larger than 1, the frozen value of the monitor might be 0 or a larger value less than the final increment.</p>
-        </td></tr></table><p>When a <a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE of a monitor instance is frozen it does not change until <a href="ext-msmon_csa.html">MSMON_CSA</a> register for that instance has been written. If the monitor implements both <a href="ext-msmon_csa.html">MSMON_CSA</a> and <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a> registers, both are frozen. A write to a frozen register unfreezes the count for just that register.</p>
-<p>This control bit affects both <a href="ext-msmon_csa.html">MSMON_CSA</a> and <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a> in implementations that include <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.</p></div><h4 id="fieldset_0-23_23-1">OFLOW_CAPT, bit [23] <span class="condition">when (FEAT_MPAMv0p1 is implemented, or FEAT_MPAMv1p1 is implemented, or FEAT_MPAMv2_MSC is implemented) and MPAMF_CSAMON_IDR.HAS_OFLOW_CAPT == '1'</span>:
+          <p><a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE field of the monitor instance freezes on overflow. If the increment that caused the overflow was 1, the frozen value is the post-increment value of 0. If the increment that caused the overflow was larger than 1, the frozen value of the monitor might be 0 or a larger value less than the final increment.</p>
+        </td></tr></table><p>When a <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE of a monitor instance is frozen it does not change until <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a> register for that instance has been written. If the monitor implements both <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a> and <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a> registers, both are frozen. A write to a frozen register unfreezes the count for just that register.</p>
+<p>This control bit affects both <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a> and <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a> in implementations that include <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.</p></div><h4 id="fieldset_0-23_23-1">OFLOW_CAPT, bit [23] <span class="condition">when (FEAT_MPAMv0p1 is implemented, or FEAT_MPAMv1p1 is implemented, or FEAT_MPAMv2_MSC is implemented) and MPAMF_CSAMON_IDR.HAS_OFLOW_CAPT == '1'</span>:
       </h4><div class="field">
       <p>Capture Monitor on Overflow.</p>
     <table class="valuetable"><tr><th>OFLOW_CAPT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Monitor register <a href="ext-msmon_csa.html">MSMON_CSA</a> is not captured on an overflow or when affected by an overflow linkage event.</p>
-        </td></tr><tr><td class="bitfield">0b1</td><td><p>Monitor register <a href="ext-msmon_csa.html">MSMON_CSA</a> is captured and the <a href="ext-msmon_csa.html">MSMON_CSA</a>.{NRDY, VALUE} fields are copied to the monitor instance's <a href="ext-msmon_csa_capture.html">MSMON_CSA_CAPTURE</a> register on an overflow or when affected by an overflow linkage event. The monitor instance treats an overflow of this monitor instance as a private capture event. If MSMON_CFG_CSA_CTL.CEVNT_OFLW is 1, this monitor instance also treats an overflow linkage event as a capture event.</p>
+          <p>Monitor register <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a> is not captured on an overflow or when affected by an overflow linkage event.</p>
+        </td></tr><tr><td class="bitfield">0b1</td><td><p>Monitor register <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a> is captured and the <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.{NRDY, VALUE} fields are copied to the monitor instance's <a href="/latest_sysreg/ext-msmon_csa_capture.html">MSMON_CSA_CAPTURE</a> register on an overflow or when affected by an overflow linkage event. The monitor instance treats an overflow of this monitor instance as a private capture event. If MSMON_CFG_CSA_CTL.CEVNT_OFLW is 1, this monitor instance also treats an overflow linkage event as a capture event.</p>
 <p>If OFLOW_FRZ is 1, the monitor does not continue to count after the overflow or overflow linkage event. If CAPT_RESET is 1, the monitor instance resets to 0.</p></td></tr></table>
-      <p>This bit does not control whether MSMON_CSA_L is captured on an overflow or overflow linkage event. See <a href="ext-msmon_cfg_csa_ctl.html">MSMON_CFG_CSA_CTL</a>.OFLOW_CAPT_L.</p>
+      <p>This bit does not control whether MSMON_CSA_L is captured on an overflow or overflow linkage event. See <a href="/latest_sysreg/ext-msmon_cfg_csa_ctl.html">MSMON_CFG_CSA_CTL</a>.OFLOW_CAPT_L.</p>
     </div><h4 id="fieldset_0-23_23-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -117,11 +117,11 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-19_19">SCLEN, bit [19]:
-      </h4><div class="field"><p><a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE Scaling Enable.</p>
-<p>Enables scaling of <a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE by <a href="ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.SCALE.</p><table class="valuetable"><tr><th>SCLEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE has bytes counted by the monitor instance.</p>
+      </h4><div class="field"><p><a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE Scaling Enable.</p>
+<p>Enables scaling of <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE by <a href="/latest_sysreg/ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.SCALE.</p><table class="valuetable"><tr><th>SCLEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p><a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE has bytes counted by the monitor instance.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE has bytes counted by the monitor instance, shifted right by <a href="ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.SCALE.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE has bytes counted by the monitor instance, shifted right by <a href="/latest_sysreg/ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.SCALE.</p>
         </td></tr></table></div><h4 id="fieldset_0-18_18-1">CEVNT_OFLW, bit [18] <span class="condition">when (FEAT_MPAMv0p1 is implemented, or FEAT_MPAMv1p1 is implemented, or FEAT_MPAMv2_MSC is implemented) and MPAMF_CSAMON_IDR.HAS_CEVNT_OFLW == '1'</span>:
       </h4><div class="field">
       <p>Capture Event performs overflow behavior.</p>
@@ -132,50 +132,50 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-17_17-1">MATCH_PMG, bit [17] <span class="condition">when MPAMF_CSAMON_IDR.NO_MATCH_PMG == '0'</span>:
       </h4><div class="field">
-      <p>Controls whether the monitor instance only counts allocations caused by the PMG matching <a href="ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a>.PMG.</p>
+      <p>Controls whether the monitor instance only counts allocations caused by the PMG matching <a href="/latest_sysreg/ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a>.PMG.</p>
     <table class="valuetable"><tr><th>MATCH_PMG</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>The monitor instance counts allocations caused by any PMG value.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The monitor instance only counts allocations caused by the PMG value matching <a href="ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a>.PMG.</p>
+          <p>The monitor instance only counts allocations caused by the PMG value matching <a href="/latest_sysreg/ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a>.PMG.</p>
         </td></tr></table></div><h4 id="fieldset_0-17_17-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-16_16-1">MATCH_PARTID, bit [16] <span class="condition">when MPAMF_CSAMON_IDR.NO_MATCH_PARTID == '0'</span>:
       </h4><div class="field">
-      <p>Controls whether the monitor instance only counts allocations caused by the PARTID matching <a href="ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a>.PARTID.</p>
+      <p>Controls whether the monitor instance only counts allocations caused by the PARTID matching <a href="/latest_sysreg/ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a>.PARTID.</p>
     <table class="valuetable"><tr><th>MATCH_PARTID</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>The monitor instance counts allocations caused by any PARTID value.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The monitor instance only counts allocations caused by the PARTID value matching <a href="ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a>.PARTID.</p>
+          <p>The monitor instance only counts allocations caused by the PARTID value matching <a href="/latest_sysreg/ext-msmon_cfg_csa_flt.html">MSMON_CFG_CSA_FLT</a>.PARTID.</p>
         </td></tr></table></div><h4 id="fieldset_0-16_16-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_15-1">OFLOW_STATUS_L, bit [15] <span class="condition">when (FEAT_MPAMv0p1 is implemented, or FEAT_MPAMv1p1 is implemented, or FEAT_MPAMv2_MSC is implemented) and MPAMF_CSAMON_IDR.HAS_LONG == '0'</span>:
       </h4><div class="field">
-      <p>Reports whether <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE has overflowed.</p>
+      <p>Reports whether <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE has overflowed.</p>
     <table class="valuetable"><tr><th>OFLOW_STATUS_L</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE has not overflowed.</p>
+          <p><a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE has not overflowed.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE has overflowed at least once since this bit was last written to zero.</p>
-        </td></tr></table><p>Overflow status of <a href="ext-msmon_csa.html">MSMON_CSA</a>.VALUE is reported in MSMON_CFG_CSA_CTL.OFLOW_STATUS.</p>
-<p>If <a href="ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.HAS_CEVNT_OFLW is 1 or <a href="ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.HAS_OFLOW_LNKG is 1, then a store to <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a> when this field is 1 resets this field to 0.</p></div><h4 id="fieldset_0-15_15-2"> <span class="condition">Otherwise</span>:
+          <p><a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE has overflowed at least once since this bit was last written to zero.</p>
+        </td></tr></table><p>Overflow status of <a href="/latest_sysreg/ext-msmon_csa.html">MSMON_CSA</a>.VALUE is reported in MSMON_CFG_CSA_CTL.OFLOW_STATUS.</p>
+<p>If <a href="/latest_sysreg/ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.HAS_CEVNT_OFLW is 1 or <a href="/latest_sysreg/ext-mpamf_csamon_idr.html">MPAMF_CSAMON_IDR</a>.HAS_OFLOW_LNKG is 1, then a store to <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a> when this field is 1 resets this field to 0.</p></div><h4 id="fieldset_0-15_15-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-14_14-1">OFLOW_INTR_L, bit [14] <span class="condition">when (FEAT_MPAMv0p1 is implemented, or FEAT_MPAMv1p1 is implemented, or FEAT_MPAMv2_MSC is implemented) and MPAMF_CSAMON_IDR.HAS_LONG == '1'</span>:
-      </h4><div class="field"><p>Overflow Interrupt for <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.</p>
-<p>Controls whether an MPAM overflow interrupt is generated when <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE overflows.</p><table class="valuetable"><tr><th>OFLOW_INTR_L</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>No interrupt is signaled on an overflow of <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE.</p>
+      </h4><div class="field"><p>Overflow Interrupt for <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.</p>
+<p>Controls whether an MPAM overflow interrupt is generated when <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE overflows.</p><table class="valuetable"><tr><th>OFLOW_INTR_L</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>No interrupt is signaled on an overflow of <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>An implementation-specific interrupt is signaled on overflow of <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE.</p>
+          <p>An implementation-specific interrupt is signaled on overflow of <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a>.VALUE.</p>
         </td></tr></table><p>When MSMON_CFG_CSA_CTL.OFLOW_INTR_L == '0', access to this field is <span class="access_level">RAZ/WI</span>.</p></div><h4 id="fieldset_0-14_14-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-13_13-1">OFLOW_CAPT_L, bit [13] <span class="condition">when (FEAT_MPAMv0p1 is implemented, or FEAT_MPAMv1p1 is implemented, or FEAT_MPAMv2_MSC is implemented), MPAMF_CSAMON_IDR.HAS_LONG == '1', and MPAMF_CSAMON_IDR.HAS_OFLOW_CAPT == '1'</span>:
       </h4><div class="field"><p>Capture Long Monitor on Overflow.</p>
-<p>Controls whether <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a> is copied to <a href="ext-msmon_csa_l_capture.html">MSMON_CSA_L_CAPTURE</a> on an overflow or an overflow linkage event.</p><table class="valuetable"><tr><th>OFLOW_CAPT_L</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Monitor register <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a> is not captured on an overflow or when affected by an overflow linkage event.</p>
+<p>Controls whether <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a> is copied to <a href="/latest_sysreg/ext-msmon_csa_l_capture.html">MSMON_CSA_L_CAPTURE</a> on an overflow or an overflow linkage event.</p><table class="valuetable"><tr><th>OFLOW_CAPT_L</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
+          <p>Monitor register <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a> is not captured on an overflow or when affected by an overflow linkage event.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Monitor register <a href="ext-msmon_csa_l.html">MSMON_CSA_L</a> is captured on an overflow or when affected by an overflow linkage event. If OFLOW_FRZ is 1, the monitor does not continue to count after the overflow or overflow linkage event. If CAPT_RESET is 1, the monitor instance resets to 0.</p>
+          <p>Monitor register <a href="/latest_sysreg/ext-msmon_csa_l.html">MSMON_CSA_L</a> is captured on an overflow or when affected by an overflow linkage event. If OFLOW_FRZ is 1, the monitor does not continue to count after the overflow or overflow linkage event. If CAPT_RESET is 1, the monitor instance resets to 0.</p>
         </td></tr></table><p>If this bit is 1, this monitor instance treats an overflow of this monitor instance as a private capture event.</p>
 <p>If this bit is 1, this monitor instance also treats overflow linkage events for which it qualifies as a private capture event.</p></div><h4 id="fieldset_0-13_13-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -318,10 +318,10 @@
       
         <ul>
 <li>
-<p>When RIS is implemented, loads and stores to MSMON_CFG_CSA_CTL access the  monitor configuration settings for the cache resource instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the cache storage allocation monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
+<p>When RIS is implemented, loads and stores to MSMON_CFG_CSA_CTL access the  monitor configuration settings for the cache resource instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.RIS and the cache storage allocation monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
 
 </li><li>
-<p>When RIS is not implemented, loads and stores to MSMON_CFG_CSA_CTL access the  monitor configuration settings for the cache storage allocation monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
+<p>When RIS is not implemented, loads and stores to MSMON_CFG_CSA_CTL access the  monitor configuration settings for the cache storage allocation monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.</p>
 
 </li></ul>
 
@@ -330,6 +330,6 @@
 
       
         <ul>
-<li>Loads and stores to MSMON_CFG_CSA_CTL access the  monitor configuration settings for the cache storage allocation monitor instance selected by <a href="ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.
+<li>Loads and stores to MSMON_CFG_CSA_CTL access the  monitor configuration settings for the cache storage allocation monitor instance selected by <a href="/latest_sysreg/ext-msmon_cfg_mon_sel.html">MSMON_CFG_MON_SEL</a>.MON_SEL.
 </li></ul>
       <h4>MSMON_CFG_CSA_CTL can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Offset</th></tr><tr><td>MPAM</td><td><span class="hexnumber">0x0838</span></td></tr></table><p>When FEAT_MPAMv2_MSC is implemented, accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_s</td><td><span class="hexnumber">0x0838</span></td><td>MSMON_CFG_CSA_CTL_s</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_ns</td><td><span class="hexnumber">0x0838</span></td><td>MSMON_CFG_CSA_CTL_ns</td></tr></table><p>When FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented, accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rt</td><td><span class="hexnumber">0x0838</span></td><td>MSMON_CFG_CSA_CTL_rt</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RW</span>.</p><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>MPAM</td><td>MPAMF_BASE_rl</td><td><span class="hexnumber">0x0838</span></td><td>MSMON_CFG_CSA_CTL_rl</td></tr></table><p>When FEAT_RME is implemented and (FEAT_MPAMv1p0 is implemented or FEAT_MPAMv0p1 is implemented), accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

@@ -6,7 +6,7 @@
 
       
         <p>Writes to this register must be high performance and must ensure that no interrupt of lower priority than the written value occurs after the write, without requiring an ISB or an exception boundary.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register ICC_PMR_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-icc_pmr.html">ICC_PMR[31:0]</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented) and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_PMR_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register ICC_PMR_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-icc_pmr.html">ICC_PMR[31:0]</a>.</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented) and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_PMR_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>The effect of writes to ICC_PMR_EL1 are guaranteed to be visible to later instructions in the Execution stream.  This ensures that no interrupts below the written PMR value will be taken after a write to this register is architecturally executed. For more information, see <span class="xref">'Observability of the effects of accesses to the GIC registers' in Arm® Generic Interrupt Controller Architecture Specification, GIC architecture version 3.0 and version 4.0 (ARM IHI 0069)</span>.</p>
       <h3>Attributes</h3>
         <p>ICC_PMR_EL1 is a 64-bit register.</p>

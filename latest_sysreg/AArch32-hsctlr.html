@@ -3,7 +3,7 @@
 <title>HSCTLR | Jon's Arm Reference</title><meta name="description" content="Provides top-level control of the system operation in Hyp mode."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">HSCTLR</h1><p class="insn_subtitle" data-pagefind-body="1">Hyp System Control Register</p><div data-pagefind-body="1">
         <p>Provides top-level control of the system operation in Hyp mode.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register HSCTLR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-sctlr_el2.html">SCTLR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to HSCTLR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register HSCTLR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to HSCTLR are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>HSCTLR is a 32-bit register.</p>
@@ -143,7 +143,7 @@
 </li></ul>
 <p>This means that, for the situations that are <span class="arm-defined-word">UNDEFINED</span>, either the second 16-bit instruction or the 32-bit instruction is <span class="arm-defined-word">UNDEFINED</span>.</p>
 <p>An implementation might vary dynamically as to whether IT is treated as a 16-bit instruction or the first half of a 32-bit instruction.</p></td></tr></table><p>If an instruction in an active IT block that would be disabled by this field sets this field to 1, then behavior is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span>. For more information, see <span class="xref">'Changes to an ITD control by an instruction in an IT block'</span>.</p>
-<p>ITD is optional, but if it is implemented in the HSCTLR, then it must also be implemented in the <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>, and <a href="AArch32-sctlr.html">SCTLR</a>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>ITD is optional, but if it is implemented in the HSCTLR, then it must also be implemented in the <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>, and <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>When an implementation does not implement ITD, access to this field is <span class="access_level">RAZ/WI</span>.</p></div><h4 id="fieldset_0-6_6">Bit [6]:
       </h4><div class="field">
@@ -152,11 +152,11 @@
       </h4><div class="field">
       <p>System instruction memory barrier enable. Enables accesses to the DMB, DSB, and ISB System instructions in the (coproc==<span class="binarynumber">0b1111</span>) encoding space from EL2:</p>
     <table class="valuetable"><tr><th>CP15BEN</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>EL2 execution of the <a href="AArch32-cp15dmb.html">CP15DMB</a>, <a href="AArch32-cp15dsb.html">CP15DSB</a>, and <a href="AArch32-cp15isb.html">CP15ISB</a> instructions is <span class="arm-defined-word">UNDEFINED</span>.</p>
+          <p>EL2 execution of the <a href="/latest_sysreg/AArch32-cp15dmb.html">CP15DMB</a>, <a href="/latest_sysreg/AArch32-cp15dsb.html">CP15DSB</a>, and <a href="/latest_sysreg/AArch32-cp15isb.html">CP15ISB</a> instructions is <span class="arm-defined-word">UNDEFINED</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>EL2 execution of the <a href="AArch32-cp15dmb.html">CP15DMB</a>, <a href="AArch32-cp15dsb.html">CP15DSB</a>, and <a href="AArch32-cp15isb.html">CP15ISB</a> instructions is enabled.</p>
+          <p>EL2 execution of the <a href="/latest_sysreg/AArch32-cp15dmb.html">CP15DMB</a>, <a href="/latest_sysreg/AArch32-cp15dsb.html">CP15DSB</a>, and <a href="/latest_sysreg/AArch32-cp15isb.html">CP15ISB</a> instructions is enabled.</p>
         </td></tr></table>
-      <p>CP15BEN is optional, but if it is implemented in the HSCTLR, then it must also be implemented in the <a href="AArch64-sctlr_el1.html">SCTLR_EL1</a>, <a href="AArch64-sctlr_el2.html">SCTLR_EL2</a>, and <a href="AArch32-sctlr.html">SCTLR</a>.</p>
+      <p>CP15BEN is optional, but if it is implemented in the HSCTLR, then it must also be implemented in the <a href="/latest_sysreg/AArch64-sctlr_el1.html">SCTLR_EL1</a>, <a href="/latest_sysreg/AArch64-sctlr_el2.html">SCTLR_EL2</a>, and <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>When an implementation does not implement CP15BEN, access to this field is <span class="access_level">RAO/WI</span>.</p></div><h4 id="fieldset_0-4_4-1">LSMAOE, bit [4] <span class="condition">when FEAT_LSMAOC is implemented</span>:

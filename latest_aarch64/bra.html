@@ -33,7 +33,7 @@ register.</p>
             </h4><a id="BRAA_64P_branch_reg"></a><span class="bitdiff"> (Z == 1 &amp;&amp; M == 0)</span></div><p class="asm-code">BRAA  <a href="#XnOrXZR" title='Is the 64-bit name of the general-purpose register holding the address to be branched to, encoded in the "Rn" field.'>&lt;Xn&gt;</a>, <a href="#XmSP_option" title='Is the 64-bit name of the general-purpose source register or stack pointer holding the modifier, encoded in the "Rm" field.'>&lt;Xm|SP&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Key A, zero modifier encoding
             </h4><a id="BRAAZ_64_branch_reg"></a><span class="bitdiff"> (Z == 0 &amp;&amp; M == 0 &amp;&amp; Rm == 11111)</span></div><p class="asm-code">BRAAZ  <a href="#XnOrXZR" title='Is the 64-bit name of the general-purpose register holding the address to be branched to, encoded in the "Rn" field.'>&lt;Xn&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Key B, register modifier encoding
             </h4><a id="BRAB_64P_branch_reg"></a><span class="bitdiff"> (Z == 1 &amp;&amp; M == 1)</span></div><p class="asm-code">BRAB  <a href="#XnOrXZR" title='Is the 64-bit name of the general-purpose register holding the address to be branched to, encoded in the "Rn" field.'>&lt;Xn&gt;</a>, <a href="#XmSP_option" title='Is the 64-bit name of the general-purpose source register or stack pointer holding the modifier, encoded in the "Rm" field.'>&lt;Xm|SP&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Key B, zero modifier encoding
-            </h4><a id="BRABZ_64_branch_reg"></a><span class="bitdiff"> (Z == 0 &amp;&amp; M == 1 &amp;&amp; Rm == 11111)</span></div><p class="asm-code">BRABZ  <a href="#XnOrXZR" title='Is the 64-bit name of the general-purpose register holding the address to be branched to, encoded in the "Rn" field.'>&lt;Xn&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_PAuth) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="BRABZ_64_branch_reg"></a><span class="bitdiff"> (Z == 0 &amp;&amp; M == 1 &amp;&amp; Rm == 11111)</span></div><p class="asm-code">BRABZ  <a href="#XnOrXZR" title='Is the 64-bit name of the general-purpose register holding the address to be branched to, encoded in the "Rn" field.'>&lt;Xn&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_PAuth) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 
 let n : integer{} = UInt(Rn);
 let m : integer{} = UInt(Rm);
@@ -51,24 +51,24 @@ let auth_then_branch : boolean = TRUE;</p>
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
       <p class="pseudocode">var target : bits(64) = X{}(n);
-let modifier : bits(64) = if source_is_sp then <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}() else <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(m);
+let modifier : bits(64) = if source_is_sp then <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}() else <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(m);
 
 if use_key_a then
-    target = <a href="shared_pseudocode.html#func_AuthIA_3" title="">AuthIA</a>(target, modifier, auth_then_branch);
+    target = <a href="/latest_aarch64/shared_pseudocode.html#func_AuthIA_3" title="">AuthIA</a>(target, modifier, auth_then_branch);
 else
-    target = <a href="shared_pseudocode.html#func_AuthIB_3" title="">AuthIB</a>(target, modifier, auth_then_branch);
+    target = <a href="/latest_aarch64/shared_pseudocode.html#func_AuthIB_3" title="">AuthIB</a>(target, modifier, auth_then_branch);
 end;
 // Value in BTypeNext will be used to set PSTATE.BTYPE
-if <a href="shared_pseudocode.html#global_InGuardedPage" title="">InGuardedPage</a> then
+if <a href="/latest_aarch64/shared_pseudocode.html#global_InGuardedPage" title="">InGuardedPage</a> then
     if n == 16 || n == 17 then
-        <a href="shared_pseudocode.html#global_BTypeNext" title="">BTypeNext</a> = '01';
+        <a href="/latest_aarch64/shared_pseudocode.html#global_BTypeNext" title="">BTypeNext</a> = '01';
     else
-        <a href="shared_pseudocode.html#global_BTypeNext" title="">BTypeNext</a> = '11';
+        <a href="/latest_aarch64/shared_pseudocode.html#global_BTypeNext" title="">BTypeNext</a> = '11';
     end;
 else
-    <a href="shared_pseudocode.html#global_BTypeNext" title="">BTypeNext</a> = '01';
+    <a href="/latest_aarch64/shared_pseudocode.html#global_BTypeNext" title="">BTypeNext</a> = '01';
 end;
 
 let branch_conditional : boolean = FALSE;
-<a href="shared_pseudocode.html#func_BranchTo_4" title="">BranchTo</a>{64}(target, <a href="shared_pseudocode.html#enum_BranchType_INDIR" title="">BranchType_INDIR</a>, branch_conditional);</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#func_BranchTo_4" title="">BranchTo</a>{64}(target, <a href="/latest_aarch64/shared_pseudocode.html#enum_BranchType_INDIR" title="">BranchType_INDIR</a>, branch_conditional);</p></div>
   <hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

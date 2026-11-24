@@ -11,10 +11,10 @@
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-31_0">ScaleVal</a></td></tr></tbody></table><h4 id="fieldset_0-31_0">ScaleVal, bits [31:0]:
       </h4><div class="field">
       <p>Scale Value</p>
-    <p>When counter scaling is enabled, ScaleVal is the average amount added to the counter value for one period of the frequency of the Generic counter as described in the <a href="ext-cntfrq.html">CNTFRQ</a> register.</p>
+    <p>When counter scaling is enabled, ScaleVal is the average amount added to the counter value for one period of the frequency of the Generic counter as described in the <a href="/latest_sysreg/ext-cntfrq.html">CNTFRQ</a> register.</p>
 <p>The actual rate of update of the counter value is determined by the <span class="xref">counter resolution</span>.</p>
 <p>ScaleVal is expressed as an unsigned fixed point number with an 8-bit integer value and a 24-bit fractional value.</p>
-<p>CNTSCR.ScaleVal can only be changed when <a href="ext-cntcr.html">CNTCR</a>.EN == 0. If the value of this field is changed when <a href="ext-cntcr.html">CNTCR</a>.EN == 1:</p>
+<p>CNTSCR.ScaleVal can only be changed when <a href="/latest_sysreg/ext-cntcr.html">CNTCR</a>.EN == 0. If the value of this field is changed when <a href="/latest_sysreg/ext-cntcr.html">CNTCR</a>.EN == 1:</p>
 <ul>
 <li>The counter value becomes <span class="arm-defined-word">UNKNOWN</span>.
 </li><li>The counter value remains <span class="arm-defined-word">UNKNOWN</span> on future ticks of the clock.

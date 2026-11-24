@@ -3,7 +3,7 @@
 <title>HSR | Jon's Arm Reference</title><meta name="description" content="Holds syndrome information for an exception taken to Hyp mode."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">HSR</h1><p class="insn_subtitle" data-pagefind-body="1">Hyp Syndrome Register</p><div data-pagefind-body="1">
         <p>Holds syndrome information for an exception taken to Hyp mode.</p>
-      </div><h3>Configuration</h3><p>AArch32 System register HSR bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-esr_el2.html">ESR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to HSR are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register HSR bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-esr_el2.html">ESR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to HSR are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>HSR is a 32-bit register.</p>
@@ -24,12 +24,12 @@
 <p>The only architected uses of these instructions are:</p>
 <ul>
 <li>
-<p>An STC to write data to memory from <a href="AArch32-dbgdtrrxint.html">DBGDTRRXint</a>.</p>
+<p>An STC to write data to memory from <a href="/latest_sysreg/AArch32-dbgdtrrxint.html">DBGDTRRXint</a>.</p>
 
 </li><li>
-<p>An LDC to read data from memory to <a href="AArch32-dbgdtrtxint.html">DBGDTRTXint</a>.</p>
+<p>An LDC to read data from memory to <a href="/latest_sysreg/AArch32-dbgdtrtxint.html">DBGDTRTXint</a>.</p>
 
-</li></ul></td><td><a href="#fieldset_0-24_0_4">ISS encoding for an exception from an LDC or STC instruction</a></td></tr><tr><td class="bitfield">0b000111</td><td><p>Access to Advanced SIMD or floating-point functionality trapped by a <a href="AArch32-hcptr.html">HCPTR</a>.{TASE, TCP10} control.</p>
+</li></ul></td><td><a href="#fieldset_0-24_0_4">ISS encoding for an exception from an LDC or STC instruction</a></td></tr><tr><td class="bitfield">0b000111</td><td><p>Access to Advanced SIMD or floating-point functionality trapped by a <a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.{TASE, TCP10} control.</p>
 <p>Excludes exceptions generated because Advanced SIMD and floating-point are not implemented. These are reported with EC value <span class="binarynumber">0b000000</span>.</p></td><td><a href="#fieldset_0-24_0_5">ISS encoding for an exception from an access to SIMD or floating-point functionality, resulting from HCPTR</a></td></tr><tr><td class="bitfield">0b001000</td><td>
           <p>Trapped VMRS access, from ID group trap, that is not reported using EC value <span class="binarynumber">0b000111</span>.</p>
         </td><td><a href="#fieldset_0-24_0_2">ISS encoding for an exception from an MCR or MRC access</a></td></tr><tr><td class="bitfield">0b001100</td><td>
@@ -94,24 +94,24 @@
 </li><li>In Non-debug state, the attempted execution of an instruction bit pattern that is not accessible in Non-debug state.
 </li><li>The attempted execution of a short vector floating-point instruction.
 </li><li>In an implementation that does not include Advanced SIMD and floating-point functionality, an attempted access to Advanced SIMD or floating-point functionality under conditions where that access would be permitted if that functionality was present. This includes the attempted execution of an Advanced SIMD or floating-point instruction, and attempted accesses to Advanced SIMD and floating-point System registers.
-</li><li>An exception generated because of the value of one of the <a href="AArch32-sctlr.html">SCTLR</a>.{ITD, SED, CP15BEN} control bits.
+</li><li>An exception generated because of the value of one of the <a href="/latest_sysreg/AArch32-sctlr.html">SCTLR</a>.{ITD, SED, CP15BEN} control bits.
 </li><li>Attempted execution of:<ul>
-<li>An HVC instruction when disabled by <a href="AArch32-hcr.html">HCR</a>.HCD, <a href="AArch32-scr.html">SCR</a>.HCE, or <a href="AArch64-scr_el3.html">SCR_EL3</a>.HCE.
-</li><li>An SMC instruction when disabled by <a href="AArch32-scr.html">SCR</a>.SCD or <a href="AArch64-scr_el3.html">SCR_EL3</a>.SMD.
-</li><li>An HLT instruction when disabled by <a href="ext-edscr.html">EDSCR</a>.HDE.
+<li>An HVC instruction when disabled by <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.HCD, <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.HCE, or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HCE.
+</li><li>An SMC instruction when disabled by <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.SCD or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SMD.
+</li><li>An HLT instruction when disabled by <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.HDE.
 </li></ul>
 
-</li><li>An HVC instruction when disabled by <a href="AArch32-hcr.html">HCR</a>.HCD, <a href="AArch32-scr.html">SCR</a>.HCE, or <a href="AArch64-scr_el3.html">SCR_EL3</a>.HCE. An SMC instruction when disabled by <a href="AArch32-scr.html">SCR</a>.SCD or <a href="AArch64-scr_el3.html">SCR_EL3</a>.SMD. An HLT instruction when disabled by <a href="ext-edscr.html">EDSCR</a>.HDE.
+</li><li>An HVC instruction when disabled by <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.HCD, <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.HCE, or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.HCE. An SMC instruction when disabled by <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.SCD or <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.SMD. An HLT instruction when disabled by <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.HDE.
 </li><li>An exception generated because of the attempted execution of an MSR (Banked register) or MRS (Banked register) instruction that would access a Banked register that is not accessible from the Security state and PE mode at which the instruction was executed.
 </li></ul>
 <div class="note"><p>An exception is generated only if the <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> behavior of the instruction is that it is <span class="arm-defined-word">UNDEFINED</span>, see <span class="xref">'MSR (banked register) and MRS (banked register)'</span>.</p></div><ul>
 <li>Attempted execution, in Debug state, of:<ul>
-<li>A DCPS1 instruction in Non-secure state from EL0 when EL2 is using AArch32 and the value of <a href="AArch32-hcr.html">HCR</a>.TGE is 1.
-</li><li>A DCPS2 instruction at EL1 or EL0 when EL2 is not implemented, or when EL3 is using AArch32 and the value of <a href="AArch32-scr.html">SCR</a>.NS is 0, or when EL3 is using AArch64 and the value of <a href="AArch64-scr_el3.html">SCR_EL3</a>.NS is 0.
-</li><li>A DCPS3 instruction when EL3 is not implemented, or when the value of <a href="ext-edscr.html">EDSCR</a>.SDD is 1.
+<li>A DCPS1 instruction in Non-secure state from EL0 when EL2 is using AArch32 and the value of <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TGE is 1.
+</li><li>A DCPS2 instruction at EL1 or EL0 when EL2 is not implemented, or when EL3 is using AArch32 and the value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS is 0, or when EL3 is using AArch64 and the value of <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS is 0.
+</li><li>A DCPS3 instruction when EL3 is not implemented, or when the value of <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.SDD is 1.
 </li></ul>
 
-</li><li>In Debug state when the value of <a href="ext-edscr.html">EDSCR</a>.SDD is 1, the attempted execution at EL2, EL1, and EL0 of an instruction that is configured to trap to EL3.
+</li><li>In Debug state when the value of <a href="/latest_sysreg/ext-edscr.html">EDSCR</a>.SDD is 1, the attempted execution at EL2, EL1, and EL0 of an instruction that is configured to trap to EL3.
 </li></ul>
 <p><span class="xref">'Undefined Instruction exception, when the value of HCR.TGE is 1'</span> describes the configuration settings for a trap that returns an EC value of <span class="binarynumber">0b000000</span>.</p></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_1">ISS encoding for an exception from a WFI or WFE instruction</h3><table class="regdiagram" id="fieldset_0-24_0_1"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_1-24_24">CV</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_1-23_20">COND</a></td><td class="lr" colspan="19"><a href="#fieldset_0-24_0_1-19_1">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_1-0_0">TI</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_1-24_24">CV, bit [24]:
       </h4><div class="field">
@@ -155,7 +155,7 @@
               </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from a WFI or WFE instruction</h4><div class="text_after_fields">
-          <p><a href="AArch32-hcr.html">HCR</a>.{TWE, TWI} describe the configuration settings for this trap.</p>
+          <p><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TWE, TWI} describe the configuration settings for this trap.</p>
         </div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_2">ISS encoding for an exception from an MCR or MRC access</h3><table class="regdiagram" id="fieldset_0-24_0_2"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_2-24_24">CV</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_2-23_20">COND</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_2-19_17">Opc2</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_2-16_14">Opc1</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_2-13_10">CRn</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_2-9_9">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_2-8_5">Rt</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_2-4_1">CRm</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_2-0_0">Direction</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_2-24_24">CV, bit [24]:
       </h4><div class="field">
             <p>Condition code valid. Possible values of this bit are:</p>
@@ -220,33 +220,33 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from an MCR or MRC access</h4><div class="text_after_fields"><p>The following fields describe configuration settings for traps from an MCR or MCR access using coproc <span class="binarynumber">0b1111</span> that are reported using EC value <span class="binarynumber">0b000011</span>:</p>
 <ul>
-<li><a href="AArch32-hcr.html">HCR</a>.{TID1, TID2, TID3}, for Non-secure accesses to the ID registers at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.TIDCP, for Non-secure accesses to lockdown, DMA, and TCM operations at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.{TSW, TPC, TPU}, for Non-secure execution of cache maintenance instructions at EL1, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.TTLB, for Non-secure execution of TLB maintenance instructions at EL1, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.TAC, for Non-secure accesses to the Auxiliary Control Register at EL1, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.{TPM, TPMCR}, for Non-secure accesses to Performance Monitors System registers at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TAM, for Non-secure accesses to Activity Monitors System registers at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TCPAC, for Non-secure accesses to the CPACR at EL1, trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.{TRVM, TVM}, for Non-secure accesses to virtual memory control registers at EL1, trapped to EL2.
-</li><li><a href="AArch32-hstr.html">HSTR</a>.T&lt;n&gt;, for Non-secure accesses to System registers in the (coproc == 1111) encoding space at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TTRF, for Non-secure accesses to trace filter control registers from System register, trapped to EL2.
-</li><li><a href="AArch32-cnthctl.html">CNTHCTL</a>.PL1PCEN, for Non-secure accesses to the Generic Timer registers at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hcr2.html">HCR2</a>.TERR, for Non-secure accesses to the RAS error record registers at EL1, trapped to EL2.
+<li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TID1, TID2, TID3}, for Non-secure accesses to the ID registers at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TIDCP, for Non-secure accesses to lockdown, DMA, and TCM operations at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TSW, TPC, TPU}, for Non-secure execution of cache maintenance instructions at EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TTLB, for Non-secure execution of TLB maintenance instructions at EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TAC, for Non-secure accesses to the Auxiliary Control Register at EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.{TPM, TPMCR}, for Non-secure accesses to Performance Monitors System registers at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TAM, for Non-secure accesses to Activity Monitors System registers at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TCPAC, for Non-secure accesses to the CPACR at EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TRVM, TVM}, for Non-secure accesses to virtual memory control registers at EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hstr.html">HSTR</a>.T&lt;n&gt;, for Non-secure accesses to System registers in the (coproc == 1111) encoding space at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TTRF, for Non-secure accesses to trace filter control registers from System register, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-cnthctl.html">CNTHCTL</a>.PL1PCEN, for Non-secure accesses to the Generic Timer registers at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr2.html">HCR2</a>.TERR, for Non-secure accesses to the RAS error record registers at EL1, trapped to EL2.
 </li></ul>
 <p>The following fields describe configuration settings for traps from an MCR or MRC access using coproc <span class="binarynumber">0b1110</span> that are reported using EC value <span class="binarynumber">0b000101</span>:</p>
 <ul>
-<li><a href="AArch32-hcr.html">HCR</a>.TID0, for Non-secure accesses to the Primary device identification registers at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TTA, for Non-secure accesses to trace System registers from System register, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TDRA, for Non-secure accesses to Debug ROM registers from System register, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TDOSA, for Non-secure accesses to powerdown debug System registers from System register, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TDA, for Non-secure accesses to debug System registers from System register, trapped to EL2.
+<li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TID0, for Non-secure accesses to the Primary device identification registers at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TTA, for Non-secure accesses to trace System registers from System register, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDRA, for Non-secure accesses to Debug ROM registers from System register, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDOSA, for Non-secure accesses to powerdown debug System registers from System register, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDA, for Non-secure accesses to debug System registers from System register, trapped to EL2.
 </li></ul>
 <p>The following fields describes configuration settings for traps from a VMSR or VMRS access that are reported using EC value <span class="binarynumber">0b001000</span>:</p>
 <ul>
-<li><a href="AArch32-hcr.html">HCR</a>.TID0, for Non-secure accesses to the Primary device identification registers at EL1, for ID group traps trapped to EL2.
-</li><li><a href="AArch32-hcr.html">HCR</a>.TID3, for Non-secure accesses to the Detailed feature identification registers at EL0 and EL1, for ID group traps trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.{TCP10, TCP11}, for Non-secure accesses to <a href="AArch32-fpscr.html">FPSCR</a>, <a href="AArch32-fpsid.html">FPSID</a>, <a href="AArch32-fpexc.html">FPEXC</a>, <a href="AArch32-mvfr0.html">MVFR0</a>, <a href="AArch32-mvfr1.html">MVFR1</a>, and <a href="AArch32-mvfr2.html">MVFR2</a>, trapped to EL2.
+<li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TID0, for Non-secure accesses to the Primary device identification registers at EL1, for ID group traps trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TID3, for Non-secure accesses to the Detailed feature identification registers at EL0 and EL1, for ID group traps trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.{TCP10, TCP11}, for Non-secure accesses to <a href="/latest_sysreg/AArch32-fpscr.html">FPSCR</a>, <a href="/latest_sysreg/AArch32-fpsid.html">FPSID</a>, <a href="/latest_sysreg/AArch32-fpexc.html">FPEXC</a>, <a href="/latest_sysreg/AArch32-mvfr0.html">MVFR0</a>, <a href="/latest_sysreg/AArch32-mvfr1.html">MVFR1</a>, and <a href="/latest_sysreg/AArch32-mvfr2.html">MVFR2</a>, trapped to EL2.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_3">ISS encoding for an exception from an MCRR or MRRC access</h3><table class="regdiagram" id="fieldset_0-24_0_3"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_3-24_24">CV</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_3-23_20">COND</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_3-19_16">Opc1</a></td><td class="lr" colspan="2"><a href="#fieldset_0-24_0_3-15_14">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_3-13_10">Rt2</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_3-9_9">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_3-8_5">Rt</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_3-4_1">CRm</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_3-0_0">Direction</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_3-24_24">CV, bit [24]:
       </h4><div class="field">
             <p>Condition code valid. Possible values of this bit are:</p>
@@ -313,17 +313,17 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from an MCRR or MRRC access</h4><div class="text_after_fields"><p>The following fields describe configuration settings for traps from an MCRR or MRRC access using coproc <span class="binarynumber">0b1111</span> that are reported using EC value <span class="binarynumber">0b000100</span>:</p>
 <ul>
-<li><a href="AArch32-hcr.html">HCR</a>.{TRVM, TVM}, for Non-secure accesses to virtual memory control registers at EL1, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TPM, for Non-secure accesses to Performance Monitors System registers at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TAM, for Non-secure accesses to Activity Monitors System registers at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-cnthctl.html">CNTHCTL</a>.{PL1PCEN, PL1PCTEN}, for Non-secure accesses to the Generic Timer registers at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hstr.html">HSTR</a>.T&lt;n&gt;, for Non-secure accesses to System registers in the (coproc == 1111) encoding space at EL0 and EL1, trapped to EL2.
-</li><li><a href="AArch32-hcr2.html">HCR2</a>.TERR, for Non-secure accesses to the RAS error record registers at EL1, trapped to EL2.
+<li><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.{TRVM, TVM}, for Non-secure accesses to virtual memory control registers at EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TPM, for Non-secure accesses to Performance Monitors System registers at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TAM, for Non-secure accesses to Activity Monitors System registers at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-cnthctl.html">CNTHCTL</a>.{PL1PCEN, PL1PCTEN}, for Non-secure accesses to the Generic Timer registers at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hstr.html">HSTR</a>.T&lt;n&gt;, for Non-secure accesses to System registers in the (coproc == 1111) encoding space at EL0 and EL1, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcr2.html">HCR2</a>.TERR, for Non-secure accesses to the RAS error record registers at EL1, trapped to EL2.
 </li></ul>
 <p>The following fields describe configuration settings for traps from an MCRR or MRRC access using coproc <span class="binarynumber">0b1110</span> that are reported using EC value <span class="binarynumber">0b001100</span>:</p>
 <ul>
-<li><a href="AArch32-hcptr.html">HCPTR</a>.TTA, for Non-secure accesses to trace System registers from System register, trapped to EL2.
-</li><li><a href="AArch32-hdcr.html">HDCR</a>.TDRA, for Non-secure accesses to Debug ROM registers from System register, trapped to EL2.
+<li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TTA, for Non-secure accesses to trace System registers from System register, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDRA, for Non-secure accesses to Debug ROM registers from System register, trapped to EL2.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_4">ISS encoding for an exception from an LDC or STC instruction</h3><table class="regdiagram" id="fieldset_0-24_0_4"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_4-24_24">CV</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_4-23_20">COND</a></td><td class="lr" colspan="8"><a href="#fieldset_0-24_0_4-19_12">imm8</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_4-11_9">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_4-8_5">Rn</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_4-4_4">Offset</a></td><td class="lr" colspan="3"><a href="#fieldset_0-24_0_4-3_1">AM</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_4-0_0">Direction</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_4-24_24">CV, bit [24]:
       </h4><div class="field">
             <p>Condition code valid. Possible values of this bit are:</p>
@@ -405,9 +405,9 @@
               </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from an LDC or STC instruction</h4><div class="text_after_fields">
-          <p><a href="AArch32-hdcr.html">HDCR</a>.TDA describes the configuration settings for the trap that is reported using EC value <span class="binarynumber">0b000110</span>.</p>
+          <p><a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.TDA describes the configuration settings for the trap that is reported using EC value <span class="binarynumber">0b000110</span>.</p>
         </div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_5">ISS encoding for an exception from an access to SIMD or floating-point functionality, resulting from HCPTR</h3><table class="regdiagram" id="fieldset_0-24_0_5"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-24_0_5-24_24">CV</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_5-23_20">COND</a></td><td class="lr" colspan="14"><a href="#fieldset_0-24_0_5-19_6">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_5-5_5">TA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_5-4_4">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_0-24_0_5-3_0">coproc</a></td></tr></tbody></table><div class="text_before_fields">
-          <p>Excludes exceptions that occur because Advanced SIMD and floating-point functionality is not implemented, or because the value of <a href="AArch32-hcr.html">HCR</a>.TGE or <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1. These are reported with EC value <span class="binarynumber">0b000000</span>.</p>
+          <p>Excludes exceptions that occur because Advanced SIMD and floating-point functionality is not implemented, or because the value of <a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TGE or <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 1. These are reported with EC value <span class="binarynumber">0b000000</span>.</p>
         </div><h4 id="fieldset_0-24_0_5-24_24">CV, bit [24]:
       </h4><div class="field">
             <p>Condition code valid. Possible values of this bit are:</p>
@@ -447,7 +447,7 @@
                 <p>Exception was not caused by trapped use of Advanced SIMD functionality.</p>
               </td></tr><tr><td class="bitfield">0b1</td><td>
                 <p>Exception was caused by trapped use of Advanced SIMD functionality.</p>
-              </td></tr></table><p>Any use of an Advanced SIMD instruction that is not also a floating-point instruction that is trapped to Hyp mode because of a trap configured in the <a href="AArch32-hcptr.html">HCPTR</a> sets this bit to 1.</p>
+              </td></tr></table><p>Any use of an Advanced SIMD instruction that is not also a floating-point instruction that is trapped to Hyp mode because of a trap configured in the <a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a> sets this bit to 1.</p>
 <p>For a list of these instructions, see <span class="xref">'Controls of Advanced SIMD operation that do not apply to floating-point operation'</span>.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-24_0_5-4_4">Bit [4]:
@@ -460,8 +460,8 @@
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4>Additional information for the ISS encoding for an exception from an access to SIMD or floating-point functionality, resulting from HCPTR</h4><div class="text_after_fields"><p>The following fields describe the configuration settings for the traps that are reported using EC value <span class="binarynumber">0b000111</span>:</p>
 <ul>
-<li><a href="AArch32-hcptr.html">HCPTR</a>.{TCP11, TCP10}, for Non-secure accesses to the SIMD and floating-point registers, trapped to EL2.
-</li><li><a href="AArch32-hcptr.html">HCPTR</a>.TASE, for Non-secure accesses to Advanced SIMD functionality, trapped to EL2.
+<li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.{TCP11, TCP10}, for Non-secure accesses to the SIMD and floating-point registers, trapped to EL2.
+</li><li><a href="/latest_sysreg/AArch32-hcptr.html">HCPTR</a>.TASE, for Non-secure accesses to Advanced SIMD functionality, trapped to EL2.
 </li></ul></div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_6">ISS encoding for an exception from HVC or SVC instruction execution</h3><table class="regdiagram" id="fieldset_0-24_0_6"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="9"><a href="#fieldset_0-24_0_6-24_16">RES0</a></td><td class="lr" colspan="16"><a href="#fieldset_0-24_0_6-15_0">imm16</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_6-24_16">Bits [24:16]:
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -524,7 +524,7 @@
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
           </div><h4>Additional information for the ISS encoding for an exception from SMC instruction execution</h4><div class="text_after_fields">
-          <p><a href="AArch32-hcr.html">HCR</a>.TSC describes the configuration settings for this trap for instructions executed in Non-secure EL1.</p>
+          <p><a href="/latest_sysreg/AArch32-hcr.html">HCR</a>.TSC describes the configuration settings for this trap for instructions executed in Non-secure EL1.</p>
         </div></div><div class="partial_fieldset"><h3 id="fieldset_0-24_0_8">ISS encoding for an exception from a Prefetch Abort</h3><table class="regdiagram" id="fieldset_0-24_0_8"><thead><tr><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="14"><a href="#fieldset_0-24_0_8-24_11">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_8-10_10">FnV</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_8-9_9">EA</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_8-8_8">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_8-7_7">S1PTW</a></td><td class="lr" colspan="1"><a href="#fieldset_0-24_0_8-6_6">RES0</a></td><td class="lr" colspan="6"><a href="#fieldset_0-24_0_8-5_0">IFSC</a></td></tr></tbody></table><h4 id="fieldset_0-24_0_8-24_11">Bits [24:11]:
       </h4><div class="field">
             <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
@@ -532,9 +532,9 @@
       </h4><div class="field">
             <p>FAR not Valid, for a synchronous External abort other than a synchronous External abort on a translation table walk.</p>
           <table class="valuetable"><tr><th>FnV</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-                <p><a href="AArch32-hifar.html">HIFAR</a> is valid.</p>
+                <p><a href="/latest_sysreg/AArch32-hifar.html">HIFAR</a> is valid.</p>
               </td></tr><tr><td class="bitfield">0b1</td><td>
-                <p><a href="AArch32-hifar.html">HIFAR</a> is not valid, and holds an <span class="arm-defined-word">UNKNOWN</span> value.</p>
+                <p><a href="/latest_sysreg/AArch32-hifar.html">HIFAR</a> is not valid, and holds an <span class="arm-defined-word">UNKNOWN</span> value.</p>
               </td></tr></table>
             <p>This field is valid only if the IFSC code is <span class="binarynumber">0b010000</span>. It is <span class="arm-defined-word">RES0</span> for all other aborts.</p>
           <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
@@ -726,9 +726,9 @@
                         [11:10]</h5><div class="field">
             <p>FAR not Valid, for a synchronous External abort other than a synchronous External abort on a translation table walk.</p>
           <table class="valuetable"><tr><th>FnV</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-                <p><a href="AArch32-hdfar.html">HDFAR</a> is valid.</p>
+                <p><a href="/latest_sysreg/AArch32-hdfar.html">HDFAR</a> is valid.</p>
               </td></tr><tr><td class="bitfield">0b1</td><td>
-                <p><a href="AArch32-hdfar.html">HDFAR</a> is not valid, and holds an <span class="arm-defined-word">UNKNOWN</span> value.</p>
+                <p><a href="/latest_sysreg/AArch32-hdfar.html">HDFAR</a> is not valid, and holds an <span class="arm-defined-word">UNKNOWN</span> value.</p>
               </td></tr></table><p>When FEAT_RAS is not implemented, this field is valid only if DFSC is <span class="binarynumber">0b010000</span>. It is <span class="arm-defined-word">RES0</span> for all other aborts.</p>
 <p>When FEAT_RAS is implemented:</p>
 <ul>

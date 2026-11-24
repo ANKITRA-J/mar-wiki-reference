@@ -8,7 +8,7 @@
         <p>Software should write this register after reading the status of an error to reset ERRCODE to <span class="hexnumber">0x0000</span> and OVRWR to 0 so that future errors are not reported with OVRWR set.</p>
       </div><h3>Configuration</h3><p>The power domain of MPAMF_ESR is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span>.
     </p><p>This register is present only when FEAT_MPAMv0p1 is implemented, or FEAT_MPAMv1p0 is implemented, or FEAT_MPAMv2_MSC is implemented. Otherwise, direct accesses to MPAMF_ESR are <span class="arm-defined-word">RES0</span>.</p>
-        <p>If an MSC cannot encounter any of the error conditions listed in <span class="xref">MPAM MSC Errors</span> of Arm®  Memory System Resource Partitioning and Monitoring (MPAM) System Component Specification (ARM IHI 0099), both the MPAMF_ESR and <a href="ext-mpamf_ecr.html">MPAMF_ECR</a> must be RAZ/WI.</p>
+        <p>If an MSC cannot encounter any of the error conditions listed in <span class="xref">MPAM MSC Errors</span> of Arm®  Memory System Resource Partitioning and Monitoring (MPAM) System Component Specification (ARM IHI 0099), both the MPAMF_ESR and <a href="/latest_sysreg/ext-mpamf_ecr.html">MPAMF_ECR</a> must be RAZ/WI.</p>
 
       
         <p>If <span class="xref">FEAT_MPAMv1p0</span> or <span class="xref">FEAT_MPAMv0p1</span> is implemented, then the following statements apply:</p>

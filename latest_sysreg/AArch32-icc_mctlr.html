@@ -39,7 +39,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The CPU interface logic supports nonzero values of the Aff3 field in SGI generation System registers.</p>
         </td></tr></table>
-      <p>If EL3 is present, <a href="AArch32-icc_ctlr.html">ICC_CTLR</a>.A3V is an alias of ICC_MCTLR.A3V</p>
+      <p>If EL3 is present, <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a>.A3V is an alias of ICC_MCTLR.A3V</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-14_14">SEIS, bit [14]:
       </h4><div class="field">
       <p>SEI Support. Indicates whether the CPU interface supports generation of SEIs.</p>
@@ -48,7 +48,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>The CPU interface logic supports generation of SEIs.</p>
         </td></tr></table>
-      <p>If EL3 is present, <a href="AArch32-icc_ctlr.html">ICC_CTLR</a>.SEIS is an alias of ICC_MCTLR.SEIS</p>
+      <p>If EL3 is present, <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a>.SEIS is an alias of ICC_MCTLR.SEIS</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-13_11">IDbits, bits [13:11]:
       </h4><div class="field">
       <p>Identifier bits. Indicates the number of physical interrupt identifier bits supported.</p>
@@ -57,12 +57,12 @@
         </td></tr><tr><td class="bitfield">0b001</td><td>
           <p>24 bits.</p>
         </td></tr></table><p>All other values are reserved.</p>
-<p>If EL3 is present, <a href="AArch32-icc_ctlr.html">ICC_CTLR</a>.IDbits is an alias of ICC_MCTLR.IDbits</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-10_8">PRIbits, bits [10:8]:
+<p>If EL3 is present, <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a>.IDbits is an alias of ICC_MCTLR.IDbits</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-10_8">PRIbits, bits [10:8]:
       </h4><div class="field"><p>Priority bits. The number of priority bits implemented, minus one.</p>
 <p>An implementation that supports two Security states must implement at least 32 levels of physical priority (5 priority bits).</p>
 <p>An implementation that supports only a single Security state must implement at least 16 levels of physical priority (4 priority bits).</p>
-<div class="note"><p>This field always returns the number of priority bits implemented, regardless of the value of <a href="AArch32-scr.html">SCR</a>.NS or the value of <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS.</p></div><p>The division between group priority and subpriority is defined in the binary point registers <a href="AArch32-icc_bpr0.html">ICC_BPR0</a> and <a href="AArch32-icc_bpr1.html">ICC_BPR1</a>.</p>
-<p>This field determines the minimum value of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a>.</p>
+<div class="note"><p>This field always returns the number of priority bits implemented, regardless of the value of <a href="/latest_sysreg/AArch32-scr.html">SCR</a>.NS or the value of <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS.</p></div><p>The division between group priority and subpriority is defined in the binary point registers <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> and <a href="/latest_sysreg/AArch32-icc_bpr1.html">ICC_BPR1</a>.</p>
+<p>This field determines the minimum value of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a>.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-7_7">Bit [7]:
       </h4><div class="field">
@@ -74,9 +74,9 @@
           <p>Disables use of the priority mask register as a hint for interrupt distribution.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Enables use of the priority mask register as a hint for interrupt distribution.</p>
-        </td></tr></table><p>Software must write <a href="AArch32-icc_pmr.html">ICC_PMR</a> to <span class="hexnumber">0xFF</span> before clearing this field to 0.</p>
+        </td></tr></table><p>Software must write <a href="/latest_sysreg/AArch32-icc_pmr.html">ICC_PMR</a> to <span class="hexnumber">0xFF</span> before clearing this field to 0.</p>
 <p>An implementation might choose to make this field RAO/WI.</p>
-<p>If EL3 is present, <a href="AArch32-icc_ctlr.html">ICC_CTLR</a>.PMHE is an alias of ICC_MCTLR.PMHE.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If EL3 is present, <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a>.PMHE is an alias of ICC_MCTLR.PMHE.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-5_5">RM, bit [5]:
@@ -87,51 +87,51 @@
       </h4><div class="field">
       <p>EOI mode for interrupts handled at Non-secure EL1 and EL2. Controls whether a write to an End of Interrupt register also deactivates the interrupt.</p>
     <table class="valuetable"><tr><th>EOImode_EL1NS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="AArch32-icc_eoir1.html">ICC_EOIR1</a> provide both priority drop and interrupt deactivation functionality. Accesses to <a href="AArch32-icc_dir.html">ICC_DIR</a> are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
+          <p><a href="/latest_sysreg/AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="/latest_sysreg/AArch32-icc_eoir1.html">ICC_EOIR1</a> provide both priority drop and interrupt deactivation functionality. Accesses to <a href="/latest_sysreg/AArch32-icc_dir.html">ICC_DIR</a> are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="AArch32-icc_eoir1.html">ICC_EOIR1</a> provide priority drop functionality only. <a href="AArch32-icc_dir.html">ICC_DIR</a> provides interrupt deactivation functionality.</p>
+          <p><a href="/latest_sysreg/AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="/latest_sysreg/AArch32-icc_eoir1.html">ICC_EOIR1</a> provide priority drop functionality only. <a href="/latest_sysreg/AArch32-icc_dir.html">ICC_DIR</a> provides interrupt deactivation functionality.</p>
         </td></tr></table>
-      <p>If EL3 is present, <a href="AArch32-icc_ctlr.html">ICC_CTLR</a>(NS).EOImode is an alias of ICC_MCTLR.EOImode_EL1NS.</p>
+      <p>If EL3 is present, <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a>(NS).EOImode is an alias of ICC_MCTLR.EOImode_EL1NS.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-3_3">EOImode_EL1S, bit [3]:
       </h4><div class="field">
       <p>EOI mode for interrupts handled at Secure EL1. Controls whether a write to an End of Interrupt register also deactivates the interrupt.</p>
     <table class="valuetable"><tr><th>EOImode_EL1S</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="AArch32-icc_eoir1.html">ICC_EOIR1</a> provide both priority drop and interrupt deactivation functionality. Accesses to <a href="AArch32-icc_dir.html">ICC_DIR</a> are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
+          <p><a href="/latest_sysreg/AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="/latest_sysreg/AArch32-icc_eoir1.html">ICC_EOIR1</a> provide both priority drop and interrupt deactivation functionality. Accesses to <a href="/latest_sysreg/AArch32-icc_dir.html">ICC_DIR</a> are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="AArch32-icc_eoir1.html">ICC_EOIR1</a> provide priority drop functionality only. <a href="AArch32-icc_dir.html">ICC_DIR</a> provides interrupt deactivation functionality.</p>
+          <p><a href="/latest_sysreg/AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="/latest_sysreg/AArch32-icc_eoir1.html">ICC_EOIR1</a> provide priority drop functionality only. <a href="/latest_sysreg/AArch32-icc_dir.html">ICC_DIR</a> provides interrupt deactivation functionality.</p>
         </td></tr></table>
-      <p>If EL3 is present, <a href="AArch32-icc_ctlr.html">ICC_CTLR</a>(S).EOImode is an alias of ICC_MCTLR.EOImode_EL1S.</p>
+      <p>If EL3 is present, <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a>(S).EOImode is an alias of ICC_MCTLR.EOImode_EL1S.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_2">EOImode_EL3, bit [2]:
       </h4><div class="field">
       <p>EOI mode for interrupts handled at EL3. Controls whether a write to an End of Interrupt register also deactivates the interrupt.</p>
     <table class="valuetable"><tr><th>EOImode_EL3</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="AArch32-icc_eoir1.html">ICC_EOIR1</a> provide both priority drop and interrupt deactivation functionality. Accesses to <a href="AArch32-icc_dir.html">ICC_DIR</a> are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
+          <p><a href="/latest_sysreg/AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="/latest_sysreg/AArch32-icc_eoir1.html">ICC_EOIR1</a> provide both priority drop and interrupt deactivation functionality. Accesses to <a href="/latest_sysreg/AArch32-icc_dir.html">ICC_DIR</a> are <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="AArch32-icc_eoir1.html">ICC_EOIR1</a> provide priority drop functionality only. <a href="AArch32-icc_dir.html">ICC_DIR</a> provides interrupt deactivation functionality.</p>
+          <p><a href="/latest_sysreg/AArch32-icc_eoir0.html">ICC_EOIR0</a> and <a href="/latest_sysreg/AArch32-icc_eoir1.html">ICC_EOIR1</a> provide priority drop functionality only. <a href="/latest_sysreg/AArch32-icc_dir.html">ICC_DIR</a> provides interrupt deactivation functionality.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-1_1">CBPR_EL1NS, bit [1]:
       </h4><div class="field">
       <p>Common Binary Point Register, EL1 Non-secure. Controls whether the same register is used for interrupt preemption of both Group 0 and Group 1 Non-secure interrupts at EL1 and EL2.</p>
-    <table class="valuetable"><tr><th>CBPR_EL1NS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="AArch32-icc_bpr0.html">ICC_BPR0</a> determines the preemption group for Group 0 interrupts only.</p>
-<p><a href="AArch32-icc_bpr1.html">ICC_BPR1</a> determines the preemption group for Non-secure Group 1 interrupts.</p></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch32-icc_bpr0.html">ICC_BPR0</a> determines the preemption group for Group 0 interrupts and Non-secure Group 1 interrupts. Non-secure accesses to <a href="ext-gicc_bpr.html">GICC_BPR</a> and <a href="AArch32-icc_bpr1.html">ICC_BPR1</a> access the state of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a>.</p>
+    <table class="valuetable"><tr><th>CBPR_EL1NS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> determines the preemption group for Group 0 interrupts only.</p>
+<p><a href="/latest_sysreg/AArch32-icc_bpr1.html">ICC_BPR1</a> determines the preemption group for Non-secure Group 1 interrupts.</p></td></tr><tr><td class="bitfield">0b1</td><td>
+          <p><a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> determines the preemption group for Group 0 interrupts and Non-secure Group 1 interrupts. Non-secure accesses to <a href="/latest_sysreg/ext-gicc_bpr.html">GICC_BPR</a> and <a href="/latest_sysreg/AArch32-icc_bpr1.html">ICC_BPR1</a> access the state of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a>.</p>
         </td></tr></table>
-      <p>If EL3 is present, <a href="AArch32-icc_ctlr.html">ICC_CTLR</a>(NS).CBPR is an alias of ICC_MCTLR.CBPR_EL1NS.</p>
+      <p>If EL3 is present, <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a>(NS).CBPR is an alias of ICC_MCTLR.CBPR_EL1NS.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-0_0">CBPR_EL1S, bit [0]:
       </h4><div class="field">
       <p>Common Binary Point Register, EL1 Secure. Controls whether the same register is used for interrupt preemption of both Group 0 and Group 1 Secure interrupts in Secure non-Monitor modes.</p>
-    <table class="valuetable"><tr><th>CBPR_EL1S</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="AArch32-icc_bpr0.html">ICC_BPR0</a> determines the preemption group for Group 0 interrupts only.</p>
-<p><a href="AArch32-icc_bpr1.html">ICC_BPR1</a> determines the preemption group for Secure Group 1 interrupts.</p></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="AArch32-icc_bpr0.html">ICC_BPR0</a> determines the preemption group for Group 0 interrupts and Secure Group 1 interrupts. Secure EL1 accesses, or EL3 accesses when not in Monitor mode, to <a href="AArch32-icc_bpr1.html">ICC_BPR1</a> access the state of <a href="AArch32-icc_bpr0.html">ICC_BPR0</a>.</p>
+    <table class="valuetable"><tr><th>CBPR_EL1S</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p><a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> determines the preemption group for Group 0 interrupts only.</p>
+<p><a href="/latest_sysreg/AArch32-icc_bpr1.html">ICC_BPR1</a> determines the preemption group for Secure Group 1 interrupts.</p></td></tr><tr><td class="bitfield">0b1</td><td>
+          <p><a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a> determines the preemption group for Group 0 interrupts and Secure Group 1 interrupts. Secure EL1 accesses, or EL3 accesses when not in Monitor mode, to <a href="/latest_sysreg/AArch32-icc_bpr1.html">ICC_BPR1</a> access the state of <a href="/latest_sysreg/AArch32-icc_bpr0.html">ICC_BPR0</a>.</p>
         </td></tr></table>
-      <p>If EL3 is present, <a href="AArch32-icc_ctlr.html">ICC_CTLR</a>(S).CBPR is an alias of ICC_MCTLR.CBPR_EL1S.</p>
+      <p>If EL3 is present, <a href="/latest_sysreg/AArch32-icc_ctlr.html">ICC_CTLR</a>(S).CBPR is an alias of ICC_MCTLR.CBPR_EL1S.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>

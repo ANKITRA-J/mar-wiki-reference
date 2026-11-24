@@ -3,7 +3,7 @@
 <title>ICC_IGRPEN1_EL1 | Jon's Arm Reference</title><meta name="description" content="Controls whether Group 1 interrupts are enabled for the current Security state."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">ICC_IGRPEN1_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">Interrupt Controller Interrupt Group 1 Enable Register</p><div data-pagefind-body="1">
         <p>Controls whether Group 1 interrupts are enabled for the current Security state.</p>
-      </div><h3>Configuration</h3><p>This register is banked between ICC_IGRPEN1_EL1 and ICC_IGRPEN1_EL1_S and ICC_IGRPEN1_EL1_NS.<br></br></p><p>AArch64 System register ICC_IGRPEN1_EL1 bits [31:0] (ICC_IGRPEN1_EL1_S) are architecturally mapped to AArch32 System register <a href="AArch32-icc_igrpen1.html">ICC_IGRPEN1[31:0]</a> (ICC_IGRPEN1_S).</p><p>AArch64 System register ICC_IGRPEN1_EL1 bits [31:0] (ICC_IGRPEN1_EL1_NS) are architecturally mapped to AArch32 System register <a href="AArch32-icc_igrpen1.html">ICC_IGRPEN1[31:0]</a> (ICC_IGRPEN1_NS).</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented) and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_IGRPEN1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
+      </div><h3>Configuration</h3><p>This register is banked between ICC_IGRPEN1_EL1 and ICC_IGRPEN1_EL1_S and ICC_IGRPEN1_EL1_NS.<br></br></p><p>AArch64 System register ICC_IGRPEN1_EL1 bits [31:0] (ICC_IGRPEN1_EL1_S) are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-icc_igrpen1.html">ICC_IGRPEN1[31:0]</a> (ICC_IGRPEN1_S).</p><p>AArch64 System register ICC_IGRPEN1_EL1 bits [31:0] (ICC_IGRPEN1_EL1_NS) are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-icc_igrpen1.html">ICC_IGRPEN1[31:0]</a> (ICC_IGRPEN1_NS).</p><p>This register is present only when (GICv3 is implemented or FEAT_GCIE_LEGACY is implemented) and FEAT_AA64 is implemented. Otherwise, direct accesses to ICC_IGRPEN1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p><h3>Attributes</h3>
         <p>ICC_IGRPEN1_EL1 is a 64-bit register.</p>
 
       
@@ -25,11 +25,11 @@
           <p>Group 1 interrupts are disabled for the current Security state.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Group 1 interrupts are enabled for the current Security state.</p>
-        </td></tr></table><p>Virtual accesses to this register update <a href="AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG1.</p>
+        </td></tr></table><p>Virtual accesses to this register update <a href="/latest_sysreg/AArch64-ich_vmcr_el2.html">ICH_VMCR_EL2</a>.VENG1.</p>
 <p>If EL3 is present:</p>
 <ul>
-<li>The Secure <a href="AArch64-icc_igrpen1_el1.html">ICC_IGRPEN1_EL1</a>.Enable bit is a read/write alias of the <a href="AArch64-icc_igrpen1_el3.html">ICC_IGRPEN1_EL3</a>.EnableGrp1S bit.
-</li><li>The Non-secure <a href="AArch64-icc_igrpen1_el1.html">ICC_IGRPEN1_EL1</a>.Enable bit is a read/write alias of the <a href="AArch64-icc_igrpen1_el3.html">ICC_IGRPEN1_EL3</a>.EnableGrp1NS bit.
+<li>The Secure <a href="/latest_sysreg/AArch64-icc_igrpen1_el1.html">ICC_IGRPEN1_EL1</a>.Enable bit is a read/write alias of the <a href="/latest_sysreg/AArch64-icc_igrpen1_el3.html">ICC_IGRPEN1_EL3</a>.EnableGrp1S bit.
+</li><li>The Non-secure <a href="/latest_sysreg/AArch64-icc_igrpen1_el1.html">ICC_IGRPEN1_EL1</a>.Enable bit is a read/write alias of the <a href="/latest_sysreg/AArch64-icc_igrpen1_el3.html">ICC_IGRPEN1_EL3</a>.EnableGrp1NS bit.
 </li></ul>
 <p>If the highest priority pending interrupt for that PE is a Group 1 interrupt using 1 of N model, then the interrupt will target another PE as a result of the Enable bit changing from 1 to 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets

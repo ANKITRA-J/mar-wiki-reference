@@ -43,21 +43,21 @@ let tagchecked : boolean = n != 31;
 var rt_unknown : boolean = FALSE;
 var rn_unknown : boolean = FALSE;
 if s == t then
-    let c : <a href="shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="shared_pseudocode.html#enum_Unpredictable_DATAOVERLAP" title="">Unpredictable_DATAOVERLAP</a>);
-    assert c IN {<a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
+    let c : <a href="/latest_aarch64/shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="/latest_aarch64/shared_pseudocode.html#enum_Unpredictable_DATAOVERLAP" title="">Unpredictable_DATAOVERLAP</a>);
+    assert c IN {<a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
     case c of
-        when <a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    rt_unknown = TRUE;    // store UNKNOWN value
-        when <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
-        when <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    rt_unknown = TRUE;    // store UNKNOWN value
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
     end;
 end;
 if s == n &amp;&amp; n != 31 then
-    let c : <a href="shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="shared_pseudocode.html#enum_Unpredictable_BASEOVERLAP" title="">Unpredictable_BASEOVERLAP</a>);
-    assert c IN {<a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
+    let c : <a href="/latest_aarch64/shared_pseudocode.html#type_Constraint" title="">Constraint</a> = ConstrainUnpredictable(<a href="/latest_aarch64/shared_pseudocode.html#enum_Unpredictable_BASEOVERLAP" title="">Unpredictable_BASEOVERLAP</a>);
+    assert c IN {<a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a>, <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a>};
     case c of
-        when <a href="shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    rn_unknown = TRUE;    // address is UNKNOWN
-        when <a href="shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
-        when <a href="shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNKNOWN" title="">Constraint_UNKNOWN</a> =&gt;    rn_unknown = TRUE;    // address is UNKNOWN
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_UNDEF" title="">Constraint_UNDEF</a> =&gt;      <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+        when <a href="/latest_aarch64/shared_pseudocode.html#enum_Constraint_NOP" title="">Constraint_NOP</a> =&gt;        <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_NOP" title="">Decode_NOP</a>);
     end;
 end;</p>
   <div class="encoding-notes">
@@ -116,23 +116,23 @@ exception, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> wh
 var data : bits(elsize);
 
 let dbytes : integer{} = elsize DIV 8;
-let privileged : boolean = <a href="shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="shared_pseudocode.html#global_EL0" title="">EL0</a>;
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescExLDST_5" title="">CreateAccDescExLDST</a>(<a href="shared_pseudocode.html#enum_MemOp_STORE" title="">MemOp_STORE</a>, acqrel, tagchecked,
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#global_PSTATE" title="">PSTATE</a>.EL != <a href="/latest_aarch64/shared_pseudocode.html#global_EL0" title="">EL0</a>;
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescExLDST_5" title="">CreateAccDescExLDST</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_STORE" title="">MemOp_STORE</a>, acqrel, tagchecked,
                                                      privileged, t);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 elsif rn_unknown then
     address = ARBITRARY : bits(64);
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
 if rt_unknown then
     data = ARBITRARY : bits(elsize);
 else
-    data = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t);
+    data = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{elsize}(t);
 end;
 
 var status : bit = '1';
@@ -147,13 +147,13 @@ var status : bit = '1';
 // physical address packet is output when permitted and when
 // AArch64_ExclusiveMonitorPass() returns FALSE for a Store Exclusive instruction.
 // This behavior is not reflected here due to the previously stated limitation.
-if <a href="shared_pseudocode.html#func_AArch64_ExclusiveMonitorsPass_3" title="">AArch64_ExclusiveMonitorsPass</a>(address, dbytes, accdesc) then
+if <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_ExclusiveMonitorsPass_3" title="">AArch64_ExclusiveMonitorsPass</a>(address, dbytes, accdesc) then
     // This atomic write will be rejected if it does not refer
     // to the same physical locations after address translation.
-    <a href="shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{elsize}(address, accdesc) = data;
-    status = <a href="shared_pseudocode.html#func_ExclusiveMonitorsStatus_0" title="">ExclusiveMonitorsStatus</a>();
+    <a href="/latest_aarch64/shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{elsize}(address, accdesc) = data;
+    status = <a href="/latest_aarch64/shared_pseudocode.html#func_ExclusiveMonitorsStatus_0" title="">ExclusiveMonitorsStatus</a>();
 end;
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(s) = ZeroExtend{32}(status);</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{32}(s) = ZeroExtend{32}(status);</p></div>
   <h2>Operational information</h2>
     
       

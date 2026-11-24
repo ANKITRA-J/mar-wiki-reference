@@ -35,9 +35,9 @@ are set to the flag bit specifier.</p>
             <span style="font-size:smaller;"><br></br>(FEAT_FP)
             </span></h4><a id="FCCMPE_S_floatccmp"></a><span class="bitdiff"> (ftype == 00)</span></div><p class="asm-code">FCCMPE  <a href="#Sn__3" title='For the "Single-precision" variant: is the 32-bit name of the first SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Sn&gt;</a>, <a href="#Sm" title='Is the 32-bit name of the second SIMD&amp;FP source register, encoded in the "Rm" field.'>&lt;Sm&gt;</a>, #<a href="#nzcv" title='Is the flag bit specifier, an immediate in the range 0 to 15, giving the alternative state for the 4-bit NZCV condition flags, encoded in the "nzcv" field.'>&lt;nzcv&gt;</a>, <a href="#cond_option" title="Is one of the standard conditions, encoded in the standard way, and ">&lt;cond&gt;</a></p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Double-precision encoding
             <span style="font-size:smaller;"><br></br>(FEAT_FP)
-            </span></h4><a id="FCCMPE_D_floatccmp"></a><span class="bitdiff"> (ftype == 01)</span></div><p class="asm-code">FCCMPE  <a href="#Dn__2" title='For the "Double-precision" variant: is the 64-bit name of the first SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Dn&gt;</a>, <a href="#Dm" title='Is the 64-bit name of the second SIMD&amp;FP source register, encoded in the "Rm" field.'>&lt;Dm&gt;</a>, #<a href="#nzcv" title='Is the flag bit specifier, an immediate in the range 0 to 15, giving the alternative state for the 4-bit NZCV condition flags, encoded in the "nzcv" field.'>&lt;nzcv&gt;</a>, <a href="#cond_option" title="Is one of the standard conditions, encoded in the standard way, and ">&lt;cond&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_FP) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if ftype == '10' then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
-if ftype == '11' &amp;&amp; !IsFeatureImplemented(FEAT_FP16) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </span></h4><a id="FCCMPE_D_floatccmp"></a><span class="bitdiff"> (ftype == 01)</span></div><p class="asm-code">FCCMPE  <a href="#Dn__2" title='For the "Double-precision" variant: is the 64-bit name of the first SIMD&amp;FP source register, encoded in the "Rn" field.'>&lt;Dn&gt;</a>, <a href="#Dm" title='Is the 64-bit name of the second SIMD&amp;FP source register, encoded in the "Rm" field.'>&lt;Dm&gt;</a>, #<a href="#nzcv" title='Is the flag bit specifier, an immediate in the range 0 to 15, giving the alternative state for the 4-bit NZCV condition flags, encoded in the "nzcv" field.'>&lt;nzcv&gt;</a>, <a href="#cond_option" title="Is one of the standard conditions, encoded in the standard way, and ">&lt;cond&gt;</a></p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_FP) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if ftype == '10' then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+if ftype == '11' &amp;&amp; !IsFeatureImplemented(FEAT_FP16) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 
 let n : integer{} = UInt(Rn);
 let m : integer{} = UInt(Rm);
@@ -155,14 +155,14 @@ var flags : bits(4) = nzcv;</p>
         
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode"><a href="shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
+      <p class="pseudocode"><a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_CheckFPEnabled_0" title="">AArch64_CheckFPEnabled</a>();
 
 let operand1 : bits(datasize) = V{}(n);
 let operand2 : bits(datasize) = V{}(m);
 
-if <a href="shared_pseudocode.html#func_ConditionHolds_1" title="">ConditionHolds</a>(condition) then
+if <a href="/latest_aarch64/shared_pseudocode.html#func_ConditionHolds_1" title="">ConditionHolds</a>(condition) then
     let signal_all_nans : boolean = TRUE;
-    flags = <a href="shared_pseudocode.html#func_FPCompare_5" title="">FPCompare</a>{datasize}(operand1, operand2, signal_all_nans, FPCR());
+    flags = <a href="/latest_aarch64/shared_pseudocode.html#func_FPCompare_5" title="">FPCompare</a>{datasize}(operand1, operand2, signal_all_nans, FPCR());
 end;
 
 PSTATE.[N,Z,C,V] = flags;</p></div>

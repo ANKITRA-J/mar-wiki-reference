@@ -7,10 +7,10 @@
       
         <p>A write to this register changes the state of an inactive SPI to pending, and the state of an active SPI to active and pending.</p>
       </div><h3>Configuration</h3>
-        <p>If <a href="ext-gicd_typer.html">GICD_TYPER</a>.MBIS == 0, this register is reserved.</p>
+        <p>If <a href="/latest_sysreg/ext-gicd_typer.html">GICD_TYPER</a>.MBIS == 0, this register is reserved.</p>
 
       
-        <p>When <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 1, this register is WI.</p>
+        <p>When <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS == 1, this register is WI.</p>
       <h3>Attributes</h3>
         <p>GICD_SETSPI_SR is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="19"><a href="#fieldset_0-31_13">RES0</a></td><td class="lr" colspan="13"><a href="#fieldset_0-12_0">INTID</a></td></tr></tbody></table><h4 id="fieldset_0-31_13">Bits [31:13]:
@@ -21,8 +21,8 @@
       <p>The INTID of the SPI.</p>
     </div><h4>Additional information</h4><div class="text_after_fields"><p>The function of this register depends on whether the targeted SPI is configured to be an edge-triggered or level-sensitive interrupt:</p>
 <ul>
-<li>For an edge-triggered interrupt, a write to <a href="ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a> or GICD_SETSPI_SR adds the pending state to the targeted interrupt. It will stop being pending on activation, or if the pending state is removed by a write to <a href="ext-gicd_clrspi_nsr.html">GICD_CLRSPI_NSR</a>, <a href="ext-gicd_clrspi_sr.html">GICD_CLRSPI_SR</a>, or <a href="ext-gicd_icpendrn.html">GICD_ICPENDR&lt;n&gt;</a>.
-</li><li>For a level-sensitive interrupt, a write to <a href="ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a> or GICD_SETSPI_SR adds the pending state to the targeted interrupt. It will remain pending until it is deasserted by a write to <a href="ext-gicd_clrspi_nsr.html">GICD_CLRSPI_NSR</a> or <a href="ext-gicd_clrspi_sr.html">GICD_CLRSPI_SR</a>. If the interrupt is activated between having the pending state added and being deactivated, then the interrupt will be active and pending.
+<li>For an edge-triggered interrupt, a write to <a href="/latest_sysreg/ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a> or GICD_SETSPI_SR adds the pending state to the targeted interrupt. It will stop being pending on activation, or if the pending state is removed by a write to <a href="/latest_sysreg/ext-gicd_clrspi_nsr.html">GICD_CLRSPI_NSR</a>, <a href="/latest_sysreg/ext-gicd_clrspi_sr.html">GICD_CLRSPI_SR</a>, or <a href="/latest_sysreg/ext-gicd_icpendrn.html">GICD_ICPENDR&lt;n&gt;</a>.
+</li><li>For a level-sensitive interrupt, a write to <a href="/latest_sysreg/ext-gicd_setspi_nsr.html">GICD_SETSPI_NSR</a> or GICD_SETSPI_SR adds the pending state to the targeted interrupt. It will remain pending until it is deasserted by a write to <a href="/latest_sysreg/ext-gicd_clrspi_nsr.html">GICD_CLRSPI_NSR</a> or <a href="/latest_sysreg/ext-gicd_clrspi_sr.html">GICD_CLRSPI_SR</a>. If the interrupt is activated between having the pending state added and being deactivated, then the interrupt will be active and pending.
 </li></ul></div><h2>Accessing GICD_SETSPI_SR</h2>
         <p>Writes to this register have no effect if:</p>
 

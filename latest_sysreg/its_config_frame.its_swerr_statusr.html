@@ -5,7 +5,7 @@
         <p>ITS Software Error Status Register. Specifies whether a software error has been reported. If an error is reported, it contains syndrome information for the error.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv5_EXT is implemented and ITS_IDR0.SWE == '1'. Otherwise, direct accesses to ITS_SWERR_STATUSR are <span class="arm-defined-word">RES0</span>.</p><h3>Attributes</h3>
         <p>ITS_SWERR_STATUSR is a 64-bit register.</p>
-      <p>This  register is part of the <a href="its_config_frame.html">ITS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-63_32">RES0</a></td></tr><tr class="firstrow"><td class="lr" colspan="8"><a href="#fieldset_0-31_24">IMP_EC</a></td><td class="lr" colspan="8"><a href="#fieldset_0-23_16">EC</a></td><td class="lr" colspan="12"><a href="#fieldset_0-15_4">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-3_3">OF</a></td><td class="lr" colspan="1"><a href="#fieldset_0-2_2">S1V</a></td><td class="lr" colspan="1"><a href="#fieldset_0-1_1">S0V</a></td><td class="lr" colspan="1"><a href="#fieldset_0-0_0">V</a></td></tr></tbody></table><h4 id="fieldset_0-63_32">Bits [63:32]:
+      <p>This  register is part of the <a href="/latest_sysreg/its_config_frame.html">ITS_CONFIG_FRAME</a> block.</p><h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-63_32">RES0</a></td></tr><tr class="firstrow"><td class="lr" colspan="8"><a href="#fieldset_0-31_24">IMP_EC</a></td><td class="lr" colspan="8"><a href="#fieldset_0-23_16">EC</a></td><td class="lr" colspan="12"><a href="#fieldset_0-15_4">RES0</a></td><td class="lr" colspan="1"><a href="#fieldset_0-3_3">OF</a></td><td class="lr" colspan="1"><a href="#fieldset_0-2_2">S1V</a></td><td class="lr" colspan="1"><a href="#fieldset_0-1_1">S0V</a></td><td class="lr" colspan="1"><a href="#fieldset_0-0_0">V</a></td></tr></tbody></table><h4 id="fieldset_0-63_32">Bits [63:32]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-31_24">IMP_EC, bits [31:24]:
@@ -42,7 +42,7 @@
         </td></tr><tr><td class="bitfield">0x08</td><td>
           <p>An event could not be translated because L2_ITTE.VALID is 0.</p>
         </td></tr><tr><td class="bitfield">0x09</td><td>
-          <p>An event could not be translated because the DeviceID &gt; (2 ^ <a href="its_config_frame.its_dt_cfgr.html">ITS_DT_CFGR</a>.DEVICEID_BITS) - 1.</p>
+          <p>An event could not be translated because the DeviceID &gt; (2 ^ <a href="/latest_sysreg/its_config_frame.its_dt_cfgr.html">ITS_DT_CFGR</a>.DEVICEID_BITS) - 1.</p>
         </td></tr><tr><td class="bitfield">0x0A</td><td>
           <p>An event could not be translated because the EventID &gt; (2 ^ L2_DTE.EVENTID_BITS) - 1.</p>
         </td></tr><tr><td class="bitfield">0x0B</td><td>
@@ -51,17 +51,17 @@
           <p>An event could not be translated because the EventID exceeds the L1_ITTE.SPAN.</p>
         </td></tr><tr><td class="bitfield">0x0D</td><td><p>An event could not be translated because the event is associated with the Non-secure Interrupt Domain and L2_ITTE.DAC = 0.</p>
 <p>The error is reported in the Realm ITS Domain.</p></td></tr><tr><td class="bitfield">0x0E</td><td>
-          <p><a href="its_config_frame.its_gen_eventr.html">ITS_GEN_EVENTR</a> was written when <a href="its_config_frame.its_gen_event_statusr.html">ITS_GEN_EVENT_STATUSR</a>.IDLE == 0.</p>
+          <p><a href="/latest_sysreg/its_config_frame.its_gen_eventr.html">ITS_GEN_EVENTR</a> was written when <a href="/latest_sysreg/its_config_frame.its_gen_event_statusr.html">ITS_GEN_EVENT_STATUSR</a>.IDLE == 0.</p>
         </td></tr><tr><td class="bitfield">0x0F</td><td>
-          <p><a href="its_config_frame.its_read_eventr.html">ITS_READ_EVENTR</a> was written when <a href="its_config_frame.its_statusr.html">ITS_STATUSR</a>.IDLE == 0.</p>
+          <p><a href="/latest_sysreg/its_config_frame.its_read_eventr.html">ITS_READ_EVENTR</a> was written when <a href="/latest_sysreg/its_config_frame.its_statusr.html">ITS_STATUSR</a>.IDLE == 0.</p>
         </td></tr><tr><td class="bitfield">0x10</td><td>
-          <p><a href="its_config_frame.its_inv_devicer.html">ITS_INV_DEVICER</a> was written when <a href="its_config_frame.its_statusr.html">ITS_STATUSR</a>.IDLE == 0.</p>
+          <p><a href="/latest_sysreg/its_config_frame.its_inv_devicer.html">ITS_INV_DEVICER</a> was written when <a href="/latest_sysreg/its_config_frame.its_statusr.html">ITS_STATUSR</a>.IDLE == 0.</p>
         </td></tr><tr><td class="bitfield">0x11</td><td>
-          <p><a href="its_config_frame.its_inv_eventr.html">ITS_INV_EVENTR</a> was written when <a href="its_config_frame.its_statusr.html">ITS_STATUSR</a>.IDLE == 0.</p>
+          <p><a href="/latest_sysreg/its_config_frame.its_inv_eventr.html">ITS_INV_EVENTR</a> was written when <a href="/latest_sysreg/its_config_frame.its_statusr.html">ITS_STATUSR</a>.IDLE == 0.</p>
         </td></tr><tr><td class="bitfield">0x12</td><td>
-          <p><a href="its_config_frame.its_syncr.html">ITS_SYNCR</a> was written when <a href="its_config_frame.its_sync_statusr.html">ITS_SYNC_STATUSR</a>.IDLE == 0.</p>
+          <p><a href="/latest_sysreg/its_config_frame.its_syncr.html">ITS_SYNCR</a> was written when <a href="/latest_sysreg/its_config_frame.its_sync_statusr.html">ITS_SYNC_STATUSR</a>.IDLE == 0.</p>
         </td></tr><tr><td class="bitfield">0x13</td><td>
-          <p>An event could not be translated because the EventID exceeds (2 ^ <a href="its_config_frame.its_idr2.html">ITS_IDR2</a>.EVENTID_BITS) - 1.</p>
+          <p>An event could not be translated because the EventID exceeds (2 ^ <a href="/latest_sysreg/its_config_frame.its_idr2.html">ITS_IDR2</a>.EVENTID_BITS) - 1.</p>
         </td></tr></table>
       <p>All other values are reserved.</p>
     <p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
@@ -95,11 +95,11 @@
                   is <span class="access_level">W1C</span>.
                 </li></ul></div><h4 id="fieldset_0-2_2">S1V, bit [2]:
       </h4><div class="field">
-      <p>Specifies whether <a href="its_config_frame.its_swerr_syndromer1.html">ITS_SWERR_SYNDROMER1</a> is valid.</p>
+      <p>Specifies whether <a href="/latest_sysreg/its_config_frame.its_swerr_syndromer1.html">ITS_SWERR_SYNDROMER1</a> is valid.</p>
     <table class="valuetable"><tr><th>S1V</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="its_config_frame.its_swerr_syndromer1.html">ITS_SWERR_SYNDROMER1</a> is not valid.</p>
+          <p><a href="/latest_sysreg/its_config_frame.its_swerr_syndromer1.html">ITS_SWERR_SYNDROMER1</a> is not valid.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="its_config_frame.its_swerr_syndromer1.html">ITS_SWERR_SYNDROMER1</a> is valid.</p>
+          <p><a href="/latest_sysreg/its_config_frame.its_swerr_syndromer1.html">ITS_SWERR_SYNDROMER1</a> is valid.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
       this field resets
        to an <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>When ITS_SWERR_STATUSR.V == '0', access to this field
@@ -111,11 +111,11 @@
                   is <span class="access_level">RO</span>.
                 </li></ul></div><h4 id="fieldset_0-1_1">S0V, bit [1]:
       </h4><div class="field">
-      <p>Specifies whether <a href="its_config_frame.its_swerr_syndromer0.html">ITS_SWERR_SYNDROMER0</a> is valid.</p>
+      <p>Specifies whether <a href="/latest_sysreg/its_config_frame.its_swerr_syndromer0.html">ITS_SWERR_SYNDROMER0</a> is valid.</p>
     <table class="valuetable"><tr><th>S0V</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p><a href="its_config_frame.its_swerr_syndromer0.html">ITS_SWERR_SYNDROMER0</a> is not valid.</p>
+          <p><a href="/latest_sysreg/its_config_frame.its_swerr_syndromer0.html">ITS_SWERR_SYNDROMER0</a> is not valid.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p><a href="its_config_frame.its_swerr_syndromer0.html">ITS_SWERR_SYNDROMER0</a> is valid.</p>
+          <p><a href="/latest_sysreg/its_config_frame.its_swerr_syndromer0.html">ITS_SWERR_SYNDROMER0</a> is valid.</p>
         </td></tr></table><p>The reset behavior of this field is:</p><ul><li>On a GIC reset, 
       this field resets
        to an <span class="arm-defined-word">UNKNOWN</span> value.</li></ul><p>Accessing this field has the following behavior:</p><ul><li>When ITS_SWERR_STATUSR.V == '0', access to this field

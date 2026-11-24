@@ -6,7 +6,7 @@
 
       
         <p>For general information about the interpretation of the ID registers see <span class="xref">'Principles of the ID scheme for fields in ID registers'</span>.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register ID_DFR1_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="AArch32-id_dfr1.html">ID_DFR1[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to ID_DFR1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register ID_DFR1_EL1 bits [31:0] are architecturally mapped to AArch32 System register <a href="/latest_sysreg/AArch32-id_dfr1.html">ID_DFR1[31:0]</a>.</p><p>This register is present only when FEAT_AA64 is implemented. Otherwise, direct accesses to ID_DFR1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <div class="note"><p>Prior to the introduction of the features described by this register, this register was unnamed and reserved, <span class="arm-defined-word">RES0</span> from EL1, EL2, and EL3.</p></div>
       <h3>Attributes</h3>
         <p>ID_DFR1_EL1 is a 64-bit register.</p>
@@ -17,9 +17,9 @@
       </h4><div class="field">
       <p>Zero PMU event counters for a Guest operating system.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HPMN0</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p>Setting <a href="AArch32-hdcr.html">HDCR</a>.HPMN to zero has <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> behavior.</p>
+          <p>Setting <a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.HPMN to zero has <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> behavior.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p>Setting <a href="AArch32-hdcr.html">HDCR</a>.HPMN to zero has defined behavior.</p>
+          <p>Setting <a href="/latest_sysreg/AArch32-hdcr.html">HDCR</a>.HPMN to zero has defined behavior.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p>If <span class="xref">FEAT_PMUv3</span> is not implemented, <span class="xref">FEAT_FGT</span> is not implemented, or EL2 is not implemented, the only permitted value is <span class="binarynumber">0b0000</span>.</p>
 <p><span class="xref">FEAT_HPMN0</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
@@ -27,11 +27,11 @@
       </h4><div class="field">
       <p>Multi-threaded PMU extension.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>MTPMU</th><th>Meaning</th></tr><tr><td class="bitfield">0b0000</td><td>
-          <p><span class="xref">FEAT_MTPMU</span> not implemented. If <span class="xref">FEAT_PMUv3</span> is implemented, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether <a href="AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT are read/write or <span class="arm-defined-word">RES0</span>.</p>
+          <p><span class="xref">FEAT_MTPMU</span> not implemented. If <span class="xref">FEAT_PMUv3</span> is implemented, it is <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> whether <a href="/latest_sysreg/AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT are read/write or <span class="arm-defined-word">RES0</span>.</p>
         </td></tr><tr><td class="bitfield">0b0001</td><td>
-          <p><span class="xref">FEAT_MTPMU</span> and <span class="xref">FEAT_PMUv3</span> implemented. <a href="AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT are read/write. When <span class="xref">FEAT_MTPMU</span> is disabled, the Effective values of <a href="AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT are 0.</p>
+          <p><span class="xref">FEAT_MTPMU</span> and <span class="xref">FEAT_PMUv3</span> implemented. <a href="/latest_sysreg/AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT are read/write. When <span class="xref">FEAT_MTPMU</span> is disabled, the Effective values of <a href="/latest_sysreg/AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT are 0.</p>
         </td></tr><tr><td class="bitfield">0b1111</td><td>
-          <p><span class="xref">FEAT_MTPMU</span> not implemented. If <span class="xref">FEAT_PMUv3</span> is implemented, <a href="AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT are <span class="arm-defined-word">RES0</span>.</p>
+          <p><span class="xref">FEAT_MTPMU</span> not implemented. If <span class="xref">FEAT_PMUv3</span> is implemented, <a href="/latest_sysreg/AArch32-pmevtypern.html">PMEVTYPER&lt;n&gt;</a>.MT are <span class="arm-defined-word">RES0</span>.</p>
         </td></tr></table><p>All other values are reserved.</p>
 <p><span class="xref">FEAT_MTPMU</span> implements the functionality identified by the value <span class="binarynumber">0b0001</span>.</p>
 <p>From Armv8.6, in an implementation that includes <span class="xref">FEAT_PMUv3</span>, the value <span class="binarynumber">0b0000</span> is not permitted.</p>

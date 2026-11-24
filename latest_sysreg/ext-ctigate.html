@@ -10,9 +10,9 @@
       </h4><div class="field">
       <p>Channel &lt;x&gt; gate enable.</p>
     <table class="valuetable"><tr><th>GATE&lt;x&gt;</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>Disable output and, if <a href="ext-ctidevid.html">CTIDEVID</a>.INOUT == <span class="binarynumber">0b01</span>, input channel &lt;x&gt; propagation.</p>
+          <p>Disable output and, if <a href="/latest_sysreg/ext-ctidevid.html">CTIDEVID</a>.INOUT == <span class="binarynumber">0b01</span>, input channel &lt;x&gt; propagation.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Enable output and, if <a href="ext-ctidevid.html">CTIDEVID</a>.INOUT == <span class="binarynumber">0b01</span>, input channel &lt;x&gt; propagation.</p>
+          <p>Enable output and, if <a href="/latest_sysreg/ext-ctidevid.html">CTIDEVID</a>.INOUT == <span class="binarynumber">0b01</span>, input channel &lt;x&gt; propagation.</p>
         </td></tr></table>
       <p>If GATE&lt;x&gt; is set to 0, no new events will be propagated to the ECT, and if the ECT supports multicycle channel events any existing output channel events will be terminated.</p>
     <p>The reset behavior of this field is:</p><ul><li>On an External debug reset, 

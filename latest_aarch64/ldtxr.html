@@ -41,7 +41,7 @@ equivalent to <span class="asm-code">LDXR</span>.</p>
         <span style="font-size:smaller;"><br></br>(FEAT_LSUI)
           </span></h3><p class="desc"></p><div class="regdiagram-32"><table class="regdiagram"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr">1</td><td class="lr">sz</td><td class="l">0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td class="r">0</td><td class="lr">1</td><td class="lr">0</td><td class="l">(1)</td><td>(1)</td><td>(1)</td><td>(1)</td><td class="r">(1)</td><td class="lr">0</td><td class="l">(1)</td><td>(1)</td><td>(1)</td><td>(1)</td><td class="r">(1)</td><td colspan="5" class="lr">Rn</td><td colspan="5" class="lr">Rt</td></tr><tr class="secondrow"><td></td><td></td><td colspan="7"></td><td class="droppedname">L</td><td></td><td colspan="5" class="droppedname">Rs</td><td class="droppedname">o0</td><td colspan="5" class="droppedname">Rt2</td><td colspan="5"></td><td colspan="5"></td></tr></tbody></table></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">32-bit encoding
             </h4><a id="LDTXR_LR32_ldstexclr_unpriv"></a><span class="bitdiff"> (sz == 0)</span></div><p class="asm-code">LDTXR  <a href="#WtOrWZR__4" title='Is the 32-bit name of the general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Wt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">64-bit encoding
-            </h4><a id="LDTXR_LR64_ldstexclr_unpriv"></a><span class="bitdiff"> (sz == 1)</span></div><p class="asm-code">LDTXR  <a href="#XtOrXZR__11" title='Is the 64-bit name of the general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSUI) then <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
+            </h4><a id="LDTXR_LR64_ldstexclr_unpriv"></a><span class="bitdiff"> (sz == 1)</span></div><p class="asm-code">LDTXR  <a href="#XtOrXZR__11" title='Is the 64-bit name of the general-purpose register to be transferred, encoded in the "Rt" field.'>&lt;Xt&gt;</a>, [<a href="#XnSP_option" title='Is the 64-bit name of the general-purpose base register or stack pointer, encoded in the "Rn" field.'>&lt;Xn|SP&gt;</a>{, #0}]</p></div><h4>Decode (all encodings)</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_LSUI) then <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>); end;
 let t : integer{} = UInt(Rt);
 let n : integer{} = UInt(Rn);
 
@@ -67,21 +67,21 @@ let tagchecked : boolean = n != 31;</p>
 var data : bits(elsize);
 
 let dbytes : integer{} = elsize DIV 8;
-let privileged : boolean = <a href="shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>();
-let accdesc : <a href="shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="shared_pseudocode.html#func_CreateAccDescExLDST_5" title="">CreateAccDescExLDST</a>(<a href="shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, acqrel, tagchecked,
+let privileged : boolean = <a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_IsUnprivAccessPriv_0" title="">AArch64_IsUnprivAccessPriv</a>();
+let accdesc : <a href="/latest_aarch64/shared_pseudocode.html#type_AccessDescriptor" title="">AccessDescriptor</a> = <a href="/latest_aarch64/shared_pseudocode.html#func_CreateAccDescExLDST_5" title="">CreateAccDescExLDST</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_MemOp_LOAD" title="">MemOp_LOAD</a>, acqrel, tagchecked,
                                                      privileged, t);
 
 if n == 31 then
-    <a href="shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
-    address = <a href="shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
+    <a href="/latest_aarch64/shared_pseudocode.html#func_CheckSPAlignment_0" title="">CheckSPAlignment</a>();
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_SP_1" title="">SP</a>{64}();
 else
-    address = <a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
+    address = <a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{64}(n);
 end;
 
-<a href="shared_pseudocode.html#func_AArch64_SetExclusiveMonitors_3" title="">AArch64_SetExclusiveMonitors</a>(address, dbytes, accdesc);
+<a href="/latest_aarch64/shared_pseudocode.html#func_AArch64_SetExclusiveMonitors_3" title="">AArch64_SetExclusiveMonitors</a>(address, dbytes, accdesc);
 
-data = <a href="shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{elsize}(address, accdesc);
-<a href="shared_pseudocode.html#accessor_X_2" title="">X</a>{regsize}(t) = ZeroExtend{regsize}(data);</p></div>
+data = <a href="/latest_aarch64/shared_pseudocode.html#accessor_Mem_3" title="">Mem</a>{elsize}(address, accdesc);
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_X_2" title="">X</a>{regsize}(t) = ZeroExtend{regsize}(data);</p></div>
   <h2>Operational information</h2>
     
       

@@ -21,7 +21,7 @@
 </li></ul>
 
       
-        <p>The full set of TLB maintenance instructions that invalidate cached GPT entries is: <a href="AArch64-tlbi-paall.html">TLBI PAALL</a>, <a href="AArch64-tlbi-paallos.html">TLBI PAALLOS</a>, <a href="AArch64-tlbi-rpalos.html">TLBI RPALOS</a>, and <a href="AArch64-tlbi-rpaos.html">TLBI RPAOS</a>.</p>
+        <p>The full set of TLB maintenance instructions that invalidate cached GPT entries is: <a href="/latest_sysreg/AArch64-tlbi-paall.html">TLBI PAALL</a>, <a href="/latest_sysreg/AArch64-tlbi-paallos.html">TLBI PAALLOS</a>, <a href="/latest_sysreg/AArch64-tlbi-rpalos.html">TLBI RPALOS</a>, and <a href="/latest_sysreg/AArch64-tlbi-rpaos.html">TLBI RPAOS</a>.</p>
 
       
         <p>These instructions have the same ordering, observability, and completion behavior as all other TLBI instructions.</p>
@@ -53,9 +53,9 @@
         </td></tr><tr><td class="bitfield">0b01001</td><td>
           <p>512GB.</p>
         </td></tr></table><p>All other values are reserved.</p>
-<p>If SIZE gives a range smaller than the configured physical granule size in <a href="AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS, then the Effective value of SIZE is taken to be the size configured by <a href="AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS.</p>
-<p>If <a href="AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS is configured to a reserved value, no TLB entries are required to be invalidated.</p>
-<p>If <a href="AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS is configured to different values at the broadcasting PE and receiving PE, no TLB entries are required to be invalidated at the receiving PE.</p></div><h4 id="fieldset_0-43_40-1">Address[55:52], bits [43:40] <span class="condition">when FEAT_D128 is implemented</span>:
+<p>If SIZE gives a range smaller than the configured physical granule size in <a href="/latest_sysreg/AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS, then the Effective value of SIZE is taken to be the size configured by <a href="/latest_sysreg/AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS.</p>
+<p>If <a href="/latest_sysreg/AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS is configured to a reserved value, no TLB entries are required to be invalidated.</p>
+<p>If <a href="/latest_sysreg/AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS is configured to different values at the broadcasting PE and receiving PE, no TLB entries are required to be invalidated at the receiving PE.</p></div><h4 id="fieldset_0-43_40-1">Address[55:52], bits [43:40] <span class="condition">when FEAT_D128 is implemented</span>:
       </h4><div class="field">
       <p>Extension to Address. For more information, see Address.</p>
     </div><h4 id="fieldset_0-43_40-2"> <span class="condition">Otherwise</span>:
@@ -63,10 +63,10 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-39_0">Address, bits [39:0]:
       </h4><div class="field"><p>The starting address for the range of the maintenance instruction.</p>
-<p>This field is decoded with reference to the value of <a href="AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS to give BaseADDR as follows:</p>
+<p>This field is decoded with reference to the value of <a href="/latest_sysreg/AArch64-gpccr_el3.html">GPCCR_EL3</a>.PGS to give BaseADDR as follows:</p>
 <table class="valuetable"><thead><tr><th>GPCCR_EL3.PGS</th><th>BaseADDR</th></tr></thead><tbody><tr><td><span class="binarynumber">0b00</span> (4KB)</td><td>BaseADDR[51:12] = Xt[39:0]</td></tr><tr><td><span class="binarynumber">0b10</span> (16KB)</td><td>BaseADDR[51:14] = Xt[39:2]</td></tr><tr><td><span class="binarynumber">0b01</span> (64KB)</td><td>BaseADDR[51:16] = Xt[39:4]</td></tr></tbody></table><p>Other bits of BaseADDR are treated as zero, to give the Effective value of BaseADDR.</p>
 <p>If the Effective value of BaseADDR is not aligned to the size of the Effective value of SIZE, no TLB entries are required to be invalidated.</p>
-<p>If the Effective value of BaseADDR targets an address above the implemented PA range that <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange indicates, no TLB entries are required to be invalidated.</p>
+<p>If the Effective value of BaseADDR targets an address above the implemented PA range that <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange indicates, no TLB entries are required to be invalidated.</p>
 <p>If ID_AA64MMFR0_EL1.PARange is <span class="binarynumber">0b0111</span>, Address[55:52] form the upper part of the BaseADDR value. Otherwise, Address[55:52] are <span class="arm-defined-word">RES0</span>.</p></div><div class="access_mechanisms"><h2>Executing TLBI RPAOS</h2>
         <p>This system instruction is an alias of the SYS instruction.</p>
       <p>Accesses to this instruction use the following encodings in the System instruction encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">TLBI RPAOS{, &lt;Xt&gt;}</p></div></div><p style="text-align: right">

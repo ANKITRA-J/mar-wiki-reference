@@ -12,16 +12,16 @@
       </h4><div class="field"><p>The TimerValue view of the EL1 physical timer.</p>
 <p>On a read of this register:</p>
 <ul>
-<li>If <a href="ext-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 0, the value returned is <span class="arm-defined-word">UNKNOWN</span>.
-</li><li>If <a href="ext-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 1, the value returned is (CompareValue - <a href="ext-cntpct.html">CNTPCT</a>).
+<li>If <a href="/latest_sysreg/ext-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 0, the value returned is <span class="arm-defined-word">UNKNOWN</span>.
+</li><li>If <a href="/latest_sysreg/ext-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 1, the value returned is (CompareValue - <a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a>).
 </li></ul>
-<p>On a write of this register, CompareValue is set to (<a href="ext-cntpct.html">CNTPCT</a> + TimerValue), where TimerValue is treated as a signed 32-bit integer.</p>
-<p>When <a href="ext-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 1, the timer condition is met when (<a href="ext-cntpct.html">CNTPCT</a> - CompareValue) is greater than or equal to zero. This means that TimerValue acts like a 32-bit downcounter timer. When the timer condition is met:</p>
+<p>On a write of this register, CompareValue is set to (<a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a> + TimerValue), where TimerValue is treated as a signed 32-bit integer.</p>
+<p>When <a href="/latest_sysreg/ext-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 1, the timer condition is met when (<a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a> - CompareValue) is greater than or equal to zero. This means that TimerValue acts like a 32-bit downcounter timer. When the timer condition is met:</p>
 <ul>
-<li><a href="ext-cntp_ctl.html">CNTP_CTL</a>.ISTATUS is set to 1.
-</li><li>If <a href="ext-cntp_ctl.html">CNTP_CTL</a>.IMASK is 0, an interrupt is generated.
+<li><a href="/latest_sysreg/ext-cntp_ctl.html">CNTP_CTL</a>.ISTATUS is set to 1.
+</li><li>If <a href="/latest_sysreg/ext-cntp_ctl.html">CNTP_CTL</a>.IMASK is 0, an interrupt is generated.
 </li></ul>
-<p>When <a href="ext-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 0, the timer condition is not met, but <a href="ext-cntpct.html">CNTPCT</a> continues to count, so the TimerValue view appears to continue to count down.</p><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
+<p>When <a href="/latest_sysreg/ext-cntp_ctl.html">CNTP_CTL</a>.ENABLE is 0, the timer condition is not met, but <a href="/latest_sysreg/ext-cntpct.html">CNTPCT</a> continues to count, so the TimerValue view appears to continue to count down.</p><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing CNTP_TVAL</h2>
         <p>CNTP_TVAL can be implemented in any implemented CNTBaseN frame, and in the corresponding CNTEL0BaseN frame.</p>
@@ -42,7 +42,7 @@
 
       
         <ul>
-<li>CNTP_TVAL is accessible in that frame if the value of <a href="ext-cntacrn.html">CNTACR&lt;n&gt;</a>.RWPT is 1.
+<li>CNTP_TVAL is accessible in that frame if the value of <a href="/latest_sysreg/ext-cntacrn.html">CNTACR&lt;n&gt;</a>.RWPT is 1.
 </li><li>Otherwise, the CNTP_TVAL address in that frame is RAZ/WI.
 </li></ul>
 
@@ -53,7 +53,7 @@
         <ul>
 <li>CNTP_TVAL is accessible in that frame if both:<ul>
 <li>CNTP_TVAL is accessible in the corresponding CNTBaseN frame:
-</li><li>The value of <a href="ext-cntel0acr.html">CNTEL0ACR</a>.EL0PTEN is 1.
+</li><li>The value of <a href="/latest_sysreg/ext-cntel0acr.html">CNTEL0ACR</a>.EL0PTEN is 1.
 </li></ul>
 
 </li><li>Otherwise, the CNTP_TVAL address in that frame is RAZ/WI.

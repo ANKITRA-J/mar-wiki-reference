@@ -11,7 +11,7 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-62_62">PTZ, bit [62]:
-      </h4><div class="field"><p>Pending Table Zero. Indicates to the Redistributor whether the LPI Pending table is zero when <a href="ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1.</p>
+      </h4><div class="field"><p>Pending Table Zero. Indicates to the Redistributor whether the LPI Pending table is zero when <a href="/latest_sysreg/ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1.</p>
 <p>This field is WO, and reads as 0.</p><table class="valuetable"><tr><th>PTZ</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>The LPI Pending table is not zero, and contains live data.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -92,8 +92,8 @@
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h2>Accessing GICR_PENDBASER</h2>
-        <p>Having the GICR_PENDBASER OuterCache, Shareability or InnerCache fields programmed to different values on different Redistributors with <a href="ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1 in the system is <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
+        <p>Having the GICR_PENDBASER OuterCache, Shareability or InnerCache fields programmed to different values on different Redistributors with <a href="/latest_sysreg/ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1 in the system is <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
 
       
-        <p>Changing GICR_PENDBASER with <a href="ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1 is <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
+        <p>Changing GICR_PENDBASER with <a href="/latest_sysreg/ext-gicr_ctlr.html">GICR_CTLR</a>.EnableLPIs == 1 is <span class="arm-defined-word">UNPREDICTABLE</span>.</p>
       <h4>GICR_PENDBASER can be accessed through the memory-mapped interfaces:</h4><table class="info"><tr><th>Component</th><th>Frame</th><th>Offset</th><th>Instance</th></tr><tr><td>GIC Redistributor</td><td>RD_base</td><td><span class="hexnumber">0x0078</span></td><td>GICR_PENDBASER</td></tr></table><p>Accesses to this register are <span class="access_level">RW</span>.</p><hr class="bottom_line"></hr><p class="copyconf">Version 2026.09 — Copyright © 2010-2026 Arm Limited or its affiliates.</p><small>This site is provided as a community resource and is NOT affiliated with nor endorsed by Arm Limited.</small></body></html>

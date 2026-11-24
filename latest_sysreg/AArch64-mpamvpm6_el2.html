@@ -5,13 +5,13 @@
         <p>MPAMVPM6_EL2 provides mappings from virtual PARTIDs 24 - 27 to physical PARTIDs.</p>
 
       
-        <p><a href="AArch64-mpamidr_el1.html">MPAMIDR_EL1</a>.VPMR_MAX field gives the index of the highest implemented MPAMVPM&lt;n&gt;_EL2 registers. VPMR_MAX can be as large as 7 (8 registers) or 32 virtual PARTIDs. If <a href="AArch64-mpamidr_el1.html">MPAMIDR_EL1</a>.VPMR_MAX == 0, there is only a single MPAMVPM&lt;n&gt;_EL2 register, <a href="AArch64-mpamvpm0_el2.html">MPAMVPM0_EL2</a>.</p>
+        <p><a href="/latest_sysreg/AArch64-mpamidr_el1.html">MPAMIDR_EL1</a>.VPMR_MAX field gives the index of the highest implemented MPAMVPM&lt;n&gt;_EL2 registers. VPMR_MAX can be as large as 7 (8 registers) or 32 virtual PARTIDs. If <a href="/latest_sysreg/AArch64-mpamidr_el1.html">MPAMIDR_EL1</a>.VPMR_MAX == 0, there is only a single MPAMVPM&lt;n&gt;_EL2 register, <a href="/latest_sysreg/AArch64-mpamvpm0_el2.html">MPAMVPM0_EL2</a>.</p>
 
       
-        <p>Virtual PARTID mapping is enabled by <a href="AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL1_VPMEN for the PARTID in <a href="AArch64-mpam1_el1.html">MPAM1_EL1</a> and by <a href="AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL0_VPMEN for the PARTID in <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a>.</p>
+        <p>Virtual PARTID mapping is enabled by <a href="/latest_sysreg/AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL1_VPMEN for the PARTID in <a href="/latest_sysreg/AArch64-mpam1_el1.html">MPAM1_EL1</a> and by <a href="/latest_sysreg/AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL0_VPMEN for the PARTID in <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a>.</p>
 
       
-        <p>A virtual-to-physical PARTID mapping entry, PhyPARTID&lt;n&gt;, is valid only when the <a href="AArch64-mpamvpmv_el2.html">MPAMVPMV_EL2</a>.VPM_V bit in bit position n is set to 1.</p>
+        <p>A virtual-to-physical PARTID mapping entry, PhyPARTID&lt;n&gt;, is valid only when the <a href="/latest_sysreg/AArch64-mpamvpmv_el2.html">MPAMVPMV_EL2</a>.VPM_V bit in bit position n is set to 1.</p>
       </div><h3>Configuration</h3><p>This register is present only when (FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p0 is implemented), FEAT_AA64EL2 is implemented, MPAMIDR_EL1.HAS_HCR == '1', and UInt(MPAMIDR_EL1.VPMR_MAX) &gt; 5. Otherwise, direct accesses to MPAMVPM6_EL2 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>This register has no effect if EL2 is not enabled in the current Security state.</p>
       <h3>Attributes</h3>

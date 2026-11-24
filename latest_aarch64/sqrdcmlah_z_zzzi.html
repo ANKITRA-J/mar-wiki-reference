@@ -46,7 +46,7 @@ odd-numbered element.</p>
     <h3 class="classheading"><a id="iclass_16_bit"></a>16-bit class
         <span style="font-size:smaller;"><br></br>(FEAT_SVE2 || FEAT_SME)
           </span></h3><div class="regdiagram-32"><table class="regdiagram"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="l">0</td><td>1</td><td class="r">0</td><td class="l">0</td><td>0</td><td>1</td><td class="r">0</td><td class="lr">0</td><td class="l">1</td><td class="r">0</td><td class="lr">1</td><td colspan="2" class="lr">i2</td><td colspan="3" class="lr">Zm</td><td class="l">0</td><td>1</td><td>1</td><td class="r">1</td><td colspan="2" class="lr">rot</td><td colspan="5" class="lr">Zn</td><td colspan="5" class="lr">Zda</td></tr><tr class="secondrow"><td colspan="3"></td><td colspan="4"></td><td></td><td colspan="2" class="droppedname">size</td><td></td><td colspan="2"></td><td colspan="3"></td><td colspan="4"></td><td colspan="2"></td><td colspan="5"></td><td colspan="5"></td></tr></tbody></table></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Encoding</h4><a id="sqrdcmlah_z_zzzi_h"></a></div><p class="asm-code">SQRDCMLAH  <a href="#Zda" title='Is the name of the third source and destination scalable vector register, encoded in the "Zda" field.'>&lt;Zda&gt;</a>.H, <a href="#Zn__2" title='Is the name of the first source scalable vector register, encoded in the "Zn" field.'>&lt;Zn&gt;</a>.H, <a href="#Zm__4" title='For the "16-bit" variant: is the name of the second source scalable vector register Z0-Z7, encoded in the "Zm" field.'>&lt;Zm&gt;</a>.H[<a href="#imm__41" title='For the "16-bit" variant: is the element index, in the range 0 to 3, encoded in the "i2" field.'>&lt;imm&gt;</a>], <a href="#const__4" title="Is the const specifier, ">&lt;const&gt;</a></p></div><h4>Decode</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_SVE2) &amp;&amp; !IsFeatureImplemented(FEAT_SME) then
-    <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+    <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
 end;
 let esize : integer{} = 16;
 let index : integer = UInt(i2);
@@ -60,7 +60,7 @@ let sub_i : boolean = (rot[1] == '1');</p>
     <h3 class="classheading"><a id="iclass_32_bit"></a>32-bit class
         <span style="font-size:smaller;"><br></br>(FEAT_SVE2 || FEAT_SME)
           </span></h3><div class="regdiagram-32"><table class="regdiagram"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="l">0</td><td>1</td><td class="r">0</td><td class="l">0</td><td>0</td><td>1</td><td class="r">0</td><td class="lr">0</td><td class="l">1</td><td class="r">1</td><td class="lr">1</td><td class="lr">i1</td><td colspan="4" class="lr">Zm</td><td class="l">0</td><td>1</td><td>1</td><td class="r">1</td><td colspan="2" class="lr">rot</td><td colspan="5" class="lr">Zn</td><td colspan="5" class="lr">Zda</td></tr><tr class="secondrow"><td colspan="3"></td><td colspan="4"></td><td></td><td colspan="2" class="droppedname">size</td><td></td><td></td><td colspan="4"></td><td colspan="4"></td><td colspan="2"></td><td colspan="5"></td><td colspan="5"></td></tr></tbody></table></div><div class="encoding"><div class="encoding__label"><h4 class="encoding">Encoding</h4><a id="sqrdcmlah_z_zzzi_s"></a></div><p class="asm-code">SQRDCMLAH  <a href="#Zda" title='Is the name of the third source and destination scalable vector register, encoded in the "Zda" field.'>&lt;Zda&gt;</a>.S, <a href="#Zn__2" title='Is the name of the first source scalable vector register, encoded in the "Zn" field.'>&lt;Zn&gt;</a>.S, <a href="#Zm__2" title='For the "32-bit" variant: is the name of the second source scalable vector register Z0-Z15, encoded in the "Zm" field.'>&lt;Zm&gt;</a>.S[<a href="#imm__42" title='For the "32-bit" variant: is the element index, in the range 0 to 1, encoded in the "i1" field.'>&lt;imm&gt;</a>], <a href="#const__4" title="Is the const specifier, ">&lt;const&gt;</a></p></div><h4>Decode</h4><p class="pseudocode">if !IsFeatureImplemented(FEAT_SVE2) &amp;&amp; !IsFeatureImplemented(FEAT_SME) then
-    <a href="shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
+    <a href="/latest_aarch64/shared_pseudocode.html#func_EndOfDecode_1" title="">EndOfDecode</a>(<a href="/latest_aarch64/shared_pseudocode.html#enum_Decode_UNDEF" title="">Decode_UNDEF</a>);
 end;
 let esize : integer{} = 32;
 let index : integer = UInt(i1);
@@ -130,8 +130,8 @@ let sub_i : boolean = (rot[1] == '1');</p>
         </table>
       </td></tr></table></div><div class="syntax-notes"></div>
     <div class="ps"><a id=""></a><h2 class="pseudocode">Operation</h2>
-      <p class="pseudocode"><a href="shared_pseudocode.html#func_CheckSVEEnabled_0" title="">CheckSVEEnabled</a>();
-let VL : integer{} = <a href="shared_pseudocode.html#func_CurrentVL_0" title="">CurrentVL</a>();
+      <p class="pseudocode"><a href="/latest_aarch64/shared_pseudocode.html#func_CheckSVEEnabled_0" title="">CheckSVEEnabled</a>();
+let VL : integer{} = <a href="/latest_aarch64/shared_pseudocode.html#func_CurrentVL_0" title="">CurrentVL</a>();
 let pairs : integer = VL DIV (2 * esize);
 let pairspersegment : integer = 128 DIV (2 * esize);
 let operand1 : bits(VL) = Z{}(n);
@@ -156,17 +156,17 @@ for p = 0 to pairs-1 do
         res_r = (SInt(elt3_r) &lt;&lt; esize) + 2 * product_r;
     end;
     res_r = (res_r + (1 &lt;&lt; (esize-1))) &gt;&gt; esize;
-    result[(2 * p + 0)*:esize] = <a href="shared_pseudocode.html#func_SignedSat_2" title="">SignedSat</a>{esize}(res_r);
+    result[(2 * p + 0)*:esize] = <a href="/latest_aarch64/shared_pseudocode.html#func_SignedSat_2" title="">SignedSat</a>{esize}(res_r);
     if sub_i then
         res_i = (SInt(elt3_i) &lt;&lt; esize) - 2 * product_i;
     else
         res_i = (SInt(elt3_i) &lt;&lt; esize) + 2 * product_i;
     end;
     res_i = (res_i + (1 &lt;&lt; (esize-1))) &gt;&gt; esize;
-    result[(2 * p + 1)*:esize] = <a href="shared_pseudocode.html#func_SignedSat_2" title="">SignedSat</a>{esize}(res_i);
+    result[(2 * p + 1)*:esize] = <a href="/latest_aarch64/shared_pseudocode.html#func_SignedSat_2" title="">SignedSat</a>{esize}(res_i);
 
 end;
-<a href="shared_pseudocode.html#accessor_Z_2" title="">Z</a>{VL}(da) = result;</p></div>
+<a href="/latest_aarch64/shared_pseudocode.html#accessor_Z_2" title="">Z</a>{VL}(da) = result;</p></div>
   <h2>Operational information</h2>
     
       

@@ -4,7 +4,7 @@
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">GICC_AHPPIR</h1><p class="insn_subtitle" data-pagefind-body="1">CPU Interface Aliased Highest Priority Pending Interrupt Register</p><div data-pagefind-body="1">
         <p>If the highest priority pending interrupt is in Group 1, this register provides the INTID of the highest priority pending interrupt on the CPU interface.</p>
       </div><h3>Configuration</h3><p>This register is present only when FEAT_GICv3_LEGACY is implemented. Otherwise, direct accesses to GICC_AHPPIR are <span class="arm-defined-word">RES0</span>.</p>
-        <p>If <a href="ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, this register is an alias of the Non-secure view of <a href="ext-gicc_hppir.html">GICC_HPPIR</a>. A Secure access to this register is identical to a Non-secure access to <a href="ext-gicc_hppir.html">GICC_HPPIR</a>.</p>
+        <p>If <a href="/latest_sysreg/ext-gicd_ctlr.html">GICD_CTLR</a>.DS==0, this register is an alias of the Non-secure view of <a href="/latest_sysreg/ext-gicc_hppir.html">GICC_HPPIR</a>. A Secure access to this register is identical to a Non-secure access to <a href="/latest_sysreg/ext-gicc_hppir.html">GICC_HPPIR</a>.</p>
       <h3>Attributes</h3>
         <p>GICC_AHPPIR is a 32-bit register.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></thead><tbody><tr class="firstrow"><td class="lr" colspan="8"><a href="#fieldset_0-31_24">RES0</a></td><td class="lr" colspan="24"><a href="#fieldset_0-23_0">INTID</a></td></tr></tbody></table><h4 id="fieldset_0-31_24">Bits [31:24]:
@@ -21,8 +21,8 @@
 
       
         <ul>
-<li>For AArch32 implementations, <a href="AArch32-icc_hppir1.html">ICC_HPPIR1</a> provides equivalent functionality.
-</li><li>For AArch64 implementations, <a href="AArch64-icc_hppir1_el1.html">ICC_HPPIR1_EL1</a> provides equivalent functionality.
+<li>For AArch32 implementations, <a href="/latest_sysreg/AArch32-icc_hppir1.html">ICC_HPPIR1</a> provides equivalent functionality.
+</li><li>For AArch64 implementations, <a href="/latest_sysreg/AArch64-icc_hppir1_el1.html">ICC_HPPIR1_EL1</a> provides equivalent functionality.
 </li></ul>
 
       

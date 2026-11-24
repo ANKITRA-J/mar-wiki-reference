@@ -56,7 +56,7 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Support for MPAM virtualization is implemented.</p>
         </td></tr></table><p>HAS_HCR indicates that the PE implementation supports MPAM virtualization. Must be 0 if EL2 is not implemented in either Security state.</p>
-<p>When FEAT_MPAMv2 is implemented, this field does not indicate whether <a href="AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a> is implemented. Also, the registers <a href="AArch64-mpamvpmv_el2.html">MPAMVPMV_EL2</a>, and MPAMVPM&lt;n&gt;_EL2 used for legacy MPAM virtualization are not implemented.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-16_16">Bit [16]:
+<p>When FEAT_MPAMv2 is implemented, this field does not indicate whether <a href="/latest_sysreg/AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a> is implemented. Also, the registers <a href="/latest_sysreg/AArch64-mpamvpmv_el2.html">MPAMVPMV_EL2</a>, and MPAMVPM&lt;n&gt;_EL2 used for legacy MPAM virtualization are not implemented.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_0-16_16">Bit [16]:
       </h4><div class="field">
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-15_0">PARTID_MAX, bits [15:0]:
@@ -69,22 +69,22 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-61_61">HAS_SDEFLT, bit [61]:
       </h4><div class="field">
-      <p>HAS_SDEFLT indicates support for <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.SDEFLT bit.</p>
+      <p>HAS_SDEFLT indicates support for <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.SDEFLT bit.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_SDEFLT</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The SDEFLT bit is not implemented in <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
+          <p>The SDEFLT bit is not implemented in <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The SDEFLT bit is implemented in <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
+          <p>The SDEFLT bit is implemented in <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
         </td></tr></table>
-      <p>When <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.SDEFLT == 1, accesses from the Secure Execution state use the default PARTID, PARTID == 0.</p>
+      <p>When <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.SDEFLT == 1, accesses from the Secure Execution state use the default PARTID, PARTID == 0.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-60_60">HAS_FORCE_NS, bit [60]:
       </h4><div class="field">
-      <p>HAS_FORCE_NS indicates support for <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS bit.</p>
+      <p>HAS_FORCE_NS indicates support for <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS bit.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_FORCE_NS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The FORCE_NS bit is not implemented in <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
+          <p>The FORCE_NS bit is not implemented in <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The FORCE_NS bit is implemented in <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
+          <p>The FORCE_NS bit is implemented in <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.</p>
         </td></tr></table>
-      <p>When <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS == 1, accesses from the Secure Execution state have MPAM_NS == 1.</p>
+      <p>When <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS == 1, accesses from the Secure Execution state have MPAM_NS == 1.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-59_59">SP4, bit [59]:
       </h4><div class="field">
       <p>Supports 4 MPAM PARTID spaces.</p>
@@ -94,14 +94,14 @@
           <p>MPAM supports 4 PARTID spaces.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-58_58">HAS_TIDR, bit [58]:
       </h4><div class="field">
-      <p>HAS_TIDR indicates support for <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>.TIDR bit.</p>
+      <p>HAS_TIDR indicates support for <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>.TIDR bit.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_TIDR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The TIDR bit is not implemented in <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>.</p>
+          <p>The TIDR bit is not implemented in <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The TIDR bit is implemented in <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>.</p>
+          <p>The TIDR bit is implemented in <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>.</p>
         </td></tr></table>
       <div class="note">
-        <p>Arm recommends that when the MPAM version is MPAM v0.1 or MPAM v1.1, MPAMIDR_EL1.HAS_TIDR is 1 and that the <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>.TIDR field is implemented.</p>
+        <p>Arm recommends that when the MPAM version is MPAM v0.1 or MPAM v1.1, MPAMIDR_EL1.HAS_TIDR is 1 and that the <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>.TIDR field is implemented.</p>
       </div>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-57_57">HAS_ALTSP, bit [57]:
       </h4><div class="field">
@@ -109,7 +109,7 @@
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_ALTSP</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>Alternative PARTID spaces are not implemented.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>Alternative PARTID spaces are implemented with control bits in <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a> and <a href="AArch64-mpam2_el2.html">MPAM2_EL2</a>.</p>
+          <p>Alternative PARTID spaces are implemented with control bits in <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a> and <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2</a>.</p>
         </td></tr></table><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-56_56">HAS_BW_CTRL, bit [56]:
       </h4><div class="field">
       <p>HAS_BW_CTRL indicates support for PE-side bandwidth controls.</p>
@@ -140,7 +140,7 @@
       <p>Reserved, RAZ.</p>
     </div><h4 id="fieldset_1-17_17">HAS_HCR, bit [17]:
       </h4><div class="field">
-      <p>HAS_HCR indicates that the PE implementation supports MPAM virtualization, including <a href="AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>, <a href="AArch64-mpamvpmv_el2.html">MPAMVPMV_EL2</a>, and MPAMVPM&lt;n&gt;_EL2 with n in the range 0 to VPMR_MAX. Must be 0 if EL2 is not implemented in either Security state.</p>
+      <p>HAS_HCR indicates that the PE implementation supports MPAM virtualization, including <a href="/latest_sysreg/AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>, <a href="/latest_sysreg/AArch64-mpamvpmv_el2.html">MPAMVPMV_EL2</a>, and MPAMVPM&lt;n&gt;_EL2 with n in the range 0 to VPMR_MAX. Must be 0 if EL2 is not implemented in either Security state.</p>
     <p> The value of this field is an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> choice of:</p><table class="valuetable"><tr><th>HAS_HCR</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>MPAM virtualization is not supported.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>

@@ -3,16 +3,16 @@
 <title>MPAM1_EL1 | Jon's Arm Reference</title><meta name="description" content="Holds information to generate MPAM labels for memory requests when executing at EL1."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">MPAM1_EL1</h1><p class="insn_subtitle" data-pagefind-body="1">MPAM1 Register (EL1)</p><div data-pagefind-body="1">
         <p>Holds information to generate MPAM labels for memory requests when executing at EL1.</p>
-      </div><h3>Configuration</h3><p>AArch64 System register MPAM1_EL1 bit [63] is architecturally mapped to AArch64 System register <a href="AArch64-mpam3_el3.html">MPAM3_EL3[63]</a> when (FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p0 is implemented), EL3 is implemented, and EL1 is implemented.</p><p>AArch64 System register MPAM1_EL1 bit [63] is architecturally mapped to AArch64 System register <a href="AArch64-mpam2_el2.html">MPAM2_EL2[63]</a> when (FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p0 is implemented), EL2 is implemented, and EL1 is implemented.</p><p>This register is present only when FEAT_MPAM is implemented. Otherwise, direct accesses to MPAM1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch64 System register MPAM1_EL1 bit [63] is architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3[63]</a> when (FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p0 is implemented), EL3 is implemented, and EL1 is implemented.</p><p>AArch64 System register MPAM1_EL1 bit [63] is architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-mpam2_el2.html">MPAM2_EL2[63]</a> when (FEAT_MPAMv0p1 is implemented or FEAT_MPAMv1p0 is implemented), EL2 is implemented, and EL1 is implemented.</p><p>This register is present only when FEAT_MPAM is implemented. Otherwise, direct accesses to MPAM1_EL1 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If FEAT_MPAMv1p0 or FEAT_MPAMv0p1 is implemented, EL2 is implemented and enabled in the current Security state, and the MPAM virtualization option is present, then:</p>
 
       
         <ul>
 <li>
-<p>If <a href="AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.GSTAPP_PLK == 1 and the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 0, MPAM1_EL1 is used instead of <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a> to generate MPAM labels for memory requests when executing at EL0.</p>
+<p>If <a href="/latest_sysreg/AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.GSTAPP_PLK == 1 and the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.TGE is 0, MPAM1_EL1 is used instead of <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a> to generate MPAM labels for memory requests when executing at EL0.</p>
 
 </li><li>
-<p>If <a href="AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL1_VPMEN == 1, MPAM PARTIDs in MPAM1_EL1 are virtual and mapped into physical PARTIDs for the current Security state. This mapping of MPAM1_EL1 virtual PARTIDs to physical PARTIDs when EL1_VPMEN is 1 also applies when MPAM1_EL1 is used at EL0 due to <a href="AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.GSTAPP_PLK.</p>
+<p>If <a href="/latest_sysreg/AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.EL1_VPMEN == 1, MPAM PARTIDs in MPAM1_EL1 are virtual and mapped into physical PARTIDs for the current Security state. This mapping of MPAM1_EL1 virtual PARTIDs to physical PARTIDs when EL1_VPMEN is 1 also applies when MPAM1_EL1 is used at EL0 due to <a href="/latest_sysreg/AArch64-mpamhcr_el2.html">MPAMHCR_EL2</a>.GSTAPP_PLK.</p>
 
 </li></ul>
       <h3>Attributes</h3>
@@ -58,10 +58,10 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_1-60_60-1">FORCED_NS, bit [60] <span class="condition">when FEAT_MPAMv0p1 is implemented</span>:
       </h4><div class="field">
-      <p>In the Secure state, FORCED_NS indicates the state of <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS.</p>
+      <p>In the Secure state, FORCED_NS indicates the state of <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS.</p>
     <table class="valuetable"><tr><th>FORCED_NS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td><p>In the Non-secure state, always reads as 0.</p>
-<p>In the Secure state, indicates that <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS == 0.</p></td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>In the Secure state, indicates that <a href="AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS == 1.</p>
+<p>In the Secure state, indicates that <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS == 0.</p></td></tr><tr><td class="bitfield">0b1</td><td>
+          <p>In the Secure state, indicates that <a href="/latest_sysreg/AArch64-mpam3_el3.html">MPAM3_EL3</a>.FORCE_NS == 1.</p>
         </td></tr></table><p>Always reads as 0 in the Non-secure state.</p>
 <p>Writes are ignored.</p><p>Access to this field is <span class="access_level">RO</span>.</p></div><h4 id="fieldset_1-60_60-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -73,11 +73,11 @@
       </h4><div class="field">
       <p>Alternative PARTID forced for PARTIDs in this register.</p>
     <table class="valuetable"><tr><th>ALTSP_FRCD</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The PARTIDs in MPAM1_EL1 and <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a> are using the primary PARTID space.</p>
+          <p>The PARTIDs in MPAM1_EL1 and <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a> are using the primary PARTID space.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The PARTIDs in MPAM1_EL1 and <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a> are using the alternative PARTID space.</p>
+          <p>The PARTIDs in MPAM1_EL1 and <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a> are using the alternative PARTID space.</p>
         </td></tr></table><p>This bit indicates that a higher Exception level has forced the PARTIDs in this register to use the alternative PARTID space defined for the current Security state.</p>
-<p>In MPAM1_EL1, it also indicates that <a href="AArch64-mpam0_el1.html">MPAM0_EL1</a> is forced to use alternative PARTID space.</p>
+<p>In MPAM1_EL1, it also indicates that <a href="/latest_sysreg/AArch64-mpam0_el1.html">MPAM0_EL1</a> is forced to use alternative PARTID space.</p>
 <p>For more information, see <span class="xref">'In a PE with FEAT_RME, selection of primary or alternative PARTID space'</span>.</p><p>Accessing this field has the following behavior:</p><ul><li>When !UsePrimarySpaceEL10(), access to this field
                             is <span class="access_level">RAO/WI</span>.
                         </li><li>
@@ -112,7 +112,7 @@
     <p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><div class="access_mechanisms"><h2>Access Instructions</h2>
-        <p>When the Effective value of <a href="AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name MPAM1_EL1 or MPAM1_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
+        <p>When the Effective value of <a href="/latest_sysreg/AArch64-hcr_el2.html">HCR_EL2</a>.E2H is 1, without explicit synchronization, accesses from EL3 using the accessor name MPAM1_EL1 or MPAM1_EL12 are not guaranteed to be ordered with respect to accesses using the other accessor name.</p>
 
       
         <p>None of the fields in this register are permitted to be cached in a TLB.</p>

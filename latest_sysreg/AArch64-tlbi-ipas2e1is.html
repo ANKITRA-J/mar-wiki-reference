@@ -20,16 +20,16 @@
 </li><li>
 <p>If <span class="xref">FEAT_RME</span> is implemented, one of the following applies:</p>
 <ul>
-<li><a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 0} and the entry would be required to translate the specified IPA using the Secure EL1&amp;0 translation regime.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 1} and the entry would be required to translate the specified IPA using the Non-secure EL1&amp;0 translation regime.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {1, 1} and the entry would be required to translate the specified IPA using the Realm EL1&amp;0 translation regime.
+<li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 0} and the entry would be required to translate the specified IPA using the Secure EL1&amp;0 translation regime.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {0, 1} and the entry would be required to translate the specified IPA using the Non-secure EL1&amp;0 translation regime.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} is {1, 1} and the entry would be required to translate the specified IPA using the Realm EL1&amp;0 translation regime.
 </li></ul>
 
 </li><li>
 <p>If <span class="xref">FEAT_RME</span> is not implemented, one of the following applies:</p>
 <ul>
-<li><a href="AArch64-scr_el3.html">SCR_EL3</a>.NS is 0 and the entry would be required to translate the specified IPA using the Secure EL1&amp;0 translation regime.
-</li><li><a href="AArch64-scr_el3.html">SCR_EL3</a>.NS is 1 and the entry would be required to translate the specified IPA using the Non-secure EL1&amp;0 translation regime.
+<li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS is 0 and the entry would be required to translate the specified IPA using the Secure EL1&amp;0 translation regime.
+</li><li><a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.NS is 1 and the entry would be required to translate the specified IPA using the Non-secure EL1&amp;0 translation regime.
 </li></ul>
 
 </li><li>
@@ -61,7 +61,7 @@
         <p>TLBI IPAS2E1IS, TLBI IPAS2E1ISNXS is a 64-bit System instruction.</p>
       <h2>Field descriptions</h2><table class="regdiagram" id="fieldset_0"><thead><tr><td>63</td><td>62</td><td>61</td><td>60</td><td>59</td><td>58</td><td>57</td><td>56</td><td>55</td><td>54</td><td>53</td><td>52</td><td>51</td><td>50</td><td>49</td><td>48</td><td>47</td><td>46</td><td>45</td><td>44</td><td>43</td><td>42</td><td>41</td><td>40</td><td>39</td><td>38</td><td>37</td><td>36</td><td>35</td><td>34</td><td>33</td><td>32</td></tr></thead><tfoot><tr><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td><td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr></tfoot><tbody><tr class="firstrow"><td class="lr" colspan="1"><a href="#fieldset_0-63_63-1">NS</a></td><td class="lr" colspan="15"><a href="#fieldset_0-62_48">RES0</a></td><td class="lr" colspan="4"><a href="#fieldset_0-47_44-1">TTL</a></td><td class="lr" colspan="4"><a href="#fieldset_0-43_40-1">IPA[55:52]</a></td><td class="lr" colspan="4"><a href="#fieldset_0-39_36-1">IPA[51:48]</a></td><td class="lr" colspan="4"><a href="#fieldset_0-35_0">IPA[47:12]</a></td></tr><tr class="firstrow"><td class="lr" colspan="32"><a href="#fieldset_0-35_0">IPA[47:12]</a></td></tr></tbody></table><h4 id="fieldset_0-63_63-1">NS, bit [63] <span class="condition">when FEAT_RME is implemented</span>:
       </h4><div class="field">
-      <p>When the instruction is executed and <a href="AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} == {0, 0}, NS selects the IPA space.</p>
+      <p>When the instruction is executed and <a href="/latest_sysreg/AArch64-scr_el3.html">SCR_EL3</a>.{NSE, NS} == {0, 0}, NS selects the IPA space.</p>
     <table class="valuetable"><tr><th>NS</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
           <p>IPA is in the Secure IPA space.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
@@ -117,9 +117,9 @@
       <p>Reserved, <span class="arm-defined-word">RES0</span>.</p>
     </div><h4 id="fieldset_0-35_0">IPA[47:12], bits [35:0]:
       </h4><div class="field"><p>Bits[47:12] of the intermediate physical address to match. For implementations with fewer than 48 bits, the upper bits of this field are <span class="arm-defined-word">RES0</span>.</p>
-<p>If <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange is <span class="binarynumber">0b0111</span>, bits IPA[55:48] form the upper part of the address value.</p>
-<p>If <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange is <span class="binarynumber">0b0110</span>, bits IPA[51:48] form the upper part of the address value and bits IPA[55:52] are <span class="arm-defined-word">RES0</span>.</p>
-<p>If <a href="AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange is not <span class="binarynumber">0b0110</span> and not <span class="binarynumber">0b0111</span>, bits IPA[55:48] are <span class="arm-defined-word">RES0</span>.</p></div><div class="access_mechanisms"><h2>Executing TLBI IPAS2E1IS, TLBI IPAS2E1ISNXS</h2>
+<p>If <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange is <span class="binarynumber">0b0111</span>, bits IPA[55:48] form the upper part of the address value.</p>
+<p>If <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange is <span class="binarynumber">0b0110</span>, bits IPA[51:48] form the upper part of the address value and bits IPA[55:52] are <span class="arm-defined-word">RES0</span>.</p>
+<p>If <a href="/latest_sysreg/AArch64-id_aa64mmfr0_el1.html">ID_AA64MMFR0_EL1</a>.PARange is not <span class="binarynumber">0b0110</span> and not <span class="binarynumber">0b0111</span>, bits IPA[55:48] are <span class="arm-defined-word">RES0</span>.</p></div><div class="access_mechanisms"><h2>Executing TLBI IPAS2E1IS, TLBI IPAS2E1ISNXS</h2>
         <p>This system instruction is an alias of the SYS instruction.</p>
       <p>Accesses to this instruction use the following encodings in the System instruction encoding space:</p><div class="access_block"><div class="encoding"><p class="asm-code">TLBI IPAS2E1IS{, &lt;Xt&gt;}</p></div></div><p style="text-align: right">
       (op0 = 0b01, op1 = 0b100, CRn = 0b1000, CRm = 0b0000, op2 = 0b001)

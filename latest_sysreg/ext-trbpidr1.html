@@ -16,9 +16,9 @@
       </h4><div class="field"><p>Designer, JEP106 identification code, bits [3:0].</p>
 <p>The JEP106 identification and continuation codes are stored as follows:</p>
 <ul>
-<li><a href="ext-trbpidr1.html">TRBPIDR1</a>.DES_0: JEP106 identification code bits[3:0].
-</li><li><a href="ext-trbpidr2.html">TRBPIDR2</a>.DES_1: JEP106 identification code bits[6:4].
-</li><li><a href="ext-trbpidr4.html">TRBPIDR4</a>.DES_2: JEP106 continuation code.
+<li><a href="/latest_sysreg/ext-trbpidr1.html">TRBPIDR1</a>.DES_0: JEP106 identification code bits[3:0].
+</li><li><a href="/latest_sysreg/ext-trbpidr2.html">TRBPIDR2</a>.DES_1: JEP106 identification code bits[6:4].
+</li><li><a href="/latest_sysreg/ext-trbpidr4.html">TRBPIDR4</a>.DES_2: JEP106 continuation code.
 </li></ul>
 <p>These codes indicate the designer of the component and not the implementer, except where the two are the same. To obtain a number, or to see the assignment of these codes, contact JEDEC http://www.jedec.org.</p>
 <p>A JEP106 identification and continuation code takes the following form:</p>
@@ -33,18 +33,18 @@
       </h4><div class="field"><p>Part number, which is selected by the designer of the component and stored as follows:</p>
 <ul>
 <li>For a component with a 12-bit part number:<ul>
-<li><a href="ext-trbpidr1.html">TRBPIDR1</a>.PART_1 contains part number bits [11:8].
-</li><li><a href="ext-trbpidr0.html">TRBPIDR0</a>.PART_0 contains part number bits [7:0].
+<li><a href="/latest_sysreg/ext-trbpidr1.html">TRBPIDR1</a>.PART_1 contains part number bits [11:8].
+</li><li><a href="/latest_sysreg/ext-trbpidr0.html">TRBPIDR0</a>.PART_0 contains part number bits [7:0].
 </li></ul>
 
 </li><li>For a component with a 16-bit part number:<ul>
-<li><a href="ext-trbpidr1.html">TRBPIDR1</a>.PART_1 contains part number bits [15:12].
-</li><li><a href="ext-trbpidr0.html">TRBPIDR0</a>.PART_0 contains part number bits [11:4].
-</li><li><a href="ext-trbpidr2.html">TRBPIDR2</a>.REVISION contains part number bits [3:0].
+<li><a href="/latest_sysreg/ext-trbpidr1.html">TRBPIDR1</a>.PART_1 contains part number bits [15:12].
+</li><li><a href="/latest_sysreg/ext-trbpidr0.html">TRBPIDR0</a>.PART_0 contains part number bits [11:4].
+</li><li><a href="/latest_sysreg/ext-trbpidr2.html">TRBPIDR2</a>.REVISION contains part number bits [3:0].
 </li></ul>
 
 </li></ul>
-<p>When a 12-bit part number is used, <a href="ext-trbpidr2.html">TRBPIDR2</a>.REVISION indicates revision information.</p>
+<p>When a 12-bit part number is used, <a href="/latest_sysreg/ext-trbpidr2.html">TRBPIDR2</a>.REVISION indicates revision information.</p>
 <p>The choice of using a 12-bit part number or 16-bit part number is specific to the designer of the component.</p>
       <p>This field has an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> value.</p>
     <p>Access to this field is <span class="access_level">RO</span>.</p></div><h2>Accessing TRBPIDR1</h2><h4>TRBPIDR1 can be accessed through the external debug interface:</h4><table class="info"><tr><th>Component</th><th>Offset</th><th>Instance</th></tr><tr><td>TRBE</td><td><span class="hexnumber">0xFE4</span></td><td>TRBPIDR1</td></tr></table><p>Accessible as follows:</p><ul><li>When DoubleLockStatus() or !IsCorePowered(), accesses to this register generate an error response.

@@ -13,8 +13,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[63] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[63] is 1, and PMSNEVFR_EL1.E[63] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[63] is 1, and PMSNEVFR_EL1.E[63] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-63_63-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -27,8 +27,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[62] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[62] is 1, and PMSNEVFR_EL1.E[62] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[62] is 1, and PMSNEVFR_EL1.E[62] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-62_62-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -41,8 +41,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[61] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[61] is 1, and PMSNEVFR_EL1.E[61] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[61] is 1, and PMSNEVFR_EL1.E[61] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-61_61-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -55,8 +55,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[60] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[60] is 1, and PMSNEVFR_EL1.E[60] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[60] is 1, and PMSNEVFR_EL1.E[60] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-60_60-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -69,8 +69,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[59] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[59] is 1, and PMSNEVFR_EL1.E[59] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[59] is 1, and PMSNEVFR_EL1.E[59] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-59_59-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -83,8 +83,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[58] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[58] is 1, and PMSNEVFR_EL1.E[58] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[58] is 1, and PMSNEVFR_EL1.E[58] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-58_58-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -97,8 +97,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[57] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[57] is 1, and PMSNEVFR_EL1.E[57] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[57] is 1, and PMSNEVFR_EL1.E[57] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-57_57-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -111,8 +111,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[56] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[56] is 1, and PMSNEVFR_EL1.E[56] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[56] is 1, and PMSNEVFR_EL1.E[56] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-56_56-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -125,8 +125,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[55] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[55] is 1, and PMSNEVFR_EL1.E[55] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[55] is 1, and PMSNEVFR_EL1.E[55] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-55_55-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -139,8 +139,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[54] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[54] is 1, and PMSNEVFR_EL1.E[54] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[54] is 1, and PMSNEVFR_EL1.E[54] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-54_54-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -153,8 +153,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[53] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[53] is 1, and PMSNEVFR_EL1.E[53] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[53] is 1, and PMSNEVFR_EL1.E[53] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-53_53-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -167,8 +167,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[52] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[52] is 1, and PMSNEVFR_EL1.E[52] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[52] is 1, and PMSNEVFR_EL1.E[52] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-52_52-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -181,8 +181,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[51] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[51] is 1, and PMSNEVFR_EL1.E[51] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[51] is 1, and PMSNEVFR_EL1.E[51] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-51_51-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -195,8 +195,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[50] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[50] is 1, and PMSNEVFR_EL1.E[50] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[50] is 1, and PMSNEVFR_EL1.E[50] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-50_50-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -209,8 +209,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[49] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[49] is 1, and PMSNEVFR_EL1.E[49] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[49] is 1, and PMSNEVFR_EL1.E[49] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-49_49-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -223,8 +223,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[48] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[48] is 1, and PMSNEVFR_EL1.E[48] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[48] is 1, and PMSNEVFR_EL1.E[48] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-48_48-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -240,8 +240,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[31] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[31] is 1, and PMSNEVFR_EL1.E[31] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[31] is 1, and PMSNEVFR_EL1.E[31] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-31_31-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -254,8 +254,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[30] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[30] is 1, and PMSNEVFR_EL1.E[30] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[30] is 1, and PMSNEVFR_EL1.E[30] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-30_30-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -268,8 +268,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[29] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[29] is 1, and PMSNEVFR_EL1.E[29] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[29] is 1, and PMSNEVFR_EL1.E[29] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-29_29-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -282,8 +282,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[28] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[28] is 1, and PMSNEVFR_EL1.E[28] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[28] is 1, and PMSNEVFR_EL1.E[28] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-28_28-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -296,8 +296,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[27] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[27] is 1, and PMSNEVFR_EL1.E[27] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[27] is 1, and PMSNEVFR_EL1.E[27] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-27_27-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -310,8 +310,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[26] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[26] is 1, and PMSNEVFR_EL1.E[26] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[26] is 1, and PMSNEVFR_EL1.E[26] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-26_26-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -323,8 +323,8 @@
           <p>The 'Shared resource' event, <span class="xref">Events packet</span>.E[25], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[25] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[25] is 1, and PMSNEVFR_EL1.E[25] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[25] is 1, and PMSNEVFR_EL1.E[25] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-25_25-2"> <span class="condition">when FEAT_SPEv1p4 is not implemented, event 25 is implemented, and filtering on event 25 is supported</span>:
       </h4><div class="field">
@@ -334,8 +334,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[25] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[25] is 1, and PMSNEVFR_EL1.E[25] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[25] is 1, and PMSNEVFR_EL1.E[25] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-25_25-3"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -347,8 +347,8 @@
           <p>The 'Streaming SVE mode' event, <span class="xref">Events packet</span>.E[24], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[24] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[24] is 1, and PMSNEVFR_EL1.E[24] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[24] is 1, and PMSNEVFR_EL1.E[24] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-24_24-2"> <span class="condition">when FEAT_SPEv1p4 is not implemented, event 24 is implemented, and filtering on event 24 is supported</span>:
       </h4><div class="field">
@@ -358,8 +358,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[24] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[24] is 1, and PMSNEVFR_EL1.E[24] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[24] is 1, and PMSNEVFR_EL1.E[24] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-24_24-3"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -371,8 +371,8 @@
           <p>The 'Data snooped' event, <span class="xref">Events packet</span>.E[23], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[23] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[23] is 1, and PMSNEVFR_EL1.E[23] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[23] is 1, and PMSNEVFR_EL1.E[23] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-23_23-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -384,8 +384,8 @@
           <p>The 'Recently fetched' event, <span class="xref">Events packet</span>.E[22], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[22] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[22] is 1, and PMSNEVFR_EL1.E[22] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[22] is 1, and PMSNEVFR_EL1.E[22] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-22_22-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -397,8 +397,8 @@
           <p>The 'Cache data modified' event, <span class="xref">Events packet</span>.E[21], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[21] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[21] is 1, and PMSNEVFR_EL1.E[21] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[21] is 1, and PMSNEVFR_EL1.E[21] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-21_21-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -410,8 +410,8 @@
           <p>The 'Level 2 data cache miss' event, <span class="xref">Events packet</span>.E[20], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[20] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[20] is 1, and PMSNEVFR_EL1.E[20] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[20] is 1, and PMSNEVFR_EL1.E[20] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-20_20-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -423,8 +423,8 @@
           <p>The 'Level 2 data cache access' event, <span class="xref">Events packet</span>.E[19], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[19] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[19] is 1, and PMSNEVFR_EL1.E[19] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[19] is 1, and PMSNEVFR_EL1.E[19] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-19_19-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -436,8 +436,8 @@
           <p>The 'Empty predicate' event, <span class="xref">Events packet</span>.E[18], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[18] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[18] is 1, and PMSNEVFR_EL1.E[18] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[18] is 1, and PMSNEVFR_EL1.E[18] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-18_18-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -449,8 +449,8 @@
           <p>The 'Partial or empty predicate' event, <span class="xref">Events packet</span>.E[17], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[17] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[17] is 1, and PMSNEVFR_EL1.E[17] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[17] is 1, and PMSNEVFR_EL1.E[17] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-17_17-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -466,8 +466,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[15] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[15] is 1, and PMSNEVFR_EL1.E[15] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[15] is 1, and PMSNEVFR_EL1.E[15] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-15_15-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -480,8 +480,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[14] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[14] is 1, and PMSNEVFR_EL1.E[14] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[14] is 1, and PMSNEVFR_EL1.E[14] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-14_14-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -494,8 +494,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[13] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[13] is 1, and PMSNEVFR_EL1.E[13] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[13] is 1, and PMSNEVFR_EL1.E[13] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-13_13-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -508,8 +508,8 @@
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[12] == 1.</p>
         </td></tr></table><p>An <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> event might be recorded as a multi-bit field. In this case, the corresponding bits of PMSNEVFR_EL1 define an <span class="arm-defined-word">IMPLEMENTATION DEFINED</span> filter for the event.</p>
-<p>If  <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[12] is 1, and PMSNEVFR_EL1.E[12] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+<p>If  <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[12] is 1, and PMSNEVFR_EL1.E[12] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-12_12-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -521,8 +521,8 @@
           <p>The 'Misalignment' event, <span class="xref">Events packet</span>.E[11], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[11] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[11] is 1, and PMSNEVFR_EL1.E[11] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[11] is 1, and PMSNEVFR_EL1.E[11] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-11_11-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -534,8 +534,8 @@
           <p>The 'Remote access' event, <span class="xref">Events packet</span>.E[10], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[10] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[10] is 1, and PMSNEVFR_EL1.E[10] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[10] is 1, and PMSNEVFR_EL1.E[10] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-10_10-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -547,8 +547,8 @@
           <p>The 'Last-level cache miss' event, <span class="xref">Events packet</span>.E[9], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[9] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[9] is 1, and PMSNEVFR_EL1.E[9] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[9] is 1, and PMSNEVFR_EL1.E[9] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-9_9-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -560,8 +560,8 @@
           <p>The 'Last-level cache access' event, <span class="xref">Events packet</span>.E[8], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[8] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[8] is 1, and PMSNEVFR_EL1.E[8] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[8] is 1, and PMSNEVFR_EL1.E[8] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-8_8-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -573,8 +573,8 @@
           <p>The 'Mispredicted' event, <span class="xref">Events packet</span>.E[7], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[7] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[7] is 1, and PMSNEVFR_EL1.E[7] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[7] is 1, and PMSNEVFR_EL1.E[7] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-6_6-1">E[6], bit [6] <span class="condition">when FEAT_SPE_FnE is implemented</span>:
       </h4><div class="field">
@@ -583,8 +583,8 @@
           <p>The 'Not taken' event, <span class="xref">Events packet</span>.E[6], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[6] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[6] is 1, and PMSNEVFR_EL1.E[6] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[6] is 1, and PMSNEVFR_EL1.E[6] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-6_6-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -596,8 +596,8 @@
           <p>The 'TLB walk' event, <span class="xref">Events packet</span>.E[5], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[5] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[5] is 1, and PMSNEVFR_EL1.E[5] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[5] is 1, and PMSNEVFR_EL1.E[5] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-4_4-1">E[4], bit [4] <span class="condition">when FEAT_SPEv1p4 is implemented or filtering on event 4 is optionally supported</span>:
       </h4><div class="field">
@@ -606,8 +606,8 @@
           <p>The 'TLB access' event, <span class="xref">Events packet</span>.E[4], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[4] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[4] is 1, and PMSNEVFR_EL1.E[4] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[4] is 1, and PMSNEVFR_EL1.E[4] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-4_4-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -619,8 +619,8 @@
           <p>The 'Level 1 data cache miss' event, <span class="xref">Events packet</span>.E[3], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[3] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[3] is 1, and PMSNEVFR_EL1.E[3] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[3] is 1, and PMSNEVFR_EL1.E[3] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_2-1">E[2], bit [2] <span class="condition">when FEAT_SPEv1p4 is implemented or filtering on event 2 is optionally supported</span>:
       </h4><div class="field">
@@ -629,8 +629,8 @@
           <p>The 'Level 1 data cache access' event, <span class="xref">Events packet</span>.E[2], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[2] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[2] is 1, and PMSNEVFR_EL1.E[2] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[2] is 1, and PMSNEVFR_EL1.E[2] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-2_2-2"> <span class="condition">Otherwise</span>:
       </h4><div class="field">
@@ -642,8 +642,8 @@
           <p>The 'Retired' event, <span class="xref">Events packet</span>.E[1], is ignored by the PMSNEVFR_EL1 filter.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Do not record samples that have <span class="xref">Events packet</span>.E[1] == 1.</p>
-        </td></tr></table><p>If <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[1] is 1, and PMSNEVFR_EL1.E[1] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
-<p>This field is ignored by the PE when <a href="AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p>
+        </td></tr></table><p>If <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 1, PMSFCR_EL1.FE is 1, <a href="/latest_sysreg/AArch64-pmsevfr_el1.html">PMSEVFR_EL1</a>.E[1] is 1, and PMSNEVFR_EL1.E[1] is 1, then, for each sampled operation, it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the sample is discarded, and it is <span class="arm-defined-word">CONSTRAINED UNPREDICTABLE</span> whether the SAMPLE_FEED_EVENT PMU event is generated.</p>
+<p>This field is ignored by the PE when <a href="/latest_sysreg/AArch64-pmsfcr_el1.html">PMSFCR_EL1</a>.FnE is 0.</p>
 <p>If the PE does not support the sampling of speculative instructions, or always discards the sample record for speculative instructions, this bit reads as an <span class="arm-defined-word">UNKNOWN</span> value and the PE ignores its value.</p><p>The reset behavior of this field is:</p><ul><li>On a Warm reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h4 id="fieldset_0-1_1-2"> <span class="condition">Otherwise</span>:

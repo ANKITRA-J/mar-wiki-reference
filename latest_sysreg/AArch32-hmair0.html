@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ext="http://exslt.org/common"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>HMAIR0 | Jon's Arm Reference</title><meta name="description" content="Along with HMAIR1, provides the memory attribute encodings corresponding to the possible AttrIndx values in a Long-descriptor format translation table entry for stage 1 translations for memory accesses from Hyp mode."></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/pagefind/pagefind-component-ui.css"></link><link rel="stylesheet" type="text/css" href="/static/normalize.css"></link><link rel="stylesheet" type="text/css" href="/static/main.css"></link></head><body><div id="learning-tracker-container" data-pagefind-ignore="all"></div>
 <script type="text/javascript" src="/static/tracker.js"></script><a href="/">← Home</a><pagefind-searchbox></pagefind-searchbox><script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="text/javascript" src="/static/pagefind.js"></script><h1 class="register-section" data-pagefind-body="1" data-pagefind-weight="10" data-pagefind-sort="title">HMAIR0</h1><p class="insn_subtitle" data-pagefind-body="1">Hyp Memory Attribute Indirection Register 0</p><div data-pagefind-body="1">
-        <p>Along with <a href="AArch32-hmair1.html">HMAIR1</a>, provides the memory attribute encodings corresponding to the possible AttrIndx values in a Long-descriptor format translation table entry for stage 1 translations for memory accesses from Hyp mode.</p>
+        <p>Along with <a href="/latest_sysreg/AArch32-hmair1.html">HMAIR1</a>, provides the memory attribute encodings corresponding to the possible AttrIndx values in a Long-descriptor format translation table entry for stage 1 translations for memory accesses from Hyp mode.</p>
 
       
         <p>AttrIndx[2] indicates the HMAIR register to be used:</p>
@@ -10,9 +10,9 @@
       
         <ul>
 <li>When AttrIndx[2] is 0, HMAIR0 is used.
-</li><li>When AttrIndx[2] is 1, <a href="AArch32-hmair1.html">HMAIR1</a> is used.
+</li><li>When AttrIndx[2] is 1, <a href="/latest_sysreg/AArch32-hmair1.html">HMAIR1</a> is used.
 </li></ul>
-      </div><h3>Configuration</h3><p>AArch32 System register HMAIR0 bits [31:0] are architecturally mapped to AArch64 System register <a href="AArch64-mair_el2.html">MAIR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to HMAIR0 are <span class="arm-defined-word">UNDEFINED</span>.</p>
+      </div><h3>Configuration</h3><p>AArch32 System register HMAIR0 bits [31:0] are architecturally mapped to AArch64 System register <a href="/latest_sysreg/AArch64-mair_el2.html">MAIR_EL2[31:0]</a>.</p><p>This register is present only when FEAT_AA32EL2 is implemented. Otherwise, direct accesses to HMAIR0 are <span class="arm-defined-word">UNDEFINED</span>.</p>
         <p>If EL2 is not implemented, this register is <span class="arm-defined-word">RES0</span> from EL3.</p>
       <h3>Attributes</h3>
         <p>HMAIR0 is a 32-bit register.</p>

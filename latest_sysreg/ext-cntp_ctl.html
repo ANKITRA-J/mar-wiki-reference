@@ -39,7 +39,7 @@
           <p>Timer disabled.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
           <p>Timer enabled.</p>
-        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="ext-cntp_tval.html">CNTP_TVAL</a> continues to count down.</p>
+        </td></tr></table><p>Setting this bit to 0 disables the timer output signal, but the timer value accessible from <a href="/latest_sysreg/ext-cntp_tval.html">CNTP_TVAL</a> continues to count down.</p>
 <div class="note"><p>Disabling the output signal might be a power-saving option.</p></div><p>The reset behavior of this field is:</p><ul><li>On a Timer reset, 
       this field resets
        to an architecturally <span class="arm-defined-word">UNKNOWN</span> value.</li></ul></div><h2>Accessing CNTP_CTL</h2>
@@ -61,7 +61,7 @@
 
       
         <ul>
-<li>CNTP_CTL is accessible in that frame if the value of <a href="ext-cntacrn.html">CNTACR&lt;n&gt;</a>.RWPT is 1.
+<li>CNTP_CTL is accessible in that frame if the value of <a href="/latest_sysreg/ext-cntacrn.html">CNTACR&lt;n&gt;</a>.RWPT is 1.
 </li><li>Otherwise, the CNTP_CTL address in that frame is RAZ/WI.
 </li></ul>
 
@@ -72,7 +72,7 @@
         <ul>
 <li>CNTP_CTL is accessible in that frame if both:<ul>
 <li>CNTP_CTL is accessible in the corresponding CNTBaseN frame:
-</li><li>The value of <a href="ext-cntel0acr.html">CNTEL0ACR</a>.EL0PTEN is 1.
+</li><li>The value of <a href="/latest_sysreg/ext-cntel0acr.html">CNTEL0ACR</a>.EL0PTEN is 1.
 </li></ul>
 
 </li><li>Otherwise, the CNTP_CTL address in that frame is RAZ/WI.
