@@ -21,7 +21,7 @@ leaving the other destination bits unchanged.</p>
             </h4><a id="BFC_BFM_32M_bitfield"></a><span class="bitdiff"> (sf == 0 &amp;&amp; N == 0)</span></div><p class="asm-code">BFC  <a href="#WdOrWZR" title='Is the 32-bit name of the general-purpose destination register, encoded in the "Rd" field.'>&lt;Wd&gt;</a>, #<a href="#lsb" title='For the "32-bit" variant: is the bit number of the lsb of the destination bitfield, in the range 0 to 31.'>&lt;lsb&gt;</a>, #<a href="#width" title='For the "32-bit" variant: is the width of the bitfield, in the range 1 to 32-&lt;lsb&gt;.'>&lt;width&gt;</a></p><p class="equivto">
       is equivalent to
     </p>
-          <p class="asm-code"><a href="/latest_aarch64/bfm.html#BFM_32M_bitfield">BFM</a>  <a href="/latest_aarch64/bfm.html#WdOrWZR">&lt;Wd&gt;</a>, WZR, #(-<a href="/latest_aarch64/bfm.html#lsb">&lt;lsb&gt;</a>  MOD  32), #(<a href="/latest_aarch64/bfm.html#width">&lt;width&gt;</a>-1)</p>
+          <p class="asm-code"><a href="/latest_aarch64/bfm.html#BFM_32M_bitfield">BFM</a>  <a href="/latest_aarch64/bfm.html#WdOrWZR">&lt;Wd&gt;</a>, WZR, #(-<a href="#lsb">&lt;lsb&gt;</a>  MOD  32), #(<a href="#width">&lt;width&gt;</a>-1)</p>
           <p class="equivto">
           and is the preferred disassembly when
           <span class="pseudocode">UInt(imms) &lt; UInt(immr)</span>.
@@ -30,7 +30,7 @@ leaving the other destination bits unchanged.</p>
             </h4><a id="BFC_BFM_64M_bitfield"></a><span class="bitdiff"> (sf == 1 &amp;&amp; N == 1)</span></div><p class="asm-code">BFC  <a href="#XdOrXZR__6" title='Is the 64-bit name of the general-purpose destination register, encoded in the "Rd" field.'>&lt;Xd&gt;</a>, #<a href="#lsb__3" title='For the "64-bit" variant: is the bit number of the lsb of the destination bitfield, in the range 0 to 63.'>&lt;lsb&gt;</a>, #<a href="#width__2" title='For the "64-bit" variant: is the width of the bitfield, in the range 1 to 64-&lt;lsb&gt;.'>&lt;width&gt;</a></p><p class="equivto">
       is equivalent to
     </p>
-          <p class="asm-code"><a href="/latest_aarch64/bfm.html#BFM_64M_bitfield">BFM</a>  <a href="/latest_aarch64/bfm.html#XdOrXZR__6">&lt;Xd&gt;</a>, XZR, #(-<a href="/latest_aarch64/bfm.html#lsb__3">&lt;lsb&gt;</a>  MOD  64), #(<a href="/latest_aarch64/bfm.html#width__2">&lt;width&gt;</a>-1)</p>
+          <p class="asm-code"><a href="/latest_aarch64/bfm.html#BFM_64M_bitfield">BFM</a>  <a href="/latest_aarch64/bfm.html#XdOrXZR__6">&lt;Xd&gt;</a>, XZR, #(-<a href="#lsb__3">&lt;lsb&gt;</a>  MOD  64), #(<a href="#width__2">&lt;width&gt;</a>-1)</p>
           <p class="equivto">
           and is the preferred disassembly when
           <span class="pseudocode">UInt(imms) &lt; UInt(immr)</span>.

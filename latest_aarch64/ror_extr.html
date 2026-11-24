@@ -21,7 +21,7 @@ positions on the left.</p>
             </h4><a id="ROR_EXTR_32_extract"></a><span class="bitdiff"> (sf == 0 &amp;&amp; N == 0 &amp;&amp; imms == 0xxxxx)</span></div><p class="asm-code">ROR  <a href="#WdOrWZR" title='Is the 32-bit name of the general-purpose destination register, encoded in the "Rd" field.'>&lt;Wd&gt;</a>, <a href="#RmRn_option" title='Is the 32-bit name of the general-purpose source register, encoded in the "Rn" and "Rm" fields.'>&lt;Ws&gt;</a>, #<a href="#shift__5" title='For the "32-bit" variant: is the amount by which to rotate, in the range 0 to 31, encoded in the "imms" field.'>&lt;shift&gt;</a></p><p class="equivto">
       is equivalent to
     </p>
-          <p class="asm-code"><a href="/latest_aarch64/extr.html#EXTR_32_extract">EXTR</a>  <a href="/latest_aarch64/extr.html#WdOrWZR">&lt;Wd&gt;</a>, <a href="/latest_aarch64/extr.html#RmRn_option">&lt;Ws&gt;</a>, <a href="/latest_aarch64/extr.html#RmRn_option">&lt;Ws&gt;</a>, #<a href="/latest_aarch64/extr.html#shift__5">&lt;shift&gt;</a></p>
+          <p class="asm-code"><a href="/latest_aarch64/extr.html#EXTR_32_extract">EXTR</a>  <a href="/latest_aarch64/extr.html#WdOrWZR">&lt;Wd&gt;</a>, <a href="#RmRn_option">&lt;Ws&gt;</a>, <a href="#RmRn_option">&lt;Ws&gt;</a>, #<a href="#shift__5">&lt;shift&gt;</a></p>
           <p class="equivto">
           and is the preferred disassembly when
           <span class="pseudocode">Rn == Rm</span>.
@@ -30,7 +30,7 @@ positions on the left.</p>
             </h4><a id="ROR_EXTR_64_extract"></a><span class="bitdiff"> (sf == 1 &amp;&amp; N == 1)</span></div><p class="asm-code">ROR  <a href="#XdOrXZR__6" title='Is the 64-bit name of the general-purpose destination register, encoded in the "Rd" field.'>&lt;Xd&gt;</a>, <a href="#RmRn_option__2" title='Is the 64-bit name of the general-purpose source register, encoded in the "Rn" and "Rm" fields.'>&lt;Xs&gt;</a>, #<a href="#shift__6" title='For the "64-bit" variant: is the amount by which to rotate, in the range 0 to 63, encoded in the "imms" field.'>&lt;shift&gt;</a></p><p class="equivto">
       is equivalent to
     </p>
-          <p class="asm-code"><a href="/latest_aarch64/extr.html#EXTR_64_extract">EXTR</a>  <a href="/latest_aarch64/extr.html#XdOrXZR__6">&lt;Xd&gt;</a>, <a href="/latest_aarch64/extr.html#RmRn_option__2">&lt;Xs&gt;</a>, <a href="/latest_aarch64/extr.html#RmRn_option__2">&lt;Xs&gt;</a>, #<a href="/latest_aarch64/extr.html#shift__6">&lt;shift&gt;</a></p>
+          <p class="asm-code"><a href="/latest_aarch64/extr.html#EXTR_64_extract">EXTR</a>  <a href="/latest_aarch64/extr.html#XdOrXZR__6">&lt;Xd&gt;</a>, <a href="#RmRn_option__2">&lt;Xs&gt;</a>, <a href="#RmRn_option__2">&lt;Xs&gt;</a>, #<a href="#shift__6">&lt;shift&gt;</a></p>
           <p class="equivto">
           and is the preferred disassembly when
           <span class="pseudocode">Rn == Rm</span>.
