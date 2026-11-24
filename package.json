@@ -1,0 +1,9 @@
+{
+  "name": "arm-reference-wiki",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Arm Architecture Reference Wiki & Learning Tracker",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
