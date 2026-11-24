@@ -185,7 +185,7 @@
     }
 
     function renderDetailPage(learnedCount) {
-      const pageKey = window.location.pathname;
+      const pageKey = window.location.pathname.replace(/\/$/, '').replace(/\.html$/, '') || '/';
       const isLearned = !!state.learnedPages[pageKey];
 
       container.innerHTML = `

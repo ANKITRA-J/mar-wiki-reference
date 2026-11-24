@@ -5,7 +5,7 @@
         <p>IRS Interrupt Status Register</p>
 
       
-        <p>Reports whether a write that sets <a href="/latest_sysreg/ext-irs_int_selr.html">IRS_INT_SELR</a>.S to 1 is complete and selects a valid interrupt.</p>
+        <p>Reports whether a write that sets <a href="/latest_sysreg/irs_config_frame.irs_int_selr.html">IRS_INT_SELR</a>.S to 1 is complete and selects a valid interrupt.</p>
 
       
         <p>Also reports whether the effects of a write to any IRS interrupt configuration register is complete.</p>
@@ -39,20 +39,20 @@
       this field resets
        to <span class="binarynumber">'0'</span>.
 </li></ul></div><h4 id="fieldset_0-0_0">IDLE, bit [0]:
-      </h4><div class="field"><p>A write that sets <a href="/latest_sysreg/ext-irs_int_selr.html">IRS_INT_SELR</a>.S to 1 is complete when this field is 1.</p>
-<p>When this field is 1 and V is 1, a read from <a href="/latest_sysreg/ext-irs_int_cfgr.html">IRS_INT_CFGR</a> returns values for the selected interrupt.</p>
+      </h4><div class="field"><p>A write that sets <a href="/latest_sysreg/irs_config_frame.irs_int_selr.html">IRS_INT_SELR</a>.S to 1 is complete when this field is 1.</p>
+<p>When this field is 1 and V is 1, a read from <a href="/latest_sysreg/irs_config_frame.irs_int_cfgr.html">IRS_INT_CFGR</a> returns values for the selected interrupt.</p>
 <p>Following a write to one of the following registers, when this field returns 1, the effects of the write have completed:</p>
 <ul>
-<li><a href="/latest_sysreg/ext-irs_int_cactiver.html">IRS_INT_CACTIVER</a>.
-</li><li><a href="/latest_sysreg/ext-irs_int_enabler.html">IRS_INT_ENABLER</a>.
-</li><li><a href="/latest_sysreg/ext-irs_int_hmr.html">IRS_INT_HMR</a>.
-</li><li><a href="/latest_sysreg/ext-irs_int_iaffidr.html">IRS_INT_IAFFIDR</a>.
-</li><li><a href="/latest_sysreg/ext-irs_int_pendingr.html">IRS_INT_PENDINGR</a>.
-</li><li><a href="/latest_sysreg/ext-irs_int_priorityr.html">IRS_INT_PRIORITYR</a>.
+<li><a href="/latest_sysreg/irs_config_frame.irs_int_cactiver.html">IRS_INT_CACTIVER</a>.
+</li><li><a href="/latest_sysreg/irs_config_frame.irs_int_enabler.html">IRS_INT_ENABLER</a>.
+</li><li><a href="/latest_sysreg/irs_config_frame.irs_int_hmr.html">IRS_INT_HMR</a>.
+</li><li><a href="/latest_sysreg/irs_config_frame.irs_int_iaffidr.html">IRS_INT_IAFFIDR</a>.
+</li><li><a href="/latest_sysreg/irs_config_frame.irs_int_pendingr.html">IRS_INT_PENDINGR</a>.
+</li><li><a href="/latest_sysreg/irs_config_frame.irs_int_priorityr.html">IRS_INT_PRIORITYR</a>.
 </li></ul><table class="valuetable"><tr><th>IDLE</th><th>Meaning</th></tr><tr><td class="bitfield">0b0</td><td>
-          <p>The effects of the last write that set <a href="/latest_sysreg/ext-irs_int_selr.html">IRS_INT_SELR</a>.S to 1 or any write to an interrupt configuration register is not guaranteed to be complete.</p>
+          <p>The effects of the last write that set <a href="/latest_sysreg/irs_config_frame.irs_int_selr.html">IRS_INT_SELR</a>.S to 1 or any write to an interrupt configuration register is not guaranteed to be complete.</p>
         </td></tr><tr><td class="bitfield">0b1</td><td>
-          <p>The effects of the last write that set <a href="/latest_sysreg/ext-irs_int_selr.html">IRS_INT_SELR</a>.S to 1 and any writes to interrupt configuration registers are complete.</p>
+          <p>The effects of the last write that set <a href="/latest_sysreg/irs_config_frame.irs_int_selr.html">IRS_INT_SELR</a>.S to 1 and any writes to interrupt configuration registers are complete.</p>
         </td></tr></table>
       <p>This field resets to 1 to allow initial writes to registers Guarded by this field.
 Because there has been no write at reset, a reset value of 1 does not imply that any write to <a href="/latest_sysreg/irs_config_frame.irs_int_selr.html">IRS_INT_SELR</a> to select an interrupt is complete.</p>
